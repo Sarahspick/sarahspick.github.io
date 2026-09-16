@@ -35,15 +35,15 @@ html = f"""<!DOCTYPE html>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root {{
-  --bg:#faf7f2; --bg2:#f5f0e8; --card:#fffefb; --ink:#2b2622; --muted:#8f857b; --line:#ece6dc;
-  --btn:#2b2622; --btn-ink:#fffefb; --accent:#b8775f; --ring:#ffffff; --shadow:0 10px 30px rgba(74,58,44,.07);
-  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
-  --sans:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --bg:#ece4d8; --bg2:#e4dbcd; --card:#faf7f2; --ink:#2b2622; --muted:#857a6f; --line:#dfd5c7;
+  --btn:#2b2622; --btn-ink:#faf7f2; --accent:#a86a52; --ring:#f7f2ea; --shadow:0 10px 30px rgba(74,58,44,.10);
+  --serif:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --sans:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }}
-/* always ivory, no dark mode: the page should look the same on every phone */
+/* always ivory, no dark mode: the page should look the same on every phone. One font family (Plus Jakarta Sans) for everything. */
 * {{ box-sizing:border-box; }}
 html,body {{ margin:0; }}
 body {{ background:var(--bg); background-image:linear-gradient(180deg,var(--bg2) 0,var(--bg) 320px); color:var(--ink); font-family:var(--sans);
@@ -53,7 +53,7 @@ body {{ background:var(--bg); background-image:linear-gradient(180deg,var(--bg2)
 header {{ text-align:center; padding:0 0 26px; }}
 .avatar {{ width:112px; height:112px; border-radius:50%; object-fit:cover; display:block; margin:0 auto;
   box-shadow:0 0 0 5px var(--ring), var(--shadow); }}
-h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; margin:20px 0 8px; letter-spacing:-.01em; }}
+h1 {{ font-family:var(--sans); font-weight:700; font-size:30px; line-height:1.1; margin:20px 0 8px; letter-spacing:-.02em; }}
 .bio {{ margin:0; font-size:15px; color:var(--muted); line-height:1.5; }}
 .bio b {{ color:var(--ink); font-weight:500; }}
 .social {{ margin-top:16px; display:flex; justify-content:center; gap:10px; }}
@@ -77,13 +77,11 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; 
 .hero .badge {{ position:absolute; top:14px; left:14px; background:rgba(255,253,249,.92); color:#2a2420; font-size:11px; letter-spacing:.14em;
   text-transform:uppercase; font-weight:600; padding:7px 11px; border-radius:999px; }}
 .hero .txt {{ padding:18px 20px 20px; }}
-.hero h2 {{ font-family:var(--serif); font-size:26px; font-weight:600; margin:0 0 14px; line-height:1.2; }}
+.hero h2 {{ font-family:var(--sans); font-size:21px; font-weight:600; margin:0 0 14px; line-height:1.3; letter-spacing:-.01em; }}
 .btn {{ display:inline-flex; align-items:center; gap:8px; background:var(--btn); color:var(--btn-ink); font-weight:500; font-size:13px;
   letter-spacing:.02em; padding:12px 18px; border-radius:999px; }}
 
-.section {{ display:flex; align-items:baseline; justify-content:space-between; margin:30px 0 14px; }}
-.section h3 {{ font-family:var(--serif); font-size:22px; font-weight:600; margin:0; }}
-.section span {{ font-size:12px; color:var(--muted); }}
+.note {{ text-align:center; margin:32px 0 16px; font-size:15px; font-weight:500; color:var(--ink); line-height:1.5; }}
 .grid {{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }}
 .card {{ background:var(--card); border-radius:18px; overflow:hidden; box-shadow:var(--shadow); text-decoration:none; color:inherit;
   display:flex; flex-direction:column; }}
@@ -91,7 +89,7 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; 
 .card img {{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }}
 .card:hover img {{ transform:scale(1.04); }}
 .card .txt {{ padding:12px 13px 14px; display:flex; flex-direction:column; gap:5px; flex:1; }}
-.card h4 {{ margin:0; font-size:14px; font-weight:600; line-height:1.35; }}
+.card h4 {{ margin:0; font-size:14px; font-weight:600; line-height:1.4; letter-spacing:-.005em; }}
 .card .shop {{ margin-top:auto; padding-top:8px; font-size:12px; font-weight:600; color:var(--accent); letter-spacing:.04em; }}
 
 .links {{ display:grid; gap:12px; }}
@@ -99,10 +97,10 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; 
   border-radius:16px; padding:18px; text-decoration:none; color:var(--ink); font-weight:500; font-size:15px; box-shadow:var(--shadow); }}
 .link svg {{ width:18px; height:18px; }}
 
-.empty {{ text-align:center; color:var(--muted); padding:48px 0; font-family:var(--serif); font-size:20px; }}
+.empty {{ text-align:center; color:var(--muted); padding:48px 0; font-size:16px; }}
 footer {{ margin-top:44px; color:var(--muted); font-size:11.5px; line-height:1.6; text-align:center; }}
-footer .heart {{ font-family:var(--serif); font-size:15px; color:var(--ink); margin-bottom:8px; }}
-@media (max-width:360px) {{ .grid {{ gap:10px; }} h1 {{ font-size:34px; }} }}
+footer .heart {{ font-size:14px; font-weight:500; color:var(--ink); margin-bottom:8px; }}
+@media (max-width:360px) {{ .grid {{ gap:10px; }} h1 {{ font-size:27px; }} }}
 </style>
 </head>
 <body>
@@ -126,7 +124,7 @@ footer .heart {{ font-family:var(--serif); font-size:15px; color:var(--ink); mar
 
   <section class="panel" id="shop">
     <div id="hero"></div>
-    <div class="section" id="section-head" hidden><h3>All my picks</h3><span id="count"></span></div>
+    <div class="note" id="note" hidden>treat yourself to something lovely today 🤍</div>
     <div class="grid" id="grid"></div>
     <div class="empty" id="empty" hidden>something lovely is on its way, come back tomorrow 🤍</div>
   </section>
@@ -168,8 +166,7 @@ if (!live.length) {{
       <div class="txt"><h2>${{esc(first.name)}}</h2><span class="btn">Shop on Amazon <span aria-hidden="true">→</span></span></div>
     </a>`;
   if (rest.length) {{
-    document.getElementById("section-head").hidden = false;
-    document.getElementById("count").textContent = rest.length + (rest.length === 1 ? " more find" : " more finds");
+    document.getElementById("note").hidden = false;
     document.getElementById("grid").innerHTML = rest.map(i => `
       <a class="card" href="${{i.url}}" target="_blank" rel="noopener sponsored">
         <div class="img"><img src="${{i.thumb_data}}" alt="" loading="lazy"></div>

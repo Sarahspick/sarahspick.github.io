@@ -42,7 +42,7 @@
 
 ## 5. 사이트 구조와 재생성 방법
 - 단일 파일 index.html. 썸네일(영상 프레임 캡처)과 프로필 사진은 data URI로 내장. 제품마다 live_at(UTC 시각)이 있고 지금 시각을 지난 것만 표시, 최신 1개는 상단 큰 카드 "New today", 나머지는 2열 그리드. Shop/Links 탭. 하단 아마존 고지문.
-- 디자인 기준: 럭셔리하고 차분하고 clean. 항상 아이보리 배경(#faf7f2, 다크 모드 없음. 폰이 다크 모드여도 아이보리로 고정), Cormorant Garamond 세리프 제목 + Inter 본문, 검정 필 버튼. 카드에는 제목 + 이모지만, 설명 문장 없음. 벤치마크는 linktr.ee/leila_daily_finds.
+- 디자인 기준 (2026-09-16 3차): 럭셔리하고 차분하고 clean. 항상 살짝 진한 웜 아이보리 배경(#ece4d8, 위쪽 그라데이션 #e4dbcd, 카드 #faf7f2, 다크 모드 없음), 폰트는 Plus Jakarta Sans 하나로 통일(세리프 없음, Mochi가 세리프를 구식이라 함), 검정 필 버튼. 카드에는 제목 + 이모지만, 설명 문장 없음. 큰 카드와 그리드 사이에 "All my picks" 대신 감성 문구 한 줄("treat yourself to something lovely today 🤍"). 벤치마크는 linktr.ee/leila_daily_finds.
 - 저장소에 있는 것: index.html(사이트), build_batch2.py, build_site2.py, catalog.json, thumbs/01.jpg~09.jpg(사이트에 박힌 썸네일과 동일한 바이트), profile.jpg, batch1_copy.md, 이 문서.
 - 영상 없이 재생성 (날짜나 IG 핸들만 바꿀 때): 저장소 루트에서 `python3 build_site2.py`만 실행하면 catalog.json + thumbs/ + profile.jpg로 index.html을 다시 만든다. 표준 라이브러리만 필요. 게시 시작일(START_KST), 매일 게시 시각(POST_KST), IG 핸들은 build_site2.py 상단 변수.
 - 영상부터 재생성 (새 배치): 영상 파일들이 있는 폴더에서 `python3 build_batch2.py` (ffmpeg, Pillow 필요. out/에 catalog_embedded.json, catalog.json, batch1_copy.md, thumbs/ 생성) → out/ 폴더에서 `python3 build_site2.py` (profile.jpg 필요) → index.html. catalog_embedded.json이 있으면 그걸 우선 읽는다.
@@ -71,7 +71,7 @@
 - 완료: 슬롯 5 캡션의 "look for" 이름을 사이트 제목과 통일(batch1_copy.md, build_batch2.py).
 - 완료 (2차): 배경을 더 밝은 아이보리로, 다크 모드 제거, 카드 설명 문장 제거하고 제목에 이모지, 공개 시각을 한국 오전 9시 기준 정확한 시각(live_at)으로 변경. 어소시에이트에 사이트 주소 등록 완료(Mochi).
 - 완료: PR #1 합쳐짐(Mochi, 22:49 KST). bio 링크 등록 완료. Buffer 예약 완료(Mochi).
-- 완료 (3차): 사이트 제품 중복 제거(제품당 카드 하나), Book Beam Projector 카드 추가(사진은 임시).
+- 완료 (3차): 사이트 제품 중복 제거(제품당 카드 하나), Book Beam Projector 카드 추가(사진은 임시), 디자인 재조정(진한 아이보리, Plus Jakarta Sans, 감성 문구).
 
 ## 9. 다음 할 일
 - 프로젝터 제품 사진을 Claude에게 전달 (드라이브 01_batch1_output 폴더에 업로드가 가장 확실). 받으면 thumbs/00.jpg 교체 후 재생성.

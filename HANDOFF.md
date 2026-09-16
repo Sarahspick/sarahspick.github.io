@@ -1,4 +1,4 @@
-# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 2차 갱신)
+# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 3차 갱신)
 
 이 문서는 Claude가 다음 세션에서 그대로 이어서 일할 수 있도록 쓴 것. 사람(Mochi)과 Claude 둘 다 읽는 용도.
 
@@ -9,7 +9,8 @@
 - 영상은 직접 촬영했거나 원작자 허락을 받은 것만 쓴다. 무단 재업로드, 텍스트만 덮는 편집, 다운로드 툴 우회는 하지 않는다. Batch 1의 9개는 모두 허락받은 최종 편집본이라고 Mochi가 확인함. 편집은 Claude가 하지 않는다.
 - 문구 규칙 (Mochi 지시): 대시 기호("—", "-") 절대 금지. 모든 문장은 20대 여성이 쓴 듯 짧고 감성적으로, 한 문장 또는 최대 두 문장, 이모지 적극 사용, 사람 느낌. 채팅 답변에도 대시 금지.
 - 고정댓글 맨 끝에는 반드시 "As an Amazon Associate I earn from qualifying purchases." (아마존 약관). 캡션 해시태그에 #affiliate 포함 (FTC).
-- 제휴 링크 형식: https://www.amazon.com/dp/ASIN?tag=hp302-20 (SiteStripe 불필요, 제3자 단축링크 금지).
+- 제휴 링크 형식: https://www.amazon.com/dp/ASIN?tag=hp302-20 (SiteStripe 불필요, 제3자 단축링크 금지). Mochi가 SiteStripe에서 만든 amzn.to 링크는 아마존 공식 단축이라 그대로 써도 됨.
+- 사이트 중복 규칙 (Mochi 지시, 2026-09-16): 영상은 같은 제품이 여러 개여도 되지만, 사이트에는 제품당 카드 하나만. catalog의 product 키(없으면 ASIN)가 같으면 한 카드로 합쳐지고, 첫 영상의 제목/썸네일/링크가 대표가 되며, 그 제품의 새 영상이 올라가는 순간 카드가 맨 위 "New today"로 다시 올라온다. Batch 1의 이불 6개(슬롯 1, 2, 4, 6, 8, 9)는 product=marshmellow-comforter로 묶여 슬롯 1 카드(pick your color, 링크 B0GQWK2D7L) 하나로 보임. 슬롯 8 Sand는 ASIN이 B0GZLX82G9로 다른데도 같은 이불로 묶었음. 별도 상품이면 product를 ASIN으로 되돌리면 카드가 분리됨.
 
 ## 3. 계정과 자산
 - 아마존 어소시에이트 태그: hp302-20. 인스타 주소와 사이트 주소(https://sarahspick.github.io) 둘 다 등록 완료.
@@ -36,6 +37,7 @@
 - 게시 시각 규칙 (Mochi 결정, 2026-09-16): 인스타 릴스는 매일 한국시각 오전 9시. 미국 동부로는 전날 저녁 8시(11월 1일 서머타임 종료 후엔 저녁 7시). 사이트도 같은 순간(UTC 00:00)에 해당 슬롯을 공개하므로 어느 나라에서 보든 릴스와 사이트가 동시에 열린다.
 - 슬롯 1은 22:05 KST에 이미 게시됨. 사이트에선 이미 보이는 상태라 문제 없음.
 - ASIN은 Mochi가 전부 검수 완료. 사이트 카드는 제목(이모지 포함)만 보여주고 설명 문장은 없음.
+- 슬롯 0 (배치 밖, 이미 게시된 영상): Book Beam Projector 📽️✨, 링크 https://amzn.to/4heL25Z (ASIN 미확인, 이 환경에서 아마존 접속 불가), product=book-beam-projector, 사이트에는 09-15부터 보이는 것으로 설정. 썸네일 thumbs/00.jpg는 임시 이미지(아이보리 배경에 📽️). Mochi가 제품 사진을 드라이브 01_batch1_output 폴더에 올리면 Claude가 4:5로 잘라 교체. 앞으로 프로젝터 영상을 또 올려도 카드는 하나로 유지되며 위로 올라옴.
 전체 캡션/고정댓글/사이트 문구는 batch1_copy.md에 있음.
 
 ## 5. 사이트 구조와 재생성 방법
@@ -44,7 +46,7 @@
 - 저장소에 있는 것: index.html(사이트), build_batch2.py, build_site2.py, catalog.json, thumbs/01.jpg~09.jpg(사이트에 박힌 썸네일과 동일한 바이트), profile.jpg, batch1_copy.md, 이 문서.
 - 영상 없이 재생성 (날짜나 IG 핸들만 바꿀 때): 저장소 루트에서 `python3 build_site2.py`만 실행하면 catalog.json + thumbs/ + profile.jpg로 index.html을 다시 만든다. 표준 라이브러리만 필요. 게시 시작일(START_KST), 매일 게시 시각(POST_KST), IG 핸들은 build_site2.py 상단 변수.
 - 영상부터 재생성 (새 배치): 영상 파일들이 있는 폴더에서 `python3 build_batch2.py` (ffmpeg, Pillow 필요. out/에 catalog_embedded.json, catalog.json, batch1_copy.md, thumbs/ 생성) → out/ 폴더에서 `python3 build_site2.py` (profile.jpg 필요) → index.html. catalog_embedded.json이 있으면 그걸 우선 읽는다.
-- 새 배치 추가 시: build_batch2.py의 items 리스트에 항목 추가(파일명, 크리에이터, 썸네일 시각 t, ASIN, name(이모지 포함)/short/cap/pin/tags), publish_day 이어서 번호 매김. 생성된 catalog.json과 out/thumbs/를 저장소에 함께 올려야 다음 세션이 영상 없이 재생성할 수 있다.
+- 새 배치 추가 시: build_batch2.py의 items 리스트에 항목 추가(파일명, 크리에이터, 썸네일 시각 t, ASIN, name(이모지 포함)/short/cap/pin/tags, 같은 제품이면 product 키로 묶기), publish_day 이어서 번호 매김. 사이트 중복은 자동으로 합쳐지므로 같은 제품 영상을 여러 개 넣어도 카드는 하나. 생성된 catalog.json과 out/thumbs/를 저장소에 함께 올려야 다음 세션이 영상 없이 재생성할 수 있다.
 - 캡션의 "look for" 이름(short)은 사이트 카드 제목(name)과 맞춰 둔다. 슬롯 5는 "Flat LED Book Light"로 통일함. 슬롯 1은 이미 게시된 캡션이 "MarshMellow Comforter (10 colors)"인데 사이트 제목 "Mellow MarshMellow Comforter, pick your color"로도 찾을 수 있어 그대로 둠.
 
 ## 6. 환경 제약 (확인된 것)
@@ -68,11 +70,13 @@
 - 완료: 소스 연결 세션 전환(이 세션). 저장소만으로 사이트 재생성 가능하게 정리(thumbs/ 추가, build_site2.py 수정).
 - 완료: 슬롯 5 캡션의 "look for" 이름을 사이트 제목과 통일(batch1_copy.md, build_batch2.py).
 - 완료 (2차): 배경을 더 밝은 아이보리로, 다크 모드 제거, 카드 설명 문장 제거하고 제목에 이모지, 공개 시각을 한국 오전 9시 기준 정확한 시각(live_at)으로 변경. 어소시에이트에 사이트 주소 등록 완료(Mochi).
-- 열려 있는 것: PR #1 (https://github.com/Sarahspick/sarahspick.github.io/pull/1). 이 브랜치의 변경을 main에 합치는 요청서. 합쳐야 새 사이트가 배포됨.
+- 완료: PR #1 합쳐짐(Mochi, 22:49 KST). bio 링크 등록 완료. Buffer 예약 완료(Mochi).
+- 완료 (3차): 사이트 제품 중복 제거(제품당 카드 하나), Book Beam Projector 카드 추가(사진은 임시).
 
 ## 9. 다음 할 일
-- PR #1을 main에 합치기 (Mochi가 GitHub에서 Merge 버튼, 또는 Claude에게 "합쳐줘"). 합친 뒤 폰으로 사이트 열어 아이보리 배경과 이모지 제목 확인.
-- Mochi: Buffer에 슬롯 2~9 예약, 매일 09:00 KST (슬롯 5는 수정된 batch1_copy.md 캡션 사용).
+- 프로젝터 제품 사진을 Claude에게 전달 (드라이브 01_batch1_output 폴더에 업로드가 가장 확실). 받으면 thumbs/00.jpg 교체 후 재생성.
+- 프로젝터 ASIN 확인해서 링크를 표준 형식으로 바꾸기 (선택).
+- 새 PR을 main에 합치기.
 - 첫 게시 후: 게시물 캡션의 "look for" 이름과 사이트 카드가 맞물리는지, 고정댓글 링크가 열리는지 확인.
 - 본게임(100개) 전: 5MB 초과 영상 전달 방식 결정(드라이브 다운로드 한계), 인스타 핸들 확정(다르면 build_site2.py의 IG 변수 수정 후 `python3 build_site2.py`로 재생성해서 push), 인스타 첫 댓글 자동화 필요하면 Buffer Essentials 검토.
 

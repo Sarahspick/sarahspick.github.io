@@ -2,6 +2,7 @@ import json, csv, subprocess, os, base64, io
 from PIL import Image
 
 TAG = "hp302-20"
+# product: optional group key. Items with the same product (or, by default, the same ASIN) become ONE card on the site.
 DISC = "As an Amazon Associate I earn from qualifying purchases."
 def link(a): return f"https://www.amazon.com/dp/{a}?tag={TAG}"
 
@@ -81,7 +82,7 @@ for it in items:
     md += [f"\n---\n\n## Slot {s}. {it['name']}\n", f"파일: `{it['file']}`  \nASIN: `{it['asin']}`  \n링크: {it['link']}\n",
            "\n### 사이트\n", f"**{it['name']}**\n",
            "\n### 인스타 캡션\n```\n" + caption + "\n```\n", "\n### 고정 댓글\n```\n" + pinned + "\n```\n"]
-    catalog.append(dict(slot=s, id=f"b1-{s:02d}", name=it["name"], asin=it["asin"], url=it["link"],
+    catalog.append(dict(slot=s, id=f"b1-{s:02d}", name=it["name"], asin=it["asin"], url=it["link"], product=it.get("product", it["asin"]),
                         category=it["cat"], publish_day=s, creator=it["creator"], source_file=it["file"], thumb_data=data))
     rows.append(dict(slot=s, file=it["file"], creator=it["creator"], product=it["name"], asin=it["asin"], link=it["link"]))
 

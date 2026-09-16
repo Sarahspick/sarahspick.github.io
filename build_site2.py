@@ -18,7 +18,8 @@ start = datetime.datetime.combine(datetime.date.fromisoformat(START_KST), dateti
 for it in cat:
     live = start + datetime.timedelta(days=it["publish_day"] - 1)
     it["live_at"] = live.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")  # exact moment, same for every viewer
-items_js = json.dumps([{k: it[k] for k in ("id","name","url","live_at","thumb_data","category")} for it in cat])
+    it.setdefault("product", it.get("asin") or it["id"])  # same product = one card on the site
+items_js = json.dumps([{k: it[k] for k in ("id","name","url","live_at","thumb_data","category","product","publish_day")} for it in cat])
 profile = "data:image/jpeg;base64," + base64.b64encode(open("profile.jpg","rb").read()).decode()
 
 html = f"""<!DOCTYPE html>
@@ -148,7 +149,14 @@ footer .heart {{ font-family:var(--serif); font-size:15px; color:var(--ink); mar
 <script>
 const ITEMS = {items_js};
 const now = Date.now();
-const live = ITEMS.filter(i => Date.parse(i.live_at) <= now).sort((a,b) => b.live_at.localeCompare(a.live_at) || b.id.localeCompare(a.id));
+// One card per product: the first video's card represents it, and it moves to the top whenever a new video of it goes live.
+const groups = new Map();
+for (const i of ITEMS.filter(i => Date.parse(i.live_at) <= now).sort((a,b) => a.publish_day - b.publish_day)) {{
+  const g = groups.get(i.product);
+  if (!g) groups.set(i.product, {{...i, latest: i.live_at}});
+  else if (i.live_at > g.latest) g.latest = i.live_at;
+}}
+const live = [...groups.values()].sort((a,b) => b.latest.localeCompare(a.latest) || b.publish_day - a.publish_day);
 const esc = s => s.replace(/[&<>"]/g, c => ({{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}})[c]);
 if (!live.length) {{
   document.getElementById("empty").hidden = false;

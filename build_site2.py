@@ -21,6 +21,7 @@ for it in cat:
 KST = datetime.timezone(datetime.timedelta(hours=9))
 h, m = map(int, POST_KST.split(":"))
 start = datetime.datetime.combine(datetime.date.fromisoformat(START_KST), datetime.time(h, m), KST)
+cat = [it for it in cat if it.get("publish_day") is not None]   # publish_day null = paused, not on the site
 for it in cat:
     live = start + datetime.timedelta(days=it["publish_day"] - 1)
     it["live_at"] = live.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")  # exact moment, same for every viewer

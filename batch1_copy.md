@@ -7,7 +7,7 @@
 
 ---
 
-## Slot 1. Mellow MarshMellow Comforter, pick your color
+## Slot 1. Mellow MarshMellow Comforter, pick your color ☁️🌈
 
 파일: `2026-09-09_@jess.favoritefinds_7683380807334956318.mp4`  
 ASIN: `B0GQWK2D7L`  
@@ -16,8 +16,7 @@ ASIN: `B0GQWK2D7L`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, pick your color**  
-White, sand, pink, blue, sage, sunrise, espresso and more 🌈☁️
+**Mellow MarshMellow Comforter, pick your color ☁️🌈**
 
 
 ### 인스타 캡션
@@ -41,7 +40,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 2. Mellow MarshMellow Comforter, White
+## Slot 2. Mellow MarshMellow Comforter, White ☁️🤍
 
 파일: `2026-02-06_@jess.favoritefinds_7603475581237251359.mp4`  
 ASIN: `B0GQWK2D7L`  
@@ -50,8 +49,7 @@ ASIN: `B0GQWK2D7L`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, White**  
-Double stuffed and impossibly fluffy, no duvet cover needed ☁️
+**Mellow MarshMellow Comforter, White ☁️🤍**
 
 
 ### 인스타 캡션
@@ -75,7 +73,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 3. SCOUPS Soft Top Silicone Ladle
+## Slot 3. SCOUPS Soft Top Silicone Ladle 🍝
 
 파일: `2026-09-02_@mrs.nikialexa_7680933683120835862.mp4`  
 ASIN: `B0CKGXMBFR`  
@@ -84,8 +82,7 @@ ASIN: `B0CKGXMBFR`
 
 ### 사이트
 
-**SCOUPS Soft Top Silicone Ladle**  
-The soft edge hugs your pan and scrapes it clean 🍝
+**SCOUPS Soft Top Silicone Ladle 🍝**
 
 
 ### 인스타 캡션
@@ -109,7 +106,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 4. Mellow MarshMellow Comforter, Baby Pink
+## Slot 4. Mellow MarshMellow Comforter, Baby Pink 🎀
 
 파일: `2026-03-12_@myaquasplash_7616067171260632333.mp4`  
 ASIN: `B0GQWK2D7L`  
@@ -118,8 +115,7 @@ ASIN: `B0GQWK2D7L`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, Baby Pink**  
-The pink marshmallow blanket from the video 🎀 same cloud fill, ten colors
+**Mellow MarshMellow Comforter, Baby Pink 🎀**
 
 
 ### 인스타 캡션
@@ -143,7 +139,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 5. Flat LED Book Light
+## Slot 5. Flat LED Book Light 📖✨
 
 파일: `2025-11-06_@electro.galaxy.shop_7569279437561203988.mp4`  
 ASIN: `B0F59B1YD8`  
@@ -152,8 +148,7 @@ ASIN: `B0F59B1YD8`
 
 ### 사이트
 
-**Flat LED Book Light**  
-Lights the whole page so softly, with a timer for when you drift off 📖
+**Flat LED Book Light 📖✨**
 
 
 ### 인스타 캡션
@@ -177,7 +172,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 6. Mellow MarshMellow Comforter, Baby Blue
+## Slot 6. Mellow MarshMellow Comforter, Baby Blue 🩵☁️
 
 파일: `2026-05-24_@hannahbentley_7643229668631383309.mp4`  
 ASIN: `B0GQWK2D7L`  
@@ -186,8 +181,7 @@ ASIN: `B0GQWK2D7L`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, Baby Blue**  
-Baby blue clouds for your bed 🩵 extreme fluff, machine washable
+**Mellow MarshMellow Comforter, Baby Blue 🩵☁️**
 
 
 ### 인스타 캡션
@@ -211,7 +205,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 7. Pop Up Floss Pick Case, 2 pack
+## Slot 7. Pop Up Floss Pick Case, 2 pack 🦷💗
 
 파일: `2026-04-21_@morrowmoon0_7630867654085053727.mp4`  
 ASIN: `B0H44LLZLY`  
@@ -220,8 +214,7 @@ ASIN: `B0H44LLZLY`
 
 ### 사이트
 
-**Pop Up Floss Pick Case, 2 pack**  
-One click and a floss pick pops out 🦷 tiny enough for any purse
+**Pop Up Floss Pick Case, 2 pack 🦷💗**
 
 
 ### 인스타 캡션
@@ -245,7 +238,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 8. Mellow MarshMellow Comforter, Sand
+## Slot 8. Mellow MarshMellow Comforter, Sand 🤎
 
 파일: `2026-02-07_@hannahbentley_7603860160955632909.mp4`  
 ASIN: `B0GZLX82G9`  
@@ -254,8 +247,7 @@ ASIN: `B0GZLX82G9`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, Sand**  
-The neutral one 🤎 warm cream, same marshmallow fill
+**Mellow MarshMellow Comforter, Sand 🤎**
 
 
 ### 인스타 캡션
@@ -279,7 +271,7 @@ As an Amazon Associate I earn from qualifying purchases.
 
 ---
 
-## Slot 9. Mellow MarshMellow Comforter, Espresso
+## Slot 9. Mellow MarshMellow Comforter, Espresso ☕🤍
 
 파일: `2026-09-01_@megansue100_7680346025726463245.mp4`  
 ASIN: `B0GQWK2D7L`  
@@ -288,8 +280,7 @@ ASIN: `B0GQWK2D7L`
 
 ### 사이트
 
-**Mellow MarshMellow Comforter, Espresso**  
-Espresso comforter and marshmallow pillows, the coziest combo ☕🤍
+**Mellow MarshMellow Comforter, Espresso ☕🤍**
 
 
 ### 인스타 캡션

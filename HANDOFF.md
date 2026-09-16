@@ -1,4 +1,4 @@
-# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 3차 갱신)
+# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 4차 갱신)
 
 이 문서는 Claude가 다음 세션에서 그대로 이어서 일할 수 있도록 쓴 것. 사람(Mochi)과 Claude 둘 다 읽는 용도.
 
@@ -41,8 +41,10 @@
 전체 캡션/고정댓글/사이트 문구는 batch1_copy.md에 있음.
 
 ## 5. 사이트 구조와 재생성 방법
-- 단일 파일 index.html. 썸네일(영상 프레임 캡처)과 프로필 사진은 data URI로 내장. 제품마다 live_at(UTC 시각)이 있고 지금 시각을 지난 것만 표시, 최신 1개는 상단 큰 카드 "New today", 나머지는 2열 그리드. Shop/Links 탭. 하단 아마존 고지문.
-- 디자인 기준 (2026-09-16 3차): 럭셔리하고 차분하고 clean. 항상 살짝 진한 웜 아이보리 배경(#ece4d8, 위쪽 그라데이션 #e4dbcd, 카드 #faf7f2, 다크 모드 없음), 폰트는 Plus Jakarta Sans 하나로 통일(세리프 없음, Mochi가 세리프를 구식이라 함), 검정 필 버튼. 카드에는 제목 + 이모지만, 설명 문장 없음. 큰 카드와 그리드 사이에 "All my picks" 대신 감성 문구 한 줄("treat yourself to something lovely today 🤍"). 벤치마크는 linktr.ee/leila_daily_finds.
+- 단일 파일 index.html. 썸네일과 프로필 사진은 data URI로 내장. 제품마다 live_at(UTC 시각)이 있고 지금 시각을 지난 것만 표시, 최신 1개는 상단 큰 카드 "New today", 나머지는 2열 그리드. 탭 없음(Links 탭은 인스타 링크 하나뿐이라 제거, 인스타는 헤더 pill). 헤더 아래 검색창: 제품명 + catalog의 keywords(브랜드, 긴 이름, 색상) + 카테고리를 단어 단위로 즉시 필터, 검색 중엔 큰 카드 없이 2열 그리드만. 하단 아마존 고지문.
+- 제품명은 미니멀하게(예: "MarshMellow Comforter ☁️", "Soft Top Ladle 🍝"), 이모지 하나. 브랜드명과 긴 이름은 keywords에 넣어 검색으로 잡히게 한다.
+- 썸네일: 기본은 thumbs/NN.jpg(릴스 프레임). catalog 항목에 "thumb": "경로"를 넣으면 그 파일(아마존 공식 제품 사진 등)을 대신 쓴다. Mochi가 릴스 프레임은 화질이 낮고 덜 전문적이라 판단, 공식 제품 사진으로 교체 예정(벤치마크 linktr.ee/roastingAF). 사진은 4:5(480x600)로 잘라 넣는다.
+- 디자인 기준 (2026-09-16 4차): PC(640px 이상)에서는 가운데 모바일 폭 영역만 진한 아이보리의 둥근 패널(32px 라운드, 옅은 그림자)이고 바깥 페이지는 밝은 아이보리(#f4efe7). 폰에서는 화면 전체가 진한 아이보리. 럭셔리하고 차분하고 clean. 항상 살짝 진한 웜 아이보리 배경(#ece4d8, 위쪽 그라데이션 #e4dbcd, 카드 #faf7f2, 다크 모드 없음), 폰트는 Plus Jakarta Sans 하나로 통일(세리프 없음, Mochi가 세리프를 구식이라 함), 검정 필 버튼. 카드에는 제목 + 이모지만, 설명 문장 없음. 큰 카드와 그리드 사이에 "All my picks" 대신 감성 문구 한 줄("treat yourself to something lovely today 🤍"). 벤치마크는 linktr.ee/leila_daily_finds.
 - 저장소에 있는 것: index.html(사이트), build_batch2.py, build_site2.py, catalog.json, thumbs/01.jpg~09.jpg(사이트에 박힌 썸네일과 동일한 바이트), profile.jpg, batch1_copy.md, 이 문서.
 - 영상 없이 재생성 (날짜나 IG 핸들만 바꿀 때): 저장소 루트에서 `python3 build_site2.py`만 실행하면 catalog.json + thumbs/ + profile.jpg로 index.html을 다시 만든다. 표준 라이브러리만 필요. 게시 시작일(START_KST), 매일 게시 시각(POST_KST), IG 핸들은 build_site2.py 상단 변수.
 - 영상부터 재생성 (새 배치): 영상 파일들이 있는 폴더에서 `python3 build_batch2.py` (ffmpeg, Pillow 필요. out/에 catalog_embedded.json, catalog.json, batch1_copy.md, thumbs/ 생성) → out/ 폴더에서 `python3 build_site2.py` (profile.jpg 필요) → index.html. catalog_embedded.json이 있으면 그걸 우선 읽는다.
@@ -72,9 +74,10 @@
 - 완료 (2차): 배경을 더 밝은 아이보리로, 다크 모드 제거, 카드 설명 문장 제거하고 제목에 이모지, 공개 시각을 한국 오전 9시 기준 정확한 시각(live_at)으로 변경. 어소시에이트에 사이트 주소 등록 완료(Mochi).
 - 완료: PR #1 합쳐짐(Mochi, 22:49 KST). bio 링크 등록 완료. Buffer 예약 완료(Mochi).
 - 완료 (3차): 사이트 제품 중복 제거(제품당 카드 하나), Book Beam Projector 카드 추가(사진은 임시), 디자인 재조정(진한 아이보리, Plus Jakarta Sans, 감성 문구).
+- 완료 (4차): Links 탭 제거, 검색 UI, PC용 가운데 패널 레이아웃, 미니멀 제품명 + 검색 키워드, thumb 경로 지원.
 
 ## 9. 다음 할 일
-- 프로젝터 제품 사진을 Claude에게 전달 (드라이브 01_batch1_output 폴더에 업로드가 가장 확실). 받으면 thumbs/00.jpg 교체 후 재생성.
+- 제품 사진 5장(프로젝터, 이불, 국자, 북라이트, 치실 케이스)을 Mochi가 드라이브 01_batch1_output 안에 photos 폴더를 만들어 업로드. 파일명은 제품 이름으로(projector.jpg, comforter.jpg, ladle.jpg, booklight.jpg, floss.jpg). 5MB 이하 jpg/png. Claude가 받아서 4:5로 잘라 thumbs/에 넣고 catalog의 thumb 경로를 채운 뒤 재생성. 채팅에 붙인 이미지는 Claude가 파일로 꺼낼 수 없고, 이 환경은 아마존/브랜드 사이트 접속이 막혀 있어 직접 못 가져온다.
 - 프로젝터 ASIN 확인해서 링크를 표준 형식으로 바꾸기 (선택).
 - 새 PR을 main에 합치기.
 - 첫 게시 후: 게시물 캡션의 "look for" 이름과 사이트 카드가 맞물리는지, 고정댓글 링크가 열리는지 확인.

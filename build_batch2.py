@@ -36,7 +36,7 @@ items = [
       tags="#marshmallowcomforter #pinkbedroom #amazonfinds #amazonhome #cozybedroom #girlyroom #bedding #affiliate"),
  dict(slot=5, file="2025-11-06_@electro.galaxy.shop_7569279437561203988.mp4", creator="electro.galaxy.shop", t=4.0,
       asin="B0F59B1YD8", cat="gadgets",
-      name="Flat LED Book Light", short="Flat Panel Book Light",
+      name="Flat LED Book Light", short="Flat LED Book Light",
       sub="Lights the whole page so softly, with a timer for when you drift off 📖",
       cap="reading in bed at 2am just got so much prettier 📖✨",
       pin="this little flat book light lights the whole page and turns itself off when you fall asleep 🥹 grab it here 👉 {link}",
@@ -83,6 +83,7 @@ for it in items:
     im = Image.open(thumb).convert("RGB"); w,h = im.size; th = int(w*5/4)
     if h > th: im = im.crop((0,(h-th)//2,w,(h-th)//2+th))
     im = im.resize((480,600)); b = io.BytesIO(); im.save(b,"JPEG",quality=72,optimize=True)
+    open(thumb,"wb").write(b.getvalue())  # keep the exact bytes that get embedded, so the repo copy can rebuild the site
     data = "data:image/jpeg;base64," + base64.b64encode(b.getvalue()).decode()
     caption = f"{it['cap']}\n\n🛒 link in bio, look for \"{it['short']}\"\n🎥 @{it['creator']}\n\n{it['tags']} #sarahspick"
     pinned = it["pin"].format(link=it["link"]) + f"\n\n{DISC}"

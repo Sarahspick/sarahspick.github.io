@@ -160,7 +160,7 @@ Lights the whole page so softly, with a timer for when you drift off 📖
 ```
 reading in bed at 2am just got so much prettier 📖✨
 
-🛒 link in bio, look for "Flat Panel Book Light"
+🛒 link in bio, look for "Flat LED Book Light"
 🎥 @electro.galaxy.shop
 
 #booktok #booklight #amazonfinds #bookish #readingnook #giftsforreaders #bedtimereading #affiliate #sarahspick

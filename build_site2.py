@@ -1,8 +1,16 @@
-import json, datetime, base64
+import json, datetime, base64, os
 
 START = "2026-09-16"   # slot 1 goes live on this US date; slot N on START + (N-1) days
 IG = "https://www.instagram.com/sarahspick/"
-cat = json.load(open("catalog_embedded.json"))
+# Reads catalog.json + thumbs/NN.jpg (both in the repo), so the site can be rebuilt without the videos.
+# Falls back to catalog_embedded.json (output of build_batch2.py) when that file is present.
+if os.path.exists("catalog_embedded.json"):
+    cat = json.load(open("catalog_embedded.json", encoding="utf-8"))
+else:
+    cat = json.load(open("catalog.json", encoding="utf-8"))
+    for it in cat:
+        with open(f"thumbs/{it['slot']:02d}.jpg", "rb") as f:
+            it["thumb_data"] = "data:image/jpeg;base64," + base64.b64encode(f.read()).decode()
 start = datetime.date.fromisoformat(START)
 for it in cat:
     it["date"] = (start + datetime.timedelta(days=it["publish_day"] - 1)).isoformat()
@@ -174,5 +182,5 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
 </script>
 </body>
 </html>"""
-open("index.html","w").write(html)
+open("index.html","w",encoding="utf-8").write(html)
 print(len(html)//1024, "KB")

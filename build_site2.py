@@ -1,12 +1,24 @@
-import json, datetime, base64
+import json, datetime, base64, os
 
-START = "2026-09-16"   # slot 1 goes live on this US date; slot N on START + (N-1) days
+START_KST = "2026-09-16"   # slot 1's day in Korea; slot N goes live on START_KST + (N-1) days
+POST_KST = "09:00"         # daily reel time in Korea (Buffer schedule). 09:00 KST = 00:00 UTC = 8pm US Eastern the evening before
 IG = "https://www.instagram.com/sarahspick/"
-cat = json.load(open("catalog_embedded.json"))
-start = datetime.date.fromisoformat(START)
+# Reads catalog.json + thumbs/NN.jpg (both in the repo), so the site can be rebuilt without the videos.
+# Falls back to catalog_embedded.json (output of build_batch2.py) when that file is present.
+if os.path.exists("catalog_embedded.json"):
+    cat = json.load(open("catalog_embedded.json", encoding="utf-8"))
+else:
+    cat = json.load(open("catalog.json", encoding="utf-8"))
+    for it in cat:
+        with open(f"thumbs/{it['slot']:02d}.jpg", "rb") as f:
+            it["thumb_data"] = "data:image/jpeg;base64," + base64.b64encode(f.read()).decode()
+KST = datetime.timezone(datetime.timedelta(hours=9))
+h, m = map(int, POST_KST.split(":"))
+start = datetime.datetime.combine(datetime.date.fromisoformat(START_KST), datetime.time(h, m), KST)
 for it in cat:
-    it["date"] = (start + datetime.timedelta(days=it["publish_day"] - 1)).isoformat()
-items_js = json.dumps([{k: it[k] for k in ("id","name","sub","url","date","thumb_data","category")} for it in cat])
+    live = start + datetime.timedelta(days=it["publish_day"] - 1)
+    it["live_at"] = live.astimezone(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")  # exact moment, same for every viewer
+items_js = json.dumps([{k: it[k] for k in ("id","name","url","live_at","thumb_data","category")} for it in cat])
 profile = "data:image/jpeg;base64," + base64.b64encode(open("profile.jpg","rb").read()).decode()
 
 html = f"""<!DOCTYPE html>
@@ -14,6 +26,7 @@ html = f"""<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light only">
 <title>Sarah's Pick</title>
 <meta name="description" content="Cozy home finds and little luxuries, everything from my videos in one place 🤍">
 <meta property="og:title" content="Sarah's Pick">
@@ -24,24 +37,15 @@ html = f"""<!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root {{
-  --bg:#f6f1ea; --bg2:#efe7dd; --card:#fffdf9; --ink:#2a2420; --muted:#8c8177; --line:#e9e0d5;
-  --btn:#2a2420; --btn-ink:#fffdf9; --accent:#b8775f; --ring:#ffffff; --shadow:0 10px 30px rgba(74,58,44,.08);
+  --bg:#faf7f2; --bg2:#f5f0e8; --card:#fffefb; --ink:#2b2622; --muted:#8f857b; --line:#ece6dc;
+  --btn:#2b2622; --btn-ink:#fffefb; --accent:#b8775f; --ring:#ffffff; --shadow:0 10px 30px rgba(74,58,44,.07);
   --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --sans:Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }}
-@media (prefers-color-scheme: dark) {{
-  :root:not([data-theme="light"]) {{
-    --bg:#1a1614; --bg2:#211c19; --card:#241f1b; --ink:#f3ece4; --muted:#a2958a; --line:#332c27;
-    --btn:#f3ece4; --btn-ink:#1a1614; --accent:#d69a80; --ring:#2e2723; --shadow:0 10px 30px rgba(0,0,0,.35);
-  }}
-}}
-:root[data-theme="dark"] {{
-  --bg:#1a1614; --bg2:#211c19; --card:#241f1b; --ink:#f3ece4; --muted:#a2958a; --line:#332c27;
-  --btn:#f3ece4; --btn-ink:#1a1614; --accent:#d69a80; --ring:#2e2723; --shadow:0 10px 30px rgba(0,0,0,.35);
-}}
+/* always ivory, no dark mode: the page should look the same on every phone */
 * {{ box-sizing:border-box; }}
 html,body {{ margin:0; }}
-body {{ background:linear-gradient(180deg,var(--bg2) 0,var(--bg) 320px); color:var(--ink); font-family:var(--sans);
+body {{ background:var(--bg); background-image:linear-gradient(180deg,var(--bg2) 0,var(--bg) 320px); color:var(--ink); font-family:var(--sans);
   -webkit-font-smoothing:antialiased; min-height:100vh; }}
 .wrap {{ max-width:560px; margin:0 auto; padding:40px 16px 56px; }}
 
@@ -72,8 +76,7 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; 
 .hero .badge {{ position:absolute; top:14px; left:14px; background:rgba(255,253,249,.92); color:#2a2420; font-size:11px; letter-spacing:.14em;
   text-transform:uppercase; font-weight:600; padding:7px 11px; border-radius:999px; }}
 .hero .txt {{ padding:18px 20px 20px; }}
-.hero h2 {{ font-family:var(--serif); font-size:26px; font-weight:600; margin:0 0 6px; line-height:1.15; }}
-.hero p {{ margin:0 0 14px; color:var(--muted); font-size:14px; line-height:1.5; }}
+.hero h2 {{ font-family:var(--serif); font-size:26px; font-weight:600; margin:0 0 14px; line-height:1.2; }}
 .btn {{ display:inline-flex; align-items:center; gap:8px; background:var(--btn); color:var(--btn-ink); font-weight:500; font-size:13px;
   letter-spacing:.02em; padding:12px 18px; border-radius:999px; }}
 
@@ -87,8 +90,7 @@ h1 {{ font-family:var(--serif); font-weight:600; font-size:38px; line-height:1; 
 .card img {{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .6s ease; }}
 .card:hover img {{ transform:scale(1.04); }}
 .card .txt {{ padding:12px 13px 14px; display:flex; flex-direction:column; gap:5px; flex:1; }}
-.card h4 {{ margin:0; font-size:14px; font-weight:600; line-height:1.3; }}
-.card p {{ margin:0; font-size:12px; color:var(--muted); line-height:1.45; }}
+.card h4 {{ margin:0; font-size:14px; font-weight:600; line-height:1.35; }}
 .card .shop {{ margin-top:auto; padding-top:8px; font-size:12px; font-weight:600; color:var(--accent); letter-spacing:.04em; }}
 
 .links {{ display:grid; gap:12px; }}
@@ -145,8 +147,8 @@ footer .heart {{ font-family:var(--serif); font-size:15px; color:var(--ink); mar
 </div>
 <script>
 const ITEMS = {items_js};
-const today = new Date(); today.setHours(0,0,0,0);
-const live = ITEMS.filter(i => new Date(i.date + "T00:00:00") <= today).sort((a,b) => b.date.localeCompare(a.date));
+const now = Date.now();
+const live = ITEMS.filter(i => Date.parse(i.live_at) <= now).sort((a,b) => b.live_at.localeCompare(a.live_at) || b.id.localeCompare(a.id));
 const esc = s => s.replace(/[&<>"]/g, c => ({{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}})[c]);
 if (!live.length) {{
   document.getElementById("empty").hidden = false;
@@ -155,7 +157,7 @@ if (!live.length) {{
   document.getElementById("hero").innerHTML = `
     <a class="hero" href="${{first.url}}" target="_blank" rel="noopener sponsored">
       <div class="img"><img src="${{first.thumb_data}}" alt=""><span class="badge">New today</span></div>
-      <div class="txt"><h2>${{esc(first.name)}}</h2><p>${{esc(first.sub)}}</p><span class="btn">Shop on Amazon <span aria-hidden="true">→</span></span></div>
+      <div class="txt"><h2>${{esc(first.name)}}</h2><span class="btn">Shop on Amazon <span aria-hidden="true">→</span></span></div>
     </a>`;
   if (rest.length) {{
     document.getElementById("section-head").hidden = false;
@@ -163,7 +165,7 @@ if (!live.length) {{
     document.getElementById("grid").innerHTML = rest.map(i => `
       <a class="card" href="${{i.url}}" target="_blank" rel="noopener sponsored">
         <div class="img"><img src="${{i.thumb_data}}" alt="" loading="lazy"></div>
-        <div class="txt"><h4>${{esc(i.name)}}</h4><p>${{esc(i.sub)}}</p><span class="shop">Shop on Amazon →</span></div>
+        <div class="txt"><h4>${{esc(i.name)}}</h4><span class="shop">Shop on Amazon →</span></div>
       </a>`).join("");
   }}
 }}
@@ -174,5 +176,5 @@ document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () =>
 </script>
 </body>
 </html>"""
-open("index.html","w").write(html)
+open("index.html","w",encoding="utf-8").write(html)
 print(len(html)//1024, "KB")

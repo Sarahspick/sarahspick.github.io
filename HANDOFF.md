@@ -37,7 +37,7 @@
 ### 원래 슬롯 표 (파일과 ASIN 참조용, 날짜는 위 표가 우선)
 | 슬롯 | 공개 (KST 09:00) | 파일 | 제품 (사이트 제목) | ASIN |
 |---|---|---|---|---|
-| 1 | 09-16 (실제 22:05 게시됨) | 2026-09-09_@jess.favoritefinds_7683380807334956318.mp4 | Mellow MarshMellow Comforter, pick your color ☁️🌈 | B0GQWK2D7L |
+| 1 | 09-16 (실제 22:05 게시됨) | 2026-09-09_@jess.favoritefinds_7683380807334956318.mp4 | Mellow MarshMellow Comforter ☁️ (사이트 대표 카드 제목, Mochi 지시로 pick your color 제거) | B0GQWK2D7L |
 | 2 | 09-17 | 2026-02-06_@jess.favoritefinds_7603475581237251359.mp4 | Mellow MarshMellow Comforter, White ☁️🤍 | B0GQWK2D7L |
 | 3 | 09-18 | 2026-09-02_@mrs.nikialexa_7680933683120835862.mp4 | SCOUPS Soft Top Silicone Ladle 🍝 | B0CKGXMBFR |
 | 4 | 09-19 | 2026-03-12_@myaquasplash_7616067171260632333.mp4 | Mellow MarshMellow Comforter, Baby Pink 🎀 | B0GQWK2D7L |
@@ -50,7 +50,7 @@
 - 게시 시각 규칙 (Mochi 결정, 2026-09-16): 인스타 릴스는 매일 한국시각 오전 9시. 미국 동부로는 전날 저녁 8시(11월 1일 서머타임 종료 후엔 저녁 7시). 사이트도 같은 순간(UTC 00:00)에 해당 슬롯을 공개하므로 어느 나라에서 보든 릴스와 사이트가 동시에 열린다.
 - 슬롯 1은 22:05 KST에 이미 게시됨. 사이트에선 이미 보이는 상태라 문제 없음.
 - ASIN은 Mochi가 전부 검수 완료. 사이트 카드는 제목(이모지 포함)만 보여주고 설명 문장은 없음.
-- 슬롯 0 (배치 밖, 이미 게시된 영상): Book Beam Projector 📽️✨, 링크 https://amzn.to/4heL25Z (ASIN 미확인, 이 환경에서 아마존 접속 불가), product=book-beam-projector, 사이트에는 09-15부터 보이는 것으로 설정. 썸네일 thumbs/00.jpg는 임시 이미지(아이보리 배경에 📽️). Mochi가 제품 사진을 드라이브 01_batch1_output 폴더에 올리면 Claude가 4:5로 잘라 교체. 앞으로 프로젝터 영상을 또 올려도 카드는 하나로 유지되며 위로 올라옴.
+- 슬롯 0 (배치 밖, 이미 게시된 영상): Book Beam Projector 📽️✨, 링크 https://amzn.to/4heL25Z (ASIN 미확인, 이 환경에서 아마존 접속 불가), product=book-beam-projector, 사이트에는 09-15부터 보이는 것으로 설정. 썸네일 thumbs/00.jpg는 Mochi가 드라이브에 올린 아마존 제품 사진(흰 배경)을 480x600 흰 캔버스에 맞춰 넣은 것(2026-09-16). 가로 사진은 자르지 않고 여백을 두고 넣는다. 앞으로 프로젝터 영상을 또 올려도 카드는 하나로 유지되며 위로 올라옴.
 전체 캡션/고정댓글/사이트 문구는 Buffer Document.md에 있음.
 
 ## 5. 사이트 구조와 재생성 방법

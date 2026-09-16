@@ -39,7 +39,7 @@ html = f"""<!DOCTYPE html>
 <title>Sarah's Pick</title>
 <meta name="description" content="Cozy home finds and little luxuries, everything from my videos in one place 💝">
 <meta property="og:title" content="Sarah's Pick">
-<meta property="og:description" content="Everything from my videos, all in one place 🤍">
+<meta property="og:description" content="Little things that make home feel softer ✨">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -118,7 +118,7 @@ footer .heart {{ font-size:14px; font-weight:500; color:var(--ink); margin-botto
   <header>
     <img class="avatar" src="{profile}" alt="Sarah">
     <h1>Sarah's Pick</h1>
-    <p class="bio">cozy home finds &amp; little luxuries 🤍<br><b>everything from my videos, all in one place</b></p>
+    <p class="bio">cozy home finds &amp; little luxuries 🤍<br><b>little things that make home feel softer ✨</b></p>
     <div class="social">
       <a href="{IG}" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>

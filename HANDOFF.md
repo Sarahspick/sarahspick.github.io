@@ -1,4 +1,4 @@
-# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 6차 갱신)
+# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 7차 갱신)
 
 이 문서는 Claude가 다음 세션에서 그대로 이어서 일할 수 있도록 쓴 것. 사람(Mochi)과 Claude 둘 다 읽는 용도.
 
@@ -89,6 +89,7 @@
 - 완료: PR #1 합쳐짐(Mochi, 22:49 KST). bio 링크 등록 완료. Buffer 예약 완료(Mochi).
 - 완료 (3차): 사이트 제품 중복 제거(제품당 카드 하나), Book Beam Projector 카드 추가(사진은 임시), 디자인 재조정(진한 아이보리, Plus Jakarta Sans, 감성 문구).
 - 완료 (4차): Links 탭 제거, 검색 UI, PC용 가운데 패널 레이아웃, 검색 키워드, thumb 경로 지원.
+- 완료 (7차): 사이트 bio 둘째 줄을 "little things that make home feel softer ✨"로 교체(Mochi가 이전 문장 싫다고 함). meta description 하트는 Mochi가 💝로 바꿈, 검색/링크 미리보기에만 쓰여 문제 없음.
 - 완료 (6차): 문구 파일을 Buffer Document.md로 개명하고 예약 순서대로 재구성, 해시태그 5개로 축소, PR로 사이트 반영.
 - 완료 (5차): 제품명 풀네임으로 복구, 게시 일정을 16 이불 / 17 국자 / 18 북라이트 / 19 치실 케이스 / 20일부터 정지로 변경(publish_day null = 정지).
 

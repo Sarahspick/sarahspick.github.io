@@ -37,7 +37,7 @@ html = f"""<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light only">
 <title>Sarah's Pick</title>
-<meta name="description" content="Cozy home finds and little luxuries, everything from my videos in one place 🤍">
+<meta name="description" content="Cozy home finds and little luxuries, everything from my videos in one place 💝">
 <meta property="og:title" content="Sarah's Pick">
 <meta property="og:description" content="Everything from my videos, all in one place 🤍">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤍</text></svg>">

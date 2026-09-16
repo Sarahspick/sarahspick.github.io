@@ -1,5 +1,18 @@
 [
  {
+  "slot": 0,
+  "id": "p-projector",
+  "name": "Book Beam Projector 📽️✨",
+  "asin": "",
+  "url": "https://amzn.to/4heL25Z",
+  "category": "gadgets",
+  "publish_day": 0,
+  "creator": "",
+  "source_file": "",
+  "product": "book-beam-projector",
+  "keywords": "book beam projector mini portable movie night bedroom wall reading"
+ },
+ {
   "slot": 1,
   "id": "b1-01",
   "name": "Mellow MarshMellow Comforter, pick your color ☁️🌈",
@@ -8,7 +21,9 @@
   "category": "bedding",
   "publish_day": 1,
   "creator": "jess.favoritefinds",
-  "source_file": "2026-09-09_@jess.favoritefinds_7683380807334956318.mp4"
+  "source_file": "2026-09-09_@jess.favoritefinds_7683380807334956318.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter blanket bedding fluffy cloud white sand pink blue sage espresso rainbow colors"
  },
  {
   "slot": 2,
@@ -17,9 +32,11 @@
   "asin": "B0GQWK2D7L",
   "url": "https://www.amazon.com/dp/B0GQWK2D7L?tag=hp302-20",
   "category": "bedding",
-  "publish_day": 2,
+  "publish_day": null,
   "creator": "jess.favoritefinds",
-  "source_file": "2026-02-06_@jess.favoritefinds_7603475581237251359.mp4"
+  "source_file": "2026-02-06_@jess.favoritefinds_7603475581237251359.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter white bedding fluffy"
  },
  {
   "slot": 3,
@@ -28,9 +45,11 @@
   "asin": "B0CKGXMBFR",
   "url": "https://www.amazon.com/dp/B0CKGXMBFR?tag=hp302-20",
   "category": "kitchen",
-  "publish_day": 3,
+  "publish_day": 2,
   "creator": "mrs.nikialexa",
-  "source_file": "2026-09-02_@mrs.nikialexa_7680933683120835862.mp4"
+  "source_file": "2026-09-02_@mrs.nikialexa_7680933683120835862.mp4",
+  "product": "B0CKGXMBFR",
+  "keywords": "scoups soft top silicone ladle kitchen spoon sauce soup pan"
  },
  {
   "slot": 4,
@@ -39,9 +58,11 @@
   "asin": "B0GQWK2D7L",
   "url": "https://www.amazon.com/dp/B0GQWK2D7L?tag=hp302-20",
   "category": "bedding",
-  "publish_day": 4,
+  "publish_day": null,
   "creator": "myaquasplash",
-  "source_file": "2026-03-12_@myaquasplash_7616067171260632333.mp4"
+  "source_file": "2026-03-12_@myaquasplash_7616067171260632333.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter baby pink bedding fluffy"
  },
  {
   "slot": 5,
@@ -50,9 +71,11 @@
   "asin": "B0F59B1YD8",
   "url": "https://www.amazon.com/dp/B0F59B1YD8?tag=hp302-20",
   "category": "gadgets",
-  "publish_day": 5,
+  "publish_day": 3,
   "creator": "electro.galaxy.shop",
-  "source_file": "2025-11-06_@electro.galaxy.shop_7569279437561203988.mp4"
+  "source_file": "2025-11-06_@electro.galaxy.shop_7569279437561203988.mp4",
+  "product": "B0F59B1YD8",
+  "keywords": "flat led book light panel reading lamp booktok bedtime timer"
  },
  {
   "slot": 6,
@@ -61,9 +84,11 @@
   "asin": "B0GQWK2D7L",
   "url": "https://www.amazon.com/dp/B0GQWK2D7L?tag=hp302-20",
   "category": "bedding",
-  "publish_day": 6,
+  "publish_day": null,
   "creator": "hannahbentley",
-  "source_file": "2026-05-24_@hannahbentley_7643229668631383309.mp4"
+  "source_file": "2026-05-24_@hannahbentley_7643229668631383309.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter baby blue bedding fluffy"
  },
  {
   "slot": 7,
@@ -72,9 +97,11 @@
   "asin": "B0H44LLZLY",
   "url": "https://www.amazon.com/dp/B0H44LLZLY?tag=hp302-20",
   "category": "personal-care",
-  "publish_day": 7,
+  "publish_day": 4,
   "creator": "morrowmoon0",
-  "source_file": "2026-04-21_@morrowmoon0_7630867654085053727.mp4"
+  "source_file": "2026-04-21_@morrowmoon0_7630867654085053727.mp4",
+  "product": "B0H44LLZLY",
+  "keywords": "pop up floss pick case 2 pack travel purse pink mint dental"
  },
  {
   "slot": 8,
@@ -83,9 +110,11 @@
   "asin": "B0GZLX82G9",
   "url": "https://www.amazon.com/dp/B0GZLX82G9?tag=hp302-20",
   "category": "bedding",
-  "publish_day": 8,
+  "publish_day": null,
   "creator": "hannahbentley",
-  "source_file": "2026-02-07_@hannahbentley_7603860160955632909.mp4"
+  "source_file": "2026-02-07_@hannahbentley_7603860160955632909.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter sand cream neutral bedding"
  },
  {
   "slot": 9,
@@ -94,8 +123,10 @@
   "asin": "B0GQWK2D7L",
   "url": "https://www.amazon.com/dp/B0GQWK2D7L?tag=hp302-20",
   "category": "bedding",
-  "publish_day": 9,
+  "publish_day": null,
   "creator": "megansue100",
-  "source_file": "2026-09-01_@megansue100_7680346025726463245.mp4"
+  "source_file": "2026-09-01_@megansue100_7680346025726463245.mp4",
+  "product": "marshmellow-comforter",
+  "keywords": "mellow marshmellow marshmallow comforter espresso brown pillows bedding"
  }
 ]

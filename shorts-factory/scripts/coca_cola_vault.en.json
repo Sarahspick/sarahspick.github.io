@@ -1,0 +1,294 @@
+{
+  "id": "coca_cola_vault",
+  "lang": "en",
+  "title": "Coca-Cola's recipe is locked in a *vault* 🔒",
+  "pronounce": {
+    "1886": "eighteen eighty-six",
+    "1925": "nineteen twenty-five",
+    "1979": "nineteen seventy-nine",
+    "2011": "twenty eleven"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "Behind this steel door",
+      "is Coca-Cola's *secret formula*."
+    ],
+    "clip": "c_vault_door",
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.62,
+        "y": 0.5,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:secret"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's the vault at the",
+        "*World of Coca-Cola* in Atlanta."
+      ],
+      "clip": "c_vault_wide"
+    },
+    {
+      "lines": [
+        "For 86 years before that,",
+        "the recipe sat in a *bank vault*."
+      ],
+      "clip": "c_bank"
+    },
+    {
+      "lines": [
+        "Legend says only *two* people",
+        "know the full formula…"
+      ],
+      "clip": "c_handshake"
+    },
+    {
+      "lines": [
+        "…and they're never allowed",
+        "to fly on the *same plane*."
+      ],
+      "clip": "c_plane",
+      "sfx": [
+        {
+          "id": "wait_what",
+          "at": "end+0.05"
+        }
+      ],
+      "pause_after": 0.7
+    },
+    {
+      "lines": [
+        "Here's the smart part:",
+        "Coke *never* patented it."
+      ],
+      "clip": "c_secret_wall",
+      "punch": true
+    },
+    {
+      "lines": [
+        "A patent would've expired",
+        "and made the recipe *public*."
+      ],
+      "clip": "c_secret_wall2"
+    },
+    {
+      "lines": [
+        "As a trade secret,",
+        "it can stay hidden *forever*."
+      ],
+      "clip": "c_pemberton",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:forever"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "c_pour",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "a copy of the recipe may have been",
+        "*printed in a newspaper* in 1979."
+      ],
+      "clip": "card_ajc",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:printed"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "In 2011, a radio show *tracked it down*",
+        "and published it."
+      ],
+      "clip": "card_tal"
+    },
+    {
+      "lines": [
+        "Coca-Cola says",
+        "it's *not* the real one."
+      ],
+      "clip": "c_sign"
+    },
+    {
+      "lines": [
+        "Do *you* believe them?"
+      ],
+      "clip": "c_vault_close"
+    }
+  ],
+  "clips": {
+    "c_vault_door": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 198.7,
+      "src_zoom": 1.2,
+      "focus": [
+        0.45,
+        0.42
+      ],
+      "speed": 0.8
+    },
+    "c_vault_wide": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 192.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.55,
+        0.42
+      ]
+    },
+    "c_bank": {
+      "src": "bili:BV1oB4y117UQ",
+      "start": 45.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_handshake": {
+      "src": "bili:BV1oB4y117UQ",
+      "start": 31.2,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_plane": {
+      "src": "bili:BV1oB4y117UQ",
+      "start": 34.6,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_secret_wall": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 202.6,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_secret_wall2": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 205.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_pemberton": {
+      "src": "bili:BV1oB4y117UQ",
+      "start": 71.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_pour": {
+      "src": "bili:BV1oB4y117UQ",
+      "start": 88.5,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_sign": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 235.4,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_vault_close": {
+      "src": "bili:BV1HjFreVENr",
+      "start": 196.4,
+      "src_zoom": 1.2,
+      "focus": [
+        0.55,
+        0.42
+      ]
+    },
+    "card_ajc": {
+      "kind": "card",
+      "tag": "news",
+      "outlet": "Atlanta Journal-Constitution",
+      "date": "Feb 18, 1979",
+      "headline": "Photo of a *handwritten* early Coca-Cola recipe appears in the paper"
+    },
+    "card_tal": {
+      "kind": "card",
+      "tag": "report",
+      "outlet": "This American Life",
+      "date": "Feb 2011",
+      "headline": "Radio show says it found Coca-Cola's *original recipe*"
+    }
+  },
+  "upload": {
+    "title": "Coca-Cola's Recipe Is Locked in a Vault 🔒 #shorts",
+    "description": "Coca-Cola's secret formula sits in a vault at the World of Coca-Cola in Atlanta; it was moved there in December 2011 from a SunTrust bank vault, where it had been kept since 1925. Popular legend says only two executives know the full formula and never travel together. Coke never patented the recipe, because a patent expires and becomes public; as a trade secret it can stay protected indefinitely. The twist: in 1979 the Atlanta Journal-Constitution printed a photo of a handwritten early recipe, and in 2011 This American Life said it had tracked down the original. Coca-Cola says it is not the real formula.",
+    "hashtags": [
+      "#shorts",
+      "#cocacola",
+      "#secrets",
+      "#business",
+      "#tradesecret"
+    ]
+  },
+  "sources": [
+    {
+      "name": "The Coca-Cola Company: Coca-Cola moves its secret formula to the World of Coca-Cola",
+      "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/299/coca-cola-moves-its-secret-formula-to-the-world-of-coca-cola"
+    },
+    {
+      "name": "ABC News: Coca-Cola moves secret formula (2011)",
+      "url": "https://abcnews.com/blogs/headlines/2011/12/coca-cola-moves-secret-formula"
+    },
+    {
+      "name": "Klemchuk: What Coca-Cola teaches about trade secrets versus patents",
+      "url": "https://www.klemchuk.com/ideate/coca-cola-trade-secrets-patents-ip-strategy"
+    }
+  ],
+  "footage_credits": [
+    "World of Coca-Cola visit footage (饲养员又来了)",
+    "Coca-Cola history explainer footage (科普事物薄)"
+  ]
+}

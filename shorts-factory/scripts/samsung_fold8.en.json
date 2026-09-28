@@ -1,0 +1,289 @@
+{
+  "id": "samsung_fold8",
+  "lang": "en",
+  "title": "How Samsung makes *glass* fold in half 🤯",
+  "pronounce": {
+    "Fold8": "Fold 8",
+    "4.1": "four point one",
+    "$2,000": "two thousand dollars"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "This phone screen is made of *glass*…",
+      "and it folds in half."
+    ],
+    "clip": "f_unfold",
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.5,
+        "y": 0.5,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:folds"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's Samsung's new",
+        "*Galaxy Z Fold8 Ultra*."
+      ],
+      "clip": "f_product"
+    },
+    {
+      "lines": [
+        "But glass doesn't bend…",
+        "so how?"
+      ],
+      "clip": "f_fold_hand",
+      "punch": true
+    },
+    {
+      "lines": [
+        "Samsung shaves it into *ultra-thin glass* —",
+        "thinner than a human hair."
+      ],
+      "clip": "f_edge"
+    },
+    {
+      "lines": [
+        "At that thickness,",
+        "glass can actually *flex*."
+      ],
+      "clip": "f_fold_hand2"
+    },
+    {
+      "lines": [
+        "Underneath sits a layer of *titanium*",
+        "that spreads out the stress,"
+      ],
+      "clip": "f_ui",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:titanium"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "so the fold stays *smooth*."
+      ],
+      "clip": "f_ui2"
+    },
+    {
+      "lines": [
+        "Unfolded, the whole phone",
+        "is just *4.1 millimeters* thin."
+      ],
+      "clip": "f_slim"
+    },
+    {
+      "lines": [
+        "Samsung says the crease",
+        "is less visible than *ever*."
+      ],
+      "clip": "f_compare"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "f_grass",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.2
+        }
+      ]
+    },
+    {
+      "lines": [
+        "After one week of use,",
+        "a reviewer said the crease *came back*."
+      ],
+      "clip": "f_grass2",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:came"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Especially in *bright light*."
+      ],
+      "clip": "f_sun"
+    },
+    {
+      "lines": [
+        "Would *you* pay over $2,000 for this?"
+      ],
+      "clip": "f_man"
+    }
+  ],
+  "clips": {
+    "f_unfold": {
+      "src": "bili:BV12eek6UEKi",
+      "start": 20.2,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_product": {
+      "src": "bili:BV15eGN6BEqr",
+      "start": 124.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "f_fold_hand": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 50.2,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_edge": {
+      "src": "bili:BV15eGN6BEqr",
+      "start": 122.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "f_fold_hand2": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 45.2,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_ui": {
+      "src": "bili:BV12eek6UEKi",
+      "start": 23.0,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_ui2": {
+      "src": "bili:BV12eek6UEKi",
+      "start": 27.4,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_slim": {
+      "src": "bili:BV12eek6UEKi",
+      "start": 9.2,
+      "src_zoom": 1.25,
+      "focus": [
+        0.45,
+        0.4
+      ]
+    },
+    "f_compare": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 112.5,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_grass": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 140.7,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_grass2": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 151.9,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_sun": {
+      "src": "bili:BV1QYut6dE3A",
+      "start": 118.2,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "f_man": {
+      "src": "bili:BV12eek6UEKi",
+      "start": 21.0,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
+  },
+  "upload": {
+    "title": "How Samsung Makes Glass Fold in Half 🤯 #shorts",
+    "description": "The Galaxy Z Fold8 Ultra's inner screen uses ultra-thin glass (UTG) that is thin enough to flex, backed by Samsung's new Flex Titanium layer (a titanium-alloy film plus a titanium plate) that supports the display and reduces crease visibility. Unfolded, the phone is 4.1 mm thin. Samsung says the crease is less visible than ever, but after a week of daily use Tom's Guide found the 'crease-free' display settled into a visible rut, especially under bright light. Price: from $2,099.",
+    "hashtags": [
+      "#shorts",
+      "#samsung",
+      "#galaxyzfold8",
+      "#foldable",
+      "#technology"
+    ]
+  },
+  "sources": [
+    {
+      "name": "SamMobile: Inside the Galaxy Z Fold8 and Fold8 Ultra hinge and display",
+      "url": "https://www.sammobile.com/news/inside-galaxy-z-fold8-ultra-how-samsung-engineered-hinge-display-durability/"
+    },
+    {
+      "name": "Samsung Newsroom: Galaxy Unpacked July 2026",
+      "url": "https://news.samsung.com/global/galaxy-unpacked-july-2026-a-first-look-at-galaxy-z-fold8-ultra-galaxy-z-fold8-and-galaxy-z-flip8"
+    },
+    {
+      "name": "Tom's Guide: The Galaxy Z Fold 8's 'crease-free' display, a reality check after 7 days",
+      "url": "https://www.tomsguide.com/phones/samsung-phones/the-tech-world-hyped-up-the-galaxy-z-fold-8s-crease-free-display-heres-a-reality-check-after-7-days"
+    },
+    {
+      "name": "SamMobile: Galaxy Z Fold 8 Ultra price $2,099",
+      "url": "https://www.sammobile.com/news/samsung-galaxy-z-fold-8-ultra-prices/"
+    }
+  ],
+  "footage_credits": [
+    "Samsung official films (Galaxy Z Fold8 Ultra for business; anti-reflecting film guide)",
+    "Galaxy Z Fold8 Ultra vs Fold7 review footage (大狗的数码生活)"
+  ]
+}

@@ -1,0 +1,300 @@
+{
+  "id": "disney_tunnels",
+  "lang": "en",
+  "title": "Disney's secret *underground* city 🏰",
+  "pronounce": {},
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "Under Disney's Magic Kingdom,",
+      "there's a *secret* city."
+    ],
+    "clips": [
+      "d_castle",
+      "d_tunnel"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.5,
+        "y": 0.5,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:secret"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Nine acres of tunnels",
+        "called *utilidors*."
+      ],
+      "clip": "d_map"
+    },
+    {
+      "lines": [
+        "Cast members use them to cross the park",
+        "without ever being *seen*."
+      ],
+      "clip": "d_mickey",
+      "sfx": [
+        {
+          "id": "ooh",
+          "at": "end",
+          "gain": -4
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Legend says Walt hated seeing a *cowboy*",
+        "walking through Tomorrowland…"
+      ],
+      "clip": "d_street"
+    },
+    {
+      "lines": [
+        "…so in Florida,",
+        "everything was hidden *below*."
+      ],
+      "clip": "d_carts"
+    },
+    {
+      "lines": [
+        "Costumes, food, trash, deliveries —",
+        "all moving *underneath* you."
+      ],
+      "clip": "d_costume"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "d_corridor",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "the tunnels aren't *underground*."
+      ],
+      "clip": "d_castle2",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:underground"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Florida's water table",
+        "was too high to dig."
+      ],
+      "clip": "d_build"
+    },
+    {
+      "lines": [
+        "So they built the tunnels",
+        "at *ground level*…"
+      ],
+      "clip": "d_build2"
+    },
+    {
+      "lines": [
+        "…and piled the whole park on *top*."
+      ],
+      "clip": "d_street2"
+    },
+    {
+      "lines": [
+        "You're actually walking",
+        "on the *second floor*."
+      ],
+      "clip": "d_castle3",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "how_possible",
+          "at": "end+0.05",
+          "gain": -3
+        }
+      ],
+      "pause_after": 1.2
+    },
+    {
+      "lines": [
+        "Did *you* know that? 😳"
+      ],
+      "clip": "d_castle4"
+    }
+  ],
+  "clips": {
+    "d_castle": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 258.6,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "d_tunnel": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 219.6,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_map": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 13.0,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_mickey": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 213.4,
+      "src_zoom": 1.3,
+      "focus": [
+        0.55,
+        0.4
+      ]
+    },
+    "d_street": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 78.3,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "d_carts": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 225.7,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_costume": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 158.6,
+      "src_zoom": 1.45,
+      "focus": [
+        0.5,
+        0.34
+      ]
+    },
+    "d_corridor": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 237.9,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_castle2": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 195.9,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "d_build": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 26.8,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_build2": {
+      "src": "bili:BV1wc411X7Zv",
+      "start": 54.8,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "d_street2": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 133.2,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "d_castle3": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 266.4,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "d_castle4": {
+      "src": "bili:BV1hr4y1u7M1",
+      "start": 290.0,
+      "src_zoom": 1.12,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    }
+  },
+  "upload": {
+    "title": "Disney's Secret Underground City 🏰 #shorts",
+    "description": "Beneath Magic Kingdom at Walt Disney World runs the utilidor system: about nine acres of corridors that let cast members, costumes, food, trash and deliveries move around the park unseen. According to legend, Walt Disney disliked seeing a Frontierland cowboy walk through Tomorrowland at Disneyland. The twist: because Florida's water table is so high, the utilidors were built at ground level and the park was built on top of them, so guests are actually walking on the second story.",
+    "hashtags": [
+      "#shorts",
+      "#disney",
+      "#disneyworld",
+      "#magickingdom",
+      "#secrets"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Wikipedia: Disney utilidor system",
+      "url": "https://en.wikipedia.org/wiki/Disney_utilidor_system"
+    },
+    {
+      "name": "Disney Theme Parks Wiki: Utilidors",
+      "url": "https://disneythemeparks.fandom.com/wiki/Utilidors"
+    }
+  ],
+  "footage_credits": [
+    "Archival Walt Disney World utilidor footage (via JJT Digital Media compilation)",
+    "Magic Kingdom walk-through footage (REN在美国)"
+  ]
+}

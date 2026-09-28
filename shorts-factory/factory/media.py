@@ -29,7 +29,8 @@ def probe(path):
     return st.get("width"), st.get("height"), float(d.get("format", {}).get("duration", 0) or 0)
 
 
-PLATFORMS = {"yt": "https://www.youtube.com/watch?v={}", "bili": "https://www.bilibili.com/video/{}"}
+PLATFORMS = {"yt": "https://www.youtube.com/watch?v={}", "bili": "https://www.bilibili.com/video/{}",
+             "dm": "https://www.dailymotion.com/video/{}"}
 
 
 def source_url(src):

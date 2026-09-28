@@ -1,0 +1,60 @@
+{
+  "id": "dyson_fan",
+  "lang": "en",
+  "title": "The \"bladeless\" fan has a *secret* 🌀",
+  "pronounce": {},
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": ["This fan has *no blades*…", "so where's the wind coming from?"],
+    "clips": ["d_ring", "d_tissue"],
+    "annotate": [{"type": "arrow", "at": 0, "until": "line2", "x": 0.5, "y": 0.5, "angle": 30}],
+    "sfx": [{"id": "boom", "at": "word:blades"}]
+  },
+  "sentences": [
+    {"lines": ["It's Dyson's *Air Multiplier*."], "clip": "d_james"},
+    {"lines": ["The ring is hollow, with a thin *slit*", "running all the way around."], "clip": "d_ring_anim"},
+    {"lines": ["Air blasts out of that slit…"], "clip": "d_slit"},
+    {"lines": ["…and the ring's wing-shaped curve", "*drags* the room air along with it."], "clip": "d_foil"},
+    {"lines": ["Dyson says that multiplies the airflow", "up to *15 times*."], "clip": "d_x15",
+     "sfx": [{"id": "ding", "at": "word:15"}]},
+    {"lines": ["No chopping blades", "means a smoother breeze…"], "clip": "d_plant"},
+    {"lines": ["…and nothing for little fingers to hit."], "clip": "d_kid"},
+    {"lines": ["But here's the *twist*…"], "clip": "d_ring2", "pause_after": 0.3,
+     "sfx": [{"id": "dun_dun", "at": "start", "gain": -5, "dur": 2.0}]},
+    {"lines": ["It *does* have blades."], "clip": "d_impeller", "punch": true,
+     "sfx": [{"id": "boom", "at": "word:does"}]},
+    {"lines": ["They're hidden in the base —", "a motor spins them to suck air in."], "clips": ["d_cutaway", "d_motor"]},
+    {"lines": ["The \"bladeless\" fan just hides its blades", "where you *can't see* them."], "clip": "d_james2",
+     "sfx": [{"id": "wait_what", "at": "end+0.05"}], "pause_after": 0.8},
+    {"lines": ["Did *you* know that? 🌀"], "clip": "d_tower"}
+  ],
+  "clips": {
+    "d_ring":      {"src": "bili:BV1AQ4y1R7Ym", "start": 93.7, "src_zoom": 1.18, "focus": [0.45, 0.44]},
+    "d_tissue":    {"src": "bili:BV1AQ4y1R7Ym", "start": 141.2, "src_zoom": 1.18, "focus": [0.45, 0.44]},
+    "d_james":     {"src": "bili:BV1AQ4y1R7Ym", "start": 68.6, "src_zoom": 1.18, "focus": [0.5, 0.44]},
+    "d_ring_anim": {"src": "bili:BV1AQ4y1R7Ym", "start": 95.0, "src_zoom": 1.18, "focus": [0.5, 0.44]},
+    "d_slit":      {"src": "bili:BV1AQ4y1R7Ym", "start": 98.7, "src_zoom": 1.18, "focus": [0.5, 0.44]},
+    "d_foil":      {"src": "bili:BV1AQ4y1R7Ym", "start": 120.0, "src_zoom": 1.18, "focus": [0.35, 0.44]},
+    "d_x15":       {"src": "bili:BV1AQ4y1R7Ym", "start": 110.0, "src_zoom": 1.18, "focus": [0.45, 0.44]},
+    "d_plant":     {"src": "bili:BV1AQ4y1R7Ym", "start": 150.0, "src_zoom": 1.18, "focus": [0.5, 0.44]},
+    "d_kid":       {"src": "bili:BV1AQ4y1R7Ym", "start": 195.5, "src_zoom": 1.18, "focus": [0.5, 0.44]},
+    "d_ring2":     {"src": "bili:BV1TT4y1i7Es", "start": 250.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
+    "d_impeller":  {"src": "bili:BV1h3411A72x", "start": 102.5, "src_zoom": 1.2, "focus": [0.55, 0.42]},
+    "d_cutaway":   {"src": "bili:BV1TT4y1i7Es", "start": 185.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
+    "d_motor":     {"src": "bili:BV1h3411A72x", "start": 115.0, "src_zoom": 1.2, "focus": [0.5, 0.42]},
+    "d_james2":    {"src": "bili:BV1TT4y1i7Es", "start": 205.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
+    "d_tower":     {"src": "bili:BV1AQ4y1R7Ym", "start": 148.2, "src_zoom": 1.18, "focus": [0.5, 0.44]}
+  },
+  "upload": {
+    "title": "The \"Bladeless\" Fan Has a Secret 🌀 #shorts",
+    "description": "Dyson's Air Multiplier has no visible blades: air is pushed up into a hollow ring and forced out of a thin slit, and the ring's airfoil shape draws surrounding room air along with it. Dyson says this multiplies the airflow up to 15 times, giving a smoother breeze with no exposed spinning blades. The twist: it isn't bladeless at all. A brushless motor in the base spins an impeller (blades) that sucks the air in; they're just hidden where you can't see them.",
+    "hashtags": ["#shorts", "#dyson", "#engineering", "#howitworks", "#technology"]
+  },
+  "sources": [
+    {"name": "HowStuffWorks: How the Dyson bladeless fan works", "url": "https://electronics.howstuffworks.com/gadgets/home/dyson-bladeless-fan.htm"},
+    {"name": "Jameco: How does the Dyson Air Multiplier work?", "url": "https://www.jameco.com/Jameco/workshop/Howitworks/dysonairmultiplier.html"},
+    {"name": "Dezeen: Air Multiplier by Dyson (2009)", "url": "https://www.dezeen.com/2009/10/13/air-multiplier-by-dyson/"}
+  ],
+  "footage_credits": ["Bladeless fan explainer with Dyson animations and interviews (科普记)", "James Dyson explains the Air Multiplier (Dyson, via kerris)", "Dyson fan teardown (吃拆玩呗)"]
+}

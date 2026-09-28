@@ -1,0 +1,59 @@
+{
+  "id": "faceid_dots",
+  "lang": "en",
+  "title": "Your iPhone fires *30,000 dots* at your face 👀",
+  "pronounce": {"3D": "three D"},
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": ["Every time you unlock your iPhone,", "it fires *30,000 dots* at your face."],
+    "clips": ["f_ir_grid", "f_ir_grid2"],
+    "annotate": [{"type": "arrow", "at": "line2", "x": 0.5, "y": 0.5, "angle": 30}],
+    "sfx": [{"id": "boom", "at": "word:dots"}]
+  },
+  "sentences": [
+    {"lines": ["They're *infrared*,", "so your eyes can't see them."], "clip": "f_notch"},
+    {"lines": ["But an infrared camera *can*."], "clip": "f_ir_face", "punch": true},
+    {"lines": ["Those dots map your face in *3D*…"], "clip": "f_mesh"},
+    {"lines": ["…and a secure chip checks it", "against the face you saved."], "clips": ["f_face1", "f_face2"]},
+    {"lines": ["That's why a flat *photo* of you", "won't unlock it."], "clip": "f_lock"},
+    {"lines": ["Apple says the odds a stranger gets in:", "*1 in a million*."], "clip": "f_title",
+     "sfx": [{"id": "ding", "at": "line2"}]},
+    {"lines": ["But here's the *twist*…"], "clip": "f_man", "pause_after": 0.3,
+     "sfx": [{"id": "dun_dun", "at": "start", "gain": -5, "dur": 2.0}]},
+    {"lines": ["Those odds get *worse*", "for identical twins."], "clip": "f_twins", "punch": true,
+     "sfx": [{"id": "boom", "at": "word:twins"}]},
+    {"lines": ["In tests, some twins have unlocked", "each other's phones."], "clips": ["f_twin_try", "f_twin_show"],
+     "sfx": [{"id": "no_way", "at": "end", "gain": -4}], "pause_after": 1.0},
+    {"lines": ["Apple's own advice?", "If you're worried, use a *passcode*."], "clip": "f_unlock",
+     "sfx": [{"id": "click", "at": "word:passcode"}]},
+    {"lines": ["Do *you* have a twin? 👯"], "clip": "f_twins2"}
+  ],
+  "clips": {
+    "f_ir_grid":   {"src": "bili:BV17b42177z3", "start": 13.0, "focus": [0.5, 0.45]},
+    "f_ir_grid2":  {"src": "bili:BV17b42177z3", "start": 20.0, "focus": [0.5, 0.45]},
+    "f_notch":     {"src": "bili:BV1tx41157w9", "start": 14.0, "focus": [0.55, 0.5]},
+    "f_ir_face":   {"src": "bili:BV17b42177z3", "start": 17.5, "focus": [0.5, 0.45]},
+    "f_mesh":      {"src": "bili:BV1Mr4y1T73B", "start": 0.2, "speed": 0.8, "focus": [0.5, 0.5]},
+    "f_face1":     {"src": "bili:BV1tx41157w9", "start": 10.0, "focus": [0.5, 0.5]},
+    "f_face2":     {"src": "bili:BV1tx41157w9", "start": 18.0, "focus": [0.5, 0.5]},
+    "f_lock":      {"src": "bili:BV1rW411g7Zy", "start": 2.8, "focus": [0.5, 0.5]},
+    "f_title":     {"src": "bili:BV1tx41157w9", "start": 13.0, "focus": [0.5, 0.5]},
+    "f_man":       {"src": "bili:BV1tx41157w9", "start": 21.0, "focus": [0.5, 0.5]},
+    "f_twins":     {"src": "bili:BV1Lx411j7dJ", "start": 29.2, "focus": [0.5, 0.5]},
+    "f_twin_try":  {"src": "bili:BV1Lx411j7dJ", "start": 136.0, "focus": [0.55, 0.5]},
+    "f_twin_show": {"src": "bili:BV1Lx411j7dJ", "start": 146.0, "focus": [0.5, 0.5]},
+    "f_unlock":    {"src": "bili:BV1rW411g7Zy", "start": 50.5, "focus": [0.5, 0.5]},
+    "f_twins2":    {"src": "bili:BV1Lx411j7dJ", "start": 12.5, "focus": [0.5, 0.5]}
+  },
+  "upload": {
+    "title": "Your iPhone Fires 30,000 Dots at Your Face 👀 #shorts",
+    "description": "Face ID's TrueDepth camera projects more than 30,000 invisible infrared dots to build a depth map of your face, which the Secure Enclave compares with your enrolled face. That depth data is why a flat photo can't unlock the phone, and Apple puts the chance that a random person unlocks your iPhone at less than 1 in 1,000,000. The twist: Apple says the probability is higher for twins and siblings who look like you (and children under 13), and recommends using a passcode if you're concerned. Some identical twins have unlocked each other's phones in tests.",
+    "hashtags": ["#shorts", "#apple", "#iphone", "#faceid", "#technology"]
+  },
+  "sources": [
+    {"name": "Apple Support: About Face ID advanced technology", "url": "https://support.apple.com/en-us/102381"},
+    {"name": "Tom's Guide: Apple's Face ID can be fooled by kids, twins", "url": "https://www.tomsguide.com/us/apple-face-id-kids-twins,news-25906.html"}
+  ],
+  "footage_credits": ["Apple official films: 'Introducing Face ID', 'Face ID Data', iPhone X Face ID ad", "Infrared camera view of the Face ID dot projector (眞白かのんの白菜)", "Twins Face ID test (realfakeEcho)"]
+}

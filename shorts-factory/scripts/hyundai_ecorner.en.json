@@ -1,0 +1,304 @@
+{
+  "id": "hyundai_ecorner",
+  "lang": "en",
+  "title": "Hyundai's car that drives *sideways* 🦀",
+  "pronounce": {
+    "e-Corner": "e-corner",
+    "90": "ninety",
+    "2023": "twenty twenty-three"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "This car just drove…",
+      "*sideways*."
+    ],
+    "clip": "e_crab_front",
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.5,
+        "y": 0.55,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:sideways"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "No drifting. All four wheels",
+        "turned *90 degrees*."
+      ],
+      "clip": "e_wheel90",
+      "punch": true
+    },
+    {
+      "lines": [
+        "It's Hyundai Mobis's",
+        "*e-Corner* system."
+      ],
+      "clip": "e_hq"
+    },
+    {
+      "lines": [
+        "Every wheel gets its own motor,",
+        "brakes, steering and suspension."
+      ],
+      "clip": "e_cutaway",
+      "sfx": [
+        {
+          "id": "click",
+          "at": "word:motor"
+        },
+        {
+          "id": "click",
+          "at": "word:brakes"
+        },
+        {
+          "id": "click",
+          "at": "word:steering"
+        },
+        {
+          "id": "click",
+          "at": "word:suspension"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "No steering rack. No driveshafts.",
+        "Each wheel works *alone*."
+      ],
+      "clip": "e_city"
+    },
+    {
+      "lines": [
+        "So it can slide straight into",
+        "a tight parking spot…"
+      ],
+      "clip": "e_park_top"
+    },
+    {
+      "lines": [
+        "…spin in place like a *tank*…"
+      ],
+      "clip": "e_zero",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "wow",
+          "at": "end",
+          "gain": -4
+        }
+      ]
+    },
+    {
+      "lines": [
+        "…or pivot around",
+        "a single wheel."
+      ],
+      "clip": "e_pivot"
+    },
+    {
+      "lines": [
+        "In 2023, it became the first car like this",
+        "to drive on *public roads*."
+      ],
+      "clip": "e_road"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "e_drone",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.2
+        }
+      ]
+    },
+    {
+      "lines": [
+        "You still can't *buy* it."
+      ],
+      "clip": "e_parked",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:buy"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Mobis says it's ready for mass production…",
+        "but no car on sale uses it yet."
+      ],
+      "clip": "e_diag"
+    },
+    {
+      "lines": [
+        "Would *you* drive a car",
+        "that walks like a crab? 🦀"
+      ],
+      "clip": "e_crab_front2"
+    }
+  ],
+  "clips": {
+    "e_crab_front": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 54.7,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_wheel90": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 66.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_hq": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 11.4,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "e_cutaway": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 16.2,
+      "aspect": "4:3",
+      "src_zoom": 1.1,
+      "focus": [
+        0.5,
+        0.56
+      ]
+    },
+    "e_city": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 31.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "e_park_top": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 62.2,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_zero": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 77.8,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_pivot": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 116.8,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_road": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 159.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "e_drone": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 171.4,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "e_parked": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 128.5,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_diag": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 152.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    },
+    "e_crab_front2": {
+      "src": "bili:BV1PnzKYwEjF",
+      "start": 46.6,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.57
+      ]
+    }
+  },
+  "upload": {
+    "title": "This Car Drives Sideways 🦀 #shorts",
+    "description": "Hyundai Mobis' e-Corner System packs driving (in-wheel motor), braking, steering and suspension into each wheel, with no mechanical link between them, so every wheel can turn up to 90 degrees. That enables crab driving, zero turns, pivot turns and diagonal driving. In 2023 an IONIQ 5 test car with the system became the first to drive on public roads. Mobis says the technology is ready for mass production, but no production car you can buy uses it yet.",
+    "hashtags": [
+      "#shorts",
+      "#hyundai",
+      "#cars",
+      "#engineering",
+      "#technology"
+    ]
+  },
+  "sources": [
+    {
+      "name": "PR Newswire: Hyundai Mobis developed a 90-degree rotating wheel, 'e-corner module'",
+      "url": "https://www.prnewswire.com/news-releases/hyundai-mobis-developed-a-90-degree-rotating-wheel-e-corner-module-301407350.html"
+    },
+    {
+      "name": "PR Newswire: e-Corner System becomes the first in the world to drive on public roads",
+      "url": "https://www.prnewswire.com/news-releases/hyundai-mobis-e-corner-system-featuring-crab-walking-and-zero-turn-becomes-the-first-in-the-world-to-drive-on-public-roads-301803927.html"
+    },
+    {
+      "name": "Hyundai Mobis: MOBION, technologies ready for mass production",
+      "url": "https://www.mobis.com/en/aboutus/press.do?category=press&idx=5885"
+    }
+  ],
+  "footage_credits": [
+    "Hyundai Mobis official film: e-Corner System On The Road"
+  ]
+}

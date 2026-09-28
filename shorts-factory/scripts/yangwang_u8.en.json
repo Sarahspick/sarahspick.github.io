@@ -1,0 +1,320 @@
+{
+  "id": "yangwang_u8",
+  "lang": "en",
+  "title": "The $150,000 SUV that can *float* 🌊",
+  "pronounce": {
+    "U8": "U eight",
+    "3 km/h": "three kilometers an hour",
+    "$150,000": "a hundred and fifty thousand dollar"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "This SUV just drove into a lake…",
+      "and *floated*."
+    ],
+    "clips": [
+      "y_splash",
+      "y_float"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.5,
+        "y": 0.5,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:floated"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's the *Yangwang U8*,",
+        "a $150,000 SUV from BYD."
+      ],
+      "clip": "y_ramp"
+    },
+    {
+      "lines": [
+        "When the water gets too deep,",
+        "it flips into *emergency floating mode*."
+      ],
+      "clip": "y_dash",
+      "sfx": [
+        {
+          "id": "confirm",
+          "at": "line2"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The engine shuts off,",
+        "the windows seal shut,"
+      ],
+      "clip": "y_cabin"
+    },
+    {
+      "lines": [
+        "and the suspension lifts",
+        "all the way up."
+      ],
+      "clip": "y_side"
+    },
+    {
+      "lines": [
+        "The sunroof even opens",
+        "as an *escape hatch*."
+      ],
+      "clip": "y_roof"
+    },
+    {
+      "lines": [
+        "It can stay afloat",
+        "for about *30 minutes*…"
+      ],
+      "clip": "y_aerial",
+      "sfx": [
+        {
+          "id": "wow",
+          "at": "end",
+          "gain": -4
+        }
+      ]
+    },
+    {
+      "lines": [
+        "…and paddle forward at *3 km/h*",
+        "just by spinning its wheels."
+      ],
+      "clips": [
+        "y_speed",
+        "y_boat"
+      ]
+    },
+    {
+      "lines": [
+        "The secret?",
+        "*Four* motors, one for each wheel."
+      ],
+      "clip": "y_wheel",
+      "punch": true
+    },
+    {
+      "lines": [
+        "That's also how it spins",
+        "in place like a *tank*."
+      ],
+      "clip": "y_tank"
+    },
+    {
+      "lines": [
+        "But here's the crazy part…"
+      ],
+      "clip": "y_exit",
+      "pause_after": 0.25,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "this thing weighs almost *3.5 tons*."
+      ],
+      "clip": "y_exit2",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:tons"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Would *you* drive it into a lake?"
+      ],
+      "clip": "y_shore"
+    }
+  ],
+  "clips": {
+    "y_splash": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 22.9,
+      "focus": [
+        0.35,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_float": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 37.0,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_ramp": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 7.0,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_dash": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 28.6,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_cabin": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 34.4,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_side": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 46.0,
+      "focus": [
+        0.4,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_roof": {
+      "src": "bili:BV1LUV2zVE92",
+      "start": 24.0,
+      "src_zoom": 1.25,
+      "focus": [
+        0.5,
+        0.4
+      ]
+    },
+    "y_aerial": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 48.6,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_speed": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 41.6,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_boat": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 54.6,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_wheel": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 61.8,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_tank": {
+      "src": "bili:BV1XN4y1D7uW",
+      "start": 1.0,
+      "speed": 2.0,
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    "y_exit": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 58.9,
+      "focus": [
+        0.4,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_exit2": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 63.2,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_shore": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 64.8,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    }
+  },
+  "upload": {
+    "title": "The SUV That Can Float 🌊 #shorts",
+    "description": "BYD's Yangwang U8 has an emergency floating mode: when the water gets too deep, the engine shuts off, the suspension rises to its maximum height, the windows close, the A/C switches to recirculation and the sunroof opens as an escape exit. It can stay afloat for about 30 minutes and move at around 3 km/h using its four independent electric motors, the same setup that lets it do a 360-degree tank turn. Price: about 1.09 million yuan (~$150,000). Weight: about 3,460 kg.",
+    "hashtags": [
+      "#shorts",
+      "#byd",
+      "#yangwang",
+      "#cars",
+      "#technology"
+    ]
+  },
+  "sources": [
+    {
+      "name": "CarNewsChina: Yangwang U8 launched, can float on water for 30 minutes and sail 3 km/h",
+      "url": "https://carnewschina.com/2023/09/20/byds-yangwang-u8-launched-can-float-on-water-for-30-minutes-and-sail-3km-h/"
+    },
+    {
+      "name": "Wikipedia: Yangwang U8",
+      "url": "https://en.wikipedia.org/wiki/Yangwang_U8"
+    },
+    {
+      "name": "Autoevolution: Emergency Floating Mode",
+      "url": "https://www.autoevolution.com/news/meet-the-car-that-floats-byd-s-yangwang-u8-suv-comes-with-an-emergency-floating-mode-221628.html"
+    }
+  ],
+  "footage_credits": [
+    "Yangwang official emergency-floating film",
+    "Yangwang U8 tank-turn footage (HaloCar)",
+    "Yangwang U8 floating footage (Weibo video)"
+  ]
+}

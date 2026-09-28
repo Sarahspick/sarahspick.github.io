@@ -44,6 +44,11 @@ factory/sfx.py           효과음 음량 정규화
 factory/render.py        타임라인, 자막 조각, 오디오 믹스, 인코딩
 tools/fetch_assets.py    폰트·아이콘·효과음 다운로드 (models 옵션: 오프라인 음성)
 tools/find_footage.py    각 장면용 원본 영상 후보 검색 (유튜브 / 빌리빌리)
+tools/bili_search.py     빌리빌리 빠른 검색 (제목·길이·조회수)
+tools/dm_search.py       데일리모션 검색
+tools/grab.py            원본 영상 병렬 다운로드 (bili:/yt:/dm:)
+tools/sheet.py           원본 영상 컨택트 시트 (구간 고르기용)
+tools/qa.py              렌더 결과 점검 (싱크 일치율, 효과음 위치, 2fps 시트)
 tools/voice_samples.py   목소리 비교 샘플
 assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 ```
@@ -118,14 +123,18 @@ assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 ## 원본 영상(푸티지) 고르기
 
 ```bash
-python tools/find_footage.py scripts/mercedes_bounce.en.json
-python tools/find_footage.py scripts/mercedes_bounce.en.json --site bili
+python tools/bili_search.py "Amazon Kiva robots" "亚马逊 仓库 机器人"   # 후보 찾기
+python tools/grab.py bili:BV1P44y1r7DB bili:BV12G411t7Dp            # 받기 (work/sources/)
+python tools/sheet.py bili:BV1P44y1r7DB 12 72 1.5                    # 12초부터 72초 동안 1.5초 간격 시트
+python make_short.py scripts/amazon_robots.en.json
+python tools/qa.py amazon_robots                                     # 결과 점검
 ```
 
-- 공식 채널(브랜드 뉴스룸·프레스 영상)을 우선 표시합니다
 - 고른 영상의 ID와 시작 초를 `clips`의 `src`, `start`에 넣으면 됩니다
-- 원본에 박힌 자막·워터마크는 `src_zoom`과 `focus`로 잘라냅니다
-- 클라우드 서버에서는 유튜브가 봇 확인을 요구해 다운로드가 막힐 수 있습니다. 노트북에서는 정상 동작합니다.
+- 브랜드 공식 영상(공식 광고·프레스 영상)을 우선 사용합니다
+- 원본에 박힌 자막·워터마크는 `src_zoom`과 `focus`로 잘라냅니다 (예: `"src_zoom": 1.2, "focus": [0.5, 0.42]`)
+- 클라우드 서버에서는 유튜브가 봇 확인을 요구해 다운로드가 막힙니다. 그래서 같은 영상이 올라간 빌리빌리를 씁니다. 노트북에서는 유튜브(`yt:`)도 정상 동작합니다.
+- 데일리모션(`dm:`)은 로그인 없이 받으면 288p라서 화질이 부족합니다.
 
 ## 수익화 체크리스트
 

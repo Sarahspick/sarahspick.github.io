@@ -1,0 +1,352 @@
+{
+ "slug": "buffalo_vs_lions",
+ "title": [
+  "물소 한 마리 vs",
+  "{사자 무리} 추격전"
+ ],
+ "mood": "suspense",
+ "yt_title": "물소 한 마리 vs 사자 무리, 무인카메라에 찍힌 새벽 추격전 ㄷㄷ",
+ "desc": "새벽 6시 59분, 먼지를 일으키며 달아나는 물소와 그 뒤를 쫓는 암사자들. 세렝게티 무인카메라 E02가 찍은 실제 연속 사진입니다.",
+ "tags": [
+  "사자",
+  "물소",
+  "사냥",
+  "추격전"
+ ],
+ "animal": "사자 무리와 아프리카 물소",
+ "pin": "물소는 살아남았을까요? 여러분의 예상을 댓글로 남겨주세요!",
+ "beats": [
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#863",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "06:59:14",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2376.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2377.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2378.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "buffalo",
+     "lionfemale"
+    ]
+   },
+   "cam": "punch",
+   "zmax": 1.8,
+   "focus": [
+    0.62,
+    0.26,
+    0.99,
+    0.52
+   ],
+   "text": "새벽 7시, 물소가 {전력으로} 달리고 있다",
+   "fx": [
+    "shake"
+   ],
+   "sfx": [
+    "impact"
+   ],
+   "use": [
+    0
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#863",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "06:59:14",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2376.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2377.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2378.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "buffalo",
+     "lionfemale"
+    ]
+   },
+   "cam": "pull",
+   "zmax": 1.8,
+   "focus": [
+    0.04,
+    0.35,
+    0.42,
+    0.52
+   ],
+   "text": "그런데 그 뒤를 보면...",
+   "fx": [
+    "circle"
+   ],
+   "circle_at": 0.8,
+   "sfx": [
+    "riser@-0.2"
+   ],
+   "use": [
+    0
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#863",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "06:59:14",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2376.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2377.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2378.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "buffalo",
+     "lionfemale"
+    ]
+   },
+   "cam": "hold",
+   "zmax": 1.6,
+   "focus": [
+    0.15,
+    0.3,
+    0.9,
+    0.55
+   ],
+   "text": "먼지 속에서 {암사자들}이 쫓아온다",
+   "callout": {
+    "label": "암사자",
+    "at": 0.3
+   },
+   "sfx": [
+    "heartbeat:2.5"
+   ],
+   "use": [
+    1,
+    2
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#865",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "07:02:10",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2382.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2383.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2384.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "lionfemale"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "3분 뒤, 사자 두 마리가 {돌아왔다}"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#866",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "07:03:41",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2385.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2386.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2387.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "lionfemale"
+    ]
+   },
+   "cam": "push",
+   "text": "숨을 고르며 {카메라 앞}을 지나간다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#867",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "07:06:03",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2388.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2389.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2390.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "lionfemale"
+    ]
+   },
+   "cam": "hold",
+   "text": "그런데 물소는 {어디에도} 보이지 않았다"
+  },
+  {
+   "kind": "card",
+   "big": "{4번 중 3번}은 실패",
+   "small": "사자의 사냥 성공률은 25% 안팎으로 알려져 있다. 물소는 사자를 죽이기도 하는 상대다",
+   "shot": {
+    "cap": "SER_S11#E02#1#863",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "06:59:14",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2376.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2377.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2378.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "buffalo",
+     "lionfemale"
+    ]
+   },
+   "dur": 3.84
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#869",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "08:15:11",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2394.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2395.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2396.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "lionfemale"
+    ]
+   },
+   "cam": "push",
+   "trans": "static",
+   "text": "1시간 뒤, 한 마리가 {카메라 쪽으로} 걸어왔다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#871",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "10:51:02",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2400.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2401.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2402.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "gazellethomsons",
+     "zebra"
+    ]
+   },
+   "cam": "pan_lr",
+   "trans": "static",
+   "text": "4시간 뒤, 그 자리엔 {가젤과 얼룩말}이 돌아왔다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#878",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "11:10:07",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2421.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2422.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2423.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "gazellethomsons"
+    ]
+   },
+   "cam": "drift",
+   "text": "아무 일도 {없었다는 듯이}"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#E02#1#863",
+    "site": "E02",
+    "date": "2015-09-20",
+    "time": "06:59:14",
+    "frames": [
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2376.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2377.JPG",
+     "SER_S11/E02/E02_R1/SER_S11_E02_R1_IMAG2378.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "buffalo",
+     "lionfemale"
+    ]
+   },
+   "cam": "hold",
+   "zmax": 1.5,
+   "focus": [
+    0.62,
+    0.3,
+    0.98,
+    0.62
+   ],
+   "fx": [
+    "freeze"
+   ],
+   "text": "이 물소는 {살아남았을까}?",
+   "sfx": [
+    "ding"
+   ],
+   "use": [
+    0
+   ]
+  }
+ ],
+ "id": "01"
+}

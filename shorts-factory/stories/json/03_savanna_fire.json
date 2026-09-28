@@ -1,0 +1,443 @@
+{
+ "slug": "savanna_fire",
+ "title": [
+  "불길이 {카메라를}",
+  "덮쳤다"
+ ],
+ "mood": "suspense",
+ "yt_title": "초원에 불이 났을 때 무인카메라에 찍힌 것 (그리고 두 달 뒤)",
+ "desc": "2015년 8월 23일 오후 2시 22분, 세렝게티 초원의 불길이 무인카메라 B09 앞을 지나갔습니다. 카메라는 그 뒤 두 달 동안의 변화까지 모두 기록했습니다.",
+ "tags": [
+  "초원화재",
+  "산불",
+  "사바나",
+  "자연"
+ ],
+ "animal": "사바나 초원 화재",
+ "pin": "불이 지나간 뒤 두 달 만에 초원이 어떻게 변했는지 끝까지 확인해 보세요!",
+ "beats": [
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#146",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:22:26",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0427.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0428.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0429.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "punch",
+   "zmax": 1.35,
+   "focus": [
+    0.1,
+    0.55,
+    0.9,
+    0.95
+   ],
+   "text": "초원 한가운데 {불길}이 치솟았다",
+   "cap": "top",
+   "fx": [
+    "shake"
+   ],
+   "sfx": [
+    "impact",
+    "fire:3"
+   ],
+   "use": [
+    1
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#138",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "12:02:01",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0403.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0404.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0405.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "gazellethomsons"
+    ]
+   },
+   "cam": "drift",
+   "trans": "rewind",
+   "text": "2시간 전만 해도 {평화로운} 초원이었다",
+   "callout": {
+    "label": "가젤",
+    "at": 0.9,
+    "pos": [
+     0.43,
+     0.43
+    ]
+   }
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#143",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:15:23",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0418.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0419.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0420.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "blank"
+    ]
+   },
+   "cam": "drift",
+   "loop": 0.5,
+   "text": "오후 2시, 카메라가 {이유 없이} 계속 찍히기 시작했다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#145",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:21:11",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0424.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0425.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0426.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "blank"
+    ]
+   },
+   "cam": "push",
+   "zmax": 1.3,
+   "focus": [
+    0.2,
+    0.4,
+    0.8,
+    0.8
+   ],
+   "text": "그리고 1분 뒤...",
+   "sfx": [
+    "riser@0.2",
+    "heartbeat:1.8"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#146",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:22:26",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0427.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0428.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0429.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "punch",
+   "zmax": 1.3,
+   "focus": [
+    0.1,
+    0.55,
+    0.9,
+    0.95
+   ],
+   "loop": 0.45,
+   "text": "14시 22분, {불길}이 카메라 앞까지 왔다",
+   "cap": "top",
+   "fx": [
+    "shake",
+    "flash"
+   ],
+   "sfx": [
+    "impact",
+    "fire:3"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#147",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:23:43",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0430.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0431.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0432.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "push",
+   "zmax": 1.3,
+   "focus": [
+    0.2,
+    0.5,
+    0.9,
+    0.95
+   ],
+   "loop": 0.45,
+   "text": "풀이 타는 소리만 {가득하다}",
+   "cap": "top",
+   "sfx": [
+    "fire:2.5"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#161",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:42:10",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0472.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0473.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0474.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "20분 뒤, 모든 게 {까맣게} 탔다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#353",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "19:16:52",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG1010.JPG"
+    ],
+    "boxes": [
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "push",
+   "zmax": 1.4,
+   "focus": [
+    0.1,
+    0.3,
+    0.9,
+    0.5
+   ],
+   "trans": "fade",
+   "text": "밤이 되자 불길은 {지평선}을 따라 번졌다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#383",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "20:10:45",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG1040.JPG"
+    ],
+    "boxes": [
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "drift",
+   "text": "카메라는 밤늦게까지 이 장면을 {찍고 있었다}"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#501",
+    "site": "B09",
+    "date": "2015-08-24",
+    "time": "09:33:59",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG1298.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG1299.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG1300.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "birdother"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "다음 날 아침, 초원은 {검은 들판}이 됐다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#1297",
+    "site": "B09",
+    "date": "2015-08-25",
+    "time": "16:39:28",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG3538.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG3539.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG3540.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "giraffe",
+     "topi"
+    ]
+   },
+   "cam": "hold",
+   "zmax": 2.4,
+   "focus": [
+    0.3,
+    0.33,
+    0.7,
+    0.43
+   ],
+   "trans": "static",
+   "text": "그런데 이틀 뒤, {누군가} 돌아왔다",
+   "fx": [
+    "circle"
+   ],
+   "circle_at": 1.0
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#2#3200",
+    "site": "B09",
+    "date": "2015-10-25",
+    "time": "09:45:32",
+    "frames": [
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7981.JPG",
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7982.JPG",
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7983.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "giraffe"
+    ]
+   },
+   "cam": "drift",
+   "trans": "flash",
+   "text": "그리고 두 달 뒤, 초원은 {초록빛}으로 돌아왔다",
+   "sfx": [
+    "ding"
+   ]
+  },
+  {
+   "kind": "card",
+   "big": "불은 끝이 아니다",
+   "small": "불탄 자리에는 새싹이 돋고, 초식동물들이 그 새싹을 먹으러 모여든다",
+   "shot": {
+    "cap": "SER_S11#B09#2#3200",
+    "site": "B09",
+    "date": "2015-10-25",
+    "time": "09:45:32",
+    "frames": [
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7981.JPG",
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7982.JPG",
+     "SER_S11/B09/B09_R2/SER_S11_B09_R2_IMAG7983.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "giraffe"
+    ]
+   },
+   "dur": 3.2350000000000003
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#B09#1#146",
+    "site": "B09",
+    "date": "2015-08-23",
+    "time": "14:22:26",
+    "frames": [
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0427.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0428.JPG",
+     "SER_S11/B09/B09_R1/SER_S11_B09_R1_IMAG0429.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "fire"
+    ]
+   },
+   "cam": "hold",
+   "zmax": 1.2,
+   "focus": [
+    0.1,
+    0.55,
+    0.9,
+    0.95
+   ],
+   "text": "초원에게 불은 {새로운 시작}이다",
+   "cap": "top",
+   "use": [
+    2
+   ]
+  }
+ ],
+ "id": "03"
+}

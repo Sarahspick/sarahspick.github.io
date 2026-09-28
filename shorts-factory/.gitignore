@@ -1,0 +1,5 @@
+__pycache__/
+.preview/
+mining/
+*.mp4
+*.wav

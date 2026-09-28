@@ -1,0 +1,228 @@
+{
+ "slug": "aardwolf",
+ "title": [
+  "하이에나인데",
+  "{흰개미}만 먹는다"
+ ],
+ "mood": "mystery",
+ "amb": "night",
+ "yt_title": "하이에나 가문인데 흰개미만 먹는 동물 (땅늑대)",
+ "desc": "하이에나를 닮은 줄무늬 동물이 밤마다 세렝게티 무인카메라에 찍혔습니다. 고기 대신 흰개미를 먹는 땅늑대입니다.",
+ "tags": [
+  "땅늑대",
+  "하이에나",
+  "야행성동물"
+ ],
+ "animal": "땅늑대",
+ "pin": "하룻밤에 흰개미 20만 마리! 땅늑대의 반전 식성입니다.",
+ "beats": [
+  {
+   "shot": {
+    "cap": "SER_S3#N05#11#8",
+    "site": "N05",
+    "date": "2011-09-10",
+    "time": "03:48:49",
+    "frames": [
+     "S3/N05/N05_R11/S3_N05_R11_IMAG0020.JPG"
+    ],
+    "boxes": [
+     [
+      [
+       0.0,
+       0.6854,
+       0.2752,
+       0.9451
+      ]
+     ]
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "punch",
+   "text": "하이에나를 닮은 {줄무늬} 동물",
+   "sfx": [
+    "impact"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S5#L04#1#393",
+    "site": "L04",
+    "date": "2012-06-28",
+    "time": "23:43:12",
+    "frames": [
+     "S5/L04/L04_R1/S5_L04_R1_IMAG0804.JPG"
+    ],
+    "boxes": [
+     [
+      [
+       0.2901,
+       0.7182,
+       0.6754,
+       1.0
+      ]
+     ]
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "push",
+   "trans": "static",
+   "text": "정체는 {땅늑대}",
+   "callout": {
+    "label": "땅늑대",
+    "at": 0.6
+   }
+  },
+  {
+   "kind": "card",
+   "big": "하이에나과",
+   "small": "이름은 늑대지만 사실 하이에나과 동물이다",
+   "shot": {
+    "cap": "SER_S5#L04#1#393",
+    "site": "L04",
+    "date": "2012-06-28",
+    "time": "23:43:12",
+    "frames": [
+     "S5/L04/L04_R1/S5_L04_R1_IMAG0804.JPG"
+    ],
+    "boxes": [
+     [
+      [
+       0.2901,
+       0.7182,
+       0.6754,
+       1.0
+      ]
+     ]
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "dur": 2.6
+  },
+  {
+   "shot": {
+    "cap": "SER_S8#F03#2#82",
+    "site": "F03",
+    "date": "2014-01-16",
+    "time": "03:02:18",
+    "frames": [
+     "S8/F03/F03_R2/S8_F03_R2_IMAG0204.JPG"
+    ],
+    "boxes": [
+     []
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "push",
+   "trans": "static",
+   "text": "그런데 {고기}를 먹지 않는다"
+  },
+  {
+   "kind": "card",
+   "big": "하룻밤 20만 마리",
+   "small": "긴 혀로 흰개미를 핥아 먹는다. 하룻밤에 20만 마리가 넘기도 한다",
+   "shot": {
+    "cap": "SER_S8#F03#2#82",
+    "site": "F03",
+    "date": "2014-01-16",
+    "time": "03:02:18",
+    "frames": [
+     "S8/F03/F03_R2/S8_F03_R2_IMAG0204.JPG"
+    ],
+    "boxes": [
+     []
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "dur": 3.2350000000000003
+  },
+  {
+   "shot": {
+    "cap": "SER_S5#L04#1#456",
+    "site": "L04",
+    "date": "2012-07-08",
+    "time": "20:13:47",
+    "frames": [
+     "S5/L04/L04_R1/S5_L04_R1_IMAG0981.JPG"
+    ],
+    "boxes": [
+     [
+      [
+       0.5608,
+       0.6391,
+       0.7188,
+       0.7526
+      ]
+     ]
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "push",
+   "zmax": 2.6,
+   "trans": "static",
+   "text": "이빨도 {작은 못}처럼 작아졌다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S10#K11#1#522",
+    "site": "K11",
+    "date": "2015-01-06",
+    "time": "21:44:02",
+    "frames": [
+     "S10/K11/K11_R1/S10_K11_R1_IMAG1502.JPG"
+    ],
+    "boxes": [
+     []
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "push",
+   "zmax": 2.4,
+   "trans": "static",
+   "text": "밤에만 움직여서 {보기 힘들다}"
+  },
+  {
+   "shot": {
+    "cap": "SER_S3#N05#11#8",
+    "site": "N05",
+    "date": "2011-09-10",
+    "time": "03:48:49",
+    "frames": [
+     "S3/N05/N05_R11/S3_N05_R11_IMAG0020.JPG"
+    ],
+    "boxes": [
+     [
+      [
+       0.0,
+       0.6854,
+       0.2752,
+       0.9451
+      ]
+     ]
+    ],
+    "species": [
+     "aardwolf"
+    ]
+   },
+   "cam": "hold",
+   "fx": [
+    "freeze"
+   ],
+   "text": "하이에나 가문의 {반전 매력}"
+  }
+ ],
+ "id": "29"
+}

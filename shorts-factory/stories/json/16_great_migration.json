@@ -1,0 +1,284 @@
+{
+ "slug": "great_migration",
+ "title": [
+  "150만 마리가",
+  "{카메라 앞을} 지나가면"
+ ],
+ "mood": "epic",
+ "yt_title": "누 150만 마리가 무인카메라 앞을 지나가면 (세렝게티 대이동)",
+ "desc": "매년 비를 따라 세렝게티를 도는 누 떼 대이동. 무인카메라 앞을 지나간 행렬과 그 뒤를 노리는 눈까지 담았습니다.",
+ "tags": [
+  "누떼",
+  "대이동",
+  "세렝게티대이동"
+ ],
+ "animal": "누 떼",
+ "pin": "마지막 장면, 누 떼 뒤에 숨어 있던 사냥꾼 보셨나요?",
+ "beats": [
+  {
+   "shot": {
+    "cap": "SER_S8#B13#1#157",
+    "site": "B13",
+    "date": "2014-01-09",
+    "time": "04:17:38",
+    "frames": [
+     "S8/B13/B13_R1/S8_B13_R1_IMAG0427.JPG",
+     "S8/B13/B13_R1/S8_B13_R1_IMAG0428.JPG",
+     "S8/B13/B13_R1/S8_B13_R1_IMAG0429.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "pan_lr",
+   "notime": true,
+   "text": "지평선이 {움직이기} 시작했다",
+   "sfx": [
+    "impact"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S3#T09#12#154",
+    "site": "T09",
+    "date": "2011-11-18",
+    "time": "16:24:00",
+    "frames": [
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0432.JPG",
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0433.JPG",
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0434.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "{누 떼 대이동}이 시작됐다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S8#P03#2#231",
+    "site": "P03",
+    "date": "2014-03-09",
+    "time": "09:59:18",
+    "frames": [
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0643.JPG",
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0644.JPG",
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0645.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "pan_rl",
+   "trans": "static",
+   "text": "끝이 보이지 않는 {행렬}"
+  },
+  {
+   "kind": "card",
+   "big": "약 150만 마리",
+   "small": "누 약 150만 마리와 얼룩말, 가젤 수십만 마리가 비를 따라 1년 내내 이동한다",
+   "shot": {
+    "cap": "SER_S8#P03#2#231",
+    "site": "P03",
+    "date": "2014-03-09",
+    "time": "09:59:18",
+    "frames": [
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0643.JPG",
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0644.JPG",
+     "S8/P03/P03_R2/S8_P03_R2_IMAG0645.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "dur": 3.675
+  },
+  {
+   "shot": {
+    "cap": "SER_S10#M06#2#275",
+    "site": "M06",
+    "date": "2015-05-09",
+    "time": "10:32:08",
+    "frames": [
+     "S10/M06/M06_R2/S10_M06_R2_IMAG0761.JPG",
+     "S10/M06/M06_R2/S10_M06_R2_IMAG0762.JPG",
+     "S10/M06/M06_R2/S10_M06_R2_IMAG0763.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "카메라 바로 옆으로도 {쉴 새 없이}"
+  },
+  {
+   "shot": {
+    "cap": "SER_S11#S09#2#270",
+    "site": "S09",
+    "date": "2015-11-23",
+    "time": "12:30:23",
+    "frames": [
+     "SER_S11/S09/S09_R2/SER_S11_S09_R2_IMAG0793.JPG",
+     "SER_S11/S09/S09_R2/SER_S11_S09_R2_IMAG0794.JPG",
+     "SER_S11/S09/S09_R2/SER_S11_S09_R2_IMAG0795.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "pan_lr",
+   "trans": "static",
+   "text": "하루에도 {수십 km}를 걷는다"
+  },
+  {
+   "kind": "card",
+   "big": "하루 약 8천 마리",
+   "small": "새끼가 태어나는 시기에는 하루에 약 8천 마리의 아기 누가 태어난다",
+   "shot": {
+    "cap": "SER_S7#U09#1#23",
+    "site": "U09",
+    "date": "2013-04-20",
+    "time": "13:24:03",
+    "frames": [
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0063.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0064.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0065.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "dur": 3.2350000000000003
+  },
+  {
+   "shot": {
+    "cap": "SER_S7#U09#1#23",
+    "site": "U09",
+    "date": "2013-04-20",
+    "time": "13:24:03",
+    "frames": [
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0063.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0064.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0065.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "push",
+   "zmax": 1.8,
+   "trans": "static",
+   "text": "갓 태어난 새끼도 {몇 분 만에} 일어나 걷는다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S7#U09#1#25",
+    "site": "U09",
+    "date": "2013-04-20",
+    "time": "13:32:31",
+    "frames": [
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0069.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0070.JPG",
+     "S7/U09/U09_R1/S7_U09_R1_IMAG0071.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "cheetah"
+    ]
+   },
+   "cam": "punch",
+   "zmax": 2.0,
+   "focus": [
+    0.1,
+    0.8,
+    0.42,
+    1.0
+   ],
+   "text": "그리고 8분 뒤, 그 뒤를 {노리는 눈}",
+   "callout": {
+    "label": "치타",
+    "at": 0.6
+   },
+   "sfx": [
+    "impact"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S3#T09#12#154",
+    "site": "T09",
+    "date": "2011-11-18",
+    "time": "16:24:00",
+    "frames": [
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0432.JPG",
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0433.JPG",
+     "S3/T09/T09_R12/S3_T09_R12_IMAG0434.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "wildebeest"
+    ]
+   },
+   "cam": "hold",
+   "fx": [
+    "freeze"
+   ],
+   "text": "세렝게티에서 가장 {위대한} 여행",
+   "use": [
+    2
+   ]
+  }
+ ],
+ "id": "16"
+}

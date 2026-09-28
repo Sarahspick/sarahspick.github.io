@@ -1,0 +1,225 @@
+{
+ "slug": "zebra_hug",
+ "title": [
+  "얼룩말이 서로",
+  "{목을 기대는} 이유"
+ ],
+ "mood": "cute",
+ "yt_title": "얼룩말이 서로 목을 기대는 이유 (무인카메라)",
+ "desc": "세렝게티 무인카메라 앞에서 서로 목을 기대는 얼룩말들. 다정해 보이는 이 행동에는 이유가 있습니다.",
+ "tags": [
+  "얼룩말",
+  "동물행동",
+  "힐링"
+ ],
+ "animal": "얼룩말",
+ "pin": "얼룩말 줄무늬는 사람 지문처럼 모두 다르다는 사실!",
+ "beats": [
+  {
+   "shot": {
+    "cap": "SER_S8#O06#2#201",
+    "site": "O06",
+    "date": "2014-04-02",
+    "time": "14:51:24",
+    "frames": [
+     "S8/O06/O06_R2/S8_O06_R2_IMAG0568.JPG",
+     "S8/O06/O06_R2/S8_O06_R2_IMAG0569.JPG",
+     "S8/O06/O06_R2/S8_O06_R2_IMAG0570.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "punch",
+   "text": "카메라 앞에서 {포옹} 중인 얼룩말",
+   "sfx": [
+    "pop"
+   ]
+  },
+  {
+   "shot": {
+    "cap": "SER_S2#R09#1#101",
+    "site": "R09",
+    "date": "2011-03-21",
+    "time": "17:51:21",
+    "frames": [
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0295.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0296.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0297.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "push",
+   "trans": "static",
+   "text": "엄마와 {아기 얼룩말}",
+   "callout": {
+    "label": "아기",
+    "at": 0.6
+   }
+  },
+  {
+   "kind": "card",
+   "big": "서로 털 골라주기",
+   "small": "서로의 목과 등을 이빨로 긁어주며 유대감을 쌓는다",
+   "shot": {
+    "cap": "SER_S2#R09#1#101",
+    "site": "R09",
+    "date": "2011-03-21",
+    "time": "17:51:21",
+    "frames": [
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0295.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0296.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0297.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "dur": 2.685
+  },
+  {
+   "shot": {
+    "cap": "SER_S8#B08#3#295",
+    "site": "B08",
+    "date": "2014-06-02",
+    "time": "12:39:52",
+    "frames": [
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0859.JPG",
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0860.JPG",
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0861.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "반대 방향을 보면 {사방을} 경계할 수 있다"
+  },
+  {
+   "kind": "card",
+   "big": "줄무늬 = 지문",
+   "small": "얼룩말의 줄무늬는 사람의 지문처럼 모두 다르다",
+   "shot": {
+    "cap": "SER_S8#B08#3#295",
+    "site": "B08",
+    "date": "2014-06-02",
+    "time": "12:39:52",
+    "frames": [
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0859.JPG",
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0860.JPG",
+     "S8/B08/B08_R3/S8_B08_R3_IMAG0861.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "dur": 2.6
+  },
+  {
+   "shot": {
+    "cap": "SER_S4#Q05#2#94",
+    "site": "Q05",
+    "date": "2012-04-17",
+    "time": "13:23:48",
+    "frames": [
+     "S4/Q05/Q05_R2/S4_Q05_R2_IMAG0246.JPG",
+     "S4/Q05/Q05_R2/S4_Q05_R2_IMAG0247.JPG",
+     "S4/Q05/Q05_R2/S4_Q05_R2_IMAG0248.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "drift",
+   "trans": "static",
+   "text": "줄무늬가 {흡혈 파리}를 쫓는다는 연구도 있다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S9#E06#3#1138",
+    "site": "E06",
+    "date": "2014-12-15",
+    "time": "10:57:57",
+    "frames": [
+     "S9/E06/E06_R3/S9_E06_R3_IMAG3212.JPG",
+     "S9/E06/E06_R3/S9_E06_R3_IMAG3213.JPG",
+     "S9/E06/E06_R3/S9_E06_R3_IMAG3214.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "push",
+   "trans": "static",
+   "text": "그래서 늘 {함께} 다닌다"
+  },
+  {
+   "shot": {
+    "cap": "SER_S2#R09#1#101",
+    "site": "R09",
+    "date": "2011-03-21",
+    "time": "17:51:21",
+    "frames": [
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0295.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0296.JPG",
+     "S2/R09/R09_R1/S2_R09_R1_IMAG0297.JPG"
+    ],
+    "boxes": [
+     [],
+     [],
+     []
+    ],
+    "species": [
+     "zebra"
+    ]
+   },
+   "cam": "hold",
+   "fx": [
+    "freeze"
+   ],
+   "text": "세렝게티에서 가장 {다정한} 동물",
+   "use": [
+    2
+   ]
+  }
+ ],
+ "id": "25"
+}

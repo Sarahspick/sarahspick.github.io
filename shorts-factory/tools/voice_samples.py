@@ -1,27 +1,33 @@
-"""Render one line in several Kokoro voices so the narrator can be picked by ear.
+"""Render one line in several voices so the narrator can be picked by ear.
 
-    python tools/voice_samples.py "This SUV can literally bounce itself out of sand."
+    python tools/voice_samples.py "This SUV can literally bounce itself out of sand." --rate +20%
 """
+import argparse
 import os
-import subprocess
 import sys
 
 import soundfile as sf
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from factory.config import OUTPUT  # noqa: E402
-from factory.voice import Narrator  # noqa: E402
+from factory.voice import EdgeNarrator  # noqa: E402
 
-VOICES = ["am_michael", "am_fenrir", "am_puck", "bm_george", "af_heart", "af_bella"]
+VOICES = {
+    "en": ["en-US-BrianMultilingualNeural", "en-US-AndrewMultilingualNeural", "en-US-ChristopherNeural",
+           "en-US-GuyNeural", "en-US-AvaMultilingualNeural", "en-US-EmmaMultilingualNeural"],
+    "ko": ["ko-KR-HyunsuMultilingualNeural", "ko-KR-InJoonNeural", "ko-KR-SunHiNeural"],
+}
 
-text = sys.argv[1] if len(sys.argv) > 1 else "This guy just walked out of a store without paying... and nobody stopped him."
+ap = argparse.ArgumentParser()
+ap.add_argument("text", nargs="?", default="This guy just walked out of a store without paying... and nobody stopped him.")
+ap.add_argument("--lang", default="en", choices=list(VOICES))
+ap.add_argument("--rate", default="+20%")
+args = ap.parse_args()
+
 out = os.path.join(OUTPUT, "voice_samples")
 os.makedirs(out, exist_ok=True)
-for v in VOICES:
-    n = Narrator(voice=v, speed=1.15)
-    wav = os.path.join(out, v + ".wav")
-    sf.write(wav, n.synth(text), n.sr)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", wav, "-af", "loudnorm=I=-16:TP=-1.5", "-ar", "44100", "-b:a", "160k",
-                    os.path.join(out, v + ".mp3")], check=True)
-    os.remove(wav)
+for v in VOICES[args.lang]:
+    n = EdgeNarrator(v, args.rate, lang=args.lang)
+    audio, _ = n._synth(args.text)
+    sf.write(os.path.join(out, v + ".wav"), audio, n.sr)
     print("sample", v)

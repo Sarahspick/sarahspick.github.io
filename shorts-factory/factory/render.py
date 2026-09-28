@@ -1,4 +1,9 @@
-"""Script JSON -> finished 1080x1920 Short: narration, synced captions, cut-on-sentence footage, SFX, hook cover."""
+"""Script JSON -> finished 1080x1920 Short in the classic style.
+
+Layout per frame: same-clip blurred background, full-width foreground clip (1:1 by default, up to 9:16),
+headline pinned at the top, big 1-3 word caption chunks synced to the narration, annotations on top.
+Audio: narration + downloaded SFX on exact words, mixed to -14 LUFS. No music (added at upload).
+"""
 import datetime
 import json
 import math
@@ -13,11 +18,14 @@ from PIL import Image
 
 from . import gfx
 from .config import FPS, H, OUTPUT, SR, THEMES, W, WORK, load_channel
-from .media import open_reader, parse_aspect
+from .media import open_reader, parse_aspect, source_meta
 from .sfx import SfxLibrary, measure
-from .voice import Narrator, _norm_words
+from .voice import _norm_words, make_narrator
 
 ANCHOR_RE = re.compile(r"(start|end|line\d+|word:[^+]+?)([+-]\d*\.?\d+)?")
+PUNCT_END = re.compile(r"[.,!?;:…—]$")
+CHUNK_WORDS = 3
+CHUNK_CHARS = 18
 
 
 def _ease_out(p):
@@ -25,55 +33,51 @@ def _ease_out(p):
     return 1 - (1 - p) ** 3
 
 
-def _pop(p):
-    """0 -> overshoot -> 1 scale curve for pop-in sprites."""
+def _pop(p, start=0.35):
+    """Scale curve for pop-ins: quick grow with a small overshoot, settles at 1."""
     if p >= 1:
         return 1.0
-    return 0.35 + 0.65 * _ease_out(p / 0.7) if p < 0.7 else 1.0 + 0.12 * math.sin((p - 0.7) / 0.3 * math.pi)
+    return start + (1 - start) * _ease_out(p / 0.7) if p < 0.7 else 1.0 + 0.1 * math.sin((p - 0.7) / 0.3 * math.pi)
 
 
 class Short:
-    def __init__(self, script_path, channel_path=None, theme=None, voice=None, speed=None):
+    def __init__(self, script_path, channel_path=None, voice=None, rate=None):
         with open(script_path, encoding="utf-8") as f:
             self.sc = json.load(f)
         self.ch = load_channel(channel_path)
-        if theme:
-            self.ch["theme"] = theme
         self.theme = self.ch.get("theme", "dark")
         self.lang = self.sc.get("lang", self.ch.get("lang", "en"))
         vcfg = dict(self.ch["voice"])
         vcfg.update(self.sc.get("voice", {}))
         if voice:
             vcfg["name"] = voice
-        if speed:
-            vcfg["speed"] = speed
+        if rate:
+            vcfg["rate"] = rate
         self.vcfg = vcfg
-        pron = dict(self.ch.get("pronounce", {}))
-        pron.update(self.sc.get("pronounce", {}))
-        self.pron = pron
+        self.pron = {**self.ch.get("pronounce", {}), **self.sc.get("pronounce", {})}
         self.id = self.sc["id"]
         self.work = os.path.join(WORK, self.id)
         os.makedirs(self.work, exist_ok=True)
-        self.page = gfx.Page(self.ch, self.sc["title"])
+        self.title_img, self.title_bottom = gfx.title_layer(self.sc["title"])
         self.sfx = SfxLibrary()
         self.warnings = []
 
-    # ------------------------------------------------------------------ timing
+    # ------------------------------------------------------------------ narration + timing
     def narrate(self):
-        narr = Narrator(self.vcfg["name"], self.vcfg.get("speed", 1.12), self.lang, self.pron)
+        narr = make_narrator(self.vcfg, self.lang, self.pron)
         items = [dict(self.sc["hook"], _kind="hook")] + [dict(s, _kind="sent") for s in self.sc["sentences"]]
         t = float(self.sc.get("lead_in", 0.0))
-        gap = float(self.sc.get("gap", 0.12))
+        gap = float(self.sc.get("gap", 0.06))
         for it in items:
-            lines = [it["say"]] if it["_kind"] == "hook" else it["lines"]
-            r = narr.speak(lines)
-            it.update(_audio=r["audio"], _dur=r["dur"], _ls=r["line_starts"], _words=r["words"],
-                      _t0=t, _t1=t + r["dur"], _asr=r["asr"], _matched=r["matched"])
+            r = narr.speak(it["lines"])
+            it.update(_audio=r["audio"], _dur=r["dur"], _ls=[float(x) for x in r["line_starts"]], _tokens=r["tokens"],
+                      _t0=t, _t1=t + r["dur"], _heard=r["heard"], _matched=r["matched"])
+            for tk in it["_tokens"]:
+                tk["t"] = float(tk["t"])
             t = it["_t1"] + float(it.get("pause_after", gap))
         self.items = items
         self.narr_sr = narr.sr
-        self.total = items[-1]["_t1"] + float(self.sc.get("tail", 0.5))
-        self.hook_end = items[1]["_t0"] if len(items) > 1 else self.total
+        self.total = items[-1]["_t1"] + float(self.sc.get("tail", 0.4))
 
     def at(self, it, spec, default="start"):
         spec = default if spec is None else spec
@@ -92,11 +96,11 @@ class Short:
             v = ls[min(int(base[4:]) - 1, len(ls) - 1)]
         else:
             target = (_norm_words(base[5:]) or [""])[0]
-            v = next((tt for w, tt in it["_words"] if w == target), None)
+            v = next((tk["t"] for tk in it["_tokens"] if target in tk["norm"]), None)
             if v is None:
-                v = next((tt for w, tt in it["_words"] if w.startswith(target)), None)
+                v = next((tk["t"] for tk in it["_tokens"] if any(n.startswith(target) for n in tk["norm"])), None)
             if v is None:
-                self.warnings.append(f"anchor {spec!r} not found in: {it.get('lines') or it.get('say')}")
+                self.warnings.append(f"anchor {spec!r} not found in {it['lines']}")
                 v = 0.0
         return it["_t0"] + v + off
 
@@ -127,11 +131,10 @@ class Short:
             segs.append({"cid": cid, "t0": t0, "t1": t1, "punch": bool(it.get("punch"))})
         for s in segs:
             spec = clips[s["cid"]]
-            s["box"] = self.page.media_box(parse_aspect(spec.get("aspect", self.sc.get("aspect", "4:3"))))
+            s["box"] = gfx.fg_box(parse_aspect(spec.get("aspect", self.sc.get("aspect", "1:1"))), self.title_bottom)
         self.segs = segs
 
-        cues = []
-        anns = []
+        cues, anns = [], []
         for i, it in enumerate(self.items):
             for c in it.get("sfx", []):
                 cues.append({"t": self.at(it, c.get("at")), "id": c["id"], "gain": float(c.get("gain", 0)),
@@ -143,26 +146,39 @@ class Short:
                 a["hook"] = it["_kind"] == "hook"
                 anns.append(a)
                 if a["type"] == "cursor" and a.get("click", True) and a.get("sfx", "mouse_click"):
-                    cues.append({"t": a["t0"] + 0.38, "id": a.get("sfx", "mouse_click"), "gain": 0})
+                    cues.append({"t": a["t0"] + 0.38, "id": a.get("sfx", "mouse_click"), "gain": 0, "dur": None})
                 if a["type"] == "stamp" and a.get("sfx", "stamp"):
-                    cues.append({"t": a["t0"] + 0.1, "id": a.get("sfx", "stamp"), "gain": 0})
+                    cues.append({"t": a["t0"] + 0.1, "id": a.get("sfx", "stamp"), "gain": 0, "dur": None})
                 if a["type"] in ("arrow", "circle") and a.get("sfx"):
-                    cues.append({"t": a["t0"], "id": a["sfx"], "gain": 0})
+                    cues.append({"t": a["t0"], "id": a["sfx"], "gain": 0, "dur": None})
         self.cues = sorted(cues, key=lambda c: c["t"])
         self.anns = anns
+        self.chunks = self._chunks()
 
-        caps = []
+    def _chunks(self):
+        """Group narration tokens into 1-3 word caption chunks with absolute start/end times."""
+        chunks = []
         for i, it in enumerate(self.items):
-            if it["_kind"] == "hook":
-                continue
-            if not self.page.caption_font(it["lines"])[1]:
-                self.warnings.append(f"caption line too long even at 50px (will wrap): {it['lines']}")
-            end = self.next_start(i)
-            for j in range(len(it["lines"])):
-                t0 = it["_t0"] + (it["_ls"][j] if j else 0.0)
-                t1 = it["_t0"] + it["_ls"][j + 1] if j + 1 < len(it["lines"]) else end
-                caps.append((t0, t1, i, j + 1))
-        self.caps = caps
+            toks = it["_tokens"]
+            groups, cur = [], []
+            for tk in toks:
+                if cur:
+                    text_len = len(" ".join(x["text"] for x in cur + [tk]))
+                    if (len(cur) >= CHUNK_WORDS or text_len > CHUNK_CHARS or PUNCT_END.search(cur[-1]["text"])
+                            or tk["line"] != cur[-1]["line"]):
+                        groups.append(cur)
+                        cur = []
+                cur.append(tk)
+            if cur:
+                groups.append(cur)
+            for g_i, g in enumerate(groups):
+                t0 = it["_t0"] + g[0]["t"]
+                last_end = it["_t0"] + (groups[g_i + 1][0]["t"] if g_i + 1 < len(groups) else it["_dur"])
+                chunks.append({"t0": t0, "end": last_end, "words": tuple((tk["text"], tk["hl"]) for tk in g)})
+        for k, c in enumerate(chunks):
+            nxt = chunks[k + 1]["t0"] if k + 1 < len(chunks) else self.total
+            c["t1"] = nxt if nxt - c["end"] < 0.6 else c["end"] + 0.35
+        return chunks
 
     # ------------------------------------------------------------------ audio
     def mix_audio(self):
@@ -196,10 +212,9 @@ class Short:
         src = mix
         for _ in range(2):  # gain toward -14 LUFS (YouTube reference); the limiter keeps true peaks under -1 dBFS
             lufs, _ = measure(src)
-            g = -14.0 - lufs
             tmp = final + ".tmp.wav"
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-af",
-                            f"volume={g:.2f}dB,alimiter=limit=0.84:attack=2:release=40:level=false",
+                            f"volume={-14.0 - lufs:.2f}dB,alimiter=limit=0.84:attack=2:release=40:level=false",
                             "-ar", str(SR), tmp], check=True)
             os.replace(tmp, final)
             src = final
@@ -212,7 +227,7 @@ class Short:
     def _seg_zoom(self, seg, spec, t):
         p = (t - seg["t0"]) / max(1e-3, seg["t1"] - seg["t0"])
         kind = spec.get("kind") or ("card" if "headline" in spec else "video")
-        kb = spec.get("kb", [1.0, 1.04] if kind == "video" else [1.0, 1.08])
+        kb = spec.get("kb", [1.0, 1.05] if kind == "video" else [1.0, 1.06])
         z = kb[0] + (kb[1] - kb[0]) * p
         if seg["punch"] or spec.get("punch"):
             q = (t - seg["t0"]) / 0.2
@@ -220,21 +235,27 @@ class Short:
                 z *= 1 + 0.14 * (1 - _ease_out(q))
         return z
 
+    def _sprite(self, key, make):
+        if key not in self._sprites:
+            self._sprites[key] = make()
+        return self._sprites[key]
+
     def _draw_ann(self, frame, a, t, box):
         x, y, w, h = box
         p = (t - a["t0"]) / 0.24
         scale = 1.0 if (a["hook"] and a["t0"] <= 1e-3) else _pop(p)
         tx, ty = x + a.get("x", 0.5) * w, y + a.get("y", 0.5) * h
         typ = a["type"]
+        red = THEMES[self.theme]["arrow"]
         if typ == "arrow":
             spr, tip = self._sprite(("arrow", a.get("angle", 35), a.get("len", 230)),
-                                    lambda: gfx.arrow_sprite(a.get("len", 230), THEMES[self.theme]["arrow"], a.get("angle", 35)))
+                                    lambda: gfx.arrow_sprite(a.get("len", 230), red, a.get("angle", 35)))
             bob = 10 * math.sin((t - a["t0"]) * 2 * math.pi / 0.8)
             rad = math.radians(a.get("angle", 35))
             tx -= bob * math.cos(rad)
             ty -= bob * math.sin(rad)
         elif typ == "circle":
-            spr = self._sprite(("ring", a.get("r", 90)), lambda: gfx.ring_sprite(a.get("r", 90), THEMES[self.theme]["arrow"]))
+            spr = self._sprite(("ring", a.get("r", 90)), lambda: gfx.ring_sprite(a.get("r", 90), red))
             tip = (spr.width / 2, spr.height / 2)
         elif typ == "cursor":
             spr, tip = self._sprite(("cursor",), gfx.cursor_sprite)
@@ -259,21 +280,13 @@ class Short:
             tip = (tip[0] * scale, tip[1] * scale)
         frame.paste(spr, (int(tx - tip[0]), int(ty - tip[1])), spr)
 
-    def _sprite(self, key, make):
-        if key not in self._sprites:
-            self._sprites[key] = make()
-        return self._sprites[key]
-
     def render(self, out_path):
         self._sprites = {}
         clips = self.sc["clips"]
         n_frames = int(math.ceil(self.total * FPS))
-        base = self.page.base.convert("RGB")
-        hook_seg = self.segs[0]
-        hook_ov = self.page.hook_overlay(self.sc["hook"]["big"], hook_seg["box"])
-        cap_cache, decor = {}, {}
-        report = []
-        consumed = {}
+        title = self.title_img
+        report, consumed = [], {}
+        last_bg = Image.new("RGB", (W, H), (12, 12, 14))
         enc = subprocess.Popen(
             ["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
              "-i", self.mix, "-map", "0:v", "-map", "1:a",
@@ -282,7 +295,7 @@ class Short:
              "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
              "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), "-shortest", "-movflags", "+faststart", out_path],
             stdin=subprocess.PIPE)
-        si, reader, cover = -1, None, None
+        si, ci, reader, cover = -1, 0, None, None
         for k in range(n_frames):
             t = k / FPS
             while si + 1 < len(self.segs) and self.segs[si + 1]["t0"] <= t + 1e-6:
@@ -297,26 +310,30 @@ class Short:
                 seg["k0"] = k
             seg = self.segs[si]
             spec = clips[seg["cid"]]
-            frame = base.copy()
-            in_hook = t < self.hook_end
-            if not in_hook:
-                state = next(((i, n) for t0, t1, i, n in self.caps if t0 <= t < t1), None)
-                if state:
-                    if state not in cap_cache:
-                        cap_cache[state] = self.page.caption_layer(self.items[state[0]]["lines"], state[1]).convert("RGB")
-                    frame.paste(cap_cache[state], (0, self.page.cap_top))
-            box = seg["box"]
-            if box not in decor:
-                decor[box] = self.page.media_frame_decor(box)
-            mask, ring = decor[box]
+            x, y, w, h = seg["box"]
             media = reader.frame(k - seg["k0"], self._seg_zoom(seg, spec, t), tuple(spec.get("kb_focus", (0.5, 0.5))))
-            frame.paste(media, (box[0], box[1]), mask)
-            frame.paste(ring, (box[0] - 2, box[1] - 2), ring)
-            if in_hook:
-                frame.paste(hook_ov, (0, 0), hook_ov)
+            if getattr(reader, "rgba", False):
+                frame = last_bg.copy()
+                frame.paste(media, (x, y), media)
+            elif (w, h) == (W, H):
+                frame = media.copy()
+            else:
+                frame = gfx.blurred_bg(media)
+                last_bg = frame.copy()
+                frame.paste(media, (x, y))
+            frame.paste(title, (0, 0), title)
+            while ci + 1 < len(self.chunks) and self.chunks[ci + 1]["t0"] <= t + 1e-6:
+                ci += 1
+            c = self.chunks[ci] if self.chunks and self.chunks[ci]["t0"] <= t < self.chunks[ci]["t1"] else None
+            if c:
+                cap = gfx.caption_image(c["words"])
+                s = _pop((t - c["t0"]) / 0.12, start=0.78) if t - c["t0"] < 0.12 else 1.0
+                if s != 1.0:
+                    cap = cap.resize((max(1, int(cap.width * s)), max(1, int(cap.height * s))), Image.BICUBIC)
+                frame.paste(cap, (int((W - cap.width) / 2), int(gfx.CAPTION_CY - cap.height / 2)), cap)
             for a in self.anns:
                 if a["t0"] <= t < a["t1"]:
-                    self._draw_ann(frame, a, t, box)
+                    self._draw_ann(frame, a, t, seg["box"])
             if k == 0:
                 cover = frame.copy()
             enc.stdin.write(frame.tobytes())
@@ -342,16 +359,16 @@ class Short:
         out = os.path.join(out_dir, name + ".mp4")
         cover = self.render(out)
         cover.save(os.path.join(out_dir, name + "_cover.jpg"), quality=92)
-        placeholders = [r for r in self.report if r["kind"] == "placeholder"]
         tl = {
-            "id": self.id, "lang": self.lang, "duration": round(self.total, 2), "voice": self.vcfg, "theme": self.theme,
+            "id": self.id, "lang": self.lang, "duration": round(self.total, 2), "voice": self.vcfg,
             "loudness_lufs_peak": self.loudness,
             "items": [{"t0": round(it["_t0"], 2), "dur": round(it["_dur"], 2), "line_starts": [round(x, 2) for x in it["_ls"]],
-                       "text": it.get("lines") or it.get("say"), "asr": it["_asr"], "matched": it["_matched"]} for it in self.items],
+                       "lines": it["lines"], "heard": it["_heard"], "matched": it["_matched"]} for it in self.items],
             "segments": [{"clip": s["cid"], "t0": round(s["t0"], 2), "t1": round(s["t1"], 2), "box": s["box"]} for s in self.segs],
+            "chunks": [{"t0": round(c["t0"], 2), "t1": round(c["t1"], 2), "text": " ".join(w for w, _ in c["words"])} for c in self.chunks],
             "sfx": [{"t": round(c["t"], 2), "id": c["id"]} for c in self.cues],
-            "footage": self.report, "placeholders": len(placeholders), "warnings": self.warnings,
-            "render_seconds": round(time.time() - t_start, 1),
+            "footage": self.report, "placeholders": sum(r["kind"] == "placeholder" for r in self.report),
+            "warnings": self.warnings, "render_seconds": round(time.time() - t_start, 1),
         }
         with open(os.path.join(self.work, "timeline.json"), "w", encoding="utf-8") as f:
             json.dump(tl, f, indent=1, ensure_ascii=False)
@@ -363,9 +380,17 @@ class Short:
         up = sc.get("upload", {})
         lines = [f"TITLE: {up.get('title', gfx.plain(sc['title']))}", "", "DESCRIPTION:", up.get("description", "")]
         if sc.get("sources"):
-            lines += ["", "Sources & footage credits:"] + [f"- {s['name']}: {s.get('url', '')}".rstrip(": ") for s in sc["sources"]]
-        tags = up.get("hashtags", [])
-        if tags:
-            lines += ["", " ".join(tags)]
+            lines += ["", "Sources:"] + [f"- {s['name']}: {s.get('url', '')}".rstrip(": ") for s in sc["sources"]]
+        seen, credits = set(), []
+        for r in self.report:
+            if r["kind"] == "video" and r["src"] not in seen:
+                seen.add(r["src"])
+                m = source_meta(r["src"])
+                credits.append(f"- {m.get('title') or 'video'}" + (f" ({m['uploader']})" if m.get("uploader") else "") + f": {m['url']}")
+        credits += [f"- {c}" for c in sc.get("footage_credits", [])]
+        if credits:
+            lines += ["", "Footage:"] + credits
+        if up.get("hashtags"):
+            lines += ["", " ".join(up["hashtags"])]
         with open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines).strip() + "\n")

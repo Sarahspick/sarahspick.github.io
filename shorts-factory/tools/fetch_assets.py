@@ -3,8 +3,8 @@
 Idempotent: files that already exist are skipped. Pure Python (urllib/tarfile/zipfile), so it
 runs the same on Linux cloud sessions and on Windows.
 
-    python tools/fetch_assets.py            # everything
-    python tools/fetch_assets.py sfx fonts  # only some groups
+    python tools/fetch_assets.py            # fonts, icons, sound effects (all the default pipeline needs)
+    python tools/fetch_assets.py models     # + offline Kokoro voice / SenseVoice (only for engine "kokoro")
 """
 import io
 import json
@@ -124,6 +124,6 @@ def fetch_sfx():
 GROUPS = {"models": fetch_models, "fonts": fetch_fonts, "icons": fetch_icons, "sfx": fetch_sfx}
 
 if __name__ == "__main__":
-    for g in (sys.argv[1:] or list(GROUPS)):
+    for g in (sys.argv[1:] or ["fonts", "icons", "sfx"]):
         GROUPS[g]()
     log("done")

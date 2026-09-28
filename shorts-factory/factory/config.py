@@ -26,12 +26,9 @@ THEMES = {
 }
 
 DEFAULT_CHANNEL = {
-    "name": "Trade Secrets",
-    "handle": "@tradesecrets",
-    "avatar": "assets/branding/avatar.png",
     "theme": "dark",
     "lang": "en",
-    "voice": {"engine": "kokoro", "name": "am_michael", "speed": 1.12},
+    "voice": {"engine": "edge", "name": "en-US-BrianMultilingualNeural", "rate": "+20%"},
     "pronounce": {},
 }
 

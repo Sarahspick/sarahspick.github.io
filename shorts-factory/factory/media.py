@@ -29,16 +29,28 @@ def probe(path):
     return st.get("width"), st.get("height"), float(d.get("format", {}).get("duration", 0) or 0)
 
 
+PLATFORMS = {"yt": "https://www.youtube.com/watch?v={}", "bili": "https://www.bilibili.com/video/{}"}
+
+
+def source_url(src):
+    """'yt:ID' / 'bili:BVxxxx' shortcuts -> page URL (for downloads and credits)."""
+    pre, _, vid = src.partition(":")
+    return PLATFORMS[pre].format(vid) if pre in PLATFORMS and vid else src
+
+
 def fetch(src):
-    """Resolve a clip source to a local video file, downloading with yt-dlp if it is a URL. None if unavailable."""
+    """Resolve a clip source to a local video file, downloading with yt-dlp if needed. None if unavailable."""
     if not src:
         return None
-    if not src.startswith(("http://", "https://", "yt:")):
+    pre, _, vid = src.partition(":")
+    if pre in PLATFORMS and vid:
+        url, key = PLATFORMS[pre].format(vid), f"{pre}_{vid}"
+    elif src.startswith(("http://", "https://")):
+        url, key = src, hashlib.sha1(src.encode()).hexdigest()[:12]
+    else:
         p = rel(src)
         return p if os.path.exists(p) else None
-    url = "https://www.youtube.com/watch?v=" + src[3:] if src.startswith("yt:") else src
     os.makedirs(SOURCES, exist_ok=True)
-    key = hashlib.sha1(url.encode()).hexdigest()[:12]
     for f in os.listdir(SOURCES):
         if f.startswith(key + ".") and f.endswith((".mp4", ".mkv", ".webm")):
             return os.path.join(SOURCES, f)
@@ -48,21 +60,32 @@ def fetch(src):
         import yt_dlp
         opts = {"outtmpl": os.path.join(SOURCES, key + ".%(ext)s"), "quiet": True, "no_warnings": True,
                 "format": "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/bv*[height<=1080]+ba/b[height<=1080]/b",
-                "merge_output_format": "mp4", "socket_timeout": 20, "retries": 1}
+                "merge_output_format": "mp4", "socket_timeout": 30, "retries": 3, "writeinfojson": True}
         with yt_dlp.YoutubeDL(opts) as ydl:
             info = ydl.extract_info(url, download=True)
             path = ydl.prepare_filename(info)
         base = os.path.splitext(path)[0]
         for ext in (".mp4", ".mkv", ".webm"):
             if os.path.exists(base + ext):
-                with open(os.path.join(SOURCES, key + ".json"), "w") as f:
-                    json.dump({"url": url, "title": info.get("title"), "channel": info.get("channel"),
-                               "license": info.get("license")}, f)
                 return base + ext
     except Exception as e:
         print(f"[media] cannot fetch {url}: {str(e).splitlines()[0][:160]}")
     _failed.add(url)
     return None
+
+
+def source_meta(src):
+    """Title / uploader / URL of a downloaded source (from yt-dlp's .info.json) for the credits list."""
+    pre, _, vid = (src or "").partition(":")
+    key = f"{pre}_{vid}" if pre in PLATFORMS and vid else None
+    meta = {"url": source_url(src or "")}
+    if key:
+        p = os.path.join(SOURCES, key + ".info.json")
+        if os.path.exists(p):
+            with open(p, encoding="utf-8") as f:
+                d = json.load(f)
+            meta.update(title=d.get("title"), uploader=d.get("uploader") or d.get("channel"))
+    return meta
 
 
 def auto_focus(path, start, dur, aspect):
@@ -137,7 +160,7 @@ class VideoReader(_View):
               f"setpts=(PTS-STARTPTS)/{speed},fps={FPS},tpad=stop_mode=clone:stop_duration={dur + 1:.2f}")
         self.proc = subprocess.Popen(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-i", path, "-t", f"{need + 0.3:.3f}",
                                       "-an", "-vf", vf, "-frames:v", str(self.n), "-f", "rawvideo", "-pix_fmt", "rgb24", "-"],
-                                     stdout=subprocess.PIPE)
+                                     stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         self.k, self.last = -1, None
 
     def frame(self, k, zoom=1.0, focus=(0.5, 0.5)):
@@ -163,9 +186,10 @@ class VideoReader(_View):
 class ImageReader(_View):
     def __init__(self, img, box, headroom=1.2):
         self.box = box
+        self.rgba = img.mode == "RGBA"   # cards float over the previous shot's blurred background
         w, h = box[2], box[3]
         pw, ph = int(w * headroom), int(h * headroom)
-        src = img.convert("RGB")
+        src = img if self.rgba else img.convert("RGB")
         a = w / h
         if src.width / src.height > a:
             nw = int(src.height * a)
@@ -189,7 +213,7 @@ def open_reader(spec, box, dur, offset, theme, report):
     if kind == "card":
         img = gfx.card_image(box[2], box[3], theme, spec.get("outlet", ""), spec["headline"], spec.get("date", ""), spec.get("tag", "report"))
         report.append({"kind": "card", "outlet": spec.get("outlet"), "headline": spec["headline"]})
-        return ImageReader(img, box, headroom=1.12)
+        return ImageReader(img, box, headroom=1.08)
     if kind == "image":
         p = rel(spec["src"])
         if os.path.exists(p):

@@ -214,23 +214,27 @@ class EdgeNarrator(Narrator):
                     words.append((ch["text"], ch["offset"] / 1e7))
             return bytes(audio), words
 
-        for attempt in range(4):
+        expected = max(1, len(_norm_words(text)))
+        for attempt in range(5):
             try:
                 data, raw_words = asyncio.run(run())
-                if data:
-                    break
+                audio = decode_audio(data, self.sr) if data else np.zeros(0, np.float32)
+                audio, cut = trim_silence(audio, self.sr)
+                words = []
+                for w, t in raw_words:
+                    for n in _norm_words(w):
+                        words.append((n, max(0.0, t - cut)))
+                # the service occasionally returns a truncated stream without raising: never accept one
+                dur = len(audio) / self.sr
+                if len(words) >= 0.8 * expected and dur >= 0.12 * expected:
+                    return audio, words
+                problem = f"truncated response ({len(words)}/{expected} words, {dur:.2f}s)"
             except Exception as e:  # transient network errors
-                if attempt == 3:
-                    raise
-                print(f"[voice] edge-tts retry {attempt + 1}: {e}")
-                time.sleep(2 * (attempt + 1))
-        audio = decode_audio(data, self.sr)
-        audio, cut = trim_silence(audio, self.sr)
-        words = []
-        for w, t in raw_words:
-            for n in _norm_words(w):
-                words.append((n, max(0.0, t - cut)))
-        return audio, words
+                problem = str(e)
+            if attempt == 4:
+                raise RuntimeError(f"edge-tts failed for {text!r}: {problem}")
+            print(f"[voice] edge-tts retry {attempt + 1}: {problem}")
+            time.sleep(2 * (attempt + 1))
 
 
 class KokoroNarrator(Narrator):

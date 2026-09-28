@@ -238,7 +238,7 @@
     },
     "f_girl": {
       "src": "bili:BV1rW411g7Zy",
-      "start": 1.2,
+      "start": 1.25,
       "focus": [
         0.5,
         0.5
@@ -254,7 +254,7 @@
     },
     "f_eyes": {
       "src": "bili:BV1tx41157w9",
-      "start": 15.72,
+      "start": 15.82,
       "speed": 0.4,
       "focus": [
         0.5,

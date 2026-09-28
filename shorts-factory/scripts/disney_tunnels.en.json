@@ -148,10 +148,10 @@
     "d_castle": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 258.6,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     },
     "d_tunnel": {
@@ -184,10 +184,10 @@
     "d_street": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 78.3,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     },
     "d_carts": {
@@ -220,20 +220,21 @@
     "d_castle2": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 195.9,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     },
     "d_build": {
       "src": "bili:BV1wc411X7Zv",
-      "start": 26.8,
+      "start": 41.55,
       "src_zoom": 1.3,
       "focus": [
         0.5,
         0.4
-      ]
+      ],
+      "speed": 0.85
     },
     "d_build2": {
       "src": "bili:BV1wc411X7Zv",
@@ -247,28 +248,28 @@
     "d_street2": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 133.2,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     },
     "d_castle3": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 266.6,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     },
     "d_castle4": {
       "src": "bili:BV1hr4y1u7M1",
       "start": 290.0,
-      "src_zoom": 1.12,
+      "src_zoom": 1.3,
       "focus": [
         0.5,
-        0.42
+        0.36
       ]
     }
   },

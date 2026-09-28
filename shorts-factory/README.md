@@ -49,6 +49,7 @@ tools/dm_search.py       데일리모션 검색
 tools/grab.py            원본 영상 병렬 다운로드 (bili:/yt:/dm:)
 tools/sheet.py           원본 영상 컨택트 시트 (구간 고르기용)
 tools/qa.py              렌더 결과 점검 (싱크 일치율, 효과음 위치, 2fps 시트)
+tools/cutcheck.py        컷 경계 검사: 클립 시작·끝에 앞뒤 장면이 스치면 시작 초를 자동 보정
 tools/voice_samples.py   목소리 비교 샘플
 assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 ```
@@ -127,6 +128,8 @@ python tools/bili_search.py "Amazon Kiva robots" "亚马逊 仓库 机器人"   
 python tools/grab.py bili:BV1P44y1r7DB bili:BV12G411t7Dp            # 받기 (work/sources/)
 python tools/sheet.py bili:BV1P44y1r7DB 12 72 1.5                    # 12초부터 72초 동안 1.5초 간격 시트
 python make_short.py scripts/amazon_robots.en.json
+python tools/cutcheck.py --fix amazon_robots                          # 컷 경계 자동 보정 (1초 이내 이동만)
+python make_short.py scripts/amazon_robots.en.json                   # 보정 후 다시 렌더
 python tools/qa.py amazon_robots                                     # 결과 점검
 ```
 

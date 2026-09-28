@@ -1,0 +1,70 @@
+{
+  "id": "amazon_walkout",
+  "lang": "en",
+  "title": "Amazon's \"AI\" store where you just walk out had a secret 👀",
+  "voice": {"name": "am_michael", "speed": 1.15},
+  "pronounce": {"2022": "twenty twenty-two", "2024": "twenty twenty-four", "2026": "twenty twenty-six"},
+  "aspect": "4:3",
+  "gap": 0.1,
+
+  "hook": {
+    "big": ["He walked out", "*without paying*…"],
+    "say": "This guy just walked out of a store without paying… and nobody stopped him.",
+    "clip": "c_hook",
+    "annotate": [{"type": "arrow", "at": 0, "x": 0.5, "y": 0.5, "angle": 35}],
+    "sfx": [{"id": "boom", "at": "word:paying"}]
+  },
+
+  "sentences": [
+    {"lines": ["Because this is Amazon's", "*Just Walk Out* store."], "clip": "c_store"},
+    {"lines": ["You scan your phone,", "grab what you want…", "and just *leave*."], "clips": ["c_gate", "c_grab", "c_exit"],
+     "sfx": [{"id": "confirm", "at": "word:phone"}]},
+    {"lines": ["No cashier. No line.", "The bill just hits your *phone*."], "clip": "c_receipt",
+     "sfx": [{"id": "ding", "at": "word:phone"}]},
+    {"lines": ["So how does it know?"], "clip": "c_ceiling", "punch": true},
+    {"lines": ["*Hundreds* of ceiling cameras", "track every shopper,"], "clip": "c_ceiling",
+     "annotate": [{"type": "circle", "at": "start+0.15", "x": 0.5, "y": 0.28, "r": 80, "sfx": "click"}]},
+    {"lines": ["and shelf sensors *feel*", "every item you lift."], "clip": "c_shelf"},
+    {"lines": ["But in 2024, a report", "dropped a *bombshell*."], "clip": "c_dark", "pause_after": 0.2,
+     "sfx": [{"id": "dun_dun", "at": "line2", "gain": -5, "dur": 2.4}]},
+    {"lines": ["About *1,000 workers* in India", "were reviewing the trips."], "clip": "card_report", "punch": true,
+     "sfx": [{"id": "boom", "at": "word:workers"}],
+     "annotate": [{"type": "stamp", "at": "line2", "text": "CLASSIFIED", "x": 0.7, "y": 0.8}]},
+    {"lines": ["It said back in 2022,", "*7 in 10* sales needed", "a human check."], "clip": "card_700", "pause_after": 0.55,
+     "sfx": [{"id": "gasp", "at": "end"}]},
+    {"lines": ["Amazon denied it,", "saying the team was mostly", "*training* the AI."], "clip": "card_amazon"},
+    {"lines": ["Then in 2026, Amazon", "shut down *every* Amazon Go."], "clip": "card_closed", "punch": true, "pause_after": 0.95,
+     "sfx": [{"id": "wait_what", "at": "end+0.05"}]},
+    {"lines": ["But the tech lives on —", "it's now in about *360* places,", "from stadiums to hospitals."], "clip": "c_stadium"},
+    {"lines": ["Would *you* shop like this?"], "clip": "c_hook"}
+  ],
+
+  "clips": {
+    "c_hook":      {"desc": "Shopper walks out through the Amazon Go gates with a bag", "search": "Amazon Go walk out gates shopper", "candidates": ["https://www.youtube.com/watch?v=NrmMk1Myrxc"]},
+    "c_store":     {"desc": "Amazon Go storefront, Seattle", "search": "Amazon Go store Seattle exterior"},
+    "c_gate":      {"desc": "Phone QR code scanned at the entry gate", "search": "Amazon Go app scan entry gate", "aspect": "1:1"},
+    "c_grab":      {"desc": "Shopper grabbing snacks off the shelf into a bag", "search": "Amazon Go shopper grabbing items"},
+    "c_exit":      {"desc": "Walking out through the gates, no checkout", "search": "Amazon Go just walk out exit"},
+    "c_receipt":   {"desc": "Amazon Go receipt appearing in the app", "search": "Amazon Go receipt app", "aspect": "1:1"},
+    "c_ceiling":   {"desc": "Ceiling full of black camera boxes", "search": "Amazon Go ceiling cameras"},
+    "c_shelf":     {"desc": "Hand lifting an item off a sensor shelf", "search": "Amazon Go shelf weight sensors"},
+    "c_dark":      {"desc": "Slow push-in on a ceiling camera (tension)", "search": "Amazon Go camera close up"},
+    "c_stadium":   {"desc": "Just Walk Out store inside a stadium", "search": "Just Walk Out stadium concession Amazon"},
+    "card_report": {"kind": "card", "tag": "report", "outlet": "The Information", "date": "Apr 2024", "headline": "About *1,000 workers* in India reviewed Just Walk Out shopping trips"},
+    "card_700":    {"kind": "card", "tag": "report", "outlet": "The Information", "date": "Apr 2024", "headline": "In 2022, about *700 of every 1,000* Just Walk Out sales needed human review"},
+    "card_amazon": {"kind": "card", "tag": "quote", "outlet": "Dilip Kumar, VP of AWS Applications", "date": "Apr 2024", "headline": "\"The erroneous reports that Just Walk Out technology relies on human reviewers watching from afar is *untrue*.\""},
+    "card_closed": {"kind": "card", "tag": "news", "outlet": "TechCrunch / GeekWire", "date": "Jan 27, 2026", "headline": "Amazon is closing *all* of its Amazon Go and Amazon Fresh stores"}
+  },
+
+  "upload": {
+    "title": "Amazon's \"AI\" Store Had a Secret 👀 #shorts",
+    "description": "Just Walk Out lets you grab items and leave: ceiling cameras and shelf weight sensors decide what you took and bill you. In 2024 a report by The Information claimed about 1,000 workers in India reviewed shopping trips and that in 2022 roughly 700 of every 1,000 sales needed human review; Amazon called that untrue and said the team mainly labels data to train the AI. In January 2026 Amazon announced it was closing every Amazon Go store, but the tech now runs in about 360 third-party locations, from stadiums to hospitals.",
+    "hashtags": ["#shorts", "#amazon", "#ai", "#technology", "#business", "#tradesecrets"]
+  },
+  "sources": [
+    {"name": "About Amazon: An inside look at the AI tech behind Just Walk Out", "url": "https://www.aboutamazon.com/news/retail/how-does-amazon-just-walk-out-work"},
+    {"name": "Business Standard (on The Information's report): Just Walk Out was powered by 1,000 Indian workers", "url": "https://www.business-standard.com/companies/news/amazon-s-just-walk-out-checkout-tech-was-powered-by-1-000-indian-workers-124040400463_1.html"},
+    {"name": "GeekWire: Amazon closing all Amazon Fresh and Go stores (Jan 2026)", "url": "https://www.geekwire.com/2026/amazon-closing-all-amazon-fresh-and-go-stores-to-focus-on-whole-foods-and-grocery-delivery/"},
+    {"name": "TechCrunch: Amazon is closing its physical Amazon Go and Amazon Fresh stores", "url": "https://techcrunch.com/2026/01/27/amazon-is-closing-its-physical-amazon-go-and-amazon-fresh-stores"}
+  ]
+}

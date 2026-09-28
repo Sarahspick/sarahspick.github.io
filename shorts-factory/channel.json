@@ -1,0 +1,9 @@
+{
+  "name": "Trade Secrets",
+  "handle": "@tradesecrets",
+  "avatar": "assets/branding/avatar.png",
+  "theme": "dark",
+  "lang": "en",
+  "voice": {"engine": "kokoro", "name": "am_michael", "speed": 1.15},
+  "pronounce": {"AI": "A.I."}
+}

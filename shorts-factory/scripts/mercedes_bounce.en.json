@@ -1,0 +1,70 @@
+{
+  "id": "mercedes_bounce",
+  "lang": "en",
+  "title": "Mercedes built an SUV that can bounce itself out of sand 🤯",
+  "voice": {"name": "am_michael", "speed": 1.15},
+  "pronounce": {"GLE": "G L E", "48-volt": "forty-eight volt"},
+  "aspect": "4:3",
+  "gap": 0.1,
+
+  "hook": {
+    "big": ["This SUV can", "*BOUNCE* out of sand"],
+    "say": "This SUV can literally bounce itself out of sand.",
+    "clip": "c_hook",
+    "annotate": [{"type": "arrow", "at": 0, "x": 0.56, "y": 0.62, "angle": 35}],
+    "sfx": [{"id": "boom", "at": "word:bounce"}]
+  },
+
+  "sentences": [
+    {"lines": ["This Mercedes GLE is stuck", "deep in a *sand dune*."], "clip": "c_stuck"},
+    {"lines": ["Wheels spinning.", "Going *nowhere*."], "clip": "c_spin"},
+    {"lines": ["Most drivers would", "call a *tow truck*."], "clip": "c_tow"},
+    {"lines": ["This one just", "presses a *button*…"], "clip": "c_screen",
+     "annotate": [{"type": "cursor", "at": "line2", "x": 0.52, "y": 0.58}]},
+    {"lines": ["…and the whole car", "starts *bouncing*."], "clip": "c_bounce", "punch": true, "pause_after": 1.15,
+     "sfx": [{"id": "boom", "at": "word:bouncing"}, {"id": "omg", "at": "end+0.05", "gain": -3}]},
+    {"lines": ["It pumps its suspension", "up and down, over and over."], "clip": "c_bounce_close"},
+    {"lines": ["Every bounce changes how hard", "the tires press into the sand…"], "clip": "c_wheel"},
+    {"lines": ["…until they finally *grip*,", "and it rocks itself *free*."], "clip": "c_free",
+     "sfx": [{"id": "ding", "at": "word:free"}]},
+    {"lines": ["The secret?", "A *48-volt* active suspension"], "clip": "c_eabc", "punch": true},
+    {"lines": ["that controls every wheel", "*on its own*."], "clip": "c_eabc"},
+    {"lines": ["It even scans the road", "*15 meters* ahead with a camera"], "clip": "c_scan"},
+    {"lines": ["to get each wheel ready", "*before* it hits the bump."], "clip": "c_scan"},
+    {"lines": ["But here's the *twist*…"], "clip": "c_hero", "pause_after": 0.45,
+     "sfx": [{"id": "dun_dun", "at": "start", "gain": -5, "dur": 2.2}]},
+    {"lines": ["Barely anyone *paid* for it."], "clip": "card_takerate", "punch": true,
+     "sfx": [{"id": "boom", "at": "word:paid"}]},
+    {"lines": ["Mercedes quietly *dropped* it", "from the GLE in the US."], "clip": "card_takerate",
+     "annotate": [{"type": "stamp", "at": "word:dropped", "text": "DROPPED", "x": 0.72, "y": 0.78}]},
+    {"lines": ["Would *you* pay extra", "for this?"], "clip": "c_hook"}
+  ],
+
+  "clips": {
+    "c_hook":         {"desc": "GLE mid-bounce in the sand dune (money shot)", "search": "Mercedes GLE free-driving mode sand bounce official", "aspect": "4:3"},
+    "c_stuck":        {"desc": "Mercedes GLE bogged down in a sand dune", "search": "Mercedes-Benz GLE E-ACTIVE BODY CONTROL free-driving mode"},
+    "c_spin":         {"desc": "Close-up: rear wheel spinning, sand spraying", "search": "Mercedes GLE stuck sand wheel spin"},
+    "c_tow":          {"desc": "Tow truck pulling a car out of sand (B-roll)", "search": "tow truck pulling car stuck in sand beach"},
+    "c_screen":       {"desc": "MBUX screen: Offroad > Free-driving assist > Start", "search": "Mercedes GLE free driving assist MBUX offroad screen", "aspect": "1:1"},
+    "c_bounce":       {"desc": "GLE bouncing up and down in the dune (wide)", "search": "Mercedes GLE bouncing sand dune E-Active Body Control"},
+    "c_bounce_close": {"desc": "Close-up: suspension pumping up and down", "search": "Mercedes GLE bounce mode close up"},
+    "c_wheel":        {"desc": "Tyre pressing into the sand, slow motion", "search": "Mercedes GLE free-driving mode wheel sand"},
+    "c_free":         {"desc": "GLE rocks free and drives out of the dune", "search": "Mercedes GLE rocks itself free sand"},
+    "c_eabc":         {"desc": "Official cutaway: E-ACTIVE BODY CONTROL 48V suspension", "search": "Mercedes E-ACTIVE BODY CONTROL animation official"},
+    "c_scan":         {"desc": "Official animation: ROAD SURFACE SCAN stereo camera", "search": "Mercedes ROAD SURFACE SCAN animation stereo camera"},
+    "c_hero":         {"desc": "GLE hero shot, dramatic slow push-in", "search": "Mercedes-Benz GLE 2019 official film"},
+    "card_takerate":  {"kind": "card", "tag": "news", "outlet": "Motor1 / Autoblog", "headline": "Mercedes drops *E-Active Body Control* from the GLE in the US after low take rates"}
+  },
+
+  "upload": {
+    "title": "This SUV Bounces Itself Out of Sand 🤯 #shorts",
+    "description": "Mercedes-Benz fitted the GLE with E-ACTIVE BODY CONTROL, a 48-volt active suspension that controls every wheel on its own. Stuck in a dune? \"Free-driving mode\" raises and lowers the body several times, changing the tyres' ground pressure until they grip and the SUV rocks itself free. It can also scan the road 15 m ahead and prepare each wheel before a bump. Plot twist: so few buyers ordered it that Mercedes dropped it from the GLE in the US.",
+    "hashtags": ["#shorts", "#mercedes", "#cars", "#engineering", "#technology", "#tradesecrets"]
+  },
+  "sources": [
+    {"name": "Mercedes-Benz press release: The new Mercedes-Benz GLE (free-driving mode, E-ACTIVE BODY CONTROL)", "url": "https://media.mbusa.com/releases/release-186a588f9437b92c4e76c05fca09d7c8-the-new-mercedes-benz-gle"},
+    {"name": "Mercedes-Benz GLE owner's manual: ROAD SURFACE SCAN", "url": "https://www.mbusa.com/en/owners/manuals/gle-suv-2018-07-v167-mbux/active-body-control/function-of-road-surface-scan"},
+    {"name": "Motor1: Mercedes GLE loses the bouncy suspension in the US", "url": "https://www.motor1.com/news/494134/mercedes-gle-suv-bouncing-suv/"},
+    {"name": "Autoblog: Mercedes-Benz GLE loses E-Active Body Control", "url": "https://www.autoblog.com/features/mercedes-drops-gle-e-active-body-control"}
+  ]
+}

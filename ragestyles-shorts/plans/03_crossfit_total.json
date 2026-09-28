@@ -1,0 +1,53 @@
+{
+  "id": "03_crossfit_total",
+  "yt_title": "3 lifts, 1 number: what's YOUR total? 🎯 #shorts",
+  "layout": "band",
+  "title": {"text": "The CrossFit Total:\n3 lifts, *1 number* :bullseye:", "size": 84},
+  "watermark": "@Rage_Styles",
+  "music": {"mood": "drive", "db": -18},
+  "source_audio_db": null,
+  "segments": [
+    {"clip": "5697837903", "in": 14.3, "out": 15.35, "zoom": [1.25, 1.3], "focus": [0.52, 0.45],
+     "fx": [{"type": "punch", "at": 0.0, "amount": 0.14, "dur": 0.4}, {"type": "shake", "at": 0.0, "dur": 0.3, "amp": 12}]},
+    {"clip": "5698397346", "in": 17.4, "out": 20.6, "zoom": [1.12, 1.22], "focus": [0.52, 0.5], "transition": "flash"},
+    {"clip": "5698400060", "in": 6.3, "out": 10.0, "zoom": [1.12, 1.25], "focus": [0.55, 0.5], "transition": "whip",
+     "fx": [{"type": "punch", "at": 1.6, "amount": 0.1, "dur": 0.5}]},
+    {"clip": "5697829643", "in": 9.8, "out": 13.6, "zoom": [1.1, 1.2], "focus": [0.5, 0.45], "transition": "flash"},
+    {"clip": "5697835171", "in": 12.8, "out": 16.4, "zoom": [1.1, 1.2], "focus": [0.52, 0.45], "transition": "whip"},
+    {"clip": "5697838425", "in": 4.2, "out": 9.0, "zoom": [1.1, 1.22], "focus": [0.5, 0.5], "transition": "flash",
+     "fx": [{"type": "punch", "at": 1.6, "amount": 0.1, "dur": 0.5}]},
+    {"clip": "5697837903", "in": 11.8, "out": 15.35, "zoom": [1.15, 1.25], "focus": [0.52, 0.5], "transition": "whip",
+     "freeze": {"dur": 1.3, "desat": false, "zoom": 0.08, "vignette": true}}
+  ],
+  "captions": [
+    {"seg": 0, "text": "When all 3 lifts *go up* :raising-hands:", "anim": "slam"},
+    {"seg": 1, "text": "1. *Back squat*", "size": 100},
+    {"seg": 2, "text": "Below parallel or it *doesn't count*"},
+    {"seg": 3, "text": "2. *Strict press*", "size": 100},
+    {"seg": 4, "text": "No leg drive. *Arms only.* :flexed-biceps:"},
+    {"seg": 5, "text": "3. *Deadlift*", "size": 100},
+    {"seg": 6, "d": 2.4, "text": "Best of 3 attempts on each lift"},
+    {"seg": 6, "at": 2.45, "text": "Add them up. *That's your total.*", "d": 2.4},
+    {"seg": 6, "at": 3.55, "text": "What's *YOUR* total? :backhand-index-pointing-down:", "anim": "pulse", "pos": "upper", "size": 84}
+  ],
+  "sfx": [
+    {"seg": 0, "name": "boom", "db": -5},
+    {"seg": 0, "at": 0.02, "name": "pop", "db": -9},
+    {"seg": 1, "name": "whoosh", "db": -10},
+    {"seg": 1, "at": 0.03, "name": "pop", "db": -9},
+    {"seg": 1, "at": 1.5, "name": "punch", "db": -9},
+    {"seg": 2, "name": "whoosh", "db": -10},
+    {"seg": 2, "at": 1.6, "name": "boom", "db": -8},
+    {"seg": 3, "name": "whoosh", "db": -10},
+    {"seg": 3, "at": 0.03, "name": "pop", "db": -9},
+    {"seg": 3, "at": 1.0, "name": "swipe", "db": -10},
+    {"seg": 4, "name": "whoosh", "db": -10},
+    {"seg": 4, "at": 1.3, "name": "punch", "db": -9},
+    {"seg": 5, "name": "whoosh", "db": -10},
+    {"seg": 5, "at": 0.03, "name": "pop", "db": -9},
+    {"seg": 5, "at": 1.6, "name": "boom", "db": -6},
+    {"seg": 6, "name": "whoosh", "db": -10},
+    {"seg": 6, "at": 2.45, "name": "ding", "db": -9},
+    {"seg": 6, "at": 3.55, "name": "success", "db": -8}
+  ]
+}

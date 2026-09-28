@@ -1,0 +1,53 @@
+{
+  "id": "06_west_point",
+  "yt_title": "West Point cadets' training is no joke 🪖 #shorts",
+  "layout": "band",
+  "title": {"text": "West Point cadets'\ntraining is *no joke* :military-medal:", "size": 82},
+  "watermark": "@Rage_Styles",
+  "music": [
+    {"mood": "tension", "from": 0.0, "to": {"seg": 4}, "db": -18},
+    {"mood": "drive", "from": {"seg": 4}, "db": -17, "fade_in": 0.05}
+  ],
+  "source_audio_db": null,
+  "segments": [
+    {"clip": "5597333801", "in": 18.0, "out": 20.6, "zoom": [1.1, 1.22], "focus": [0.55, 0.45],
+     "fx": [{"type": "punch", "at": 0.0, "amount": 0.1, "dur": 0.4}]},
+    {"clip": "5597333801", "in": 42.0, "out": 45.0, "zoom": [1.05, 1.15], "focus": [0.55, 0.45], "transition": "whip"},
+    {"clip": "5597333801", "in": 58.4, "out": 61.8, "zoom": [1.0, 1.1], "focus": [0.5, 0.45], "transition": "flash"},
+    {"clip": "5597333801", "in": 63.6, "out": 66.4, "zoom": [1.1, 1.2], "focus": [0.4, 0.45], "transition": "whip"},
+    {"clip": "5631472510", "in": 10.0, "out": 58.0, "speed": 9.6, "zoom": [1.05, 1.15], "focus": [0.45, 0.45], "transition": "zoomblur",
+     "fx": [{"type": "punch", "at": 0.0, "amount": 0.1, "dur": 0.4}]},
+    {"clip": "5579248625", "in": 16.0, "out": 19.0, "zoom": [1.05, 1.12], "focus": [0.5, 0.5], "transition": "glitch",
+     "fx": [{"type": "shake", "at": 0.8, "dur": 0.4, "amp": 12}]},
+    {"clip": "5579248625", "in": 52.0, "out": 55.0, "zoom": [1.05, 1.12], "focus": [0.5, 0.5], "transition": "whip",
+     "fx": [{"type": "shake", "at": 1.0, "dur": 0.4, "amp": 12}]},
+    {"clip": "5597333801", "in": 24.0, "out": 27.0, "zoom": [1.1, 1.2], "focus": [0.45, 0.45], "transition": "zoomblur",
+     "freeze": {"dur": 0.9, "desat": true, "zoom": 0.06, "vignette": true}}
+  ],
+  "captions": [
+    {"seg": 0, "text": "Future Army officers train like *THIS* :eyes:", "anim": "slam"},
+    {"seg": 1, "text": "Climb. *Don't look down.*"},
+    {"seg": 2, "text": "Over the logs... *in full gear* :flexed-biceps:"},
+    {"seg": 3, "text": "Nobody gets *left behind* :raising-hands:"},
+    {"seg": 4, "text": "Then the *wall*. Over and over. :dizzy:"},
+    {"seg": 5, "text": "And the boxing team? *No mercy* :collision:", "anim": "slam"},
+    {"seg": 6, "text": "Every. Single. *Round.* :fire:"},
+    {"seg": 7, "text": "Could YOU keep up? :backhand-index-pointing-down:", "anim": "pulse"}
+  ],
+  "sfx": [
+    {"seg": 0, "name": "boom", "db": -5},
+    {"seg": 0, "at": 0.02, "name": "pop", "db": -10},
+    {"seg": 1, "name": "whoosh", "db": -10},
+    {"seg": 2, "name": "whoosh", "db": -11},
+    {"seg": 2, "at": 0.03, "name": "pop", "db": -10},
+    {"seg": 3, "name": "whoosh", "db": -11},
+    {"seg": 4, "name": "boom", "db": -5},
+    {"seg": 4, "at": 0.3, "name": "riser", "db": -12},
+    {"seg": 5, "name": "punch", "db": -5},
+    {"seg": 5, "at": 0.8, "name": "punch", "db": -9},
+    {"seg": 6, "name": "whoosh", "db": -10},
+    {"seg": 6, "at": 1.0, "name": "punch", "db": -8},
+    {"seg": 7, "name": "whoosh_slow", "db": -11},
+    {"seg": 7, "at": 3.0, "name": "ding", "db": -10}
+  ]
+}

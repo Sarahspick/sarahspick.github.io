@@ -1,0 +1,55 @@
+{
+  "id": "08_pr_day",
+  "yt_title": "200 lb squat clean PR… then he did THIS 🤯 #shorts",
+  "layout": "band",
+  "title": {"text": "200 lb squat clean PR...\nthen he did *THIS* :exploding-head:", "size": 82},
+  "watermark": "@Rage_Styles",
+  "music": [
+    {"mood": "tension", "from": 0.0, "to": {"seg": 4}, "db": -18},
+    {"mood": "drive", "from": {"seg": 4}, "db": -17, "fade_in": 0.05}
+  ],
+  "music_drops": [{"seg": 4, "at": -0.05, "to": 0.12}],
+  "source_audio_db": null,
+  "segments": [
+    {"clip": "6352153052", "rotate": 180, "in": 8.9, "out": 10.2, "zoom": [1.2, 1.3], "focus": [0.5, 0.5],
+     "fx": [{"type": "punch", "at": 0.1, "amount": 0.12, "dur": 0.4}, {"type": "shake", "at": 0.1, "dur": 0.3, "amp": 12}]},
+    {"clip": "6352153052", "rotate": 180, "in": 3.0, "out": 8.2, "speed": 1.8, "zoom": [1.05, 1.15], "focus": [0.5, 0.5], "transition": "zoomblur"},
+    {"clip": "6352153052", "rotate": 180, "in": 8.2, "out": 9.3, "speed": 0.4, "zoom": [1.15, 1.25], "focus": [0.5, 0.5]},
+    {"clip": "6352153052", "rotate": 180, "in": 9.3, "out": 12.6, "zoom": [1.25, 1.18], "focus": [0.5, 0.5]},
+    {"clip": "6352153052", "rotate": 180, "in": 13.4, "out": 14.6, "zoom": [1.1, 1.1], "focus": [0.5, 0.5], "transition": "flash",
+     "fx": [{"type": "punch", "at": 0.3, "amount": 0.14, "dur": 0.5}, {"type": "shake", "at": 0.3, "dur": 0.5, "amp": 18}]},
+    {"clip": "4483441365", "in": 2.0, "out": 5.2, "zoom": [1.05, 1.15], "focus": [0.55, 0.45], "transition": "whip"},
+    {"clip": "4483441365", "in": 13.0, "out": 21.0, "speed": 2.0, "zoom": [1.1, 1.1], "focus": [0.55, 0.45], "transition": "glitch"},
+    {"clip": "4483441365", "in": 34.2, "out": 37.9, "zoom": [1.0, 1.15], "focus": [0.55, 0.5], "transition": "whip",
+     "freeze": {"dur": 0.9, "desat": false, "zoom": 0.06, "vignette": true}}
+  ],
+  "captions": [
+    {"seg": 0, "text": "*200 LB* squat clean :fire:", "anim": "slam", "size": 108},
+    {"seg": 1, "text": "PR attempt. *No pressure.* :grimacing-face:"},
+    {"seg": 2, "text": "Pull... *catch...*"},
+    {"seg": 3, "text": "...and STAND :flexed-biceps:", "anim": "slam"},
+    {"seg": 4, "text": "^NEW PR^ :trophy:", "anim": "slam", "size": 118},
+    {"seg": 5, "text": "Then, just for fun... *muscle-ups* :exploding-head:"},
+    {"seg": 6, "text": "Rep. After. *Rep.*"},
+    {"seg": 7, "text": "PR day energy :smiling-face-with-sunglasses:", "anim": "pulse"}
+  ],
+  "sfx": [
+    {"seg": 0, "at": 0.1, "name": "boom", "db": -4},
+    {"seg": 1, "at": -0.05, "name": "rewind", "db": -10},
+    {"seg": 1, "at": 0.8, "name": "heartbeat", "db": -7},
+    {"seg": 1, "at": 1.9, "name": "heartbeat", "db": -7},
+    {"seg": 2, "name": "whoosh_slow", "db": -10},
+    {"seg": 2, "at": 1.6, "name": "punch", "db": -7},
+    {"seg": 3, "name": "riser_short", "db": -10},
+    {"seg": 3, "at": 0.03, "name": "pop", "db": -10},
+    {"seg": 4, "at": 0.3, "name": "boom", "db": -3},
+    {"seg": 4, "at": 0.32, "name": "success", "db": -8},
+    {"seg": 5, "name": "whoosh", "db": -10},
+    {"seg": 5, "at": 0.03, "name": "pop", "db": -10},
+    {"seg": 6, "name": "glitch", "db": -13},
+    {"seg": 6, "at": 1.0, "name": "swipe", "db": -12},
+    {"seg": 6, "at": 2.5, "name": "swipe", "db": -12},
+    {"seg": 7, "name": "whoosh", "db": -10},
+    {"seg": 7, "at": 3.3, "name": "ding", "db": -10}
+  ]
+}

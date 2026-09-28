@@ -150,7 +150,7 @@
   "clips": {
     "k_colonel_store": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 495.4,
+      "start": 495.45,
       "src_zoom": 1.2,
       "focus": [
         0.45,
@@ -218,7 +218,7 @@
     },
     "k_colonel_bw": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 264.8,
+      "start": 264.7,
       "src_zoom": 1.2,
       "focus": [
         0.5,
@@ -227,7 +227,7 @@
     },
     "k_nephew": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 143.6,
+      "start": 143.75,
       "src_zoom": 1.2,
       "focus": [
         0.5,
@@ -236,7 +236,7 @@
     },
     "k_list": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 152.6,
+      "start": 152.75,
       "src_zoom": 1.2,
       "focus": [
         0.5,
@@ -245,7 +245,7 @@
     },
     "k_chicken": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 131.0,
+      "start": 131.3,
       "src_zoom": 1.2,
       "focus": [
         0.5,
@@ -254,12 +254,13 @@
     },
     "k_chicken2": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 128.3,
+      "start": 128.05,
       "src_zoom": 1.2,
       "focus": [
         0.5,
         0.45
-      ]
+      ],
+      "speed": 0.5
     },
     "k_actor": {
       "src": "bili:BV1Ar4y1d7NH",
@@ -282,7 +283,7 @@
     },
     "k_colonel_portrait": {
       "src": "bili:BV1Ar4y1d7NH",
-      "start": 193.2,
+      "start": 193.25,
       "src_zoom": 1.2,
       "focus": [
         0.5,

@@ -19,7 +19,8 @@ from factory.media import fetch  # noqa: E402
 
 HEAD = 0.7   # output seconds at the start of a window that must not contain a cut
 TAIL = 0.45  # output seconds at the end of a window that must not contain a cut
-SEARCH = 3.0  # how far (source seconds) a start may move
+SEARCH = 3.0  # how far (source seconds) to look for a clean window
+MAX_AUTO = 1.0  # --fix only applies moves up to this size; bigger ones may land on different content
 
 
 def scene_cuts(path, start, dur, thr=0.3):
@@ -89,9 +90,11 @@ def check(script_path, fix=False):
             continue
         n_in, _, best = min(cands)
         print(f"   {cid:16} cut at {rel}: start {s0} -> {round(best, 2)}  ({n_in} cut(s) left inside)")
-        if fix:
+        if fix and abs(best - s) <= MAX_AUTO:
             spec["start"] = round(best, 2)
             changed = True
+        elif fix:
+            print(f"   {'':16} not applied: move of {best - s:+.2f}s may change the shot's content; pick by hand")
     if changed:
         json.dump(sc, open(script_path, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
         print("   script updated")

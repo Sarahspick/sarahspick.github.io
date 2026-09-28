@@ -1,0 +1,211 @@
+{
+ "id": "01_robot_arm_day",
+ "yt_title": "This robot never skips arm day 🤖💪 #shorts",
+ "title": {
+  "text": "This robot never\nskips *arm day* :robot:",
+  "size": 84
+ },
+ "voice": {
+  "name": {
+   "am_onyx": 0.6,
+   "am_michael": 0.4
+  },
+  "speed": 1.15
+ },
+ "beats": [
+  {
+   "say": "Human versus robot.",
+   "caption": "^HUMAN^ VS ~ROBOT~",
+   "big": true,
+   "size": 112,
+   "lead": 0.2,
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 35.6,
+     "zoom": [
+      1.0,
+      1.04
+     ],
+     "focus": [
+      0.56,
+      0.45
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "impact_deep",
+     "db": -7
+    }
+   ]
+  },
+  {
+   "say": "Who has better form?",
+   "caption": "Who has better *form?*",
+   "max_words": 4,
+   "max_chars": 24,
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 37.2,
+     "zoom": [
+      1.04,
+      1.08
+     ],
+     "focus": [
+      0.56,
+      0.45
+     ]
+    }
+   ]
+  },
+  {
+   "say": "The robot? Every rep, identical.",
+   "caption": "The robot? | Every rep *identical*",
+   "max_chars": 24,
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 24.2,
+     "zoom": [
+      1.25,
+      1.3
+     ],
+     "focus": [
+      0.3,
+      0.42
+     ]
+    },
+    {
+     "clip": "5172465062",
+     "in": 28.2,
+     "zoom": [
+      1.25,
+      1.3
+     ],
+     "focus": [
+      0.3,
+      0.42
+     ]
+    }
+   ]
+  },
+  {
+   "say": "The human? He's doing his best.",
+   "caption": "The human? | He's doing his *best*",
+   "max_words": 4,
+   "max_chars": 24,
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 32.0,
+     "zoom": [
+      1.05,
+      1.12
+     ],
+     "focus": [
+      0.78,
+      0.5
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Now he's copying the robot.",
+   "caption": "Now he's copying | the *robot*",
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 41.0,
+     "zoom": [
+      1.0,
+      1.04
+     ],
+     "focus": [
+      0.55,
+      0.45
+     ]
+    },
+    {
+     "clip": "5172465062",
+     "in": 50.3,
+     "zoom": [
+      1.0,
+      1.04
+     ],
+     "focus": [
+      0.6,
+      0.45
+     ]
+    }
+   ]
+  },
+  {
+   "say": "But this robot will never do leg day...",
+   "caption": "But this robot | will never do | *leg day*...",
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 54.05,
+     "speed": 0.55,
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": "end-1.55",
+     "name": "riser_soft",
+     "db": -11
+    }
+   ]
+  },
+  {
+   "say": "Because it has no legs.",
+   "caption": "It has ~no legs~ :skull:",
+   "big": true,
+   "size": 110,
+   "lead": 0.3,
+   "pad": 0.9,
+   "shots": [
+    {
+     "clip": "5172465062",
+     "in": 2.2,
+     "zoom": [
+      1.0,
+      1.05
+     ],
+     "focus": [
+      0.375,
+      0.8
+     ]
+    }
+   ],
+   "stickers": [
+    {
+     "at": 0.1,
+     "type": "ring",
+     "x": 0.565,
+     "y": 0.86,
+     "rx": 150,
+     "ry": 80
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "boom_meme",
+     "db": -4
+    }
+   ]
+  }
+ ]
+}

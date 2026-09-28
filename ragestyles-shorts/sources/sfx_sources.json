@@ -76,5 +76,17 @@
  },
  "zoom": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "riser_soft": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "sub_hit": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "impact_deep": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "_narration": {
+  "source": "Kokoro TTS 82M via kokoro-onnx (Apache 2.0, github.com/thewh1teagle/kokoro-onnx), voice blend am_onyx 0.6 + am_michael 0.4, speed 1.15; generic synthetic narrator, not a clone of any real person. Generated in pipeline/narrate.py"
  }
 }

@@ -451,6 +451,24 @@ def fx_value(fxlist, kind, t):
 
 # ------------------------------------------------------------------ main render
 
+def voice_activity(v, hop=0.01, thr_db=-40.0, attack=0.02, release=0.3):
+    """0..1 envelope that is 1 while the narrator speaks (fast attack, slow release between words)."""
+    m = v.mean(axis=1) if v.ndim == 2 else v
+    h = int(hop * SR)
+    nh = len(m) // h + 1
+    buf = np.zeros(nh * h, np.float32)
+    buf[:len(m)] = m
+    rms = np.sqrt((buf.reshape(nh, h) ** 2).mean(axis=1) + 1e-12)
+    on = (20 * np.log10(rms) > thr_db).astype(np.float32)
+    a_att, a_rel = np.exp(-hop / attack), np.exp(-hop / release)
+    env, y = np.zeros(nh, np.float32), 0.0
+    for i in range(nh):
+        a = a_att if on[i] > y else a_rel
+        y = a * y + (1 - a) * on[i]
+        env[i] = y
+    return np.interp(np.arange(len(m)), np.arange(nh) * h + h / 2, env).astype(np.float32)
+
+
 def limiter(x, ceiling=0.84, lookahead=0.005, release=0.12):
     """Brick-wall look-ahead limiter on a (n, 2) float array."""
     from scipy.ndimage import minimum_filter1d
@@ -504,6 +522,7 @@ class Renderer:
                                   upper=c.get("upper", True), max_lines=c.get("max_lines", 2))
             self.captions.append((c, to_np_rgba(img)))
         self.flag_h = 100
+        self.badge = to_np_rgba(self.profile_badge()) if p.get("profile", True) else None
         lb = p.get("leaderboard")
         if lb:
             self.lb_row_h = 64
@@ -539,6 +558,38 @@ class Renderer:
         return {"low": low, "mid": self.band_y + self.band_h / 2,
                 "top": self.band_y - 16 - h / 2, "upper": self.band_y + 36 + h / 2,
                 "band_low": bottom - 28 - h / 2}.get(pos, low)
+
+    def profile_badge(self):
+        """Small channel badge: round avatar, name + verified tick, @handle underneath."""
+        d = 58
+        path = os.path.join(ROOT, "assets", "brand", "avatar.jpg")
+        av = Image.open(path).convert("RGBA") if os.path.exists(path) else Image.new("RGBA", (d, d), (150, 20, 25, 255))
+        sq = min(av.size)
+        av = av.crop(((av.width - sq) // 2, (av.height - sq) // 2, (av.width + sq) // 2, (av.height + sq) // 2))
+        av = av.resize((d, d), Image.LANCZOS)
+        ss = 4
+        mask = Image.new("L", (d * ss, d * ss), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, d * ss - 1, d * ss - 1), fill=255)
+        av.putalpha(mask.resize((d, d), Image.LANCZOS))
+        ring = Image.new("RGBA", (d + 4, d + 4), (0, 0, 0, 0))
+        rm = Image.new("L", ((d + 4) * ss, (d + 4) * ss), 0)
+        ImageDraw.Draw(rm).ellipse((0, 0, (d + 4) * ss - 1, (d + 4) * ss - 1), fill=255)
+        ring.paste((255, 255, 255, 255), (0, 0), rm.resize((d + 4, d + 4), Image.LANCZOS))
+        ring.alpha_composite(av, (2, 2))
+        nf, hf = font("Montserrat ExtraBold", 30), font("Montserrat ExtraBold", 22)
+        name, handle = "RageStyles", "@Rage_Styles"
+        badge_svg = open(os.path.join(ROOT, "assets", "brand", "verified.svg")).read()
+        tick = Image.open(BytesIO(cairosvg.svg2png(bytestring=badge_svg.encode(), output_width=26, output_height=26))).convert("RGBA")
+        tw = int(nf.getlength(name))
+        w = ring.width + 12 + max(tw + 6 + tick.width, int(hf.getlength(handle))) + 8
+        img = Image.new("RGBA", (w, ring.height + 8), (0, 0, 0, 0))
+        img.alpha_composite(ring, (0, 4))
+        dr = ImageDraw.Draw(img)
+        x = ring.width + 12
+        dr.text((x, 4), name, font=nf, fill=(255, 255, 255, 255), stroke_width=2, stroke_fill=(0, 0, 0, 170))
+        img.alpha_composite(tick, (x + tw + 6, 9))
+        dr.text((x, 38), handle, font=hf, fill=(225, 225, 225, 255), stroke_width=2, stroke_fill=(0, 0, 0, 150))
+        return img
 
     def leaderboard_row(self, r, highlight):
         fh = 38
@@ -621,6 +672,10 @@ class Renderer:
 
     # ---------- per-frame drawing
     def draw_overlays(self, frame, t):
+        if getattr(self, "badge", None) is not None:
+            rgb, a = self.badge
+            bx, by = self.p.get("profile_pos", (36, 112))
+            blit(frame, rgb, a, bx + rgb.shape[1] / 2, by + rgb.shape[0] / 2, opacity=self.p.get("profile_opacity", 0.85))
         if self.title is not None:
             (rgb, a), y, t0, t1 = self.title
             if t0 <= t < t1:
@@ -642,6 +697,12 @@ class Renderer:
                 op = min(1.0, k / 0.04)
             elif anim == "fade":
                 op = min(1.0, k / 0.15)
+            elif anim == "snap":  # quick, subtle pop for fast phrase captions
+                s = 0.88 + 0.12 * ease_out(k / 0.08) if k < 0.08 else 1.0
+                op = min(1.0, k / 0.03)
+            elif anim == "punch":  # toned-down slam for key words: small settle, no big zoom
+                s = 1.22 - 0.22 * ease_out(k / 0.12) if k < 0.12 else 1.0
+                op = min(1.0, k / 0.04)
             elif anim == "pulse":  # no wobble any more: same clean pop-in
                 s = 0.55 + 0.45 * ease_out_back(k / 0.2) if k < 0.2 else 1.0
                 op = min(1.0, k / 0.05)
@@ -668,14 +729,12 @@ class Renderer:
             col = hex_rgb(s.get("color", "#FF2D2D"))
             grow = ease_out_back(k / 0.22) if k < 0.22 else 1.0
             if s["type"] == "ring":
-                r = s.get("r", 110) * grow
-                wob = 1 + 0.03 * math.sin(k * 14)
-                ov = frame.copy()
-                cv2.ellipse(ov, (int(x), int(y)), (int(r * wob), int(r * 0.86 / wob)), -8, 0, 360,
-                            (0, 0, 0), 22, cv2.LINE_AA)
-                cv2.ellipse(ov, (int(x), int(y)), (int(r * wob), int(r * 0.86 / wob)), -8, 0, 360,
-                            col, 13, cv2.LINE_AA)
-                frame[:] = ov
+                rx = s.get("rx", s.get("r", 110)) * grow
+                ry = s.get("ry", s.get("r", 110) * 0.86) * grow
+                cv2.ellipse(frame, (int(x), int(y)), (max(1, int(rx)), max(1, int(ry))), -8, 0, 360,
+                            (0, 0, 0), 20, cv2.LINE_AA)
+                cv2.ellipse(frame, (int(x), int(y)), (max(1, int(rx)), max(1, int(ry))), -8, 0, 360,
+                            col, 11, cv2.LINE_AA)
             elif s["type"] == "arrow":
                 ang = math.radians(s.get("angle", 225))
                 length = s.get("len", 190) * grow
@@ -684,7 +743,7 @@ class Renderer:
                 y1 = y - math.sin(ang) * tip_gap
                 x0 = x1 + math.cos(ang) * length
                 y0 = y1 - math.sin(ang) * length
-                bob = 8 * math.sin(k * 10)
+                bob = 0.0
                 p0 = (int(x0 + math.cos(ang) * bob), int(y0 - math.sin(ang) * bob))
                 p1 = (int(x1 + math.cos(ang) * bob), int(y1 - math.sin(ang) * bob))
                 cv2.arrowedLine(frame, p0, p1, (0, 0, 0), 26, cv2.LINE_AA, tipLength=0.35)
@@ -768,6 +827,12 @@ class Renderer:
             if frozen and seg.get("freeze", {}).get("desat", False):
                 g = vid.mean(axis=2, keepdims=True)
                 vid = vid * 0.35 + g * 0.65
+            is_bw = seg.get("bw") or (frozen and (seg.get("freeze") or {}).get("bw"))
+            if is_bw:
+                g = vid @ np.array([0.299, 0.587, 0.114], np.float32)
+                vid = np.repeat(g[..., None], 3, axis=2)
+                g2 = frame @ np.array([0.299, 0.587, 0.114], np.float32)
+                frame = np.repeat(g2[..., None], 3, axis=2)
             vid = sharpen(np.clip(vid, 0, 255).astype(np.uint8), seg.get("sharpen", 0.55)).astype(np.float32)
             frame[by:by + bh, bx:bx + bw] = vid
             if self.layout == "band":
@@ -895,7 +960,20 @@ class Renderer:
                 env[:fade] = np.linspace(0, 1, fade)
                 env[-fade:] = np.linspace(1, 0, fade)
                 mix[st:st + ln] += a[:ln] * g * env[:, None]
+        # narration
+        voice_bus = np.zeros((n, 2), np.float32)
+        for vc in self.p.get("voice", []):
+            x, sr = sf.read(os.path.join(ROOT, vc["file"]), dtype="float32")  # relative to ragestyles-shorts/
+            assert sr == SR
+            if x.ndim == 1:
+                x = np.stack([x, x], 1)
+            st = int(vc["t"] * SR)
+            ln = min(len(x), n - st)
+            if ln > 0:
+                voice_bus[st:st + ln] += x[:ln] * 10 ** (vc.get("db", self.p.get("voice_db", 0.0)) / 20)
         # sfx
+        sfx_bus = np.zeros((n, 2), np.float32)
+        sfx_free = np.zeros((n, 2), np.float32)  # cues marked "duck": false (sub hits that sit under words)
         for cue in self.p.get("sfx", []):
             x, sr = sf.read(os.path.join(SFX_DIR, cue["name"] + ".wav"), dtype="float32")
             if x.ndim == 1:
@@ -906,7 +984,14 @@ class Renderer:
             if st >= n:
                 continue
             ln = min(len(x), n - st)
-            mix[st:st + ln] += x[:ln] * 10 ** (cue.get("db", -6) / 20)
+            bus = sfx_bus if cue.get("duck", True) else sfx_free
+            bus[st:st + ln] += x[:ln] * 10 ** (cue.get("db", -6) / 20)
+        # duck the effects while the narrator speaks, so a boom tail never covers a word
+        duck_db = self.p.get("duck_sfx_db", -6.0)
+        if self.p.get("voice") and duck_db:
+            act = voice_activity(voice_bus)
+            sfx_bus *= (1 - (1 - 10 ** (duck_db / 20)) * act)[:, None]
+        mix += voice_bus + sfx_bus + sfx_free
         # loudness: normalise the full v1 mix (music + effects) to -14 LUFS, then apply that same gain
         # to the effects alone, so they sound exactly as loud as in v1 but without the music bed
         meter = pyln.Meter(SR)
@@ -921,6 +1006,12 @@ class Renderer:
             full = limiter(full * g)
             gain *= g
         out = full if self.p.get("music_in_output") else limiter(mix * gain)
+        stems = os.environ.get("RS_STEMS")  # debug: write voice / effects stems (post-gain) for balance checks
+        if stems:
+            n_out = int(round(self.total * SR))
+            sf.write(os.path.join(stems, self.p["id"] + "_voice.wav"), (voice_bus * gain)[:n_out], SR, subtype="FLOAT")
+            sf.write(os.path.join(stems, self.p["id"] + "_sfx.wav"), ((sfx_bus + sfx_free) * gain)[:n_out], SR,
+                     subtype="FLOAT")
         sf.write(out_wav, out[: int(round(self.total * SR))], SR, subtype="PCM_16")
 
     def resolve_times(self):

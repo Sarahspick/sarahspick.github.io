@@ -1,99 +1,517 @@
 {
-  "id": "02_special_olympics_deadlift",
-  "yt_title": "Special Olympics lifters hit different 🔥 🇬🇷 vs 🇺🇸 deadlift #shorts",
-  "layout": "band",
-  "band": {"y": 440, "h": 780},
-  "title": {"text": "Special Olympics\nlifters hit *different* :fire:", "size": 84},
-  "watermark": "@Rage_Styles",
-  "music": [
-    {"mood": "tension", "from": 0.0, "to": {"seg": 9}, "db": -19},
-    {"mood": "drive", "from": {"seg": 9}, "db": -17, "fade_in": 0.05}
+ "id": "02_special_olympics_deadlift",
+ "yt_title": "Special Olympics lifters hit different 🔥 🇬🇷 vs 🇺🇸 deadlift #shorts",
+ "title": {
+  "text": "Special Olympics\nlifters hit *different* :fire:",
+  "size": 84
+ },
+ "band": {
+  "y": 440,
+  "h": 780
+ },
+ "leaderboard": {
+  "title": "LEADERBOARD",
+  "pos": [
+   0.02,
+   0.03
   ],
-  "music_drops": [{"seg": 12, "at": 1.0, "extend": 0.3}],
-  "source_audio_db": null,
-  "segments": [
-    {"clip": "5902123590", "in": 12.2, "out": 13.8, "zoom": [1.18, 1.25], "focus": [0.46, 0.5],
-     "fx": [{"type": "punch", "at": 0.0, "amount": 0.14, "dur": 0.4}]},
-    {"clip": "5898418343", "in": 6.8, "out": 9.4, "zoom": [1.1, 1.2], "focus": [0.45, 0.5], "transition": "zoomblur"},
-    {"clip": "5898418343", "in": 9.4, "out": 12.2, "zoom": [1.2, 1.3], "focus": [0.45, 0.45],
-     "fx": [{"type": "punch", "at": 0.7, "amount": 0.1, "dur": 0.45}]},
-    {"clip": "5898418343", "in": 14.0, "out": 15.4, "zoom": [1.2, 1.2], "focus": [0.55, 0.5],
-     "fx": [{"type": "punch", "at": 0.0, "amount": 0.12, "dur": 0.35}]},
-    {"clip": "5898156289", "in": 0.0, "out": 1.4, "zoom": [1.2, 1.3], "focus": [0.5, 0.5], "transition": "whip"},
-    {"clip": "5898156289", "in": 2.2, "out": 3.3, "speed": 0.5, "zoom": [1.2, 1.3], "focus": [0.52, 0.4]},
-    {"clip": "5902123590", "in": 1.0, "out": 2.6, "zoom": [1.0, 1.08], "focus": [0.5, 0.5], "transition": "zoomblur"},
-    {"clip": "5902123590", "in": 4.0, "out": 6.5, "zoom": [1.08, 1.22], "focus": [0.46, 0.55], "transition": "whip"},
-    {"clip": "5902123590", "in": 10.5, "out": 12.4, "speed": 0.5, "zoom": [1.2, 1.3], "focus": [0.46, 0.55]},
-    {"clip": "5902123590", "in": 12.4, "out": 14.0, "zoom": [1.3, 1.3], "focus": [0.46, 0.5], "transition": "flash",
-     "fx": [{"type": "punch", "at": 0.05, "amount": 0.12, "dur": 0.5}]},
-    {"clip": "5902123590", "in": 20.6, "out": 21.9, "speed": 0.6, "zoom": [1.15, 1.25], "focus": [0.52, 0.42]},
-    {"clip": "5902123590", "in": 27.5, "out": 28.5, "zoom": [1.0, 1.05], "focus": [0.5, 0.5], "transition": "whip"},
-    {"clip": "5902123590", "in": 21.6, "out": 22.2, "speed": 0.6, "zoom": [1.2, 1.25], "focus": [0.52, 0.4],
-     "freeze": {"dur": 1.4, "desat": false, "zoom": 0.08, "vignette": true}}
-  ],
-  "leaderboard": {
-    "title": "LEADERBOARD",
-    "pos": [0.02, 0.03],
-    "rows": [
-      {"seg": 2, "at": 1.2, "flag": "gr", "label": "GRE", "value": 215},
-      {"seg": 4, "at": 0.9, "flag": "us", "label": "USA", "value": 205},
-      {"seg": 9, "at": 0.5, "flag": "us", "label": "USA", "value": 230}
-    ]
-  },
-  "flag_row": {
-    "flags": ["gr", "us", "us"],
-    "events": [
-      {"seg": 1, "at": 1.3, "idx": 0},
-      {"seg": 2, "at": 0.75, "idx": 0, "type": "check"},
-      {"seg": 4, "at": 0.0, "idx": 1},
-      {"seg": 4, "at": 0.5, "idx": 1, "type": "check"},
-      {"seg": 6, "at": 0.0, "idx": 2},
-      {"seg": 9, "at": 0.1, "idx": 2, "type": "check"}
-    ]
-  },
-  "captions": [
-    {"seg": 0, "at": 0.05, "text": "*230 KG* deadlift :fire:", "anim": "slam", "size": 110},
-    {"seg": 1, "d": 1.3, "text": "Special Olympics World Games, Athens 2011"},
-    {"seg": 1, "at": 1.3, "d": 2.0, "text": "Round 1: Greece :flag-gr:"},
-    {"seg": 2, "at": 0.7, "text": "^Locked out^ :check-mark-button:", "anim": "slam", "size": 106},
-    {"seg": 3, "text": "Team Greece: *215 KG* :flexed-biceps:"},
-    {"seg": 4, "text": "Round 2: USA :flag-us:"},
-    {"seg": 5, "text": "*205 KG*... Greece still #1 :eyes:"},
-    {"seg": 6, "d": "seg+", "text": "Round 3: USA :flag-us:"},
-    {"seg": 8, "text": "*215 KG* to beat..."},
-    {"seg": 9, "at": 0.05, "d": 0.85, "text": "*230 KG* :check-mark-button:", "anim": "slam", "size": 110},
-    {"seg": 9, "at": 0.9, "text": "*New #1* :trophy:", "anim": "slam", "size": 110},
-    {"seg": 10, "text": "And then *this* :face-holding-back-tears:"},
-    {"seg": 11, "text": "The whole arena went *wild* :clapping-hands:"},
-    {"seg": 12, "text": "Respect :saluting-face:", "size": 110}
-  ],
-  "sfx": [
-    {"seg": 0, "name": "boom", "db": -4},
-    {"seg": 0, "at": 0.05, "name": "punch", "db": -8},
-    {"seg": 1, "at": -0.05, "name": "rewind", "db": -10},
-    {"seg": 1, "at": 1.3, "name": "pop", "db": -10},
-    {"seg": 1, "at": 1.5, "name": "drum_roll", "db": -9},
-    {"seg": 2, "at": 0.7, "name": "boom", "db": -3},
-    {"seg": 2, "at": 0.72, "name": "ding", "db": -9},
-    {"seg": 3, "name": "whoosh", "db": -10},
-    {"seg": 3, "at": 0.02, "name": "pop", "db": -10},
-    {"seg": 4, "name": "whoosh", "db": -10},
-    {"seg": 4, "at": 0.02, "name": "pop", "db": -10},
-    {"seg": 4, "at": 0.5, "name": "punch", "db": -7},
-    {"seg": 5, "name": "whoosh_slow", "db": -11},
-    {"seg": 6, "name": "whoosh", "db": -11},
-    {"seg": 6, "at": 0.02, "name": "pop", "db": -10},
-    {"seg": 7, "name": "whoosh", "db": -11},
-    {"seg": 7, "at": 0.5, "name": "heartbeat", "db": -6},
-    {"seg": 7, "at": 1.7, "name": "heartbeat", "db": -6},
-    {"seg": 8, "at": 0.3, "name": "heartbeat", "db": -6},
-    {"seg": 9, "at": -1.05, "name": "riser_short", "db": -9},
-    {"seg": 9, "at": 0.05, "name": "boom", "db": -3},
-    {"seg": 9, "at": 0.07, "name": "ding", "db": -9},
-    {"seg": 9, "at": 0.9, "name": "success", "db": -8},
-    {"seg": 10, "name": "tape_stop", "db": -13},
-    {"seg": 11, "name": "whoosh", "db": -11},
-    {"seg": 12, "at": 1.0, "name": "boom_meme", "db": -5},
-    {"seg": 12, "at": 1.02, "name": "ding", "db": -10}
+  "rows": [
+   {
+    "flag": "gr",
+    "label": "GRE",
+    "value": 215,
+    "t": 5.515
+   },
+   {
+    "flag": "us",
+    "label": "USA",
+    "value": 205,
+    "t": 10.075
+   },
+   {
+    "flag": "us",
+    "label": "USA",
+    "value": 230,
+    "t": 19.255
+   }
   ]
+ },
+ "flag_row": {
+  "flags": [
+   "gr",
+   "us",
+   "us"
+  ],
+  "events": [
+   {
+    "idx": 0,
+    "t": 1.97
+   },
+   {
+    "idx": 0,
+    "type": "check",
+    "t": 5.115
+   },
+   {
+    "idx": 1,
+    "t": 6.415
+   },
+   {
+    "idx": 1,
+    "type": "check",
+    "t": 9.775
+   },
+   {
+    "idx": 2,
+    "t": 13.315
+   },
+   {
+    "idx": 2,
+    "type": "check",
+    "t": 17.655
+   }
+  ]
+ },
+ "layout": "band",
+ "segments": [
+  {
+   "clip": "5902123590",
+   "in": 12.6,
+   "zoom": [
+    1.18,
+    1.25
+   ],
+   "focus": [
+    0.46,
+    0.5
+   ],
+   "out": 14.57
+  },
+  {
+   "clip": "5898418343",
+   "in": 6.9,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "focus": [
+    0.45,
+    0.5
+   ],
+   "out": 8.605
+  },
+  {
+   "clip": "5898418343",
+   "in": 8.8,
+   "zoom": [
+    1.18,
+    1.25
+   ],
+   "focus": [
+    0.45,
+    0.47
+   ],
+   "out": 10.24
+  },
+  {
+   "clip": "5898418343",
+   "in": 10.9,
+   "zoom": [
+    1.25,
+    1.3
+   ],
+   "focus": [
+    0.45,
+    0.45
+   ],
+   "out": 12.2
+  },
+  {
+   "clip": "5898156289",
+   "in": 0.0,
+   "zoom": [
+    1.2,
+    1.26
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "speed": 0.5,
+   "out": 1.02
+  },
+  {
+   "clip": "5898156289",
+   "in": 1.0,
+   "zoom": [
+    1.26,
+    1.3
+   ],
+   "focus": [
+    0.5,
+    0.48
+   ],
+   "speed": 0.5,
+   "out": 2.105
+  },
+  {
+   "clip": "5898156289",
+   "in": 2.7,
+   "zoom": [
+    1.15,
+    1.25
+   ],
+   "focus": [
+    0.5,
+    0.4
+   ],
+   "speed": 0.6,
+   "out": 4.29
+  },
+  {
+   "clip": "5902123590",
+   "in": 1.0,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "out": 2.27
+  },
+  {
+   "clip": "5902123590",
+   "in": 4.3,
+   "zoom": [
+    1.1,
+    1.2
+   ],
+   "focus": [
+    0.46,
+    0.55
+   ],
+   "out": 5.57
+  },
+  {
+   "clip": "5902123590",
+   "in": 11.2,
+   "zoom": [
+    1.2,
+    1.3
+   ],
+   "focus": [
+    0.46,
+    0.55
+   ],
+   "speed": 0.55,
+   "out": 12.19
+  },
+  {
+   "clip": "5902123590",
+   "in": 12.4,
+   "zoom": [
+    1.3,
+    1.3
+   ],
+   "focus": [
+    0.46,
+    0.5
+   ],
+   "out": 13.9
+  },
+  {
+   "clip": "5902123590",
+   "in": 14.1,
+   "zoom": [
+    1.3,
+    1.26
+   ],
+   "focus": [
+    0.46,
+    0.48
+   ],
+   "out": 15.4
+  },
+  {
+   "clip": "5902123590",
+   "in": 20.6,
+   "zoom": [
+    1.15,
+    1.22
+   ],
+   "focus": [
+    0.52,
+    0.42
+   ],
+   "speed": 0.6,
+   "out": 21.277
+  },
+  {
+   "clip": "5902123590",
+   "in": 27.4,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "focus": [
+    0.5,
+    0.5
+   ],
+   "out": 28.206
+  },
+  {
+   "clip": "5902123590",
+   "in": 21.7,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "focus": [
+    0.52,
+    0.4
+   ],
+   "speed": 0.6,
+   "hold_zoom": 0.03,
+   "out": 21.949,
+   "freeze": {
+    "dur": 1.0,
+    "desat": false,
+    "bw": false,
+    "zoom": 0.03,
+    "vignette": false
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 1.97,
+   "text": "*230 KG* deadlift :fire:",
+   "anim": "punch",
+   "size": 110,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 1.97,
+   "d": 1.705,
+   "text": "Round 1: Greece :flag-gr:",
+   "anim": "punch",
+   "size": 96,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 3.675,
+   "d": 1.44,
+   "text": "*215 KG*",
+   "anim": "punch",
+   "size": 110,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 5.115,
+   "d": 1.3,
+   "text": "^Locked out^ :check-mark-button:",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 6.415,
+   "d": 2.04,
+   "text": "Round 2: USA :flag-us:",
+   "anim": "punch",
+   "size": 96,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 8.455,
+   "d": 1.29,
+   "text": "*205 KG*",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 9.745,
+   "d": 0.92,
+   "text": "^Locked out^ :check-mark-button:",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 10.665,
+   "d": 1.295,
+   "text": "*2nd place*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 11.96,
+   "d": 1.355,
+   "text": "But look at that *joy*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 13.315,
+   "d": 1.0,
+   "text": "Round 3: USA :flag-us:",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 14.315,
+   "d": 1.54,
+   "text": "*215 KG* to beat",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 17.655,
+   "d": 1.5,
+   "text": "*230 KG* :check-mark-button:",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 19.155,
+   "d": 1.3,
+   "text": "*New #1* :trophy:",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  },
+  {
+   "t": 20.455,
+   "d": 0.948,
+   "text": "The whole arena",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 21.403,
+   "d": 0.987,
+   "text": "was on its *feet*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 22.39,
+   "d": 1.415,
+   "text": "Respect :saluting-face:",
+   "anim": "punch",
+   "size": 108,
+   "max_lines": 1,
+   "max_w": 1000
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "impact_deep",
+   "db": -6
+  },
+  {
+   "t": 5.115,
+   "name": "boom",
+   "db": -5
+  },
+  {
+   "t": 9.725,
+   "name": "boom",
+   "db": -6,
+   "duck": false
+  },
+  {
+   "t": 16.105,
+   "name": "riser_soft",
+   "db": -10
+  },
+  {
+   "t": 17.655,
+   "name": "impact_deep",
+   "db": -4
+  },
+  {
+   "t": 19.255,
+   "name": "sub_hit",
+   "db": -7,
+   "duck": false
+  }
+ ],
+ "stickers": [],
+ "voice": [
+  {
+   "t": 0.2,
+   "file": "work/voice/df540584541b3f6a_line.wav"
+  },
+  {
+   "t": 2.02,
+   "file": "work/voice/bd29a412c1c0d7db_line.wav"
+  },
+  {
+   "t": 3.725,
+   "file": "work/voice/b6b29831e5ffe5da_line.wav"
+  },
+  {
+   "t": 5.265,
+   "file": "work/voice/0d2e85448a92917c_line.wav"
+  },
+  {
+   "t": 6.465,
+   "file": "work/voice/c666766a92c1baf3_line.wav"
+  },
+  {
+   "t": 8.505,
+   "file": "work/voice/588745ebf8594133_line.wav"
+  },
+  {
+   "t": 10.715,
+   "file": "work/voice/1ae19d333f5f3e6f_line.wav"
+  },
+  {
+   "t": 13.365,
+   "file": "work/voice/953211c573905088_line.wav"
+  },
+  {
+   "t": 17.905,
+   "file": "work/voice/c68f212ddc33ea12_line.wav"
+  },
+  {
+   "t": 19.205,
+   "file": "work/voice/4ca3bbcd8f9f51a3_line.wav"
+  },
+  {
+   "t": 20.505,
+   "file": "work/voice/d64ed276eacbac44_line.wav"
+  },
+  {
+   "t": 22.44,
+   "file": "work/voice/d320acf4433ab88f_line.wav"
+  }
+ ],
+ "voice_name": {
+  "am_onyx": 0.6,
+  "am_michael": 0.4
+ },
+ "lufs": -14.0
 }

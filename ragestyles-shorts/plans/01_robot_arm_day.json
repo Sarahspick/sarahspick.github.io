@@ -1,294 +1,292 @@
 {
  "id": "01_robot_arm_day",
- "yt_title": "NASA's robot never skips arm day 🤖💪 #shorts",
- "layout": "band",
+ "yt_title": "This robot never skips arm day 🤖💪 #shorts",
  "title": {
-  "text": "NASA's robot never\nskips *arm day* :robot:",
+  "text": "This robot never\nskips *arm day* :robot:",
   "size": 84
  },
- "watermark": "@Rage_Styles",
- "music": {
-  "mood": "bounce",
-  "db": -17,
-  "drops": [
-   [
-    17.25,
-    19.8
-   ]
-  ]
- },
- "source_audio_db": null,
+ "layout": "band",
  "segments": [
   {
    "clip": "5172465062",
+   "in": 35.6,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "focus": [
+    0.56,
+    0.45
+   ],
+   "out": 37.35
+  },
+  {
+   "clip": "5172465062",
+   "in": 37.2,
+   "zoom": [
+    1.04,
+    1.08
+   ],
+   "focus": [
+    0.56,
+    0.45
+   ],
+   "out": 38.565
+  },
+  {
+   "clip": "5172465062",
    "in": 24.2,
-   "out": 26.2,
    "zoom": [
     1.25,
-    1.38
+    1.3
    ],
    "focus": [
     0.3,
     0.42
-   ]
+   ],
+   "out": 25.425
   },
   {
    "clip": "5172465062",
-   "in": 26.2,
-   "out": 28.6,
+   "in": 28.2,
    "zoom": [
-    1.0,
-    1.08
+    1.25,
+    1.3
    ],
    "focus": [
-    0.42,
-    0.45
+    0.3,
+    0.42
    ],
-   "transition": "whip"
+   "out": 29.425
   },
   {
    "clip": "5172465062",
    "in": 32.0,
-   "out": 34.0,
    "zoom": [
-    1.1,
-    1.2
+    1.05,
+    1.12
    ],
    "focus": [
-    0.62,
+    0.78,
     0.5
    ],
-   "transition": "whip"
+   "out": 34.39
   },
   {
    "clip": "5172465062",
-   "in": 35.6,
-   "out": 39.6,
+   "in": 41.0,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "focus": [
+    0.55,
+    0.45
+   ],
+   "out": 41.888
+  },
+  {
+   "clip": "5172465062",
+   "in": 50.3,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "focus": [
+    0.6,
+    0.45
+   ],
+   "out": 51.188
+  },
+  {
+   "clip": "5172465062",
+   "in": 54.05,
+   "speed": 0.55,
    "zoom": [
     1.0,
     1.06
    ],
    "focus": [
-    0.48,
-    0.45
-   ],
-   "transition": "flash",
-   "fx": [
-    {
-     "type": "punch",
-     "at": 0.0,
-     "amount": 0.16,
-     "dur": 0.45
-    }
-   ]
-  },
-  {
-   "clip": "5172465062",
-   "in": 44.0,
-   "out": 47.0,
-   "zoom": [
-    1.05,
-    1.15
-   ],
-   "focus": [
     0.45,
     0.45
    ],
-   "transition": "zoomblur"
+   "out": 55.315
   },
   {
    "clip": "5172465062",
-   "in": 50.3,
-   "out": 52.6,
-   "speed": 0.6,
+   "in": 2.2,
    "zoom": [
     1.0,
-    1.1
+    1.05
    ],
    "focus": [
-    0.45,
-    0.45
-   ]
-  },
-  {
-   "clip": "5172465062",
-   "in": 53.0,
-   "out": 54.4,
-   "zoom": [
-    1.0,
-    1.0
+    0.375,
+    0.8
    ],
-   "focus": [
-    0.45,
-    0.45
-   ],
-   "freeze": {
-    "dur": 1.2,
-    "desat": true,
-    "zoom": 0.12,
-    "vignette": true
-   }
-  },
-  {
-   "clip": "5172465062",
-   "in": 1.0,
-   "out": 3.2,
-   "zoom": [
-    1.45,
-    1.6
-   ],
-   "focus": [
-    0.25,
-    0.72
-   ],
-   "transition": "cut",
-   "fx": [
-    {
-     "type": "punch",
-     "at": 0.0,
-     "amount": 0.2,
-     "dur": 0.5
-    }
-   ]
+   "out": 4.795
   }
  ],
  "captions": [
   {
-   "t": 0.12,
-   "d": 1.88,
-   "text": "Meet *Robonaut 2* :robot:"
+   "t": 0.0,
+   "d": 1.75,
+   "text": "^HUMAN^ VS ~ROBOT~",
+   "anim": "punch",
+   "size": 112,
+   "max_lines": 1,
+   "max_w": 1000
   },
   {
-   "t": 2.0,
-   "d": 2.4,
-   "text": "Built by *NASA* for the space station :rocket:"
+   "t": 1.75,
+   "d": 1.365,
+   "text": "Who has better *form?*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 4.4,
-   "d": 2.0,
-   "text": "Then this guy grabbed *dumbbells*"
+   "t": 3.115,
+   "d": 0.93,
+   "text": "The robot?",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 6.4,
-   "d": 2.0,
-   "text": "^Human^ vs ~robot~",
-   "anim": "slam",
-   "size": 110
+   "t": 4.045,
+   "d": 1.52,
+   "text": "Every rep *identical*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 8.4,
-   "d": 2.0,
-   "text": "Who has better *form*? :thinking-face:"
+   "t": 5.565,
+   "d": 0.965,
+   "text": "The human?",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 10.4,
-   "d": 3.0,
-   "text": "Perfect reps. *Zero ego.*"
+   "t": 6.53,
+   "d": 1.425,
+   "text": "He's doing his *best*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 13.4,
-   "d": 3.83,
-   "text": "Now he's copying the *robot* :face-with-tears-of-joy:"
+   "t": 7.955,
+   "d": 1.026,
+   "text": "Now he's copying",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 17.25,
-   "d": 2.58,
-   "text": "But it will never do *leg day*..."
+   "t": 8.981,
+   "d": 0.749,
+   "text": "the *robot*",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
   },
   {
-   "t": 19.83,
-   "d": 2.2,
+   "t": 9.73,
+   "d": 0.91,
+   "text": "But this robot",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 10.64,
+   "d": 0.816,
+   "text": "will never do",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 11.455,
+   "d": 0.575,
+   "text": "*leg day*...",
+   "anim": "snap",
+   "size": 96,
+   "max_lines": 2
+  },
+  {
+   "t": 12.03,
+   "d": 2.595,
    "text": "It has ~no legs~ :skull:",
-   "anim": "slam",
-   "size": 112
-  }
- ],
- "stickers": [
-  {
-   "t": 13.6,
-   "d": 3.4,
-   "type": "arrow",
-   "x": 0.7,
-   "y": 0.34,
-   "angle": 30,
-   "len": 170
+   "anim": "punch",
+   "size": 110,
+   "max_lines": 1,
+   "max_w": 1000
   }
  ],
  "sfx": [
   {
    "t": 0.0,
-   "name": "swipe",
-   "db": -10
+   "name": "impact_deep",
+   "db": -7
   },
   {
-   "t": 0.12,
-   "name": "pop",
-   "db": -9
-  },
-  {
-   "t": 2.0,
-   "name": "whoosh",
-   "db": -9
-  },
-  {
-   "t": 2.02,
-   "name": "pop",
+   "t": 10.48,
+   "name": "riser_soft",
    "db": -11
   },
   {
-   "t": 4.4,
-   "name": "whoosh",
-   "db": -9
-  },
-  {
-   "t": 4.42,
-   "name": "pop",
-   "db": -11
-  },
-  {
-   "t": 6.4,
-   "name": "punch",
-   "db": -5
-  },
-  {
-   "t": 8.4,
-   "name": "pop",
-   "db": -10
-  },
-  {
-   "t": 10.4,
-   "name": "whoosh_slow",
-   "db": -10
-  },
-  {
-   "t": 10.42,
-   "name": "pop",
-   "db": -11
-  },
-  {
-   "t": 13.3,
-   "name": "tape_stop",
-   "db": -13
-  },
-  {
-   "t": 13.42,
-   "name": "pop",
-   "db": -11
-  },
-  {
-   "t": 17.25,
-   "name": "record_scratch",
-   "db": -5
-  },
-  {
-   "t": 19.83,
+   "t": 12.03,
    "name": "boom_meme",
-   "db": -2
+   "db": -4
+  }
+ ],
+ "stickers": [
+  {
+   "type": "ring",
+   "x": 0.565,
+   "y": 0.86,
+   "rx": 150,
+   "ry": 80,
+   "t": 12.13,
+   "d": 2.495
+  }
+ ],
+ "voice": [
+  {
+   "t": 0.2,
+   "file": "work/voice/d74e3b451f9c43a1_line.wav"
   },
   {
-   "t": 19.83,
-   "name": "glitch",
-   "db": -14
+   "t": 1.8,
+   "file": "work/voice/b1a91ee62a359fb6_line.wav"
+  },
+  {
+   "t": 3.165,
+   "file": "work/voice/bb86880d64e68663_line.wav"
+  },
+  {
+   "t": 5.615,
+   "file": "work/voice/c37f285a83074d90_line.wav"
+  },
+  {
+   "t": 8.005,
+   "file": "work/voice/4326eaa3ca67d6f8_line.wav"
+  },
+  {
+   "t": 9.78,
+   "file": "work/voice/e6c77f4ff8751e99_line.wav"
+  },
+  {
+   "t": 12.33,
+   "file": "work/voice/ad6de56728d87e41_line.wav"
   }
- ]
+ ],
+ "voice_name": {
+  "am_onyx": 0.6,
+  "am_michael": 0.4
+ },
+ "lufs": -14.0
 }

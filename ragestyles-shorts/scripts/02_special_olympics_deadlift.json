@@ -1,0 +1,429 @@
+{
+ "id": "02_special_olympics_deadlift",
+ "yt_title": "Special Olympics lifters hit different 🔥 🇬🇷 vs 🇺🇸 deadlift #shorts",
+ "title": {
+  "text": "Special Olympics\nlifters hit *different* :fire:",
+  "size": 84
+ },
+ "band": {
+  "y": 440,
+  "h": 780
+ },
+ "voice": {
+  "name": {
+   "am_onyx": 0.6,
+   "am_michael": 0.4
+  },
+  "speed": 1.15
+ },
+ "leaderboard": {
+  "title": "LEADERBOARD",
+  "pos": [
+   0.02,
+   0.03
+  ],
+  "rows": [
+   {
+    "beat": 3,
+    "at": 0.4,
+    "flag": "gr",
+    "label": "GRE",
+    "value": 215
+   },
+   {
+    "beat": 5,
+    "at": "s1+0.3",
+    "flag": "us",
+    "label": "USA",
+    "value": 205
+   },
+   {
+    "beat": 10,
+    "at": 0.1,
+    "flag": "us",
+    "label": "USA",
+    "value": 230
+   }
+  ]
+ },
+ "flag_row": {
+  "flags": [
+   "gr",
+   "us",
+   "us"
+  ],
+  "events": [
+   {
+    "beat": 1,
+    "at": 0.0,
+    "idx": 0
+   },
+   {
+    "beat": 3,
+    "at": 0.0,
+    "idx": 0,
+    "type": "check"
+   },
+   {
+    "beat": 4,
+    "at": 0.0,
+    "idx": 1
+   },
+   {
+    "beat": 5,
+    "at": "s1",
+    "idx": 1,
+    "type": "check"
+   },
+   {
+    "beat": 7,
+    "at": 0.0,
+    "idx": 2
+   },
+   {
+    "beat": 9,
+    "at": 0.0,
+    "idx": 2,
+    "type": "check"
+   }
+  ]
+ },
+ "beats": [
+  {
+   "say": "Two hundred thirty kilos.",
+   "caption": "*230 KG* deadlift :fire:",
+   "big": true,
+   "size": 110,
+   "lead": 0.2,
+   "min": 1.8,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 12.6,
+     "zoom": [
+      1.18,
+      1.25
+     ],
+     "focus": [
+      0.46,
+      0.5
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "impact_deep",
+     "db": -6
+    }
+   ]
+  },
+  {
+   "say": "Round one. Greece.",
+   "caption": "Round 1: Greece :flag-gr:",
+   "big": true,
+   "size": 96,
+   "shots": [
+    {
+     "clip": "5898418343",
+     "in": 6.9,
+     "zoom": [
+      1.1,
+      1.18
+     ],
+     "focus": [
+      0.45,
+      0.5
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Two hundred fifteen.",
+   "caption": "*215 KG*",
+   "big": true,
+   "size": 110,
+   "shots": [
+    {
+     "clip": "5898418343",
+     "in": 8.8,
+     "zoom": [
+      1.18,
+      1.25
+     ],
+     "focus": [
+      0.45,
+      0.47
+     ]
+    }
+   ]
+  },
+  {
+   "say": "Locked out.",
+   "caption": "^Locked out^ :check-mark-button:",
+   "big": true,
+   "lead": 0.15,
+   "min": 1.3,
+   "shots": [
+    {
+     "clip": "5898418343",
+     "in": 10.9,
+     "zoom": [
+      1.25,
+      1.3
+     ],
+     "focus": [
+      0.45,
+      0.45
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "boom",
+     "db": -5
+    }
+   ]
+  },
+  {
+   "say": "Round two. U.S.A.",
+   "caption": "Round 2: USA :flag-us:",
+   "big": true,
+   "size": 96,
+   "shots": [
+    {
+     "clip": "5898156289",
+     "in": 0.0,
+     "zoom": [
+      1.2,
+      1.26
+     ],
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "speed": 0.5
+    }
+   ]
+  },
+  {
+   "say": "Two hundred five. Locked out.",
+   "caption": "*205 KG* | ^Locked out^ :check-mark-button:",
+   "big": true,
+   "shots": [
+    {
+     "clip": "5898156289",
+     "in": 1.0,
+     "zoom": [
+      1.26,
+      1.3
+     ],
+     "focus": [
+      0.5,
+      0.48
+     ],
+     "speed": 0.5
+    }
+   ],
+   "sfx": [
+    {
+     "at": "s1-0.05",
+     "name": "boom",
+     "db": -6,
+     "duck": false
+    }
+   ]
+  },
+  {
+   "say": "Second place. But look at that joy.",
+   "caption": "*2nd place* | But look at that *joy*",
+   "max_words": 5,
+   "max_chars": 24,
+   "shots": [
+    {
+     "clip": "5898156289",
+     "in": 2.7,
+     "zoom": [
+      1.15,
+      1.25
+     ],
+     "focus": [
+      0.5,
+      0.4
+     ],
+     "speed": 0.6
+    }
+   ]
+  },
+  {
+   "say": "Round three. Two fifteen to beat.",
+   "caption": "Round 3: USA :flag-us: | *215 KG* to beat",
+   "max_words": 4,
+   "max_chars": 20,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 1.0,
+     "zoom": [
+      1.0,
+      1.06
+     ],
+     "focus": [
+      0.5,
+      0.5
+     ]
+    },
+    {
+     "clip": "5902123590",
+     "in": 4.3,
+     "zoom": [
+      1.1,
+      1.2
+     ],
+     "focus": [
+      0.46,
+      0.55
+     ]
+    }
+   ]
+  },
+  {
+   "dur": 1.8,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 11.2,
+     "zoom": [
+      1.2,
+      1.3
+     ],
+     "focus": [
+      0.46,
+      0.55
+     ],
+     "speed": 0.55
+    }
+   ],
+   "sfx": [
+    {
+     "at": "end-1.55",
+     "name": "riser_soft",
+     "db": -10
+    }
+   ]
+  },
+  {
+   "say": "Two hundred thirty.",
+   "caption": "*230 KG* :check-mark-button:",
+   "big": true,
+   "lead": 0.25,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 12.4,
+     "zoom": [
+      1.3,
+      1.3
+     ],
+     "focus": [
+      0.46,
+      0.5
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.0,
+     "name": "impact_deep",
+     "db": -4
+    }
+   ]
+  },
+  {
+   "say": "New number one.",
+   "caption": "*New #1* :trophy:",
+   "big": true,
+   "min": 1.3,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 14.1,
+     "zoom": [
+      1.3,
+      1.26
+     ],
+     "focus": [
+      0.46,
+      0.48
+     ]
+    }
+   ],
+   "sfx": [
+    {
+     "at": 0.1,
+     "name": "sub_hit",
+     "db": -7,
+     "duck": false
+    }
+   ]
+  },
+  {
+   "say": "The whole arena was on its feet.",
+   "caption": "The whole arena | was on its *feet*",
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 20.6,
+     "zoom": [
+      1.15,
+      1.22
+     ],
+     "focus": [
+      0.52,
+      0.42
+     ],
+     "speed": 0.6,
+     "w": 1.4
+    },
+    {
+     "clip": "5902123590",
+     "in": 27.4,
+     "zoom": [
+      1.0,
+      1.04
+     ],
+     "focus": [
+      0.5,
+      0.5
+     ],
+     "w": 1.0
+    }
+   ],
+   "max_words": 4
+  },
+  {
+   "say": "Respect.",
+   "caption": "Respect :saluting-face:",
+   "big": true,
+   "pad": 0.6,
+   "shots": [
+    {
+     "clip": "5902123590",
+     "in": 21.7,
+     "zoom": [
+      1.2,
+      1.24
+     ],
+     "focus": [
+      0.52,
+      0.4
+     ],
+     "speed": 0.6,
+     "hold": 1.0,
+     "hold_zoom": 0.03
+    }
+   ]
+  }
+ ]
+}

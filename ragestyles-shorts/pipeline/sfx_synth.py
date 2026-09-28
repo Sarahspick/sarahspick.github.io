@@ -352,6 +352,40 @@ def camera_zoom(dur=0.35):
     return butter(y, "lowpass", 5000, 2) * np.sin(np.pi * t / dur)
 
 
+def riser_soft(dur=1.6):
+    """Gentle build-up: filtered air + a low gliding tone, no harsh top end."""
+    t = t_axis(dur)
+    n = len(t)
+    air = svf_bandpass(noise(dur, "pink"), 180 * (2400 / 180) ** (t / dur), 0.8)
+    f = 90 * (360 / 90) ** ((t / dur) ** 1.3)
+    tone = np.sin(2 * np.pi * np.cumsum(f) / SR) + 0.3 * np.sin(4 * np.pi * np.cumsum(f) / SR)
+    y = butter(air * 0.8 + tone * 0.35, "lowpass", 3200, 4) * (t / dur) ** 2.2
+    tail = int(0.04 * SR)
+    y[-tail:] *= np.linspace(1, 0, tail)
+    return stereo(y, 0.25 * np.sin(2 * np.pi * 1.5 * t) * (t / dur))
+
+
+def sub_hit(dur=1.1):
+    """Deep sub thump that you feel more than hear."""
+    t = t_axis(dur)
+    f = 36 + 44 * np.exp(-t * 9)
+    body = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 3.2)
+    knock = butter(noise(dur), "lowpass", 900, 2) * np.exp(-t * 70) * 0.5
+    return np.tanh(2.0 * (body + knock))
+
+
+def impact_deep(dur=2.4):
+    """Cinematic impact with a long dark tail."""
+    t = t_axis(dur)
+    s, _ = sweep_sine(95, 32, 0.4)
+    sub = np.concatenate([s, np.sin(2 * np.pi * 32 * t_axis(dur - 0.4))]) * np.exp(-1.9 * t)
+    thump = np.sin(2 * np.pi * 140 * t) * np.exp(-26 * t) * 0.55
+    crack = butter(noise(dur), "bandpass", [200, 2400], 2) * np.exp(-45 * t) * 0.7
+    y = np.tanh(1.7 * (sub + thump + crack))
+    y = butter(reverb(y, 1.8, 0.28)[: len(t)], "lowpass", 5000, 2)
+    return y
+
+
 LIBRARY = {
     "whoosh": lambda: whoosh(),
     "whoosh_slow": lambda: whoosh(0.62, 220, 2600, 1.0, 0.6),
@@ -379,6 +413,10 @@ LIBRARY = {
     "drum_roll": drum_roll,
     "air_horn": air_horn,
     "zoom": camera_zoom,
+    # added later: keep at the end so the sounds above stay bit-identical (shared rng)
+    "riser_soft": riser_soft,
+    "sub_hit": sub_hit,
+    "impact_deep": impact_deep,
 }
 
 if __name__ == "__main__":

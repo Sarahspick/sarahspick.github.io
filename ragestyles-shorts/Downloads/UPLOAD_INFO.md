@@ -7,27 +7,27 @@
 
 **제목**
 ```
-Human vs NASA robot: who has better form? 🤖 #shorts
+NASA's robot never skips arm day 🤖💪 #shorts
 ```
 **설명**
 ```
-Human vs NASA's Robonaut 2 🤖 Same dumbbells, very different leg day.
+NASA's Robonaut 2 vs a human 🤖 Who has better form?
 
 Footage (edited: cropped, captions and sound effects added by RageStyles):
 • "Get Ripped with Robonaut 2 - Weight-lifting Demo" by AGeekMom (https://www.flickr.com/videos/22812192@N00/5172465062/), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0/)
 
-#gym #fitness #armday #nasa #robot #shorts
+#gym #fitness #armday #legday #nasa #robot #shorts
 ```
 
 ## 02_special_olympics_deadlift.mp4
 
 **제목**
 ```
-Special Olympics deadlift: 🇬🇷 vs 🇺🇸 who pulls the most? #shorts
+Special Olympics lifters hit different 🔥 🇬🇷 vs 🇺🇸 deadlift #shorts
 ```
 **설명**
 ```
-Special Olympics World Games, Athens 2011. Deadlift: 🇬🇷 Greece vs 🇺🇸 USA. Respect to every lifter.
+Special Olympics World Games, Athens 2011. Deadlift: 🇬🇷 Greece vs 🇺🇸 USA. Respect to every lifter 🫡
 
 Footage (edited: cropped, captions and sound effects added by RageStyles):
 • "Team USA - Powerlifting - Special Olympics 2011" by Tilemahos Efthimiadis (https://www.flickr.com/videos/64379474@N00/5898156289/), CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0/)

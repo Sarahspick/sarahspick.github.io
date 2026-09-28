@@ -1,11 +1,20 @@
 {
- "impact_deep": {
+ "whoosh": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "whoosh_slow": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "reverse_swell": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "swipe": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
  "boom": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
- "sub_hit": {
+ "boom_meme": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
  "bass_drop": {
@@ -14,13 +23,58 @@
  "punch": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
+ "pop": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "pop_low": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "click": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "ding": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "success": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "error": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "riser": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "riser_short": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "record_scratch": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "tape_stop": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "rewind": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "shutter": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "glitch": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "tick": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
  "heartbeat": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
- "riser_soft": {
+ "drum_roll": {
   "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  },
- "vine_boom": {
-  "source": "3kh0/soundboard (github.com/3kh0/soundboard, Apache-2.0 repo), sounds/vine-boom.mp3, trimmed and normalized"
+ "air_horn": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "zoom": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
  }
 }

@@ -836,6 +836,8 @@ class Renderer:
         m = self.p.get("music")
         parts = m if isinstance(m, list) else ([m] if m else [])
         drops = (m.get("drops", []) if isinstance(m, dict) else self.p.get("music_drops", []))
+        if parts and not all(os.path.exists(os.path.join(MUSIC_DIR, q["mood"] + ".wav")) for q in parts):
+            subprocess.run([sys.executable, os.path.join(HERE, "music_synth.py")], check=True)  # deterministic
         for part in parts:
             bed, sr = sf.read(os.path.join(MUSIC_DIR, part["mood"] + ".wav"), dtype="float32")
             assert sr == SR

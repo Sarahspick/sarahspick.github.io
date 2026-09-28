@@ -12,7 +12,7 @@ import soundfile as sf
 from scipy import signal
 
 SR = 48000
-OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "music")
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "work", "music_ref")  # loudness reference only
 rng = np.random.default_rng(11)
 
 

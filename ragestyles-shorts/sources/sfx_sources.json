@@ -1,152 +1,26 @@
 {
+ "impact_deep": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "boom": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "sub_hit": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "bass_drop": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "punch": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "heartbeat": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
+ "riser_soft": {
+  "source": "synthesized in pipeline/sfx_synth.py (original, no samples)"
+ },
  "vine_boom": {
-  "file": "vine-boom.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.18
- },
- "oh_my_god": {
-  "file": "ohmygod.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.6
- },
- "oh_my_god_2": {
-  "file": "ohhmygod.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.44
- },
- "anime_wow": {
-  "file": "anime-wow.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 2.72
- },
- "crowd_ohhh": {
-  "file": "OHHH.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 3.59
- },
- "boxing_bell": {
-  "file": "boxingbell.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.59
- },
- "dun_dun": {
-  "file": "DUN_DUN.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.28
- },
- "wrong_buzzer": {
-  "file": "wrong.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 0.34
- },
- "skull_trumpet": {
-  "file": "skull-trumpet.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 0.26
- },
- "bonk": {
-  "file": "bonk.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 0.4
- },
- "nice": {
-  "file": "nice.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.55
- },
- "yay": {
-  "file": "kidsyay.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 2.25
- },
- "emotional_damage": {
-  "file": "emotional-damage.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 2.88
- },
- "goofy_slip": {
-  "file": "goofy-slip.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 1.83
- },
- "braam": {
-  "file": "inception.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 2.95
- },
- "psst": {
-  "file": "psst.mp3",
-  "source": "3kh0/soundboard (Apache-2.0 repo)",
-  "seconds": 0.55
- },
- "get_out": {
-  "file": "get_out.wav",
-  "source": "Thijzert123/meme-soundboard (MIT)",
-  "seconds": 0.96
- },
- "metal_pipe": {
-  "file": "metal_pipe.wav",
-  "source": "Thijzert123/meme-soundboard (MIT)",
-  "seconds": 2.6
- },
- "airhorn": {
-  "file": "airhorn.wav",
-  "source": "Thijzert123/meme-soundboard (MIT)",
-  "seconds": 2.78
- },
- "ba_dum_tss": {
-  "file": "ba_dum_tss.wav",
-  "source": "Thijzert123/meme-soundboard (MIT)",
-  "seconds": 1.87
- },
- "nope": {
-  "file": "NOPE.mp3",
-  "source": "imsupercool123qwerty-pixel/soundboard2",
-  "seconds": 0.36
- },
- "huh": {
-  "file": "HUH.mp3",
-  "source": "imsupercool123qwerty-pixel/soundboard2",
-  "seconds": 0.84
- },
- "ding": {
-  "file": "DING.mp3",
-  "source": "imsupercool123qwerty-pixel/soundboard2",
-  "seconds": 1.47
- },
- "bruh": {
-  "file": "bruh.mp3",
-  "source": "memer-cli npm (MIT)",
-  "seconds": 0.79
- },
- "correct": {
-  "file": "arcade_success.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.62
- },
- "level_up": {
-  "file": "arcade_level-up.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.8
- },
- "achievement": {
-  "file": "studio_achievement.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.93
- },
- "click": {
-  "file": "studio_select.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.29
- },
- "click_soft": {
-  "file": "minimal_press.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.15
- },
- "error_ui": {
-  "file": "arcade_error.mp3",
-  "source": "uisfx npm (MIT)",
-  "seconds": 0.56
+  "source": "3kh0/soundboard (github.com/3kh0/soundboard, Apache-2.0 repo), sounds/vine-boom.mp3, trimmed and normalized"
  }
 }

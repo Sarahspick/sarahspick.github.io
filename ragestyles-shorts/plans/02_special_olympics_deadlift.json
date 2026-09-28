@@ -1,8 +1,9 @@
 {
  "id": "02_special_olympics_deadlift",
- "yt_title": "Special Olympics deadlift battle 🇬🇷 vs 🇺🇸 who wins? #shorts",
- "post": {
-  "text": "Special Olympics deadlift battle :flag-gr: vs :flag-us: who pulls the most?"
+ "yt_title": "Special Olympics deadlift: 🇬🇷 vs 🇺🇸 who pulls the most? #shorts",
+ "title": {
+  "text": "Special Olympics\n*deadlift* :flag-gr: vs :flag-us:",
+  "size": 82
  },
  "media_aspect": 1.3333,
  "segments": [
@@ -12,7 +13,7 @@
    "out": 9.4,
    "zoom": [
     1.0,
-    1.06
+    1.05
    ],
    "focus": [
     0.42,
@@ -24,8 +25,8 @@
    "in": 9.4,
    "out": 12.2,
    "zoom": [
-    1.06,
-    1.12
+    1.05,
+    1.1
    ],
    "focus": [
     0.42,
@@ -35,7 +36,7 @@
     {
      "type": "punch",
      "at": 0.7,
-     "amount": 0.08,
+     "amount": 0.07,
      "dur": 0.45
     }
    ]
@@ -43,20 +44,20 @@
   {
    "clip": "5898156289",
    "in": 0.0,
-   "out": 1.4,
+   "out": 1.6,
    "zoom": [
     1.05,
     1.08
    ],
    "focus": [
-    0.4,
+    0.5,
     0.5
    ],
    "fx": [
     {
      "type": "punch",
-     "at": 0.3,
-     "amount": 0.08,
+     "at": 0.8,
+     "amount": 0.07,
      "dur": 0.45
     }
    ]
@@ -71,7 +72,7 @@
     1.12
    ],
    "focus": [
-    0.4,
+    0.5,
     0.45
    ]
   },
@@ -84,7 +85,7 @@
     1.04
    ],
    "focus": [
-    0.38,
+    0.5,
     0.5
    ]
   },
@@ -94,10 +95,10 @@
    "out": 6.2,
    "zoom": [
     1.04,
-    1.12
+    1.1
    ],
    "focus": [
-    0.38,
+    0.5,
     0.55
    ]
   },
@@ -107,11 +108,11 @@
    "out": 12.4,
    "speed": 0.5,
    "zoom": [
-    1.12,
-    1.2
+    1.1,
+    1.18
    ],
    "focus": [
-    0.38,
+    0.5,
     0.5
    ]
   },
@@ -120,18 +121,18 @@
    "in": 12.4,
    "out": 14.0,
    "zoom": [
-    1.2,
-    1.2
+    1.18,
+    1.18
    ],
    "focus": [
-    0.38,
+    0.5,
     0.45
    ],
    "fx": [
     {
      "type": "punch",
      "at": 0.15,
-     "amount": 0.08,
+     "amount": 0.07,
      "dur": 0.5
     }
    ]
@@ -143,15 +144,15 @@
    "speed": 0.6,
    "zoom": [
     1.1,
-    1.18
+    1.16
    ],
    "focus": [
-    0.42,
+    0.5,
     0.4
    ],
    "freeze": {
-    "dur": 1.2,
-    "zoom": 0.05
+    "dur": 1.3,
+    "zoom": 0.04
    }
   }
  ],
@@ -171,7 +172,7 @@
    },
    {
     "seg": 2,
-    "at": 0.8,
+    "at": 1.2,
     "flag": "us",
     "label": "USA",
     "value": 205
@@ -210,7 +211,7 @@
    },
    {
     "seg": 2,
-    "at": 0.35,
+    "at": 0.85,
     "idx": 1,
     "type": "check"
    },
@@ -230,171 +231,123 @@
  "captions": [
   {
    "seg": 0,
-   "text": "Round 1: Greece :flag-gr:",
-   "pos": [
-    0.77,
-    0.08
-   ],
-   "max_w": 440,
-   "size": 54,
-   "max_lines": 1
+   "text": "Round 1: Greece :flag-gr:"
   },
   {
    "seg": 1,
    "at": 0.7,
-   "d": 2.1,
-   "text": "^LOCKED^ :check-mark-button:",
+   "text": "^Locked out^ :check-mark-button:",
    "style": "big",
-   "anim": "slam",
-   "pos": "bottom",
-   "size": 110
+   "anim": "slam"
   },
   {
    "seg": 2,
-   "text": "Round 2: USA :flag-us:",
-   "pos": [
-    0.77,
-    0.08
-   ],
-   "max_w": 440,
-   "size": 54,
-   "max_lines": 1
+   "d": 0.8,
+   "text": "Round 2: USA :flag-us:"
   },
   {
    "seg": 2,
-   "at": 0.3,
-   "d": 1.1,
-   "text": "^LOCKED^ :check-mark-button:",
+   "at": 0.8,
+   "d": "seg+",
+   "text": "^Locked out^ :check-mark-button:",
    "style": "big",
-   "anim": "slam",
-   "pos": "bottom",
-   "size": 110
-  },
-  {
-   "seg": 3,
-   "text": "Not enough for #1... but look at him :face-holding-back-tears:"
+   "anim": "slam"
   },
   {
    "seg": 4,
    "d": "seg+",
-   "text": "Round 3: USA :flag-us:",
-   "pos": [
-    0.77,
-    0.08
-   ],
-   "max_w": 440,
-   "size": 54,
-   "max_lines": 1
+   "text": "Round 3: USA :flag-us:"
   },
   {
-   "seg": 5,
-   "text": "He needs MORE than 215 KG for #1..."
+   "seg": 6,
+   "text": "215 kg to beat"
   },
   {
    "seg": 7,
    "at": 0.15,
    "d": 0.8,
-   "text": "*230 KG* :check-mark-button:",
+   "text": "*230 kg* :check-mark-button:",
    "style": "big",
-   "anim": "slam",
-   "pos": "bottom",
-   "size": 110
+   "anim": "slam"
   },
   {
    "seg": 7,
    "at": 0.95,
-   "text": "*NEW #1* :trophy:",
+   "text": "*New #1* :trophy:",
    "style": "big",
-   "anim": "slam",
-   "pos": "bottom",
-   "size": 118
+   "anim": "slam"
   },
   {
    "seg": 8,
    "at": 0.3,
-   "text": "RESPECT :saluting-face:",
+   "text": "Respect :saluting-face:",
    "style": "big",
-   "anim": "slam",
-   "pos": "bottom",
-   "size": 118
+   "anim": "slam"
   }
  ],
  "sfx": [
   {
    "seg": 0,
-   "name": "boxing_bell",
-   "db": -4
+   "name": "impact_deep",
+   "db": -6
   },
   {
    "seg": 1,
    "at": 0.7,
-   "name": "correct",
-   "db": -4
-  },
-  {
-   "seg": 1,
-   "at": 0.8,
-   "name": "crowd_ohhh",
-   "db": -9,
-   "max": 1.8
-  },
-  {
-   "seg": 2,
-   "name": "boxing_bell",
-   "db": -5
-  },
-  {
-   "seg": 2,
-   "at": 0.3,
-   "name": "correct",
+   "name": "boom",
    "db": -4
   },
   {
    "seg": 2,
-   "at": 1.0,
-   "name": "nope",
-   "db": -3
-  },
-  {
-   "seg": 3,
-   "at": 0.4,
-   "name": "yay",
+   "name": "sub_hit",
    "db": -9
   },
   {
+   "seg": 2,
+   "at": 0.8,
+   "name": "boom",
+   "db": -5
+  },
+  {
    "seg": 4,
-   "name": "boxing_bell",
-   "db": -4
+   "name": "sub_hit",
+   "db": -9
   },
   {
    "seg": 5,
-   "at": 0.2,
-   "name": "dun_dun",
-   "db": -5
+   "at": 0.3,
+   "name": "heartbeat",
+   "db": -7
+  },
+  {
+   "seg": 5,
+   "at": 1.35,
+   "name": "heartbeat",
+   "db": -7
+  },
+  {
+   "seg": 7,
+   "at": -1.45,
+   "name": "riser_soft",
+   "db": -9
   },
   {
    "seg": 7,
    "at": 0.15,
-   "name": "correct",
-   "db": -4
-  },
-  {
-   "seg": 7,
-   "at": 0.85,
-   "name": "level_up",
-   "db": -4
+   "name": "impact_deep",
+   "db": -3
   },
   {
    "seg": 7,
    "at": 0.95,
-   "name": "crowd_ohhh",
-   "db": -6
+   "name": "boom",
+   "db": -7
   },
   {
    "seg": 8,
    "at": 0.3,
-   "name": "vine_boom",
-   "db": -3
+   "name": "sub_hit",
+   "db": -6
   }
  ]
 }

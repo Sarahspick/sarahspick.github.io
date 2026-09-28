@@ -1,12 +1,13 @@
-"""RageStyles shorts renderer (v2): JSON edit plan -> finished 1080x1920 / 30 fps MP4.
+"""RageStyles shorts renderer (v3): JSON edit plan -> finished 1080x1920 / 30 fps MP4.
 
-Style ("post" layout): the short looks like a post on X / a community board.
-  * header: round RageStyles avatar, name, verified badge, @handle
-  * post text (the hook), then the clip in a rounded media card
-  * clean cuts only; optional brief punch-in zoom, slow motion, black-and-white freeze
-  * overlay captions with quick pop / slam, inline emoji and country flags
-  * red rings / arrows on the key detail, live leaderboard, country flag row
-  * real meme SFX from assets/sfx (no music: the channel adds music at upload)
+Layout (top to bottom, over a blurred copy of the clip):
+  * small round RageStyles avatar + name + verified badge
+  * fixed hook title
+  * the clip, full width, 4:3 (or 1:1), optionally as a side-by-side split
+  * optional country flag row, then captions under the clip
+Editing: clean cuts only, brief punch-in zoom, slow motion, freeze (optionally
+black and white), red rings / arrows, live leaderboard for competitions.
+Audio: sound effects only (synthesized in sfx_synth.py); music is added at upload.
 
 Usage:  python3 render.py plans/01_xxx.json [--preview] [--out file.mp4]
 """
@@ -406,16 +407,28 @@ def limiter(x, ceiling=0.84, lookahead=0.005, release=0.12):
     return (x * out[:, None]).astype(np.float32)
 
 
+# ------------------------------------------------------------------ backgrounds
+
+def blurred_bg(src_u8, darken=0.4):
+    """Cover-fit the frame into 9:16, blur heavily and darken (the classic shorts background)."""
+    small = cv2.resize(src_u8, (192, 108) if src_u8.shape[1] >= src_u8.shape[0] else (108, 192),
+                       interpolation=cv2.INTER_AREA)
+    sh, sw = small.shape[:2]
+    scale = max(108 / sw, 192 / sh)
+    small = cv2.resize(small, (int(sw * scale) + 1, int(sh * scale) + 1), interpolation=cv2.INTER_LINEAR)
+    y0, x0 = (small.shape[0] - 192) // 2, (small.shape[1] - 108) // 2
+    small = cv2.GaussianBlur(small[y0:y0 + 192, x0:x0 + 108], (0, 0), 5)
+    return cv2.resize(small, (W, H), interpolation=cv2.INTER_LINEAR).astype(np.float32) * darken
+
+
 # ------------------------------------------------------------------ renderer
 
 class Renderer:
     def __init__(self, plan, preview=False):
         self.p = plan
         self.preview = preview
-        self.M = 36
-        self.media_w = W - 2 * self.M
-        self.media_h = int(round(self.media_w / plan.get("media_aspect", 4 / 3)))
-        self.radius = 30
+        self.band_w = W
+        self.band_h = int(round(W / plan.get("media_aspect", 4 / 3)))
 
     # ---------- timeline
     def build_timeline(self):
@@ -430,7 +443,6 @@ class Renderer:
         return t
 
     def seg_time(self, ref):
-        """Resolve {"seg": i, "at": x} (or a plain number) to seconds."""
         if isinstance(ref, (int, float)):
             return float(ref)
         s = self.timeline[ref["seg"]]
@@ -448,14 +460,15 @@ class Renderer:
                     continue
                 s = self.timeline[c["seg"]]
                 c["t"] = round(self.seg_time(c), 3)
-                if key != "sfx":
-                    if "d" not in c:
-                        c["d"] = round(s["t0"] + s["dur"] - c["t"], 3)
-                    elif c["d"] == "seg+":
-                        s2 = self.timeline[min(c["seg"] + 1, len(self.timeline) - 1)]
-                        c["d"] = round(s2["t0"] + s2["dur"] - c["t"], 3)
-                    elif c["d"] == "end":
-                        c["d"] = round(self.total - c["t"], 3)
+                if key == "sfx":
+                    continue
+                if "d" not in c:
+                    c["d"] = round(s["t0"] + s["dur"] - c["t"], 3)
+                elif c["d"] == "seg+":
+                    s2 = self.timeline[min(c["seg"] + 1, len(self.timeline) - 1)]
+                    c["d"] = round(s2["t0"] + s2["dur"] - c["t"], 3)
+                elif c["d"] == "end":
+                    c["d"] = round(self.total - c["t"], 3)
         lb = self.p.get("leaderboard")
         if lb:
             for r in lb["rows"]:
@@ -466,7 +479,7 @@ class Renderer:
             for e in fr.get("events", []):
                 e["t"] = self.seg_time(e)
 
-    # ---------- static card
+    # ---------- static overlays
     def avatar_image(self, d):
         for name in ("avatar.png", "avatar.jpg", "avatar.jpeg", "avatar.webp"):
             path = os.path.join(BRAND_DIR, name)
@@ -476,150 +489,149 @@ class Renderer:
                 im = im.crop(((im.width - s) // 2, (im.height - s) // 2, (im.width + s) // 2, (im.height + s) // 2))
                 im = im.resize((d, d), Image.LANCZOS)
                 break
-        else:  # placeholder monogram until the real channel avatar is added
-            im = Image.new("RGBA", (d, d), (0, 0, 0, 255))
-            dr = ImageDraw.Draw(im)
-            for r in range(d // 2, 0, -1):
-                c = int(40 + 150 * (r / (d / 2)))
-                dr.ellipse((d / 2 - r, d / 2 - r, d / 2 + r, d / 2 + r), fill=(c, 20, 25, 255))
-            f = font("Montserrat Black", int(d * 0.38))
-            tw = f.getlength("RS")
-            dr.text(((d - tw) / 2, d * 0.27), "RS", font=f, fill=(255, 255, 255, 255))
-        mask = Image.new("L", (d, d), 0)
-        ImageDraw.Draw(mask).ellipse((0, 0, d - 1, d - 1), fill=255)
-        im.putalpha(mask)
-        return im
+        else:
+            im = Image.new("RGBA", (d, d), (150, 20, 25, 255))
+        ss = 4  # supersampled circle mask for a smooth edge
+        mask = Image.new("L", (d * ss, d * ss), 0)
+        ImageDraw.Draw(mask).ellipse((0, 0, d * ss - 1, d * ss - 1), fill=255)
+        im.putalpha(mask.resize((d, d), Image.LANCZOS))
+        ring = Image.new("RGBA", (d + 6, d + 6), (0, 0, 0, 0))
+        rm = Image.new("L", ((d + 6) * ss, (d + 6) * ss), 0)
+        ImageDraw.Draw(rm).ellipse((0, 0, (d + 6) * ss - 1, (d + 6) * ss - 1), fill=255)
+        ring.putalpha(rm.resize((d + 6, d + 6), Image.LANCZOS))
+        white = Image.new("RGBA", (d + 6, d + 6), (255, 255, 255, 255))
+        white.putalpha(ring.split()[3])
+        white.alpha_composite(im, (3, 3))
+        return white
+
+    def profile_row(self):
+        av = self.avatar_image(58)
+        nf = font("Inter ExtraBold", 36)
+        name = BRAND["name"]
+        tw = int(nf.getlength(name))
+        badge = svg_to_image(open(os.path.join(BRAND_DIR, "verified.svg")).read(), 34, 34)
+        w = av.width + 14 + tw + 8 + badge.width
+        h = max(av.height, 46)
+        img = Image.new("RGBA", (w + 20, h + 20), (0, 0, 0, 0))
+        img.alpha_composite(av, (10, 10 + (h - av.height) // 2))
+        d = ImageDraw.Draw(img)
+        tx = 10 + av.width + 14
+        d.text((tx, 10 + (h - 44) // 2), name, font=nf, fill=(255, 255, 255, 255),
+               stroke_width=2, stroke_fill=(0, 0, 0, 160))
+        img.alpha_composite(badge, (tx + tw + 8, 10 + (h - badge.height) // 2 + 1))
+        a = img.split()[3]
+        sh = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        sh.putalpha(a.point(lambda v: int(v * 0.45)).filter(ImageFilter.GaussianBlur(4)))
+        base = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        base.alpha_composite(sh, (0, 3))
+        base.alpha_composite(img)
+        return base
 
     def prepare_static(self):
         p = self.p
-        M = self.M
-        post = p.get("post", {})
-        text_img = render_text(post.get("text", ""), post.get("font", "Inter Bold"), post.get("size", 64),
-                               color=INK, stroke=0, max_w=self.media_w, shadow=False, upper=False,
-                               align="left", max_lines=post.get("max_lines", 3), balance=False,
-                               line_gap=0.12, emoji_scale=1.0)
-        av = 124
-        flag_row_h = 150 if p.get("flag_row") else 0
-        block = av + 26 + text_img.height + 26 + self.media_h + flag_row_h
-        y0 = int(max(150, p.get("center_y", 930) - block / 2))
-        img = Image.new("RGBA", (W, H), (255, 255, 255, 255))
-        img.alpha_composite(self.avatar_image(av), (M, y0))
-        nf = font("Inter ExtraBold", 52)
-        d = ImageDraw.Draw(img)
-        nx, ny = M + av + 26, y0 + 8
-        d.text((nx, ny), BRAND["name"], font=nf, fill=INK + (255,))
-        badge = svg_to_image(open(os.path.join(BRAND_DIR, "verified.svg")).read(), 52, 52)
-        img.alpha_composite(badge, (int(nx + nf.getlength(BRAND["name"]) + 10), ny + 6))
-        d.text((nx, ny + 64), BRAND["handle"], font=font("Inter", 42), fill=GRAY + (255,))
-        ty = y0 + av + 26
-        img.alpha_composite(text_img, (M - 24, ty - 24 + 6))
-        self.media_y = ty + text_img.height + 26 - 30
-        self.media_x = M
-        # media card border
-        d.rounded_rectangle((M - 2, self.media_y - 2, M + self.media_w + 1, self.media_y + self.media_h + 1),
-                            radius=self.radius + 2, outline=(207, 217, 222, 255), width=2)
-        self.flag_row_y = self.media_y + self.media_h + 92
-        self.static = np.asarray(img.convert("RGB")).astype(np.float32)
-        mask = Image.new("L", (self.media_w, self.media_h), 0)
-        ImageDraw.Draw(mask).rounded_rectangle((0, 0, self.media_w - 1, self.media_h - 1), radius=self.radius, fill=255)
-        self.media_mask = (np.asarray(mask).astype(np.float32) / 255.0)[..., None]
+        t = p.get("title", {})
+        title = render_text(t.get("text", ""), t.get("font", "Montserrat Black"), t.get("size", 80),
+                            stroke=t.get("stroke", 9), max_w=t.get("max_w", 1000), max_lines=t.get("max_lines", 2))
+        prof = self.profile_row()
+        flag_h = 104 if p.get("flag_row") else 0
+        reserve = p.get("caption_reserve", 210)
+        block = prof.height + 6 + title.height + 18 + self.band_h + flag_h + 18 + reserve
+        top = int(p.get("top", 150 + max(0, (1450 - block) / 2)))
+        self.prof = (to_np_rgba(prof), W / 2, top + prof.height / 2)
+        ty = top + prof.height + 6
+        self.title = (to_np_rgba(title), W / 2, ty + title.height / 2)
+        self.band_y = int(ty + title.height + 18)
+        self.flag_row_y = self.band_y + self.band_h + flag_h / 2 + 4
+        self.caption_top = self.band_y + self.band_h + flag_h + 18
 
-    # ---------- overlays
     def prepare_overlays(self):
         self.captions = []
         for c in self.p.get("captions", []):
-            style = c.get("style", "overlay")
-            if style == "big":
-                img = render_text(c["text"], c.get("font", "Montserrat Black"), c.get("size", 124),
-                                  stroke=c.get("stroke", 12), max_w=c.get("max_w", 900), max_lines=2)
-            else:
-                img = render_text(c["text"], c.get("font", "Montserrat Black"), c.get("size", 70),
-                                  stroke=c.get("stroke", 9), max_w=c.get("max_w", 880),
-                                  max_lines=c.get("max_lines", 2), upper=c.get("upper", True))
+            big = c.get("style") == "big"
+            img = render_text(c["text"], c.get("font", "Montserrat Black"), c.get("size", 116 if big else 80),
+                              stroke=c.get("stroke", 12 if big else 10), max_w=c.get("max_w", 1000 if big else 920),
+                              max_lines=c.get("max_lines", 1 if big else 2), upper=c.get("upper", True))
             self.captions.append((c, to_np_rgba(img)))
         lb = self.p.get("leaderboard")
         if lb:
-            self.lb_row_h = 62
+            self.lb_row_h = 64
             self.lb_rows = {}
             for r in lb["rows"]:
                 for hl in (False, True):
                     self.lb_rows[(id(r), hl)] = to_np_rgba(self.leaderboard_row(r, hl))
-            self.lb_rank = [to_np_rgba(render_text(f"{i + 1}.", "Inter ExtraBold", 36, stroke=0, shadow=False,
+            self.lb_rank = [to_np_rgba(render_text(f"{i + 1}.", "Inter ExtraBold", 38, stroke=0, shadow=False,
                                                    upper=False, max_lines=1, balance=False))
                             for i in range(len(lb["rows"]))]
-            self.lb_title = to_np_rgba(render_text(lb.get("title", "LEADERBOARD"), "Inter ExtraBold", 26,
+            self.lb_title = to_np_rgba(render_text(lb.get("title", "LEADERBOARD"), "Inter ExtraBold", 27,
                                                    color=(255, 214, 10), stroke=0, shadow=False, max_lines=1,
                                                    balance=False))
         fr = self.p.get("flag_row")
         if fr:
-            self.flag_imgs = [to_np_rgba(flag_image(c, 78)) for c in fr["flags"]]
-            self.check_img = to_np_rgba(emoji_image("check-mark-button", 40))
-            self.cross_img = to_np_rgba(emoji_image("cross-mark", 40))
+            self.flag_imgs = [to_np_rgba(flag_image(c, 66)) for c in fr["flags"]]
+            self.check_img = to_np_rgba(emoji_image("check-mark-button", 36))
+            self.cross_img = to_np_rgba(emoji_image("cross-mark", 36))
 
     def leaderboard_row(self, r, highlight):
-        fh = 36
+        fh = 38
         fl = flag_image(r["flag"], fh)
-        lf = font("Inter ExtraBold", 36)
+        lf = font("Inter ExtraBold", 38)
         label, value = r.get("label", ""), f'{r["value"]:g} {r.get("unit", "KG")}'
-        w = 300
+        w = 312
         img = Image.new("RGBA", (w, self.lb_row_h), (0, 0, 0, 0))
         img.alpha_composite(fl, (0, (self.lb_row_h - fh) // 2))
         d = ImageDraw.Draw(img)
-        d.text((fl.width + 14, 10), label, font=lf, fill=(255, 255, 255, 255))
+        d.text((fl.width + 14, 9), label, font=lf, fill=(255, 255, 255, 255))
         vc = (255, 214, 10, 255) if highlight else (255, 255, 255, 255)
-        d.text((w - lf.getlength(value), 10), value, font=lf, fill=vc)
+        d.text((w - lf.getlength(value), 9), value, font=lf, fill=vc)
         return img
 
-    def media_pt(self, x, y):
-        return self.media_x + x * self.media_w, self.media_y + y * self.media_h
+    def band_pt(self, x, y):
+        return x * self.band_w, self.band_y + y * self.band_h
 
+    # ---------- per-frame layers
     def draw_leaderboard(self, frame, t):
         lb = self.p["leaderboard"]
-        rows = lb["rows"]
-        shown = [r for r in rows if r["t"] <= t]
+        shown = [r for r in lb["rows"] if r["t"] <= t]
         if not shown:
             return
-        k = len(shown) - 1
         t_evt = shown[-1]["t"]
         after = sorted(shown, key=lambda r: -r["value"])
         before = sorted(shown[:-1], key=lambda r: -r["value"])
-        prog = ease_in_out((t - t_evt - 0.35) / 0.45)  # entry appears, then climbs to its rank
-        x0, y0 = self.media_pt(*lb.get("pos", (0.025, 0.035)))
-        rh = self.lb_row_h
-        pad = 18
-        n_after = len(after)
-        n_before = max(1, len(before))
-        n_rows = n_before + (n_after - n_before) * min(1.0, ease_out((t - t_evt) / 0.25)) if before else n_after
-        pw, ph = 420, int(pad * 2 + 34 + rh * n_rows)
-        panel = frame[int(y0):int(y0 + ph), int(x0):int(x0 + pw)]
-        if panel.size:
-            ov = np.zeros((ph, pw), np.uint8)
-            cv2.rectangle(ov, (0, 0), (pw - 1, ph - 1), 255, -1)
-            m = cv2.GaussianBlur(ov.astype(np.float32) / 255.0, (0, 0), 1.2)[: panel.shape[0], : panel.shape[1], None]
-            panel[:] = panel * (1 - 0.62 * m)
+        prog = ease_in_out((t - t_evt - 0.4) / 0.35)  # new entry appears at the bottom, then climbs to its rank
+        x0, y0 = self.band_pt(*lb.get("pos", (0.02, 0.03)))
+        rh, pad = self.lb_row_h, 18
+        n_rows = len(before) + (len(after) - len(before)) * min(1.0, ease_out((t - t_evt) / 0.25)) if before else len(after)
+        pw, ph = 440, int(pad * 2 + 34 + rh * n_rows)
+        y1, x1 = min(H, int(y0 + ph)), min(W, int(x0 + pw))
+        frame[int(y0):y1, int(x0):x1] *= 0.38
         rgb, a = self.lb_title
         blit(frame, rgb, a, x0 + pad + rgb.shape[1] / 2, y0 + pad + 12)
         base_y = y0 + pad + 34
-        for i in range(n_after):
+        for i in range(len(after)):
             rgb, a = self.lb_rank[i]
             blit(frame, rgb, a, x0 + pad + 22, base_y + i * rh + rh / 2)
         new = shown[-1]
-        for r in after:
+        new_slot = None
+        for r in after:  # existing rows first; the new row is drawn last, on its own card
             ra = after.index(r)
             if r is new:
-                if before:
-                    rb = len(before)  # enters at the bottom, then climbs
-                    slot = rb + (ra - rb) * prog
-                else:
-                    slot = ra
-                op = min(1.0, (t - t_evt) / 0.2)
-            else:
-                rb = before.index(r)
-                slot = rb + (ra - rb) * prog
-                op = 1.0
-            hl = (r is new) and (t - t_evt < 2.0)
-            rgb, a = self.lb_rows[(id(r), hl)]
-            blit(frame, rgb, a, x0 + pad + 58 + rgb.shape[1] / 2, base_y + slot * rh + rh / 2, opacity=op)
+                new_slot = len(before) + (ra - len(before)) * prog if before else ra
+                continue
+            rb = before.index(r)
+            slot = rb + (ra - rb) * prog
+            rgb, a = self.lb_rows[(id(r), False)]
+            blit(frame, rgb, a, x0 + pad + 58 + rgb.shape[1] / 2, base_y + slot * rh + rh / 2)
+        if new_slot is not None:
+            op = min(1.0, (t - t_evt) / 0.2)
+            cy = base_y + new_slot * rh + rh / 2
+            moving = 0.0 < prog < 1.0
+            if moving:  # opaque card so the climbing row slides cleanly over the others
+                cx0, cx1 = int(x0 + pad + 50), int(x0 + pw - 10)
+                cy0, cy1 = int(cy - rh / 2 + 3), int(cy + rh / 2 - 3)
+                card = frame[cy0:cy1, cx0:cx1]
+                card[:] = card * 0.15 + np.array([28, 28, 32], np.float32) * 0.85
+            rgb, a = self.lb_rows[(id(new), t - t_evt < 2.0)]
+            blit(frame, rgb, a, x0 + pad + 58 + rgb.shape[1] / 2, cy, opacity=op)
 
     def draw_flag_row(self, frame, t):
         fr = self.p["flag_row"]
@@ -632,24 +644,20 @@ class Renderer:
                 else:
                     marks[e["idx"]] = (e["type"], e["t"])
         fw = self.flag_imgs[0][0].shape[1]
-        gap = 34
-        total = n * fw + (n - 1) * gap
-        x = W / 2 - total / 2 + fw / 2
+        gap = 38
+        x = W / 2 - (n * fw + (n - 1) * gap) / 2 + fw / 2
         y = self.flag_row_y
         for i in range(n):
             rgb, a = self.flag_imgs[i]
-            is_act = (i == active)
-            s = 1.22 if is_act else 1.0
-            op = 1.0 if is_act or i in marks else 0.4
-            blit(frame, rgb, a, x, y, scale=s, opacity=op)
+            is_act = i == active
+            blit(frame, rgb, a, x, y, scale=1.2 if is_act else 1.0, opacity=1.0 if (is_act or i in marks) else 0.45)
             if is_act:
-                cv2.rectangle(frame, (int(x - fw * 0.5), int(y + 62)), (int(x + fw * 0.5), int(y + 69)),
-                              (29, 155, 240), -1)
+                cv2.rectangle(frame, (int(x - fw * 0.5), int(y + 48)), (int(x + fw * 0.5), int(y + 54)),
+                              (255, 214, 10), -1)
             if i in marks:
                 kind, tm = marks[i]
                 im = self.check_img if kind == "check" else self.cross_img
-                sc = 1.0 + 0.4 * (1 - ease_out((t - tm) / 0.18))
-                blit(frame, im[0], im[1], x + fw * 0.42, y + 30, scale=sc)
+                blit(frame, im[0], im[1], x + fw * 0.46, y + 26, scale=1.0 + 0.35 * (1 - ease_out((t - tm) / 0.18)))
             x += fw + gap
 
     def draw_stickers(self, frame, t):
@@ -657,9 +665,8 @@ class Renderer:
             t0, d = s["t"], s.get("d", 1.2)
             if not (t0 <= t < t0 + d):
                 continue
-            k = t - t0
-            grow = ease_out(k / 0.15)
-            x, y = self.media_pt(s.get("x", 0.5), s.get("y", 0.5))
+            grow = ease_out((t - t0) / 0.15)
+            x, y = self.band_pt(s.get("x", 0.5), s.get("y", 0.5))
             col = hex_rgb(s.get("color", "#FF1E1E"))
             if s["type"] == "ring":
                 rx, ry = s.get("rx", 110) * grow, s.get("ry", s.get("rx", 110) * 0.8) * grow
@@ -669,18 +676,19 @@ class Renderer:
                 ang = math.radians(s.get("angle", 225))
                 length = s.get("len", 170) * grow
                 gap = s.get("gap", 24)
-                x1, y1 = x + math.cos(ang) * gap, y - math.sin(ang) * gap
-                x0, y0 = x1 + math.cos(ang) * length, y1 - math.sin(ang) * length
-                cv2.arrowedLine(frame, (int(x0), int(y0)), (int(x1), int(y1)), col, s.get("th", 16), cv2.LINE_AA,
+                xa, ya = x + math.cos(ang) * gap, y - math.sin(ang) * gap
+                xb, yb = xa + math.cos(ang) * length, ya - math.sin(ang) * length
+                cv2.arrowedLine(frame, (int(xb), int(yb)), (int(xa), int(ya)), col, s.get("th", 16), cv2.LINE_AA,
                                 tipLength=0.38)
 
     def caption_center(self, c, h):
-        pos = c.get("pos", "bottom")
-        mx, my, mw, mh = self.media_x, self.media_y, self.media_w, self.media_h
+        pos = c.get("pos", "below")
         if isinstance(pos, (list, tuple)):
-            return self.media_pt(*pos)
-        return {"bottom": (W / 2, my + mh - 30 - h / 2), "center": (W / 2, my + mh / 2),
-                "top": (W / 2, my + 30 + h / 2), "below": (W / 2, my + mh + 30 + h / 2)}[pos]
+            return self.band_pt(*pos)
+        return {"below": (W / 2, self.caption_top + h / 2),
+                "center": (W / 2, self.band_y + self.band_h / 2),
+                "video_bottom": (W / 2, self.band_y + self.band_h - 26 - h / 2),
+                "video_top": (W / 2, self.band_y + 26 + h / 2)}[pos]
 
     def draw_captions(self, frame, t):
         for c, (rgb, a) in self.captions:
@@ -689,17 +697,62 @@ class Renderer:
                 continue
             k = t - t0
             anim = c.get("anim", "pop")
-            s, op = 1.0, 1.0
-            if anim == "pop":
-                s = 1.12 - 0.12 * ease_out(k / 0.1)
-                op = min(1.0, k / 0.05)
-            elif anim == "slam":
-                s = 1.45 - 0.45 * ease_out(k / 0.12)
-                op = min(1.0, k / 0.04)
+            if anim == "slam":
+                s, op = 1.35 - 0.35 * ease_out(k / 0.12), min(1.0, k / 0.04)
+            elif anim == "none":
+                s, op = 1.0, 1.0
+            else:  # pop: brief clean scale-in
+                s, op = 1.1 - 0.1 * ease_out(k / 0.1), min(1.0, k / 0.05)
             cx, cy = self.caption_center(c, rgb.shape[0])
             blit(frame, rgb, a, cx, cy, scale=s, opacity=op)
 
     # ---------- video
+    def band_image(self, src, seg, lt, s, levels):
+        """The clip area for one frame: a single crop, or side-by-side panels ("split")."""
+        bw, bh = self.band_w, self.band_h
+        z0, z1 = seg.get("zoom", [1.0, 1.0])
+        prog = ease_in_out(lt / max(0.01, s["play"]))
+        zoom = z0 + (z1 - z0) * prog
+        for fx in seg.get("fx", []):
+            at, dur = fx.get("at", 0.0), fx.get("dur", 0.4)
+            if fx["type"] == "punch" and at <= lt < at + dur:
+                x = (lt - at) / dur
+                e = ease_out(x / 0.2) if x < 0.2 else (1.0 if x < 0.6 else 1 - ease_in_out((x - 0.6) / 0.4))
+                zoom += fx.get("amount", 0.12) * e
+        fz = seg.get("freeze") or {}
+        if lt >= s["play"] and fz.get("zoom"):
+            zoom += fz["zoom"] * ease_out((lt - s["play"]) / 0.35)
+        sh, sw = src.shape[:2]
+        panels = seg.get("split")
+        if panels:
+            gap = 8
+            pw = (bw - gap * (len(panels) - 1)) // len(panels)
+            out = np.zeros((bh, bw, 3), np.float32)
+            x = 0
+            for pnl in panels:
+                pz = pnl.get("zoom", 1.0) * zoom
+                rect = crop_rect(sw, sh, pw / bh, max(pz, 1.0), *pnl.get("focus", [0.5, 0.5]))
+                out[:, x:x + pw] = warp_crop(src, rect, pw, bh)
+                x += pw + gap
+            vid = out
+        else:
+            fx0, fy0 = seg.get("focus", [0.5, 0.5])
+            if "focus_to" in seg:
+                fx0 += (seg["focus_to"][0] - fx0) * prog
+                fy0 += (seg["focus_to"][1] - fy0) * prog
+            vid = warp_crop(src, crop_rect(sw, sh, bw / bh, max(zoom, 1.0), fx0, fy0), bw, bh).astype(np.float32)
+        vid = grade(levels(vid), seg.get("sat", 1.1), seg.get("contrast", 1.05))
+        if (lt >= s["play"] and fz.get("bw")) or seg.get("bw"):
+            g = vid @ np.array([0.299, 0.587, 0.114], np.float32)
+            vid = np.repeat(g[..., None], 3, axis=2)
+        vid = sharpen(np.clip(vid, 0, 255).astype(np.uint8), seg.get("sharpen", 0.5)).astype(np.float32)
+        if panels:
+            x = pw
+            for _ in panels[1:]:
+                vid[:, x:x + gap] = 255.0  # clean white divider between panels
+                x += pw + gap
+        return vid
+
     def render_video(self, out_video):
         n_total = int(round(self.total * FPS))
         levels = [auto_levels(s["frames"], s["seg"].get("levels", 1.0)) if s["seg"].get("auto_levels", True)
@@ -709,48 +762,26 @@ class Renderer:
                "-preset", "veryfast" if self.preview else "slow", "-crf", "24" if self.preview else "17",
                "-pix_fmt", "yuv420p", "-profile:v", "high", "-movflags", "+faststart", out_video]
         proc = subprocess.Popen(enc, stdin=subprocess.PIPE)
-        mw, mh = self.media_w, self.media_h
         for i in range(n_total):
             t = i / FPS
             sgi = next((j for j, s in enumerate(self.timeline) if s["t0"] <= t < s["t0"] + s["dur"]),
                        len(self.timeline) - 1)
             s = self.timeline[sgi]
-            seg = s["seg"]
-            lt = t - s["t0"]
-            frames = s["frames"]
-            src = frames[min(int(lt * FPS), len(frames) - 1)]
-            frozen = lt >= s["play"]
-            z0, z1 = seg.get("zoom", [1.0, 1.0])
-            prog = ease_in_out(lt / max(0.01, s["play"]))
-            zoom = z0 + (z1 - z0) * prog
-            for fx in seg.get("fx", []):
-                if fx["type"] == "punch" and fx.get("at", 0) <= lt < fx.get("at", 0) + fx.get("dur", 0.4):
-                    x = (lt - fx.get("at", 0)) / fx.get("dur", 0.4)
-                    e = ease_out(x / 0.2) if x < 0.2 else (1.0 if x < 0.6 else 1 - ease_in_out((x - 0.6) / 0.4))
-                    zoom += fx.get("amount", 0.15) * e
-            fz = seg.get("freeze") or {}
-            if frozen and fz.get("zoom"):
-                zoom += fz["zoom"] * ease_out((lt - s["play"]) / 0.35)
-            fx0, fy0 = seg.get("focus", [0.5, 0.5])
-            if "focus_to" in seg:
-                fx0 += (seg["focus_to"][0] - fx0) * prog
-                fy0 += (seg["focus_to"][1] - fy0) * prog
-            sh, sw = src.shape[:2]
-            rect = crop_rect(sw, sh, mw / mh, max(zoom, 1.0), fx0, fy0)
-            vid = warp_crop(src, rect, mw, mh).astype(np.float32)
-            vid = grade(levels[sgi](vid), seg.get("sat", 1.1), seg.get("contrast", 1.05))
-            if (frozen and fz.get("bw")) or seg.get("bw"):
-                g = vid @ np.array([0.299, 0.587, 0.114], np.float32)
-                vid = np.repeat(g[..., None], 3, axis=2)
-            vid = sharpen(np.clip(vid, 0, 255).astype(np.uint8), seg.get("sharpen", 0.5)).astype(np.float32)
-            frame = self.static.copy()
-            region = frame[self.media_y:self.media_y + mh, self.media_x:self.media_x + mw]
-            region[:] = region * (1 - self.media_mask) + vid * self.media_mask
+            seg, lt = s["seg"], t - s["t0"]
+            src = s["frames"][min(int(lt * FPS), len(s["frames"]) - 1)]
+            frame = blurred_bg(src)
+            if seg.get("bw") or (lt >= s["play"] and (seg.get("freeze") or {}).get("bw")):
+                g = frame @ np.array([0.299, 0.587, 0.114], np.float32)
+                frame = np.repeat(g[..., None], 3, axis=2)
+            vid = self.band_image(src, seg, lt, s, levels[sgi])
+            frame[self.band_y:self.band_y + self.band_h, :] = vid
             self.draw_stickers(frame, t)
             if self.p.get("leaderboard"):
                 self.draw_leaderboard(frame, t)
             if self.p.get("flag_row"):
                 self.draw_flag_row(frame, t)
+            for (rgb, a), cx, cy in (self.prof, self.title):
+                blit(frame, rgb, a, cx, cy)
             self.draw_captions(frame, t)
             proc.stdin.write(np.clip(frame, 0, 255).astype(np.uint8).tobytes())
             if i % 90 == 0:
@@ -760,7 +791,7 @@ class Renderer:
         if proc.returncode:
             raise RuntimeError("encoder failed")
 
-    # ---------- audio: real SFX only (music is added on YouTube at upload)
+    # ---------- audio: sound effects only (music is added at upload)
     def render_audio(self, out_wav):
         n = int(round(self.total * SR)) + SR // 10
         mix = np.zeros((n, 2), np.float32)
@@ -769,10 +800,12 @@ class Renderer:
             if x.ndim == 1:
                 x = np.stack([x, x], 1)
             if "max" in cue:
-                x = x[: int(cue["max"] * SR)]
+                x = x[: int(cue["max"] * SR)].copy()
                 f = min(len(x), int(0.05 * SR))
                 x[-f:] *= np.linspace(1, 0, f)[:, None]
             st = int(cue["t"] * SR)
+            if st < 0:
+                x, st = x[-st:], 0
             if st >= n:
                 continue
             ln = min(len(x), n - st)

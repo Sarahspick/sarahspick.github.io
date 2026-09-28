@@ -1,22 +1,33 @@
 {
  "id": "01_robot_arm_day",
- "yt_title": "This guy tried to out-curl a NASA robot 🤖💪 #shorts",
- "post": {
-  "text": "This guy tried to out-curl a NASA robot :robot:"
+ "yt_title": "Human vs NASA robot: who has better form? 🤖 #shorts",
+ "title": {
+  "text": "^HUMAN^ VS ~NASA ROBOT~ :robot:",
+  "size": 84
  },
- "media_aspect": 1.7778,
+ "media_aspect": 1.3333,
  "segments": [
   {
    "clip": "5172465062",
-   "in": 35.6,
-   "out": 38.4,
+   "in": 35.8,
+   "out": 38.6,
    "zoom": [
     1.0,
-    1.04
+    1.03
    ],
-   "focus": [
-    0.5,
-    0.5
+   "split": [
+    {
+     "focus": [
+      0.22,
+      0.5
+     ]
+    },
+    {
+     "focus": [
+      0.83,
+      0.5
+     ]
+    }
    ]
   },
   {
@@ -24,12 +35,12 @@
    "in": 24.4,
    "out": 26.2,
    "zoom": [
-    1.45,
-    1.5
+    1.3,
+    1.36
    ],
    "focus": [
     0.3,
-    0.42
+    0.45
    ]
   },
   {
@@ -37,11 +48,11 @@
    "in": 36.8,
    "out": 38.8,
    "zoom": [
-    1.45,
-    1.5
+    1.3,
+    1.36
    ],
    "focus": [
-    0.74,
+    0.78,
     0.45
    ]
   },
@@ -52,151 +63,150 @@
    "speed": 0.6,
    "zoom": [
     1.0,
-    1.06
+    1.05
    ],
    "focus": [
-    0.5,
-    0.45
+    0.625,
+    0.5
    ]
   },
   {
    "clip": "5172465062",
-   "in": 53.0,
+   "in": 53.4,
    "out": 54.4,
    "zoom": [
     1.0,
     1.0
    ],
-   "focus": [
-    0.5,
-    0.45
+   "split": [
+    {
+     "focus": [
+      0.28,
+      0.5
+     ]
+    },
+    {
+     "focus": [
+      0.83,
+      0.5
+     ]
+    }
    ],
    "freeze": {
-    "dur": 1.5,
+    "dur": 1.6,
     "bw": true,
-    "zoom": 0.08
+    "zoom": 0.04
    }
   },
   {
    "clip": "5172465062",
-   "in": 1.0,
-   "out": 3.2,
+   "in": 2.2,
+   "out": 3.4,
    "zoom": [
-    1.55,
-    1.6
+    1.0,
+    1.06
    ],
    "focus": [
-    0.26,
-    0.7
+    0.375,
+    0.8
    ],
+   "bw": true,
    "freeze": {
-    "dur": 1.0,
-    "bw": true,
-    "zoom": 0.0
-   },
-   "bw": true
+    "dur": 1.5,
+    "bw": true
+   }
   }
  ],
  "captions": [
   {
    "seg": 0,
-   "at": 0.05,
-   "text": "^HUMAN^ :vs-button: ~ROBOT~",
-   "style": "big",
-   "anim": "slam",
-   "pos": "top",
-   "d": 2.4,
-   "size": 104,
+   "at": 0.1,
+   "text": "Who has better *form?*",
    "max_lines": 1
   },
   {
    "seg": 1,
-   "text": "Robot: perfect form :robot:"
+   "text": "The robot: every rep *identical*"
   },
   {
    "seg": 2,
-   "text": "Human: already laughing :face-with-tears-of-joy:"
+   "text": "The human: trying to *keep up*"
   },
   {
    "seg": 3,
-   "text": "Now he's copying the robot :face-with-open-mouth:"
+   "text": "Now he's copying *its form*"
   },
   {
    "seg": 4,
-   "at": 1.4,
-   "text": "But it will NEVER do leg day..."
+   "text": "But the robot will never do *leg day*..."
   },
   {
    "seg": 5,
    "at": 0.05,
-   "text": "It has ~NO LEGS~ :skull:",
+   "text": "It has ~no legs~ :skull:",
    "style": "big",
-   "anim": "slam",
-   "pos": "top"
+   "anim": "slam"
   }
  ],
  "stickers": [
   {
    "seg": 3,
-   "at": 0.4,
-   "d": 3.2,
+   "at": 0.6,
+   "d": 3.0,
    "type": "ring",
-   "x": 0.7,
-   "y": 0.36,
-   "rx": 150,
-   "ry": 105
+   "x": 0.86,
+   "y": 0.26,
+   "rx": 130,
+   "ry": 100
   },
   {
    "seg": 5,
-   "at": 0.35,
-   "d": 2.8,
+   "at": 0.3,
    "type": "ring",
-   "x": 0.5,
-   "y": 0.72,
-   "rx": 230,
-   "ry": 120
+   "x": 0.565,
+   "y": 0.88,
+   "rx": 150,
+   "ry": 80
   }
  ],
  "sfx": [
   {
    "seg": 0,
-   "name": "boxing_bell",
-   "db": -4
-  },
-  {
-   "seg": 1,
-   "name": "click",
-   "db": -8
-  },
-  {
-   "seg": 2,
-   "at": 0.3,
-   "name": "bruh",
+   "name": "impact_deep",
    "db": -5
   },
   {
+   "seg": 1,
+   "name": "sub_hit",
+   "db": -9
+  },
+  {
+   "seg": 2,
+   "name": "sub_hit",
+   "db": -9
+  },
+  {
    "seg": 3,
-   "at": 0.5,
-   "name": "oh_my_god",
-   "db": -3
+   "at": 0.6,
+   "name": "punch",
+   "db": -11
   },
   {
    "seg": 4,
-   "at": 1.4,
-   "name": "dun_dun",
-   "db": -4
+   "name": "heartbeat",
+   "db": -7
+  },
+  {
+   "seg": 5,
+   "at": -1.55,
+   "name": "riser_soft",
+   "db": -9
   },
   {
    "seg": 5,
    "at": 0.05,
    "name": "vine_boom",
-   "db": -2
-  },
-  {
-   "seg": 5,
-   "at": 1.6,
-   "name": "skull_trumpet",
-   "db": -8
+   "db": -3
   }
  ]
 }

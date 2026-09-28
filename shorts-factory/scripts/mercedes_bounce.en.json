@@ -181,7 +181,7 @@
   "clips": {
     "c_spray": {
       "src": "bili:BV1m4411P7Fs",
-      "start": 4.9,
+      "start": 5.2,
       "speed": 0.75,
       "focus": [
         0.62,
@@ -199,7 +199,7 @@
     },
     "c_stuck_front": {
       "src": "bili:BV1m4411P7Fs",
-      "start": 173.6,
+      "start": 173.7,
       "focus": [
         0.47,
         0.5
@@ -207,7 +207,7 @@
     },
     "c_screen": {
       "src": "bili:BV1m4411P7Fs",
-      "start": 126.2,
+      "start": 126.3,
       "focus": [
         0.33,
         0.5
@@ -231,7 +231,7 @@
     },
     "c_rock_side": {
       "src": "bili:BV1m4411P7Fs",
-      "start": 185.6,
+      "start": 185.7,
       "aspect": "4:3",
       "focus": [
         0.55,
@@ -249,7 +249,7 @@
     },
     "c_display": {
       "src": "bili:BV1m4411P7Fs",
-      "start": 93.0,
+      "start": 93.2,
       "focus": [
         0.55,
         0.5

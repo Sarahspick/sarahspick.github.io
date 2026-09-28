@@ -259,13 +259,20 @@ def cursor_sprite(size=96):
     return im, (black.width * 0.29, black.height * 0.12)
 
 
-def stamp_sprite(text="CLASSIFIED", color=(225, 30, 45)):
-    f = font("Black", 92)
+def stamp_sprite(text="CLASSIFIED", color=(225, 30, 45), max_w=620):
+    """Rubber-stamp sprite; long words shrink so the stamp never exceeds max_w before rotation."""
+    size = 92
+    tw = font("Black", size).getlength(text)
+    if tw + 90 > max_w:
+        size = max(48, int(size * (max_w - 90) / tw))
+    k = size / 92
+    f = font("Black", size)
     tw = int(f.getlength(text))
-    s = Image.new("RGBA", (tw + 90, 170), (0, 0, 0, 0))
+    pad, h = int(45 * k), int(170 * k)
+    s = Image.new("RGBA", (tw + 2 * pad, h), (0, 0, 0, 0))
     d = ImageDraw.Draw(s)
-    d.rounded_rectangle((6, 6, s.width - 7, s.height - 7), 18, outline=tuple(color) + (255,), width=12)
-    d.text((45, 30), text, font=f, fill=tuple(color) + (255,))
+    d.rounded_rectangle((6, 6, s.width - 7, s.height - 7), int(18 * k), outline=tuple(color) + (255,), width=max(6, int(12 * k)))
+    d.text((pad, int(30 * k)), text, font=f, fill=tuple(color) + (255,))
     return s.rotate(-12, resample=Image.BICUBIC, expand=True)
 
 

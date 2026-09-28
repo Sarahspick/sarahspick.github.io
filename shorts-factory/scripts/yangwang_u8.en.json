@@ -153,7 +153,7 @@
   "clips": {
     "y_splash": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 22.9,
+      "start": 23.4,
       "focus": [
         0.35,
         0.5
@@ -162,7 +162,7 @@
     },
     "y_float": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 37.0,
+      "start": 37.3,
       "focus": [
         0.45,
         0.5
@@ -171,7 +171,7 @@
     },
     "y_ramp": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 7.0,
+      "start": 8.65,
       "focus": [
         0.5,
         0.5
@@ -180,7 +180,7 @@
     },
     "y_dash": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 28.6,
+      "start": 28.3,
       "focus": [
         0.5,
         0.5
@@ -198,7 +198,7 @@
     },
     "y_side": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 46.0,
+      "start": 45.7,
       "focus": [
         0.4,
         0.5

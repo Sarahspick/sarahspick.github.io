@@ -2,57 +2,330 @@
   "id": "kfc_recipe",
   "lang": "en",
   "title": "KFC's secret recipe is locked in *concrete* 🍗",
-  "pronounce": {"1940": "nineteen forty", "2016": "twenty sixteen", "MSG": "M S G"},
+  "pronounce": {
+    "1940": "nineteen forty",
+    "2016": "twenty sixteen",
+    "MSG": "M S G"
+  },
   "aspect": "1:1",
   "gap": 0.05,
   "hook": {
-    "lines": ["KFC hides its recipe in a safe", "inside *two feet of concrete*."],
+    "lines": [
+      "KFC hides its recipe in a safe",
+      "inside *two feet of concrete*."
+    ],
     "clip": "k_colonel_store",
-    "annotate": [{"type": "arrow", "at": 0, "x": 0.5, "y": 0.35, "angle": 30}],
-    "sfx": [{"id": "boom", "at": "word:concrete"}]
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.5,
+        "y": 0.35,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:concrete"
+      }
+    ]
   },
   "sentences": [
-    {"lines": ["It's the Colonel's *11 herbs and spices*,", "handwritten back in 1940."], "clips": ["k_spices", "k_colonel_kitchen"]},
-    {"lines": ["Cameras and *motion sensors*", "guard it around the clock."], "clip": "k_tin"},
-    {"lines": ["Even the suppliers don't know it."], "clip": "k_bread", "punch": true},
-    {"lines": ["One company mixes *part* of the blend,", "another mixes the rest…"], "clips": ["k_bread2", "k_rack"]},
-    {"lines": ["…so *nobody* outside KFC", "has the whole thing."], "clip": "k_fryer"},
-    {"lines": ["But here's the *twist*…"], "clip": "k_colonel_bw", "pause_after": 0.3,
-     "sfx": [{"id": "dun_dun", "at": "start", "gain": -5, "dur": 2.0}]},
-    {"lines": ["In 2016, the Colonel's nephew", "showed a reporter an old *family scrapbook*."], "clip": "k_nephew"},
-    {"lines": ["Inside: a handwritten list", "of *11 herbs and spices*."], "clip": "k_list", "punch": true,
-     "sfx": [{"id": "boom", "at": "word:herbs"}]},
-    {"lines": ["The Chicago Tribune fried it up…", "it only matched after adding *MSG*."], "clips": ["k_chicken", "k_chicken2"],
-     "sfx": [{"id": "ooh", "at": "end", "gain": -4}], "pause_after": 0.4},
-    {"lines": ["KFC says that list is *not* the real one."], "clip": "k_actor"},
-    {"lines": ["Would *you* try it at home? 🍗"], "clip": "k_sign"}
+    {
+      "lines": [
+        "It's the Colonel's *11 herbs and spices*,",
+        "handwritten back in 1940."
+      ],
+      "clips": [
+        "k_spices",
+        "k_colonel_kitchen"
+      ]
+    },
+    {
+      "lines": [
+        "Cameras and *motion sensors*",
+        "guard it around the clock."
+      ],
+      "clips": [
+        "k_tin",
+        "k_colonel_portrait"
+      ]
+    },
+    {
+      "lines": [
+        "Even the suppliers don't know it."
+      ],
+      "clip": "k_bread",
+      "punch": true
+    },
+    {
+      "lines": [
+        "One company mixes *part* of the blend,",
+        "another mixes the rest…"
+      ],
+      "clips": [
+        "k_bread2",
+        "k_rack"
+      ]
+    },
+    {
+      "lines": [
+        "…so *nobody* outside KFC",
+        "has the whole thing."
+      ],
+      "clip": "k_fryer"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "k_colonel_bw",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "In 2016, the Colonel's nephew",
+        "showed a reporter an old *family scrapbook*."
+      ],
+      "clip": "k_nephew"
+    },
+    {
+      "lines": [
+        "Inside: a handwritten list",
+        "of *11 herbs and spices*."
+      ],
+      "clip": "k_list",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:herbs"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The Chicago Tribune fried it up…",
+        "it only matched after adding *MSG*."
+      ],
+      "clips": [
+        "k_chicken",
+        "k_chicken2"
+      ],
+      "sfx": [
+        {
+          "id": "ooh",
+          "at": "end",
+          "gain": -4
+        }
+      ],
+      "pause_after": 0.4
+    },
+    {
+      "lines": [
+        "KFC says that list",
+        "is *not* the real one."
+      ],
+      "clips": [
+        "k_actor",
+        "k_actor2"
+      ]
+    },
+    {
+      "lines": [
+        "Would *you* try it at home? 🍗"
+      ],
+      "clip": "k_sign"
+    }
   ],
   "clips": {
-    "k_colonel_store":   {"src": "bili:BV1Ar4y1d7NH", "start": 495.0, "src_zoom": 1.2, "focus": [0.45, 0.45]},
-    "k_spices":          {"src": "bili:BV1Ar4y1d7NH", "start": 161.0, "src_zoom": 1.2, "focus": [0.45, 0.45]},
-    "k_colonel_kitchen": {"src": "bili:BV1Ar4y1d7NH", "start": 188.5, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_tin":             {"src": "bili:BV1Ar4y1d7NH", "start": 158.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_bread":           {"src": "bili:BV1xW411f7zP", "start": 4.5, "focus": [0.5, 0.5]},
-    "k_bread2":          {"src": "bili:BV1xW411f7zP", "start": 21.0, "focus": [0.5, 0.5]},
-    "k_rack":            {"src": "bili:BV1xW411f7zP", "start": 50.6, "focus": [0.5, 0.5]},
-    "k_fryer":           {"src": "bili:BV1xW411f7zP", "start": 97.0, "focus": [0.5, 0.5]},
-    "k_colonel_bw":      {"src": "bili:BV1Ar4y1d7NH", "start": 264.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_nephew":          {"src": "bili:BV1Ar4y1d7NH", "start": 143.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_list":            {"src": "bili:BV1Ar4y1d7NH", "start": 152.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_chicken":         {"src": "bili:BV1Ar4y1d7NH", "start": 131.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_chicken2":        {"src": "bili:BV1Ar4y1d7NH", "start": 128.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_actor":           {"src": "bili:BV1Ar4y1d7NH", "start": 167.0, "src_zoom": 1.2, "focus": [0.5, 0.45]},
-    "k_sign":            {"src": "bili:BV1Ar4y1d7NH", "start": 282.0, "src_zoom": 1.2, "focus": [0.5, 0.45]}
+    "k_colonel_store": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 495.4,
+      "src_zoom": 1.2,
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    "k_spices": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 161.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.45,
+        0.45
+      ]
+    },
+    "k_colonel_kitchen": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 188.5,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_tin": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 158.75,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_bread": {
+      "src": "bili:BV1xW411f7zP",
+      "start": 4.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "k_bread2": {
+      "src": "bili:BV1xW411f7zP",
+      "start": 21.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "k_rack": {
+      "src": "bili:BV1xW411f7zP",
+      "start": 50.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "k_fryer": {
+      "src": "bili:BV1xW411f7zP",
+      "start": 98.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "k_colonel_bw": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 264.8,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_nephew": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 143.6,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_list": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 152.6,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_chicken": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 131.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_chicken2": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 128.3,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_actor": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 167.25,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_sign": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 282.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ],
+      "aspect": "16:9"
+    },
+    "k_colonel_portrait": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 193.2,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    },
+    "k_actor2": {
+      "src": "bili:BV1Ar4y1d7NH",
+      "start": 168.8,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.45
+      ]
+    }
   },
   "upload": {
     "title": "KFC's Secret Recipe Is Locked in Concrete 🍗 #shorts",
     "description": "KFC says Colonel Sanders' handwritten 1940 Original Recipe of 11 herbs and spices is kept in a digital safe encased in two feet of concrete and monitored around the clock by video and motion detection. The company also uses separate suppliers for the blend so no single supplier knows the whole recipe. The twist: in 2016 the Colonel's nephew, Joe Ledington, showed a Chicago Tribune reporter a family scrapbook with a handwritten list of 11 herbs and spices. The Tribune's test kitchen found its fried chicken only became virtually indistinguishable from KFC after adding MSG. KFC says the list is not the real recipe.",
-    "hashtags": ["#shorts", "#kfc", "#secretrecipe", "#food", "#business"]
+    "hashtags": [
+      "#shorts",
+      "#kfc",
+      "#secretrecipe",
+      "#food",
+      "#business"
+    ]
   },
   "sources": [
-    {"name": "Washington Times: Colonel Sanders' nephew discloses KFC's secret '11 herbs and spices'", "url": "https://www.washingtontimes.com/news/2016/aug/20/colonel-sanders-nephew-discloses-kfcs-secret-11-he/"},
-    {"name": "CBC: Has Colonel Sanders' secret recipe been revealed? No, says company", "url": "https://amp.cbc.ca/lite/story/1.3737381"},
-    {"name": "Post Guam (Chicago Tribune): KFC recipe challenge, Tribune kitchen puts the 11 herbs and spices to the test", "url": "https://www.postguam.com/entertainment/food/kfc-recipe-challenge-tribune-kitchen-puts-the-11-herbs-and-spices-to-the-test/article_552d221c-691b-11e6-8893-b39572cc5e68.html"}
+    {
+      "name": "Washington Times: Colonel Sanders' nephew discloses KFC's secret '11 herbs and spices'",
+      "url": "https://www.washingtontimes.com/news/2016/aug/20/colonel-sanders-nephew-discloses-kfcs-secret-11-he/"
+    },
+    {
+      "name": "CBC: Has Colonel Sanders' secret recipe been revealed? No, says company",
+      "url": "https://amp.cbc.ca/lite/story/1.3737381"
+    },
+    {
+      "name": "Post Guam (Chicago Tribune): KFC recipe challenge, Tribune kitchen puts the 11 herbs and spices to the test",
+      "url": "https://www.postguam.com/entertainment/food/kfc-recipe-challenge-tribune-kitchen-puts-the-11-herbs-and-spices-to-the-test/article_552d221c-691b-11e6-8893-b39572cc5e68.html"
+    }
   ],
-  "footage_credits": ["KFC history compilation with archival Colonel Sanders footage (食事史馆)", "KFC kitchen footage (不霸蛮咯)"]
+  "footage_credits": [
+    "KFC history compilation with archival Colonel Sanders footage (食事史馆)",
+    "KFC kitchen footage (不霸蛮咯)"
+  ]
 }

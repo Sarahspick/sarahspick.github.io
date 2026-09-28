@@ -22,7 +22,9 @@ rows = (n + cols - 1) // cols
 out = f"work/sheets/{src.replace(':', '_')}_{int(start)}.png"
 os.makedirs("work/sheets", exist_ok=True)
 font = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
-vf = (f"fps=1/{every},scale={tw}:{th},drawtext=fontfile={font}:text='%{{eif\\:t+{start}\\:d}}.%{{eif\\:mod((t+{start})*10\\,10)\\:d}}':"
+# select (not fps) so each tile's label is the exact timestamp of the frame shown
+vf = (f"select='isnan(prev_selected_t)+gte(t-prev_selected_t\\,{every})',scale={tw}:{th},"
+      f"drawtext=fontfile={font}:text='%{{eif\\:t+{start}\\:d}}.%{{eif\\:mod((t+{start})*10\\,10)\\:d}}':"
       f"x=3:y=3:fontsize=15:fontcolor=yellow:box=1:boxcolor=black@0.6,tile={cols}x{rows}")
-subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(start), "-t", str(d), "-i", p, "-vf", vf, "-frames:v", "1", out], check=True)
+subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(start), "-t", str(d), "-i", p, "-vf", vf, "-fps_mode", "vfr", "-frames:v", "1", out], check=True)
 print(out, f"{w}x{h} {dur:.1f}s every {every:.1f}s")

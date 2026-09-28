@@ -67,7 +67,7 @@
       "sfx": [
         {
           "id": "ding",
-          "at": "word:phone+0.15"
+          "at": "word:pops"
         }
       ]
     },
@@ -181,7 +181,7 @@
       "lines": [
         "Would *you* shop like this?"
       ],
-      "clip": "c_hook"
+      "clip": "c_hook_end"
     }
   ],
   "clips": {
@@ -246,7 +246,7 @@
     },
     "c_receipt": {
       "src": "bili:BV1zs411e7QH",
-      "start": 81.6,
+      "start": 81.75,
       "aspect": "4:3",
       "src_zoom": 1.2,
       "focus": [
@@ -275,7 +275,7 @@
     },
     "c_cart": {
       "src": "bili:BV1zs411e7QH",
-      "start": 46.4,
+      "start": 46.9,
       "aspect": "4:3",
       "src_zoom": 1.2,
       "focus": [
@@ -294,7 +294,7 @@
     },
     "c_gates": {
       "src": "bili:BV1zs411e7QH",
-      "start": 85.5,
+      "start": 85.1,
       "aspect": "4:3",
       "src_zoom": 1.2,
       "focus": [
@@ -329,6 +329,16 @@
       "outlet": "TechCrunch / GeekWire",
       "date": "Jan 27, 2026",
       "headline": "Amazon is closing *all* of its Amazon Go and Amazon Fresh stores"
+    },
+    "c_hook_end": {
+      "src": "bili:BV14j411Q72w",
+      "start": 60.7,
+      "speed": 0.85,
+      "src_zoom": 1.15,
+      "focus": [
+        0.62,
+        0.43
+      ]
     }
   },
   "upload": {

@@ -147,6 +147,14 @@ def first_shot(st):
     return None
 
 
+def korean_date(d):
+    try:
+        y, m, dd = d.split("-")
+        return f"{int(y)}년 {int(m)}월 {int(dd)}일"
+    except ValueError:
+        return d
+
+
 def meta_rows():
     rows = []
     for f in story_files():
@@ -156,7 +164,7 @@ def meta_rows():
         tags = [t if t.startswith("#") else "#" + t for t in st.get("tags", [])]
         desc = (f"{st['desc']}\n\n"
                 f"📍 촬영 장소: 탄자니아 세렝게티 국립공원 (무인카메라 {sh.get('site', '')})\n"
-                f"📅 촬영 일시: {sh.get('date', '')} {sh.get('time', '')}\n\n"
+                f"📅 촬영 일시: {korean_date(sh.get('date', ''))} {sh.get('time', '')[:5]}\n\n"
                 "실제 무인카메라 사진을 편집해 만든 영상입니다. AI로 만든 장면은 없습니다.\n"
                 "영상 출처: Snapshot Serengeti (Swanson 외, 2015, Scientific Data) · LILA BC 공개 데이터셋\n"
                 "라이선스: Community Data License Agreement Permissive 1.0 (상업적 이용 및 수정 허용)\n"

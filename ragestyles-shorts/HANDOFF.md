@@ -69,6 +69,9 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * (2026-09-29) 폰트는 TikTok Sans (40M 조회수 쇼츠 61개 표지 분석에서 가장 많은 틱톡 기본 자막체 계열, BENCHMARK.md 참고). 자막 ExtraBold, 제목 Black, 흰 글자에 검정 테두리.
 * (2026-09-29) 참고 쇼츠의 "스컬 엔딩" 이 좋다고 함: 마지막 순간 💀 가 아래에서 날아 올라오고, 휘핑 블러 뒤 마지막 프레임이 흑백으로 멈춰 어두워지고 비네팅, 제목은 사라지고 💀 만 약 3초. 플랜 키는 5장 참고 (`still`, `bw`, `vid_darken`, `vignette`, `whip_in`, 자막 `anim: rise`).
 * (2026-09-29) 강조색은 그라데이션 하나가 아니라 노랑(`*단어*`, 255,214,0)과 주황(`~단어~`, 255,128,0)을 따로따로 씁니다.
+* (2026-09-29, g1 피드백) 가로로 넓게 찍힌 동작(바벨 헤드 프레스처럼 옆으로 긴 구도)은 쇼츠에 안 맞아서 버렸습니다. 세로 9:16 으로 사람에게 초점을 맞출 수 있는 소스를 고릅니다.
+* (2026-09-29, g1 피드백) 정보, 스토리텔링, 콘텐츠가 있어야 합니다. 대결이면 "Current Weight: 275 LBS", 누가 몇 kg 에서 실패했는지 같은 진행 상황을 텍스트로 계속 업데이트합니다 (화면 왼쪽이나 아래 고정 정보 패널).
+* (2026-09-29) 미스터 올림피아 같은 최신 대회 영상은 매우 좋다는 평. 영상 여러 개로 나눠 만들어도 됩니다.
 
 ## 4. 지금까지 만든 영상과 반응
 
@@ -86,7 +89,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
 | new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
-| new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs (유튜브 CC BY, 첫 최신 영상, `plans8/g1_gymshark_cameraman.json`) | 사용자 확인 전 |
+| new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인
 
@@ -167,6 +170,15 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 하지 말 것: 올림픽, 세계육상, UFC 같은 공식 중계 영상 재사용 (Content ID 와 저작권 경고).
 
 ## 8. 다음 아이디어 (방향에 맞는 것)
+
+진행 중 (2026-09-29, 드라이브 RageStyles YT1 폴더의 Cq7TbOxcwPc.mp4, XlZZRCaETAs.mp4)
+* 소스: "2026 Mr. Olympia Finals Official Footage", OlympiaTV (https://youtu.be/Cq7TbOxcwPc), 77분, 1080p30. OlympiaTV 다른 영상은 CC 필터에 나오지만 이 영상은 아직 안 나옴. 업로드 전에 오너가 설명란 라이선스 확인 필요.
+* 구성: 0~30분 비교 심사(단체), 31~59분 선수별 개인 포징 루틴(한 명이 가운데, 9:16 에 최적), 1:00:10 탑10 포즈다운, 1:04~1:08 시상, 1:08 이후 탑3 메달, 우승 트로피, 인터뷰.
+* 개인 루틴 시작: Chinedu Andrew Obiekea 31:40, Tonio Burton 35:10, Michal Krizanek 38:00, Regan Grimes 39:40, James Hollingshead 41:50, Behrooz Tabani 52:00, Nick Walker 54:37~56:05, Derek Lunsford 57:01~59:24.
+* 결과 (대사로 확인, 초는 원본 기준): 5위 Tonio Burton 상금 $30,000 (~3855), 4위 Andrew Jacked (~3919), 3위 Derek Lunsford, 전 챔피언, 동메달 $100,000 (~4000), 마지막 둘 Samson Dauda 와 Nick Walker 가운데로 (~4074), 우승 Nick Walker, 금메달, 샌도우 트로피, $600,000, "2026 Mr. Olympia" (~4093~4125). 해설: "he defeated three former Mr. Olympia".
+* 받아쓴 대사: `work/youtube/olyend_tr.txt` (3570초부터, 줄 앞 숫자에 3570 을 더함).
+* 사람 추적: `tools/track_person.py` (torchvision 사람 검출, pip install torchvision --index-url https://download.pytorch.org/whl/cpu), 출력 path 를 shot 에 넣고 "ease": "linear".
+* 쇼츠 계획: 1) 발표 카운트다운 (왼쪽 정보 패널에 5위부터 순위와 상금이 하나씩 쌓임, 마지막 1:1 Nick vs Samson, 우승 순간), 2) 새 챔피언 Nick Walker 포징 루틴 (포즈 이름은 프레임 확인 후), 3) 포즈다운 1:1 Nick vs Derek. Gymshark XlZZRCaETAs 는 여성 썰매 밀기/당기기 대결 (80kg, 100kg, 기록 01:04, 01:28, 01:46, 01:02, 00:56), 무게와 기록 패널로 만들기.
 
 최신 영상 (2026-09-29 추가, 우선)
 * 크리스 범스테드, 데이비드 레이드 등 짐샤크 스트렝스 테스트: 누가 제일 셀까 랭킹 (CTRL7o8iYgc).

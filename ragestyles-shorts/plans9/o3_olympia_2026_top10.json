@@ -1,0 +1,615 @@
+{
+ "id": "o3_olympia_2026_top10",
+ "yt_title": "The 2026 Mr. Olympia top 10 in 30 seconds 🏆 #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 717.61,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 978.61,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1270.61,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 529.11,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 445.11,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 320.31,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 93.11,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1654.31,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1197.31,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1437.61,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.2,
+     "zoom": 1.15,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.2,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 295.3,
+   "dur": 3.4,
+   "audio": true,
+   "af": "voice",
+   "audio_db": 0,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "ease": "linear",
+   "path": [
+    [
+     0.0,
+     1.0,
+     0.418,
+     0.495
+    ],
+    [
+     1.0,
+     1.0,
+     0.41,
+     0.47
+    ],
+    [
+     2.0,
+     1.0,
+     0.441,
+     0.452
+    ],
+    [
+     3.4,
+     1.0,
+     0.45,
+     0.49
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.1,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.5,
+     "dur": 0.55
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 29.8,
+   "text": "2026 *Mr. Olympia*\nTop 10 :trophy:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.085
+  },
+  {
+   "t": 0.0,
+   "d": 1.2,
+   "text": "*10TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 1.2,
+   "d": 1.4,
+   "text": "10TH :flag-gb:\n*JAMES HOLLINGSHEAD*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.6,
+   "d": 1.2,
+   "text": "*9TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 3.8,
+   "d": 1.4,
+   "text": "9TH :flag-us:\n*BRANDON CURRY*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 5.2,
+   "d": 1.2,
+   "text": "*8TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 6.4,
+   "d": 1.4,
+   "text": "8TH :flag-ir:\n*BEHROOZ TABANI*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 7.8,
+   "d": 1.2,
+   "text": "*7TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 9.0,
+   "d": 1.4,
+   "text": "7TH :flag-ca:\n*REGAN GRIMES*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 10.4,
+   "d": 1.2,
+   "text": "*6TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 11.6,
+   "d": 1.4,
+   "text": "6TH :flag-sk:\n*MICHAL KRIZANEK*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 13.0,
+   "d": 1.2,
+   "text": "*5TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 14.2,
+   "d": 1.4,
+   "text": "5TH :flag-us:\n*TONIO BURTON*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 15.6,
+   "d": 1.2,
+   "text": "*4TH*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 16.8,
+   "d": 1.4,
+   "text": "4TH :flag-ae:\n*ANDREW JACKED*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 18.2,
+   "d": 1.2,
+   "text": "*3RD*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 19.4,
+   "d": 1.4,
+   "text": "3RD :flag-us:\n*DEREK LUNSFORD*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 20.8,
+   "d": 1.2,
+   "text": "*2ND*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 22.0,
+   "d": 1.4,
+   "text": "2ND :flag-gb:\n*SAMSON DAUDA*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 23.4,
+   "d": 1.2,
+   "text": "*1ST*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 24.6,
+   "d": 1.8,
+   "text": "~1ST~ :flag-us:\n*NICK WALKER*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 27.0,
+   "d": 2.8,
+   "text": "THE NEW\n*MR. OLYMPIA* :trophy:",
+   "style": "big",
+   "y": 0.5
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 1.2,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 3.8,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 6.4,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 9.0,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 11.6,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 14.2,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 16.8,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 19.4,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 22.0,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 24.6,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
+  }
+ ],
+ "audio_clips": [],
+ "lufs": -14.0
+}

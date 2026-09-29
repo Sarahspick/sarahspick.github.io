@@ -75,6 +75,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * (2026-09-29, o1 피드백) 영상 안에 없는 정보(예: 4위, 2위 상금)는 비워두지 말고 웹 검색으로 찾아서 채웁니다. 영상과 기사가 다르면 알려주고 영상(현장 발표)을 우선합니다.
 * (2026-09-29, o1 피드백) 순위표는 검정 상자 없이 글자만 (테두리와 그림자), 화면 왼쪽, 세로 40% 지점이 중심. 바뀌는 큰 자막은 ~~화면 가운데 아래쪽 (y 0.70)~~ 너무 아래라서 정중앙 살짝 아래 (y 0.56). 글자가 화면을 너무 가리면 안 되므로, 결과가 다 나오고 1~2초 뒤에 순위표를 없앱니다.
 * (2026-09-29, o1 v3) 순위표도 영상을 너무 가려서 뺐습니다. 화면 글자는 위 제목과 가운데 아래 자막 두 개만, 깔끔하게. 정보는 자막에 ("TONIO BURTON $30,000"). 발표 순간에는 빠른 살짝 줌인(`punch`), 밝기 번쩍(`flash`), 쿵 효과음을 넣습니다 (심심하지 않게).
+* (2026-09-29, o1 확정, "아주 잘했어") 다음 영상부터: 줌인과 밝기업은 o1 보다 조금 더 강하게 (punch zoom 1.12~1.15, flash amount 0.45~0.55), 자막은 정중앙 (y 0.50). o1 은 확정본, 더 편집하지 않음.
 
 ## 4. 지금까지 만든 영상과 반응
 
@@ -92,7 +93,8 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
 | new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
-| new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 왼쪽 아래 순위표 패널, 발표 대사 J컷, `plans9/build_o1.py`) | 사용자 확인 전 |
+| new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 제목과 자막 하나, 발표마다 줌 펀치, 밝기, 쿵, `plans9/build_o1.py`) | 아주 훌륭함, 확정. 순위표는 화면을 가려서 뺌. 다음엔 효과 더 강하게, 자막 정중앙 |
+| new12 o2~o5, g2 | 올림피아: 전 챔피언 3명 vs 닉, 톱10 카운트다운, 닉 워커 스토리, 다우다 1일차. Gymshark 썰매 대결 (결과는 각자 인터뷰 샷 위에) | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인
@@ -186,6 +188,11 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 결과 (대사로 확인, 초는 원본 기준): 5위 Tonio Burton 상금 $30,000 (~3855), 4위 Andrew Jacked (~3919), 3위 Derek Lunsford, 전 챔피언, 동메달 $100,000 (~4000), 마지막 둘 Samson Dauda 와 Nick Walker 가운데로 (~4074), 우승 Nick Walker, 금메달, 샌도우 트로피, $600,000, "2026 Mr. Olympia" (~4093~4125). 해설: "he defeated three former Mr. Olympia".
 * 받아쓴 대사: `work/youtube/olyend_tr.txt` (3570초부터, 줄 앞 숫자에 3570 을 더함).
 * 사람 추적: `tools/track_person.py` (torchvision 사람 검출, pip install torchvision --index-url https://download.pytorch.org/whl/cpu), 출력 path 를 shot 에 넣고 "ease": "linear".
+* 주의 (2026-09-29): 우승 발표 직후 꽃가루 속에서 닉을 안는 초록 트렁크 선수는 Samson 이 아니라 Andrew Jacked (4위, 초록 트렁크, 이미 메달). o1 의 "2ND SAMSON DAUDA $200,000" 자막이 이 포옹 샷 위에 있음 (확정본이라 그대로, 오너에게 알림). 사람 이름 자막은 그 사람이 화면에 있는 샷에만.
+* 2026 톱10 (fitnessvolt.com 결과, 무대 발표와 일치): 1 Nick Walker (미국), 2 Samson Dauda (영국), 3 Derek Lunsford (미국), 4 Andrew Jacked 본명 Chinedu Andrew Obiekea (UAE), 5 Tonio Burton (미국), 6 Michal Krizanek (슬로바키아), 7 Regan Grimes (캐나다), 8 Behrooz Tabani (이란), 9 Brandon Curry (미국), 10 James Hollingshead (영국). 역대 우승: 2019 Curry, 2023/2025 Lunsford, 2024 Dauda. 2025 결과: 1 Lunsford, 2 Choopan, 3 Andrew Jacked, 4 Dauda.
+* 루틴 포즈 확인 시각 (원본 초, 0.5초 단위로 확인): Hollingshead 2577 FDB, Curry 2838 FDB, Tabani 3130 FDB, Grimes 2388.5 FDB, Krizanek 2304.5 BDB, Burton 2179.7 FDB, Andrew Jacked 1952.5 FDB, Lunsford 3513.7 BDB, Dauda 3056.7 FDB, Walker 3297 FDB (Walker 루틴: 3294 앞 광배, 3304.5 사이드 체스트, 3316.5 BDB, 3322 뒤 광배).
+* `plans9/olycommon.py`: o2~o5 공용 (Short 클래스, hit = 줌 펀치 + 밝기 + 쿵). Demucs 본: `work/youtube/olyrt_vox.mp4` (1860~3580초), `oly_vox.mp4` (3840~4330초), `gs_sled_vox.mp4` (Gymshark 75~275초).
+* Gymshark 썰매 (XlZZRCaETAs): 이름표와 결과판 얼굴로 확인. 1 Lucy Davis 하이브리드 0:56, 2 Samantha Cubbins 크로스핏 1:02, 3 Lea Schreiner 독일 파워리프터 (벤치 100kg) 1:04, 4 Oyinda 펑셔널 1:28, 5 Yazmin Stevens 역도 1:46.
 * 쇼츠 계획: 1) 발표 카운트다운 (왼쪽 정보 패널에 5위부터 순위와 상금이 하나씩 쌓임, 마지막 1:1 Nick vs Samson, 우승 순간), 2) 새 챔피언 Nick Walker 포징 루틴 (포즈 이름은 프레임 확인 후), 3) 포즈다운 1:1 Nick vs Derek. Gymshark XlZZRCaETAs 는 여성 썰매 밀기/당기기 대결 (80kg, 100kg, 기록 01:04, 01:28, 01:46, 01:02, 00:56), 무게와 기록 패널로 만들기.
 
 최신 영상 (2026-09-29 추가, 우선)

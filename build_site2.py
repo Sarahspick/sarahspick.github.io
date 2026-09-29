@@ -2,7 +2,7 @@ import json, datetime, base64, os
 
 START_KST = "2026-09-16"   # slot 1's day in Korea; slot N goes live on START_KST + (N-1) days
 POST_KST = "09:00"         # daily reel time in Korea (Buffer schedule). 09:00 KST = 00:00 UTC = 8pm US Eastern the evening before
-IG = "https://www.instagram.com/sarahspick/"
+IG = "https://www.instagram.com/sarahs.pick/"
 NOTE = "treat yourself to something lovely today 🤍"
 
 # Reads catalog.json + thumbs/ (both in the repo), so the site can be rebuilt without the videos.
@@ -122,7 +122,7 @@ footer .heart {{ font-size:14px; font-weight:500; color:var(--ink); margin-botto
     <div class="social">
       <a href="{IG}" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-        @sarahspick
+        @sarahs.pick
       </a>
     </div>
   </header>

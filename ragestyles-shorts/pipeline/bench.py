@@ -200,7 +200,8 @@ def panel_image(m, k):
     m: {"header": "RESULTS", "rows": [{"t", "text"}], "w": px, "size": px}. Rows use the caption syntax
     (*yellow*, ~orange~, :emoji:). The box grows by one row each time a row appears."""
     size, w, pad = m.get("size", 46), int(m.get("w", 600)), 26
-    txt = dict(font_name=CAP_FONT + " ExtraBold", size=size, stroke=4, shadow=False, upper=True, align="left",
+    txt = dict(font_name=CAP_FONT + " ExtraBold", size=size, stroke=m.get("stroke", 4), shadow=m.get("shadow", False),
+               upper=True, align="left",
                max_w=w - 2 * pad, max_lines=1, min_size=24, colors=HILITE, stroke_color=EDGE)
     head = R.render_text(m["header"], **dict(txt, size=int(size * 0.78), color=YELLOW)) if m.get("header") else None
     rows = [R.render_text(r["text"], **txt) for r in m["rows"]][:k]
@@ -208,7 +209,9 @@ def panel_image(m, k):
     hh = head.height + gap if head else 0
     H_ = pad * 2 + hh + sum(r.height for r in rows) + gap * max(0, len(rows) - 1) - (gap if head and not rows else 0)
     img = Image.new("RGBA", (w, H_), (0, 0, 0, 0))
-    ImageDraw.Draw(img).rounded_rectangle((0, 0, w - 1, H_ - 1), radius=28, fill=(10, 10, 14, int(255 * m.get("alpha", 0.62))))
+    if m.get("alpha", 0.62) > 0:  # alpha 0: no box, text only (owner prefers it without the dark box)
+        ImageDraw.Draw(img).rounded_rectangle((0, 0, w - 1, H_ - 1), radius=28,
+                                              fill=(10, 10, 14, int(255 * m.get("alpha", 0.62))))
     y = pad
     if head:
         img.alpha_composite(head, (pad, y))
@@ -436,8 +439,12 @@ class Bench:
                 shown = sum(1 for r in m["rows"] if r["t"] <= t)
                 rgb, a = art[shown]
                 h, w = rgb.shape[:2]
-                op = min(1.0, k / 0.2)
-                R.blit(out, rgb, a, m.get("x", 0.04) * W + w / 2, m.get("y", 0.6) * H + h / 2, opacity=op)
+                op = min(1.0, k / 0.2, (m["t"] + m["d"] - t) / m.get("fade_out", 0.3))
+                if "yc" in m:  # vertical centre of the full panel (all rows), so it grows from a fixed top
+                    top = m["yc"] * H - art[-1][0].shape[0] / 2
+                else:
+                    top = m.get("y", 0.6) * H
+                R.blit(out, rgb, a, m.get("x", 0.04) * W + w / 2, top + h / 2, opacity=op)
                 continue
             if m["type"] == "dim":
                 rx, ry, rw, rh = self.region(self.timeline[seg_idx]["shot"]) if m.get("region", "box") == "box" \

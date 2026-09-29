@@ -5,6 +5,8 @@ work/youtube/oly_vox.mp4 = source 3840 s to 4330 s with the arena music removed 
 so every time below is written in source seconds and shifted by O. All facts checked against frames and
 the announcer: 5th Tonio Burton ($30,000), 4th Andrew Jacked, 3rd Derek Lunsford ($100,000, bronze),
 last two Samson Dauda and Nick Walker, winner Nick Walker ($600,000, gold medal, Sandow).
+4th $40,000 and 2nd $200,000 are not said on stage: from the published results (fitnessvolt.com/2026-mr-olympia-results,
+bleacherreport.com), which also list 5th as $30,000 like the announcer.
 Run from ragestyles-shorts/: python3 plans9/build_o1.py
 """
 import json
@@ -40,7 +42,7 @@ ts = [0.0]
 for s in shots:
     ts.append(round(ts[-1] + s["dur"], 2))
 T = ts[-1]
-BY = 0.205
+BY = 0.70  # owner: changing captions low in the middle of the screen
 
 
 def cap(i, text, dt=0.0, d=None, y=BY):
@@ -51,13 +53,13 @@ captions = [
     {"t": 0, "d": T, "text": "Who won the 2026\n*Mr. Olympia*? :trophy:", "style": "title", "anim": "none", "y": 0.085},
     cap(0, "*5TH* PLACE"),
     cap(1, "*4TH* PLACE"),
-    cap(2, "*3RD* PLACE\n~LAST YEAR'S CHAMPION~", y=BY + 0.02),
+    cap(2, "*3RD* PLACE\n~LAST YEAR'S CHAMPION~"),
     cap(3, "LAST ~2~ STANDING"),
     cap(4, "NICK WALKER"),
     cap(5, "OR SAMSON DAUDA?"),
     cap(6, "*NICK WALKER* WINS :trophy:", dt=0.6),
-    cap(7, "THE NEW\n*MR. OLYMPIA*", y=BY + 0.02),
-    cap(8, "HE BEAT ~3~ FORMER\nMR. OLYMPIAS :exploding-head:", y=BY + 0.02),
+    cap(7, "THE NEW\n*MR. OLYMPIA*"),
+    cap(8, "HE BEAT ~3~ FORMER\nMR. OLYMPIAS :exploding-head:"),
 ]
 
 
@@ -76,12 +78,13 @@ audio_clips = [
     clip(4121.9, 2.7, ts[5]),                                               # "and the title of 2026 Mr. Olympia"
     clip(4156.4, 2.9, ts[8] + 0.2),                                         # "he defeated three former Mr. Olympia"
 ]
-panel = {"type": "panel", "t": 0, "d": T, "x": 0.035, "y": 0.555, "w": 720, "size": 50, "header": "2026 MR. OLYMPIA",
+# owner: the text must not cover the picture too much, so the board fades out ~1.6 s after 1st place appears
+panel = {"type": "panel", "t": 0, "d": round(ts[6] + 0.6 + 1.6, 2), "fade_out": 0.4, "x": 0.035, "yc": 0.40, "w": 720, "size": 50, "alpha": 0, "stroke": 6, "shadow": True, "header": "2026 MR. OLYMPIA",
          "rows": [
              {"t": round(ts[0] + NAME[0], 2), "text": "5TH  TONIO BURTON  *$30K*"},
-             {"t": round(ts[1] + NAME[1], 2), "text": "4TH  ANDREW JACKED"},
+             {"t": round(ts[1] + NAME[1], 2), "text": "4TH  ANDREW JACKED  *$40K*"},
              {"t": round(ts[2] + NAME[2], 2), "text": "3RD  DEREK LUNSFORD  *$100K*"},
-             {"t": round(ts[6] + 0.6, 2), "text": "2ND  SAMSON DAUDA"},
+             {"t": round(ts[6] + 0.6, 2), "text": "2ND  SAMSON DAUDA  *$200K*"},
              {"t": round(ts[6] + 0.6, 2), "text": "~1ST~  NICK WALKER  *$600K*"},
          ]}
 plan = {"id": "o1_olympia_2026_results", "yt_title": "Who won the 2026 Mr. Olympia? 🏆 #shorts",

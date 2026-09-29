@@ -248,74 +248,78 @@
    "d": 3.8,
    "text": "*5TH* PLACE",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 3.8,
    "d": 4.0,
    "text": "*4TH* PLACE",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 7.8,
    "d": 3.8,
    "text": "*3RD* PLACE\n~LAST YEAR'S CHAMPION~",
    "style": "big",
-   "y": 0.22499999999999998
+   "y": 0.7
   },
   {
    "t": 11.6,
    "d": 3.0,
    "text": "LAST ~2~ STANDING",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 14.6,
    "d": 2.6,
    "text": "NICK WALKER",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 17.2,
    "d": 2.6,
    "text": "OR SAMSON DAUDA?",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 20.4,
    "d": 3.8,
    "text": "*NICK WALKER* WINS :trophy:",
    "style": "big",
-   "y": 0.205
+   "y": 0.7
   },
   {
    "t": 24.2,
    "d": 3.0,
    "text": "THE NEW\n*MR. OLYMPIA*",
    "style": "big",
-   "y": 0.22499999999999998
+   "y": 0.7
   },
   {
    "t": 27.2,
    "d": 3.6,
    "text": "HE BEAT ~3~ FORMER\nMR. OLYMPIAS :exploding-head:",
    "style": "big",
-   "y": 0.22499999999999998
+   "y": 0.7
   }
  ],
  "marks": [
   {
    "type": "panel",
    "t": 0,
-   "d": 30.8,
+   "d": 22.0,
+   "fade_out": 0.4,
    "x": 0.035,
-   "y": 0.555,
+   "yc": 0.4,
    "w": 720,
    "size": 50,
+   "alpha": 0,
+   "stroke": 6,
+   "shadow": true,
    "header": "2026 MR. OLYMPIA",
    "rows": [
     {
@@ -324,7 +328,7 @@
     },
     {
      "t": 6.05,
-     "text": "4TH  ANDREW JACKED"
+     "text": "4TH  ANDREW JACKED  *$40K*"
     },
     {
      "t": 10.05,
@@ -332,7 +336,7 @@
     },
     {
      "t": 20.4,
-     "text": "2ND  SAMSON DAUDA"
+     "text": "2ND  SAMSON DAUDA  *$200K*"
     },
     {
      "t": 20.4,

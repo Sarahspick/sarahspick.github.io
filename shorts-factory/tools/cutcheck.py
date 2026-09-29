@@ -7,6 +7,7 @@ nearest position whose edges are clean (middle cuts inside the source's own edit
 
     python tools/cutcheck.py mercedes_bounce kfc_recipe        # report
     python tools/cutcheck.py --fix scripts/*.json               # fix scripts in place (then re-render)
+    python tools/cutcheck.py --fix --slow scripts/x.json        # a tail that runs into a cut: slow the clip instead
 """
 import json
 import os
@@ -20,7 +21,8 @@ from factory.media import fetch  # noqa: E402
 HEAD = 0.7   # output seconds at the start of a window that must not contain a cut
 TAIL = 0.45  # output seconds at the end of a window that must not contain a cut
 SEARCH = 3.0  # how far (source seconds) to look for a clean window
-MAX_AUTO = 1.0  # --fix only applies moves up to this size; bigger ones may land on different content
+MAX_AUTO = 1.0
+MIN_SPEED = 0.5  # --slow never plays a clip slower than this  # --fix only applies moves up to this size; bigger ones may land on different content
 
 
 def scene_cuts(path, start, dur, thr=0.3):
@@ -40,7 +42,7 @@ def cuts_inside(cuts, s, length):
     return sum(1 for c in cuts if s < c < s + length)
 
 
-def check(script_path, fix=False):
+def check(script_path, fix=False, slow=False):
     """Windows come from the CURRENT script (clip starts) + the last render's segment durations."""
     sc = json.load(open(script_path, encoding="utf-8"))
     sid = sc["id"] if sc.get("lang", "en") == "en" else f"{sc['id']}_{sc['lang']}"  # same work dir as render.py
@@ -78,6 +80,15 @@ def check(script_path, fix=False):
         if off > 0:
             print(f"   {cid:16} (continued) cut at {rel} of a {dur:.2f}s window; set \"continue\": false or use another clip")
             continue
+        tail_cut = min(bad)
+        if slow and all(c > s + length / 2 for c in bad) and (tail_cut - 0.06 - s) / dur >= MIN_SPEED:
+            # keep the start the author picked; play a little slower so the window ends just before the cut
+            new_speed = round((tail_cut - 0.06 - s) / dur, 3)
+            print(f"   {cid:16} cut at {rel}: speed {speed:g} -> {new_speed:g} (start kept at {s0})")
+            if fix:
+                spec["speed"] = new_speed
+                changed = True
+            continue
         cands = []
         k = -int(SEARCH / 0.05)
         while k <= int(SEARCH / 0.05):
@@ -104,10 +115,11 @@ def check(script_path, fix=False):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if a != "--fix"]
+    args = [a for a in sys.argv[1:] if a not in ("--fix", "--slow")]
     fix = "--fix" in sys.argv
+    slow = "--slow" in sys.argv
     total = 0
     for a in args:
         path = a if a.endswith(".json") else f"scripts/{a}.en.json"
-        total += check(path, fix)
+        total += check(path, fix, slow)
     print(f"\n{total} window(s) with edge cuts")

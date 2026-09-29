@@ -149,20 +149,23 @@ class _View:
 
 
 class VideoReader(_View):
-    def __init__(self, path, start, dur, box, aspect, focus, speed=1.0, src_zoom=1.0, headroom=1.12, blur=None):
+    def __init__(self, path, start, dur, box, aspect, focus, speed=1.0, src_zoom=1.0, headroom=1.12, blur=None,
+                 blur_boxes=None):
         self.box = box
         w, h = box[2], box[3]
         self.pw, self.ph = int(w * headroom) // 2 * 2, int(h * headroom) // 2 * 2
         sw, sh, sdur = probe(path)
         cw, ch, cx, cy = crop_rect(sw, sh, aspect, focus, src_zoom)
-        # blur: [[x0, y0, x1, y1], ...] in source fractions (e.g. burned-in foreign subtitles), mapped into this crop
-        self.blur = []
-        for x0, y0, x1, y1 in blur or []:
-            bx0, by0 = (x0 * sw - cx) * self.pw / cw, (y0 * sh - cy) * self.ph / ch
-            bx1, by1 = (x1 * sw - cx) * self.pw / cw, (y1 * sh - cy) * self.ph / ch
-            bx0, by0, bx1, by1 = max(0, bx0), max(0, by0), min(self.pw, bx1), min(self.ph, by1)
-            if bx1 > bx0 and by1 > by0:
-                self.blur.append(tuple(int(v) for v in (bx0, by0, bx1, by1)))
+        # blur: [[x0, y0, x1, y1], ...] for the whole clip; blur_boxes: [{"t0", "t1", "box"}] only while the SOURCE
+        # time is inside [t0, t1] (tools/textboxes.py finds these for burned-in subtitles). Source fractions.
+        def to_crop(b):
+            x0, y0, x1, y1 = b
+            bx0, by0 = max(0, (x0 * sw - cx) * self.pw / cw), max(0, (y0 * sh - cy) * self.ph / ch)
+            bx1, by1 = min(self.pw, (x1 * sw - cx) * self.pw / cw), min(self.ph, (y1 * sh - cy) * self.ph / ch)
+            return tuple(int(v) for v in (bx0, by0, bx1, by1)) if bx1 > bx0 and by1 > by0 else None
+        self.blur = [(None, None, r) for r in map(to_crop, blur or []) if r]
+        self.blur += [(e["t0"], e["t1"], r) for e in blur_boxes or [] for r in [to_crop(e["box"])] if r]
+        self.start, self.speed = start, speed
         need = dur * speed
         self.n = int(round(dur * FPS)) + 2
         vf = (f"crop={cw}:{ch}:{cx}:{cy},scale={self.pw}:{self.ph}:flags=lanczos,"
@@ -180,9 +183,12 @@ class VideoReader(_View):
                 break
             self.last = Image.frombuffer("RGB", (self.pw, self.ph), buf, "raw", "RGB", 0, 1)
             if self.blur:
-                self.last = self.last.copy()
-                for r in self.blur:
-                    self.last.paste(self.last.crop(r).filter(ImageFilter.GaussianBlur(18)), r[:2])
+                ts = self.start + (self.k + 1) / FPS * self.speed
+                live = [r for t0, t1, r in self.blur if t0 is None or t0 <= ts <= t1]
+                if live:
+                    self.last = self.last.copy()
+                    for r in live:
+                        self.last.paste(self.last.crop(r).filter(ImageFilter.GaussianBlur(14)), r[:2], _feather(r))
             self.k += 1
         if self.last is None:
             self.last = Image.new("RGB", (self.pw, self.ph), (20, 20, 20))
@@ -194,6 +200,15 @@ class VideoReader(_View):
             self.proc.kill()
         except Exception:
             pass
+
+
+def _feather(r, edge=6):
+    """Soft-edged mask for a blur box so it blends in instead of showing a hard rectangle."""
+    w, h = r[2] - r[0], r[3] - r[1]
+    e = max(1, min(edge, w // 4, h // 4))
+    m = Image.new("L", (w, h), 0)
+    m.paste(255, (e, e, max(e + 1, w - e), max(e + 1, h - e)))
+    return m.filter(ImageFilter.GaussianBlur(e / 2))
 
 
 class ImageReader(_View):
@@ -258,7 +273,7 @@ def open_reader(spec, box, dur, offset, theme, report):
             focus = auto_focus(path, start, dur * float(spec.get("speed", 1.0)), aspect)
         report.append({"kind": "video", "src": spec.get("src"), "start": round(start, 2), "dur": round(dur, 2), "focus": focus})
         return VideoReader(path, start, dur, box, aspect, focus, float(spec.get("speed", 1.0)), float(spec.get("src_zoom", 1.0)),
-                           blur=spec.get("blur"))
+                           blur=spec.get("blur"), blur_boxes=spec.get("blur_boxes"))
     hint = spec.get("src") or spec.get("search", "")
     if spec.get("start") is not None:
         hint += f"  •  {spec.get('start')}s–{spec.get('end', '?')}s"

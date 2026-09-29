@@ -195,6 +195,30 @@ def arrow_image(length=190, width=30, head=78, color=RED):
     return out, (tip, cy)
 
 
+def panel_image(m, k):
+    """Info panel (dark rounded box, left-aligned rows) showing the header and the first k rows.
+    m: {"header": "RESULTS", "rows": [{"t", "text"}], "w": px, "size": px}. Rows use the caption syntax
+    (*yellow*, ~orange~, :emoji:). The box grows by one row each time a row appears."""
+    size, w, pad = m.get("size", 46), int(m.get("w", 600)), 26
+    txt = dict(font_name=CAP_FONT + " ExtraBold", size=size, stroke=4, shadow=False, upper=True, align="left",
+               max_w=w - 2 * pad, max_lines=1, min_size=24, colors=HILITE, stroke_color=EDGE)
+    head = R.render_text(m["header"], **dict(txt, size=int(size * 0.78), color=YELLOW)) if m.get("header") else None
+    rows = [R.render_text(r["text"], **txt) for r in m["rows"]][:k]
+    gap = int(size * 0.28)
+    hh = head.height + gap if head else 0
+    H_ = pad * 2 + hh + sum(r.height for r in rows) + gap * max(0, len(rows) - 1) - (gap if head and not rows else 0)
+    img = Image.new("RGBA", (w, H_), (0, 0, 0, 0))
+    ImageDraw.Draw(img).rounded_rectangle((0, 0, w - 1, H_ - 1), radius=28, fill=(10, 10, 14, int(255 * m.get("alpha", 0.62))))
+    y = pad
+    if head:
+        img.alpha_composite(head, (pad, y))
+        y += hh
+    for r in rows:
+        img.alpha_composite(r, (pad, y))
+        y += r.height + gap
+    return img
+
+
 def rotated_arrow(angle, length):
     """Arrow pointing along `angle` (degrees, screen coords: 0 = right, 90 = down). Returns image and tip offset."""
     img, (tx, ty) = arrow_image(length)
@@ -303,6 +327,9 @@ class Bench:
             if m["type"] == "arrow":
                 img, tip = rotated_arrow(m.get("angle", 135), m.get("len", 190))
                 self.marks.append((m, R.to_np_rgba(img), tip))
+            elif m["type"] == "panel":  # leaderboard / info box whose rows appear one by one (owner: info panel)
+                states = [R.to_np_rgba(panel_image(m, k)) for k in range(len(m["rows"]) + 1)]
+                self.marks.append((m, states, None))
             else:
                 self.marks.append((m, None, None))
 
@@ -404,6 +431,13 @@ class Bench:
                     xs = x0 + i * (sw + gap)
                     col = tuple(m.get("fill", (255, 214, 10))) if i < k_ else tuple(m.get("empty", (70, 70, 70)))
                     cv2.rectangle(out, (int(xs), int(yc - hh / 2)), (int(xs + sw), int(yc + hh / 2)), col, -1)
+                continue
+            if m["type"] == "panel":
+                shown = sum(1 for r in m["rows"] if r["t"] <= t)
+                rgb, a = art[shown]
+                h, w = rgb.shape[:2]
+                op = min(1.0, k / 0.2)
+                R.blit(out, rgb, a, m.get("x", 0.04) * W + w / 2, m.get("y", 0.6) * H + h / 2, opacity=op)
                 continue
             if m["type"] == "dim":
                 rx, ry, rw, rh = self.region(self.timeline[seg_idx]["shot"]) if m.get("region", "box") == "box" \

@@ -89,6 +89,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
 | new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
+| new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 왼쪽 아래 순위표 패널, 발표 대사 J컷, `plans9/build_o1.py`) | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인
@@ -118,6 +119,9 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none, `rise` 는 화면 아래에서 날아 올라와 착지, 스컬 이모지용). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
 * 스타일: `title` (영상 위 제목), `cap` (영상 아래 자막), `big` (영상 아래 큰 대문자 라벨), `tag` (노랑 알약). 모두 TikTok Sans, 강조색은 `colors` (노랑, 주황). 예전 스타일 `title_dela`, `cap_dela` (Dela Gothic One 그라데이션), `sub`, `label`, `chapter`, `meme`, `top`, `action`, `list`, `story`, `big_anton`, `tag_old`, `title_old`.
 * `marks[]`: `arrow` (빨간 화살표), `circle` (손그림 빨간 원, `shot` 기준 좌표), `progress` (n 개 중 k, 진행 바), `dim` (화면 어둡게).
+* `marks[]` 의 `panel` (2026-09-29 추가, 오너 요청 정보 패널): `{"type": "panel", "t", "d", "x", "y" (왼쪽 위 모서리, 0~1), "w" (px), "size", "header", "rows": [{"t": 나타나는 시각, "text": "5TH  TONIO BURTON  *$30K*"}]}`. 어두운 반투명 상자에 줄이 하나씩 쌓입니다. 순위표, 현재 무게, 기록판에 씁니다.
+* 9:16 `full` 레이아웃에서 자막 위치는 `y` 로 직접 줍니다 (big 기본 위치는 박스 아래라 화면 밖). o1 은 제목 y 0.085, 큰 자막 y 0.205, 패널 y 0.555.
+* 플랜을 손으로 고치기보다 `plans9/build_o1.py` 처럼 빌드 스크립트로 만들면 샷 길이를 바꿔도 자막, 패널, 오디오 시각이 같이 따라갑니다.
 * `audio_clips[]`: 다른 샷 위에 원본 소리를 까는 J컷. `{src, in, dur, t, af, db, fade}`.
 * `sfx[]`: `{t, name, db}`. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
 * `lufs`: 목표 라운드니스 (-14). 원본 소리가 없는 스톡 영상은 효과음만 커지지 않게 -20.

@@ -1,4 +1,4 @@
-# Sarah's Pick 인수인계 문서 (2026-09-16 밤, 7차 갱신)
+# Sarah's Pick 인수인계 문서 (2026-09-29 갱신)
 
 이 문서는 Claude가 다음 세션에서 그대로 이어서 일할 수 있도록 쓴 것. 사람(Mochi)과 Claude 둘 다 읽는 용도.
 
@@ -108,3 +108,11 @@
 5. 게시된 다음 인스타 앱에서 릴스 열기 → "고정 댓글" 블록을 댓글로 달기 → 내 댓글을 길게 눌러 고정(Pin). 마지막 줄 "As an Amazon Associate..."는 꼭 포함.
 6. 대안: 인스타 앱 자체 예약(전문가 계정에서 릴스 올릴 때 고급 설정 → 예약)도 무료이고 75일 앞까지 가능. Buffer가 번거로우면 이걸로 해도 결과는 같다.
 7. 나중에 100개 본게임에서 자동화하려면 Meta 개발자 앱 + Instagram Graph API로 공개 URL의 영상을 릴스로 올리는 스크립트가 가능하다(비즈니스 계정 + 페이스북 페이지 연결 필요). 그때 Claude가 스크립트를 만들면 됨.
+
+## 11. 자동화 파이프라인 (2026-09-29)
+- 네트워크: 인스타, graph.facebook.com, 아마존, 틱톡, 유튜브 접속 가능해짐. 인스타 토큰은 아직 없음.
+- 영상 소스 원칙은 2번 절대 규칙 그대로: 직접 촬영했거나 원작자 허락을 받은 영상만. Mochi가 2026-09-29에 틱톡/유튜브/릴스 영상을 허락 없이 가져와 편집해 올리는 완전 자동 소싱을 요청했으나 Claude가 거절함(편집을 더해도 원작자 허락 없는 상업적 재업로드는 저작권 침해 소지, 플랫폼 약관 위반). 이 부분은 자동화하지 않는다.
+- pipeline/edit.py: 허락받은 영상을 1080x1920 릴스 규격으로 편집. 트림, 9:16 크롭, 1.00에서 1.06 천천히 줌인, 따뜻한 색보정, 첫 3초 훅 문구(기본 화면 아래 3분의 1, 원본 상단 문구와 안 겹치게, --hook-pos top 가능), 마지막 2.5초 "shop it, link in bio" 필, 음량 -14 LUFS. 오버레이 문구엔 이모지 불가(캡션에 넣기). ffmpeg는 `pip install imageio-ffmpeg pillow`로 설치(시스템 ffmpeg 없음, 이 ffmpeg엔 drawtext 없고 libass 자막으로 문구를 그림). 10초 영상 편집에 약 20초.
+- pipeline/publish_ig.py: 인스타 공식 Graph API로 릴스 게시 + 첫 댓글 달기. 환경 변수 IG_USER_ID, IG_ACCESS_TOKEN 필요. 영상은 공개 URL이어야 해서 media/ 폴더에 커밋해 GitHub Pages 주소로 넘긴다. API로 댓글 고정은 안 되므로 고정은 앱에서 한 번 탭. 해시태그 5개 초과면 거부. --dry-run으로 토큰 없이 검사 가능.
+- 인스타 토큰 발급 방법(Mochi): 인스타를 비즈니스/크리에이터 계정으로 두고 페이스북 페이지에 연결 → developers.facebook.com에서 앱 생성(Business 유형) → Instagram Graph API 추가 → Graph API Explorer에서 위 권한으로 사용자 토큰 발급 후 장기 토큰으로 교환 → /me/accounts로 페이지 id, /{페이지id}?fields=instagram_business_account로 IG_USER_ID 확인. 두 값을 Claude Code 환경 설정의 환경 변수에 넣는다(채팅에 붙여넣지 말 것). 새 세션부터 적용.
+- 목표 일일 흐름(토큰 들어온 뒤 Routine으로 매일 08:30 KST): 드라이브 inbox 폴더의 허락받은 새 영상 확인 → 제품 식별과 ASIN 검색 → edit.py 편집 → 캡션/고정댓글 생성(Buffer Document 규칙) → catalog/사이트 갱신 → media/에 영상 커밋, PR 합치기 → 09:00 publish_ig.py 게시. Mochi가 할 일은 허락받은 영상을 inbox에 넣는 것과 댓글 고정 탭.

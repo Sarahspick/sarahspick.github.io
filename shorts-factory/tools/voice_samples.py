@@ -136,16 +136,30 @@ def slate(path, rows, dur=1.6):
                     "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), path], check=True)
 
 
-def join(parts, out, height):
+def duration(path):
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", path],
+                       capture_output=True, text=True, check=True)
+    return float(r.stdout)
+
+
+def join(parts, out, height, max_mb):
+    """Concatenate and re-encode in two passes to a fixed size, so the reel fits chat/app upload limits."""
     lst = out[:-4] + ".concat.txt"
+    log = out[:-4] + ".x264"
     with open(lst, "w", encoding="utf-8") as f:
         f.writelines(f"file '{os.path.abspath(p)}'\n" for p in parts)
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst,
-                    "-vf", f"scale=-2:{height}:flags=lanczos,format=yuv420p",
-                    "-c:v", "libx264", "-preset", "medium", "-crf", "22", "-profile:v", "high",
-                    "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
-                    "-c:a", "aac", "-b:a", "192k", "-ar", str(SR), "-movflags", "+faststart", out], check=True)
-    os.remove(lst)
+    audio_k = 160
+    video_k = int(max_mb * 8 * 1024 * 1024 * 0.97 / sum(duration(p) for p in parts) / 1000) - audio_k
+    common = ["-v", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst,
+              "-vf", f"scale=-2:{height}:flags=lanczos,format=yuv420p", "-c:v", "libx264", "-preset", "slow",
+              "-b:v", f"{video_k}k", "-profile:v", "high", "-passlogfile", log,
+              "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
+    subprocess.run(["ffmpeg", *common, "-pass", "1", "-an", "-f", "mp4", os.devnull], check=True)
+    subprocess.run(["ffmpeg", *common, "-pass", "2", "-c:a", "aac", "-b:a", f"{audio_k}k", "-ar", str(SR),
+                    "-movflags", "+faststart", out], check=True)
+    for p in [lst] + [log + ext for ext in ("-0.log", "-0.log.mbtree")]:
+        if os.path.exists(p):
+            os.remove(p)
 
 
 def main():
@@ -155,6 +169,7 @@ def main():
     ap.add_argument("--only", nargs="*", help="voice names or ids to include, e.g. Brian SunHi")
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--height", type=int, default=1280, help="output height (parts render at 1920)")
+    ap.add_argument("--max-mb", type=float, default=28, help="target file size in MiB (app uploads stop at 30)")
     ap.add_argument("--out", default=OUTPUT)
     args = ap.parse_args()
 
@@ -196,7 +211,7 @@ def main():
 
     stamp = datetime.date.today().strftime("%Y%m%d")
     out = os.path.join(args.out, f"{stamp}_voice_samples_{'_'.join(x.upper() for x in args.lang)}.mp4")
-    join(order, out, args.height)
+    join(order, out, args.height, args.max_mb)
     with open(out[:-4] + ".txt", "w", encoding="utf-8") as f:
         f.write(f"rate {args.rate}\n" + "\n".join(listing) + "\n")
     print(f"\n[done] {out}")

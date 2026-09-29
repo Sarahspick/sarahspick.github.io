@@ -123,7 +123,7 @@ assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 
 ### 목소리 고르기
 
-- **샘플 영상**: `python tools/voice_samples.py`는 같은 문장을 목소리마다 실제 쇼츠 화면에 입혀 영상 한 편으로 만듭니다. 영어 20개와 한국어 14개이고, 화면에 번호와 이름이 나옵니다. 결과는 `output/<날짜>_voice_samples_EN_KO.mp4`와 번호표 `.txt`입니다. 옵션으로 `--lang ko`, `--only Brian SunHi`, `--rate +10%`를 쓸 수 있습니다.
+- **샘플 영상**: `python tools/voice_samples.py`는 같은 문장을 목소리마다 실제 쇼츠 화면에 입혀 영상 한 편으로 만듭니다. 영어 20개와 한국어 14개이고, 화면에 번호와 이름이 나옵니다. 결과는 `output/<날짜>_voice_samples_EN_KO.mp4`와 번호표 `.txt`입니다. 옵션으로 `--lang ko`, `--only Brian SunHi`, `--rate +10%`를 쓸 수 있습니다. 앱 업로드 한도(30MB)에 맞게 기본 28MB로 인코딩하고, 크기는 `--max-mb`로 바꿉니다.
 - **직접 들어보기**: Microsoft Edge 브라우저에서 아무 페이지나 열고 `Ctrl+Shift+U`(소리 내어 읽기)를 누른 뒤, 음성 옵션에서 `Microsoft BrianMultilingual Online (Natural)` 같은 목소리를 고르면 됩니다. 이 엔진과 같은 목소리이고, 속도도 거기서 바꿔 볼 수 있습니다. 한국어는 한국어 페이지에서 `SunHi`, `InJoon`, `HyunsuMultilingual`을 고르세요.
 
 ## 원본 영상(푸티지) 고르기

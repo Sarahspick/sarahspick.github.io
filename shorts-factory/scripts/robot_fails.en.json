@@ -1,5 +1,5 @@
 {
-  "aspect": "3:4",
+  "aspect": "9:16",
   "gap": 0.05,
   "orig_audio": {
     "lufs": -30
@@ -7,104 +7,120 @@
   "clips": {
     "o_kick": {
       "src": "bili:BV1j7KN6ZEG1",
-      "start": 2.2,
+      "start": 2.6,
       "focus": [
-        0.72,
+        0.84,
         0.5
       ]
     },
     "o_kick2": {
       "src": "bili:BV1j7KN6ZEG1",
-      "start": 4.2,
+      "start": 4.0,
       "focus": [
-        0.68,
+        0.84,
         0.5
       ]
     },
     "o_catch": {
       "src": "bili:BV1j7KN6ZEG1",
-      "start": 7.0,
+      "start": 6.6,
       "focus": [
-        0.6,
+        0.84,
         0.5
       ]
     },
     "r_dance": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 38.2,
-      "focus": [
-        0.55,
-        0.5
-      ]
+      "src": "bili:BV1GrwezgEzg",
+      "start": 0.1
     },
     "r_chaos": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 48.5,
-      "focus": [
-        0.55,
-        0.5
-      ]
+      "src": "bili:BV1GrwezgEzg",
+      "start": 4.2
     },
     "r_staff": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 62.0,
-      "focus": [
-        0.55,
-        0.5
-      ]
+      "src": "bili:BV1GrwezgEzg",
+      "start": 16.6
     },
     "a_walk": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 78.2,
+      "src": "bili:BV1QsC7B3EFP",
+      "start": 0.2,
+      "src_zoom": 1.3,
       "focus": [
-        0.55,
-        0.5
+        0.5,
+        0.66
+      ]
+    },
+    "a_wave": {
+      "src": "bili:BV1QsC7B3EFP",
+      "start": 17.0,
+      "src_zoom": 1.3,
+      "focus": [
+        0.5,
+        0.66
       ]
     },
     "a_fall": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 83.5,
+      "src": "bili:BV1QsC7B3EFP",
+      "start": 22.2,
+      "src_zoom": 1.3,
       "focus": [
-        0.55,
-        0.5
+        0.5,
+        0.66
       ]
     },
     "a_cloth": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 95.5,
+      "src": "bili:BV1QsC7B3EFP",
+      "start": 33.0,
+      "src_zoom": 1.3,
       "focus": [
-        0.6,
-        0.5
+        0.5,
+        0.66
       ]
     },
-    "m_fall": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 108.5,
+    "s_run": {
+      "src": "bili:BV1g88M6SEqj",
+      "start": 3.0,
+      "src_zoom": 1.3,
       "focus": [
-        0.55,
-        0.5
+        0.5,
+        0.66
       ]
     },
-    "m_carry": {
-      "src": "bili:BV1j7KN6ZEG1",
-      "start": 118.5,
+    "s_fall": {
+      "src": "bili:BV1g88M6SEqj",
+      "start": 7.6,
+      "src_zoom": 1.3,
       "focus": [
-        0.55,
-        0.5
+        0.5,
+        0.66
       ]
     }
   },
   "sources": [
     {
-      "name": "New York Post: rogue robot launches kung fu kicks, other robot malfunctions (video compilation)",
+      "name": "New York Post: rogue robot launches kung fu kicks (office CCTV)",
       "url": "https://www.bilibili.com/video/BV1j7KN6ZEG1"
+    },
+    {
+      "name": "Russia's first humanoid robot AIdol falls at its debut",
+      "url": "https://www.bilibili.com/video/BV1QsC7B3EFP"
+    },
+    {
+      "name": "Haidilao restaurant robot in the US goes wild mid-dance",
+      "url": "https://www.bilibili.com/video/BV1GrwezgEzg"
+    },
+    {
+      "name": "RT: robot sprinting at full speed can't stop",
+      "url": "https://www.bilibili.com/video/BV1g88M6SEqj"
     }
   ],
   "footage_credits": [],
   "id": "robot_fails",
   "lang": "en",
   "title": "Robots are having a *rough* year 🤖",
-  "pronounce": {},
+  "pronounce": {
+    "AIdol.": "A idol."
+  },
   "hook": {
     "lines": [
       "Robots are having",
@@ -145,8 +161,8 @@
     },
     {
       "lines": [
-        "until it *lost it*,",
-        "sending chopsticks flying."
+        "until it *lost it*",
+        "and started swinging at the table."
       ],
       "clip": "r_chaos",
       "punch": true,
@@ -159,24 +175,30 @@
     },
     {
       "lines": [
-        "Staff had to wrestle it",
-        "to a stop."
+        "Staff had to hold it down",
+        "to make it stop."
       ],
       "clip": "r_staff"
     },
     {
       "lines": [
         "This is Russia's first",
-        "humanoid AI robot."
+        "humanoid robot, *AIdol*."
       ],
       "clip": "a_walk"
     },
     {
       "lines": [
-        "It walked on stage, waved…",
-        "and fell *face first*."
+        "Big debut, big stage…"
+      ],
+      "clip": "a_wave"
+    },
+    {
+      "lines": [
+        "and it fell *face first*."
       ],
       "clip": "a_fall",
+      "punch": true,
       "sfx": [
         {
           "id": "boom",
@@ -193,22 +215,28 @@
     },
     {
       "lines": [
-        "And at a robot half marathon,",
-        "this one fell at the *start line*."
+        "And this one ran so fast",
+        "it couldn't stop…"
       ],
-      "clip": "m_fall"
+      "clip": "s_run"
     },
     {
       "lines": [
-        "Would *you* trust one",
-        "in your house?"
+        "and *folded in half*.",
+        "Would you trust one at home?"
       ],
-      "clip": "m_carry"
+      "clip": "s_fall",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:folded"
+        }
+      ]
     }
   ],
   "upload": {
     "title": "Robots Are Having a Really Rough Year 🤖 #shorts",
-    "description": "Robots are having a rough year. 🤖\n\nOne started throwing kung fu kicks in an office while its handlers tried to catch it. A dancing robot at a restaurant in San Jose broke down mid-dance and sent chopsticks and sauce flying. Russia's first humanoid AI robot fell face first during its stage debut and was covered with a cloth. And at a robot half marathon in Beijing, one runner fell right at the start line.\n\nWould you trust one in your house? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "description": "Robots are having a rough year. 🤖\n\nOne started throwing kung fu kicks in an office while its handlers tried to catch it. A dancing robot at a Haidilao restaurant in the US lost it mid-dance and started swinging at the table until staff held it down. Russia's first humanoid robot, AIdol, fell face first at its stage debut and its team covered it with a cloth. And one sprinting robot couldn't stop in time and folded in half.\n\nWould you trust one in your house? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
     "hashtags": [
       "#shorts",
       "#robots",
@@ -223,10 +251,10 @@
       "robot kung fu",
       "robot malfunction",
       "robot falls",
-      "ai robot",
+      "aidol robot",
       "russian robot",
+      "haidilao robot",
       "restaurant robot",
-      "robot half marathon",
       "funny robots",
       "tech fails",
       "top techs"

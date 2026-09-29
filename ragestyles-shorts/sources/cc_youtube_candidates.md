@@ -36,3 +36,17 @@
 | https://youtu.be/NVJfLSYB5O4 World's Strongest Man 2025, The Craziest Final Ever? | Stoltman Brothers | 페이지에서 CC BY 확인. 다만 중계 화면이 섞여 있으면 그 부분은 빼고 형제가 직접 찍은 장면만 씁니다 |
 | https://youtu.be/0r5tlAz59pk Bobby Green vs Chibu Sparring Turns Into a REAL Fight | We Fight All Night | 2주 전 영상, UFC 선수. 직접 촬영으로 보이지만 확인 필요 |
 | https://youtu.be/dt5nR7_CsbY Pavlo Nakonechnyy 505 kg world deadlift | Joshua Thomas | 관중석 촬영인지 중계 녹화인지 확인 필요 |
+
+## 2026-09-29 재검색 (2차)
+
+추가 후보
+| 영상 | 채널 | 메모 |
+|---|---|---|
+| https://youtu.be/kRjLT-6qCkw 2026 Mr. Olympia Pre-Judging Official Replay | OlympiaTV (공식) | CC 필터 검색에 나옴, 페이지 확인은 봇 페이지라 unknown. 오너가 설명란 라이선스 확인. 결과는 Ivan Bodybuilding 제목 기준 Nick Walker 우승 (8NrAcxCfG8Q), 다른 출처로 재확인 필요 |
+| https://youtu.be/z5QJIRdpVTo World's Strongest Man 2026 Final, An INCREDIBLE Finish! | Stoltman Brothers | 19.6만, 5달 전. 중계 화면이 섞였는지 확인하고 형제가 찍은 장면만 사용 |
+| https://youtu.be/XlZZRCaETAs Powerlifter vs Crossfitter vs Olympic Lifter vs Hybrid | Gymshark (공식) | 하이브리드 트렌드와 맞음 |
+
+빼야 할 채널 (프레임 확인 결과, 업로더가 권리자가 아님)
+* Ivan Bodybuilding (8NrAcxCfG8Q, J2-IAiunrC4): CC BY 표시는 있지만 OlympiaTV 중계 화면(로고 포함)을 씀. 1순위 6번도 같은 이유로 보류.
+* ArmBreakdown (KtoerXLx9ZI 등): 인스타그램 등 남의 영상을 가져다 씀.
+* INTEGRAL TV: Olympia 현장 영상이지만 권리 불확실.

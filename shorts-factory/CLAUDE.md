@@ -1,6 +1,6 @@
 # shorts-factory: 작업 규칙과 현재 상태
 
-사용자와는 한국어로 대화합니다. 채널 주제는 기업의 비밀과 "와" 소리 나는 기술입니다. 사용법 전체는 README.md에 있습니다.
+사용자와는 한국어로 대화합니다. 채널명은 **Top Tech** (That's Tech에서 변경, 2026-09-29. 유튜브 핸들 @TopTech, @TopTechs 둘 다 비어 있었음). 채널 주제는 기업의 비밀과 "와" 소리 나는 기술입니다. 사용법 전체는 README.md에 있습니다.
 
 ## 사용자가 정한 규칙
 
@@ -10,7 +10,8 @@
 - AI로 만든 영상은 쓰지 않습니다. 실제 영상을 편집하고 설명을 더해 가치를 만듭니다. 출처와 크레딧은 `_upload.txt`에 적습니다.
 - 화면에 채널명·프로필·인증 마크를 넣지 않습니다. 흐린 같은 영상을 배경으로 깔고, 1:1(최대 9:16) 영상, 상단 고정 제목, 1~3단어 자막을 씁니다.
 - 첫 3초 훅과 반전이 있는 이야기로 구성합니다.
-- 목표는 영어판과 한국어판 한 세트입니다. 한국어판은 아직 만들지 않았습니다.
+- 목표는 영어판과 한국어판 한 세트입니다. 첫 세트는 SUV(양왕 U8): 영어판은 빠른 Mark로 렌더 완료, 한국어 대본 `scripts/yangwang_u8.ko.json`은 준비됨(Typecast 차단으로 렌더 대기).
+- 기존 쇼츠 중 `yangwang_u8.en.json`만 예외로 새 Mark 목소리로 다시 렌더했습니다 (사용자 요청).
 - 기존 영어 쇼츠 12편(`scripts/*.en.json`)은 확정본이라 그대로 업로드합니다. 다시 만들거나 고치지 않습니다.
 
 ## 목소리 (2026-09-29 기준)
@@ -26,9 +27,9 @@
   - `ElevenLabsNarrator`는 성공한 응답을 `work/elevenlabs_cache/`에 저장합니다. 같은 문장·목소리·설정을 다시 렌더링하면 크레딧이 들지 않습니다.
   - `tools/voice_samples.py`의 기본 엔진은 ElevenLabs입니다 (`--engine edge`, `--engine typecast`도 됩니다). 후보는 `ELEVEN_VOICES`와 `TYPECAST_VOICES`에 있습니다.
 - **목소리 확정 (2026-09-29, 사용자 선택)**
-  - 영어: ElevenLabs **Mark** (`UgBBYS2sOqTuMpoF3BR0`), `eleven_v4`, speed 1.1. `channel.json`의 `"voice"`입니다.
+  - 영어: ElevenLabs **Mark** (`UgBBYS2sOqTuMpoF3BR0`), `eleven_v4`. `channel.json`의 `"voice"`입니다. 1.1은 너무 느리다고 해서 30% 올림(2026-09-29): ElevenLabs speed 상한 1.2 + `"post_tempo": 1.19`(ffmpeg atempo로 음높이 유지, 단어 타이밍도 같이 줄임) = 약 1.43배. `post_tempo`는 모든 엔진에 쓸 수 있습니다.
   - 한국어: Typecast **필재** (`tc_68257f68bc6e3c161ab5078d`), `ssfm-v30`, tempo 1.1. `channel.json`의 `"voices": {"ko": ...}`이고, `lang`이 ko인 대본에 자동으로 쓰입니다.
-  - Typecast 엔진은 `factory/voice.py`의 `TypecastNarrator`입니다. `/v1/text-to-speech/with-timestamps?granularity=word`의 단어 타이밍을 씁니다. 응답은 `work/typecast_cache/`에 저장합니다. 키는 환경 변수 `TYPECAST_API_KEY`로 받습니다 (사용자가 `Typecast_API`로 넣어도 읽습니다). 모의 응답으로만 테스트했고, 키가 들어오면 `python tools/voice_samples.py --engine typecast --lang ko`로 실제 호출을 먼저 확인합니다. tempo와 모델(ssfm-v30/v21)은 사용자가 들어보고 조정합니다.
+  - Typecast 엔진은 `factory/voice.py`의 `TypecastNarrator`입니다. `/v1/text-to-speech/with-timestamps?granularity=word`의 단어 타이밍을 씁니다. 응답은 `work/typecast_cache/`에 저장합니다. 키는 환경 변수 `TYPECAST_API_KEY`로 받습니다 (사용자가 `Typecast_API`로 넣어도 읽습니다). 키는 들어와 있고 목소리 조회(`GET /v1/voices/{id}`)는 되지만, 음성 생성은 403 `UNUSUAL_ACTIVITY_DETECTED`(무료 계정 남용 차단)로 막힙니다 (2026-09-29). Typecast API 유료 플랜이 필요합니다. 풀리면 `python tools/voice_samples.py --engine typecast --lang ko`로 필재 샘플, `python make_short.py scripts/yangwang_u8.ko.json`으로 SUV 한국어판을 만듭니다. tempo와 모델(ssfm-v30/v21)은 사용자가 들어보고 조정합니다.
   - 기존 영어 쇼츠 12편은 Edge Brian으로 만든 확정본입니다. 다시 렌더링하지 않습니다.
 - 크레딧을 아낍니다. 샘플 문장은 짧게 하고, 같은 문장을 불필요하게 다시 생성하지 않습니다.
 

@@ -111,11 +111,22 @@ class Narrator:
         self.lang = lang
         self.pronounce = pronounce or {}
         self._asr = None
+        self.post_tempo = 1.0  # extra speed-up after synthesis, for engines whose own speed setting tops out
+
+    def _stretch(self, audio, words):
+        """Speed audio up by post_tempo without changing pitch (ffmpeg atempo); word times scale with it."""
+        if abs(self.post_tempo - 1.0) < 1e-3 or not len(audio):
+            return audio, words
+        r = subprocess.run(["ffmpeg", "-v", "error", "-f", "f32le", "-ar", str(self.sr), "-ac", "1", "-i", "pipe:0",
+                            "-af", f"atempo={self.post_tempo}", "-f", "f32le", "-"],
+                           input=audio.astype(np.float32).tobytes(), capture_output=True, check=True)
+        out = np.frombuffer(r.stdout, np.float32).copy()
+        return out, (words and [(w, t / self.post_tempo) for w, t in words])
 
     def speak(self, lines):
         toks = tokenize(lines, self.pronounce)
         say = " ".join(" ".join(t["say"] for t in toks if t["line"] == li) for li in range(len(lines)))
-        audio, words = self._synth(say)
+        audio, words = self._stretch(*self._synth(say))
         dur = len(audio) / self.sr
         if not words:
             words = self._asr_words(audio)
@@ -404,6 +415,12 @@ def _patch_edge_ssl():
 
 
 def make_narrator(vcfg, lang, pronounce):
+    narr = _make_narrator(vcfg, lang, pronounce)
+    narr.post_tempo = float(vcfg.get("post_tempo", 1.0))
+    return narr
+
+
+def _make_narrator(vcfg, lang, pronounce):
     eng = vcfg.get("engine", "edge")
     if eng == "edge":
         return EdgeNarrator(vcfg.get("name", "en-US-BrianMultilingualNeural"), vcfg.get("rate", "+20%"),

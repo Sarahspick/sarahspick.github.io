@@ -1,8 +1,21 @@
 {
   "lang": "en",
-  "voice": {"engine": "elevenlabs", "voice_id": "UgBBYS2sOqTuMpoF3BR0", "model": "eleven_v4", "settings": {"speed": 1.1}},
+  "voice": {
+    "engine": "elevenlabs",
+    "voice_id": "UgBBYS2sOqTuMpoF3BR0",
+    "model": "eleven_v4",
+    "settings": {
+      "speed": 1.2
+    },
+    "post_tempo": 1.19
+  },
   "voices": {
-    "ko": {"engine": "typecast", "voice_id": "tc_68257f68bc6e3c161ab5078d", "model": "ssfm-v30", "tempo": 1.1}
+    "ko": {
+      "engine": "typecast",
+      "voice_id": "tc_68257f68bc6e3c161ab5078d",
+      "model": "ssfm-v30",
+      "tempo": 1.1
+    }
   },
   "pronounce": {}
 }

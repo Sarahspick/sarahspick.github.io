@@ -1,5 +1,16 @@
 # Sarah's Pick 인수인계 문서 (2026-09-29 갱신)
 
+## 0. 새 세션/새 계정에서 시작할 때 (먼저 읽기)
+- 이 문서가 유일한 기억이다. 채팅 기록은 넘어오지 않는다. 작업을 마칠 때마다 이 문서를 갱신해서 커밋한다.
+- 작업 방식: 브랜치에서 수정 → `python3 build_site2.py`로 index.html 재생성 → 커밋, push → PR 만들고 Claude가 바로 main에 합친다(Mochi 승인됨). main에 합쳐야 사이트가 1분 안에 배포된다. Mochi가 GitHub에서 파일을 직접 고친 경우엔 main을 받아서 재생성까지 해 준다.
+- 필요한 연결 (새 계정은 다시 해야 함):
+  1. GitHub: claude.ai에서 GitHub 연결, 저장소 Sarahspick/sarahspick.github.io를 세션 소스로 선택(push 권한).
+  2. 구글 드라이브 커넥터: hw54974875@gmail.com 드라이브로 연결. 영상과 사진은 여기로 받는다(채팅에 붙인 이미지는 파일로 못 꺼냄).
+  3. 네트워크: 환경의 네트워크 정책을 전체 허용(인스타, graph.facebook.com, 아마존 접속 필요).
+  4. 환경 변수(인스타 자동 게시, 아직 미발급): IG_USER_ID, IG_ACCESS_TOKEN. 11번 참고.
+- 도구 설치: `pip install imageio-ffmpeg pillow` (영상 편집용).
+- 최근 상태(2026-09-29): 사이트 bio 첫 줄 하트는 💝, 둘째 줄 "little things that make home feel softer ✨". 가운데 문구와 푸터, 탭 아이콘은 아직 🤍. 게시는 09-19 치실 케이스 이후 정지 상태. 인스타 핸들은 @sarahs.pick, 사이트 버튼 링크도 2026-09-29에 이걸로 고침.
+
 이 문서는 Claude가 다음 세션에서 그대로 이어서 일할 수 있도록 쓴 것. 사람(Mochi)과 Claude 둘 다 읽는 용도.
 
 ## 1. 사업 한 줄 요약

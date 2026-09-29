@@ -1,0 +1,156 @@
+{
+ "id": "b1_define_aura",
+ "yt_title": "Define aura 🥶 #shorts",
+ "layout": {
+  "mode": "meme",
+  "bg": [
+   255,
+   255,
+   255
+  ],
+  "box_aspect": 1.0,
+  "box_y": 0.47
+ },
+ "shots": [
+  {
+   "src": "1000042",
+   "in": 56.8,
+   "dur": 3.0,
+   "cx": 0.49,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.07
+   ],
+   "audio": false
+  },
+  {
+   "src": "1000042",
+   "in": 68.0,
+   "dur": 4.8,
+   "cx": [
+    0.42,
+    0.7
+   ],
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "punch": [
+    {
+     "at": 4.02,
+     "zoom": 1.14,
+     "cx": 0.76,
+     "cy": 0.34,
+     "ramp": 0.14
+    }
+   ]
+  },
+  {
+   "src": "1000042",
+   "in": 93.8,
+   "dur": 3.0,
+   "cx": 0.46,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false
+  },
+  {
+   "src": "1000042",
+   "in": 103.9,
+   "dur": 2.6,
+   "cx": 0.62,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 7.8,
+   "text": "\"Define aura\" :cold-face:",
+   "style": "meme"
+  },
+  {
+   "t": 0.9,
+   "d": 2.1,
+   "text": "\\*Doesn't flinch\\*",
+   "style": "action",
+   "shot": 0,
+   "x": 0.62,
+   "y": 0.62,
+   "anim": "pop"
+  },
+  {
+   "t": 3.3,
+   "d": 2.0,
+   "text": "\\*No-look toss\\*",
+   "style": "action",
+   "shot": 1,
+   "x": 0.5,
+   "y": 0.78
+  },
+  {
+   "t": 7.8,
+   "d": 5.6,
+   "text": "It was just a rehearsal :skull:",
+   "style": "meme"
+  }
+ ],
+ "marks": [
+  {
+   "t": 0.5,
+   "d": 2.5,
+   "type": "arrow",
+   "shot": 0,
+   "x": 0.515,
+   "y": 0.3,
+   "angle": 160,
+   "len": 170
+  },
+  {
+   "t": 7.08,
+   "d": 0.38,
+   "type": "circle",
+   "shot": 1,
+   "x": 0.89,
+   "y": 0.31,
+   "rx": 105,
+   "ry": 105
+  }
+ ],
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "jet_flyby",
+   "db": -4
+  },
+  {
+   "t": 3.3,
+   "name": "jet_flyby",
+   "db": -9
+  },
+  {
+   "t": 7.13,
+   "name": "rifle_catch",
+   "db": -3
+  },
+  {
+   "t": 7.8,
+   "name": "boom",
+   "db": -9
+  },
+  {
+   "t": 8.2,
+   "name": "jet_flyby",
+   "db": -8
+  }
+ ],
+ "lufs": -14.0
+}

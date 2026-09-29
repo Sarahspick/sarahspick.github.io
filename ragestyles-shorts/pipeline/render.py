@@ -148,10 +148,10 @@ def parse_tokens(text):
             key = active
             stripped = word.rstrip(".,!?'\")")
             tail = word[len(stripped):]
-            if active and stripped.endswith(active):
+            if active and stripped.endswith(active) and not stripped.endswith("\\" + active):
                 word = stripped[:-1] + tail
                 active = None
-            toks.append((word, key, False))
+            toks.append((word.replace("\\*", "*"), key, False))  # \* = a literal asterisk
         lines.append(toks)
     return lines
 

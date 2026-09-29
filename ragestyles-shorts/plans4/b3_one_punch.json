@@ -1,0 +1,165 @@
+{
+ "id": "b3_one_punch",
+ "yt_title": "She dropped him with one punch 😳 Army combatives final #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "944932",
+   "rotate": -90,
+   "in": 36.3,
+   "dur": 2.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": true,
+   "af": "ambience"
+  },
+  {
+   "src": "944932",
+   "rotate": -90,
+   "in": 38.3,
+   "dur": 2.2,
+   "speed": 0.4,
+   "cx": [
+    0.52,
+    0.6
+   ],
+   "cy": [
+    0.47,
+    0.42
+   ],
+   "zoom": [
+    1.08,
+    1.28
+   ],
+   "audio": true,
+   "audio_db": 0,
+   "af": "ambience"
+  },
+  {
+   "src": "944932",
+   "rotate": -90,
+   "in": 39.2,
+   "dur": 2.1,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": true,
+   "af": "ambience"
+  },
+  {
+   "src": "944932",
+   "rotate": -90,
+   "in": 69.0,
+   "dur": 4.5,
+   "cx": 0.5,
+   "cy": 0.33,
+   "zoom": [
+    1.45,
+    1.55
+   ],
+   "audio": true,
+   "af": "ambience"
+  },
+  {
+   "src": "944932",
+   "rotate": -90,
+   "in": 74.3,
+   "dur": 3.05,
+   "cx": 0.5,
+   "cy": 0.33,
+   "zoom": [
+    1.55,
+    1.45
+   ],
+   "audio": true,
+   "af": "ambience"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 2.83,
+   "text": "Wait for it... :flushed-face:",
+   "style": "top"
+  },
+  {
+   "t": 2.83,
+   "d": 3.47,
+   "text": "She *dropped* him :skull:",
+   "style": "top"
+  },
+  {
+   "t": 2.83,
+   "d": 1.9,
+   "text": "\\*One punch\\*",
+   "style": "action",
+   "y": 0.64
+  },
+  {
+   "t": 6.3,
+   "d": 4.5,
+   "text": "Then she *finished* it :cold-face:",
+   "style": "top"
+  },
+  {
+   "t": 7.1,
+   "d": 2.8,
+   "text": "\\*Rear naked choke\\*",
+   "style": "action",
+   "y": 0.72
+  },
+  {
+   "t": 10.8,
+   "d": 3.05,
+   "text": "Championship *won* :trophy:",
+   "style": "top"
+  }
+ ],
+ "marks": [
+  {
+   "t": 2.8,
+   "d": 0.42,
+   "type": "circle",
+   "shot": 1,
+   "x": 0.63,
+   "y": 0.32,
+   "rx": 115,
+   "ry": 115,
+   "draw": 0.18
+  },
+  {
+   "t": 7.0,
+   "d": 2.4,
+   "type": "circle",
+   "shot": 3,
+   "x": 0.47,
+   "y": 0.36,
+   "rx": 190,
+   "ry": 140
+  }
+ ],
+ "sfx": [
+  {
+   "t": 1.95,
+   "name": "whoosh_slow",
+   "db": -12
+  },
+  {
+   "t": 2.82,
+   "name": "boom",
+   "db": -5
+  },
+  {
+   "t": 10.8,
+   "name": "impact_deep",
+   "db": -10
+  }
+ ],
+ "lufs": -14.0
+}

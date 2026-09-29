@@ -1,0 +1,147 @@
+{
+ "id": "b2_army_vs_marines",
+ "yt_title": "Army vs Marines: who's stronger? 🤔💪 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_y": 0.5
+ },
+ "shots": [
+  {
+   "src": "1017988",
+   "in": 53.9,
+   "dur": 4.0,
+   "cx": [
+    0.5,
+    0.47
+   ],
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true
+  },
+  {
+   "src": "1017988",
+   "in": 79.3,
+   "dur": 3.3,
+   "cx": 0.42,
+   "cy": 0.5,
+   "zoom": [
+    1.04,
+    1.0
+   ],
+   "audio": true
+  },
+  {
+   "src": "963333",
+   "in": 138.6,
+   "dur": 1.4,
+   "speed": 0.7,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.12
+   ],
+   "audio": false
+  },
+  {
+   "src": "963333",
+   "in": 146.2,
+   "dur": 3.0,
+   "speed": 0.6,
+   "cx": 0.47,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "audio_db": -4
+  },
+  {
+   "src": "963333",
+   "in": 65.85,
+   "dur": 3.2,
+   "speed": 0.6,
+   "cx": 0.5,
+   "cy": 0.52,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 13.2,
+   "text": "Army vs Marines: who's *stronger?* :thinking-face:",
+   "style": "top",
+   "y": 0.155
+  },
+  {
+   "t": 0.0,
+   "d": 2.4,
+   "text": "ARMY",
+   "style": "chapter",
+   "y": 0.275,
+   "color": [
+    255,
+    214,
+    10
+   ]
+  },
+  {
+   "t": 7.3,
+   "d": 2.4,
+   "text": "MARINES",
+   "style": "chapter",
+   "y": 0.275,
+   "color": [
+    255,
+    59,
+    48
+   ]
+  },
+  {
+   "t": 13.2,
+   "d": 1.7,
+   "text": "Comment who wins :backhand-index-pointing-down:",
+   "style": "top",
+   "y": 0.155
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 7.25,
+   "name": "whoosh_slow",
+   "db": -11
+  },
+  {
+   "t": 8.5,
+   "name": "riser_soft",
+   "db": -13
+  },
+  {
+   "t": 10.1,
+   "name": "boom",
+   "db": -7
+  },
+  {
+   "t": 12.3,
+   "name": "riser_soft",
+   "db": -14
+  },
+  {
+   "t": 13.85,
+   "name": "impact_deep",
+   "db": -7
+  }
+ ],
+ "lufs": -14.0
+}

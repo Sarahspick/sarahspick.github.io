@@ -1,0 +1,230 @@
+{
+ "id": "b4_day1_to_marine",
+ "yt_title": "Day 1 of Marine boot camp vs the day they earn the title 🇺🇸 #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "966353",
+   "in": 100.3,
+   "dur": 1.6,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": true,
+   "audio_db": -11
+  },
+  {
+   "src": "966353",
+   "in": 537.3,
+   "dur": 2.8,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false
+  },
+  {
+   "src": "975769",
+   "in": 490.4,
+   "dur": 3.9,
+   "cx": 0.56,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": 8
+  },
+  {
+   "src": "963160",
+   "in": 442.6,
+   "dur": 2.0,
+   "cx": 0.4,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": true,
+   "audio_db": -22
+  },
+  {
+   "src": "963160",
+   "in": 185.5,
+   "dur": 1.8,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.0
+   ],
+   "audio": true,
+   "audio_db": -22
+  },
+  {
+   "src": "963160",
+   "in": 161.8,
+   "dur": 2.0,
+   "cx": 0.63,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": true,
+   "audio_db": -22
+  },
+  {
+   "src": "999454",
+   "in": 100.0,
+   "dur": 2.9,
+   "cx": 0.45,
+   "cy": 0.55,
+   "zoom": [
+    1.0,
+    1.07
+   ],
+   "audio": false,
+   "prescale": 2048
+  },
+  {
+   "src": "999454",
+   "in": 40.8,
+   "dur": 2.7,
+   "cx": 0.48,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "prescale": 2048
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "975769",
+   "in": 564.85,
+   "dur": 5.55,
+   "t": 8.4,
+   "db": 0,
+   "af": "voice"
+  },
+  {
+   "src": "975769",
+   "in": 609.1,
+   "dur": 2.75,
+   "t": 14.25,
+   "db": 0,
+   "af": "voice"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 8.3,
+   "text": "Day 1 of Marine boot camp :flushed-face:",
+   "style": "top"
+  },
+  {
+   "t": 1.9,
+   "d": 2.4,
+   "text": "\\*Buzz cut\\*",
+   "style": "action",
+   "y": 0.68
+  },
+  {
+   "t": 4.6,
+   "d": 1.9,
+   "text": "Discipline and spirit",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 6.5,
+   "d": 1.8,
+   "text": "are the hallmarks of a Marine.",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 8.3,
+   "d": 5.8,
+   "text": "The Crucible: 54 hours :hot-face:",
+   "style": "top"
+  },
+  {
+   "t": 8.45,
+   "d": 1.55,
+   "text": "You will give 100%",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 10.0,
+   "d": 4.0,
+   "text": "of yourself at all times.",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 14.1,
+   "d": 2.9,
+   "text": "The day they become *Marines* :flag-us:",
+   "style": "top"
+  },
+  {
+   "t": 14.3,
+   "d": 1.1,
+   "text": "Above all else,",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 15.4,
+   "d": 1.6,
+   "text": "never quit or give up.",
+   "style": "sub",
+   "size": 64
+  },
+  {
+   "t": 17.0,
+   "d": 2.7,
+   "text": "Earned. Never given. :saluting-face:",
+   "style": "top"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 1.6,
+   "name": "clipper",
+   "db": -15
+  },
+  {
+   "t": 8.28,
+   "name": "boom",
+   "db": -11
+  },
+  {
+   "t": 14.1,
+   "name": "impact_deep",
+   "db": -10
+  },
+  {
+   "t": 17.0,
+   "name": "sub_hit",
+   "db": -12
+  }
+ ],
+ "lufs": -14.0
+}

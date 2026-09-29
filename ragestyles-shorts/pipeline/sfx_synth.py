@@ -386,6 +386,54 @@ def impact_deep(dur=2.4):
     return y
 
 
+def jet_flyby(dur=4.5, peak=0.52):
+    """Low jet pass overhead: roar that brightens as it closes in, turbine whine with doppler drop,
+    ground-reflection flanging, panned left to right."""
+    t = t_axis(dur)
+    tp, h, v, c = peak * dur, 45.0, 170.0, 343.0
+    r = np.sqrt(h ** 2 + (v * (t - tp)) ** 2)
+    near = (h / r) ** 1.4
+    vr = v ** 2 * (t - tp) / r
+    dop = c / (c + vr)
+    brown = np.cumsum(rng.standard_normal(len(t)))
+    brown = butter(brown - np.convolve(brown, np.ones(4801) / 4801, "same"), "highpass", 25, 2)
+    brown /= np.max(np.abs(brown)) + 1e-9
+    roar = brown * 0.8 + noise(dur, "pink") * 0.5
+    dark, bright = butter(roar, "lowpass", 600, 2), butter(roar, "lowpass", 6500, 2)
+    y = dark * (1 - near) + bright * near
+    whine = np.sin(2 * np.pi * np.cumsum(1900 * dop) / SR) + 0.4 * np.sin(2 * np.pi * np.cumsum(3100 * dop) / SR)
+    y = y + 0.07 * whine * near
+    # ground reflection: short delay that sweeps as the geometry changes (comb filter "phasing")
+    d = (0.0015 + 0.009 * (1 - near)) * SR
+    idx = np.arange(len(t)) - d
+    y = y + 0.6 * np.interp(idx, np.arange(len(t)), y, left=0.0)
+    y = np.tanh(1.3 * y * near)
+    return stereo(y, np.clip(1.6 * (t - tp) / dur, -0.85, 0.85))
+
+
+def rifle_catch(dur=0.4):
+    """Hand slapping a rifle stock: sharp leather crack, woody body, tiny metal click."""
+    t = t_axis(dur)
+    crack = butter(noise(dur), "bandpass", [900, 5200], 2) * np.exp(-t * 95)
+    body = np.sin(2 * np.pi * 175 * t) * np.exp(-t * 38) * 0.8 + np.sin(2 * np.pi * 96 * t) * np.exp(-t * 26) * 0.5
+    click = butter(noise(dur), "highpass", 6500, 2) * np.exp(-t * 420) * 0.35
+    y = np.tanh(1.8 * (crack + body + click))
+    return reverb(y, 0.35, 0.1)[: len(t)]
+
+
+def clipper(dur=3.0):
+    """Electric hair clipper: 120 Hz magnetic-motor buzz with harmonics, plus the rasp of cutting in bursts."""
+    t = t_axis(dur)
+    f = 120 * (1 + 0.004 * np.sin(2 * np.pi * 0.7 * t))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    buzz = signal.sawtooth(ph, 0.5) * 0.6 + np.sin(2 * ph) * 0.3 + np.sin(3 * ph) * 0.2 + np.sin(5 * ph) * 0.08
+    buzz = butter(buzz, "bandpass", [100, 4000], 2)
+    cut = np.clip(np.sin(2 * np.pi * 1.3 * t), 0, 1) ** 0.5
+    rasp = butter(noise(dur), "bandpass", [2500, 7000], 2) * cut * 0.25
+    y = np.tanh(1.5 * (buzz * (0.85 + 0.15 * cut) + rasp))
+    return y * np.minimum(1, t / 0.05) * np.minimum(1, (dur - t) / 0.12)
+
+
 LIBRARY = {
     "whoosh": lambda: whoosh(),
     "whoosh_slow": lambda: whoosh(0.62, 220, 2600, 1.0, 0.6),
@@ -417,6 +465,9 @@ LIBRARY = {
     "riser_soft": riser_soft,
     "sub_hit": sub_hit,
     "impact_deep": impact_deep,
+    "jet_flyby": jet_flyby,
+    "rifle_catch": rifle_catch,
+    "clipper": clipper,
 }
 
 if __name__ == "__main__":

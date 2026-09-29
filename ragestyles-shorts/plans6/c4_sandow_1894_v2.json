@@ -1,0 +1,187 @@
+{
+ "id": "c4_sandow_1894_v2",
+ "yt_title": "The first bodybuilder ever filmed (1894) 💪 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_top": 320,
+  "darken": 0.95
+ },
+ "shots": [
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 65.95,
+   "dur": 3.0,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.06,
+    1.1
+   ],
+   "cx": 0.47,
+   "cy": 0.5,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 68.35,
+   "dur": 2.6,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.42,
+    1.48
+   ],
+   "cx": 0.47,
+   "cy": 0.38,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 70.43,
+   "dur": 3.4,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.06,
+    1.12
+   ],
+   "cx": 0.47,
+   "cy": 0.48,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 73.15,
+   "dur": 3.2,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.48,
+    1.54
+   ],
+   "cx": 0.5,
+   "cy": 0.36,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 75.71,
+   "dur": 3.4,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.06,
+    1.08
+   ],
+   "cx": 0.48,
+   "cy": 0.48,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 78.43,
+   "dur": 3.4,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.42,
+    1.48
+   ],
+   "cx": 0.5,
+   "cy": 0.42,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 81.15,
+   "dur": 4.5,
+   "speed": 0.8,
+   "interp": false,
+   "zoom": [
+    1.08,
+    1.16
+   ],
+   "cx": 0.48,
+   "cy": 0.5,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 23.5,
+   "text": "The *first bodybuilder*\never filmed :flexed-biceps:",
+   "style": "title",
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 4.5,
+   "text": "*1894.* Edison's studio\nfilmed this man :eyes:",
+   "style": "cap"
+  },
+  {
+   "t": 4.5,
+   "d": 4.5,
+   "text": "His name:\n*Eugen Sandow*",
+   "style": "cap"
+  },
+  {
+   "t": 9.0,
+   "d": 4.5,
+   "text": "In *1901* he ran the first\nbig bodybuilding contest",
+   "style": "cap"
+  },
+  {
+   "t": 13.5,
+   "d": 4.8,
+   "text": "One of the judges wrote\n*Sherlock Holmes*",
+   "style": "cap"
+  },
+  {
+   "t": 18.3,
+   "d": 5.2,
+   "text": "Every Mr. Olympia winner\ngets a statue of *him* :trophy:",
+   "style": "cap"
+  }
+ ],
+ "marks": [],
+ "sfx": [],
+ "lufs": -14.0
+}

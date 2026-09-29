@@ -177,8 +177,11 @@ def wrap_tokens(lines, fnt, max_w, emoji_px):
 
 def render_text(text, font_name="Montserrat Black", size=92, color=(255, 255, 255), accent=None,
                 stroke=10, max_w=940, line_gap=0.08, shadow=True, upper=True, bg=None, pad=(28, 18),
-                align="center", max_lines=2, min_size=60):
-    """Return an RGBA PIL image of the caption (tight bbox). Shrinks the font until it fits max_lines."""
+                align="center", max_lines=2, min_size=60, gradients=None, stroke_color=(0, 0, 0), outline=0,
+                outline_color=(255, 255, 255)):
+    """Return an RGBA PIL image of the caption (tight bbox). Shrinks the font until it fits max_lines.
+    gradients: {"*": ((r,g,b) top, (r,g,b) bottom)} fills those highlight spans with a vertical gradient.
+    outline: extra outer outline (sticker look) in outline_color, drawn behind the stroke."""
     if upper:
         text = "\n".join(" ".join(w if (w.startswith(":") and w.endswith(":")) else w.upper()
                                   for w in ln.split(" ")) for ln in text.split("\n"))
@@ -216,9 +219,12 @@ def render_text(text, font_name="Montserrat Black", size=92, color=(255, 255, 25
     widths = [sum((emoji_px if t[2] else fnt.getlength(t[0])) for t in ln) + space * (len(ln) - 1) for ln in lines]
     tw = int(max(widths) if widths else 10)
     th = lh * len(lines)
-    m = stroke + 24
+    m = stroke + outline + 24
     img = Image.new("RGBA", (tw + 2 * m, th + 2 * m), (0, 0, 0, 0))
     d = ImageDraw.Draw(img)
+    g_masks, g_lines = {}, set()
+    out_mask = Image.new("L", img.size, 0) if outline else None
+    d_out = ImageDraw.Draw(out_mask) if outline else None
     emojis = []
     for i, ln in enumerate(lines):
         if align == "center":
@@ -235,8 +241,36 @@ def render_text(text, font_name="Montserrat Black", size=92, color=(255, 255, 25
                 col = COLORS[key] if accent is None or key != "*" else accent
             else:
                 col = color
-            d.text((x, y), word, font=fnt, fill=col + (255,), stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
+            if outline:
+                d_out.text((x, y), word, font=fnt, fill=255, stroke_width=stroke + outline, stroke_fill=255)
+            if gradients and key in gradients:
+                d.text((x, y), word, font=fnt, fill=stroke_color + (255,), stroke_width=stroke,
+                       stroke_fill=stroke_color + (255,))
+                g_masks.setdefault(key, Image.new("L", img.size, 0))
+                ImageDraw.Draw(g_masks[key]).text((x, y), word, font=fnt, fill=255)
+                g_lines.add(i)
+            else:
+                d.text((x, y), word, font=fnt, fill=col + (255,), stroke_width=stroke,
+                       stroke_fill=stroke_color + (255,))
             x += fnt.getlength(word) + space
+    for key, gm in g_masks.items():
+        top, bot = gradients[key]
+        grad = np.zeros((img.height, img.width, 4), np.uint8)
+        for li in g_lines:
+            y0 = m + li * lh + int(asc * 0.18)
+            y1 = m + li * lh + asc
+            rows = np.clip((np.arange(img.height) - y0) / max(1, y1 - y0), 0, 1)
+            band = (np.arange(img.height) >= m + li * lh - stroke) & (np.arange(img.height) < m + (li + 1) * lh + stroke)
+            for c in range(3):
+                col_rows = top[c] + (bot[c] - top[c]) * rows
+                grad[band, :, c] = col_rows[band, None].astype(np.uint8)
+        grad[..., 3] = np.asarray(gm)
+        img.alpha_composite(Image.fromarray(grad, "RGBA"))
+    if outline:
+        base_o = Image.new("RGBA", img.size, outline_color + (0,))
+        base_o.putalpha(out_mask)
+        base_o.alpha_composite(img)
+        img = base_o
     for ex, ey, name in emojis:
         try:
             em = emoji_image(name, emoji_px)

@@ -2,6 +2,8 @@
 
 Built from what 40M+ view Shorts do (see ../BENCHMARK.md), nothing else:
   * layouts: "full" (9:16 crop), "meme" (clip in a box on a plain card, caption above), "blur" (clip on a blurred copy)
+    Channel default since 2026-09 (DEFAULT_LAYOUT): "blur", 1:1 box at y=300, title above the box, captions
+    ("cap" / "big") directly under it, Dela Gothic One in white with *gold* / ~orange~ gradient highlights
   * per-shot camera: eased zoom/pan keyframes, punch-in zooms, slow motion (real frames when the source allows)
   * one short caption line that changes at story beats, italic *action* labels, reaction labels, chapter labels
   * callouts pinned to the subject: plain red arrow, hand-drawn red circle (they follow the crop)
@@ -33,7 +35,14 @@ ROOT = os.path.dirname(HERE)
 SRC_DIR = os.environ.get("RS_SOURCES", os.path.join(ROOT, "work", "dvids"))
 SFX_DIR = os.path.join(ROOT, "assets", "sfx")
 R.FONTS.update({"Inter ExtraBold": "Inter-ExtraBold.ttf", "Inter Bold": "Inter-Bold.ttf",
-                "Inter SemiBold": "Inter-SemiBold.ttf"})
+                "Inter SemiBold": "Inter-SemiBold.ttf", "Dela Gothic One": "DelaGothicOne-Regular.ttf",
+                "Lilita One": "LilitaOne-Regular.ttf", "Titan One": "TitanOne-Regular.ttf", "Bungee": "Bungee-Regular.ttf",
+                "Russo One": "RussoOne-Regular.ttf"})
+# channel palette (profile picture = Super Saiyan): white text, *gold->orange*, ~orange->red~, dark brown edge
+SAIYAN = {"*": ((255, 236, 92), (255, 140, 0)), "~": ((255, 170, 40), (232, 62, 0)), "^": ((255, 255, 255), (255, 214, 120))}
+EDGE = (28, 12, 0)
+# default layout: the clip in a 1:1 box (full width) on a blurred, darkened copy of itself
+DEFAULT_LAYOUT = {"mode": "blur", "box_aspect": 1.0, "box_top": 300}
 RED = (232, 28, 28)
 
 
@@ -57,6 +66,17 @@ AF = {
 
 # caption styles (sizes are for a 1080 px wide frame)
 STYLES = {
+    # channel style (2026-09 feedback): title at the top, captions directly under the video box
+    "title": dict(font="Dela Gothic One", size=68, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
+                  italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=1000),
+    "cap": dict(font="Dela Gothic One", size=58, color=(255, 255, 255), stroke=6, shadow=True, upper=False,
+                italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=920),
+    # big punch label under the video ("20.00 FLAT")
+    "big": dict(font="Dela Gothic One", size=80, color=(255, 255, 255), stroke=8, shadow=True, upper=True,
+                italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=940),
+    # small pill ("TEST 3/10", "1910")
+    "tag": dict(font="Dela Gothic One", size=36, color=(30, 12, 0), stroke=0, shadow=False, upper=True,
+                italic=0.0, bg=(255, 176, 0), pad=(22, 10)),
     # black text on the plain card, just above the clip ("Define Aura" format)
     "meme": dict(font="Inter ExtraBold", size=66, color=(0, 0, 0), stroke=0, shadow=False, upper=False, italic=0.0),
     # white bold italic with a dark edge, upper third of a full-screen clip ("Old gymnastics judging was INSANE")
@@ -73,13 +93,13 @@ STYLES = {
     # spoken-word subtitles (speech from the source), lower third
     "sub": dict(font="Montserrat ExtraBold", size=60, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
                 italic=0.0),
-    # big condensed label under the clip ("6 CHIN-UPS")
-    "big": dict(font="Anton", size=104, color=(255, 214, 10), stroke=0, shadow=True, upper=True, italic=0.0),
-    # small counter pill ("TEST 3/10")
-    "tag": dict(font="Montserrat ExtraBold", size=40, color=(20, 20, 20), stroke=0, shadow=False, upper=True,
+    # (old) condensed label under the clip ("6 CHIN-UPS")
+    "big_anton": dict(font="Anton", size=104, color=(255, 214, 10), stroke=0, shadow=True, upper=True, italic=0.0),
+    # (old) small counter pill
+    "tag_old": dict(font="Montserrat ExtraBold", size=40, color=(20, 20, 20), stroke=0, shadow=False, upper=True,
                 italic=0.0, bg=(255, 214, 10), pad=(22, 10)),
-    # title on a dark card
-    "title": dict(font="Montserrat Black", size=74, color=(255, 255, 255), stroke=0, shadow=True, upper=False,
+    # (old) title on a dark card
+    "title_old": dict(font="Montserrat Black", size=74, color=(255, 255, 255), stroke=0, shadow=True, upper=False,
                   italic=0.0),
     # left-aligned multi-line list (summary card)
     "list": dict(font="Montserrat ExtraBold", size=44, color=(255, 255, 255), stroke=0, shadow=True, upper=False,
@@ -135,7 +155,9 @@ def caption_image(text, style, **over):
                         shadow=st["shadow"], upper=st["upper"], max_w=st.get("max_w", 960),
                         max_lines=st.get("max_lines", 2), min_size=int(st["size"] * 0.6),
                         align=st.get("align", "center"), line_gap=st.get("line_gap", 0.08),
-                        bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))))
+                        bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))),
+                        gradients=st.get("gradients"), stroke_color=tuple(st.get("stroke_color", (0, 0, 0))),
+                        outline=st.get("outline", 0))
     return shear(img, st["italic"])
 
 
@@ -229,11 +251,13 @@ class ShotStream:
 class Bench:
     def __init__(self, plan):
         self.p = plan
-        lay = plan.get("layout", {})
+        lay = plan.get("layout", DEFAULT_LAYOUT)
         self.mode = lay.get("mode", "full")
         self.bg = tuple(lay.get("bg", (255, 255, 255)))
         self.box_aspect = lay.get("box_aspect", 1.0)
         self.box_y = lay.get("box_y", 0.47)
+        self.box_top = lay.get("box_top")
+        self.darken = lay.get("darken", 0.5)
         t = 0.0
         self.timeline = []
         for s in plan["shots"]:
@@ -262,10 +286,13 @@ class Bench:
         if mode == "full":
             return 0, 0, W, H
         aspect = shot.get("box_aspect", self.box_aspect)
-        rw = W
+        rw = int(shot.get("box_w", self.p.get("layout", {}).get("box_w", W))) // 2 * 2
         rh = int(round(rw / aspect / 2)) * 2
-        y = int(round(H * shot.get("box_y", self.box_y) - rh / 2))
-        return 0, y, rw, rh
+        if self.box_top is not None and "box_y" not in shot:
+            y = int(self.box_top)
+        else:
+            y = int(round(H * shot.get("box_y", self.box_y) - rh / 2))
+        return (W - rw) // 2, y, rw, rh
 
     def cam(self, shot, lt):
         dur = shot["dur"]
@@ -292,8 +319,8 @@ class Bench:
         sh_, sw_ = src.shape[:2]
         to_out, rect, (rx, ry, rw, rh) = self.mapper(seg, lt, sw_, sh_)
         mode = shot.get("layout", self.mode)
-        if mode == "blur":
-            out = R.blurred_bg(src, darken=0.55)
+        if mode == "blur":  # same clip, enlarged, blurred and darkened
+            out = R.blurred_bg(src, darken=shot.get("darken", self.darken))
         elif mode == "meme":
             out = np.empty((H, W, 3), np.float32)
             out[:] = shot.get("bg", self.bg)
@@ -401,6 +428,10 @@ class Bench:
             return x, ry - 26 - h / 2
         if style == "label":
             return x, (ry + 70 if seg["shot"].get("layout", self.mode) == "full" else ry - 26 - h / 2)
+        if style in ("cap", "big") or (style == "sub" and self.box_top is not None):
+            return x, ry + rh + 26 + h / 2  # directly under the video box
+        if style == "title" and seg["shot"].get("layout", self.mode) != "full":
+            return x, max(ry - 24 - h / 2, 90 + h / 2)  # just above the video box
         if style == "sub":
             return x, 0.74 * H
         if style == "chapter":

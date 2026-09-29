@@ -1,0 +1,225 @@
+{
+ "id": "c7_1949_acrobatics_v2",
+ "yt_title": "College acrobatics in 1949 was built different 💀 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_top": 300,
+  "darken": 0.8
+ },
+ "shots": [
+  {
+   "src": "archive/Exercise1949",
+   "in": 49.0,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   },
+   "speed": 0.8
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 14.0,
+   "dur": 3.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 20.5,
+   "dur": 2.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 29.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 73.0,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 490.0,
+   "dur": 4.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 499.5,
+   "dur": 2.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 531.8,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 24.0,
+   "text": "College acrobatics in 1949\nwas *built different* :skull:",
+   "style": "title",
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 3.2,
+   "text": "LEAPFROG TO\n*HIS SHOULDERS*",
+   "style": "big"
+  },
+  {
+   "t": 3.35,
+   "d": 3.25,
+   "text": "STANDING ON\n*HIS PARTNER*",
+   "style": "big"
+  },
+  {
+   "t": 6.75,
+   "d": 2.65,
+   "text": "*NO HANDS* :flushed-face:",
+   "style": "big"
+  },
+  {
+   "t": 9.55,
+   "d": 2.45,
+   "text": "AND *DISMOUNT*",
+   "style": "big"
+  },
+  {
+   "t": 12.15,
+   "d": 2.85,
+   "text": "*HUMAN THROW*",
+   "style": "big"
+  },
+  {
+   "t": 15.15,
+   "d": 3.85,
+   "text": "*3-MAN* TOWER",
+   "style": "big"
+  },
+  {
+   "t": 19.15,
+   "d": 1.85,
+   "text": "*CARTWHEEL*",
+   "style": "big"
+  },
+  {
+   "t": 21.15,
+   "d": 2.85,
+   "text": "NO GYM MACHINES.\n*JUST BODYWEIGHT* :flexed-biceps:",
+   "style": "big"
+  }
+ ],
+ "marks": [],
+ "sfx": [],
+ "audio_clips": [
+  {
+   "src": "archive/Exercise1949",
+   "in": 26.3,
+   "dur": 14.7,
+   "t": 0.8,
+   "af": "film"
+  },
+  {
+   "src": "archive/Exercise1949",
+   "in": 486.3,
+   "dur": 6.9,
+   "t": 15.9,
+   "af": "film"
+  }
+ ],
+ "lufs": -14.0
+}

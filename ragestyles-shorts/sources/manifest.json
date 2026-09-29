@@ -1,0 +1,322 @@
+{
+ "about": "Every source file the RageStyles pipeline expects under ragestyles-shorts/. Nothing here is committed (the repo is public). Run: python3 pipeline/fetch_sources.py [group ...]  (default: core sfx_mixkit)",
+ "groups": {
+  "core": "public domain films + NASA video behind the liked shorts (about 560 MB)",
+  "nasa_extra": "more NASA exercise footage (ARED, about 450 MB)",
+  "commons": "CC BY / BY-SA sport clips from Wikimedia Commons; slow, rate limited (429), one try every 4 min",
+  "sfx_mixkit": "licensed whoosh/impact sounds, converted to 48 kHz wav next to the mp3",
+  "models": "Demucs weights for removing music from narration",
+  "off_direction": "footage from shorts the owner rejected; only for re-rendering old plans"
+ },
+ "dvids": "US military footage (off direction now) is listed with credits in sources/dvids_sources.json",
+ "items": [
+  {
+   "group": "core",
+   "path": "work/archive/Exercise1949.mp4",
+   "url": "https://archive.org/download/Exercise1949/Exercise1949.mp4",
+   "bytes": 61556887,
+   "license": "Public domain (Prelinger Archives, Coronet 1949 'Exercise and Health')",
+   "page": "https://archive.org/details/Exercise1949",
+   "used_in": [
+    "c7_1949_acrobatics",
+    "c7_1949_acrobatics_v2"
+   ]
+  },
+  {
+   "group": "core",
+   "path": "work/archive/GettingR1951.mp4",
+   "url": "https://archive.org/download/GettingR1951/GettingR1951.mp4",
+   "bytes": 65307978,
+   "license": "Public domain (Prelinger Archives, 'Getting Ready Physically' 1951)",
+   "page": "https://archive.org/details/GettingR1951",
+   "used_in": [
+    "c1_1951_fitness_test"
+   ]
+  },
+  {
+   "group": "core",
+   "path": "work/archive/edison_kinetoscope.mp4",
+   "url": "https://archive.org/download/edison-kinetoscope-films/Edison%20Kinetoscope%20Films.mp4",
+   "bytes": 71987105,
+   "license": "Public domain (Edison Manufacturing Co. films, 1890s; Sandow at 65.95 s)",
+   "page": "https://archive.org/details/edison-kinetoscope-films",
+   "used_in": [
+    "c4_sandow_1894",
+    "c4_sandow_1894_v2"
+   ]
+  },
+  {
+   "group": "core",
+   "path": "work/archive/johnson1910.avi",
+   "url": "https://archive.org/download/JackJohnsonVsJamesJJeffries/JackJohnsonVsJamesJJeffries.avi",
+   "bytes": 135711636,
+   "license": "Public domain (1910 fight film)",
+   "page": "https://archive.org/details/JackJohnsonVsJamesJJeffries",
+   "used_in": [
+    "c5_johnson_jeffries_1910"
+   ]
+  },
+  {
+   "group": "core",
+   "path": "work/nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4.mp4",
+   "url": "https://images-assets.nasa.gov/video/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4~orig.mp4",
+   "bytes": 225473739,
+   "license": "NASA media, not copyrighted (credit NASA; no endorsement implied)",
+   "page": "https://images.nasa.gov/details/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "used_in": [
+    "c2_leg_day_in_space"
+   ]
+  },
+  {
+   "group": "core",
+   "path": "work/nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4.srt",
+   "url": "https://images-assets.nasa.gov/video/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4.srt",
+   "bytes": 4693,
+   "license": "NASA captions"
+  },
+  {
+   "group": "nasa_extra",
+   "path": "work/nasa/jsc2018m000791-ARED_PT_Hopkins_1.mp4",
+   "url": "https://images-assets.nasa.gov/video/jsc2018m000791-ARED_PT_Hopkins_1/jsc2018m000791-ARED_PT_Hopkins_1~orig.mp4",
+   "bytes": 185353767,
+   "license": "NASA media, not copyrighted",
+   "page": "https://images.nasa.gov/details/jsc2018m000791-ARED_PT_Hopkins_1"
+  },
+  {
+   "group": "nasa_extra",
+   "path": "work/nasa/jsc2018m000860_Glover_ARED_1.mp4",
+   "url": "https://images-assets.nasa.gov/video/jsc2018m000860_Glover_ARED_1/jsc2018m000860_Glover_ARED_1~orig.mp4",
+   "bytes": 95896940,
+   "license": "NASA media, not copyrighted",
+   "page": "https://images.nasa.gov/details/jsc2018m000860_Glover_ARED_1"
+  },
+  {
+   "group": "nasa_extra",
+   "path": "work/nasa/jsc2018m000985_Suni_Williams_ARED_training_1.mp4",
+   "url": "https://images-assets.nasa.gov/video/jsc2018m000985_Suni_Williams_ARED_training_1/jsc2018m000985_Suni_Williams_ARED_training_1~orig.mp4",
+   "bytes": 170894901,
+   "license": "NASA media, not copyrighted",
+   "page": "https://images.nasa.gov/details/jsc2018m000985_Suni_Williams_ARED_training_1"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/wsm_stones.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/WSM_Philippines_2018_-_Atlas_Stones_Matjaz_Belsak.webm",
+   "bytes": 165272794,
+   "license": "CC BY 3.0",
+   "author": "https://www.youtube.com/user/engrjsil Jarmai Silvestre",
+   "page": "https://commons.wikimedia.org/wiki/File:WSM_Philippines_2018_-_Atlas_Stones_Matjaz_Belsak.webm"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/safp_100m.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Shelly_Ann_Fraser_Pryce_wins_-_World_Athletics_Championships_BEIJING_2015.webm",
+   "bytes": 26771125,
+   "license": "CC BY 3.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Shelly_Ann_Fraser_Pryce_wins_-_World_Athletics_Championships_BEIJING_2015.webm",
+   "note": "TV broadcast capture uploaded as CC BY: do not use (rights unclear)"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/sumo1.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/2022-January-Grand-Sumo-Tournament-day11_2022-01-19_01.webm",
+   "license": "CC BY 4.0",
+   "author": "User:RuinDig|RuinDig/Yuki Uchida",
+   "page": "https://commons.wikimedia.org/wiki/File:2022-January-Grand-Sumo-Tournament-day11_2022-01-19_01.webm",
+   "note": "4K, not downloaded yet"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/sumo2.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/1/18/2022-January-Grand-Sumo-Tournament-day11_2022-01-19_02.webm",
+   "license": "CC BY 4.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:2022-January-Grand-Sumo-Tournament-day11_2022-01-19_02.webm",
+   "note": "4K, not downloaded yet"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/sumo3.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/2022-January-Grand-Sumo-Tournament-day11_2022-01-19_03.webm",
+   "license": "CC BY 4.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:2022-January-Grand-Sumo-Tournament-day11_2022-01-19_03.webm",
+   "note": "4K, not downloaded yet"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/sumo4.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/bd/2022-January-Grand-Sumo-Tournament-day11_2022-01-19_04.webm",
+   "bytes": 1693195,
+   "license": "CC BY 4.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:2022-January-Grand-Sumo-Tournament-day11_2022-01-19_04.webm"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/judo_2011.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Judo_2011_World_Championships_Paris-Rothberg_EST_Vs_Mendonca_BRA_-73kg.webm",
+   "bytes": 73410101,
+   "license": "CC BY 3.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Judo_2011_World_Championships_Paris-Rothberg_EST_Vs_Mendonca_BRA_-73kg.webm"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/rugby_arm.ogv",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Uni_vs._Maroochydore_rugby_arm_wrestle.ogv",
+   "bytes": 60635786,
+   "license": "CC BY-SA 3.0",
+   "author": "",
+   "page": "https://commons.wikimedia.org/wiki/File:Uni_vs._Maroochydore_rugby_arm_wrestle.ogv"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/men200.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/4/45/Athletics_Men%27s_200_Final_-_27th_Summer_Universiade_2013_-_Kazan_%28RUS%29.webm",
+   "bytes": 38875585,
+   "license": "CC BY 3.0",
+   "author": "International University Sports Federation (FISU)",
+   "page": "https://commons.wikimedia.org/wiki/File:Athletics_Men%27s_200_Final_-_27th_Summer_Universiade_2013_-_Kazan_%28RUS%29.webm",
+   "used_in": [
+    "c3_200m_rsa_vs_jam"
+   ]
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/polevault_2017.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Athletics_Men%27s_Pole_vault_final_-_29th_Summer_Universiade_2017%2C_Taipei%2C_Chinese_Taipei.webm",
+   "bytes": 27217628,
+   "license": "CC BY 3.0",
+   "author": "International University Sports Federation (FISU)",
+   "page": "https://commons.wikimedia.org/wiki/File:Athletics_Men%27s_Pole_vault_final_-_29th_Summer_Universiade_2017,_Taipei,_Chinese_Taipei.webm"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/tug_1080.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Tug_of_War.webm",
+   "bytes": 36845499,
+   "license": "CC BY-SA 4.0",
+   "author": "JyotiPN",
+   "page": "https://commons.wikimedia.org/wiki/File:Tug_of_War.webm"
+  },
+  {
+   "group": "commons",
+   "path": "work/commons/tug_vadamvali.webm",
+   "url": "https://upload.wikimedia.org/wikipedia/commons/transcoded/0/0c/Vadamvali_-_Tug_of_War_-_%E0%B4%B5%E0%B4%9F%E0%B4%82%E0%B4%B5%E0%B4%B2%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm/Vadamvali_-_Tug_of_War_-_%E0%B4%B5%E0%B4%9F%E0%B4%82%E0%B4%B5%E0%B4%B2%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm.1080p.vp9.webm",
+   "bytes": 174100971,
+   "license": "CC BY-SA 4.0",
+   "author": "Sahya Digital Conservation Foundation",
+   "page": "https://commons.wikimedia.org/wiki/File:Vadamvali_-_Tug_of_War_-_%E0%B4%B5%E0%B4%9F%E0%B4%82%E0%B4%B5%E0%B4%B2%E0%B4%BF_-_Wiki_Loves_Onam_2024.webm"
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/166_fast_small_sweep.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/166/166-preview.mp3",
+   "bytes": 27247,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/1489_air_woosh.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1489/1489-preview.mp3",
+   "bytes": 71724,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/1490_fast_whoosh_transition.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1490/1490-preview.mp3",
+   "bytes": 57624,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/1492_cinematic_whoosh_fast_transition.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1492/1492-preview.mp3",
+   "bytes": 44574,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/175_short_transition_sweep.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/175/175-preview.mp3",
+   "bytes": 18057,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/1143_cinematic_whoosh_deep_impact.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3",
+   "bytes": 115904,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/788_big_cinematic_impact.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/788/788-preview.mp3",
+   "bytes": 225505,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/2908_movie_trailer_epic_impact.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2908/2908-preview.mp3",
+   "bytes": 154441,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/2150_impact_of_a_blow.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2150/2150-preview.mp3",
+   "bytes": 16962,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "sfx_mixkit",
+   "path": "assets/sfx_mixkit/2182_wood_hard_hit.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2182/2182-preview.mp3",
+   "bytes": 12213,
+   "license": "Mixkit Sound Effects Free License (YouTube use OK, no attribution, no redistribution of the files)",
+   "page": "https://mixkit.co/free-sound-effects/",
+   "convert_wav": true
+  },
+  {
+   "group": "models",
+   "path": "work/models/demucs/htdemucs.th",
+   "url": "https://huggingface.co/anchor-flux/demucs-htdemucs/resolve/main/htdemucs.th",
+   "license": "MIT (Demucs, Meta)",
+   "note": "music removal: python3 -m demucs --repo work/models/demucs -n htdemucs --two-stems vocals"
+  },
+  {
+   "group": "off_direction",
+   "path": "work/archive/apollo16_nsh.mpeg",
+   "url": "https://archive.org/download/NothingSoHiddenApollo16/Apollo_16_Nothing_So_Hidden....mpeg",
+   "bytes": 780479336,
+   "license": "NASA, public domain",
+   "note": "owner said NASA 'having fun' does not fit the channel",
+   "used_in": [
+    "c6_apollo16_moon_fun"
+   ]
+  }
+ ]
+}

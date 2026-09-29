@@ -1,6 +1,7 @@
 """QA for a rendered short: contact sheet of frames + loudness / format report.
 
 Usage: python3 qa.py video.mp4 sheet.jpg [t1 t2 ...]   (defaults to 12 evenly spaced frames)
+Also lists silent stretches (below -50 dB for 1.5 s or more): the channel wants original sound all the way through.
 """
 import json
 import re
@@ -26,6 +27,16 @@ def loudness(path):
     i = re.findall(r"I:\s+(-?[\d.]+) LUFS", err)
     tp = re.findall(r"Peak:\s+(-?[\d.]+) dBFS", err)
     return (float(i[-1]) if i else None), (float(tp[-1]) if tp else None)
+
+
+def silences(path, noise_db=-50, min_d=1.5):
+    err = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", path, "-af",
+                          f"silencedetect=noise={noise_db}dB:d={min_d}", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    st = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", err)]
+    en = [float(x) for x in re.findall(r"silence_end: (-?[\d.]+)", err)]
+    return [[round(max(0.0, a), 2), round(b, 2) if i < len(en) else None]
+            for i, (a, b) in enumerate(zip(st, en + [None] * (len(st) - len(en))))]
 
 
 def sheet(path, out, times, cols=6, tw=270):
@@ -54,4 +65,8 @@ if __name__ == "__main__":
     sheet(video, out, times)
     lufs, peak = loudness(video)
     info.update({"lufs": lufs, "true_peak_dbfs": peak})
+    if info["audio"]:
+        info["silent_gaps"] = silences(video)
     print(json.dumps(info))
+    if info.get("silent_gaps"):
+        print("WARNING: silent stretches", info["silent_gaps"], file=sys.stderr)

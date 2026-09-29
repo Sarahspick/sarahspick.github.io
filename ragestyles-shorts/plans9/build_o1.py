@@ -42,7 +42,7 @@ ts = [0.0]
 for s in shots:
     ts.append(round(ts[-1] + s["dur"], 2))
 T = ts[-1]
-BY = 0.70  # owner: changing captions low in the middle of the screen
+BY = 0.56  # owner: captions just a little below the exact centre of the screen
 
 
 def cap(i, text, dt=0.0, d=None, y=BY):

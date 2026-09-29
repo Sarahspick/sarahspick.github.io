@@ -11,6 +11,7 @@ Engines
 import asyncio
 import base64
 import difflib
+import hashlib
 import json
 import os
 import re
@@ -21,7 +22,7 @@ import urllib.request
 
 import numpy as np
 
-from .config import asset
+from .config import WORK, asset
 
 try:
     from num2words import num2words
@@ -279,17 +280,27 @@ class ElevenLabsNarrator(Narrator):
             body["voice_settings"] = self.settings
         url = f"{self.API}/text-to-speech/{self.voice_id}/with-timestamps?output_format={self.fmt}"
         expected = max(1, len(_norm_words(text)))
+        # every call costs credits: keep good responses so a re-render of the same sentence is free
+        key = hashlib.sha1(json.dumps([self.voice_id, self.fmt, body], sort_keys=True).encode()).hexdigest()[:20]
+        cache = os.path.join(WORK, "elevenlabs_cache", key + ".json")
         for attempt in range(5):
             req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
                                          headers={"xi-api-key": self.key, "Content-Type": "application/json"})
             try:
-                with urllib.request.urlopen(req, timeout=120) as r:
-                    d = json.load(r)
+                if attempt == 0 and os.path.exists(cache):
+                    with open(cache, encoding="utf-8") as f:
+                        d = json.load(f)
+                else:
+                    with urllib.request.urlopen(req, timeout=120) as r:
+                        d = json.load(r)
                 audio = decode_audio(base64.b64decode(d["audio_base64"]), self.sr)
                 audio, cut = trim_silence(audio, self.sr)
                 al = d.get("alignment") or d["normalized_alignment"]
                 words = _char_words(al["characters"], al["character_start_times_seconds"], cut)
                 if len(words) >= 0.8 * expected and len(audio) / self.sr >= 0.12 * expected:
+                    os.makedirs(os.path.dirname(cache), exist_ok=True)
+                    with open(cache, "w", encoding="utf-8") as f:
+                        json.dump(d, f)
                     return audio, words
                 problem = f"truncated response ({len(words)}/{expected} words)"
             except urllib.error.HTTPError as e:

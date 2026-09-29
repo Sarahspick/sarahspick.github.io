@@ -19,10 +19,13 @@
 - 그래서 ElevenLabs로 바꿔 완전 자동화합니다.
   - 키는 환경 변수 `ELEVENLABS_API_KEY`로만 받습니다. 채팅으로는 받지 않습니다.
   - 엔진은 `factory/voice.py`의 `ElevenLabsNarrator`입니다. `/with-timestamps` 글자 타이밍을 단어 타이밍으로 바꿉니다. 모의 응답으로만 테스트했고, 실제 호출 검증이 필요합니다.
-- 키가 들어오면 할 일
-  1. `GET /v1/models`로 모델을 확인합니다. Eleven v4가 2026-09-28에 나왔고, 표현력이 가장 좋다고 합니다. 한국어와 with-timestamps를 지원하는지 확인합니다.
-  2. 후보를 고릅니다. 영어는 Andrew 느낌의 남성 목소리를 기본 목소리(`GET /v1/voices`)와 라이브러리에서 찾습니다. 한국어는 라이브러리(`GET /v1/shared-voices?language=ko`)에서 원어민 목소리를 찾습니다. 라이브러리 목소리는 API로 쓰려면 My Voices에 추가해야 할 수 있으니, 요금제의 슬롯 수를 확인합니다.
-  3. `tools/voice_samples.py`가 ElevenLabs 후보도 받도록 확장합니다. 번호 붙인 샘플 영상을 보내고, 사용자가 고르면 `channel.json` 기본값을 바꿉니다.
+- 2026-09-29 확인 결과 (키 연결됨)
+  - 사용자는 Creator라고 했지만 API(`GET /v1/user/subscription`)로는 **Starter**(월 4만 자, 목소리 슬롯 10개)로 나옵니다. `mp3_44100_192`를 요청하면 403이 납니다. Creator로 확인되기 전까지 `format`은 기본값 128kbps로 둡니다.
+  - Eleven v4(`eleven_v4`)는 한국어와 `/with-timestamps`를 지원하고, `voice_settings.speed`도 받습니다. v4 Turbo는 크레딧이 절반입니다.
+  - 라이브러리 목소리는 My Voices에 추가하지 않아도 voice_id로 바로 쓸 수 있습니다 (슬롯을 쓰지 않음).
+  - `ElevenLabsNarrator`는 성공한 응답을 `work/elevenlabs_cache/`에 저장합니다. 같은 문장·목소리·설정을 다시 렌더링하면 크레딧이 들지 않습니다.
+  - `tools/voice_samples.py`의 기본 엔진이 ElevenLabs입니다 (`--engine edge`로 예전 목록). 후보는 `ELEVEN_VOICES`에 있습니다 (영어 9명, 한국어 원어민 9명). 샘플 영상 `output/20260929_voice_samples_elevenlabs_EN_KO.mp4`를 보냈고, 사용자의 선택을 기다립니다.
+- 사용자가 고르면 `channel.json` 기본 목소리를 `{"engine": "elevenlabs", "voice_id": ..., "model": "eleven_v4", "settings": {"speed": 1.1}}`로 바꾸고, 한국어판은 대본의 `"voice"`로 한국어 목소리를 지정합니다.
 - 크레딧을 아낍니다. 샘플 문장은 짧게 하고, 같은 문장을 불필요하게 다시 생성하지 않습니다.
 
 ## 새 세션에서 처음 할 일
@@ -39,10 +42,11 @@ python tools/grab.py bili:BV1m4411P7Fs                  # 목소리 샘플 영�
 ```
 
 - 키 확인: `ELEVENLABS_API_KEY`가 비어 있으면, 사용자에게 환경 설정에 넣고 새 세션을 열어 달라고 안내합니다. 채팅으로 받지 않습니다.
-- 사용자는 Creator 요금제($22)를 고려 중입니다. 확인되면 음성 설정에 `"format": "mp3_44100_192"`를 넣습니다.
+- 요금제 확인: `GET /v1/user/subscription`의 `tier`가 creator 이상이면 음성 설정에 `"format": "mp3_44100_192"`를 넣습니다.
 
 ## 작업 팁
 
 - 클라우드에서는 유튜브 다운로드가 봇 확인에 막힙니다. 빌리빌리 재업로드(`bili:`)를 씁니다.
 - `pkill -f`를 쓰면 자기 셸까지 죽습니다. `ps`로 PID를 찾아 kill합니다.
+- `pip install num2words`가 docopt 빌드에서 실패하면 `pip install docopt-ng && pip install --no-deps num2words`로 설치합니다.
 - 결과물은 앱으로 보냅니다 (업로드 한도 30MB). 사용자 노트북 저장 위치는 `C:\Users\hw487\Downloads`입니다.

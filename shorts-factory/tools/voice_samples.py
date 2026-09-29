@@ -1,9 +1,12 @@
 """Voice sample reel: the same short sample read by every English and Korean voice, one numbered part per voice
 on real footage (same layout, captions and SFX as a finished Short), joined into one video to pick a narrator by ear.
 
-    python tools/voice_samples.py                         # all voices -> output/<date>_voice_samples_EN_KO.mp4
+    python tools/voice_samples.py                         # ElevenLabs candidates -> output/<date>_voice_samples_elevenlabs_EN_KO.mp4
     python tools/voice_samples.py --lang ko               # Korean voices only
-    python tools/voice_samples.py --only Brian SunHi --rate +10%
+    python tools/voice_samples.py --engine edge --only Brian SunHi --rate +10%
+    python tools/voice_samples.py --model eleven_multilingual_v2 --speed 1.0
+
+ElevenLabs responses are cached under work/elevenlabs_cache, so re-rendering the reel costs no credits.
 """
 import argparse
 import datetime
@@ -22,7 +25,7 @@ from factory.config import FPS, H, OUTPUT, SR, W, WORK  # noqa: E402
 from factory.render import Short  # noqa: E402
 
 # (edge voice, on-screen name, on-screen description)
-VOICES = {
+EDGE_VOICES = {
     "en": [
         ("en-US-BrianMultilingualNeural", "Brian", "남성 · 미국 · *지금 영상에 쓰는 목소리*"),
         ("en-US-AndrewMultilingualNeural", "Andrew", "남성 · 미국 · 따뜻하고 자신감 있는"),
@@ -62,6 +65,34 @@ VOICES = {
         ("pt-BR-ThalitaMultilingualNeural", "Thalita", "여성 · 다국어 (원래 포르투갈어)"),
     ],
 }
+
+# (voice id, on-screen name, on-screen description). Library voices work through the API without adding them to
+# My Voices. English: warm, confident male narrators in the spirit of Edge "Andrew". Korean: native speakers only.
+ELEVEN_VOICES = {
+    "en": [
+        ("gUABw7pXQjhjt0kNFBTF", "Andrew", "남성 · 미국 · 부드럽고 똑똑한 해설"),
+        ("MFZUKuGQUsGJPQjTS4wC", "Jon", "남성 · 미국 · 따뜻하고 안정감 있는 이야기꾼"),
+        ("ZthjuvLPty3kTMaNKVKb", "Peter", "남성 · 미국 · 자신감 있는 내레이션"),
+        ("uju3wxzG5OhpWcoi3SMy", "Michael", "남성 · 미국 · 자신감 있고 표현력 풍부"),
+        ("Dslrhjl3ZpzrctukrQSN", "Brad", "남성 · 미국 · 다큐멘터리 해설"),
+        ("nPczCjzI2devNBz1zQrb", "Brian", "남성 · 미국 · 깊고 울림 있는"),
+        ("cjVigY5qzO86Huf0OWal", "Eric", "남성 · 미국 · 매끄럽고 믿음직한"),
+        ("PGoKnSD4gKn2aS99wOR2", "Brian S.", "남성 · 미국 · 쇼츠 내레이션용"),
+        ("VCgLBmBjldJmfphyB8sZ", "Liam", "남성 · 미국 · 쇼츠 이야기꾼 (에너지 높음)"),
+    ],
+    "ko": [
+        ("PDoCXqBQFGsvfO0hNkEs", "Chris", "남성 · 20~30대 · 따뜻하고 또렷한 설명"),
+        ("m3gJBS8OofDJfycyA2Ip", "Taehyung", "남성 · 20~30대 · 친근한 SNS 톤"),
+        ("LKOcTG4J4tYTPR9DnLeM", "Mr. K", "남성 · 20~30대 · 크리에이터 톤"),
+        ("1W00IGEmNmwmsDeYy7ag", "Krys", "남성 · 20~30대 · 밝고 신나는"),
+        ("nbrxrAz3eYm9NgojrmFK", "Min-joon", "남성 · 20~30대 · 자신감 있는 내레이션"),
+        ("ZJCNdZEjYwkOElxugmW2", "Hyuk", "남성 · 중년 · 차갑고 또렷한 (가장 많이 쓰임)"),
+        ("4JJwo477JUAx3HV0T7n7", "Yohan Koo", "남성 · 중년 · 자신감 있는 대화체"),
+        ("z6Kj0hecH20CdetSElRT", "Jennie", "여성 · 20~30대 · 자신감 있는 내레이션"),
+        ("uyVNoMrnUku1dZyVEXwD", "Anna Kim", "여성 · 20~30대 · 차분하고 또렷한"),
+    ],
+}
+ENGINES = {"edge": EDGE_VOICES, "elevenlabs": ELEVEN_VOICES}
 
 # Hook + two beats of the Mercedes short, so every voice is heard in the real format (clips borrowed from it).
 FOOTAGE = os.path.join(ROOT, "scripts", "mercedes_bounce.en.json")
@@ -164,14 +195,23 @@ def join(parts, out, height, max_mb):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--lang", nargs="+", default=["en", "ko"], choices=list(VOICES))
-    ap.add_argument("--rate", default="+20%")
+    ap.add_argument("--engine", default="elevenlabs", choices=list(ENGINES))
+    ap.add_argument("--lang", nargs="+", default=["en", "ko"], choices=["en", "ko"])
+    ap.add_argument("--rate", default="+20%", help="edge speaking rate")
+    ap.add_argument("--model", default="eleven_v4", help="ElevenLabs model")
+    ap.add_argument("--speed", type=float, default=1.1, help="ElevenLabs speed (0.7-1.2)")
+    ap.add_argument("--format", default="mp3_44100_128", help="ElevenLabs output (mp3_44100_192 needs Creator+)")
     ap.add_argument("--only", nargs="*", help="voice names or ids to include, e.g. Brian SunHi")
     ap.add_argument("--workers", type=int, default=3)
     ap.add_argument("--height", type=int, default=1280, help="output height (parts render at 1920)")
     ap.add_argument("--max-mb", type=float, default=28, help="target file size in MiB (app uploads stop at 30)")
     ap.add_argument("--out", default=OUTPUT)
     args = ap.parse_args()
+    if args.engine == "edge":
+        vbase, speed = {"engine": "edge", "rate": args.rate}, args.rate
+    else:
+        vbase = {"engine": "elevenlabs", "model": args.model, "settings": {"speed": args.speed}, "format": args.format}
+        speed = f"x{args.speed:g}"
 
     with open(FOOTAGE, encoding="utf-8") as f:
         clips = json.load(f)["clips"]
@@ -179,15 +219,15 @@ def main():
     os.makedirs(work, exist_ok=True)
     jobs, order, listing = [], [], []
     for lang in args.lang:
-        voices = [v for v in VOICES[lang]
+        voices = [v for v in ENGINES[args.engine][lang]
                   if not args.only or any(o.lower() in (v[0] + " " + v[1]).lower() for o in args.only)]
         if not voices:
             continue
-        native = sum(v[0].startswith(lang) for v in voices)
+        native = sum(v[0].startswith(lang) for v in voices) if args.engine == "edge" else len(voices)
         note = f"원어민 {native} · 다국어 {len(voices) - native}" if 0 < native < len(voices) else "같은 문장, 목소리만 바뀝니다"
         sl = os.path.join(work, f"{lang}00_slate.mp4")
         slate(sl, [(f"*{SECTION[lang]}* 목소리 {len(voices)}개", 104), (f"{lang.upper()} 01 ~ {len(voices):02d}", 70),
-                   (f"{note} · 속도 {args.rate}", 50)])
+                   (f"{note} · 속도 {speed}", 50)])
         order.append(sl)
         sample = SAMPLES[lang]
         used = {c for it in [sample["hook"]] + sample["sentences"] for c in it.get("clips", [it.get("clip")])}
@@ -195,7 +235,7 @@ def main():
         for i, (voice, name, desc) in enumerate(voices, 1):
             tag = f"{lang.upper()} {i:02d}"
             sc = {"id": f"voice_samples/{lang}{i:02d}", "lang": lang, "title": f"{tag} {name}", "aspect": "1:1",
-                  "gap": 0.05, "tail": 0.75, "voice": {"engine": "edge", "name": voice, "rate": args.rate},
+                  "gap": 0.05, "tail": 0.75, "voice": dict(vbase, **({"name": voice} if args.engine == "edge" else {"voice_id": voice})),
                   "label": [tag, name, desc], **json.loads(json.dumps(sample)), "clips": part_clips}
             path = os.path.join(work, f"{lang}{i:02d}.json")
             with open(path, "w", encoding="utf-8") as f:
@@ -209,11 +249,12 @@ def main():
             print(f"[part] {os.path.basename(out)}  {tl['duration']}s  words matched "
                   f"{' '.join(it['matched'] for it in tl['items'])}" + "".join(f"\n[warn] {w}" for w in tl["warnings"]))
 
+    os.makedirs(args.out, exist_ok=True)
     stamp = datetime.date.today().strftime("%Y%m%d")
-    out = os.path.join(args.out, f"{stamp}_voice_samples_{'_'.join(x.upper() for x in args.lang)}.mp4")
+    out = os.path.join(args.out, f"{stamp}_voice_samples_{args.engine}_{'_'.join(x.upper() for x in args.lang)}.mp4")
     join(order, out, args.height, args.max_mb)
     with open(out[:-4] + ".txt", "w", encoding="utf-8") as f:
-        f.write(f"rate {args.rate}\n" + "\n".join(listing) + "\n")
+        f.write(f"{args.engine} {json.dumps(vbase)}\n" + "\n".join(listing) + "\n")
     print(f"\n[done] {out}")
 
 

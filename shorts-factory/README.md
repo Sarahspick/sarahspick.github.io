@@ -50,7 +50,7 @@ tools/grab.py            원본 영상 병렬 다운로드 (bili:/yt:/dm:)
 tools/sheet.py           원본 영상 컨택트 시트 (구간 고르기용)
 tools/qa.py              렌더 결과 점검 (싱크 일치율, 효과음 위치, 2fps 시트)
 tools/cutcheck.py        컷 경계 검사: 클립 시작·끝에 앞뒤 장면이 스치면 시작 초를 자동 보정
-tools/voice_samples.py   목소리 비교 샘플
+tools/voice_samples.py   목소리 샘플 영상 (영어·한국어 목소리 전부를 번호 붙여 한 영상에)
 assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 ```
 
@@ -110,16 +110,21 @@ assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 
 기본: `edge` 엔진 `en-US-BrianMultilingualNeural`, 속도 `+20%`. 대본의 `"voice"` 또는 `--voice`, `--rate`로 교체합니다.
 
-| 목소리 | 느낌 |
+| 구분 | 목소리 (`tools/voice_samples.py`에 전체 ID) |
 |---|---|
-| `en-US-BrianMultilingualNeural` | 남성, 편하고 친근한 설명 (기본) |
-| `en-US-AndrewMultilingualNeural` | 남성, 따뜻하고 신뢰감 |
-| `en-US-ChristopherNeural` / `en-US-GuyNeural` | 남성, 뉴스·다큐 톤 / 에너지 |
-| `en-US-AvaMultilingualNeural` / `en-US-EmmaMultilingualNeural` | 여성, 표현력 / 또렷함 |
-| `ko-KR-HyunsuMultilingualNeural` / `ko-KR-InJoonNeural` / `ko-KR-SunHiNeural` | 한국어판용 |
+| 영어, 미국 남성 | Brian (기본), Andrew, Christopher, Guy, Eric, Roger, Steffan |
+| 영어, 미국 여성 | Ava, Emma, Aria, Jenny, Michelle |
+| 영어, 영국·호주·캐나다 | Ryan, Thomas, Sonia, Libby / William, Natasha / Liam, Clara |
+| 한국어 원어민 | `ko-KR-HyunsuMultilingualNeural`(현수), `ko-KR-InJoonNeural`(인준), `ko-KR-SunHiNeural`(선희) |
+| 한국어 다국어 | 이름에 `Multilingual`이 붙은 목소리는 한국어 대본도 읽습니다 (Brian, Andrew, Ava, Emma 등). 영어판과 같은 목소리로 한국어판을 만들 수 있습니다 |
 
 - 인터넷 없이 쓰려면 `"voice": {"engine": "kokoro", "name": "am_michael"}` + `python tools/fetch_assets.py models`
 - ElevenLabs 같은 유료 음성으로 바꾸려면 `factory/voice.py`에 `_synth()`만 구현한 클래스를 추가하면 됩니다. 단어 타이밍이 없으면 음성인식으로 자동 정렬합니다.
+
+### 목소리 고르기
+
+- **샘플 영상**: `python tools/voice_samples.py`는 같은 문장을 목소리마다 실제 쇼츠 화면에 입혀 영상 한 편으로 만듭니다. 영어 20개와 한국어 14개이고, 화면에 번호와 이름이 나옵니다. 결과는 `output/<날짜>_voice_samples_EN_KO.mp4`와 번호표 `.txt`입니다. 옵션으로 `--lang ko`, `--only Brian SunHi`, `--rate +10%`를 쓸 수 있습니다.
+- **직접 들어보기**: Microsoft Edge 브라우저에서 아무 페이지나 열고 `Ctrl+Shift+U`(소리 내어 읽기)를 누른 뒤, 음성 옵션에서 `Microsoft BrianMultilingual Online (Natural)` 같은 목소리를 고르면 됩니다. 이 엔진과 같은 목소리이고, 속도도 거기서 바꿔 볼 수 있습니다. 한국어는 한국어 페이지에서 `SunHi`, `InJoon`, `HyunsuMultilingual`을 고르세요.
 
 ## 원본 영상(푸티지) 고르기
 

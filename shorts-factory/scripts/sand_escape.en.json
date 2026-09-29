@@ -1,0 +1,287 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -28
+  },
+  "clips": {
+    "c_spray": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 5.2,
+      "speed": 0.75,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_stuck_front": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 174.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_stuck_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 178.5,
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    "c_screen": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 126.4,
+      "focus": [
+        0.33,
+        0.5
+      ]
+    },
+    "c_rock1": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 182.0,
+      "focus": [
+        0.58,
+        0.5
+      ]
+    },
+    "c_rock_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 185.75,
+      "focus": [
+        0.35,
+        0.5
+      ],
+      "speed": 0.96,
+      "blur": [
+        [
+          0.0,
+          0.04,
+          0.32,
+          0.17
+        ]
+      ]
+    },
+    "c_rock2": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 189.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_escape": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 193.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_display": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 93.3,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_compare": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 87.1,
+      "focus": [
+        0.55,
+        0.5
+      ],
+      "blur": [
+        [
+          0.55,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.55,
+          0.5,
+          1.0,
+          0.64
+        ]
+      ]
+    },
+    "c_parked": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 115.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_charge": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 108.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "Mercedes-Benz press release: The new Mercedes-Benz GLE (free-driving mode, E-ACTIVE BODY CONTROL)",
+      "url": "https://media.mbusa.com/releases/release-186a588f9437b92c4e76c05fca09d7c8-the-new-mercedes-benz-gle"
+    },
+    {
+      "name": "Mercedes-Benz GLE owner's manual: ROAD SURFACE SCAN",
+      "url": "https://www.mbusa.com/en/owners/manuals/gle-suv-2018-07-v167-mbux/active-body-control/function-of-road-surface-scan"
+    },
+    {
+      "name": "Motor1: Mercedes GLE loses the bouncy suspension in the US",
+      "url": "https://www.motor1.com/news/494134/mercedes-gle-suv-bouncing-suv/"
+    },
+    {
+      "name": "Autoblog: Mercedes-Benz GLE loses E-Active Body Control",
+      "url": "https://www.autoblog.com/features/mercedes-drops-gle-e-active-body-control"
+    }
+  ],
+  "id": "sand_escape",
+  "lang": "en",
+  "title": "This SUV *bounces* itself out of sand 🏜️",
+  "pronounce": {
+    "GLS,": "G L S,",
+    "GLE.": "G L E.",
+    "E-Active": "E Active",
+    "48-volt": "forty-eight volt"
+  },
+  "hook": {
+    "lines": [
+      "This SUV is stuck in sand…",
+      "so it starts *bouncing*."
+    ],
+    "clips": [
+      "c_spray",
+      "c_rock1"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:bouncing"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's a Mercedes *GLS*,",
+        "buried up to its wheels."
+      ],
+      "clip": "c_stuck_front"
+    },
+    {
+      "lines": [
+        "Normally? You'd need a *tow*."
+      ],
+      "clip": "c_stuck_side"
+    },
+    {
+      "lines": [
+        "But the driver taps one button…"
+      ],
+      "clip": "c_screen",
+      "sfx": [
+        {
+          "id": "mouse_click",
+          "at": "word:button"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "…and the whole car starts *rocking*."
+      ],
+      "clip": "c_rock1",
+      "punch": true
+    },
+    {
+      "lines": [
+        "The suspension pushes each wheel",
+        "down and up, again and again,"
+      ],
+      "clip": "c_rock_side"
+    },
+    {
+      "lines": [
+        "until the tires *bite*…"
+      ],
+      "clip": "c_rock2"
+    },
+    {
+      "lines": [
+        "…and it climbs right *out*."
+      ],
+      "clip": "c_escape",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:out"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The secret? *E-Active Body Control*,",
+        "a 48-volt system for every wheel."
+      ],
+      "clip": "c_display"
+    },
+    {
+      "lines": [
+        "It even scans the road",
+        "and smooths bumps before you hit them."
+      ],
+      "clip": "c_compare"
+    },
+    {
+      "lines": [
+        "The twist? So few people ordered it,",
+        "Mercedes *dropped* it from the US GLE."
+      ],
+      "clip": "c_parked"
+    },
+    {
+      "lines": [
+        "Would *you* pay extra",
+        "to never get stuck again?"
+      ],
+      "clip": "c_charge"
+    }
+  ],
+  "upload": {
+    "title": "This SUV Bounces Itself Out of Sand 🏜️ #shorts",
+    "description": "Stuck in a dune? This Mercedes just bounces its way out. 🏜️\n\nMercedes-Benz E-ACTIVE BODY CONTROL is a 48-volt active suspension that controls every wheel on its own. In free-driving mode it raises and lowers the body again and again, changing how hard each tire presses into the sand until they grip and the SUV rocks itself free. It can also scan the road ahead and smooth out bumps before you feel them. Plot twist: so few buyers ordered it that Mercedes dropped it from the GLE in the US.\n\nWould you pay extra to never get stuck again? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#mercedes",
+      "#offroad",
+      "#cars",
+      "#technology"
+    ],
+    "tags": [
+      "mercedes",
+      "mercedes gls",
+      "mercedes gle",
+      "e-active body control",
+      "free driving mode",
+      "suv stuck in sand",
+      "car bounces out of sand",
+      "active suspension",
+      "48 volt suspension",
+      "offroad",
+      "sand dunes",
+      "car technology",
+      "cool tech",
+      "top techs"
+    ],
+    "comment": "POV: you're the tow truck driver and the car just bounces away 😂 Would you have ticked this option box? 👇"
+  }
+}

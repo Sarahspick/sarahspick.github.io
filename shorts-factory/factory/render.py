@@ -18,7 +18,7 @@ from PIL import Image
 
 from . import gfx
 from .config import FPS, H, OUTPUT, SR, THEMES, W, WORK, load_channel
-from .media import open_reader, parse_aspect, source_meta
+from .media import fetch, open_reader, parse_aspect, source_meta
 from .sfx import SfxLibrary, measure
 from .voice import _norm_words, make_narrator
 
@@ -203,7 +203,12 @@ class Short:
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", raw, "-af", f"volume={-16 - lufs:.2f}dB",
                         "-ar", str(SR), "-ac", "2", narr], check=True)
         inputs, chains, labels = ["-i", narr], [], ["[0:a]"]
-        for n, c in enumerate(self.cues, start=1):
+        orig = self.original_audio()
+        if orig:
+            inputs += ["-i", orig]
+            labels.append("[1:a]")
+        base = len(inputs) // 2
+        for n, c in enumerate(self.cues, start=base):
             inputs += ["-i", self.sfx.path(c["id"])]
             d = max(0, int(round(c["t"] * 1000)))
             trim = ""
@@ -230,6 +235,58 @@ class Short:
                 break
         self.mix = final
         self.loudness = measure(final)
+
+    def original_audio(self):
+        """The footage's own sound under the narration, cut exactly like the picture (same starts, speeds, hard cuts).
+
+        Script option "orig_audio": {"lufs": -30} sets the level (each source is loudness-normalised first);
+        a clip can set "orig_gain" (dB, relative) or "orig_gain": null to mute it. Off when the script has no
+        "orig_audio" (older scripts stay silent under the narration)."""
+        oa = self.sc.get("orig_audio")
+        if not oa:
+            return None
+        target = float(oa.get("lufs", -30))
+        clips, consumed, levels = self.sc["clips"], {}, {}
+        buf = np.zeros((int((self.total + 1) * SR), 2), np.float32)
+        for seg in self.segs:
+            spec = clips[seg["cid"]]
+            dur = seg["t1"] - seg["t0"]
+            off = consumed.get(seg["cid"], 0.0) if spec.get("continue", True) else 0.0
+            consumed[seg["cid"]] = off + dur
+            kind = spec.get("kind") or ("card" if "headline" in spec else "video")
+            if kind != "video" or not spec.get("src") or ("orig_gain" in spec and spec["orig_gain"] is None):
+                continue
+            path = fetch(spec["src"])
+            if not path:
+                continue
+            if path not in levels:
+                levels[path] = measure(path)[0]
+            if levels[path] < -60:  # silent source
+                continue
+            speed = float(spec.get("speed", 1.0))
+            start = float(spec.get("start", 0)) + off * speed
+            tempo, chain = speed, []
+            while tempo < 0.5:
+                chain.append("atempo=0.5")
+                tempo /= 0.5
+            while tempo > 2.0:
+                chain.append("atempo=2.0")
+                tempo /= 2.0
+            chain.append(f"atempo={tempo:.4f}")
+            gain = target - levels[path] + float(spec.get("orig_gain", 0))
+            fade = min(0.012, dur / 4)
+            af = ",".join(chain + [f"volume={gain:.2f}dB", f"afade=t=in:d={fade:.3f}",
+                                   f"afade=t=out:st={max(0.0, dur - fade):.3f}:d={fade:.3f}"])
+            r = subprocess.run(["ffmpeg", "-v", "error", "-ss", f"{start:.3f}", "-t", f"{dur * speed + 0.05:.3f}", "-i", path,
+                                "-vn", "-af", af, "-t", f"{dur:.3f}", "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"],
+                               capture_output=True)
+            a = np.frombuffer(r.stdout, np.float32).reshape(-1, 2)
+            i0 = int(round(seg["t0"] * SR))
+            n = min(len(a), len(buf) - i0)
+            buf[i0:i0 + n] += a[:n]
+        out = os.path.join(self.work, "original_audio.wav")
+        sf.write(out, buf[:int(self.total * SR)], SR)
+        return out
 
     # ------------------------------------------------------------------ video
     def _seg_zoom(self, seg, spec, t):
@@ -399,7 +456,8 @@ class Short:
                 seen.add(r["src"])
                 m = source_meta(r["src"])
                 credits.append(f"- {m.get('title') or 'video'}" + (f" ({m['uploader']})" if m.get("uploader") else "") + f": {m['url']}")
-        credits += [f"- {c}" for c in sc.get("footage_credits", [])]
+        credits += [f"- {c}" for c in sc.get("footage_credits", [])
+                    if not any(c.split(":")[-1].strip() and c.split(":")[-1].strip() in x for x in credits)]
         if credits:
             lines += ["", "영상 출처:" if ko else "Footage:"] + credits
         if up.get("hashtags"):
@@ -408,3 +466,9 @@ class Short:
             lines += ["", "", "TAGS:", ", ".join(up["tags"])]
         with open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines).strip() + "\n")
+        # copy-paste file for YouTube Studio: title / description / tags / pinned comment, split by "___" lines
+        desc = "\n".join(lines[lines.index("DESCRIPTION:") + 1:])
+        desc = desc.split("\n\n\nTAGS:")[0].strip()
+        parts = [up.get("title", gfx.plain(sc["title"])), desc, ", ".join(up.get("tags", [])), up.get("comment", "")]
+        with open(path.replace("_upload.txt", "_text.txt"), "w", encoding="utf-8") as f:
+            f.write("\n\n___\n\n".join(p.strip() for p in parts) + "\n")

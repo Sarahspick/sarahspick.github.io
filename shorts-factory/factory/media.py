@@ -5,7 +5,7 @@ import os
 import subprocess
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 from . import gfx
 from .config import FPS, WORK, rel
@@ -149,12 +149,20 @@ class _View:
 
 
 class VideoReader(_View):
-    def __init__(self, path, start, dur, box, aspect, focus, speed=1.0, src_zoom=1.0, headroom=1.12):
+    def __init__(self, path, start, dur, box, aspect, focus, speed=1.0, src_zoom=1.0, headroom=1.12, blur=None):
         self.box = box
         w, h = box[2], box[3]
         self.pw, self.ph = int(w * headroom) // 2 * 2, int(h * headroom) // 2 * 2
         sw, sh, sdur = probe(path)
         cw, ch, cx, cy = crop_rect(sw, sh, aspect, focus, src_zoom)
+        # blur: [[x0, y0, x1, y1], ...] in source fractions (e.g. burned-in foreign subtitles), mapped into this crop
+        self.blur = []
+        for x0, y0, x1, y1 in blur or []:
+            bx0, by0 = (x0 * sw - cx) * self.pw / cw, (y0 * sh - cy) * self.ph / ch
+            bx1, by1 = (x1 * sw - cx) * self.pw / cw, (y1 * sh - cy) * self.ph / ch
+            bx0, by0, bx1, by1 = max(0, bx0), max(0, by0), min(self.pw, bx1), min(self.ph, by1)
+            if bx1 > bx0 and by1 > by0:
+                self.blur.append(tuple(int(v) for v in (bx0, by0, bx1, by1)))
         need = dur * speed
         self.n = int(round(dur * FPS)) + 2
         vf = (f"crop={cw}:{ch}:{cx}:{cy},scale={self.pw}:{self.ph}:flags=lanczos,"
@@ -171,6 +179,10 @@ class VideoReader(_View):
             if len(buf) < size:
                 break
             self.last = Image.frombuffer("RGB", (self.pw, self.ph), buf, "raw", "RGB", 0, 1)
+            if self.blur:
+                self.last = self.last.copy()
+                for r in self.blur:
+                    self.last.paste(self.last.crop(r).filter(ImageFilter.GaussianBlur(18)), r[:2])
             self.k += 1
         if self.last is None:
             self.last = Image.new("RGB", (self.pw, self.ph), (20, 20, 20))
@@ -185,22 +197,36 @@ class VideoReader(_View):
 
 
 class ImageReader(_View):
-    def __init__(self, img, box, headroom=1.2):
+    """Still image. focus/src_zoom pick the crop like a video clip; pan=[[fx, fy], [fx, fy]] slides the crop
+    centre across the photo over the segment (a moving shot from a still)."""
+
+    def __init__(self, img, box, headroom=1.2, focus=(0.5, 0.5), src_zoom=1.0, pan=None, dur=1.0):
         self.box = box
         self.rgba = img.mode == "RGBA"   # cards float over the previous shot's blurred background
         w, h = box[2], box[3]
         pw, ph = int(w * headroom), int(h * headroom)
         src = img if self.rgba else img.convert("RGB")
-        a = w / h
-        if src.width / src.height > a:
-            nw = int(src.height * a)
-            src = src.crop(((src.width - nw) // 2, 0, (src.width - nw) // 2 + nw, src.height))
-        else:
-            nh = int(src.width / a)
-            src = src.crop((0, (src.height - nh) // 2, src.width, (src.height - nh) // 2 + nh))
-        self.img = src.resize((pw, ph), Image.LANCZOS)
+        self.pan, self.n = None, max(1, int(round(dur * FPS)))
+        if pan:
+            self.src, self.pw, self.ph = src, pw, ph
+            self.pan = [tuple(pan[0]), tuple(pan[1])]
+            self.cw, self.ch = crop_rect(src.width, src.height, w / h, (0.5, 0.5), src_zoom)[:2]
+            return
+        cw, ch, cx, cy = crop_rect(src.width, src.height, w / h, tuple(focus), src_zoom)
+        self.img = src.crop((cx, cy, cx + cw, cy + ch)).resize((pw, ph), Image.LANCZOS)
 
     def frame(self, k, zoom=1.0, focus=(0.5, 0.5)):
+        if self.pan:
+            p = min(1.0, k / self.n)
+            p = p * p * (3 - 2 * p)  # ease in-out
+            fx = self.pan[0][0] + (self.pan[1][0] - self.pan[0][0]) * p
+            fy = self.pan[0][1] + (self.pan[1][1] - self.pan[0][1]) * p
+            sw, sh = self.src.size
+            cx = min(max(fx * sw - self.cw / 2, 0), sw - self.cw)
+            cy = min(max(fy * sh - self.ch / 2, 0), sh - self.ch)
+            vw, vh = self.cw / zoom, self.ch / zoom
+            x0, y0 = cx + (self.cw - vw) / 2, cy + (self.ch - vh) / 2
+            return self.src.resize((self.box[2], self.box[3]), Image.BICUBIC, box=(x0, y0, x0 + vw, y0 + vh))
         return self.view(self.img, zoom, focus)
 
     def close(self):
@@ -217,9 +243,13 @@ def open_reader(spec, box, dur, offset, theme, report):
         return ImageReader(img, box, headroom=1.08)
     if kind == "image":
         p = rel(spec["src"])
+        if not os.path.exists(p) and spec.get("url"):  # press photos are not kept in git: fetch them again
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            subprocess.run(["curl", "-sfL", "-A", "Mozilla/5.0", "-o", p, spec["url"]])
         if os.path.exists(p):
-            report.append({"kind": "image", "src": spec["src"]})
-            return ImageReader(Image.open(p), box)
+            report.append({"kind": "image", "src": spec["src"], "credit": spec.get("credit")})
+            return ImageReader(Image.open(p), box, focus=spec.get("focus", (0.5, 0.5)), src_zoom=float(spec.get("src_zoom", 1.0)),
+                               pan=spec.get("pan"), dur=dur)
     path = fetch(spec.get("src")) if kind in ("video", "image") else None
     if path:
         start = float(spec.get("start", 0)) + offset * float(spec.get("speed", 1.0))
@@ -227,7 +257,8 @@ def open_reader(spec, box, dur, offset, theme, report):
         if focus == "auto":
             focus = auto_focus(path, start, dur * float(spec.get("speed", 1.0)), aspect)
         report.append({"kind": "video", "src": spec.get("src"), "start": round(start, 2), "dur": round(dur, 2), "focus": focus})
-        return VideoReader(path, start, dur, box, aspect, focus, float(spec.get("speed", 1.0)), float(spec.get("src_zoom", 1.0)))
+        return VideoReader(path, start, dur, box, aspect, focus, float(spec.get("speed", 1.0)), float(spec.get("src_zoom", 1.0)),
+                           blur=spec.get("blur"))
     hint = spec.get("src") or spec.get("search", "")
     if spec.get("start") is not None:
         hint += f"  •  {spec.get('start')}s–{spec.get('end', '?')}s"

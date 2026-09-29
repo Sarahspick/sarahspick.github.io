@@ -1,0 +1,378 @@
+{
+  "aspect": "9:16",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "clips": {
+    "L_top": {
+      "kind": "image",
+      "src": "work/sources/lexus/TwistedCar_03.jpg",
+      "src_zoom": 1.45,
+      "pan": [
+        [
+          0.5,
+          0.3
+        ],
+        [
+          0.5,
+          0.7
+        ]
+      ],
+      "credit": "Lexus press image (pressroom.lexus.com)",
+      "url": "https://pressroom.lexus.com/wp-content/uploads/2026/09/Lexus_MSCHF_TwistedCar_03-scaled.jpg"
+    },
+    "L_top2": {
+      "kind": "image",
+      "src": "work/sources/lexus/TwistedCar_03.jpg",
+      "src_zoom": 1.9,
+      "pan": [
+        [
+          0.5,
+          0.62
+        ],
+        [
+          0.5,
+          0.42
+        ]
+      ],
+      "credit": "Lexus press image (pressroom.lexus.com)",
+      "url": "https://pressroom.lexus.com/wp-content/uploads/2026/09/Lexus_MSCHF_TwistedCar_03-scaled.jpg"
+    },
+    "L_rear": {
+      "kind": "image",
+      "src": "work/sources/lexus/TwistedCar_05.jpg",
+      "pan": [
+        [
+          0.62,
+          0.5
+        ],
+        [
+          0.22,
+          0.5
+        ]
+      ],
+      "credit": "Lexus press image (pressroom.lexus.com)",
+      "url": "https://pressroom.lexus.com/wp-content/uploads/2026/09/Lexus_MSCHF_TwistedCar_05-scaled.jpg"
+    },
+    "L_ring": {
+      "kind": "image",
+      "src": "work/sources/lexus/CircleCar_02.jpg",
+      "pan": [
+        [
+          0.4,
+          0.5
+        ],
+        [
+          0.62,
+          0.5
+        ]
+      ],
+      "credit": "Lexus press image (pressroom.lexus.com)",
+      "url": "https://pressroom.lexus.com/wp-content/uploads/2026/09/Lexus_MSCHF_CircleCar_02-scaled.jpg"
+    },
+    "v_walk": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 1.3,
+      "blur": [
+        [
+          0.22,
+          0.455,
+          0.78,
+          0.545
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ]
+    },
+    "v_close": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 9.7,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ]
+    },
+    "v_other": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 13.5,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ],
+      "speed": 0.87
+    },
+    "v_pillar": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 16.85,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ]
+    },
+    "v_door": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 27.5,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ],
+      "speed": 0.78
+    },
+    "v_mini": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 31.85,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ]
+    },
+    "v_close2": {
+      "src": "bili:BV1Crh26SEoC",
+      "start": 11.7,
+      "blur": [
+        [
+          0.04,
+          0.6,
+          0.96,
+          0.745
+        ],
+        [
+          0.0,
+          0.0,
+          0.4,
+          0.05
+        ]
+      ]
+    },
+    "L_rear2": {
+      "kind": "image",
+      "src": "work/sources/lexus/TwistedCar_05.jpg",
+      "pan": [
+        [
+          0.3,
+          0.55
+        ],
+        [
+          0.55,
+          0.55
+        ]
+      ],
+      "credit": "Lexus press image (pressroom.lexus.com)",
+      "url": "https://pressroom.lexus.com/wp-content/uploads/2026/09/Lexus_MSCHF_TwistedCar_05-scaled.jpg",
+      "src_zoom": 1.35
+    }
+  },
+  "sources": [
+    {
+      "name": "Lexus Pressroom: MSCHF turns two Lexus electrified vehicles into sculpture for MOTOMORPHOSIS",
+      "url": "https://pressroom.lexus.com/mschf-turns-two-lexus-electrified-vehicles-into-sculpture-for-motomorphosis/"
+    },
+    {
+      "name": "Yanko Design: MSCHF warps two Lexus cars into surreal sculptures",
+      "url": "https://www.yankodesign.com/2026/09/24/mschf-warps-two-lexus-cars-into-surreal-sculptures-that-look-like-a-video-glitch/"
+    },
+    {
+      "name": "FAD Magazine: MSCHF & Lexus MOTOMORPHOSIS",
+      "url": "https://fadmagazine.com/2026/09/25/mschf-lexus-motomorphosis-car-sculpture-new-york/"
+    },
+    {
+      "name": "The Drive: Lexus confirms this voids the warranty",
+      "url": "https://www.thedrive.com/news/lexus-confirms-this-voids-the-warranty"
+    }
+  ],
+  "id": "lexus_twisted",
+  "lang": "ko",
+  "title": "*꽈배기*가 된 렉서스 SUV 🥨",
+  "pronounce": {
+    "RX": "알엑스",
+    "450h+였는데요,": "사오공 에이치 플러스였는데요,",
+    "RZ는": "알제트는"
+  },
+  "hook": {
+    "lines": [
+      "렉서스 SUV가",
+      "*꽈배기*가 됐습니다."
+    ],
+    "clips": [
+      "v_close",
+      "L_top"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:꽈배기가"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "원래는 평범한",
+        "*RX 450h+*였는데요,"
+      ],
+      "clip": "L_rear"
+    },
+    {
+      "lines": [
+        "미국 예술 집단 *미스치프*가",
+        "이렇게 비틀어버렸습니다."
+      ],
+      "clip": "v_walk"
+    },
+    {
+      "lines": [
+        "이름도 대놓고 *트위스티드 카*."
+      ],
+      "clip": "v_walk"
+    },
+    {
+      "lines": [
+        "앞코부터 꽁무니까지",
+        "차체 전체가 나선형이죠."
+      ],
+      "clip": "L_top2"
+    },
+    {
+      "lines": [
+        "속은 강철 뼈대,",
+        "겉은 *수천 개*의 조각입니다."
+      ],
+      "clips": [
+        "v_other",
+        "v_close2"
+      ]
+    },
+    {
+      "lines": [
+        "근데 형제 차는 더 심해요…"
+      ],
+      "clip": "v_pillar"
+    },
+    {
+      "lines": [
+        "RZ는 아예",
+        "*도넛*처럼 말아버렸거든요."
+      ],
+      "clip": "L_ring",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:도넛처럼"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "그럼 타고 다닐 수 있냐고요?"
+      ],
+      "clip": "v_door"
+    },
+    {
+      "lines": [
+        "문조차 *안 열립니다*."
+      ],
+      "clip": "v_door"
+    },
+    {
+      "lines": [
+        "렉서스 공식 문구에도",
+        "*보증이 무효*될 수 있다고 써 있어요."
+      ],
+      "clip": "L_rear2"
+    },
+    {
+      "lines": [
+        "이 차, 집 앞에",
+        "*세워두실래요*?"
+      ],
+      "clip": "v_mini"
+    }
+  ],
+  "upload": {
+    "title": "꽈배기가 된 렉서스 SUV 🥨 #shorts",
+    "description": "원래는 평범한 렉서스 RX 450h+였습니다. 🥨\n\n뉴욕 전시 'MOTOMORPHOSIS'를 위해 브루클린의 예술 집단 미스치프(MSCHF)가 이 차를 '트위스티드 카'로 바꿨어요. 앞코부터 꽁무니까지 차체 전체가 나선형으로 꼬여 있고, 강철 뼈대 위에 수천 개의 조각을 붙여 만들었습니다. 형제 차인 RZ 450e는 앞뒤가 붙은 도넛 모양 '서클 카'가 됐죠. 둘 다 운전은 불가능하고, 렉서스 공식 안내문에는 '보증이 무효가 될 수 있음'이라고 적혀 있습니다. 😅\n\n여러분이라면 이 차, 집 앞에 세워두시겠어요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#렉서스",
+      "#미스치프",
+      "#자동차",
+      "#디자인"
+    ],
+    "tags": [
+      "렉서스",
+      "미스치프",
+      "MSCHF",
+      "렉서스 미스치프",
+      "트위스티드 카",
+      "꽈배기 자동차",
+      "서클 카",
+      "MOTOMORPHOSIS",
+      "렉서스 RX",
+      "렉서스 RZ",
+      "아트카",
+      "자동차 조각",
+      "신기한 자동차",
+      "기발한 회사들"
+    ],
+    "comment": "렉서스가 공식적으로 '보증 무효 가능'이라고 써 붙인 꽈배기 차 🥨 다음엔 뭘 비틀어야 할까요? 틀린 답만 받습니다 👇"
+  },
+  "footage_credits": [
+    "렉서스 / 미스치프 공식 보도 사진: pressroom.lexus.com"
+  ]
+}

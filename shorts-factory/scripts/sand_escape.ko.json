@@ -1,0 +1,286 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -28
+  },
+  "clips": {
+    "c_spray": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 5.2,
+      "speed": 0.75,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_stuck_front": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 174.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_stuck_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 178.5,
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    "c_screen": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 126.4,
+      "focus": [
+        0.33,
+        0.5
+      ]
+    },
+    "c_rock1": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 182.0,
+      "focus": [
+        0.58,
+        0.5
+      ]
+    },
+    "c_rock_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 185.75,
+      "focus": [
+        0.35,
+        0.5
+      ],
+      "blur": [
+        [
+          0.0,
+          0.04,
+          0.32,
+          0.17
+        ]
+      ]
+    },
+    "c_rock2": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 189.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_escape": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 193.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_display": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 93.3,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_compare": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 87.1,
+      "focus": [
+        0.55,
+        0.5
+      ],
+      "blur": [
+        [
+          0.55,
+          0.0,
+          1.0,
+          0.14
+        ],
+        [
+          0.55,
+          0.5,
+          1.0,
+          0.64
+        ]
+      ]
+    },
+    "c_parked": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 115.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_charge": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 108.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "Mercedes-Benz press release: The new Mercedes-Benz GLE (free-driving mode, E-ACTIVE BODY CONTROL)",
+      "url": "https://media.mbusa.com/releases/release-186a588f9437b92c4e76c05fca09d7c8-the-new-mercedes-benz-gle"
+    },
+    {
+      "name": "Mercedes-Benz GLE owner's manual: ROAD SURFACE SCAN",
+      "url": "https://www.mbusa.com/en/owners/manuals/gle-suv-2018-07-v167-mbux/active-body-control/function-of-road-surface-scan"
+    },
+    {
+      "name": "Motor1: Mercedes GLE loses the bouncy suspension in the US",
+      "url": "https://www.motor1.com/news/494134/mercedes-gle-suv-bouncing-suv/"
+    },
+    {
+      "name": "Autoblog: Mercedes-Benz GLE loses E-Active Body Control",
+      "url": "https://www.autoblog.com/features/mercedes-drops-gle-e-active-body-control"
+    }
+  ],
+  "id": "sand_escape",
+  "lang": "ko",
+  "title": "모래에 빠지면 *통통* 튀어나오는 SUV 🏜️",
+  "pronounce": {
+    "GLS,": "지엘에스,",
+    "GLE에선": "지엘이에선",
+    "E-액티브": "이 액티브",
+    "48볼트로": "사십팔 볼트로"
+  },
+  "hook": {
+    "lines": [
+      "모래에 완전히 빠진 SUV…",
+      "갑자기 *통통 튀기* 시작합니다."
+    ],
+    "clips": [
+      "c_spray",
+      "c_rock1"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:통통"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "벤츠 *GLS*,",
+        "바퀴까지 푹 파묻혔죠."
+      ],
+      "clip": "c_stuck_front"
+    },
+    {
+      "lines": [
+        "보통이면 *견인차* 불러야 할 상황."
+      ],
+      "clip": "c_stuck_side"
+    },
+    {
+      "lines": [
+        "그런데 운전자가 버튼 하나를 누르자…"
+      ],
+      "clip": "c_screen",
+      "sfx": [
+        {
+          "id": "mouse_click",
+          "at": "word:버튼"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "…차가 *들썩들썩* 흔들리기 시작합니다."
+      ],
+      "clip": "c_rock1",
+      "punch": true
+    },
+    {
+      "lines": [
+        "서스펜션이 바퀴를",
+        "눌렀다 뗐다 반복하면서"
+      ],
+      "clip": "c_rock_side"
+    },
+    {
+      "lines": [
+        "타이어가 모래를 *꽉* 물면…"
+      ],
+      "clip": "c_rock2"
+    },
+    {
+      "lines": [
+        "…그대로 *탈출*!"
+      ],
+      "clip": "c_escape",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:탈출"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "비결은 *E-액티브 바디 컨트롤*.",
+        "48볼트로 네 바퀴를 따로 제어해요."
+      ],
+      "clip": "c_display"
+    },
+    {
+      "lines": [
+        "앞길을 미리 스캔해서",
+        "요철 충격까지 줄여주고요."
+      ],
+      "clip": "c_compare"
+    },
+    {
+      "lines": [
+        "반전은… 찾는 사람이 너무 적어서",
+        "미국 GLE에선 *빠졌다*는 것."
+      ],
+      "clip": "c_parked"
+    },
+    {
+      "lines": [
+        "여러분이라면",
+        "*돈 더 내고* 넣으시겠어요?"
+      ],
+      "clip": "c_charge"
+    }
+  ],
+  "upload": {
+    "title": "모래에 빠지면 통통 튀어나오는 SUV 🏜️ #shorts",
+    "description": "모래에 빠져도 견인차가 필요 없는 SUV가 있습니다. 🏜️\n\n벤츠의 'E-액티브 바디 컨트롤'은 48볼트 능동형 서스펜션으로 네 바퀴를 하나하나 따로 제어합니다. 모래에 빠지면 '프리 드라이빙 모드'로 차체를 들었다 내렸다 반복하면서 타이어가 모래를 누르는 힘을 바꾸고, 결국 바퀴가 모래를 물면 스스로 빠져나옵니다. 앞길을 스캔해 요철 충격을 미리 줄여주는 기능도 있어요. 반전은 옵션을 고르는 사람이 너무 적어서 미국 GLE에서는 빠졌다는 것.\n\n여러분이라면 돈 더 내고 이 옵션 넣으시겠어요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#벤츠",
+      "#GLS",
+      "#자동차",
+      "#오프로드"
+    ],
+    "tags": [
+      "벤츠",
+      "벤츠 GLS",
+      "벤츠 GLE",
+      "E-액티브 바디 컨트롤",
+      "모래 탈출",
+      "모래에 빠진 차",
+      "에어 서스펜션",
+      "능동형 서스펜션",
+      "오프로드",
+      "사막",
+      "자동차 기술",
+      "신기한 기술",
+      "자동차 옵션",
+      "기발한 회사들"
+    ],
+    "comment": "견인차 기사님 출동했는데 차가 혼자 통통 튀어서 나가버림 😂 이 옵션, 돈 주고 넣을 가치 있다 vs 없다? 👇"
+  }
+}

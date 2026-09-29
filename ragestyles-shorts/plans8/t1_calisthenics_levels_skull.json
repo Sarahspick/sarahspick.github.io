@@ -1,0 +1,156 @@
+{
+ "id": "t1_calisthenics_levels_skull",
+ "yt_title": "Calisthenics levels: which one can you do? \ud83d\udc80 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_top": 300,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "stock/pexels_8520078",
+   "in": 3.0,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "stock/pexels_32363351",
+   "in": 23.0,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.36,
+   "zoom": [
+    1.8,
+    1.88
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "stock/pexels_8519737",
+   "in": 0.3,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "stock/pexels_8519737",
+   "in": 4.0,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "stock/pexels_8519737",
+   "in": 7.0,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.58,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.3
+   },
+   "still": true,
+   "bw": true,
+   "vid_darken": 0.8,
+   "vignette": 0.7,
+   "whip_in": 0.18,
+   "darken": 0.35
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 12.2,
+   "text": "Calisthenics levels:\nwhich one can *you* do? :flexed-biceps:",
+   "style": "title",
+   "anim": "none"
+  },
+  {
+   "t": 0,
+   "d": 3.0,
+   "text": "LEVEL 1\n*PUSH UP*",
+   "style": "big"
+  },
+  {
+   "t": 3.0,
+   "d": 3.0,
+   "text": "LEVEL 2\n*PULL UP*",
+   "style": "big"
+  },
+  {
+   "t": 6.0,
+   "d": 3.2,
+   "text": "LEVEL 3\n*HANDSTAND*",
+   "style": "big"
+  },
+  {
+   "t": 9.2,
+   "d": 3.0,
+   "text": "LEVEL 4\n~HEAD BELOW THE BARS~",
+   "style": "big"
+  },
+  {
+   "t": 11.65,
+   "d": 3.55,
+   "text": ":skull:",
+   "style": "big",
+   "anim": "rise",
+   "size": 190,
+   "x": 0.5,
+   "y": 0.52
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 12.1,
+   "name": "mk:1490_fast_whoosh_transition",
+   "db": -12
+  }
+ ],
+ "audio_clips": [],
+ "lufs": -20.0
+}

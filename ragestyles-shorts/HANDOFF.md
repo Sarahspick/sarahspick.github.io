@@ -67,6 +67,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 제목은 위쪽(영상 박스 바로 위) 위치가 좋다고 했습니다. 자막은 영상 바로 아래.
 * ~~폰트 Dela Gothic One, 노랑→주황 그라데이션 강조~~ (2026-09-29 교체됨).
 * (2026-09-29) 폰트는 TikTok Sans (40M 조회수 쇼츠 61개 표지 분석에서 가장 많은 틱톡 기본 자막체 계열, BENCHMARK.md 참고). 자막 ExtraBold, 제목 Black, 흰 글자에 검정 테두리.
+* (2026-09-29) 참고 쇼츠의 "스컬 엔딩" 이 좋다고 함: 마지막 순간 💀 가 아래에서 날아 올라오고, 휘핑 블러 뒤 마지막 프레임이 흑백으로 멈춰 어두워지고 비네팅, 제목은 사라지고 💀 만 약 3초. 플랜 키는 5장 참고 (`still`, `bw`, `vid_darken`, `vignette`, `whip_in`, 자막 `anim: rise`).
 * (2026-09-29) 강조색은 그라데이션 하나가 아니라 노랑(`*단어*`, 255,214,0)과 주황(`~단어~`, 255,128,0)을 따로따로 씁니다.
 
 ## 4. 지금까지 만든 영상과 반응
@@ -84,6 +85,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new6 c7 | 1949 대학 아크로바틱 (원본 내레이션) | 원본 소리 좋음, 그런데 뒤에 소리가 빠짐 |
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
+| new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs (유튜브 CC BY, 첫 최신 영상, `plans8/g1_gymshark_cameraman.json`) | 사용자 확인 전 |
 
 ## 5. 파이프라인
@@ -109,13 +111,13 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 
 플랜 JSON (최신 예시는 `plans7/c7_1949_acrobatics_v3.json`, `plans7/c4_sandow_1894_v3.json`)
 * `layout`: 생략하면 기본값 `{"mode": "blur", "box_aspect": 1.0, "box_top": 300}`. 키: `mode` (blur, meme, full), `box_aspect`, `box_top` (px), `box_y` (0~1 중심), `box_w`, `darken` (블러 배경 밝기, 기본 0.5), `bg` (meme 배경색).
-* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`, `path` (카메라 키프레임 `[[샷 안의 초, zoom, cx, cy], ...]`, 구간마다 부드럽게 이어짐. 포즈에서만 줌인하고 나머지는 멈춰 있게 할 때 씀).
-* `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
+* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`, `still` (true 면 `in` 프레임을 멈춘 채로 dur 동안, 오디오는 그대로 이어짐), `vid_darken` (영상 박스 밝기, 스컬 엔딩 0.6~0.8), `vignette` (0~1), `whip_in` (샷 시작 모션 블러 초), `path` (카메라 키프레임 `[[샷 안의 초, zoom, cx, cy], ...]`, 구간마다 부드럽게 이어짐. 포즈에서만 줌인하고 나머지는 멈춰 있게 할 때 씀).
+* `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none, `rise` 는 화면 아래에서 날아 올라와 착지, 스컬 이모지용). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
 * 스타일: `title` (영상 위 제목), `cap` (영상 아래 자막), `big` (영상 아래 큰 대문자 라벨), `tag` (노랑 알약). 모두 TikTok Sans, 강조색은 `colors` (노랑, 주황). 예전 스타일 `title_dela`, `cap_dela` (Dela Gothic One 그라데이션), `sub`, `label`, `chapter`, `meme`, `top`, `action`, `list`, `story`, `big_anton`, `tag_old`, `title_old`.
 * `marks[]`: `arrow` (빨간 화살표), `circle` (손그림 빨간 원, `shot` 기준 좌표), `progress` (n 개 중 k, 진행 바), `dim` (화면 어둡게).
 * `audio_clips[]`: 다른 샷 위에 원본 소리를 까는 J컷. `{src, in, dur, t, af, db, fade}`.
 * `sfx[]`: `{t, name, db}`. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
-* `lufs`: 목표 라운드니스 (-14).
+* `lufs`: 목표 라운드니스 (-14). 원본 소리가 없는 스톡 영상은 효과음만 커지지 않게 -20.
 
 기타 도구
 * 대사 받아쓰기: faster-whisper `small.en` 또는 `medium.en`, `word_timestamps=True` 로 컷 지점을 단어 경계에 맞춥니다 (c7 v1 은 "fitness" 중간에서 잘렸던 것을 v2 에서 고침).

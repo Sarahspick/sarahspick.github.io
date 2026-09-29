@@ -206,6 +206,19 @@ def rotated_arrow(angle, length):
     return rot, (rot.width / 2 + rx, rot.height / 2 + ry)
 
 
+_VIG = {}
+
+
+def R_vignette(w, h, amount):
+    """Radial darkening mask, 1 in the middle, 1 - amount in the corners."""
+    key = (w, h, amount)
+    if key not in _VIG:
+        yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+        r = np.sqrt(((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2) / math.sqrt(2)
+        _VIG[key] = (1 - amount * np.clip(r, 0, 1) ** 1.6).astype(np.float32)
+    return _VIG[key]
+
+
 # ------------------------------------------------------------------ video streams
 
 class ShotStream:
@@ -235,8 +248,9 @@ class ShotStream:
                 filters.append(f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1")
         filters.append(f"fps={FPS}")
         self.w, self.h, self.n = w, h, n_frames
+        n_read = 1 if shot.get("still") else n_frames + 2  # still: freeze the frame at `in` for the whole shot
         cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", f"{shot['in']:.3f}", "-i", path,
-               "-vf", ",".join(filters), "-frames:v", str(n_frames + 2), "-an", "-f", "rawvideo", "-pix_fmt", "rgb24",
+               "-vf", ",".join(filters), "-frames:v", str(n_read), "-an", "-f", "rawvideo", "-pix_fmt", "rgb24",
                "-"]
         self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         self.last = None
@@ -353,6 +367,17 @@ class Bench:
         vid = R.sharpen(np.clip(vid, 0, 255).astype(np.uint8), g.get("sharpen", 0.35)).astype(np.float32)
         if shot.get("bw"):
             vid = np.repeat((vid @ np.array([0.299, 0.587, 0.114], np.float32))[..., None], 3, axis=2)
+        if shot.get("vid_darken"):  # e.g. 0.6 for the dark "skull edit" freeze
+            vid *= shot["vid_darken"]
+        if shot.get("vignette"):
+            vid *= R_vignette(rw, rh, shot["vignette"])[..., None]
+        wb = shot.get("whip_in", 0.0)  # motion blur that settles over the first `whip_in` seconds
+        if wb and lt < wb:
+            n = int(round(90 * (1 - ease(lt / wb, "out")))) // 2 * 2 + 1
+            if n > 2:
+                kern = np.zeros((n, n), np.float32)
+                cv2.line(kern, (0, n - 1), (n - 1, 0), 1.0, 1)
+                vid = cv2.filter2D(vid, -1, kern / kern.sum())
         fade = shot.get("fade_in", 0.0)
         if fade and lt < fade:
             vid *= lt / fade
@@ -435,6 +460,10 @@ class Bench:
             if c.get("fade_out") and tail < c["fade_out"]:
                 op *= tail / c["fade_out"]
             x, y = self.caption_pos(c, rgb.shape[0], seg, to_out)
+            if c.get("anim") == "rise":  # flies up from below the screen and lands (skull edit emoji)
+                u = min(1.0, k / c.get("rise", 0.45))
+                y += (H - y + rgb.shape[0]) * (1 - ease(u, "out"))
+                s, op = 1.0, 1.0
             R.blit(out, rgb, a, x, y, scale=s, opacity=op)
 
     def caption_pos(self, c, h, seg, to_out):

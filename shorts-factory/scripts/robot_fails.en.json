@@ -1,0 +1,236 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "o_kick": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 2.2,
+      "focus": [
+        0.72,
+        0.5
+      ]
+    },
+    "o_kick2": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 4.2,
+      "focus": [
+        0.68,
+        0.5
+      ]
+    },
+    "o_catch": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 7.0,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "r_dance": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 38.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "r_chaos": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 48.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "r_staff": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 62.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_walk": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 78.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_fall": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 83.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_cloth": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 95.5,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "m_fall": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 108.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "m_carry": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 118.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "New York Post: rogue robot launches kung fu kicks, other robot malfunctions (video compilation)",
+      "url": "https://www.bilibili.com/video/BV1j7KN6ZEG1"
+    }
+  ],
+  "footage_credits": [],
+  "id": "robot_fails",
+  "lang": "en",
+  "title": "Robots are having a *rough* year 🤖",
+  "pronounce": {},
+  "hook": {
+    "lines": [
+      "Robots are having",
+      "a *really* rough year."
+    ],
+    "clips": [
+      "o_kick",
+      "a_fall"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:really"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "This one started throwing",
+        "*kung fu kicks* in an office…"
+      ],
+      "clip": "o_kick2"
+    },
+    {
+      "lines": [
+        "while its handlers",
+        "tried to *catch* it."
+      ],
+      "clip": "o_catch"
+    },
+    {
+      "lines": [
+        "This one was dancing",
+        "in a restaurant…"
+      ],
+      "clip": "r_dance"
+    },
+    {
+      "lines": [
+        "until it *lost it*,",
+        "sending chopsticks flying."
+      ],
+      "clip": "r_chaos",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:lost"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Staff had to wrestle it",
+        "to a stop."
+      ],
+      "clip": "r_staff"
+    },
+    {
+      "lines": [
+        "This is Russia's first",
+        "humanoid AI robot."
+      ],
+      "clip": "a_walk"
+    },
+    {
+      "lines": [
+        "It walked on stage, waved…",
+        "and fell *face first*."
+      ],
+      "clip": "a_fall",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:face"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Its team covered it",
+        "with a *cloth*."
+      ],
+      "clip": "a_cloth"
+    },
+    {
+      "lines": [
+        "And at a robot half marathon,",
+        "this one fell at the *start line*."
+      ],
+      "clip": "m_fall"
+    },
+    {
+      "lines": [
+        "Would *you* trust one",
+        "in your house?"
+      ],
+      "clip": "m_carry"
+    }
+  ],
+  "upload": {
+    "title": "Robots Are Having a Really Rough Year 🤖 #shorts",
+    "description": "Robots are having a rough year. 🤖\n\nOne started throwing kung fu kicks in an office while its handlers tried to catch it. A dancing robot at a restaurant in San Jose broke down mid-dance and sent chopsticks and sauce flying. Russia's first humanoid AI robot fell face first during its stage debut and was covered with a cloth. And at a robot half marathon in Beijing, one runner fell right at the start line.\n\nWould you trust one in your house? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#robots",
+      "#humanoid",
+      "#fail",
+      "#technology"
+    ],
+    "tags": [
+      "robot fail",
+      "robot fails",
+      "humanoid robot",
+      "robot kung fu",
+      "robot malfunction",
+      "robot falls",
+      "ai robot",
+      "russian robot",
+      "restaurant robot",
+      "robot half marathon",
+      "funny robots",
+      "tech fails",
+      "top techs"
+    ],
+    "comment": "The robot uprising is going great so far 😂 Which fail was the best? 1, 2, 3 or 4? 👇"
+  }
+}

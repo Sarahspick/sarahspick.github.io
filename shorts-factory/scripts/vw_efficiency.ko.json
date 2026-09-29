@@ -1,0 +1,246 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "v_front": {
+      "src": "bili:BV191es67EiW",
+      "start": 30.3,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_airflow": {
+      "src": "bili:BV191es67EiW",
+      "start": 112.4,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "v_airflow2": {
+      "src": "bili:BV191es67EiW",
+      "start": 124.9,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "v_record": {
+      "src": "bili:BV191es67EiW",
+      "start": 130.45,
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    "v_tunnel": {
+      "src": "bili:BV191es67EiW",
+      "start": 91.2,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_plate": {
+      "src": "bili:BV191es67EiW",
+      "start": 34.4,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_route": {
+      "src": "bili:BV191es67EiW",
+      "start": 18.6,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "v_bridge": {
+      "src": "bili:BV191es67EiW",
+      "start": 86.1,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_aerial": {
+      "src": "bili:BV191es67EiW",
+      "start": 141.9,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_profile": {
+      "src": "bili:BV191es67EiW",
+      "start": 160.05,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_rear": {
+      "src": "bili:BV191es67EiW",
+      "start": 151.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_xl1": {
+      "src": "bili:BV191es67EiW",
+      "start": 165.3,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "electrive: Volkswagen unveils its Mission Efficiency concept car",
+      "url": "https://www.electrive.com/2026/09/14/volkswage-unveils-its-mission-efficiency-concept-car/"
+    },
+    {
+      "name": "Electrek: Volkswagen Mission Efficiency, the XL1 comes back",
+      "url": "https://electrek.co/2026/09/14/volkswagen-mission-efficiency-the-xl1-comes-back-as-1000-mile-range-electric-car/"
+    },
+    {
+      "name": "Design News: VW Mission Efficiency achieves record 0.158 drag coefficient",
+      "url": "https://www.designnews.com/automotive-engineering/vw-mission-efficiency-concept-achieves-record-0158-drag-coefficient-using-production-parts"
+    }
+  ],
+  "footage_credits": [
+    "폭스바겐 공식 Mission Efficiency 영상"
+  ],
+  "id": "vw_efficiency",
+  "lang": "ko",
+  "title": "바람이 *미끄러지는* 차 💨",
+  "pronounce": {
+    "0.158.": "영 점 일오팔.",
+    "0.158": "영 점 일오팔",
+    "1,278km,": "천이백칠십팔 킬로미터,",
+    "800km를": "팔백 킬로미터를",
+    "ID.": "아이디"
+  },
+  "hook": {
+    "lines": [
+      "바람이 그냥",
+      "*미끄러져* 나가는 차."
+    ],
+    "clips": [
+      "v_front",
+      "v_airflow"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:미끄러져"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "폭스바겐이 만든",
+        "*미션 이피션시*예요."
+      ],
+      "clip": "v_tunnel"
+    },
+    {
+      "lines": [
+        "공기가 차에 부딪히질 않고",
+        "쓱 흘러가 버리죠."
+      ],
+      "clip": "v_airflow2"
+    },
+    {
+      "lines": [
+        "공기저항계수",
+        "*0.158*."
+      ],
+      "clip": "v_record",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:영"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "도로를 달릴 수 있는 차 중에",
+        "*세계 신기록*이에요."
+      ],
+      "clip": "v_plate"
+    },
+    {
+      "lines": [
+        "그래서 진짜로 독일 볼프스부르크에서",
+        "오스트리아 빈까지 달려봤는데요,"
+      ],
+      "clip": "v_route"
+    },
+    {
+      "lines": [
+        "*1,278km*,",
+        "충전은 딱 *한 번*."
+      ],
+      "clip": "v_bridge"
+    },
+    {
+      "lines": [
+        "한 번 충전으로",
+        "*800km*를 가는 셈이죠."
+      ],
+      "clip": "v_aerial"
+    },
+    {
+      "lines": [
+        "실험실 장난감도 아니에요.",
+        "양산차 부품으로 만들었거든요."
+      ],
+      "clip": "v_profile"
+    },
+    {
+      "lines": [
+        "이런 물방울 모양 차,",
+        "*타실 의향* 있으세요?"
+      ],
+      "clip": "v_rear"
+    }
+  ],
+  "upload": {
+    "title": "바람이 미끄러지는 차 💨 #shorts",
+    "description": "바람이 그냥 미끄러져 나가는 차가 있습니다. 💨\n\n폭스바겐의 콘셉트카 '미션 이피션시'는 공기저항계수 0.158로, 도로를 달릴 수 있는 차 중 세계 신기록을 세웠어요. 실제로 독일 볼프스부르크에서 오스트리아 빈까지 1,278km를 충전 딱 한 번으로 달렸고, 실주행 전비도 100km당 6.89kWh로 신기록. 54.9kWh 배터리로 한 번 충전에 약 800km를 가는 셈입니다. 게다가 ID. 폴로와 같은 MEB+ 플랫폼의 양산 부품으로 만들었어요.\n\n이런 물방울 모양 차, 타실 의향 있으세요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#폭스바겐",
+      "#전기차",
+      "#자동차",
+      "#공기역학"
+    ],
+    "tags": [
+      "폭스바겐",
+      "미션 이피션시",
+      "Mission Efficiency",
+      "공기저항계수",
+      "세계 신기록 자동차",
+      "전기차 주행거리",
+      "전기차",
+      "폭스바겐 XL1",
+      "물방울 자동차",
+      "연비 좋은 차",
+      "자동차 기술",
+      "기발한 회사들"
+    ],
+    "comment": "공기저항계수가 0.158인데 번호판도 ME 158 😎 한국 출시되면 사실 분? 👇"
+  }
+}

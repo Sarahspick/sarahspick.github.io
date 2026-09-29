@@ -1,0 +1,234 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "o_kick": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 2.2,
+      "focus": [
+        0.72,
+        0.5
+      ]
+    },
+    "o_kick2": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 4.2,
+      "focus": [
+        0.68,
+        0.5
+      ]
+    },
+    "o_catch": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 7.0,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "r_dance": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 38.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "r_chaos": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 48.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "r_staff": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 62.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_walk": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 78.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_fall": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 83.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_cloth": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 95.5,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "m_fall": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 108.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "m_carry": {
+      "src": "bili:BV1j7KN6ZEG1",
+      "start": 118.5,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "New York Post: rogue robot launches kung fu kicks, other robot malfunctions (video compilation)",
+      "url": "https://www.bilibili.com/video/BV1j7KN6ZEG1"
+    }
+  ],
+  "footage_credits": [],
+  "id": "robot_fails",
+  "lang": "ko",
+  "title": "요즘 로봇들 *상태*가 이상합니다 🤖",
+  "pronounce": {},
+  "hook": {
+    "lines": [
+      "요즘 로봇들,",
+      "*상태가* 좀 이상합니다."
+    ],
+    "clips": [
+      "o_kick",
+      "a_fall"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:상태가"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "사무실에서 갑자기",
+        "*쿵후 발차기*를 날리질 않나,"
+      ],
+      "clip": "o_kick2"
+    },
+    {
+      "lines": [
+        "직원들이 붙잡으려 해도",
+        "요리조리 피해 다녀요."
+      ],
+      "clip": "o_catch"
+    },
+    {
+      "lines": [
+        "식당에서 춤추던 이 로봇은…"
+      ],
+      "clip": "r_dance"
+    },
+    {
+      "lines": [
+        "갑자기 *폭주*해서",
+        "젓가락이랑 소스를 다 날려버렸고요."
+      ],
+      "clip": "r_chaos",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:폭주해서"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "결국 직원들이 달라붙어서",
+        "겨우 멈췄죠."
+      ],
+      "clip": "r_staff"
+    },
+    {
+      "lines": [
+        "러시아 최초의",
+        "AI 휴머노이드 로봇은"
+      ],
+      "clip": "a_walk"
+    },
+    {
+      "lines": [
+        "데뷔 무대에서 손 흔들다가",
+        "*얼굴부터* 쿵."
+      ],
+      "clip": "a_fall",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:얼굴부터"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "팀원들이 급하게",
+        "*천으로* 덮어버렸어요."
+      ],
+      "clip": "a_cloth"
+    },
+    {
+      "lines": [
+        "로봇 하프마라톤에선",
+        "*출발선*에서 바로 넘어진 로봇도 있었고요."
+      ],
+      "clip": "m_fall"
+    },
+    {
+      "lines": [
+        "이런 로봇,",
+        "집에 *들이실* 수 있겠어요?"
+      ],
+      "clip": "m_carry"
+    }
+  ],
+  "upload": {
+    "title": "요즘 로봇들 상태가 이상합니다 🤖 #shorts",
+    "description": "요즘 로봇들, 상태가 좀 이상합니다. 🤖\n\n사무실에서 갑자기 쿵후 발차기를 날리며 직원들을 피해 다닌 로봇, 미국 산호세 식당에서 춤추다 폭주해서 젓가락과 소스를 날려버린 로봇, 데뷔 무대에서 손 흔들다 얼굴부터 넘어져 천에 덮여 나간 러시아 최초의 AI 휴머노이드, 그리고 베이징 로봇 하프마라톤 출발선에서 바로 넘어진 로봇까지.\n\n이런 로봇, 집에 들이실 수 있겠어요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#로봇",
+      "#휴머노이드",
+      "#AI",
+      "#웃긴영상"
+    ],
+    "tags": [
+      "로봇 실패",
+      "로봇 폭주",
+      "휴머노이드 로봇",
+      "쿵후 로봇",
+      "로봇 넘어짐",
+      "러시아 로봇",
+      "식당 로봇",
+      "로봇 마라톤",
+      "AI 로봇",
+      "웃긴 로봇",
+      "로봇 영상",
+      "기발한 회사들"
+    ],
+    "comment": "로봇 반란은 아직 멀었습니다 😂 제일 웃긴 거 골라주세요. 1번 발차기, 2번 식당, 3번 러시아, 4번 마라톤 👇"
+  }
+}

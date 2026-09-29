@@ -1,0 +1,257 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "xp_walk": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 19.8,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_walk2": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 22.35,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_door": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 27.6,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_line": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 0.1,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_arm": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 74.2,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_five": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 48.6,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "lc_walk": {
+      "src": "bili:BV1Ca2uBLELs",
+      "start": 0.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "lc_walk2": {
+      "src": "bili:BV1Ca2uBLELs",
+      "start": 44.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "lc_cut": {
+      "src": "bili:BV1Ca2uBLELs",
+      "start": 272.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "lc_leg": {
+      "src": "bili:BV1Ca2uBLELs",
+      "start": 462.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "xp_crowd": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 110.0,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    },
+    "xp_crowd2": {
+      "src": "bili:BV1zSbV67ECF",
+      "start": 132.95,
+      "focus": [
+        0.5,
+        0.46
+      ],
+      "src_zoom": 1.08
+    }
+  },
+  "sources": [
+    {
+      "name": "XPeng: IRON humanoid robot now walks off the production line",
+      "url": "https://www.xpeng.com/news/01a080371029a057bc8e8a02a2c6012b"
+    },
+    {
+      "name": "CleanTechnica: XPeng IRON autonomously walks off production line",
+      "url": "https://cleantechnica.com/2026/09/08/xpeng-iron-autonomously-walks-off-production-line/"
+    },
+    {
+      "name": "Live Science: humanoid robot moves so smoothly they had to cut it open",
+      "url": "https://www.livescience.com/technology/robotics/watch-chinese-companys-new-humanoid-robot-moves-so-smoothly-they-had-to-cut-it-open-to-prove-a-person-wasnt-hiding-inside"
+    }
+  ],
+  "footage_credits": [],
+  "id": "xpeng_iron",
+  "lang": "en",
+  "title": "This robot walked off its own *assembly line* 🤖",
+  "pronounce": {
+    "XPeng's": "X Peng's",
+    "XPeng…": "X Peng…",
+    "80%": "eighty percent"
+  },
+  "hook": {
+    "lines": [
+      "This robot just walked off",
+      "its own *assembly line*."
+    ],
+    "clips": [
+      "xp_walk",
+      "xp_walk2"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:assembly"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "No one carried it.",
+        "No remote control."
+      ],
+      "clip": "xp_door"
+    },
+    {
+      "lines": [
+        "It's *IRON*,",
+        "XPeng's humanoid robot."
+      ],
+      "clip": "xp_five"
+    },
+    {
+      "lines": [
+        "And this is the factory",
+        "that builds them."
+      ],
+      "clip": "xp_line"
+    },
+    {
+      "lines": [
+        "Over *80%*",
+        "of the assembly is automated."
+      ],
+      "clip": "xp_arm"
+    },
+    {
+      "lines": [
+        "Its walk is so human,",
+        "people accused XPeng…"
+      ],
+      "clip": "lc_walk"
+    },
+    {
+      "lines": [
+        "of hiding a *person* inside."
+      ],
+      "clip": "lc_walk2",
+      "punch": true
+    },
+    {
+      "lines": [
+        "So on stage,",
+        "they *cut its leg open*."
+      ],
+      "clip": "lc_cut",
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:cut"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Motors and metal.",
+        "*No human*."
+      ],
+      "clip": "lc_leg"
+    },
+    {
+      "lines": [
+        "Mass production",
+        "starts *this year*."
+      ],
+      "clip": "xp_crowd"
+    },
+    {
+      "lines": [
+        "Would *you* let one",
+        "walk around your house?"
+      ],
+      "clip": "xp_crowd2"
+    }
+  ],
+  "upload": {
+    "title": "This Robot Walked Off Its Own Assembly Line 🤖 #shorts",
+    "description": "No one carried it. No remote control. 🤖\n\nOn September 8 in Guangzhou, XPeng's IRON humanoid robot walked off its own production line by itself. More than 80% of the line's core assembly is automated, and XPeng is targeting mass production by the end of 2026. Its walk is so human that at its launch people accused XPeng of hiding a person inside, so the company cut its leg open on stage to show the motors and metal underneath.\n\nWould you let one walk around your house? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#xpeng",
+      "#robot",
+      "#humanoid",
+      "#technology"
+    ],
+    "tags": [
+      "xpeng",
+      "xpeng iron",
+      "iron robot",
+      "humanoid robot",
+      "robot production line",
+      "robot factory",
+      "xpeng robot",
+      "robot walks",
+      "china robot",
+      "ai robot",
+      "robotics",
+      "future tech",
+      "top techs"
+    ],
+    "comment": "Plot twist: the guy who cut its leg open was the robot all along 🤖 Would you buy one for your home? 👇"
+  }
+}

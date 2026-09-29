@@ -1,0 +1,220 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "h_fly": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 28.8,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_hand": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 116.6,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_gimbal": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 166.9,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_case": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 33.5,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_snap": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 77.3,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_park": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 101.0,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_follow": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 108.95,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_road": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 184.3,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_top": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 126.2,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_cage": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 20.4,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    }
+  },
+  "sources": [
+    {
+      "name": "PetaPixel: HoverAir Versa is the world's first flying pocket camera",
+      "url": "https://petapixel.com/2026/07/30/hoverair-versa-is-the-worlds-first-flying-pocket-camera/"
+    },
+    {
+      "name": "DRONELIFE: HOVERAir launches VERSA 2-in-1 gimbal and camera drone",
+      "url": "https://dronelife.com/2026/08/19/hoverair-launches-versa-2-in-1-gimbal-and-camera-drone/"
+    }
+  ],
+  "footage_credits": [],
+  "id": "hoverair_versa",
+  "lang": "en",
+  "title": "A pocket camera that *flies* 🚁",
+  "pronounce": {
+    "230": "two hundred thirty",
+    "HoverAir": "Hover Air",
+    "$449.": "four forty-nine."
+  },
+  "hook": {
+    "lines": [
+      "This pocket camera",
+      "can just… *fly away*."
+    ],
+    "clips": [
+      "h_gimbal",
+      "h_fly"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:fly"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's the *HoverAir Versa*.",
+        "In your hand, it's a gimbal camera."
+      ],
+      "clip": "h_hand"
+    },
+    {
+      "lines": [
+        "But clip it into",
+        "this little *cage*…"
+      ],
+      "clip": "h_snap"
+    },
+    {
+      "lines": [
+        "and it becomes",
+        "a *self-flying* drone."
+      ],
+      "clip": "h_park",
+      "punch": true
+    },
+    {
+      "lines": [
+        "No controller.",
+        "It just *follows* you."
+      ],
+      "clip": "h_follow"
+    },
+    {
+      "lines": [
+        "Down the road,",
+        "over your head…"
+      ],
+      "clip": "h_road"
+    },
+    {
+      "lines": [
+        "The whole thing weighs *230 grams*,",
+        "light enough for most drone rules."
+      ],
+      "clip": "h_top"
+    },
+    {
+      "lines": [
+        "It started on Indiegogo",
+        "from about *$449*."
+      ],
+      "clip": "h_case"
+    },
+    {
+      "lines": [
+        "Gimbal *or* drone…",
+        "which one would you use more?"
+      ],
+      "clip": "h_cage"
+    }
+  ],
+  "upload": {
+    "title": "A Pocket Camera That Can Fly 🚁 #shorts",
+    "description": "This pocket camera can just fly away. 🚁\n\nThe HoverAir Versa is a handheld 3-axis gimbal camera. Clip it into its snap-on flight kit and it turns into a self-flying AI drone that follows you, with more than 10 intelligent flight modes and no controller needed. The drone weighs 230 grams, under the common 250 g limit. It launched on Indiegogo on August 18, 2026, with early-bird prices from about $449.\n\nGimbal or drone, which one would you use more? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#hoverair",
+      "#drone",
+      "#gadgets",
+      "#technology"
+    ],
+    "tags": [
+      "hoverair versa",
+      "hoverair",
+      "flying camera",
+      "pocket camera drone",
+      "selfie drone",
+      "gimbal camera",
+      "follow me drone",
+      "ai drone",
+      "vlog camera",
+      "cool gadgets",
+      "new gadgets 2026",
+      "tech gadgets",
+      "top techs"
+    ],
+    "comment": "Imagine it following you and you forget it's there for 3 hours 😂 Would you trust it to follow you around? 👇"
+  }
+}

@@ -1,0 +1,218 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "h_fly": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 28.8,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_hand": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 116.6,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_gimbal": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 166.9,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_case": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 33.5,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_snap": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 77.3,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_park": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 101.0,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_follow": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 108.95,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_road": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 184.3,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_top": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 126.2,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "h_cage": {
+      "src": "bili:BV12yaP66EFd",
+      "start": 20.4,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    }
+  },
+  "sources": [
+    {
+      "name": "PetaPixel: HoverAir Versa is the world's first flying pocket camera",
+      "url": "https://petapixel.com/2026/07/30/hoverair-versa-is-the-worlds-first-flying-pocket-camera/"
+    },
+    {
+      "name": "DRONELIFE: HOVERAir launches VERSA 2-in-1 gimbal and camera drone",
+      "url": "https://dronelife.com/2026/08/19/hoverair-launches-versa-2-in-1-gimbal-and-camera-drone/"
+    }
+  ],
+  "footage_credits": [],
+  "id": "hoverair_versa",
+  "lang": "ko",
+  "title": "주머니 속 카메라가 *날아갑니다* 🚁",
+  "pronounce": {
+    "230g,": "이백삼십 그램,",
+    "449달러부터": "사백사십구 달러부터"
+  },
+  "hook": {
+    "lines": [
+      "손에 들던 카메라가…",
+      "그대로 *날아갑니다*."
+    ],
+    "clips": [
+      "h_gimbal",
+      "h_fly"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:날아갑니다."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "호버에어 *버사*.",
+        "평소엔 손에 드는 짐벌 카메라인데요,"
+      ],
+      "clip": "h_hand"
+    },
+    {
+      "lines": [
+        "이 작은 *프레임*에",
+        "딸깍 끼우면…"
+      ],
+      "clip": "h_snap"
+    },
+    {
+      "lines": [
+        "혼자 나는",
+        "*드론*이 돼요."
+      ],
+      "clip": "h_park",
+      "punch": true
+    },
+    {
+      "lines": [
+        "조종기도 필요 없어요.",
+        "알아서 *따라오거든요*."
+      ],
+      "clip": "h_follow"
+    },
+    {
+      "lines": [
+        "길 따라 쭉,",
+        "머리 위로 휙."
+      ],
+      "clip": "h_road"
+    },
+    {
+      "lines": [
+        "무게는 *230g*,",
+        "웬만한 드론 규제는 피해 가는 무게예요."
+      ],
+      "clip": "h_top"
+    },
+    {
+      "lines": [
+        "크라우드펀딩으로",
+        "*449달러부터* 나왔어요."
+      ],
+      "clip": "h_case"
+    },
+    {
+      "lines": [
+        "여러분은 짐벌로 더 쓸 것 같아요,",
+        "*드론*으로 더 쓸 것 같아요?"
+      ],
+      "clip": "h_cage"
+    }
+  ],
+  "upload": {
+    "title": "주머니 속 카메라가 날아갑니다 🚁 #shorts",
+    "description": "손에 들던 카메라가 그대로 날아갑니다. 🚁\n\n호버에어 버사(HoverAir Versa)는 평소엔 3축 짐벌 카메라인데, 전용 비행 프레임에 딸깍 끼우면 혼자 나는 AI 드론이 돼요. 조종기 없이 알아서 따라오고, 지능형 비행 모드도 10가지가 넘습니다. 드론 무게는 230g으로 흔히 쓰는 250g 기준보다 가볍고요. 2026년 8월 18일 인디고고 크라우드펀딩으로 얼리버드 약 449달러부터 나왔어요.\n\n여러분은 짐벌로 더 쓸 것 같아요, 드론으로 더 쓸 것 같아요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#호버에어",
+      "#드론",
+      "#신기한물건",
+      "#IT"
+    ],
+    "tags": [
+      "호버에어 버사",
+      "호버에어",
+      "HoverAir Versa",
+      "셀카 드론",
+      "날아다니는 카메라",
+      "짐벌 카메라",
+      "브이로그 카메라",
+      "팔로우 드론",
+      "AI 드론",
+      "신기한 가젯",
+      "IT 신제품",
+      "기발한 회사들"
+    ],
+    "comment": "따라오는 거 까먹고 3시간 산책했다는 후기 나올 듯 😂 여러분은 짐벌파 vs 드론파? 👇"
+  }
+}

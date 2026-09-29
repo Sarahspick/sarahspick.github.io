@@ -1,0 +1,8 @@
+edge-tts>=7
+soundfile
+numpy
+pillow>=10
+resvg-py
+yt-dlp
+certifi
+# optional offline voice (engine "kokoro"): kokoro-onnx sherpa-onnx

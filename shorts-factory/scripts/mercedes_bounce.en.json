@@ -1,0 +1,339 @@
+{
+  "id": "mercedes_bounce",
+  "lang": "en",
+  "title": "Mercedes' secret *sand escape* mode 🤯",
+  "pronounce": {
+    "GLE": "G L E",
+    "48-volt": "forty-eight volt"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "This SUV can bounce",
+      "itself out of sand."
+    ],
+    "clip": "c_spray",
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.5,
+        "y": 0.52,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:bounce"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "It's stuck in a dune.",
+        "Wheels spinning."
+      ],
+      "clips": [
+        "c_stuck_side",
+        "c_stuck_front"
+      ]
+    },
+    {
+      "lines": [
+        "Going *nowhere*."
+      ],
+      "clip": "c_stuck_front"
+    },
+    {
+      "lines": [
+        "So the driver taps one button…"
+      ],
+      "clip": "c_screen",
+      "sfx": [
+        {
+          "id": "mouse_click",
+          "at": "word:button"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "…and the whole car starts *rocking*."
+      ],
+      "clip": "c_rock1",
+      "punch": true,
+      "pause_after": 1.1,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:rocking"
+        },
+        {
+          "id": "omg",
+          "at": "end+0.05",
+          "gain": -3
+        }
+      ]
+    },
+    {
+      "lines": [
+        "It pumps its suspension",
+        "up and down, over and over,"
+      ],
+      "clip": "c_rock2"
+    },
+    {
+      "lines": [
+        "changing how hard each tire",
+        "presses into the sand…"
+      ],
+      "clip": "c_rock_side"
+    },
+    {
+      "lines": [
+        "…until it finally grips",
+        "and rocks itself *free*."
+      ],
+      "clip": "c_escape",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:free"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The secret?",
+        "A *48-volt* active suspension"
+      ],
+      "clip": "c_display",
+      "punch": true
+    },
+    {
+      "lines": [
+        "that controls every wheel",
+        "*on its own*."
+      ],
+      "clip": "c_sliders"
+    },
+    {
+      "lines": [
+        "It even reads the road",
+        "and flattens bumps before you feel them."
+      ],
+      "clip": "c_compare"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "c_dunes",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.2
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Barely anyone *paid* for it."
+      ],
+      "clip": "c_parked",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:paid"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "So Mercedes quietly *dropped* it",
+        "from the GLE in America."
+      ],
+      "clip": "card_takerate",
+      "annotate": [
+        {
+          "type": "stamp",
+          "at": "word:dropped",
+          "text": "DROPPED",
+          "x": 0.74,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Would *you* pay extra for this?"
+      ],
+      "clip": "c_charge"
+    }
+  ],
+  "clips": {
+    "c_spray": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 5.2,
+      "speed": 0.75,
+      "focus": [
+        0.62,
+        0.5
+      ]
+    },
+    "c_stuck_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 169.4,
+      "aspect": "4:3",
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_stuck_front": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 173.7,
+      "focus": [
+        0.47,
+        0.5
+      ]
+    },
+    "c_screen": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 126.3,
+      "focus": [
+        0.33,
+        0.5
+      ]
+    },
+    "c_rock1": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 182.2,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "c_rock2": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 189.6,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_rock_side": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 185.7,
+      "aspect": "4:3",
+      "focus": [
+        0.55,
+        0.75
+      ],
+      "src_zoom": 1.23
+    },
+    "c_escape": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 193.0,
+      "focus": [
+        0.58,
+        0.5
+      ]
+    },
+    "c_display": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 93.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_sliders": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 129.2,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "c_compare": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 87.0,
+      "aspect": "16:9",
+      "focus": [
+        0.55,
+        0.5
+      ],
+      "src_zoom": 1.1
+    },
+    "c_dunes": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 100.5,
+      "focus": [
+        0.6,
+        0.5
+      ]
+    },
+    "c_parked": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 115.2,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "c_charge": {
+      "src": "bili:BV1m4411P7Fs",
+      "start": 108.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "card_takerate": {
+      "kind": "card",
+      "tag": "news",
+      "outlet": "Motor1 / Autoblog",
+      "headline": "Mercedes drops *E-Active Body Control* from the GLE in the US after low take rates"
+    }
+  },
+  "upload": {
+    "title": "This SUV Bounces Itself Out of Sand 🤯 #shorts",
+    "description": "Mercedes-Benz E-ACTIVE BODY CONTROL is a 48-volt active suspension that controls every wheel on its own. Stuck in a dune? Free-driving mode raises and lowers the body again and again, changing the tyres' ground pressure until they grip and the SUV rocks itself free. It can also scan the road ahead and smooth bumps before you feel them. Plot twist: so few buyers ordered it that Mercedes dropped it from the GLE in the US.",
+    "hashtags": [
+      "#shorts",
+      "#mercedes",
+      "#cars",
+      "#engineering",
+      "#technology"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Mercedes-Benz press release: The new Mercedes-Benz GLE (free-driving mode, E-ACTIVE BODY CONTROL)",
+      "url": "https://media.mbusa.com/releases/release-186a588f9437b92c4e76c05fca09d7c8-the-new-mercedes-benz-gle"
+    },
+    {
+      "name": "Mercedes-Benz GLE owner's manual: ROAD SURFACE SCAN",
+      "url": "https://www.mbusa.com/en/owners/manuals/gle-suv-2018-07-v167-mbux/active-body-control/function-of-road-surface-scan"
+    },
+    {
+      "name": "Motor1: Mercedes GLE loses the bouncy suspension in the US",
+      "url": "https://www.motor1.com/news/494134/mercedes-gle-suv-bouncing-suv/"
+    },
+    {
+      "name": "Autoblog: Mercedes-Benz GLE loses E-Active Body Control",
+      "url": "https://www.autoblog.com/features/mercedes-drops-gle-e-active-body-control"
+    }
+  ],
+  "footage_credits": [
+    "Mercedes-Benz GLS off-road demonstration (Mercedes-Benz press footage, edit by YouCar)"
+  ]
+}

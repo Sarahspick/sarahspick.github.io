@@ -1,0 +1,304 @@
+{
+  "id": "mcdonalds_icecream",
+  "lang": "en",
+  "title": "Why McDonald's ice cream machine is *always broken* 🍦",
+  "pronounce": {
+    "2024": "twenty twenty-four",
+    "Kytch": "kitch"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "McDonald's ice cream machine",
+      "is \"broken\" *again*?"
+    ],
+    "clips": [
+      "m_store",
+      "m_cone"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.45,
+        "y": 0.4,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:again"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Here's the secret:",
+        "it's usually *not* broken."
+      ],
+      "clip": "m_swirl",
+      "punch": true
+    },
+    {
+      "lines": [
+        "Every night, the Taylor machine",
+        "heats itself to kill bacteria…"
+      ],
+      "clip": "m_hopper"
+    },
+    {
+      "lines": [
+        "…a cleaning cycle that can take",
+        "about *four hours*."
+      ],
+      "clip": "m_panel",
+      "sfx": [
+        {
+          "id": "wait_what",
+          "at": "end+0.05"
+        }
+      ],
+      "pause_after": 0.7
+    },
+    {
+      "lines": [
+        "If anything goes wrong,",
+        "it locks up with cryptic error codes."
+      ],
+      "clip": "m_open"
+    },
+    {
+      "lines": [
+        "And only a *Taylor* technician",
+        "is allowed to fix it."
+      ],
+      "clip": "m_parts"
+    },
+    {
+      "lines": [
+        "One coder even built *McBroken*,",
+        "a live map of broken machines."
+      ],
+      "clip": "card_mcbroken",
+      "sfx": [
+        {
+          "id": "click",
+          "at": "word:McBroken"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "A startup called *Kytch* made a gadget",
+        "to decode the errors…"
+      ],
+      "clip": "m_lever"
+    },
+    {
+      "lines": [
+        "…and McDonald's told restaurants",
+        "to rip it *out*."
+      ],
+      "clip": "m_cup",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "get_out",
+          "at": "end+0.02"
+        }
+      ],
+      "pause_after": 0.6
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "m_oreo",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "In 2024, the U.S. Copyright Office",
+        "made it *legal* to bypass the locks,"
+      ],
+      "clip": "card_copyright",
+      "sfx": [
+        {
+          "id": "stamp",
+          "at": "word:legal"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "so restaurants can fix",
+        "their machines *themselves*."
+      ],
+      "clip": "m_cone2",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:themselves"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Ice cream for everyone? 🍦"
+      ],
+      "clip": "m_lineup"
+    }
+  ],
+  "clips": {
+    "m_store": {
+      "src": "bili:BV19o4y117NE",
+      "start": 11.9,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_cone": {
+      "src": "bili:BV17A411r7fm",
+      "start": 25.15,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_swirl": {
+      "src": "bili:BV19o4y117NE",
+      "start": 0.55,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "m_hopper": {
+      "src": "bili:BV17A411r7fm",
+      "start": 10.7,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_panel": {
+      "src": "bili:BV17A411r7fm",
+      "start": 22.65,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "m_open": {
+      "src": "bili:BV17A411r7fm",
+      "start": 51.2,
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    "m_parts": {
+      "src": "bili:BV17A411r7fm",
+      "start": 64.45,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_lever": {
+      "src": "bili:BV19o4y117NE",
+      "start": 33.05,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "m_cup": {
+      "src": "bili:BV19o4y117NE",
+      "start": 53.4,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_oreo": {
+      "src": "bili:BV19o4y117NE",
+      "start": 37.4,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "m_cone2": {
+      "src": "bili:BV17A411r7fm",
+      "start": 29.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "m_lineup": {
+      "src": "bili:BV19o4y117NE",
+      "start": 25.9,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "card_mcbroken": {
+      "kind": "card",
+      "tag": "fact",
+      "outlet": "mcbroken.com",
+      "date": "since 2020",
+      "headline": "A bot orders a sundae from every McDonald's every *30 minutes* to see which machines work"
+    },
+    "card_copyright": {
+      "kind": "card",
+      "tag": "news",
+      "outlet": "U.S. Copyright Office",
+      "date": "Oct 2024",
+      "headline": "Restaurants may now *legally* bypass digital locks to repair their soft-serve machines"
+    }
+  },
+  "upload": {
+    "title": "Why McDonald's Ice Cream Machine Is Always Broken 🍦 #shorts",
+    "description": "Most 'broken' McDonald's ice cream machines are mid-way through the Taylor machine's nightly heat-treatment cycle, which pasteurizes the mix and can take about four hours. When something fails, the machine locks up with vague error codes and only Taylor-authorized technicians can fix it. McBroken tracks machine status by ordering a sundae every 30 minutes; Kytch built a device to decode the errors, and in November 2020 McDonald's told franchisees to remove it. In October 2024 the U.S. Copyright Office granted a DMCA exemption so restaurants can legally bypass the digital locks to repair their own machines.",
+    "hashtags": [
+      "#shorts",
+      "#mcdonalds",
+      "#icecream",
+      "#business",
+      "#righttorepair"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Wikipedia: McDonald's ice cream machine",
+      "url": "https://en.wikipedia.org/wiki/McDonald's_ice_cream_machine"
+    },
+    {
+      "name": "Today: McDonald's allowed to fix its own ice cream machines, US Copyright Office says",
+      "url": "https://www.today.com/food/news/mcdonalds-ice-cream-machine-fix-rcna177828"
+    },
+    {
+      "name": "The Register: US Copyright Office OKs McDonald's fixing ice cream makers",
+      "url": "https://www.theregister.com/2024/10/29/copyright_office_mcdonalds/"
+    }
+  ],
+  "footage_credits": [
+    "McDonald's 'How We Made It: McFlurry' (Uber Eats / McDonald's Canada)",
+    "Taylor soft-serve machine demonstration (Seeway)"
+  ]
+}

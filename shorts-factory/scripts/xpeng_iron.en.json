@@ -39,7 +39,8 @@
         0.5,
         0.46
       ],
-      "src_zoom": 1.08
+      "src_zoom": 1.08,
+      "speed": 0.918
     },
     "xp_arm": {
       "src": "bili:BV1zSbV67ECF",

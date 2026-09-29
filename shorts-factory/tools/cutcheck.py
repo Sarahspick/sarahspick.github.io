@@ -43,7 +43,7 @@ def cuts_inside(cuts, s, length):
 def check(script_path, fix=False):
     """Windows come from the CURRENT script (clip starts) + the last render's segment durations."""
     sc = json.load(open(script_path, encoding="utf-8"))
-    sid = sc["id"]
+    sid = sc["id"] if sc.get("lang", "en") == "en" else f"{sc['id']}_{sc['lang']}"  # same work dir as render.py
     tl_path = f"work/{sid}/timeline.json"
     if not os.path.exists(tl_path):
         print(f"== {sid}: no timeline (render first)")

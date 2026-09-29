@@ -332,8 +332,6 @@ class TypecastNarrator(Narrator):
     API = "https://api.typecast.ai/v1/text-to-speech/with-timestamps?granularity=word"
     KEY_VARS = ("TYPECAST_API_KEY", "Typecast_API", "TYPECAST_API")
     LANGS = {"ko": "kor", "en": "eng"}
-    # attribution requested by Typecast's API docs (https://typecast.ai/docs/llms.txt); no user data in it
-    USER_AGENT = "typecast-direct/1 urllib typecast-integration/1 (source=api-page; generated_by=claude-code)"
     sr = 44100
 
     def __init__(self, voice_id, model="ssfm-v30", lang="ko", pronounce=None, emotion="normal", intensity=1.0,
@@ -361,8 +359,7 @@ class TypecastNarrator(Narrator):
                         d = json.load(f)
                 else:
                     req = urllib.request.Request(self.API, data=json.dumps(body).encode(), method="POST",
-                                                 headers={"X-API-KEY": self.key, "Content-Type": "application/json",
-                                                          "User-Agent": self.USER_AGENT})
+                                                 headers={"X-API-KEY": self.key, "Content-Type": "application/json"})
                     with urllib.request.urlopen(req, timeout=120) as r:
                         d = json.load(r)
                 audio = decode_audio(base64.b64decode(d["audio"]), self.sr)

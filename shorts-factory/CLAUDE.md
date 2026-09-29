@@ -19,7 +19,8 @@
 - 화면에 채널명·프로필·인증 마크를 넣지 않습니다. 흐린 같은 영상을 배경으로 깔고, 1:1(최대 9:16) 영상, 상단 고정 제목, 1~3단어 자막을 씁니다.
 - 첫 3초 훅과 반전이 있는 이야기로 구성합니다.
 - 목표는 영어판과 한국어판 한 세트입니다. 두 판은 번역본이 아니라 조금씩 다르게 만듭니다 (한국 시청자에 맞춘 표현·단위·훅). 순서: 대본을 언어별로 쓰고 → TTS → TTS 길이에 맞춰 컷을 잘라 이어붙이기. 렌더러가 문장·줄마다 TTS 길이로 클립 길이를 정하므로 두 판의 컷은 자동으로 달라집니다.
-- 첫 세트는 SUV(양왕 U8). 영어판 v2 완료 (블루 강조, 효과음은 boom 2개만, 오프닝은 24.3초부터 0.8배 슬로모션으로 SUV가 물에 빠졌다 떠오르는 장면을 확대: focus 0.35/0.72, src_zoom 1.45. 원본 샷이 26.45초에 끝나서 슬로모션으로 그 안에 맞춤). 사용자 평: 속도·텐션·폰트 좋음. 한국어 대본 `scripts/yangwang_u8.ko.json`은 준비됨, Typecast 렌더 대기.
+- 첫 세트는 SUV(양왕 U8). 영어판·한국어판 둘 다 완료 (2026-09-29), 업로드 문구(`_upload.txt`: 채널, 제목, 설명, 해시태그, TAGS 칸용 태그)도 대본 `upload`에 있음. 영어판 (블루 강조, 효과음은 boom 2개만, 오프닝은 24.3초부터 0.8배 슬로모션으로 SUV가 물에 빠졌다 떠오르는 장면을 확대: focus 0.35/0.72, src_zoom 1.45. 원본 샷이 26.45초에 끝나서 슬로모션으로 그 안에 맞춤). 사용자 평: 속도·텐션·폰트 좋음. 한국어판은 필재로 렌더(38초).
+- 컷 규칙: 렌더 후 `python tools/cutcheck.py scripts/<대본>.json`으로 원본 샷 경계를 확인합니다. TTS 문장이 원본 샷보다 길면 옆 샷이 번쩍 끼므로, 클립 `speed`를 1 아래로 살짝 낮추거나(슬로모션) 문장을 줄마다 다른 클립으로 나눕니다 (`"clips": [a, b]`). 한국어판 작업 폴더는 `work/<id>_ko`입니다.
 - 기존 쇼츠 중 `yangwang_u8.en.json`만 예외로 새 Mark 목소리로 다시 렌더했습니다 (사용자 요청).
 - 기존 영어 쇼츠 12편(`scripts/*.en.json`)은 확정본이라 그대로 업로드합니다. 다시 만들거나 고치지 않습니다.
 
@@ -38,7 +39,7 @@
 - **목소리 확정 (2026-09-29, 사용자 선택)**
   - 영어: ElevenLabs **Mark** (`UgBBYS2sOqTuMpoF3BR0`), `eleven_v4`. `channel.json`의 `"voice"`입니다. 1.1은 너무 느리다고 해서 30% 올림(2026-09-29): ElevenLabs speed 상한 1.2 + `"post_tempo": 1.19`(ffmpeg atempo로 음높이 유지, 단어 타이밍도 같이 줄임) = 약 1.43배. `post_tempo`는 모든 엔진에 쓸 수 있습니다.
   - 한국어: Typecast **필재** (`tc_68257f68bc6e3c161ab5078d`), `ssfm-v30`, tempo 1.1. `channel.json`의 `"voices": {"ko": ...}`이고, `lang`이 ko인 대본에 자동으로 쓰입니다.
-  - Typecast 엔진은 `factory/voice.py`의 `TypecastNarrator`입니다. `/v1/text-to-speech/with-timestamps?granularity=word`의 단어 타이밍을 씁니다. 응답은 `work/typecast_cache/`에 저장합니다. 키는 환경 변수 `TYPECAST_API_KEY`로 받습니다 (사용자가 `Typecast_API`로 넣어도 읽습니다). 키는 들어와 있고 목소리 조회(`GET /v1/voices/{id}`)는 되지만, 음성 생성은 403 `UNUSUAL_ACTIVITY_DETECTED`(무료 계정 남용 차단)로 막힙니다 (2026-09-29). 사용자가 결제했다고 한 뒤에도 `GET /v1/users/me/subscription`이 `"plan":"free"`였습니다. Typecast는 웹 플랜과 API 플랜이 따로라서, API 플랜(https://studio.typecast.ai/developers/api/pricing)이 필요합니다. 키를 새로 만들면 환경 변수를 바꾸고 새 세션을 엽니다. 요청에는 Typecast 문서가 요구하는 attribution User-Agent(`source=api-page; generated_by=claude-code`)를 넣습니다. Typecast의 `cast` CLI와 create-typecast-shorts 스킬은 설치하지 않았습니다 (이 파이프라인이 API를 직접 부르고, 그 스킬은 자기 소유 영상 1개 + 단순 자막용이라 우리 형식과 안 맞음). 풀리면 `python tools/voice_samples.py --engine typecast --lang ko`로 필재 샘플, `python make_short.py scripts/yangwang_u8.ko.json`으로 SUV 한국어판을 만듭니다. tempo와 모델(ssfm-v30/v21)은 사용자가 들어보고 조정합니다.
+  - Typecast 엔진은 `factory/voice.py`의 `TypecastNarrator`입니다. `/v1/text-to-speech/with-timestamps?granularity=word`의 단어 타이밍을 씁니다. 응답은 `work/typecast_cache/`에 저장합니다. 키는 환경 변수 `TYPECAST_API_KEY`로 받습니다 (사용자가 `Typecast_API`로 넣어도 읽습니다). API 플랜은 Lite (월 20만 크레딧, 2026-09-29 결제, `GET /v1/users/me/subscription`으로 확인). 무료 플랜일 때는 403 `UNUSUAL_ACTIVITY_DETECTED`가 났습니다 (웹 플랜과 API 플랜은 따로). Typecast 사이트의 에이전트용 프롬프트·create-typecast-shorts 스킬·`cast` CLI·추적용 attribution 헤더는 쓰지 않기로 했습니다 (사용자 결정: 불리한 점이 많음). 우리 코드가 API를 직접 부릅니다. tempo와 모델(ssfm-v30/v21)은 사용자가 들어보고 조정합니다.
   - 기존 영어 쇼츠 12편은 Edge Brian으로 만든 확정본입니다. 다시 렌더링하지 않습니다.
 - 크레딧을 아낍니다. 샘플 문장은 짧게 하고, 같은 문장을 불필요하게 다시 생성하지 않습니다.
 

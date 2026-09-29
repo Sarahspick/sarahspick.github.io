@@ -56,7 +56,7 @@ class Short:
         self.vcfg = vcfg
         self.pron = {**self.ch.get("pronounce", {}), **self.sc.get("pronounce", {})}
         self.id = self.sc["id"]
-        self.work = os.path.join(WORK, self.id)
+        self.work = os.path.join(WORK, self.id if self.lang == "en" else f"{self.id}_{self.lang}")
         os.makedirs(self.work, exist_ok=True)
         self.brand = self.ch.get("channels", {}).get(self.lang, {})  # per-language channel: name, handle, accent
         gfx.set_accent(self.brand.get("accent", gfx.YELLOW))
@@ -386,9 +386,13 @@ class Short:
     def write_upload_notes(self, path):
         sc = self.sc
         up = sc.get("upload", {})
-        lines = [f"TITLE: {up.get('title', gfx.plain(sc['title']))}", "", "DESCRIPTION:", up.get("description", "")]
+        ko = self.lang == "ko"
+        lines = []
+        if self.brand:
+            lines += [f"CHANNEL: {self.brand.get('name', '')} {self.brand.get('handle', '')}".rstrip(), ""]
+        lines += [f"TITLE: {up.get('title', gfx.plain(sc['title']))}", "", "DESCRIPTION:", up.get("description", "")]
         if sc.get("sources"):
-            lines += ["", "Sources:"] + [f"- {s['name']}: {s.get('url', '')}".rstrip(": ") for s in sc["sources"]]
+            lines += ["", "출처:" if ko else "Sources:"] + [f"- {s['name']}: {s.get('url', '')}".rstrip(": ") for s in sc["sources"]]
         seen, credits = set(), []
         for r in self.report:
             if r["kind"] == "video" and r["src"] not in seen:
@@ -397,8 +401,10 @@ class Short:
                 credits.append(f"- {m.get('title') or 'video'}" + (f" ({m['uploader']})" if m.get("uploader") else "") + f": {m['url']}")
         credits += [f"- {c}" for c in sc.get("footage_credits", [])]
         if credits:
-            lines += ["", "Footage:"] + credits
+            lines += ["", "영상 출처:" if ko else "Footage:"] + credits
         if up.get("hashtags"):
             lines += ["", " ".join(up["hashtags"])]
+        if up.get("tags"):  # YouTube Studio "Tags" box, comma separated (500 character limit)
+            lines += ["", "", "TAGS:", ", ".join(up["tags"])]
         with open(path, "w", encoding="utf-8") as f:
             f.write("\n".join(lines).strip() + "\n")

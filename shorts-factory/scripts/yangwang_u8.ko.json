@@ -62,7 +62,10 @@
         "서스펜션은",
         "최대 높이까지 올라갑니다."
       ],
-      "clip": "y_side"
+      "clips": [
+        "y_side",
+        "y_rear"
+      ]
     },
     {
       "lines": [
@@ -119,7 +122,7 @@
       "sfx": [
         {
           "id": "boom",
-          "at": "word:3.5톤이라는"
+          "at": "word:톤이라는"
         }
       ]
     },
@@ -170,39 +173,43 @@
     },
     "y_cabin": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 34.4,
+      "start": 34.45,
       "focus": [
         0.45,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.88
     },
     "y_side": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 45.7,
+      "start": 45.71,
       "focus": [
         0.4,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.93
     },
     "y_roof": {
       "src": "bili:BV1LUV2zVE92",
-      "start": 24.0,
+      "start": 23.93,
       "src_zoom": 1.25,
       "focus": [
         0.5,
         0.4
-      ]
+      ],
+      "speed": 0.95
     },
     "y_aerial": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 48.6,
+      "start": 49.4,
       "focus": [
         0.45,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.6
     },
     "y_speed": {
       "src": "bili:BV1inSLBZEbJ",
@@ -224,12 +231,13 @@
     },
     "y_wheel": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 61.8,
+      "start": 61.83,
       "focus": [
         0.5,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.44
     },
     "y_tank": {
       "src": "bili:BV1XN4y1D7uW",
@@ -242,12 +250,13 @@
     },
     "y_exit": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 58.9,
+      "start": 58.84,
       "focus": [
         0.4,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.88
     },
     "y_exit2": {
       "src": "bili:BV1inSLBZEbJ",
@@ -266,17 +275,43 @@
         0.5
       ],
       "src_zoom": 1.07
+    },
+    "y_rear": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 44.08,
+      "speed": 0.85,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
     }
   },
   "upload": {
-    "title": "물에 뜨는 SUV 🌊 #shorts",
-    "description": "BYD 양왕 U8에는 긴급 부유 모드가 있습니다. 물이 깊어지면 엔진이 꺼지고, 서스펜션이 최대 높이로 올라가고, 창문이 닫히고, 에어컨이 내부 순환으로 바뀌며, 선루프가 비상 탈출구로 열립니다. 물 위에서 약 30분을 버티고, 바퀴마다 달린 4개의 독립 전기 모터로 시속 약 3km로 움직입니다. 같은 구조 덕분에 제자리 360도 탱크 턴도 가능합니다. 가격 약 109만 위안(약 2억 원), 무게 약 3,460kg.",
+    "title": "호수에 빠져도 둥둥 뜨는 2억짜리 SUV 🌊 #shorts",
+    "description": "물에 뜨는 SUV, 실제로 있습니다. 🌊\n\nBYD의 양왕 U8에는 '긴급 부유 모드'가 있어요. 물이 깊어지면 엔진이 꺼지고, 창문이 자동으로 닫히고, 에어컨은 내부 순환으로 바뀌고, 서스펜션이 최대 높이까지 올라가며, 선루프는 비상 탈출구로 열립니다. 이 상태로 약 30분 동안 물 위에 떠 있고, 바퀴마다 달린 전기 모터 4개로 바퀴만 굴려 시속 약 3km로 나아갑니다. 같은 구조 덕분에 제자리에서 360도 도는 '탱크 턴'도 가능하죠. 무게는 무려 약 3.5톤(3,460kg).\n\n가격: 약 109만 위안 (약 2억 원)\n\n여러분이라면 호수로 몰고 들어가시겠어요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
     "hashtags": [
       "#shorts",
+      "#양왕U8",
       "#BYD",
-      "#양왕",
       "#자동차",
-      "#기술"
+      "#전기차"
+    ],
+    "tags": [
+      "양왕 U8",
+      "BYD 양왕",
+      "양왕",
+      "BYD",
+      "물에 뜨는 차",
+      "물에 뜨는 SUV",
+      "수륙양용 자동차",
+      "긴급 부유 모드",
+      "탱크턴",
+      "중국 전기차",
+      "전기 SUV",
+      "자동차 기술",
+      "신기한 기술",
+      "기발한 회사들"
     ]
   },
   "sources": [
@@ -294,8 +329,8 @@
     }
   ],
   "footage_credits": [
-    "Yangwang official emergency-floating film",
-    "Yangwang U8 tank-turn footage (HaloCar)",
-    "Yangwang U8 floating footage (Weibo video)"
+    "양왕 공식 긴급 부유 영상",
+    "양왕 U8 탱크턴 영상 (HaloCar)",
+    "양왕 U8 부유 영상 (웨이보)"
   ]
 }

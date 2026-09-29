@@ -61,7 +61,10 @@
         "and the suspension lifts",
         "all the way up."
       ],
-      "clip": "y_side"
+      "clips": [
+        "y_side",
+        "y_rear"
+      ]
     },
     {
       "lines": [
@@ -183,7 +186,8 @@
         0.4,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.8
     },
     "y_roof": {
       "src": "bili:BV1LUV2zVE92",
@@ -223,12 +227,13 @@
     },
     "y_wheel": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 61.8,
+      "start": 61.83,
       "focus": [
         0.5,
         0.5
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.07,
+      "speed": 0.44
     },
     "y_tank": {
       "src": "bili:BV1XN4y1D7uW",
@@ -241,7 +246,7 @@
     },
     "y_exit": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 58.9,
+      "start": 58.84,
       "focus": [
         0.4,
         0.5
@@ -265,17 +270,44 @@
         0.5
       ],
       "src_zoom": 1.07
+    },
+    "y_rear": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 44.08,
+      "speed": 0.85,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
     }
   },
   "upload": {
-    "title": "The SUV That Can Float 🌊 #shorts",
-    "description": "BYD's Yangwang U8 has an emergency floating mode: when the water gets too deep, the engine shuts off, the suspension rises to its maximum height, the windows close, the A/C switches to recirculation and the sunroof opens as an escape exit. It can stay afloat for about 30 minutes and move at around 3 km/h using its four independent electric motors, the same setup that lets it do a 360-degree tank turn. Price: about 1.09 million yuan (~$150,000). Weight: about 3,460 kg.",
+    "title": "This SUV Drove Into a Lake… and Floated 🌊 #shorts",
+    "description": "A $150,000 SUV that can float. 🌊\n\nBYD's Yangwang U8 has an emergency floating mode. When the water gets too deep, the engine shuts off, the windows seal, the A/C switches to recirculation, the suspension rises to its maximum height and the sunroof opens as an escape hatch. It can stay afloat for about 30 minutes and paddle forward at around 3 km/h just by spinning its wheels, thanks to four independent electric motors, one per wheel. The same setup lets it spin 360 degrees in place like a tank. And it weighs almost 3.5 tons (about 3,460 kg).\n\nPrice: about 1.09 million yuan (~$150,000).\n\nWould you drive it into a lake? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
     "hashtags": [
       "#shorts",
+      "#yangwangu8",
       "#byd",
-      "#yangwang",
       "#cars",
       "#technology"
+    ],
+    "tags": [
+      "yangwang u8",
+      "byd yangwang u8",
+      "floating suv",
+      "suv that can float",
+      "car that floats",
+      "emergency floating mode",
+      "byd",
+      "yangwang",
+      "tank turn",
+      "electric suv",
+      "chinese ev",
+      "amphibious car",
+      "car technology",
+      "cool tech",
+      "top techs"
     ]
   },
   "sources": [

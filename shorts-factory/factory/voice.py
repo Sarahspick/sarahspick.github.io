@@ -4,15 +4,20 @@ speak(lines) returns the sentence audio plus a start time for every *display tok
 appear in the captions, markup included), so captions can be chunked and highlighted word by word.
 
 Engines
-  edge    Microsoft neural voices via edge-tts (natural, fast, exact word boundaries; needs internet)
-  kokoro  offline Kokoro-82M; word times come from SenseVoice speech recognition
+  edge        Microsoft neural voices via edge-tts (free, exact word boundaries; needs internet)
+  elevenlabs  ElevenLabs API (key in ELEVENLABS_API_KEY); exact character timings from /with-timestamps
+  kokoro      offline Kokoro-82M; word times come from SenseVoice speech recognition
 """
 import asyncio
+import base64
 import difflib
+import json
 import os
 import re
 import subprocess
 import time
+import urllib.error
+import urllib.request
 
 import numpy as np
 
@@ -237,6 +242,66 @@ class EdgeNarrator(Narrator):
             time.sleep(2 * (attempt + 1))
 
 
+def _char_words(chars, starts, cut=0.0):
+    """Per-character timings (ElevenLabs alignment) -> [(normalized word, start seconds)]."""
+    words, cur, t0 = [], "", None
+    for ch, t in zip(chars, starts):
+        if ch.isspace():
+            if cur:
+                words.append((cur, t0))
+            cur, t0 = "", None
+            continue
+        if t0 is None:
+            t0 = t
+        cur += ch
+    if cur:
+        words.append((cur, t0))
+    return [(n, max(0.0, t - cut)) for w, t in words for n in _norm_words(w)]
+
+
+class ElevenLabsNarrator(Narrator):
+    """ElevenLabs voices through the API. The key comes from ELEVENLABS_API_KEY, never from the script."""
+    API = "https://api.elevenlabs.io/v1"
+    sr = 44100
+
+    def __init__(self, voice_id, model="eleven_multilingual_v2", lang="en", pronounce=None, settings=None):
+        super().__init__(lang, pronounce)
+        self.key = os.environ.get("ELEVENLABS_API_KEY", "")
+        if not self.key:
+            raise RuntimeError("ELEVENLABS_API_KEY is not set: add it to the environment variables")
+        self.voice_id, self.model, self.settings = voice_id, model, settings or {}
+
+    def _synth(self, text):
+        body = {"text": text, "model_id": self.model}
+        if self.settings:
+            body["voice_settings"] = self.settings
+        url = f"{self.API}/text-to-speech/{self.voice_id}/with-timestamps?output_format=mp3_44100_128"
+        expected = max(1, len(_norm_words(text)))
+        for attempt in range(5):
+            req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
+                                         headers={"xi-api-key": self.key, "Content-Type": "application/json"})
+            try:
+                with urllib.request.urlopen(req, timeout=120) as r:
+                    d = json.load(r)
+                audio = decode_audio(base64.b64decode(d["audio_base64"]), self.sr)
+                audio, cut = trim_silence(audio, self.sr)
+                al = d.get("alignment") or d["normalized_alignment"]
+                words = _char_words(al["characters"], al["character_start_times_seconds"], cut)
+                if len(words) >= 0.8 * expected and len(audio) / self.sr >= 0.12 * expected:
+                    return audio, words
+                problem = f"truncated response ({len(words)}/{expected} words)"
+            except urllib.error.HTTPError as e:
+                problem = f"HTTP {e.code}: {e.read().decode(errors='replace')[:300]}"
+                if e.code in (400, 401, 403, 404, 422):  # bad key, voice or request: a retry cannot help
+                    raise RuntimeError(f"ElevenLabs {problem}") from None
+            except (urllib.error.URLError, TimeoutError, KeyError, ValueError) as e:  # network, bad payload
+                problem = str(e)
+            if attempt == 4:
+                raise RuntimeError(f"ElevenLabs failed for {text!r}: {problem}")
+            print(f"[voice] elevenlabs retry {attempt + 1}: {problem}")
+            time.sleep(2 * (attempt + 1))
+
+
 class KokoroNarrator(Narrator):
     """Offline fallback (Kokoro-82M). Word times via speech recognition."""
 
@@ -273,6 +338,9 @@ def make_narrator(vcfg, lang, pronounce):
     if eng == "edge":
         return EdgeNarrator(vcfg.get("name", "en-US-BrianMultilingualNeural"), vcfg.get("rate", "+20%"),
                             vcfg.get("pitch", "+0Hz"), lang, pronounce)
+    if eng == "elevenlabs":
+        return ElevenLabsNarrator(vcfg.get("voice_id") or vcfg["name"], vcfg.get("model", "eleven_multilingual_v2"),
+                                  lang, pronounce, vcfg.get("settings"))
     if eng == "kokoro":
         return KokoroNarrator(vcfg.get("name", "am_michael"), vcfg.get("speed", 1.2), lang, pronounce)
     raise ValueError(f"unknown voice engine {eng!r}")

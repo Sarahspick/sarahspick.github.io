@@ -119,7 +119,8 @@ assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 | 한국어 다국어 | 이름에 `Multilingual`이 붙은 목소리는 한국어 대본도 읽습니다 (Brian, Andrew, Ava, Emma 등). 영어판과 같은 목소리로 한국어판을 만들 수 있습니다 |
 
 - 인터넷 없이 쓰려면 `"voice": {"engine": "kokoro", "name": "am_michael"}` + `python tools/fetch_assets.py models`
-- ElevenLabs 같은 유료 음성으로 바꾸려면 `factory/voice.py`에 `_synth()`만 구현한 클래스를 추가하면 됩니다. 단어 타이밍이 없으면 음성인식으로 자동 정렬합니다.
+- **ElevenLabs** (유료): 환경 변수 `ELEVENLABS_API_KEY`에 키를 넣고, `channel.json`이나 대본의 `"voice"`를 `{"engine": "elevenlabs", "voice_id": "<목소리 ID>", "model": "eleven_multilingual_v2", "settings": {"stability": 0.4, "similarity_boost": 0.8, "speed": 1.1}}` 형식으로 바꿉니다. 글자 단위 타이밍을 받아 자막 싱크가 지금과 같이 맞습니다. 키는 저장소나 채팅에 절대 넣지 않습니다.
+- 다른 유료 음성은 `factory/voice.py`에 `_synth()`만 구현한 클래스를 추가하면 됩니다. 단어 타이밍이 없으면 음성인식으로 자동 정렬합니다.
 
 ### 목소리 고르기
 

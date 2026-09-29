@@ -17,5 +17,25 @@
       "tempo": 1.1
     }
   },
-  "pronounce": {}
+  "pronounce": {},
+  "channels": {
+    "en": {
+      "name": "Top Techs",
+      "handle": "@toptechs-1",
+      "accent": "#168BFF"
+    },
+    "ko": {
+      "name": "기발한 회사들",
+      "handle": "@기발한회사들",
+      "accent": "#F5333F"
+    }
+  },
+  "sfx_allow": [
+    "boom",
+    "sub",
+    "hit",
+    "mouse_click",
+    "click",
+    "whoosh"
+  ]
 }

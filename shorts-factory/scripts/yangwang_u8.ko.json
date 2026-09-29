@@ -48,13 +48,7 @@
         "물이 너무 깊어지면",
         "*긴급 부유 모드*로 바뀝니다."
       ],
-      "clip": "y_dash",
-      "sfx": [
-        {
-          "id": "confirm",
-          "at": "line2"
-        }
-      ]
+      "clip": "y_dash"
     },
     {
       "lines": [
@@ -82,14 +76,7 @@
         "이렇게 물 위에서",
         "약 *30분*을 버티고…"
       ],
-      "clip": "y_aerial",
-      "sfx": [
-        {
-          "id": "wow",
-          "at": "end",
-          "gain": -4
-        }
-      ]
+      "clip": "y_aerial"
     },
     {
       "lines": [
@@ -121,15 +108,7 @@
         "그런데 진짜 놀라운 건…"
       ],
       "clip": "y_exit",
-      "pause_after": 0.25,
-      "sfx": [
-        {
-          "id": "dun_dun",
-          "at": "start",
-          "gain": -5,
-          "dur": 2.0
-        }
-      ]
+      "pause_after": 0.25
     },
     {
       "lines": [
@@ -154,12 +133,13 @@
   "clips": {
     "y_splash": {
       "src": "bili:BV1inSLBZEbJ",
-      "start": 23.4,
+      "start": 24.3,
       "focus": [
         0.35,
-        0.5
+        0.72
       ],
-      "src_zoom": 1.07
+      "src_zoom": 1.45,
+      "speed": 0.8
     },
     "y_float": {
       "src": "bili:BV1inSLBZEbJ",

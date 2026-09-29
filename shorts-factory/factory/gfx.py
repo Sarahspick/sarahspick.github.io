@@ -19,6 +19,19 @@ TITLE_MAX_W = W - 70
 CAPTION_CY = 1330        # vertical centre of the caption chunk
 CAPTION_MAX_W = W - 80
 YELLOW = (255, 214, 0)
+ACCENT = YELLOW          # highlight colour; each channel sets its own with set_accent()
+
+
+def hex_rgb(c):
+    c = c.lstrip("#")
+    return tuple(int(c[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def set_accent(color):
+    """Channel theme colour for highlighted words (headline, captions, labels)."""
+    global ACCENT
+    ACCENT = hex_rgb(color) if isinstance(color, str) else tuple(color)
+    caption_image.cache_clear()
 
 
 @functools.lru_cache(maxsize=64)
@@ -168,7 +181,7 @@ def title_layer(title, theme="dark"):
         rows = wrap_runs(runs, f, TITLE_MAX_W)
         if len(rows) <= 2:
             break
-    img = stroked_block(rows, f, (255, 255, 255), YELLOW, stroke=max(7, size // 9))
+    img = stroked_block(rows, f, (255, 255, 255), ACCENT, stroke=max(7, size // 9))
     layer = Image.new("RGBA", (W, TITLE_TOP + img.height), (0, 0, 0, 0))
     layer.alpha_composite(img, ((W - img.width) // 2, TITLE_TOP))
     bottom = TITLE_TOP + int(size * 1.12) * len(rows) + 12
@@ -211,7 +224,7 @@ def caption_image(words, max_w=CAPTION_MAX_W):
         if runs_width(runs, f) <= max_w:
             break
     rows = wrap_runs(runs, f, max_w)
-    return stroked_block(rows, f, (255, 255, 255), YELLOW, stroke=max(8, size // 9))
+    return stroked_block(rows, f, (255, 255, 255), ACCENT, stroke=max(8, size // 9))
 
 
 # ---------------------------------------------------------------- sprites

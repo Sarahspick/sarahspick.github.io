@@ -133,13 +133,13 @@ SECTION = {"en": "영어", "ko": "한국어"}
 def label_layer(tag, name, desc):
     """Replaces the headline: big number + voice name, short description underneath."""
     f1 = gfx.font("Black", 92)
-    top = gfx.stroked_block([gfx.parse_rich(f"*{tag}*  {name}")], f1, (255, 255, 255), gfx.YELLOW, stroke=10)
+    top = gfx.stroked_block([gfx.parse_rich(f"*{tag}*  {name}")], f1, (255, 255, 255), gfx.ACCENT, stroke=10)
     runs = gfx.parse_rich(desc)
     for size in range(54, 35, -2):
         f2 = gfx.font("ExtraBold", size)
         if gfx.runs_width(runs, f2) <= W - 100:
             break
-    sub = gfx.stroked_block([runs], f2, (235, 235, 235), gfx.YELLOW, stroke=7)
+    sub = gfx.stroked_block([runs], f2, (235, 235, 235), gfx.ACCENT, stroke=7)
     y2 = gfx.TITLE_TOP + int(f1.size * 1.12) + 6
     layer = Image.new("RGBA", (W, y2 + sub.height), (0, 0, 0, 0))
     layer.alpha_composite(top, ((W - top.width) // 2, gfx.TITLE_TOP))
@@ -160,7 +160,7 @@ def slate(path, rows, dur=1.6):
     im = Image.new("RGBA", (W, H), (12, 12, 14, 255))
     y = H // 2 - 60 * len(rows)
     for text, size in rows:
-        blk = gfx.stroked_block([gfx.parse_rich(text)], gfx.font("Black", size), (255, 255, 255), gfx.YELLOW,
+        blk = gfx.stroked_block([gfx.parse_rich(text)], gfx.font("Black", size), (255, 255, 255), gfx.ACCENT,
                                 stroke=max(6, size // 10))
         im.alpha_composite(blk, ((W - blk.width) // 2, y))
         y += int(size * 1.45)

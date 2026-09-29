@@ -58,6 +58,8 @@ class Short:
         self.id = self.sc["id"]
         self.work = os.path.join(WORK, self.id)
         os.makedirs(self.work, exist_ok=True)
+        self.brand = self.ch.get("channels", {}).get(self.lang, {})  # per-language channel: name, handle, accent
+        gfx.set_accent(self.brand.get("accent", gfx.YELLOW))
         self.title_img, self.title_bottom = gfx.title_layer(self.sc["title"])
         self.sfx = SfxLibrary()
         self.warnings = []
@@ -151,6 +153,12 @@ class Short:
                     cues.append({"t": a["t0"] + 0.1, "id": a.get("sfx", "stamp"), "gain": 0, "dur": None})
                 if a["type"] in ("arrow", "circle") and a.get("sfx"):
                     cues.append({"t": a["t0"], "id": a["sfx"], "gain": 0, "dur": None})
+        allow = self.ch.get("sfx_allow")
+        if allow is not None:
+            for c in cues:
+                if c["id"] not in allow:
+                    self.warnings.append(f"sfx '{c['id']}' dropped: not in channel sfx_allow")
+            cues = [c for c in cues if c["id"] in allow]
         self.cues = sorted(cues, key=lambda c: c["t"])
         self.anns = anns
         self.chunks = self._chunks()

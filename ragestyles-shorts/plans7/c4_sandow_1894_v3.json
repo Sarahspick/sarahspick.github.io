@@ -1,0 +1,150 @@
+{
+ "id": "c4_sandow_1894_v3",
+ "yt_title": "The first bodybuilder ever filmed (1894) 💪 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_top": 300,
+  "darken": 0.95
+ },
+ "shots": [
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 65.9,
+   "dur": 14.7,
+   "speed": 0.8,
+   "interp": false,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   },
+   "path": [
+    [
+     0,
+     1.05,
+     0.47,
+     0.48
+    ],
+    [
+     4.6,
+     1.05,
+     0.47,
+     0.48
+    ],
+    [
+     6.2,
+     1.1,
+     0.47,
+     0.47
+    ],
+    [
+     8.5,
+     1.1,
+     0.47,
+     0.47
+    ],
+    [
+     9.6,
+     1.15,
+     0.48,
+     0.47
+    ],
+    [
+     14.7,
+     1.15,
+     0.48,
+     0.47
+    ]
+   ]
+  },
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 80.15,
+   "dur": 5.8,
+   "speed": 0.8,
+   "interp": false,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   },
+   "path": [
+    [
+     0,
+     1.05,
+     0.47,
+     0.48
+    ],
+    [
+     1.7,
+     1.1,
+     0.47,
+     0.47
+    ],
+    [
+     4.3,
+     1.1,
+     0.47,
+     0.47
+    ],
+    [
+     5.2,
+     1.14,
+     0.47,
+     0.47
+    ],
+    [
+     5.8,
+     1.14,
+     0.47,
+     0.47
+    ]
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 20.5,
+   "text": "The *first bodybuilder*\never filmed :flexed-biceps:",
+   "style": "title",
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 3.8,
+   "text": "*1894.* Edison's studio\nfilmed this man :eyes:",
+   "style": "cap"
+  },
+  {
+   "t": 3.8,
+   "d": 3.8,
+   "text": "His name:\n~Eugen Sandow~",
+   "style": "cap"
+  },
+  {
+   "t": 7.6,
+   "d": 3.7,
+   "text": "In *1901* he ran the first\nbig bodybuilding contest",
+   "style": "cap"
+  },
+  {
+   "t": 11.3,
+   "d": 3.4,
+   "text": "One of the judges wrote\n~Sherlock Holmes~",
+   "style": "cap"
+  },
+  {
+   "t": 14.7,
+   "d": 5.8,
+   "text": "Every Mr. Olympia winner\ngets a statue of *him* :trophy:",
+   "style": "cap"
+  }
+ ],
+ "marks": [],
+ "sfx": [],
+ "lufs": -14.0
+}

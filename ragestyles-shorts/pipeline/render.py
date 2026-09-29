@@ -178,8 +178,9 @@ def wrap_tokens(lines, fnt, max_w, emoji_px):
 def render_text(text, font_name="Montserrat Black", size=92, color=(255, 255, 255), accent=None,
                 stroke=10, max_w=940, line_gap=0.08, shadow=True, upper=True, bg=None, pad=(28, 18),
                 align="center", max_lines=2, min_size=60, gradients=None, stroke_color=(0, 0, 0), outline=0,
-                outline_color=(255, 255, 255)):
+                outline_color=(255, 255, 255), colors=None):
     """Return an RGBA PIL image of the caption (tight bbox). Shrinks the font until it fits max_lines.
+    colors: {"*": (r,g,b), "~": (r,g,b)} solid colors for the highlight spans (overrides COLORS).
     gradients: {"*": ((r,g,b) top, (r,g,b) bottom)} fills those highlight spans with a vertical gradient.
     outline: extra outer outline (sticker look) in outline_color, drawn behind the stroke."""
     if upper:
@@ -237,7 +238,9 @@ def render_text(text, font_name="Montserrat Black", size=92, color=(255, 255, 25
                 emojis.append((int(x), int(y + (asc - emoji_px) * 0.5 + desc * 0.1), word))
                 x += emoji_px + space
                 continue
-            if key:
+            if key and colors and key in colors:
+                col = tuple(colors[key])
+            elif key:
                 col = COLORS[key] if accent is None or key != "*" else accent
             else:
                 col = color

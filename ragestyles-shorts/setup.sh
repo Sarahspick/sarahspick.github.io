@@ -25,5 +25,5 @@ else
 fi
 
 # smoke test: three stills of the restyled Sandow short
-python3 pipeline/bench.py plans6/c4_sandow_1894_v2.json --frames 0,300,600 --stills work/renders/smoke >/dev/null
+python3 pipeline/bench.py plans7/c4_sandow_1894_v3.json --frames 0,300,600 --stills work/renders/smoke >/dev/null
 echo "setup ok: stills in ragestyles-shorts/work/renders/smoke"

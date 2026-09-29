@@ -27,3 +27,21 @@ How the four new RageStyles shorts apply it
 - Footage: US military public domain video (DVIDS), 1080p to 4K, natural sound only (clips with background music
   were rejected after an audio check). No YouTube or TikTok footage is reused.
 - Music is left for the upload step (YouTube's licensed library), so no copyrighted song is baked in.
+
+## Caption fonts in 40M+ view Shorts (2026-09 analysis)
+
+Method: the vertical cover frame of each of the 61 Shorts above 40M views (`i.ytimg.com/vi/<id>/oardefault.jpg`,
+1080x1920) plus the five uploaded references; fonts identified by letterform.
+
+- 29 of the 61 covers carry caption text.
+- Clean sans: 18 of 29 (62%). TikTok's default caption look (Proxima Nova, now TikTok Sans; sentence case, white with a
+  thin dark edge or black on a white box) 8, bold geometric sans in caps (Montserrat or Proxima Bold style, often one
+  word in color) 10.
+- Condensed display (Impact, Anton, Bebas, Oswald): 7, from 6 channels.
+- Serif or typewriter: 4.
+- The five references: 3 use the TikTok default look, 1 a condensed heavy italic, 1 is Korean.
+
+Decision: TikTok Sans (SIL OFL, Google Fonts), ExtraBold for captions and Black for titles, white with a black edge,
+highlights as two separate solid colors from the channel's Super Saiyan avatar: yellow (255,214,0) for `*word*`,
+orange (255,128,0) for `~word~`. YouTube Sans and Calibri are proprietary and Dubai has its own license, so none of
+them can live in this public repo; Roboto and Pretendard are the closest open alternatives if TikTok Sans ever tires.

@@ -3,7 +3,7 @@
 Built from what 40M+ view Shorts do (see ../BENCHMARK.md), nothing else:
   * layouts: "full" (9:16 crop), "meme" (clip in a box on a plain card, caption above), "blur" (clip on a blurred copy)
     Channel default since 2026-09 (DEFAULT_LAYOUT): "blur", 1:1 box at y=300, title above the box, captions
-    ("cap" / "big") directly under it, Dela Gothic One in white with *gold* / ~orange~ gradient highlights
+    ("cap" / "big") directly under it, TikTok Sans in white with *yellow* and ~orange~ solid highlights
   * per-shot camera: eased zoom/pan keyframes, punch-in zooms, slow motion (real frames when the source allows)
   * one short caption line that changes at story beats, italic *action* labels, reaction labels, chapter labels
   * callouts pinned to the subject: plain red arrow, hand-drawn red circle (they follow the crop)
@@ -37,10 +37,17 @@ SFX_DIR = os.path.join(ROOT, "assets", "sfx")
 R.FONTS.update({"Inter ExtraBold": "Inter-ExtraBold.ttf", "Inter Bold": "Inter-Bold.ttf",
                 "Inter SemiBold": "Inter-SemiBold.ttf", "Dela Gothic One": "DelaGothicOne-Regular.ttf",
                 "Lilita One": "LilitaOne-Regular.ttf", "Titan One": "TitanOne-Regular.ttf", "Bungee": "Bungee-Regular.ttf",
-                "Russo One": "RussoOne-Regular.ttf"})
-# channel palette (profile picture = Super Saiyan): white text, *gold->orange*, ~orange->red~, dark brown edge
+                "Russo One": "RussoOne-Regular.ttf", "TikTok Sans SemiBold": "TikTokSans-SemiBold.ttf",
+                "TikTok Sans Bold": "TikTokSans-Bold.ttf", "TikTok Sans ExtraBold": "TikTokSans-ExtraBold.ttf",
+                "TikTok Sans Black": "TikTokSans-Black.ttf"})
+# channel palette (profile picture = Super Saiyan): white text, *yellow* and ~orange~ as two separate solid
+# highlight colors (the owner rejected the single yellow-orange gradient), black edge
 SAIYAN = {"*": ((255, 236, 92), (255, 140, 0)), "~": ((255, 170, 40), (232, 62, 0)), "^": ((255, 255, 255), (255, 214, 120))}
-EDGE = (28, 12, 0)
+YELLOW, ORANGE = (255, 214, 0), (255, 128, 0)
+HILITE = {"*": YELLOW, "~": ORANGE}
+EDGE = (0, 0, 0)
+# caption font: TikTok Sans, the most common caption look in 40M+ view Shorts (see BENCHMARK.md, fonts)
+CAP_FONT = "TikTok Sans"
 # default layout: the clip in a 1:1 box (full width) on a blurred, darkened copy of itself
 DEFAULT_LAYOUT = {"mode": "blur", "box_aspect": 1.0, "box_top": 300}
 RED = (232, 28, 28)
@@ -67,16 +74,21 @@ AF = {
 # caption styles (sizes are for a 1080 px wide frame)
 STYLES = {
     # channel style (2026-09 feedback): title at the top, captions directly under the video box
-    "title": dict(font="Dela Gothic One", size=68, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
-                  italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=1000),
-    "cap": dict(font="Dela Gothic One", size=58, color=(255, 255, 255), stroke=6, shadow=True, upper=False,
-                italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=920),
+    "title": dict(font=CAP_FONT + " Black", size=74, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
+                  italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=1000),
+    "cap": dict(font=CAP_FONT + " ExtraBold", size=62, color=(255, 255, 255), stroke=6, shadow=True, upper=False,
+                italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=920),
     # big punch label under the video ("20.00 FLAT")
-    "big": dict(font="Dela Gothic One", size=80, color=(255, 255, 255), stroke=8, shadow=True, upper=True,
-                italic=0.0, gradients=SAIYAN, stroke_color=EDGE, max_w=940),
+    "big": dict(font=CAP_FONT + " Black", size=84, color=(255, 255, 255), stroke=7, shadow=True, upper=True,
+                italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=940),
     # small pill ("TEST 3/10", "1910")
-    "tag": dict(font="Dela Gothic One", size=36, color=(30, 12, 0), stroke=0, shadow=False, upper=True,
-                italic=0.0, bg=(255, 176, 0), pad=(22, 10)),
+    "tag": dict(font=CAP_FONT + " ExtraBold", size=38, color=(20, 10, 0), stroke=0, shadow=False, upper=True,
+                italic=0.0, bg=YELLOW, pad=(22, 10)),
+    # the 2026-09 Dela Gothic One look with the gradient highlight (kept for old plans)
+    "title_dela": dict(font="Dela Gothic One", size=68, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
+                       italic=0.0, gradients=SAIYAN, stroke_color=(28, 12, 0), max_w=1000),
+    "cap_dela": dict(font="Dela Gothic One", size=58, color=(255, 255, 255), stroke=6, shadow=True, upper=False,
+                     italic=0.0, gradients=SAIYAN, stroke_color=(28, 12, 0), max_w=920),
     # black text on the plain card, just above the clip ("Define Aura" format)
     "meme": dict(font="Inter ExtraBold", size=66, color=(0, 0, 0), stroke=0, shadow=False, upper=False, italic=0.0),
     # white bold italic with a dark edge, upper third of a full-screen clip ("Old gymnastics judging was INSANE")
@@ -157,7 +169,7 @@ def caption_image(text, style, **over):
                         align=st.get("align", "center"), line_gap=st.get("line_gap", 0.08),
                         bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))),
                         gradients=st.get("gradients"), stroke_color=tuple(st.get("stroke_color", (0, 0, 0))),
-                        outline=st.get("outline", 0))
+                        outline=st.get("outline", 0), colors=st.get("colors"))
     return shear(img, st["italic"])
 
 
@@ -296,8 +308,17 @@ class Bench:
 
     def cam(self, shot, lt):
         dur = shot["dur"]
-        k = ease(lt / dur, shot.get("ease", "inout"))
-        zoom, cx, cy = kf(shot.get("zoom", 1.0), k), kf(shot.get("cx", 0.5), k), kf(shot.get("cy", 0.5), k)
+        if "path" in shot:  # camera keyframes [[t, zoom, cx, cy], ...], eased between each pair (push in on a pose, hold)
+            pts = shot["path"]
+            zoom, cx, cy = pts[-1][1:4]
+            for (t0, z0, x0, y0), (t1, z1, x1, y1) in zip(pts, pts[1:]):
+                if lt < t1:
+                    k = ease((lt - t0) / max(1e-6, t1 - t0), shot.get("ease", "inout")) if lt > t0 else 0.0
+                    zoom, cx, cy = lerp(z0, z1, k), lerp(x0, x1, k), lerp(y0, y1, k)
+                    break
+        else:
+            k = ease(lt / dur, shot.get("ease", "inout"))
+            zoom, cx, cy = kf(shot.get("zoom", 1.0), k), kf(shot.get("cx", 0.5), k), kf(shot.get("cy", 0.5), k)
         for p in shot.get("punch", []):
             if lt >= p["at"] and lt < p.get("until", 1e9):
                 u = ease((lt - p["at"]) / p.get("ramp", 0.16), "out")
@@ -428,9 +449,9 @@ class Bench:
             return x, ry - 26 - h / 2
         if style == "label":
             return x, (ry + 70 if seg["shot"].get("layout", self.mode) == "full" else ry - 26 - h / 2)
-        if style in ("cap", "big") or (style == "sub" and self.box_top is not None):
+        if style in ("cap", "big", "cap_dela") or (style == "sub" and self.box_top is not None):
             return x, ry + rh + 26 + h / 2  # directly under the video box
-        if style == "title" and seg["shot"].get("layout", self.mode) != "full":
+        if style in ("title", "title_dela") and seg["shot"].get("layout", self.mode) != "full":
             return x, max(ry - 24 - h / 2, 90 + h / 2)  # just above the video box
         if style == "sub":
             return x, 0.74 * H

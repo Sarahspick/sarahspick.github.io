@@ -1,4 +1,4 @@
-# RageStyles 쇼츠 인수인계 문서 (2026-09-29)
+# RageStyles 쇼츠 인수인계 문서 (2026-09-29, 2차 갱신)
 
 새 Claude 세션(다른 계정 포함)이 이 문서 하나만 읽고 바로 이어서 일할 수 있게 쓴 문서입니다.
 저장소 루트의 `HANDOFF.md`는 다른 프로젝트(Sarah's Pick) 문서이니 건드리지 않습니다.
@@ -9,18 +9,19 @@
 1. GitHub 연결: 새 계정에서 https://claude.ai/connect-github 로 Sarahspick GitHub 계정을 연결하고, 저장소 `Sarahspick/sarahspick.github.io`에 Claude GitHub App이 설치돼 있는지 확인합니다.
 2. 새 세션을 만들 때 저장소 `Sarahspick/sarahspick.github.io`를 선택합니다.
 3. 네트워크: 세션 제목 표시줄의 클라우드 환경 메뉴 → Edit → Network access 를 넓힙니다. Full 이 제일 간단하고, 허용 목록 방식이면 아래 도메인을 넣습니다.
-   `archive.org`, `*.archive.org`, `images-api.nasa.gov`, `images-assets.nasa.gov`, `commons.wikimedia.org`, `upload.wikimedia.org`, `assets.mixkit.co`, `huggingface.co`, `*.hf.co`, `cdn.jsdelivr.net`, `raw.githubusercontent.com`, `i.ytimg.com`, `www.youtube.com`, `pypi.org`, `files.pythonhosted.org`, `download.pytorch.org`
-4. 첫 메시지로 아래를 붙여넣습니다.
+   `archive.org`, `*.archive.org`, `images-api.nasa.gov`, `images-assets.nasa.gov`, `commons.wikimedia.org`, `upload.wikimedia.org`, `assets.mixkit.co`, `huggingface.co`, `*.hf.co`, `cdn.jsdelivr.net`, `raw.githubusercontent.com`, `i.ytimg.com`, `www.youtube.com`, `pypi.org`, `files.pythonhosted.org`, `download.pytorch.org`, `api.pexels.com`, `videos.pexels.com`, `pixabay.com`, `cdn.pixabay.com`
+4. API 키: 같은 환경 설정의 Environment variables 에 `PEXELS_API_KEY`, `PIXABAY_API_KEY` 를 넣습니다 (이름에 PEXELS, PIXABAY 가 들어가면 됩니다). 키는 채팅에 붙여넣지 않습니다.
+5. 첫 메시지로 아래를 붙여넣습니다.
 
 ```
 RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 1) git fetch origin claude/exciting-wright-b23t6c 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
 2) ragestyles-shorts/HANDOFF.md 를 끝까지 읽고 규칙과 취향을 그대로 따라.
 3) bash ragestyles-shorts/setup.sh 로 소스 영상과 효과음을 받아 (Demucs, whisper 까지 필요하면 --full).
-4) 준비되면 다음 영상 아이디어 3개를 먼저 제안해줘.
+4) 채널 방향은 최신 트렌드 운동, 헬스, 스포츠 영상이야. sources/cc_youtube_candidates.md 와 tools/stock_search.py (Pexels, Pixabay) 로 만들 영상 아이디어 3개를 먼저 제안해줘.
 ```
 
-5. 참고 영상(사용자가 예전에 채팅에 올린 40M 조회수 쇼츠 5개)은 저작권 때문에 커밋하지 않았습니다. 분석이 다시 필요하면 채팅에 다시 올려야 합니다. 분석 결과는 `BENCHMARK.md`에 있습니다.
+6. 참고 영상(사용자가 예전에 채팅에 올린 40M 조회수 쇼츠 5개)은 저작권 때문에 커밋하지 않았습니다. 분석이 다시 필요하면 채팅에 다시 올려야 합니다. 분석 결과는 `BENCHMARK.md`에 있습니다.
 
 ## 1. 프로젝트 요약
 
@@ -51,17 +52,22 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * NASA 운동 영상은 매우 좋습니다 (c2 극찬). 하지만 NASA 사람들이 노는 영상(아폴로 "having fun")은 방향이 아닙니다.
 * 군대 영상(미군 DVIDS)은 채널 방향이 아닙니다.
 * 가끔 팩트체크를 합니다 (예: 샌도우 영상은 에디슨 본인이 아니라 에디슨 스튜디오가 촬영).
+* (2026-09-29) 채널이 옛날 영상, NASA, 미군 영상 천지가 되는 건 싫다. 최신 영상, 트렌드한 운동, 헬스, 스포츠 영상을 쓴다. 옛날 영상은 가끔만.
+* (2026-09-29) 자막은 장면과 정확히 맞아야 합니다. 1949 영상의 "NO HANDS" 가 틀렸다고 지적받았고, 확인해 보니 HUMAN THROW, 3 MAN TOWER, CARTWHEEL 도 틀렸습니다. 자막을 쓰기 전에 샷마다 프레임을 뽑아 동작을 확인합니다.
 
 편집
 * 첫 프레임에 제목과 자막이 이미 보여야 합니다 (첫 프레임이 썸네일이 되는 경우 대비). 렌더러가 t=0 자막은 페이드 없이 바로 그립니다.
-* 2~4초마다 컷. 지루한 구간이 없어야 합니다 ("도파민"). 한 테이크뿐이면 줌과 프레이밍을 바꿔 컷을 만듭니다 (c4 v2 참고).
+* 2~4초마다 컷. 지루한 구간이 없어야 합니다 ("도파민").
+* (2026-09-29) 같은 테이크 안에서 줌 배율을 바꿔 자르는 리프레이밍 컷은 부자연스럽다 (c4 v2). 대신 중요한 순간(포즈)에만 천천히 부드럽게 줌인하고 (`path` 키프레임), 지루한 시간(몸 돌리기 등)을 건너뛰는 컷을 씁니다 (c4 v3 참고).
 * 원본 소리가 우선이고 끝까지 이어져야 합니다. c7 v1 은 14.5초 이후가 무음이라 지적받았습니다. `qa.py` 가 1.5초 이상 무음을 경고합니다. 무성 영화는 예외 (업로드 때 음악).
 * 효과음은 최소한. 직접 합성한 효과음(라이저, 제트기 소리)은 이상하다는 평가. 전환 휘시 정도는 괜찮고, 쓸 때는 Mixkit 같은 실제 음원을 씁니다.
 * 흔들림, 글리치, 과한 효과 금지. 프로필 배지 금지 (사람들이 클릭 안 함).
 * 배경: 같은 영상을 크게 늘려 블러 처리하고 어둡게 한 것이 최고. 검정이나 흰색 단색 배경은 싫어합니다. 원본이 어두운 영상은 `darken` 을 0.8~0.95 로 올립니다.
 * 영상 비율: 1:1 (또는 조금 더 세로). 4:3 은 영상이 작아 보여서 안 됩니다. 2:3 처럼 긴 비율은 자막 자리가 유튜브 UI 에 가려지므로 `box_w` 를 줄여서 씁니다 (예: 4:5 는 `"box_aspect": 0.8, "box_w": 880`).
 * 제목은 위쪽(영상 박스 바로 위) 위치가 좋다고 했습니다. 자막은 영상 바로 아래.
-* 폰트는 Dela Gothic One. 색은 프로필 사진의 슈퍼사이언 색: 흰 글자, 강조는 노랑→주황 그라데이션(`*단어*`), 더 센 강조는 주황→빨강(`~단어~`), 테두리는 진한 갈색.
+* ~~폰트 Dela Gothic One, 노랑→주황 그라데이션 강조~~ (2026-09-29 교체됨).
+* (2026-09-29) 폰트는 TikTok Sans (40M 조회수 쇼츠 61개 표지 분석에서 가장 많은 틱톡 기본 자막체 계열, BENCHMARK.md 참고). 자막 ExtraBold, 제목 Black, 흰 글자에 검정 테두리.
+* (2026-09-29) 강조색은 그라데이션 하나가 아니라 노랑(`*단어*`, 255,214,0)과 주황(`~단어~`, 255,128,0)을 따로따로 씁니다.
 
 ## 4. 지금까지 만든 영상과 반응
 
@@ -76,7 +82,8 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new6 c5 | 잭 존슨 vs 제프리스 1910 | 따로 언급 없음 |
 | new6 c6 | 아폴로 16 달에서 놀기 | 방향 아님 |
 | new6 c7 | 1949 대학 아크로바틱 (원본 내레이션) | 원본 소리 좋음, 그런데 뒤에 소리가 빠짐 |
-| new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, 새 폰트, 자막 영상 아래, c7 은 끝까지 원본 소리) | 사용자 확인 전 |
+| new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
+| new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
 
 ## 5. 파이프라인
 
@@ -99,11 +106,11 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 전송은 SendUserFile (30MB 제한). 넘으면 다시 인코딩:
 `ffmpeg -i in.mp4 -c:v libx264 -preset slow -crf 21 -maxrate 7M -bufsize 14M -c:a copy -movflags +faststart out.mp4`
 
-플랜 JSON (새 스타일 예시는 `plans6/c7_1949_acrobatics_v2.json`)
+플랜 JSON (최신 예시는 `plans7/c7_1949_acrobatics_v3.json`, `plans7/c4_sandow_1894_v3.json`)
 * `layout`: 생략하면 기본값 `{"mode": "blur", "box_aspect": 1.0, "box_top": 300}`. 키: `mode` (blur, meme, full), `box_aspect`, `box_top` (px), `box_y` (0~1 중심), `box_w`, `darken` (블러 배경 밝기, 기본 0.5), `bg` (meme 배경색).
-* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`.
+* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`, `path` (카메라 키프레임 `[[샷 안의 초, zoom, cx, cy], ...]`, 구간마다 부드럽게 이어짐. 포즈에서만 줌인하고 나머지는 멈춰 있게 할 때 씀).
 * `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
-* 스타일: `title` (영상 위 제목), `cap` (영상 아래 자막), `big` (영상 아래 큰 대문자 라벨), `tag` (주황 알약), 예전 스타일 `sub`, `label`, `chapter`, `meme`, `top`, `action`, `list`, `story`, `big_anton`, `tag_old`, `title_old`.
+* 스타일: `title` (영상 위 제목), `cap` (영상 아래 자막), `big` (영상 아래 큰 대문자 라벨), `tag` (노랑 알약). 모두 TikTok Sans, 강조색은 `colors` (노랑, 주황). 예전 스타일 `title_dela`, `cap_dela` (Dela Gothic One 그라데이션), `sub`, `label`, `chapter`, `meme`, `top`, `action`, `list`, `story`, `big_anton`, `tag_old`, `title_old`.
 * `marks[]`: `arrow` (빨간 화살표), `circle` (손그림 빨간 원, `shot` 기준 좌표), `progress` (n 개 중 k, 진행 바), `dim` (화면 어둡게).
 * `audio_clips[]`: 다른 샷 위에 원본 소리를 까는 J컷. `{src, in, dur, t, af, db, fade}`.
 * `sfx[]`: `{t, name, db}`. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
@@ -113,7 +120,9 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 대사 받아쓰기: faster-whisper `small.en` 또는 `medium.en`, `word_timestamps=True` 로 컷 지점을 단어 경계에 맞춥니다 (c7 v1 은 "fitness" 중간에서 잘렸던 것을 v2 에서 고침).
 * 음악 제거: Demucs htdemucs (`python3 -m demucs --repo work/models/demucs -n htdemucs --two-stems vocals`). 가중치는 dl.fbaipublicfiles.com 이 막혀 있어 Hugging Face 미러를 씁니다.
 * 음악 섞임 검사: panns_inference (선택).
-* 소스 찾기: `python3 tools/commons_search.py out.json "strongman" "deadlift"` (Wikimedia Commons 영상, 라이선스 포함), `python3 tools/youtube_cc_search.py "deadlift world record"` (유튜브 CC 라이선스 영상 검색 결과만, 다운로드는 안 됨).
+* 소스 찾기: `python3 tools/commons_search.py out.json "strongman" "deadlift"` (Wikimedia Commons 영상, 라이선스 포함), `python3 tools/youtube_cc_search.py "deadlift world record"` (유튜브 CC 라이선스 영상 검색 결과만, 다운로드는 안 됨), `python3 tools/youtube_license_check.py <ID>` (영상 페이지의 라이선스 문구 확인, 봇 페이지면 unknown).
+* 스톡 영상: `python3 tools/stock_search.py search "deadlift" "boxing training" --portrait` 후 `python3 tools/stock_search.py get pexels:<id> pixabay:<id>` → `work/stock/`, 작가와 라이선스는 `work/stock/credits.json` 에 기록.
+* 폰트 분석 방법: 쇼츠 세로 표지 `i.ytimg.com/vi/<id>/oardefault.jpg` (1080x1920) 와 `oar1.jpg`, `oar2.jpg` 프레임을 받아 봅니다.
 * 받아쓴 대사: `sources/transcripts/` (Exercise1949 전체 대사, 초 단위).
 * 브라우저: Playwright 크로미움은 `/opt/pw-browsers` 에 있음. 프록시 인증서를 NSS 에 먼저 등록해야 합니다: `certutil -A -d sql:/root/.pki/nssdb -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt`.
 
@@ -124,9 +133,21 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * Wikimedia Commons: CC BY / BY-SA. 저자와 라이선스를 설명란에 반드시 표기. BY-SA 소스를 쓰면 그 영상도 BY-SA 로 표기. `safp_100m` 은 TV 중계 캡처라 권리가 불확실하므로 쓰지 않습니다. upload.wikimedia.org 는 429 제한이 심해서 한 번 시도 후 4~5분 쉬기.
 * Mixkit 효과음: 상업적 유튜브 사용 가능, 표기 불필요, 파일 자체 재배포 금지 (그래서 git 에서 뺐습니다. 예전 커밋 기록에는 남아 있습니다).
 * DVIDS: 미군 영상, 방향이 아니라 보류. 쓸 경우 "The appearance of U.S. Department of War (DoW) visual information does not imply or constitute DoW endorsement." 문구 필수.
-* 막힌 곳: 유튜브 영상 스트림(googlevideo.com), dl.fbaipublicfiles.com, github.com releases, Pexels 와 Pixabay (Cloudflare 확인 페이지).
+* 막힌 곳: 유튜브 영상 스트림(googlevideo.com, 2026-09-29 재확인: 봇 확인, 쿠키 없이는 불가라 우회하지 않음), dl.fbaipublicfiles.com, github.com releases, Pexels 와 Pixabay 웹사이트 (Cloudflare 확인 페이지).
+* Pexels, Pixabay API: api.pexels.com, pixabay.com/api 는 접속됩니다 (키 필요). Pixabay 파일 서버 cdn.pixabay.com 은 데이터센터 IP 에 Cloudflare 확인을 띄울 수 있어서, 그러면 도구가 알리고 멈춥니다.
+* 유튜브 CC BY: 업로더가 권리를 가진 경우에만 유효. 후보와 크레딧 형식은 `sources/cc_youtube_candidates.md`.
+* ViralHog: 약관상 라이선스 없이 다운로드나 사용 금지. 견적은 licensing@viralhog.com 메일로만 (`sources/viralhog_license_request.md` 초안). 라이선스를 산 파일만 씁니다.
 
-## 7. 더 재미있는 영상을 구하는 방법 (오너 질문 8 답변 요약)
+## 7. 더 재미있는 영상을 구하는 방법
+
+2026-09-29 기준 우선순위: 최신 영상이 먼저입니다.
+1. 유튜브 CC BY (브랜드, 협회, 선수 본인 채널): 목록은 `sources/cc_youtube_candidates.md`. 오너가 받아서 채팅에 올리면 편집.
+2. Pexels, Pixabay API (`tools/stock_search.py`): 합법이고 최신이지만 스토리가 약하니, 대결, 랭킹, 팁 같은 구성으로 가치를 만듭니다.
+3. ViralHog 등 바이럴 영상 업체: 라이선스를 산 뒤에만.
+4. 원작자 허락, 직접 촬영.
+5. 옛날 퍼블릭 도메인 영상과 NASA 는 가끔만.
+
+아래는 이전(질문 8) 답변 기록입니다.
 
 1. 유명 선수가 나오는 옛 뉴스릴과 스포츠 필름: Universal Newsreel (1929~1967, 유니버설이 미국 국립문서보관소에 기증한 뒤 퍼블릭 도메인으로 알려짐, 소리 있음), 1930년 이전에 공개된 미국 필름(공개 후 95년이 지나 퍼블릭 도메인), 미국 의회도서관의 초기 필름. 조 루이스, 베이브 루스, 잭 뎀프시 같은 유명인이 나옵니다. archive.org 에서 받을 수 있어 이 환경에서 바로 가능. 쓰기 전에 항목마다 권리 표기를 확인하고, 올림픽 경기 장면은 IOC 가 권리를 주장하니 뉴스릴이라도 피합니다.
 2. CC BY 스포츠 영상: 유튜브 검색 필터의 Creative Commons (예: dt5nR7_CsbY, 파블로 나코네치니 505kg 데드리프트, CC BY 확인됨). 이 환경은 유튜브 다운로드가 막혀 있으니 같은 영상이 Wikimedia Commons 에 옮겨져 있는지 찾거나("From YouTube" 템플릿), 업로더에게 원본 파일을 받습니다.
@@ -137,6 +158,15 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 하지 말 것: 올림픽, 세계육상, UFC 같은 공식 중계 영상 재사용 (Content ID 와 저작권 경고).
 
 ## 8. 다음 아이디어 (방향에 맞는 것)
+
+최신 영상 (2026-09-29 추가, 우선)
+* 크리스 범스테드, 데이비드 레이드 등 짐샤크 스트렝스 테스트: 누가 제일 셀까 랭킹 (CTRL7o8iYgc).
+* 래리 윌스 vs NFL 선수 225 벤치 대결 (-CfI_zQzwic).
+* 2026 미스터 올림피아: 우승자 팩트체크 후 포즈다운 1:1 (OlympiaTV 공식, Ivan Bodybuilding).
+* 16살이 깬 가장 오래된 파워리프팅 세계기록 (zsVGiAJOnNA, 미국).
+* 팔씨름 전설 치플렌코프 명승부 (3bCXgJiQ0wA).
+
+예전 아이디어 (옛날 영상, 가끔만)
 
 * 조 루이스 vs 막스 슈멜링 1938 (미국 vs 독일, 1936 패배 후 1라운드 KO 복수극): Universal Newsreel 에서 찾기.
 * 잭 뎀프시 vs 제스 윌러드 1919 (1라운드에만 다운 7번, 1919년 공개작이라 미국 퍼블릭 도메인): archive.org 에서 찾기.

@@ -1,0 +1,269 @@
+{
+ "id": "c5_johnson_jeffries_1910",
+ "yt_title": "The Fight of the Century (1910) 🥊 #shorts",
+ "layout": {
+  "mode": "meme",
+  "bg": [
+   12,
+   12,
+   12
+  ],
+  "box_aspect": 1.3333,
+  "box_y": 0.44
+ },
+ "shots": [
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 583.0,
+   "dur": 2.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.15,
+    1.25
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 12.0,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 122.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.1,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 127.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.1,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 352.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.3,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 578.3,
+   "dur": 1.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 586.5,
+   "dur": 4.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.2,
+    1.35
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false,
+   "speed": 0.75
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 596.5,
+   "dur": 3.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.2,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 605.0,
+   "dur": 3.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.25
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  },
+  {
+   "src": "archive/johnson1910.avi",
+   "in": 622.0,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.1,
+    "sharpen": 0.4
+   },
+   "interp": false
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 28.6,
+   "text": "The Fight of the Century\n(1910) :boxing-glove:",
+   "style": "title",
+   "y": 0.12,
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 2.8,
+   "text": "An undefeated champion\ngoes down :skull:",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 2.8,
+   "d": 2.4,
+   "text": "*20,000* people came\nto Reno, Nevada",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 5.2,
+   "d": 2.6,
+   "text": "Jack Johnson\n*world heavyweight champion*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 7.8,
+   "d": 2.6,
+   "text": "James Jeffries\n*never lost a fight*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 10.4,
+   "d": 2.6,
+   "text": "Jeffries came out of retirement\nto take the title back",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 13.0,
+   "d": 1.2,
+   "text": "Round *15*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 14.2,
+   "d": 4.2,
+   "text": "Jeffries goes down for the\n*first time in his career*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 18.4,
+   "d": 3.4,
+   "text": "He gets up... and goes down *again*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 21.8,
+   "d": 3.6,
+   "text": "His corner *stops the fight*",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  },
+  {
+   "t": 25.4,
+   "d": 3.2,
+   "text": "Jack Johnson *keeps his title* :trophy:",
+   "style": "title",
+   "y": 0.77,
+   "size": 64
+  }
+ ],
+ "marks": [],
+ "sfx": [],
+ "lufs": -14.0
+}

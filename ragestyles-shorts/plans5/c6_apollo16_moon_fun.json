@@ -1,0 +1,186 @@
+{
+ "id": "c6_apollo16_moon_fun",
+ "yt_title": "What astronauts did for fun on the Moon 🌕 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.3333,
+  "box_y": 0.45
+ },
+ "shots": [
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 637.2,
+   "dur": 8.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.35
+   }
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 896.6,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.35
+   }
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 904.0,
+   "dur": 3.0,
+   "cx": 0.47,
+   "cy": 0.45,
+   "zoom": 1.5,
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.35
+   }
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 944.0,
+   "dur": 10.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": 1.0,
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.35
+   }
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 637.2,
+   "dur": 8.8,
+   "t": 0.0,
+   "af": "voice"
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 897.6,
+   "dur": 3.2,
+   "t": 8.8,
+   "af": "voice"
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 909.8,
+   "dur": 3.0,
+   "t": 12.0,
+   "af": "voice"
+  },
+  {
+   "src": "archive/apollo16_nsh.mpeg",
+   "in": 920.0,
+   "dur": 10.0,
+   "t": 15.0,
+   "af": "voice"
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 25.0,
+   "text": "What astronauts did\nfor fun on the Moon :rocket:",
+   "style": "title",
+   "y": 0.12,
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 2.5,
+   "text": "\"Give me a salute\"",
+   "style": "sub",
+   "y": 0.72,
+   "size": 68
+  },
+  {
+   "t": 2.5,
+   "d": 2.1,
+   "text": "\"Big Navy salute\"",
+   "style": "sub",
+   "y": 0.72,
+   "size": 68
+  },
+  {
+   "t": 4.6,
+   "d": 4.2,
+   "text": "\"Off the ground, *one more*\" :flushed-face:",
+   "style": "sub",
+   "y": 0.72,
+   "size": 68
+  },
+  {
+   "t": 8.8,
+   "d": 3.2,
+   "text": "\"Man, you are really *bouncing*\"",
+   "style": "sub",
+   "y": 0.72,
+   "size": 68
+  },
+  {
+   "t": 12.0,
+   "d": 3.0,
+   "text": "\"He's got about *two wheels* on the ground\"",
+   "style": "sub",
+   "y": 0.72,
+   "size": 64
+  },
+  {
+   "t": 15.0,
+   "d": 4.2,
+   "text": "\"A big *rooster tail* out of all four wheels\"",
+   "style": "sub",
+   "y": 0.72,
+   "size": 64
+  },
+  {
+   "t": 19.2,
+   "d": 5.8,
+   "text": "\"He skids the back end...\njust like on *snow*\" :skull:",
+   "style": "sub",
+   "y": 0.72,
+   "size": 64
+  },
+  {
+   "t": 0,
+   "d": 8.8,
+   "text": "Apollo 16, 1972 :flag-us:",
+   "style": "tag",
+   "y": 0.2
+  },
+  {
+   "t": 8.8,
+   "d": 16.2,
+   "text": "Moon buggy test drive",
+   "style": "tag",
+   "y": 0.2
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 8.72,
+   "name": "mk:166_fast_small_sweep",
+   "db": -18
+  }
+ ],
+ "lufs": -14.0
+}

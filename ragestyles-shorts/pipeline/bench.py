@@ -381,6 +381,8 @@ class Bench:
             k = t - c["t"]
             s = 0.9 + 0.1 * ease(k / 0.08, "out") if c.get("anim", "pop") == "pop" else 1.0
             op = min(1.0, k / 0.05)
+            if c["t"] <= 0.001:  # anything on screen at t=0 is fully visible on frame 1 (thumbnail)
+                s, op = 1.0, 1.0
             tail = c["t"] + c["d"] - t
             if c.get("fade_out") and tail < c["fade_out"]:
                 op *= tail / c["fade_out"]

@@ -2,8 +2,11 @@
 
 Needs two environment secrets (set in the Claude Code environment settings, never commit them):
   IG_USER_ID       numeric Instagram professional account id
-  IG_ACCESS_TOKEN  long-lived token with instagram_basic, instagram_content_publish,
-                   instagram_manage_comments, pages_show_list, pages_read_engagement
+  IG_ACCESS_TOKEN  long-lived token. Either kind works:
+                   Instagram Login token (starts with IG): instagram_business_basic,
+                     instagram_business_content_publish, instagram_business_manage_comments
+                   Facebook Login token (starts with EAA): instagram_basic, instagram_content_publish,
+                     instagram_manage_comments, pages_show_list, pages_read_engagement
 
 The video must be reachable at a public HTTPS URL (we commit it under media/ so GitHub Pages serves it).
 
@@ -12,12 +15,15 @@ Prints the media id. The comment is posted as the first comment; Instagram's API
 """
 import argparse, json, os, sys, time, urllib.parse, urllib.request
 
-API = "https://graph.facebook.com/v21.0"
+def api_base():
+    # Instagram Login tokens live on graph.instagram.com, Facebook Login tokens on graph.facebook.com
+    tok = os.environ.get("IG_ACCESS_TOKEN", "")
+    return "https://graph.instagram.com/v21.0" if tok.startswith("IG") else "https://graph.facebook.com/v21.0"
 
 def call(method, path, **params):
     params["access_token"] = os.environ["IG_ACCESS_TOKEN"]
     data = urllib.parse.urlencode(params).encode()
-    url = f"{API}/{path}"
+    url = f"{api_base()}/{path}"
     req = urllib.request.Request(url if method == "POST" else url + "?" + data.decode(), data=data if method == "POST" else None, method=method)
     try:
         with urllib.request.urlopen(req, timeout=60) as r:

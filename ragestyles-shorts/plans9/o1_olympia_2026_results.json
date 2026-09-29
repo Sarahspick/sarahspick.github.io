@@ -22,7 +22,21 @@
     "sat": 1.05,
     "contrast": 1.06,
     "sharpen": 0.45
-   }
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
   },
   {
    "src": "youtube/oly_vox",
@@ -41,7 +55,21 @@
     "sat": 1.05,
     "contrast": 1.06,
     "sharpen": 0.45
-   }
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
   },
   {
    "src": "youtube/oly_vox",
@@ -60,7 +88,21 @@
     "sat": 1.05,
     "contrast": 1.06,
     "sharpen": 0.45
-   }
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
   },
   {
    "src": "youtube/oly_vox",
@@ -172,6 +214,20 @@
      0.442,
      0.506
     ]
+   ],
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.1,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.4,
+     "dur": 0.5
+    }
    ]
   },
   {
@@ -245,22 +301,43 @@
   },
   {
    "t": 0.0,
-   "d": 3.8,
+   "d": 2.25,
    "text": "*5TH* PLACE",
    "style": "big",
    "y": 0.7
   },
   {
+   "t": 2.25,
+   "d": 1.55,
+   "text": "TONIO BURTON\n*$30,000*",
+   "style": "big",
+   "y": 0.7
+  },
+  {
    "t": 3.8,
-   "d": 4.0,
+   "d": 2.25,
    "text": "*4TH* PLACE",
    "style": "big",
    "y": 0.7
   },
   {
+   "t": 6.05,
+   "d": 1.75,
+   "text": "ANDREW JACKED\n*$40,000*",
+   "style": "big",
+   "y": 0.7
+  },
+  {
    "t": 7.8,
-   "d": 3.8,
+   "d": 2.25,
    "text": "*3RD* PLACE\n~LAST YEAR'S CHAMPION~",
+   "style": "big",
+   "y": 0.7
+  },
+  {
+   "t": 10.05,
+   "d": 1.55,
+   "text": "DEREK LUNSFORD\n*$100,000*",
    "style": "big",
    "y": 0.7
   },
@@ -288,14 +365,14 @@
   {
    "t": 20.4,
    "d": 3.8,
-   "text": "*NICK WALKER* WINS :trophy:",
+   "text": "*NICK WALKER* WINS :trophy:\n*$600,000*",
    "style": "big",
    "y": 0.7
   },
   {
    "t": 24.2,
    "d": 3.0,
-   "text": "THE NEW\n*MR. OLYMPIA*",
+   "text": "~2ND~ SAMSON DAUDA\n*$200,000*",
    "style": "big",
    "y": 0.7
   },
@@ -307,45 +384,33 @@
    "y": 0.7
   }
  ],
- "marks": [
+ "marks": [],
+ "sfx": [
   {
-   "type": "panel",
-   "t": 0,
-   "d": 22.0,
-   "fade_out": 0.4,
-   "x": 0.035,
-   "yc": 0.4,
-   "w": 720,
-   "size": 50,
-   "alpha": 0,
-   "stroke": 6,
-   "shadow": true,
-   "header": "2026 MR. OLYMPIA",
-   "rows": [
-    {
-     "t": 2.25,
-     "text": "5TH  TONIO BURTON  *$30K*"
-    },
-    {
-     "t": 6.05,
-     "text": "4TH  ANDREW JACKED  *$40K*"
-    },
-    {
-     "t": 10.05,
-     "text": "3RD  DEREK LUNSFORD  *$100K*"
-    },
-    {
-     "t": 20.4,
-     "text": "2ND  SAMSON DAUDA  *$200K*"
-    },
-    {
-     "t": 20.4,
-     "text": "~1ST~  NICK WALKER  *$600K*"
-    }
-   ]
+   "t": 2.25,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 6.05,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 10.05,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 20.4,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
   }
  ],
- "sfx": [],
  "audio_clips": [
   {
    "src": "youtube/oly_vox",

@@ -399,6 +399,10 @@ class Bench:
             vid = np.repeat((vid @ np.array([0.299, 0.587, 0.114], np.float32))[..., None], 3, axis=2)
         if shot.get("vid_darken"):  # e.g. 0.6 for the dark "skull edit" freeze
             vid *= shot["vid_darken"]
+        for f in shot.get("flash", []):  # reveal hit: quick brightness lift that fades ({at, amount, dur})
+            u = (lt - f["at"]) / f.get("dur", 0.45)
+            if 0 <= u < 1:
+                vid = vid * (1 + f.get("amount", 0.25) * (1 - u) ** 2) + 18 * f.get("amount", 0.25) * (1 - u) ** 2
         if shot.get("vignette"):
             vid *= R_vignette(rw, rh, shot["vignette"])[..., None]
         wb = shot.get("whip_in", 0.0)  # motion blur that settles over the first `whip_in` seconds
@@ -622,6 +626,8 @@ class Bench:
             x, sr = sf.read(path, dtype="float32")
             if x.ndim == 1:
                 x = np.stack([x, x], 1)
+            if cue.get("in"):  # skip a sound's build-up so its impact lands on cue["t"]
+                x = x[int(cue["in"] * sr):]
             st = int(cue["t"] * SR)
             if st < 0:
                 x, st = x[-st:], 0

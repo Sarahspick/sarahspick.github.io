@@ -1,4 +1,4 @@
-"""Builds plans9/o1_olympia_2026_results.json (2026 Mr. Olympia results countdown with a leaderboard panel).
+"""Builds plans9/o1_olympia_2026_results.json (2026 Mr. Olympia results countdown: title, one caption, zoom and flash hits).
 
 Source: "2026 Mr. Olympia Finals Official Footage", OlympiaTV (https://youtu.be/Cq7TbOxcwPc).
 work/youtube/oly_vox.mp4 = source 3840 s to 4330 s with the arena music removed by Demucs (vocals stem),
@@ -49,18 +49,34 @@ def cap(i, text, dt=0.0, d=None, y=BY):
     return {"t": round(ts[i] + dt, 2), "d": round(d if d else shots[i]["dur"] - dt, 2), "text": text, "style": "big", "y": y}
 
 
+NAME = {0: 2.25, 1: 2.25, 2: 2.25}  # the name is spoken this far into shots 0 to 2
+WIN = 0.6                            # Nick's arms go up this far into shot 6
+
+# owner (o1 v3): no leaderboard; only the title on top and one caption low in the middle, e.g. "TONIO BURTON $30,000"
 captions = [
     {"t": 0, "d": T, "text": "Who won the 2026\n*Mr. Olympia*? :trophy:", "style": "title", "anim": "none", "y": 0.085},
-    cap(0, "*5TH* PLACE"),
-    cap(1, "*4TH* PLACE"),
-    cap(2, "*3RD* PLACE\n~LAST YEAR'S CHAMPION~"),
+    cap(0, "*5TH* PLACE", d=NAME[0]), cap(0, "TONIO BURTON\n*$30,000*", dt=NAME[0]),
+    cap(1, "*4TH* PLACE", d=NAME[1]), cap(1, "ANDREW JACKED\n*$40,000*", dt=NAME[1]),
+    cap(2, "*3RD* PLACE\n~LAST YEAR'S CHAMPION~", d=NAME[2]), cap(2, "DEREK LUNSFORD\n*$100,000*", dt=NAME[2]),
     cap(3, "LAST ~2~ STANDING"),
     cap(4, "NICK WALKER"),
     cap(5, "OR SAMSON DAUDA?"),
-    cap(6, "*NICK WALKER* WINS :trophy:", dt=0.6),
-    cap(7, "THE NEW\n*MR. OLYMPIA*"),
+    cap(6, "*NICK WALKER* WINS :trophy:\n*$600,000*", dt=WIN),
+    cap(7, "~2ND~ SAMSON DAUDA\n*$200,000*"),
     cap(8, "HE BEAT ~3~ FORMER\nMR. OLYMPIAS :exploding-head:"),
 ]
+
+# owner: on every reveal a quick slight zoom in with a brightness lift, and a deep boom
+def hit(i, at, zoom=1.08, amount=0.28):
+    shots[i].setdefault("punch", []).append({"at": at, "zoom": zoom, "ramp": 0.14})
+    shots[i].setdefault("flash", []).append({"at": at, "amount": amount, "dur": 0.5})
+
+
+for i in (0, 1, 2):
+    hit(i, NAME[i])
+hit(6, WIN, zoom=1.1, amount=0.4)
+sfx = [{"t": round(ts[i] + NAME[i], 2), "name": "mk:788_big_cinematic_impact", "in": 2.12, "db": 0} for i in (0, 1, 2)]
+sfx.append({"t": round(ts[6] + WIN, 2), "name": "mk:2908_movie_trailer_epic_impact", "in": 0.7, "db": -2})
 
 
 def clip(src, dur, t):
@@ -68,7 +84,6 @@ def clip(src, dur, t):
 
 
 # the announcer pauses 3 to 6 s before each name: "...fifth place finisher" + the name, packed together
-NAME = {0: 2.25, 1: 2.25, 2: 2.25}
 audio_clips = [
     clip(3854.5, 2.05, ts[0] + 0.1), clip(3859.1, 1.55, ts[0] + NAME[0]),   # "fifth place finisher" + "Tonio Burton"
     clip(3917.5, 2.05, ts[1] + 0.1), clip(3923.6, 1.35, ts[1] + NAME[1]),   # "fourth place finisher" + "Andrew Jacked"
@@ -78,17 +93,8 @@ audio_clips = [
     clip(4121.9, 2.7, ts[5]),                                               # "and the title of 2026 Mr. Olympia"
     clip(4156.4, 2.9, ts[8] + 0.2),                                         # "he defeated three former Mr. Olympia"
 ]
-# owner: the text must not cover the picture too much, so the board fades out ~1.6 s after 1st place appears
-panel = {"type": "panel", "t": 0, "d": round(ts[6] + 0.6 + 1.6, 2), "fade_out": 0.4, "x": 0.035, "yc": 0.40, "w": 720, "size": 50, "alpha": 0, "stroke": 6, "shadow": True, "header": "2026 MR. OLYMPIA",
-         "rows": [
-             {"t": round(ts[0] + NAME[0], 2), "text": "5TH  TONIO BURTON  *$30K*"},
-             {"t": round(ts[1] + NAME[1], 2), "text": "4TH  ANDREW JACKED  *$40K*"},
-             {"t": round(ts[2] + NAME[2], 2), "text": "3RD  DEREK LUNSFORD  *$100K*"},
-             {"t": round(ts[6] + 0.6, 2), "text": "2ND  SAMSON DAUDA  *$200K*"},
-             {"t": round(ts[6] + 0.6, 2), "text": "~1ST~  NICK WALKER  *$600K*"},
-         ]}
 plan = {"id": "o1_olympia_2026_results", "yt_title": "Who won the 2026 Mr. Olympia? 🏆 #shorts",
-        "layout": {"mode": "full"}, "shots": shots, "captions": captions, "marks": [panel], "sfx": [],
+        "layout": {"mode": "full"}, "shots": shots, "captions": captions, "marks": [], "sfx": sfx,
         "audio_clips": audio_clips, "lufs": -14.0}
 json.dump(plan, open("plans9/o1_olympia_2026_results.json", "w"), indent=1, ensure_ascii=False)
 print("shots at", ts)

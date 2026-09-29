@@ -132,3 +132,7 @@
 - Mochi: 기존 영상과 사이트 링크는 전부 갈아엎을 예정. 크리에이터 허락, 셀러 허락, 직접 촬영, 인플루언서 프로그램 네 가지 모두 현재 불가하다고 함.
 - Claude 제안: 무료 상업 이용 라이선스 스톡 영상(Pexels, 설정 필요: PEXELS_API_KEY 환경 변수) + 코드로 만드는 텍스트 모션 릴스. 특정 제품을 "내가 써봤다"고 보이게 하지 않고 "이런 분위기 만드는 아마존 아이템" 식 큐레이션으로 쓴다(FTC, Pexels 약관의 인물 보증 금지). 무단 재업로드는 여전히 하지 않음.
 - publish_ig.py: Instagram 로그인 방식 토큰(IG로 시작)이면 graph.instagram.com, 페이스북 방식(EAA)이면 graph.facebook.com을 자동 선택. 페이스북 페이지 없이 Instagram 로그인 방식으로 토큰 발급 가능. 토큰은 60일마다 갱신 필요.
+- 2026-09-29 저녁: Mochi가 Meta 개발자 앱 생성 완료(비즈니스 포트폴리오 연결은 건너뜀, 개발 모드). 사용 사례 "Manage messaging & content on Instagram", Instagram 로그인 방식. Instagram Tester 초대 수락 완료. IG_USER_ID, IG_ACCESS_TOKEN을 환경 변수에 넣었다고 함(이 세션 컨테이너에는 반영 안 됨, 새 세션부터). 새 세션 첫 일: graph.instagram.com/v21.0/{IG_USER_ID}?fields=username 으로 토큰 확인.
+- Meta Business Suite는 수동 예약만 가능하고 API 토큰은 못 줌. 매니지드 Meta 계정은 기업용이라 해당 없음.
+- 브랜드 이름 변경 검토 중. 스톡 영상 큐레이션이면 실명 느낌의 "Sarah"보다 브랜드명이 낫다고 제안. 후보: Cozy Cart(추천, 이름 칸 "Cozy Cart 🛒 amazon home finds"), Soft Life Finds, The Cozy Edit, Little Luxe Finds, Nest Notes, Homebody Finds, Cart Crush. 결정되면 사이트, IG 링크, 어소시에이트 등록 사이트 목록 갱신.
+- 아직 받을 것: PEXELS_API_KEY(환경 변수), 어소시에이트 가입일(180일 내 3건 판매 조건 확인용).

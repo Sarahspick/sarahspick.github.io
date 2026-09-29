@@ -5,6 +5,7 @@ on real footage (same layout, captions and SFX as a finished Short), joined into
     python tools/voice_samples.py --lang ko               # Korean voices only
     python tools/voice_samples.py --engine edge --only Brian SunHi --rate +10%
     python tools/voice_samples.py --model eleven_multilingual_v2 --speed 1.0
+    python tools/voice_samples.py --engine typecast --lang ko   # Typecast (key in TYPECAST_API_KEY)
 
 ElevenLabs responses are cached under work/elevenlabs_cache, so re-rendering the reel costs no credits.
 """
@@ -79,6 +80,7 @@ ELEVEN_VOICES = {
         ("cjVigY5qzO86Huf0OWal", "Eric", "남성 · 미국 · 매끄럽고 믿음직한"),
         ("PGoKnSD4gKn2aS99wOR2", "Brian S.", "남성 · 미국 · 쇼츠 내레이션용"),
         ("VCgLBmBjldJmfphyB8sZ", "Liam", "남성 · 미국 · 쇼츠 이야기꾼 (에너지 높음)"),
+        ("UgBBYS2sOqTuMpoF3BR0", "Mark", "남성 · 미국 · 자연스러운 대화체 *(선택됨)*"),
     ],
     "ko": [
         ("PDoCXqBQFGsvfO0hNkEs", "Chris", "남성 · 20~30대 · 따뜻하고 또렷한 설명"),
@@ -92,7 +94,12 @@ ELEVEN_VOICES = {
         ("uyVNoMrnUku1dZyVEXwD", "Anna Kim", "여성 · 20~30대 · 차분하고 또렷한"),
     ],
 }
-ENGINES = {"edge": EDGE_VOICES, "elevenlabs": ELEVEN_VOICES}
+# Typecast voices (tc_... ids from the Typecast site)
+TYPECAST_VOICES = {
+    "en": [],
+    "ko": [("tc_68257f68bc6e3c161ab5078d", "필재", "남성 · Typecast *(선택됨)*")],
+}
+ENGINES = {"edge": EDGE_VOICES, "elevenlabs": ELEVEN_VOICES, "typecast": TYPECAST_VOICES}
 
 # Hook + two beats of the Mercedes short, so every voice is heard in the real format (clips borrowed from it).
 FOOTAGE = os.path.join(ROOT, "scripts", "mercedes_bounce.en.json")
@@ -199,7 +206,8 @@ def main():
     ap.add_argument("--lang", nargs="+", default=["en", "ko"], choices=["en", "ko"])
     ap.add_argument("--rate", default="+20%", help="edge speaking rate")
     ap.add_argument("--model", default="eleven_v4", help="ElevenLabs model")
-    ap.add_argument("--speed", type=float, default=1.1, help="ElevenLabs speed (0.7-1.2)")
+    ap.add_argument("--speed", type=float, default=1.1, help="ElevenLabs speed (0.7-1.2) / Typecast tempo (0.5-2.0)")
+    ap.add_argument("--tc-model", default="ssfm-v30", help="Typecast model")
     ap.add_argument("--format", default="mp3_44100_128", help="ElevenLabs output (mp3_44100_192 needs Creator+)")
     ap.add_argument("--only", nargs="*", help="voice names or ids to include, e.g. Brian SunHi")
     ap.add_argument("--workers", type=int, default=3)
@@ -209,6 +217,9 @@ def main():
     args = ap.parse_args()
     if args.engine == "edge":
         vbase, speed = {"engine": "edge", "rate": args.rate}, args.rate
+    elif args.engine == "typecast":
+        vbase = {"engine": "typecast", "model": args.tc_model, "tempo": args.speed}
+        speed = f"x{args.speed:g}"
     else:
         vbase = {"engine": "elevenlabs", "model": args.model, "settings": {"speed": args.speed}, "format": args.format}
         speed = f"x{args.speed:g}"

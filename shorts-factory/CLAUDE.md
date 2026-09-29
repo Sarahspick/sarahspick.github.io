@@ -24,8 +24,12 @@
   - Eleven v4(`eleven_v4`)는 한국어와 `/with-timestamps`를 지원하고, `voice_settings.speed`도 받습니다. v4 Turbo는 크레딧이 절반입니다.
   - 라이브러리 목소리는 My Voices에 추가하지 않아도 voice_id로 바로 쓸 수 있습니다 (슬롯을 쓰지 않음).
   - `ElevenLabsNarrator`는 성공한 응답을 `work/elevenlabs_cache/`에 저장합니다. 같은 문장·목소리·설정을 다시 렌더링하면 크레딧이 들지 않습니다.
-  - `tools/voice_samples.py`의 기본 엔진이 ElevenLabs입니다 (`--engine edge`로 예전 목록). 후보는 `ELEVEN_VOICES`에 있습니다 (영어 9명, 한국어 원어민 9명). 샘플 영상 `output/20260929_voice_samples_elevenlabs_EN_KO.mp4`를 보냈고, 사용자의 선택을 기다립니다.
-- 사용자가 고르면 `channel.json` 기본 목소리를 `{"engine": "elevenlabs", "voice_id": ..., "model": "eleven_v4", "settings": {"speed": 1.1}}`로 바꾸고, 한국어판은 대본의 `"voice"`로 한국어 목소리를 지정합니다.
+  - `tools/voice_samples.py`의 기본 엔진은 ElevenLabs입니다 (`--engine edge`, `--engine typecast`도 됩니다). 후보는 `ELEVEN_VOICES`와 `TYPECAST_VOICES`에 있습니다.
+- **목소리 확정 (2026-09-29, 사용자 선택)**
+  - 영어: ElevenLabs **Mark** (`UgBBYS2sOqTuMpoF3BR0`), `eleven_v4`, speed 1.1. `channel.json`의 `"voice"`입니다.
+  - 한국어: Typecast **필재** (`tc_68257f68bc6e3c161ab5078d`), `ssfm-v30`, tempo 1.1. `channel.json`의 `"voices": {"ko": ...}`이고, `lang`이 ko인 대본에 자동으로 쓰입니다.
+  - Typecast 엔진은 `factory/voice.py`의 `TypecastNarrator`입니다. `/v1/text-to-speech/with-timestamps?granularity=word`의 단어 타이밍을 씁니다. 응답은 `work/typecast_cache/`에 저장합니다. 키는 환경 변수 `TYPECAST_API_KEY`로 받습니다 (사용자가 `Typecast_API`로 넣어도 읽습니다). 모의 응답으로만 테스트했고, 키가 들어오면 `python tools/voice_samples.py --engine typecast --lang ko`로 실제 호출을 먼저 확인합니다. tempo와 모델(ssfm-v30/v21)은 사용자가 들어보고 조정합니다.
+  - 기존 영어 쇼츠 12편은 Edge Brian으로 만든 확정본입니다. 다시 렌더링하지 않습니다.
 - 크레딧을 아낍니다. 샘플 문장은 짧게 하고, 같은 문장을 불필요하게 다시 생성하지 않습니다.
 
 ## 새 세션에서 처음 할 일

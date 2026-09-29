@@ -6,6 +6,7 @@ appear in the captions, markup included), so captions can be chunked and highlig
 Engines
   edge        Microsoft neural voices via edge-tts (free, exact word boundaries; needs internet)
   elevenlabs  ElevenLabs API (key in ELEVENLABS_API_KEY); exact character timings from /with-timestamps
+  typecast    Typecast API (key in TYPECAST_API_KEY); exact word timings from /with-timestamps
   kokoro      offline Kokoro-82M; word times come from SenseVoice speech recognition
 """
 import asyncio
@@ -315,6 +316,62 @@ class ElevenLabsNarrator(Narrator):
             time.sleep(2 * (attempt + 1))
 
 
+class TypecastNarrator(Narrator):
+    """Typecast voices (tc_... ids) through the API. The key comes from TYPECAST_API_KEY, never from the script."""
+    API = "https://api.typecast.ai/v1/text-to-speech/with-timestamps?granularity=word"
+    KEY_VARS = ("TYPECAST_API_KEY", "Typecast_API", "TYPECAST_API")
+    LANGS = {"ko": "kor", "en": "eng"}
+    sr = 44100
+
+    def __init__(self, voice_id, model="ssfm-v30", lang="ko", pronounce=None, emotion="normal", intensity=1.0,
+                 tempo=1.0, pitch=0, seed=None):
+        super().__init__(lang, pronounce)
+        self.key = next((os.environ[v] for v in self.KEY_VARS if os.environ.get(v)), "")
+        if not self.key:
+            raise RuntimeError("TYPECAST_API_KEY is not set: add it to the environment variables")
+        self.body = {"voice_id": voice_id, "model": model, "language": self.LANGS.get(lang, lang),
+                     "prompt": {"emotion_type": "preset", "emotion_preset": emotion, "emotion_intensity": intensity},
+                     "output": {"audio_format": "wav", "audio_tempo": tempo, "audio_pitch": pitch}}
+        if seed is not None:
+            self.body["seed"] = seed
+
+    def _synth(self, text):
+        body = dict(self.body, text=text)
+        expected = max(1, len(_norm_words(text)))
+        # every call costs credits: keep good responses so a re-render of the same sentence is free
+        key = hashlib.sha1(json.dumps(body, sort_keys=True).encode()).hexdigest()[:20]
+        cache = os.path.join(WORK, "typecast_cache", key + ".json")
+        for attempt in range(5):
+            try:
+                if attempt == 0 and os.path.exists(cache):
+                    with open(cache, encoding="utf-8") as f:
+                        d = json.load(f)
+                else:
+                    req = urllib.request.Request(self.API, data=json.dumps(body).encode(), method="POST",
+                                                 headers={"X-API-KEY": self.key, "Content-Type": "application/json"})
+                    with urllib.request.urlopen(req, timeout=120) as r:
+                        d = json.load(r)
+                audio = decode_audio(base64.b64decode(d["audio"]), self.sr)
+                audio, cut = trim_silence(audio, self.sr)
+                words = [(n, max(0.0, float(w["start"]) - cut)) for w in d["words"] for n in _norm_words(w["text"])]
+                if len(words) >= 0.8 * expected and len(audio) / self.sr >= 0.12 * expected:
+                    os.makedirs(os.path.dirname(cache), exist_ok=True)
+                    with open(cache, "w", encoding="utf-8") as f:
+                        json.dump(d, f)
+                    return audio, words
+                problem = f"truncated response ({len(words)}/{expected} words)"
+            except urllib.error.HTTPError as e:
+                problem = f"HTTP {e.code}: {e.read().decode(errors='replace')[:300]}"
+                if e.code in (400, 401, 402, 403, 404, 422):  # bad key, voice, credits or request: a retry cannot help
+                    raise RuntimeError(f"Typecast {problem}") from None
+            except (urllib.error.URLError, TimeoutError, KeyError, ValueError) as e:  # network, bad payload
+                problem = str(e)
+            if attempt == 4:
+                raise RuntimeError(f"Typecast failed for {text!r}: {problem}")
+            print(f"[voice] typecast retry {attempt + 1}: {problem}")
+            time.sleep(2 * (attempt + 1))
+
+
 class KokoroNarrator(Narrator):
     """Offline fallback (Kokoro-82M). Word times via speech recognition."""
 
@@ -354,6 +411,10 @@ def make_narrator(vcfg, lang, pronounce):
     if eng == "elevenlabs":
         return ElevenLabsNarrator(vcfg.get("voice_id") or vcfg["name"], vcfg.get("model", "eleven_multilingual_v2"),
                                   lang, pronounce, vcfg.get("settings"), vcfg.get("format", "mp3_44100_128"))
+    if eng == "typecast":
+        return TypecastNarrator(vcfg.get("voice_id") or vcfg["name"], vcfg.get("model", "ssfm-v30"), lang, pronounce,
+                                vcfg.get("emotion", "normal"), vcfg.get("intensity", 1.0), vcfg.get("tempo", 1.0),
+                                vcfg.get("pitch", 0), vcfg.get("seed"))
     if eng == "kokoro":
         return KokoroNarrator(vcfg.get("name", "am_michael"), vcfg.get("speed", 1.2), lang, pronounce)
     raise ValueError(f"unknown voice engine {eng!r}")

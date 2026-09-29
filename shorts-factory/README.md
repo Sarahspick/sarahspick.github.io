@@ -120,6 +120,8 @@ assets/sfx_library.json  효과음 목록 + 원본 URL + 라이선스
 
 - 인터넷 없이 쓰려면 `"voice": {"engine": "kokoro", "name": "am_michael"}` + `python tools/fetch_assets.py models`
 - **ElevenLabs** (유료): 환경 변수 `ELEVENLABS_API_KEY`에 키를 넣고, `channel.json`이나 대본의 `"voice"`를 `{"engine": "elevenlabs", "voice_id": "<목소리 ID>", "model": "eleven_v4", "settings": {"speed": 1.1}, "format": "mp3_44100_192"}` 형식으로 바꿉니다. 응답은 `work/elevenlabs_cache/`에 저장돼 같은 문장을 다시 렌더링해도 크레딧이 들지 않습니다. 후보 비교는 `python tools/voice_samples.py`(ElevenLabs 후보, `--engine edge`는 무료 목소리)로 합니다. `format`의 192kbps는 Creator 요금제 이상에서만 되고, 기본값은 128kbps입니다. 글자 단위 타이밍을 받아 자막 싱크가 지금과 같이 맞습니다. 키는 저장소나 채팅에 절대 넣지 않습니다.
+- **Typecast** (유료): 환경 변수 `TYPECAST_API_KEY`에 키를 넣고 `{"engine": "typecast", "voice_id": "tc_...", "model": "ssfm-v30", "tempo": 1.1, "emotion": "normal", "intensity": 1.0}` 형식으로 지정합니다. 단어 타이밍을 API에서 받아 자막 싱크가 맞고, 응답은 `work/typecast_cache/`에 저장됩니다.
+- 언어별 기본 목소리: `channel.json`의 `"voices": {"ko": {...}}`가 그 언어 대본의 기본 목소리가 됩니다. 없으면 `"voice"`를 씁니다. 대본의 `"voice"`가 가장 우선합니다.
 - 다른 유료 음성은 `factory/voice.py`에 `_synth()`만 구현한 클래스를 추가하면 됩니다. 단어 타이밍이 없으면 음성인식으로 자동 정렬합니다.
 
 ### 목소리 고르기

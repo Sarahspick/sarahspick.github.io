@@ -39,7 +39,7 @@ def load_channel(path=None):
         with open(path, encoding="utf-8") as f:
             user = json.load(f)
         for k, v in user.items():
-            if isinstance(v, dict) and isinstance(ch.get(k), dict):
+            if isinstance(v, dict) and isinstance(ch.get(k), dict) and k != "voice":  # a voice is replaced whole
                 ch[k].update(v)
             else:
                 ch[k] = v

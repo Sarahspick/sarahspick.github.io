@@ -47,10 +47,10 @@ class Short:
         self.ch = load_channel(channel_path)
         self.theme = self.ch.get("theme", "dark")
         self.lang = self.sc.get("lang", self.ch.get("lang", "en"))
-        vcfg = dict(self.ch["voice"])
+        vcfg = dict(self.ch.get("voices", {}).get(self.lang) or self.ch["voice"])  # per-language default voice
         vcfg.update(self.sc.get("voice", {}))
         if voice:
-            vcfg["name"] = voice
+            vcfg["voice_id" if vcfg.get("engine") in ("elevenlabs", "typecast") else "name"] = voice
         if rate:
             vcfg["rate"] = rate
         self.vcfg = vcfg

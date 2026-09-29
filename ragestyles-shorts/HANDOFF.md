@@ -84,6 +84,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new6 c7 | 1949 대학 아크로바틱 (원본 내레이션) | 원본 소리 좋음, 그런데 뒤에 소리가 빠짐 |
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
+| new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs (유튜브 CC BY, 첫 최신 영상, `plans8/g1_gymshark_cameraman.json`) | 사용자 확인 전 |
 
 ## 5. 파이프라인
 
@@ -125,6 +126,12 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 폰트 분석 방법: 쇼츠 세로 표지 `i.ytimg.com/vi/<id>/oardefault.jpg` (1080x1920) 와 `oar1.jpg`, `oar2.jpg` 프레임을 받아 봅니다.
 * 받아쓴 대사: `sources/transcripts/` (Exercise1949 전체 대사, 초 단위).
 * 브라우저: Playwright 크로미움은 `/opt/pw-browsers` 에 있음. 프록시 인증서를 NSS 에 먼저 등록해야 합니다: `certutil -A -d sql:/root/.pki/nssdb -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt`.
+
+유튜브 CC BY 영상 받는 방법 (2026-09-29 확정)
+* 오너가 자기 컴퓨터에서 yt-dlp 로 받습니다: `yt-dlp --cookies-from-browser firefox -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080]" --merge-output-format mp4 -o "%(id)s.%(ext)s" <URL>`. 윈도우 크롬은 쿠키 DB 잠금과 새 암호화 때문에 실패하니 파이어폭스를 씁니다. nsig 에러가 나면 `yt-dlp -U` 와 Deno 설치. 쿠키는 이 환경으로 절대 가져오지 않습니다.
+* 채팅은 30MB 제한이라 구글 드라이브 공유 폴더로 넘깁니다: 내 드라이브 > Claude Youtube Project (https://drive.google.com/drive/folders/15ZuFnwkci3M4oeBMUKKiSUU5VHzC-RkW, 링크 공유) > 세션별 폴더 (이번 세션은 RageStyles YT1). 드라이브의 다른 폴더와 문서는 열지 않습니다.
+* 폴더 목록: `curl -sL "https://drive.google.com/embeddedfolderview?id=<폴더ID>"` 에서 파일 이름과 ID 를 읽고, `python3 -m gdown <파일ID> -O work/youtube/<ID>.mp4` 로 받습니다 (pip install gdown).
+* 받은 영상은 `work/youtube/` (커밋 안 함). 배경음악은 Demucs 로 필요한 구간만 분리해서 `work/youtube/gs_vox.mp4` 처럼 목소리와 함성만 남긴 파일을 만들어 씁니다 (plans8 참고, `in` 은 그 구간 기준).
 
 ## 6. 소스별 메모
 

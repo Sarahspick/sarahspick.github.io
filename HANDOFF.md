@@ -136,3 +136,10 @@
 - Meta Business Suite는 수동 예약만 가능하고 API 토큰은 못 줌. 매니지드 Meta 계정은 기업용이라 해당 없음.
 - 브랜드 이름 변경 검토 중. 스톡 영상 큐레이션이면 실명 느낌의 "Sarah"보다 브랜드명이 낫다고 제안. 후보: Cozy Cart(추천, 이름 칸 "Cozy Cart 🛒 amazon home finds"), Soft Life Finds, The Cozy Edit, Little Luxe Finds, Nest Notes, Homebody Finds, Cart Crush. 결정되면 사이트, IG 링크, 어소시에이트 등록 사이트 목록 갱신.
 - 아직 받을 것: PEXELS_API_KEY(환경 변수), 어소시에이트 가입일(180일 내 3건 판매 조건 확인용).
+
+## 13. 영상 소스: 알리익스프레스 제휴 API (2026-09-29 밤)
+- Mochi: 스톡 이미지/영상 아이디어 싫다, 아마존이나 알리 영상을 퍼와서라도 만들라고 함. 경쟁 계정(@megsdailyfinds, @donna.found.it, @leonfinds) 분석 요청. 인스타가 이 환경에서 로그인 요구, 429로 막혀 직접 분석 못 함.
+- 아마존 상품 영상 다운로드는 어소시에이트 약관 위반(계정 폐쇄, 미지급 수수료 몰수 위험)이라 안 함. 틱톡/릴스 무단 재업로드도 안 함.
+- 대안으로 채택: AliExpress Affiliate API(aliexpress.affiliate.hotproduct.query)가 제휴 회원에게 product_video_url(셀러 공식 상품 영상)과 promotion_link를 준다. 이 영상은 같은 상품의 알리 제휴 링크로만 연결한다(아마존 링크와 섞지 않음). 게시 전 Portals 약관에서 소재 사용 범위 한 번 더 확인.
+- pipeline/ali_source.py: 키워드로 인기 상품 검색, 영상 있는 것만, --download로 mp4 저장. 필요 환경 변수 ALI_APP_KEY, ALI_APP_SECRET, ALI_TRACKING_ID. 더미 키로 요청 형식은 검증함(InvalidAppKey까지 도달), 실제 키로는 미검증.
+- 발급 방법: portals.aliexpress.com 가입(무료) → tracking ID 생성 → openservice.aliexpress.com에서 개발자 등록 후 Affiliate API 앱 생성 → App Key, App Secret.

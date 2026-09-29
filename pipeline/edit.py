@@ -1,4 +1,4 @@
-"""Sarah's Pick reel editor. Only for clips we filmed ourselves or have the creator's written permission for.
+"""Sarah's Pick reel editor. Only for clips we filmed, have the creator's written permission for, or got from the AliExpress Affiliate API (pipeline/ali_source.py).
 
 python3 pipeline/edit.py IN.mp4 OUT.mp4 --hook "reading in bed just got prettier" [--cta "link in bio"] [--start 0 --end 0]
 

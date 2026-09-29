@@ -264,18 +264,20 @@ class ElevenLabsNarrator(Narrator):
     API = "https://api.elevenlabs.io/v1"
     sr = 44100
 
-    def __init__(self, voice_id, model="eleven_multilingual_v2", lang="en", pronounce=None, settings=None):
+    def __init__(self, voice_id, model="eleven_multilingual_v2", lang="en", pronounce=None, settings=None,
+                 fmt="mp3_44100_128"):
         super().__init__(lang, pronounce)
         self.key = os.environ.get("ELEVENLABS_API_KEY", "")
         if not self.key:
             raise RuntimeError("ELEVENLABS_API_KEY is not set: add it to the environment variables")
         self.voice_id, self.model, self.settings = voice_id, model, settings or {}
+        self.fmt = fmt  # mp3_44100_192 needs the Creator plan or higher
 
     def _synth(self, text):
         body = {"text": text, "model_id": self.model}
         if self.settings:
             body["voice_settings"] = self.settings
-        url = f"{self.API}/text-to-speech/{self.voice_id}/with-timestamps?output_format=mp3_44100_128"
+        url = f"{self.API}/text-to-speech/{self.voice_id}/with-timestamps?output_format={self.fmt}"
         expected = max(1, len(_norm_words(text)))
         for attempt in range(5):
             req = urllib.request.Request(url, data=json.dumps(body).encode(), method="POST",
@@ -340,7 +342,7 @@ def make_narrator(vcfg, lang, pronounce):
                             vcfg.get("pitch", "+0Hz"), lang, pronounce)
     if eng == "elevenlabs":
         return ElevenLabsNarrator(vcfg.get("voice_id") or vcfg["name"], vcfg.get("model", "eleven_multilingual_v2"),
-                                  lang, pronounce, vcfg.get("settings"))
+                                  lang, pronounce, vcfg.get("settings"), vcfg.get("format", "mp3_44100_128"))
     if eng == "kokoro":
         return KokoroNarrator(vcfg.get("name", "am_michael"), vcfg.get("speed", 1.2), lang, pronounce)
     raise ValueError(f"unknown voice engine {eng!r}")

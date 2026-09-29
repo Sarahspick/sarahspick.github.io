@@ -25,6 +25,22 @@
   3. `tools/voice_samples.py`가 ElevenLabs 후보도 받도록 확장합니다. 번호 붙인 샘플 영상을 보내고, 사용자가 고르면 `channel.json` 기본값을 바꿉니다.
 - 크레딧을 아낍니다. 샘플 문장은 짧게 하고, 같은 문장을 불필요하게 다시 생성하지 않습니다.
 
+## 새 세션에서 처음 할 일
+
+모든 작업은 브랜치 `claude/upbeat-ramanujan-72d6wv`에 있습니다. main 브랜치에는 없습니다. 먼저 그 브랜치를 가져와 자기 작업 브랜치로 이어받습니다.
+
+새 컨테이너에는 git에 없는 것들이 빠져 있어서, 먼저 준비합니다.
+
+```bash
+apt-get install -y --no-install-recommends ffmpeg      # 기본 이미지에 없음 (이모지 폰트는 있음)
+pip install -r requirements.txt num2words
+python tools/fetch_assets.py                            # 폰트·아이콘·효과음
+python tools/grab.py bili:BV1m4411P7Fs                  # 목소리 샘플 영상에 쓰는 벤츠 원본
+```
+
+- 키 확인: `ELEVENLABS_API_KEY`가 비어 있으면, 사용자에게 환경 설정에 넣고 새 세션을 열어 달라고 안내합니다. 채팅으로 받지 않습니다.
+- 사용자는 Creator 요금제($22)를 고려 중입니다. 확인되면 음성 설정에 `"format": "mp3_44100_192"`를 넣습니다.
+
 ## 작업 팁
 
 - 클라우드에서는 유튜브 다운로드가 봇 확인에 막힙니다. 빌리빌리 재업로드(`bili:`)를 씁니다.

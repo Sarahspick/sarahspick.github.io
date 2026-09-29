@@ -35,11 +35,22 @@ SFX_DIR = os.path.join(ROOT, "assets", "sfx")
 R.FONTS.update({"Inter ExtraBold": "Inter-ExtraBold.ttf", "Inter Bold": "Inter-Bold.ttf",
                 "Inter SemiBold": "Inter-SemiBold.ttf"})
 RED = (232, 28, 28)
+
+
+def src_path(src):
+    """"963333" -> work/dvids/963333.mp4 ; "archive/GettingR1951" or "commons/wsm_stones.webm" -> work/<path>."""
+    if "/" in src:
+        p = os.path.join(ROOT, "work", src)
+        return p if os.path.splitext(p)[1] else p + ".mp4"
+    return os.path.join(SRC_DIR, src + ".mp4")
 # named ffmpeg audio chains for source sound ("af" on a shot or an audio clip)
 AF = {
     # speech lifted out of a room: cut rumble and hiss, add presence, even out the level
     "voice": "highpass=f=90,lowpass=f=9000,equalizer=f=2800:t=q:w=1.2:g=3,"
              "acompressor=threshold=-26dB:ratio=3.5:attack=4:release=120:makeup=8",
+    # old optical film soundtrack: tame hiss and rumble, keep the narrator forward
+    "film": "highpass=f=80,lowpass=f=7500,afftdn=nr=10:nf=-32,"
+            "acompressor=threshold=-24dB:ratio=2.5:attack=6:release=160:makeup=4",
     # quiet crowd / room ambience brought up without pumping
     "ambience": "highpass=f=70,acompressor=threshold=-40dB:ratio=2.5:attack=20:release=250:makeup=14",
 }
@@ -62,6 +73,17 @@ STYLES = {
     # spoken-word subtitles (speech from the source), lower third
     "sub": dict(font="Montserrat ExtraBold", size=60, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
                 italic=0.0),
+    # big condensed label under the clip ("6 CHIN-UPS")
+    "big": dict(font="Anton", size=104, color=(255, 214, 10), stroke=0, shadow=True, upper=True, italic=0.0),
+    # small counter pill ("TEST 3/10")
+    "tag": dict(font="Montserrat ExtraBold", size=40, color=(20, 20, 20), stroke=0, shadow=False, upper=True,
+                italic=0.0, bg=(255, 214, 10), pad=(22, 10)),
+    # title on a dark card
+    "title": dict(font="Montserrat Black", size=74, color=(255, 255, 255), stroke=0, shadow=True, upper=False,
+                  italic=0.0),
+    # left-aligned multi-line list (summary card)
+    "list": dict(font="Montserrat ExtraBold", size=44, color=(255, 255, 255), stroke=0, shadow=True, upper=False,
+                 italic=0.0, align="left", max_lines=14, line_gap=0.32),
     # story line in a chapter ("HE FINISHED LAST")
     "story": dict(font="Anton", size=84, color=(255, 255, 255), stroke=7, shadow=True, upper=True, italic=0.1),
 }
@@ -111,7 +133,9 @@ def caption_image(text, style, **over):
     st.update(over)
     img = R.render_text(text, font_name=st["font"], size=st["size"], color=tuple(st["color"]), stroke=st["stroke"],
                         shadow=st["shadow"], upper=st["upper"], max_w=st.get("max_w", 960),
-                        max_lines=st.get("max_lines", 2), min_size=int(st["size"] * 0.6))
+                        max_lines=st.get("max_lines", 2), min_size=int(st["size"] * 0.6),
+                        align=st.get("align", "center"), line_gap=st.get("line_gap", 0.08),
+                        bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))))
     return shear(img, st["italic"])
 
 
@@ -154,7 +178,7 @@ class ShotStream:
     """Frames of one shot at the output rate, decoded on the fly (4K safe)."""
 
     def __init__(self, shot, n_frames):
-        path = os.path.join(SRC_DIR, shot["src"] + ".mp4")
+        path = src_path(shot["src"])
         self.info = probe(path)
         speed = float(shot.get("speed", 1.0))
         rot = shot.get("rotate", 0)
@@ -220,7 +244,8 @@ class Bench:
         self.n_frames = sum(x["n"] for x in self.timeline)
         self.caps = []
         for c in plan.get("captions", []):
-            over = {k: c[k] for k in ("size", "color", "font", "italic", "stroke", "max_w", "max_lines") if k in c}
+            over = {k: c[k] for k in ("size", "color", "font", "italic", "stroke", "max_w", "max_lines", "align",
+                                      "line_gap", "bg", "pad", "upper", "shadow") if k in c}
             img = caption_image(c["text"], c.get("style", "top"), **over)
             self.caps.append((c, R.to_np_rgba(img)))
         self.marks = []
@@ -297,6 +322,23 @@ class Bench:
             if "shot" in m and m["shot"] != seg_idx:
                 continue
             k = t - m["t"]
+            if m["type"] == "progress":
+                n, k_ = m.get("n", 10), m.get("k", 0)
+                tw, hh, gap = m.get("w", 0.72) * W, m.get("h", 12), m.get("gap", 10)
+                sw = (tw - gap * (n - 1)) / n
+                x0, yc = (W - tw) / 2, m["y"] * H
+                for i in range(n):
+                    xs = x0 + i * (sw + gap)
+                    col = tuple(m.get("fill", (255, 214, 10))) if i < k_ else tuple(m.get("empty", (70, 70, 70)))
+                    cv2.rectangle(out, (int(xs), int(yc - hh / 2)), (int(xs + sw), int(yc + hh / 2)), col, -1)
+                continue
+            if m["type"] == "dim":
+                rx, ry, rw, rh = self.region(self.timeline[seg_idx]["shot"]) if m.get("region", "box") == "box" \
+                    else (0, 0, W, H)
+                amt = m.get("amount", 0.65) * min(1.0, k / m.get("ramp", 0.2))
+                y0, y1 = max(0, ry), min(H, ry + rh)
+                out[y0:y1, rx:rx + rw] *= (1 - amt)
+                continue
             x, y = to_out(m["x"], m["y"]) if "shot" in m else (m["x"] * W, m["y"] * H)
             if m["type"] == "arrow":
                 (rgb, a) = art
@@ -407,7 +449,7 @@ class Bench:
             speed = float(s.get("speed", 1.0))
             if not s.get("audio", abs(speed - 1) < 1e-3):
                 continue
-            path = os.path.join(SRC_DIR, s["src"] + ".mp4")
+            path = src_path(s["src"])
             src_dur = seg["n"] / FPS * speed
             af = f"atempo={speed:.4f}" if abs(speed - 1) > 1e-3 and s.get("audio_mode") == "tempo" else None
             if abs(speed - 1) > 1e-3 and not af:
@@ -435,7 +477,7 @@ class Bench:
             mix[st:st + ln] += a
         # audio lifted from a source and laid over other shots (e.g. a speech over B-roll)
         for c in self.p.get("audio_clips", []):
-            path = os.path.join(SRC_DIR, c["src"] + ".mp4")
+            path = src_path(c["src"])
             af = AF.get(c.get("af"), c.get("af"))
             cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", f"{c['in']:.3f}", "-t", f"{c['dur']:.3f}",
                    "-i", path, "-vn", "-ac", "2", "-ar", str(SR)] + (["-af", af] if af else []) + ["-f", "f32le", "-"]
@@ -450,7 +492,10 @@ class Bench:
             a[-f:] *= np.linspace(1, 0, f)[:, None]
             mix[st:st + ln] += a
         for cue in self.p.get("sfx", []):
-            x, sr = sf.read(os.path.join(SFX_DIR, cue["name"] + ".wav"), dtype="float32")
+            name = cue["name"]
+            path = (os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav") if name.startswith("mk:")
+                    else os.path.join(SFX_DIR, name + ".wav"))  # "mk:" = licensed Mixkit sound
+            x, sr = sf.read(path, dtype="float32")
             if x.ndim == 1:
                 x = np.stack([x, x], 1)
             st = int(cue["t"] * SR)

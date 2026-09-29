@@ -1,0 +1,701 @@
+{
+ "id": "c2_leg_day_in_space",
+ "yt_title": "Astronauts can't skip leg day 👀🚀 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_y": 0.43
+ },
+ "shots": [
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 2.6,
+   "dur": 2.55,
+   "cx": 0.6,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 11.8,
+   "dur": 2.1,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 7.5,
+   "dur": 2.7,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 13.95,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 43.02,
+   "dur": 2.14,
+   "cx": 0.47,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 45.2,
+   "dur": 3.72,
+   "cx": 0.55,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 49.74,
+   "dur": 3.92,
+   "cx": 0.5,
+   "cy": 0.55,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 75.24,
+   "dur": 5.1,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 80.44,
+   "dur": 0.78,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.08
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 81.22,
+   "dur": 3.2,
+   "cx": 0.47,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "nasa/jsc2025m000002_How_Do_Astronauts_Exercise_in_Space_250106-MP4",
+   "in": 84.62,
+   "dur": 2.95,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.04,
+    "sharpen": 0.3
+   },
+   "speed": 0.88
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 0.88,
+   "dur": 6.1,
+   "t": 0.0,
+   "af": "voice",
+   "fade": 0.02
+  },
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 7.32,
+   "dur": 4.3,
+   "t": 6.2,
+   "af": "voice",
+   "fade": 0.02
+  },
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 43.22,
+   "dur": 5.76,
+   "t": 10.6,
+   "af": "voice",
+   "fade": 0.02
+  },
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 49.36,
+   "dur": 3.82,
+   "t": 16.46,
+   "af": "voice",
+   "fade": 0.02
+  },
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 75.26,
+   "dur": 5.0,
+   "t": 20.38,
+   "af": "voice",
+   "fade": 0.02
+  },
+  {
+   "src": "nasa/how_exercise_vocals.m4a",
+   "in": 80.44,
+   "dur": 6.98,
+   "t": 25.48,
+   "af": "voice",
+   "fade": 0.02
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 25.51,
+   "text": "Astronauts can't\nskip *leg day* :eyes:",
+   "style": "title",
+   "y": 0.083,
+   "anim": "none"
+  },
+  {
+   "t": 25.51,
+   "d": 7.49,
+   "text": "*This* is why :backhand-index-pointing-down:",
+   "style": "title",
+   "y": 0.083,
+   "anim": "pop"
+  },
+  {
+   "t": 0.02,
+   "d": 0.88,
+   "text": "Imagine exercising",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 0.9,
+   "d": 0.96,
+   "text": "in space,",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 1.86,
+   "d": 0.74,
+   "text": "something astronauts",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 2.6,
+   "d": 0.8,
+   "text": "on the International",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 3.4,
+   "d": 0.92,
+   "text": "Space Station do",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 4.32,
+   "d": 0.42,
+   "text": "for a *couple*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 4.74,
+   "d": 0.94,
+   "text": "*hours* almost every",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 5.68,
+   "d": 0.54,
+   "text": "day.",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 6.22,
+   "d": 1.1,
+   "text": "There's little gravity,",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 7.32,
+   "d": 0.56,
+   "text": "so you'd need",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 7.88,
+   "d": 0.44,
+   "text": "to be *strapped*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 8.32,
+   "d": 0.56,
+   "text": "to your treadmill",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 8.88,
+   "d": 0.58,
+   "text": "with a *harness*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 9.46,
+   "d": 0.4,
+   "text": "so you wouldn't",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 9.86,
+   "d": 0.76,
+   "text": "~float~ ~away.~",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 10.62,
+   "d": 0.54,
+   "text": "there's a machine",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 11.16,
+   "d": 0.96,
+   "text": "which allows astronauts",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 12.12,
+   "d": 0.92,
+   "text": "to mimic *weightlifting*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 13.04,
+   "d": 0.9,
+   "text": "in low gravity,",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 13.94,
+   "d": 0.8,
+   "text": "it uses *cylinders*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 14.74,
+   "d": 0.62,
+   "text": "of *air* to",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 15.36,
+   "d": 1.12,
+   "text": "provide resistance.",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 16.48,
+   "d": 0.48,
+   "text": "*Squats,*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 16.96,
+   "d": 0.38,
+   "text": "*deadlifts,*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 17.34,
+   "d": 0.42,
+   "text": "*bench* *presses,*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 17.76,
+   "d": 0.8,
+   "text": "and more are",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 18.56,
+   "d": 0.52,
+   "text": "all part of",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 19.08,
+   "d": 0.68,
+   "text": "that space workout",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 19.76,
+   "d": 0.64,
+   "text": "mix.",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 20.4,
+   "d": 0.46,
+   "text": "So say you",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 20.86,
+   "d": 0.9,
+   "text": "weigh *150* *pounds*",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 21.76,
+   "d": 0.82,
+   "text": "on Earth.",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 22.58,
+   "d": 0.62,
+   "text": "In space,",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 23.2,
+   "d": 0.34,
+   "text": "you'd want to",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 23.54,
+   "d": 0.36,
+   "text": "be able to",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 23.9,
+   "d": 0.6,
+   "text": "*squat* at least",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 24.5,
+   "d": 1.02,
+   "text": "that same weight.",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 25.52,
+   "d": 0.3,
+   "text": "Why?",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 25.82,
+   "d": 0.94,
+   "text": "To maintain the",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 26.76,
+   "d": 0.68,
+   "text": "muscle strength you",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 27.44,
+   "d": 0.54,
+   "text": "need to ~carry~",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 27.98,
+   "d": 0.86,
+   "text": "~yourself~ around when",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 28.84,
+   "d": 0.6,
+   "text": "you come ~home~",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 29.44,
+   "d": 1.16,
+   "text": "and really what's",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 30.6,
+   "d": 0.56,
+   "text": "a better workout",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  },
+  {
+   "t": 31.16,
+   "d": 1.24,
+   "text": "*motivator* than that?",
+   "style": "sub",
+   "y": 0.768,
+   "size": 70,
+   "anim": "pop"
+  }
+ ],
+ "marks": [
+  {
+   "t": 8.05,
+   "d": 2.35,
+   "type": "circle",
+   "shot": 3,
+   "x": 0.535,
+   "y": 0.42,
+   "rx": 100,
+   "ry": 72
+  }
+ ],
+ "sfx": [
+  {
+   "t": 26.0,
+   "name": "mk:166_fast_small_sweep",
+   "db": -16
+  }
+ ],
+ "lufs": -14.0
+}

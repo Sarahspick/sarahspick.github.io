@@ -1,0 +1,507 @@
+{
+ "id": "c1_1951_fitness_test",
+ "yt_title": "Could you pass the 1951 fitness test? 🇺🇸 #shorts",
+ "layout": {
+  "mode": "meme",
+  "bg": [
+   12,
+   12,
+   12
+  ],
+  "box_aspect": 1.3333,
+  "box_y": 0.4
+ },
+ "shots": [
+  {
+   "src": "archive/GettingR1951",
+   "in": 308.75,
+   "dur": 3.95,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 318.55,
+   "dur": 2.95,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 325.05,
+   "dur": 2.3,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 334.15,
+   "dur": 2.45,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 345.95,
+   "dur": 2.8,
+   "audio": false,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 349.0,
+   "dur": 3.0,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 354.25,
+   "dur": 3.3,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 359.15,
+   "dur": 2.05,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 363.1,
+   "dur": 2.3,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 369.25,
+   "dur": 3.45,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 300.55,
+   "dur": 1.9,
+   "audio": true,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 292.3,
+   "dur": 5.3,
+   "audio": false,
+   "af": "film",
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.45
+   }
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "archive/GettingR1951",
+   "in": 343.72,
+   "dur": 2.85,
+   "t": 11.633333333333333,
+   "af": "film"
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 305.12,
+   "dur": 2.65,
+   "t": 30.48333333333333,
+   "af": "film"
+  },
+  {
+   "src": "archive/GettingR1951",
+   "in": 313.0,
+   "dur": 2.6,
+   "t": 33.13333333333333,
+   "af": "film",
+   "db": -6
+  }
+ ],
+ "captions": [
+  {
+   "t": 0.0,
+   "d": 35.73333333333333,
+   "text": "Could you pass the\n*1951* fitness test? :flag-us:",
+   "style": "title",
+   "y": 0.105,
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 3.933333333333333,
+   "text": "TEST 1/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 0.0,
+   "d": 3.933333333333333,
+   "text": "15 FT ROPE CLIMB\nIN UNDER 20 SEC",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  },
+  {
+   "t": 3.933333333333333,
+   "d": 2.933333333333333,
+   "text": "TEST 2/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 3.933333333333333,
+   "d": 2.933333333333333,
+   "text": "6 DIPS",
+   "style": "big",
+   "y": 0.702,
+   "size": 104,
+   "line_gap": -0.1
+  },
+  {
+   "t": 6.866666666666666,
+   "d": 2.3,
+   "text": "TEST 3/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 6.866666666666666,
+   "d": 2.3,
+   "text": "6 CHIN-UPS",
+   "style": "big",
+   "y": 0.702,
+   "size": 104,
+   "line_gap": -0.1
+  },
+  {
+   "t": 9.166666666666666,
+   "d": 2.466666666666667,
+   "text": "TEST 4/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 9.166666666666666,
+   "d": 2.466666666666667,
+   "text": "45 SIT-UPS",
+   "style": "big",
+   "y": 0.702,
+   "size": 104,
+   "line_gap": -0.1
+  },
+  {
+   "t": 11.633333333333333,
+   "d": 2.8000000000000007,
+   "text": "TEST 5/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 11.633333333333333,
+   "d": 2.8000000000000007,
+   "text": "7 FT BROAD JUMP",
+   "style": "big",
+   "y": 0.702,
+   "size": 104,
+   "line_gap": -0.1
+  },
+  {
+   "t": 14.433333333333334,
+   "d": 3.0,
+   "text": "TEST 6/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 14.433333333333334,
+   "d": 3.0,
+   "text": "300 YARDS\nIN 42 SECONDS",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  },
+  {
+   "t": 17.433333333333334,
+   "d": 3.3000000000000007,
+   "text": "TEST 7/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 17.433333333333334,
+   "d": 3.3000000000000007,
+   "text": "175 FT\nSOFTBALL THROW",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  },
+  {
+   "t": 20.733333333333334,
+   "d": 2.0333333333333314,
+   "text": "TEST 8/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 20.733333333333334,
+   "d": 2.0333333333333314,
+   "text": "FLOAT FOR\n2 MINUTES",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  },
+  {
+   "t": 22.766666666666666,
+   "d": 2.3000000000000007,
+   "text": "TEST 9/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 22.766666666666666,
+   "d": 2.3000000000000007,
+   "text": "SWIM 40 YARDS",
+   "style": "big",
+   "y": 0.702,
+   "size": 104,
+   "line_gap": -0.1
+  },
+  {
+   "t": 25.066666666666666,
+   "d": 3.466666666666665,
+   "text": "TEST 10/10",
+   "style": "tag",
+   "y": 0.641
+  },
+  {
+   "t": 25.066666666666666,
+   "d": 3.466666666666665,
+   "text": "STEP OFF A 10 FT\nPLATFORM, FULLY CLOTHED",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  },
+  {
+   "t": 28.53333333333333,
+   "d": 1.8999999999999986,
+   "text": "THESE WERE\nTHE *MINIMUM* :skull:",
+   "style": "big",
+   "y": 0.742,
+   "color": [
+    255,
+    255,
+    255
+   ],
+   "size": 100,
+   "line_gap": -0.1
+  },
+  {
+   "t": 28.883333333333333,
+   "d": 1.5499999999999985,
+   "text": "for high school boys",
+   "style": "tag",
+   "y": 0.641,
+   "bg": [
+    230,
+    40,
+    40
+   ],
+   "color": [
+    255,
+    255,
+    255
+   ]
+  },
+  {
+   "t": 32.78333333333333,
+   "d": 2.949999999999997,
+   "text": "1.  Rope climb 15 ft in 20 s\n2.  6 dips\n3.  6 chin-ups\n4.  45 sit-ups\n5.  7 ft broad jump\n6.  300 yd run in 42 s\n7.  175 ft softball throw\n8.  Float for 2 minutes\n9.  Swim 40 yd\n10. Step off a 10 ft platform, clothed",
+   "style": "list",
+   "y": 0.4,
+   "size": 48
+  },
+  {
+   "t": 30.43333333333333,
+   "d": 5.299999999999997,
+   "text": "HOW MANY\nCOULD YOU PASS? :backhand-index-pointing-down:",
+   "style": "big",
+   "y": 0.742,
+   "size": 96,
+   "line_gap": -0.1
+  }
+ ],
+ "marks": [
+  {
+   "t": 0.0,
+   "d": 3.933333333333333,
+   "type": "progress",
+   "n": 10,
+   "k": 1,
+   "y": 0.818
+  },
+  {
+   "t": 3.933333333333333,
+   "d": 2.933333333333333,
+   "type": "progress",
+   "n": 10,
+   "k": 2,
+   "y": 0.818
+  },
+  {
+   "t": 6.866666666666666,
+   "d": 2.3,
+   "type": "progress",
+   "n": 10,
+   "k": 3,
+   "y": 0.818
+  },
+  {
+   "t": 9.166666666666666,
+   "d": 2.466666666666667,
+   "type": "progress",
+   "n": 10,
+   "k": 4,
+   "y": 0.818
+  },
+  {
+   "t": 11.633333333333333,
+   "d": 2.8000000000000007,
+   "type": "progress",
+   "n": 10,
+   "k": 5,
+   "y": 0.818
+  },
+  {
+   "t": 14.433333333333334,
+   "d": 3.0,
+   "type": "progress",
+   "n": 10,
+   "k": 6,
+   "y": 0.818
+  },
+  {
+   "t": 17.433333333333334,
+   "d": 3.3000000000000007,
+   "type": "progress",
+   "n": 10,
+   "k": 7,
+   "y": 0.818
+  },
+  {
+   "t": 20.733333333333334,
+   "d": 2.0333333333333314,
+   "type": "progress",
+   "n": 10,
+   "k": 8,
+   "y": 0.818
+  },
+  {
+   "t": 22.766666666666666,
+   "d": 2.3000000000000007,
+   "type": "progress",
+   "n": 10,
+   "k": 9,
+   "y": 0.818
+  },
+  {
+   "t": 25.066666666666666,
+   "d": 3.466666666666665,
+   "type": "progress",
+   "n": 10,
+   "k": 10,
+   "y": 0.818
+  },
+  {
+   "t": 28.53333333333333,
+   "d": 1.8999999999999986,
+   "type": "progress",
+   "n": 10,
+   "k": 10,
+   "y": 0.818
+  },
+  {
+   "t": 32.78333333333333,
+   "d": 2.949999999999997,
+   "type": "dim",
+   "amount": 0.72,
+   "ramp": 0.25
+  }
+ ],
+ "sfx": [
+  {
+   "t": 28.53333333333333,
+   "name": "mk:1143_cinematic_whoosh_deep_impact",
+   "db": -12
+  }
+ ],
+ "lufs": -14.0
+}

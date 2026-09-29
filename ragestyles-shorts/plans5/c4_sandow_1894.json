@@ -1,0 +1,88 @@
+{
+ "id": "c4_sandow_1894",
+ "yt_title": "The first bodybuilder ever filmed (1894) 💪 #shorts",
+ "layout": {
+  "mode": "meme",
+  "bg": [
+   12,
+   12,
+   12
+  ],
+  "box_aspect": 1.3333,
+  "box_y": 0.44
+ },
+ "shots": [
+  {
+   "src": "archive/edison_kinetoscope",
+   "in": 65.95,
+   "dur": 23.5,
+   "speed": 0.8,
+   "interp": false,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.0,
+    "contrast": 1.08,
+    "sharpen": 0.4
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 23.5,
+   "text": "The first bodybuilder\never filmed :flexed-biceps:",
+   "style": "title",
+   "y": 0.12,
+   "anim": "none"
+  },
+  {
+   "t": 0.0,
+   "d": 4.5,
+   "text": "*1894.* Thomas Edison\nfilmed this man :eyes:",
+   "style": "title",
+   "y": 0.77,
+   "size": 74
+  },
+  {
+   "t": 4.5,
+   "d": 4.5,
+   "text": "His name:\n*Eugen Sandow*",
+   "style": "title",
+   "y": 0.77,
+   "size": 74
+  },
+  {
+   "t": 9.0,
+   "d": 4.5,
+   "text": "In *1901* he ran the first big\nbodybuilding contest",
+   "style": "title",
+   "y": 0.77,
+   "size": 74
+  },
+  {
+   "t": 13.5,
+   "d": 4.8,
+   "text": "One of the judges wrote\n*Sherlock Holmes*",
+   "style": "title",
+   "y": 0.77,
+   "size": 74
+  },
+  {
+   "t": 18.3,
+   "d": 5.2,
+   "text": "Today every Mr. Olympia winner\ngets a statue of *him* :trophy:",
+   "style": "title",
+   "y": 0.77,
+   "size": 74
+  }
+ ],
+ "marks": [],
+ "sfx": [],
+ "lufs": -14.0
+}

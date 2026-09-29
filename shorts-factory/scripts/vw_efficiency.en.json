@@ -51,7 +51,8 @@
       "focus": [
         0.5,
         0.5
-      ]
+      ],
+      "speed": 0.878
     },
     "v_route": {
       "src": "bili:BV191es67EiW",
@@ -91,7 +92,8 @@
       "focus": [
         0.5,
         0.5
-      ]
+      ],
+      "speed": 0.908
     },
     "v_xl1": {
       "src": "bili:BV191es67EiW",

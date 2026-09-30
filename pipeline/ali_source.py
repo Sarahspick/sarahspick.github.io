@@ -1,4 +1,5 @@
-"""Find AliExpress products that come with an official product video, through the AliExpress Affiliate API.
+"""Find AliExpress products that come with an official product video, through the AliExpress Affiliate API
+(aliexpress.affiliate.product.query; our app has no permission for hotproduct.query).
 
 The affiliate API hands these videos (product_video_url) to affiliates for promoting the product, so each
 reel links to that same product with our AliExpress affiliate link, not to Amazon.
@@ -20,14 +21,25 @@ def call(method, **biz):
          "timestamp": str(int(time.time() * 1000)), **{k: str(v) for k, v in biz.items()}}
     base = "".join(k + p[k] for k in sorted(p))
     p["sign"] = hmac.new(os.environ["ALI_APP_SECRET"].encode(), base.encode(), hashlib.sha256).hexdigest().upper()
-    with urllib.request.urlopen(API + "?" + urllib.parse.urlencode(p), timeout=60) as r:
-        out = json.load(r)
+    for attempt in range(4):
+        try:
+            with urllib.request.urlopen(API + "?" + urllib.parse.urlencode(p), timeout=60) as r:
+                out = json.load(r)
+        except OSError:
+            if attempt == 3:
+                raise
+            time.sleep(2 ** (attempt + 1))
+            continue
+        if out.get("error_response", {}).get("code") == "ApiCallLimit" and attempt < 3:
+            time.sleep(2)
+            continue
+        break
     if "error_response" in out:
         sys.exit(f"AliExpress API error: {out['error_response']}")
     return next(iter(out.values()))["resp_result"]
 
 def hot_products(keywords, limit):
-    res = call("aliexpress.affiliate.hotproduct.query", keywords=keywords, fields=FIELDS, page_size=50,
+    res = call("aliexpress.affiliate.product.query", keywords=keywords, fields=FIELDS, page_size=50,
                sort="LAST_VOLUME_DESC", target_currency="USD", target_language="EN", ship_to_country="US",
                tracking_id=os.environ["ALI_TRACKING_ID"])
     items = ((res.get("result") or {}).get("products") or {}).get("product") or []

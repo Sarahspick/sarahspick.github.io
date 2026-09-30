@@ -3,7 +3,7 @@ Sources: GETBIG.TV "Press-conference & interviews - Mr. Olympia - 1999" (https:/
 Ronnie in the blue suit (no Russian name bar there); "Press Conference & Backstage Pump Up - The Battle For The Olympia 1999", Mocvideo Productions
 (https://youtu.be/OXJhEpJiPEU), 4:3 picture inside a 16:9 frame (x 250..1665 px).
 Checked on frames and whisper word times (source seconds):
-  52.0 suits at the table (Nasser leaning in, blue jacket, glasses)   93.0 "Jay Cutler" called, Jay (blond) raises a hand 94.5
+  40.6 the packed conference room, 52.0 suits at the table (Nasser leaning in, blue jacket, glasses)   93.0 "Jay Cutler" called, Jay (blond) raises a hand 94.5
   101.2 "Nasser El Sonbaty" called, Nasser waves 102 to 104            118.6 "Kevin Levrone" called, name plate in shot
   155 to 185 Ronnie Coleman close-up; 180.6 "while I can only eat chicken breast and turkey breast" (to 184.0)
   381.3 Dorian Yates (caption card at 292 "Six Times Mr. Olympia"): "If I had to put money on somebody, I'd get all my
@@ -24,9 +24,11 @@ V = "OXJhEpJiPEU"
 o = Short("s1_suits_1999_olympia", "Bodybuilders in suits\nhit *different* :fire:",
           "Bodybuilders in suits hit different 🔥 1999 Mr. Olympia #shorts")
 
-s = o.shot(V, 52.0, 2.6, cx=0.56, db=-12, dim_in={"hold": 0.35, "dur": 0.2, "from": 0.1})
+# owner 2026-09-30: fade the whole picture in over the first second and cut at about 1 s
+s = o.shot(V, 52.0, 1.2, cx=0.56, db=-12)
 o.cap(0, 2.6, "1999 MR. OLYMPIA\n*PRESS CONFERENCE*")
-o.hit(s, 0.4, zoom=1.1, amount=0.4)
+s = o.shot(V, 40.6, 1.4, cx=0.5, db=-12, zoom=(1.05, 1.1))    # the packed room
+o.hit(s, 0.0, zoom=1.1, amount=0.4)
 s = o.shot(V, 65.6, 1.6, cx=0.3, cy=0.45, zoom=(1.1, 1.14), db=-10)
 o.cap(s["_t0"], 1.6, "JAY CUTLER\n*FIRST* OLYMPIA")
 s = o.shot(V, 101.3, 2.5, cx=0.5, db=-6)

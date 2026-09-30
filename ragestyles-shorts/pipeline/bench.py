@@ -81,6 +81,9 @@ STYLES = {
     # big punch label under the video ("20.00 FLAT")
     "big": dict(font=CAP_FONT + " Black", size=84, color=(255, 255, 255), stroke=7, shadow=True, upper=True,
                 italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=940),
+    # word-by-word caption, channel look (2026-09-30 owner: no glow): white TikTok Sans, black edge, yellow/orange keyword
+    "wordcap": dict(font=CAP_FONT + " ExtraBold", size=76, color=(255, 255, 255), stroke=7, shadow=True, upper=True,
+                    italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=940),
     # word-by-word caption with neon glow (Peakz-style motivational shorts): 1 to 3 words, keywords coloured
     "word": dict(font=CAP_FONT + " ExtraBold", size=88, color=(255, 255, 255), stroke=3, shadow=False, upper=True,
                  italic=0.0, colors=None, stroke_color=(0, 0, 0), max_w=900, glow=18),
@@ -586,6 +589,9 @@ class Bench:
                 t = gi / FPS
                 lt = j / FPS
                 out, to_out = self.frame(seg, lt, src)
+                of = self.p.get("open_fade", 0.0)  # whole picture 0 -> 100% over the first seconds (captions stay)
+                if of and t < of:
+                    out *= t / of
                 self.draw_marks(out, t, si, to_out)
                 self.draw_captions(out, t, seg, to_out)
                 img = np.clip(out, 0, 255).astype(np.uint8)

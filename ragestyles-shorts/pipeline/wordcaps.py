@@ -52,11 +52,13 @@ def groups(words, max_words=3, max_chars=16, gap=0.32):
     i = 0
     while i < len(out):
         g = out[i]
+        ends = re.search(r"[.,!?]$", g[0][2].strip())          # a word that ends a clause never joins the next
+        prev_ends = merged and re.search(r"[.!?]$", merged[-1][-1][2].strip())   # nor joins a finished sentence
         if len(g) == 1 and i + 1 < len(out) and clean(g[0][2]).lower() in STOP and len(out[i + 1]) < 4 \
-                and out[i + 1][0][0] - g[0][1] < 0.8:
+                and out[i + 1][0][0] - g[0][1] < 0.8 and not ends:
             out[i + 1] = g + out[i + 1]
         elif len(g) == 1 and merged and len(merged[-1]) < 4 and g[0][0] - merged[-1][-1][1] < 0.6 \
-                and clean(g[0][2]).lower() not in STRONG:
+                and clean(g[0][2]).lower() not in STRONG and not prev_ends:
             merged[-1] = merged[-1] + g
         else:
             merged.append(g)
@@ -84,7 +86,7 @@ def keyword(grp, force=(), skip=()):
     return best
 
 
-def word_captions(words, y=0.5, force=(), skip=(), hold=0.25, style="word"):
+def word_captions(words, y=0.5, force=(), skip=(), hold=0.25, style="word", palette=PALETTE):
     gs = groups(words)
     caps, k = [], 0
     for gi, g in enumerate(gs):
@@ -93,7 +95,7 @@ def word_captions(words, y=0.5, force=(), skip=(), hold=0.25, style="word"):
         for i, (_, _, w) in enumerate(g):
             c = clean(w).upper()
             if i == ki:
-                mark = PALETTE[k % len(PALETTE)]
+                mark = palette[k % len(palette)]
                 c = f"{mark}{c}{mark}"
             toks.append(c)
         if ki is not None:

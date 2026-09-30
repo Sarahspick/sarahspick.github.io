@@ -2,64 +2,22 @@
  "id": "d1_goggins_297_to_seal",
  "yt_title": "From 297 lbs to Navy SEAL 🔥 David Goggins #shorts",
  "layout": {
-  "mode": "meme",
-  "bg": [
-   255,
-   255,
-   255
-  ],
-  "box_aspect": 1.7778,
+  "mode": "blur",
+  "box_aspect": 0.75,
   "box_w": 1080,
-  "box_y": 0.53
+  "box_top": 240,
+  "darken": 0.5
  },
  "shots": [
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 257.7,
-   "dur": 4.7,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.0,
-    1.06
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "dim_in": {
-    "hold": 0.3,
-    "dur": 0.2,
-    "from": 0.12
-   },
-   "punch": [
-    {
-     "at": 3.3,
-     "zoom": 1.12,
-     "ramp": 0.12
-    }
-   ],
-   "flash": [
-    {
-     "at": 3.3,
-     "amount": 0.45,
-     "dur": 0.5
-    }
-   ]
-  },
-  {
-   "src": "youtube/X3yNsomAUvw",
-   "in": 5.0,
-   "dur": 3.4,
-   "cx": 0.5,
+   "in": 0.4,
+   "dur": 1.1,
+   "cx": 0.45,
    "cy": 0.5,
    "zoom": [
     1.05,
-    1.12
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -72,8 +30,8 @@
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 176.0,
-   "dur": 3.75,
+   "in": 1.5,
+   "dur": 0.7,
    "cx": 0.5,
    "cy": 0.5,
    "zoom": [
@@ -87,18 +45,212 @@
     "sat": 1.06,
     "contrast": 1.07,
     "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 2.3,
+   "dur": 1.5,
+   "cx": 0.46,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 3.75,
+   "dur": 1.52,
+   "cx": 0.47,
+   "cy": 0.35,
+   "zoom": [
+    1.2,
+    1.3
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
    },
    "punch": [
     {
-     "at": 2.2,
+     "at": 0.06,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.06,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 13.4,
+   "dur": 2.65,
+   "cx": 0.4,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 161.3,
+   "dur": 1.35,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 166.9,
+   "dur": 2.1,
+   "cx": 0.72,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.0,
+     0.7,
+     0.45
+    ],
+    [
+     2.1,
+     1.1,
+     0.74,
+     0.38
+    ]
+   ],
+   "punch": [
+    {
+     "at": 1.16,
      "zoom": 1.1,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 2.2,
-     "amount": 0.35,
+     "at": 1.16,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 172.85,
+   "dur": 2.75,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 75.6,
+   "dur": 1.8,
+   "cx": 0.45,
+   "cy": 0.3,
+   "zoom": [
+    1.6,
+    1.65
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 177.3,
+   "dur": 3.15,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.24,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.24,
+     "amount": 0.45,
      "dur": 0.5
     }
    ]
@@ -107,11 +259,11 @@
    "src": "youtube/X3yNsomAUvw",
    "in": 180.55,
    "dur": 2.5,
-   "cx": 0.5,
-   "cy": 0.5,
+   "cx": 0.4,
+   "cy": 0.42,
    "zoom": [
-    1.0,
-    1.05
+    1.12,
+    1.18
    ],
    "audio": false,
    "af": "voice",
@@ -123,14 +275,14 @@
    },
    "punch": [
     {
-     "at": 0.0,
-     "zoom": 1.12,
+     "at": 0.53,
+     "zoom": 1.1,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.0,
+     "at": 0.53,
      "amount": 0.4,
      "dur": 0.5
     }
@@ -138,8 +290,8 @@
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 190.2,
-   "dur": 1.3,
+   "in": 191.9,
+   "dur": 0.9,
    "cx": 0.5,
    "cy": 0.5,
    "zoom": [
@@ -157,13 +309,13 @@
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 192.75,
+   "in": 192.65,
    "dur": 1.45,
    "cx": 0.5,
-   "cy": 0.5,
+   "cy": 0.4,
    "zoom": [
-    1.0,
-    1.06
+    1.15,
+    1.22
    ],
    "audio": false,
    "af": "voice",
@@ -175,28 +327,28 @@
    },
    "punch": [
     {
-     "at": 0.2,
-     "zoom": 1.14,
+     "at": 0.59,
+     "zoom": 1.15,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.2,
-     "amount": 0.5,
+     "at": 0.59,
+     "amount": 0.55,
      "dur": 0.5
     }
    ]
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 194.4,
-   "dur": 2.8,
+   "in": 194.5,
+   "dur": 2.6,
    "cx": 0.5,
-   "cy": 0.5,
+   "cy": 0.35,
    "zoom": [
-    1.0,
-    1.06
+    1.05,
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -210,7 +362,7 @@
   {
    "src": "youtube/X3yNsomAUvw",
    "in": 201.9,
-   "dur": 2.6,
+   "dur": 3.05,
    "cx": 0.5,
    "cy": 0.5,
    "zoom": [
@@ -227,28 +379,28 @@
    },
    "punch": [
     {
-     "at": 0.2,
+     "at": 1.57,
      "zoom": 1.12,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.2,
-     "amount": 0.45,
+     "at": 1.57,
+     "amount": 0.5,
      "dur": 0.5
     }
    ]
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 226.2,
-   "dur": 2.6,
+   "in": 229.0,
+   "dur": 1.45,
    "cx": 0.5,
    "cy": 0.5,
    "zoom": [
-    1.0,
-    1.05
+    1.05,
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -261,8 +413,8 @@
   },
   {
    "src": "youtube/X3yNsomAUvw",
-   "in": 233.9,
-   "dur": 1.6,
+   "in": 230.5,
+   "dur": 1.95,
    "cx": 0.5,
    "cy": 0.5,
    "zoom": [
@@ -279,66 +431,14 @@
    },
    "punch": [
     {
-     "at": 0.0,
+     "at": 0.91,
      "zoom": 1.12,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.0,
-     "amount": 0.4,
-     "dur": 0.5
-    }
-   ]
-  },
-  {
-   "src": "youtube/C26OAQfZX7Q",
-   "in": 32.0,
-   "dur": 2.8,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.0,
-    1.05
-   ],
-   "audio": true,
-   "af": "voice",
-   "audio_db": -10,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/C26OAQfZX7Q",
-   "in": 54.2,
-   "dur": 2.6,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.0,
-    1.06
-   ],
-   "audio": true,
-   "af": "voice",
-   "audio_db": -10,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "punch": [
-    {
-     "at": 0.2,
-     "zoom": 1.12,
-     "ramp": 0.12
-    }
-   ],
-   "flash": [
-    {
-     "at": 0.2,
+     "at": 0.91,
      "amount": 0.45,
      "dur": 0.5
     }
@@ -347,12 +447,12 @@
   {
    "src": "youtube/X3yNsomAUvw",
    "in": 269.6,
-   "dur": 3.4,
-   "cx": 0.5,
-   "cy": 0.5,
+   "dur": 3.0,
+   "cx": 0.4,
+   "cy": 0.42,
    "zoom": [
-    1.0,
-    1.08
+    1.12,
+    1.18
    ],
    "audio": false,
    "af": "voice",
@@ -364,223 +464,487 @@
    },
    "punch": [
     {
-     "at": 2.45,
+     "at": 2.48,
      "zoom": 1.12,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 2.45,
-     "amount": 0.45,
+     "at": 2.48,
+     "amount": 0.5,
      "dur": 0.5
     }
    ]
+  },
+  {
+   "src": "youtube/X3yNsomAUvw",
+   "in": 272.55,
+   "dur": 0.45,
+   "cx": 0.4,
+   "cy": 0.42,
+   "zoom": [
+    1.32,
+    1.33
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true
   }
  ],
  "captions": [
   {
    "t": 0,
-   "d": 4.7,
-   "text": "This is David Goggins\nat *297 pounds*",
-   "style": "memebar"
+   "d": 35.97,
+   "text": "From *297 lbs*\nto Navy SEAL :fire:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.085
   },
   {
-   "t": 4.7,
-   "d": 3.4,
-   "text": "*Donuts* and a *milkshake*\nevery night",
-   "style": "memebar"
+   "t": 0.0,
+   "d": 0.94,
+   "text": "MY IDEA TO *BECOME*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 8.1,
-   "d": 3.05,
-   "text": "The Navy SEAL limit\nfor his height: *191 lbs*",
-   "style": "memebar"
+   "t": 0.94,
+   "d": 0.66,
+   "text": "A NAVY ~SEAL~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 11.15,
-   "d": 3.2,
-   "text": "He had to lose *106 lbs*\nin *3 months*",
-   "style": "memebar"
+   "t": 1.6,
+   "d": 1.54,
+   "text": "WAS ME ON MY *COUCH*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 14.35,
-   "d": 2.75,
-   "text": "...and he *did it* :fire:",
-   "style": "memebar"
+   "t": 3.14,
+   "d": 1.72,
+   "text": "AT ~297~ POUNDS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 17.1,
-   "d": 5.4,
-   "text": "The only man in SEAL history\nwith *3 Hell Weeks* in 1 year",
-   "style": "memebar"
+   "t": 4.86,
+   "d": 0.72,
+   "text": "I GOT SICK",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 22.5,
-   "d": 2.6,
-   "text": "Stress fractures.\nNo more *quitting.*",
-   "style": "memebar"
+   "t": 5.58,
+   "d": 0.68,
+   "text": "OF BEING *HAUNTED*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 25.1,
-   "d": 1.6,
-   "text": "He *duct taped* his legs",
-   "style": "memebar"
+   "t": 6.26,
+   "d": 1.26,
+   "text": "BY BEING ~NOBODY~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 26.7,
-   "d": 2.8,
-   "text": "Then he went after the\n*pull up world record*",
-   "style": "memebar"
+   "t": 7.52,
+   "d": 0.25,
+   "text": "PEOPLE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 29.5,
-   "d": 2.6,
-   "text": "*4,030 pull ups*\nin 17 hours :flexed-biceps:",
-   "style": "memebar"
+   "t": 7.7,
+   "d": 1.1,
+   "text": "DON'T WALK IN THE *OFFICE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 32.1,
-   "d": 3.4,
-   "text": "\"The mind is the most\n*powerful weapon* we have\"",
-   "style": "memebar"
+   "t": 8.8,
+   "d": 0.34,
+   "text": "~TRYING~ TO BE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.14,
+   "d": 0.6,
+   "text": "A NAVY *SEAL*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.74,
+   "d": 1.39,
+   "text": "WEIGHING ~297~ POUNDS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 11.13,
+   "d": 0.72,
+   "text": "AND I *REMEMBER* LOOKING",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 11.85,
+   "d": 0.78,
+   "text": "IN ~FRONT~ OF ME",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.63,
+   "d": 0.82,
+   "text": "WAS A *HEIGHT*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 13.45,
+   "d": 0.66,
+   "text": "WEIGHT ~CHART~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.11,
+   "d": 0.36,
+   "text": "FOR ME",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.47,
+   "d": 1.06,
+   "text": "I'M *6* FOOT 1",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 15.53,
+   "d": 0.82,
+   "text": "I COULD ONLY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.35,
+   "d": 1.56,
+   "text": "WEIGH ~191~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.91,
+   "d": 0.58,
+   "text": "I HAD TO LOSE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 18.49,
+   "d": 1.84,
+   "text": "*106* POUNDS IN LESS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.33,
+   "d": 0.94,
+   "text": "THAN THREE ~MONTHS~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.27,
+   "d": 0.56,
+   "text": "AND IN LESS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.83,
+   "d": 0.62,
+   "text": "THAN THREE *MONTHS*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 22.45,
+   "d": 1.17,
+   "text": "I ~LOST~ 106 POUNDS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.62,
+   "d": 0.48,
+   "text": "I'M THE ONLY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.1,
+   "d": 1.28,
+   "text": "*PERSON* IN NAVY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 25.38,
+   "d": 1.22,
+   "text": "~SEAL~ HISTORY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.6,
+   "d": 1.36,
+   "text": "TO BE IN *THREE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 27.96,
+   "d": 0.84,
+   "text": "~HELL~ WEEKS IN ONE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.8,
+   "d": 0.44,
+   "text": "YEAR",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 29.24,
+   "d": 0.86,
+   "text": "I MADE A *DECISION*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 30.1,
+   "d": 1.28,
+   "text": "TO MYSELF ~THERE'S~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 31.38,
+   "d": 0.62,
+   "text": "NO MORE *QUITTING*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.0,
+   "d": 0.4,
+   "text": "I ~STARTED~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.4,
+   "d": 1.32,
+   "text": "REALIZING THAT THE *MIND*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 33.72,
+   "d": 0.88,
+   "text": "IS THE MOST",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 34.6,
+   "d": 0.88,
+   "text": "POWERFUL ~WEAPON~ THAT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 35.48,
+   "d": 1.04,
+   "text": "WE HAVE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   }
  ],
- "marks": [
-  {
-   "type": "arrow",
-   "t": 0.5,
-   "d": 4.2,
-   "x": 0.36,
-   "y": 0.4667,
-   "angle": 20,
-   "len": 170
-  },
-  {
-   "type": "arrow",
-   "t": 15.75,
-   "d": 1.35,
-   "x": 0.46,
-   "y": 0.4825,
-   "angle": 160,
-   "len": 170
-  }
- ],
+ "marks": [],
  "sfx": [
   {
-   "t": 3.05,
+   "t": 3.11,
    "name": "ow:boom",
    "db": -3
   },
   {
-   "t": 10.05,
+   "t": 9.73,
    "name": "ow:boom",
    "db": -6
   },
   {
-   "t": 11.6,
+   "t": 16.46,
    "name": "ow:boom",
-   "db": -4
-  },
-  {
-   "t": 15.6,
-   "name": "ow:boom",
-   "db": -2
-  },
-  {
-   "t": 19.85,
-   "name": "ow:boom",
-   "db": -4
-  },
-  {
-   "t": 24.67,
-   "name": "ow:punch",
    "db": -5
   },
   {
-   "t": 29.45,
+   "t": 18.9,
+   "name": "ow:boom",
+   "db": -6
+  },
+  {
+   "t": 22.36,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 27.39,
    "name": "ow:boom",
    "db": -3
   },
   {
-   "t": 34.3,
-   "name": "ow:boom",
+   "t": 31.05,
+   "name": "ow:punch",
    "db": -4
+  },
+  {
+   "t": 34.75,
+   "name": "ow:boom",
+   "db": -3
   }
  ],
  "audio_clips": [
   {
    "src": "youtube/gg_vox.wav",
    "in": 0.0,
-   "dur": 4.7,
-   "t": 0,
+   "dur": 4.72,
+   "t": 0.0,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/gg_vox.wav",
-   "in": 4.66,
-   "dur": 3.4,
-   "t": 4.7,
+   "in": 13.4,
+   "dur": 2.55,
+   "t": 4.82,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/gg_vox.wav",
-   "in": 176.05,
-   "dur": 3.05,
-   "t": 8.1,
+   "in": 164.55,
+   "dur": 3.45,
+   "t": 7.47,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/gg_vox.wav",
-   "in": 179.85,
-   "dur": 3.2,
-   "t": 11.15,
+   "in": 173.0,
+   "dur": 9.95,
+   "t": 11.07,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/gg_vox.wav",
-   "in": 191.7,
+   "in": 191.85,
+   "dur": 2.1,
+   "t": 21.22,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/gg_vox.wav",
+   "in": 195.05,
+   "dur": 5.45,
+   "t": 23.57,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/gg_vox.wav",
+   "in": 229.1,
    "dur": 2.75,
-   "t": 14.35,
+   "t": 29.22,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/gg_vox.wav",
-   "in": 194.85,
-   "dur": 5.5,
-   "t": 17.05,
-   "af": "voice",
-   "db": 2,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/gg_vox.wav",
-   "in": 229.4,
-   "dur": 4.25,
-   "t": 22.5,
-   "af": "voice",
-   "db": 2,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/gg_vox.wav",
-   "in": 269.2,
-   "dur": 3.75,
-   "t": 31.75,
+   "in": 269.05,
+   "dur": 3.9,
+   "t": 31.97,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   }
  ],
- "lufs": -14.0
+ "lufs": -14.0,
+ "open_fade": 1.0
 }

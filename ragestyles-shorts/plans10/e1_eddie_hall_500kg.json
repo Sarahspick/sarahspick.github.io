@@ -1,73 +1,16 @@
 {
  "id": "e1_eddie_hall_500kg",
- "yt_title": "The lift that almost killed Eddie Hall 💀 500kg deadlift #shorts",
+ "yt_title": "How Eddie Hall lifted 500 kg 🤯 #shorts",
  "layout": {
   "mode": "full"
  },
  "shots": [
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 256.8,
-   "dur": 2.4,
-   "cx": 0.5,
-   "cy": 0.42,
-   "zoom": [
-    1.05,
-    1.1
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "dim_in": {
-    "hold": 0.35,
-    "dur": 0.2,
-    "from": 0.1
-   },
-   "punch": [
-    {
-     "at": 0.45,
-     "zoom": 1.12,
-     "ramp": 0.12
-    }
-   ],
-   "flash": [
-    {
-     "at": 0.45,
-     "amount": 0.45,
-     "dur": 0.5
-    }
-   ]
-  },
-  {
-   "src": "youtube/K0chGkV0IE",
-   "in": 174.2,
-   "dur": 3.7,
-   "cx": 0.5,
-   "cy": 0.42,
-   "zoom": [
-    1.05,
-    1.12
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/K0chGkV0IE",
-   "in": 209.0,
-   "dur": 2.9,
-   "cx": 0.5,
-   "cy": 0.42,
+   "in": 176.1,
+   "dur": 1.1,
+   "cx": 0.47,
+   "cy": 0.4,
    "zoom": [
     1.05,
     1.1
@@ -83,9 +26,28 @@
   },
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 219.6,
-   "dur": 2.4,
+   "in": 169.7,
+   "dur": 1.7,
    "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 185.5,
+   "dur": 1.75,
+   "cx": 0.45,
    "cy": 0.5,
    "zoom": [
     1.1,
@@ -102,13 +64,13 @@
   },
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 226.6,
-   "dur": 2.1,
-   "cx": 0.5,
-   "cy": 0.5,
+   "in": 192.0,
+   "dur": 1.7,
+   "cx": 0.47,
+   "cy": 0.4,
    "zoom": [
     1.05,
-    1.12
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -121,13 +83,32 @@
   },
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 239.7,
-   "dur": 3.2,
+   "in": 193.6,
+   "dur": 1.45,
    "cx": 0.47,
-   "cy": 0.55,
+   "cy": 0.5,
    "zoom": [
-    1.0,
-    1.03
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 209.3,
+   "dur": 1.95,
+   "cx": 0.47,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -137,6 +118,168 @@
     "contrast": 1.07,
     "sharpen": 0.5
    },
+   "punch": [
+    {
+     "at": 1.46,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.46,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 227.2,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 212.6,
+   "dur": 1.5,
+   "cx": 0.47,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 465.2,
+   "dur": 3.3,
+   "cx": 0.46,
+   "cy": 0.33,
+   "zoom": [
+    1.28,
+    1.34
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 180.6,
+   "dur": 1.4,
+   "cx": 0.47,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 200.0,
+   "dur": 1.6,
+   "cx": 0.47,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.46,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.46,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 219.2,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.14
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 240.06,
+   "dur": 4.8,
+   "cx": 0.47,
+   "cy": 0.55,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "speed": 0.575,
    "path": [
     [
      0,
@@ -145,13 +288,13 @@
      0.55
     ],
     [
-     2.5,
+     3.8999999999999986,
      1.12,
      0.47,
      0.5
     ],
     [
-     3.2,
+     4.799999999999997,
      1.14,
      0.47,
      0.5
@@ -159,14 +302,14 @@
    ],
    "punch": [
     {
-     "at": 2.6,
+     "at": 3.9,
      "zoom": 1.15,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 2.6,
+     "at": 3.9,
      "amount": 0.55,
      "dur": 0.5
     }
@@ -174,8 +317,27 @@
   },
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 272.3,
-   "dur": 2.5,
+   "in": 247.7,
+   "dur": 2.25,
+   "cx": 0.47,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 272.2,
+   "dur": 1.45,
    "cx": 0.45,
    "cy": 0.5,
    "zoom": [
@@ -194,7 +356,7 @@
   {
    "src": "youtube/K0chGkV0IE",
    "in": 290.5,
-   "dur": 2.9,
+   "dur": 1.6,
    "cx": 0.5,
    "cy": 0.4,
    "zoom": [
@@ -212,13 +374,13 @@
   },
   {
    "src": "youtube/K0chGkV0IE",
-   "in": 384.2,
-   "dur": 1.8,
-   "cx": 0.5,
-   "cy": 0.5,
+   "in": 598.75,
+   "dur": 3.35,
+   "cx": 0.46,
+   "cy": 0.33,
    "zoom": [
-    1.0,
-    1.04
+    1.28,
+    1.34
    ],
    "audio": false,
    "af": "voice",
@@ -230,310 +392,442 @@
    },
    "punch": [
     {
-     "at": 0.3,
-     "zoom": 1.1,
+     "at": 2.01,
+     "zoom": 1.12,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.3,
-     "amount": 0.4,
+     "at": 2.01,
+     "amount": 0.45,
      "dur": 0.5
     }
    ]
-  },
-  {
-   "src": "youtube/K0chGkV0IE",
-   "in": 391.2,
-   "dur": 1.7,
-   "cx": 0.45,
-   "cy": 0.5,
-   "zoom": [
-    1.05,
-    1.1
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/K0chGkV0IE",
-   "in": 593.7,
-   "dur": 1.9,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.05,
-    1.1
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/K0chGkV0IE",
-   "in": 259.4,
-   "dur": 3.0,
-   "cx": 0.5,
-   "cy": 0.42,
-   "zoom": [
-    1.12,
-    1.18
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "still": true,
-   "bw": true,
-   "vid_darken": 0.62,
-   "vignette": 0.7,
-   "whip_in": 0.18
   }
  ],
  "captions": [
   {
    "t": 0,
-   "d": 27.5,
-   "text": "The lift that almost\n*killed* Eddie Hall :skull:",
+   "d": 34.5,
+   "text": "How Eddie Hall lifted\n*500 KG* :exploding-head:",
    "style": "title",
    "anim": "none",
    "y": 0.085
   },
   {
-   "t": 0,
-   "d": 2.4,
-   "text": "*500 KG* DEADLIFT\nLEEDS, 2016 :flag-gb:",
-   "style": "big",
-   "y": 0.5
+   "t": 0.08,
+   "d": 0.8,
+   "text": "PEOPLE SAY IT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 2.4,
-   "d": 1.7,
-   "text": "\"I'M HERE TO PROVE\nPEOPLE *WRONG*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 0.88,
+   "d": 1.18,
+   "text": "ISN'T *POSSIBLE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 4.1,
-   "d": 2.0,
-   "text": "\"PEOPLE SAY\n*IT ISN'T POSSIBLE*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 2.06,
+   "d": 0.3,
+   "text": "YOU KNOW",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 6.1,
-   "d": 3.1,
-   "text": "HIS MIND TRICK :brain:\n\"A *CAR ACCIDENT*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 2.36,
+   "d": 0.76,
+   "text": "PEOPLE SAY ~GOING~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 9.2,
-   "d": 2.55,
-   "text": "\"MY KIDS TRAPPED\n*UNDER A CAR*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 3.12,
+   "d": 0.42,
+   "text": "TO THE *MOON*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 11.75,
-   "d": 1.8,
-   "text": "\"LIFTING A CAR\n*OFF MY KIDS*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 3.54,
+   "d": 1.18,
+   "text": "WASN'T ~POSSIBLE~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 13.5,
-   "d": 2.6,
-   "text": "1,102 LBS...",
-   "style": "big",
-   "y": 0.5
+   "t": 4.72,
+   "d": 0.54,
+   "text": "*RUNNING* A MILE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 16.1,
+   "t": 5.26,
+   "d": 0.58,
+   "text": "UNDER FOUR ~MINUTES~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.84,
+   "d": 1.16,
+   "text": "WASN'T *POSSIBLE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 7.0,
+   "d": 0.52,
+   "text": "I'M HERE ~TODAY~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 7.52,
+   "d": 0.36,
+   "text": "TO *PROVE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 7.88,
+   "d": 0.68,
+   "text": "FIVE HUNDRED ~KILO~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 8.56,
+   "d": 1.19,
+   "text": "DEADLIFT IS *POSSIBLE*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.75,
    "d": 0.6,
-   "text": "*WORLD RECORD* :trophy:",
-   "style": "big",
-   "y": 0.5
+   "text": "~BASICALLY~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 16.7,
-   "d": 2.6,
-   "text": "\"I DON'T REMEMBER\n*DOING THE LIFT*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 10.35,
+   "d": 0.82,
+   "text": "I TRAINED MY *MIND*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 19.3,
-   "d": 2.8,
-   "text": "\"WAKING UP\n*AT THE BOTTOM*\"",
-   "style": "big",
-   "y": 0.5
+   "t": 11.17,
+   "d": 0.68,
+   "text": "TO A ~POINT~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 22.1,
-   "d": 3.5,
-   "text": "BLOOD PRESSURE\n*OVER 200* :anatomical-heart:",
-   "style": "big",
-   "y": 0.5
-  },
-  {
-   "t": 25.6,
+   "t": 11.85,
    "d": 1.9,
-   "text": "\"VERY LUCKY\n*TO BE ALIVE*\"",
-   "style": "big",
-   "y": 0.5
+   "text": "WHERE I WAS ABLE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   },
   {
-   "t": 27.45,
-   "d": 3.05,
-   "text": ":skull:",
-   "style": "big",
-   "anim": "rise",
-   "size": 190,
-   "x": 0.5,
-   "y": 0.52
+   "t": 13.75,
+   "d": 2.56,
+   "text": "TO *PICTURE* MYSELF",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.31,
+   "d": 1.52,
+   "text": "ON A ~MOTORWAY~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.83,
+   "d": 0.48,
+   "text": "IN A *CAR*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 18.31,
+   "d": 1.12,
+   "text": "~ACCIDENT~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.43,
+   "d": 0.64,
+   "text": "WITH MY *KIDS*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.07,
+   "d": 1.4,
+   "text": "TRAPPED UNDER A ~CAR~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.47,
+   "d": 0.82,
+   "text": "*LIFTING* A CAR",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 22.29,
+   "d": 1.4,
+   "text": "OFF OF MY ~KIDS~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.69,
+   "d": 0.96,
+   "text": "AND IT *WASN'T* UNTIL",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.65,
+   "d": 1.0,
+   "text": "I ~LOCKED~ OUT THAT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 25.65,
+   "d": 0.9,
+   "text": "*DEADLIFT*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.55,
+   "d": 0.48,
+   "text": "IT WAS ~ALMOST~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 27.03,
+   "d": 0.32,
+   "text": "AS IF",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 27.35,
+   "d": 0.8,
+   "text": "I JUST *WOKE* UP",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.15,
+   "d": 0.28,
+   "text": "AND I",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.43,
+   "d": 0.48,
+   "text": "DON'T ~REMEMBER~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.91,
+   "d": 0.81,
+   "text": "DOING THE *LIFT*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 29.72,
+   "d": 0.34,
+   "text": "I GET ~ASKED~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 30.06,
+   "d": 0.56,
+   "text": "THE *QUESTION*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 30.62,
+   "d": 1.3,
+   "text": "IF YOU COULD GO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 31.92,
+   "d": 0.26,
+   "text": "BACK",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.18,
+   "d": 0.38,
+   "text": "AND DO IT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.56,
+   "d": 0.6,
+   "text": "ALL ~AGAIN~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 33.16,
+   "d": 1.19,
+   "text": "*YEAH*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
   }
  ],
  "marks": [],
  "sfx": [
   {
-   "t": 0.2,
+   "t": 8.91,
    "name": "ow:boom",
    "db": -3
   },
   {
-   "t": 9.05,
-   "name": "ow:boom",
-   "db": -9
-  },
-  {
-   "t": 14.12,
-   "name": "ow:riser1",
-   "db": -14
-  },
-  {
-   "t": 15.85,
-   "name": "ow:boom",
-   "db": -1
-  },
-  {
-   "t": 22.15,
+   "t": 17.86,
    "name": "ow:boom",
    "db": -6
   },
   {
-   "t": 27.5,
-   "name": "ow:whoosh",
-   "db": -8
+   "t": 19.49,
+   "name": "ow:riser1",
+   "db": -16
+  },
+  {
+   "t": 24.7,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 32.91,
+   "name": "ow:boom",
+   "db": -4
   }
  ],
  "audio_clips": [
   {
    "src": "youtube/eh_vox_a.wav",
-   "in": 81.8,
-   "dur": 2.4,
+   "in": 11.1,
+   "dur": 9.65,
    "t": 0.0,
-   "af": "voice",
-   "db": -6,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/eh_vox_a.wav",
-   "in": 8.95,
-   "dur": 3.7,
-   "t": 2.4,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/eh_vox_b.wav",
-   "in": 12.75,
-   "dur": 7.45,
-   "t": 6.1,
+   "in": 6.9,
+   "dur": 13.4,
+   "t": 9.65,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_b.wav",
+   "in": 21.0,
+   "dur": 4.3,
+   "t": 23.65,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/eh_vox_a.wav",
-   "in": 64.7,
-   "dur": 3.2,
-   "t": 13.5,
+   "in": 67.3,
+   "dur": 4.5,
+   "t": 24.95,
    "af": "voice",
-   "db": 0,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/eh_vox_a.wav",
-   "in": 97.3,
-   "dur": 2.5,
-   "t": 16.7,
-   "af": "voice",
-   "db": -8,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/eh_vox_a.wav",
-   "in": 115.5,
-   "dur": 2.9,
-   "t": 19.2,
-   "af": "voice",
-   "db": -10,
+   "db": -9,
    "fade": 0.05
   },
   {
    "src": "youtube/eh_vox_b.wav",
    "in": 29.85,
-   "dur": 5.35,
-   "t": 16.65,
-   "af": "voice",
-   "db": 2,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/eh_vox_b.wav",
-   "in": 74.4,
-   "dur": 3.5,
-   "t": 22.1,
+   "dur": 1.45,
+   "t": 28.1,
    "af": "voice",
    "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/eh_vox_c.wav",
-   "in": 8.7,
-   "dur": 1.9,
-   "t": 25.6,
+   "in": 12.25,
+   "dur": 4.05,
+   "t": 29.65,
    "af": "voice",
-   "db": 0,
-   "fade": 0.05
-  },
-  {
-   "src": "youtube/eh_vox_a.wav",
-   "in": 120.0,
-   "dur": 3.0,
-   "t": 27.5,
-   "af": "voice",
-   "db": -8,
+   "db": 2,
    "fade": 0.05
   }
  ],
- "lufs": -14.0
+ "lufs": -14.0,
+ "open_fade": 1.0
 }

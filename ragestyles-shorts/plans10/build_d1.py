@@ -1,109 +1,117 @@
-"""d1: David Goggins, 297 lbs to Navy SEAL. Format from the owner's reference (DailyMotivationDosis Goggins shorts):
-landscape clip on a white card, black explainer text above it with red keywords, red arrows, plus our zoom punch,
-flash and heavy boom. Goggins allows edits of his videos (owner, 2026-09-30).
-Sources: CNBC Make It, "David Goggins: How I Went From 300 Pounds To Becoming A Navy SEAL" (https://youtu.be/X3yNsomAUvw),
-music removed with Demucs into gg_vox.wav (0 to 290 s, same timeline); The Tennessean, "Pull Ups World Record Attempt"
-(https://youtu.be/C26OAQfZX7Q), video by Sanford Myers. CNBC shots with CNBC's own text cards are avoided.
-Checked on frames and whisper word times (CNBC seconds):
-  0.0 "My idea to become a Navy SEAL was me on my couch at 297 pounds" (to 4.66); 4.66 "with a box of mini donuts and a chocolate milkshake" (to 7.98)
-  257.6 to 262.8 photo of Goggins overweight (tank top); donuts on screen 5 to 9
-  173.4 to 180.5 scale close-up; 176.1 "For me I'm six foot one. I could only weigh 191." (to 179.0)
-  179.87 "I'd have lose 106 pounds in less than three months" (to 182.9), interview on screen 180.6 to 183.4
-  191.7 "And in less than three months I lost 106 pounds" (to 194.1), SEAL portrait photo 192.6 to 194.3
-  194.85 "I'm the only person in Navy SEAL history to be in three hell weeks in one year" (to 200.3); shirtless photo
-  194.4 to 197.2 (CNBC card from 197.4), log carry 201.8 to 204.5
-  229.4 "I made decisions to myself. There's no more quitting. So that's when I went and got duct tape." (to 233.6)
-  269.2 "I started realizing that the mind is the most powerful weapon that we have" (to 272.9), interview 269.6 to 273
-Facts: Guinness record 4,030 pull-ups in 17 hours (January 2013); the Tennessean clip is one of his record attempts.
+"""d1 v2: David Goggins, 297 lbs to Navy SEAL, told only in his own words.
+Owner feedback on v1 (2026-09-30): the white card and the 16:9 clip are out (blur background, 9:16 or 3:4 box only),
+the donut and milkshake B roll felt cheap, no story and no emotion. Now: his voice runs through the whole short, the
+captions are his exact words 1 to 3 at a time, pictures are him (old photos, the scale, SEAL photos, the interview in
+sync when he is talking). Goggins allows edits of his videos (owner).
+Source: CNBC Make It, "David Goggins: How I Went From 300 Pounds To Becoming A Navy SEAL" (https://youtu.be/X3yNsomAUvw).
+Music removed with Demucs: work/youtube/gg_vox.wav (0 to 290 s, same timeline). Words: faster-whisper medium.en
+(work/youtube/gg_words_med.json), 269 to 275 from the small model (medium drifted there).
+Story (source seconds):
+  0.0 "My idea to become a Navy SEAL was me on my couch at 297 pounds" (to 4.66)
+  13.44 "I got sick of being haunted by being nobody" (to 15.9)
+  164.6 "People don't walk in the office trying to be a Navy SEAL weighing 297 pounds" (to 168.0)
+  173.06 "And I remember looking in front of me was a height weight chart. For me, I'm 6 foot 1. I could only weigh
+  191. I had to lose 106 pounds in less than three months." (to 182.9)
+  191.9 "And in less than three months, I lost 106 pounds." (to 193.95)
+  195.1 "I'm the only person in Navy SEAL history to be in three hell weeks in one year." (to 200.5)
+  229.12 "I made a decision to myself, there's no more quitting." (to 231.8)
+  269.08 "I started realizing that the mind is the most powerful weapon that we have." (to 272.95)
+Pictures (CNBC seconds, no CNBC text cards in the crop): 0 to 1.5 Goggins running today, 1.5 to 2.2 running, 2.2 to
+3.7 race bib 88, 3.7 to 5.0 his 297 lb photo; 13.5 to 16.3 interview (name strap cropped out); 164.5 to 169.5 photo
+in a tank top (face in the pan 167.5 to 169.0 on the ffmpeg clock; OpenCV seeking reads this file about 1.2 s late); 172 to 180.5 the scale; 75 to 78.8 photo sitting (caption card cropped out); 180.6 to 183 interview;
+192.6 to 194.3 SEAL portrait; 194.4 to 197.2 Hell Week photo; 201.9 log carry; 229 to 230.4 obstacle course;
+230.5 cargo net; 269.6 to 273 interview.
 Run: python3 plans10/build_d1.py && python3 pipeline/bench.py plans10/d1_goggins_297_to_seal.json
 """
+import json
 import sys
 
 sys.path.insert(0, "plans10")
-from rscommon import Short  # noqa: E402
+sys.path.insert(0, "pipeline")
+from rscommon import Short, Speech  # noqa: E402
+from wordcaps import word_captions  # noqa: E402
 
-C, T = "X3yNsomAUvw", "C26OAQfZX7Q"
+C = "X3yNsomAUvw"
 VOX = [("gg_vox.wav", 0.0, 290.0)]
-BOX_TOP = 1920 * 0.53 - 304     # 16:9 clip, 1080 wide, centred at y 0.53
-o = Short("d1_goggins_297_to_seal", "", "From 297 lbs to Navy SEAL 🔥 David Goggins #shorts",
-          layout={"mode": "meme", "bg": [255, 255, 255], "box_aspect": 1.7778, "box_w": 1080, "box_y": 0.53})
+med = [tuple(w) for w in json.load(open("work/youtube/gg_words_med.json")) if not 266 <= w[0] < 275]
+small = []
+for line in open("work/youtube/X3yNsomAUvw_words.txt"):
+    s, e, w = line.split(maxsplit=2)
+    if 269.0 <= float(s) < 275:
+        small.append((float(s), float(e), w.strip()))
+words = sorted(med + small)
+
+o = Short("d1_goggins_297_to_seal", "From *297 lbs*\nto Navy SEAL :fire:", "From 297 lbs to Navy SEAL 🔥 David Goggins #shorts",
+          layout={"mode": "blur", "box_aspect": 0.75, "box_w": 1080, "box_top": 240, "darken": 0.5})
+sp = Speech(o, VOX, words)
+TALK = dict(cx=0.4, cy=0.42, zoom=(1.12, 1.18))       # interview, name strap kept out on the right
 
 
-def v(src, t_in, dur, **k):
-    return o.shot(src, t_in, dur, audio=False, cx=k.pop("cx", 0.5), cy=k.pop("cy", 0.5), zoom=k.pop("zoom", (1.0, 1.04)),
-                  **k)
+def v(t_in, dur, **k):
+    k.setdefault("zoom", (1.05, 1.1))
+    return o.shot(C, t_in, round(dur, 2), audio=False, **k)
 
 
-def say(t_src, dur, t, db=2):
-    o.vox(VOX, t_src, dur, t, db=db)
+def until(t_out):
+    return t_out - o.t
 
 
-def text(t, d, s):
-    o.cap(t, d, s, style="memebar", y=None)
-    o.caps[-1].pop("y")
+def hit_at(s, t_out, **k):
+    o.hit(s, round(t_out - s["_t0"], 2), **k)
 
 
-def arrow(t, d, x, y, angle=135, ln=190):
-    """Red arrow whose tip lands on (x, y) of the clip (0..1 inside the 16:9 box)."""
-    o.marks.append({"type": "arrow", "t": round(t, 2), "d": round(d, 2), "x": x, "y": round((BOX_TOP + y * 608) / 1920, 4),
-                    "angle": angle, "len": ln})
+def sync(t_end, **k):
+    """Interview shot whose picture runs in sync with the voice piece playing at the current output time."""
+    for a, b, t in sp.maps:
+        if t - 0.01 <= o.t <= t + (b - a) + 0.01:
+            return v(a + (o.t - t), until(t_end), **k)
+    raise ValueError(o.t)
 
 
 # 1. 297 lbs
-s = v(C, 257.7, 4.7, zoom=(1.0, 1.06), dim_in={"hold": 0.3, "dur": 0.2, "from": 0.12})
-say(0.0, 4.7, 0)
-text(0, 4.7, "This is David Goggins\nat *297 pounds*")
-arrow(0.5, 4.2, 0.36, 0.3, angle=20, ln=170)
-o.hit(s, 3.3, zoom=1.12, amount=0.45)
-# 2. donuts
-s = v(C, 5.0, 3.4, zoom=(1.05, 1.12))
-say(4.66, 3.4, s["_t0"])
-text(s["_t0"], 3.4, "*Donuts* and a *milkshake*\nevery night")
-# 3. the limit (scale close-up runs to 180.5)
-s = v(C, 176.0, 3.75, zoom=(1.05, 1.1))
-say(176.05, 3.05, s["_t0"])
-text(s["_t0"], 3.05, "The Navy SEAL limit\nfor his height: *191 lbs*")
-o.hit(s, 2.2, zoom=1.1, amount=0.35, db=-6)
-# 4. 106 lbs in 3 months (voice starts over the scale, in sync with the interview from 180.55 to 183.05)
-s = v(C, 180.55, 2.5, cx=0.5, zoom=(1.0, 1.05))
-say(179.85, 3.2, s["_t0"] - 0.7)
-text(s["_t0"] - 0.7, 3.2, "He had to lose *106 lbs*\nin *3 months*")
-o.hit(s, 0.0, zoom=1.12, amount=0.4, db=-4)
+sp.add(0.0, 4.72, 0.0)
+v(0.4, 1.1, cx=0.45)                                   # running today (cut at about 1 s)
+v(1.5, 0.7, cx=0.5)
+v(2.3, 1.5, cx=0.46, cy=0.4)                           # race bib 88
+s = v(3.75, until(sp.out(4.72) + 0.1), cx=0.47, cy=0.35, zoom=(1.2, 1.3))   # the 297 lb photo
+hit_at(s, sp.out(3.36), zoom=1.14, amount=0.5)
+# 2. haunted by being nobody (interview, in sync)
+sp.add(13.4, 15.95, o.t)
+sync(sp.out(15.95) + 0.1, **TALK)
+# 3. the recruiter
+sp.add(164.55, 168.0, o.t)
+v(161.3, 1.35, cx=0.5)                                 # dialing the recruiter
+s = v(166.9, until(sp.out(168.0)), cx=0.72, cy=0.4, path=[[0, 1.0, 0.7, 0.45], [2.1, 1.1, 0.74, 0.38]])   # the photo, face in the pan
+hit_at(s, sp.out(167.06), zoom=1.1, amount=0.4, db=-6)
+# 4. the height weight chart
+sp.add(173.0, 182.95, o.t + 0.15)
+v(172.85, until(sp.out(175.6)), cx=0.45)               # the scale: "a height weight chart"
+v(75.6, until(sp.out(177.4)), cx=0.45, cy=0.3, zoom=(1.6, 1.65))   # the photo: "for me, I'm 6 foot 1"
+s = v(177.3, until(sp.out(180.55)), cx=0.5, zoom=(1.1, 1.18))      # the scale: "I could only weigh 191"
+hit_at(s, sp.out(178.64), zoom=1.12, amount=0.45, db=-5)
+s = sync(sp.out(182.95) + 0.1, **TALK)                 # "106 pounds in less than three months"
+hit_at(s, sp.out(181.08), zoom=1.1, amount=0.4, db=-6)
 # 5. he did it
-t5 = o.t
-s = v(C, 190.2, 1.3, zoom=(1.05, 1.1))
-s = v(C, 192.75, 1.45, zoom=(1.0, 1.06))
-say(191.7, 2.75, t5)
-text(t5, 2.75, "...and he *did it* :fire:")
-arrow(s["_t0"] + 0.1, 1.35, 0.46, 0.35, angle=160, ln=170)
-o.hit(s, 0.2, zoom=1.14, amount=0.5, db=-2)
+sp.add(191.85, 193.95, o.t + 0.1)
+v(191.9, until(sp.out(192.65)), cx=0.5)                # training collage
+s = v(192.65, until(sp.out(193.95) + 0.15), cx=0.5, cy=0.4, zoom=(1.15, 1.22))   # SEAL portrait
+hit_at(s, sp.out(193.24), zoom=1.15, amount=0.55, db=-1)
 # 6. three Hell Weeks
-t6 = o.t
-s = v(C, 194.4, 2.8, zoom=(1.0, 1.06))
-s2 = v(C, 201.9, 2.6, zoom=(1.05, 1.1))
-say(194.85, 5.5, t6 - 0.05)
-text(t6, 5.4, "The only man in SEAL history\nwith *3 Hell Weeks* in 1 year")
-o.hit(s2, 0.2, zoom=1.12, amount=0.45, db=-4)
+sp.add(195.05, 200.5, o.t + 0.1)
+v(194.5, 2.6, cx=0.5, cy=0.35)                         # Hell Week photo
+s = v(201.9, until(sp.out(200.5) + 0.1), cx=0.5)       # log carry
+hit_at(s, sp.out(199.12), zoom=1.12, amount=0.5, db=-3)
 # 7. no more quitting
-t7 = o.t
-s = v(C, 226.2, 2.6, zoom=(1.0, 1.05))
-s2 = v(C, 233.9, 1.6, zoom=(1.05, 1.1))
-say(229.4, 4.25, t7)
-text(t7, 2.6, "Stress fractures.\nNo more *quitting.*")
-text(s2["_t0"], 1.6, "He *duct taped* his legs")
-o.hit(s2, 0.0, zoom=1.12, amount=0.4, db=-5, sound="punch")
-# 8. the pull-up record (Tennessean footage of an attempt, gym sound)
-s = o.shot(T, 32.0, 2.8, cx=0.5, zoom=(1.0, 1.05), db=-10)
-text(s["_t0"], 2.8, "Then he went after the\n*pull up world record*")
-s = o.shot(T, 54.2, 2.6, cx=0.5, zoom=(1.0, 1.06), db=-10)
-text(s["_t0"], 2.6, "*4,030 pull ups*\nin 17 hours :flexed-biceps:")
-o.hit(s, 0.2, zoom=1.12, amount=0.45, db=-3)
-# 9. the mind
-s = v(C, 269.6, 3.4, cx=0.5, zoom=(1.0, 1.08))
-say(269.2, 3.75, s["_t0"] - 0.35)
-text(s["_t0"], 3.4, "\"The mind is the most\n*powerful weapon* we have\"")
-o.hit(s, 2.45, zoom=1.12, amount=0.45, db=-4)
-o.save(title_end=0.001)
-o_plan = __import__("json").load(open(f"plans10/{o.id}.json"))
-o_plan["captions"] = [c for c in o_plan["captions"] if c["style"] != "title"]   # the white card text is the title
-__import__("json").dump(o_plan, open(f"plans10/{o.id}.json", "w"), indent=1, ensure_ascii=False)
+sp.add(229.1, 231.85, o.t + 0.1)
+v(229.0, until(sp.out(230.45)), cx=0.5)                # obstacle course
+s = v(230.5, until(sp.out(231.85) + 0.55), cx=0.5)     # cargo net
+hit_at(s, sp.out(231.36), zoom=1.12, amount=0.45, db=-4, sound="punch")
+# 8. the mind (voice starts 0.55 s over the net so the interview picture starts clean at 269.6, in sync)
+sp.add(269.05, 272.95, o.t - 0.55)
+s = sync(sp.out(272.6), **TALK)            # CNBC cuts away at about 272.65
+v(272.55, until(sp.out(272.95) + 0.1), still=True, cx=0.4, cy=0.42, zoom=(1.32, 1.33))   # hold his face through "have" (same framing as the punch)
+hit_at(s, sp.out(272.08), zoom=1.12, amount=0.5, db=-3)   # "weapon"
+o.caps = word_captions(sp.words, y=0.5, style="wordcap", palette=["*", "~"],
+                       force={"297", "seal", "nobody", "haunted", "office", "chart", "191", "106", "months", "lost",
+                              "hell", "quitting", "mind", "weapon"})
+o.save()

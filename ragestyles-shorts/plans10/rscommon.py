@@ -58,13 +58,42 @@ class Short:
                 return self.clip(name, t_src - a, dur, t, db, af)
         raise ValueError(f"no Demucs copy covers {t_src}+{dur}")
 
-    def save(self, lufs=-14.0, title_end=None):
+    def save(self, lufs=-14.0, title_end=None, open_fade=1.0):
         for s in self.shots:
             s.pop("_t0", None)
-        caps = [{"t": 0, "d": title_end or self.t, "text": self.title, "style": "title", "anim": "none", "y": self.title_y}]
+        caps = [{"t": 0, "d": title_end or self.t, "text": self.title, "style": "title", "anim": "none",
+                 "y": self.title_y}] if self.title else []
         caps += self.caps
         plan = {"id": self.id, "yt_title": self.yt_title, "layout": self.layout, "shots": self.shots,
-                "captions": caps, "marks": self.marks, "sfx": self.sfx, "audio_clips": self.clips, "lufs": lufs}
+                "captions": caps, "marks": self.marks, "sfx": self.sfx, "audio_clips": self.clips, "lufs": lufs,
+                "open_fade": open_fade}
         os.makedirs(self.folder, exist_ok=True)
         json.dump(plan, open(f"{self.folder}/{self.id}.json", "w"), indent=1, ensure_ascii=False)
         print(self.id, "total", self.t)
+
+
+class Speech:
+    """Pieces of one speaker's voice laid back to back on the output timeline, and their words moved with them.
+    words: [(start, end, word)] in source seconds. add() returns the output time where the piece starts."""
+
+    def __init__(self, short, parts, words):
+        self.o, self.parts, self.src_words, self.words, self.maps = short, parts, words, [], []
+
+    def add(self, a, b, t, db=2):
+        self.o.vox(self.parts, a, round(b - a, 2), t, db=db)
+        self.maps.append((a, b, t))
+        n = len(self.words)
+        for s, e, w in self.src_words:
+            if a <= s < b and w.strip():
+                self.words.append((round(t + s - a, 2), round(t + min(e, b) - a, 2), w))
+        if len(self.words) > n and not self.words[-1][2].rstrip().endswith((".", ",", "!", "?")):
+            s_, e_, w_ = self.words[-1]
+            self.words[-1] = (s_, e_, w_ + ".")  # a caption never runs across two pieces
+        return t
+
+    def out(self, src_t):
+        """Output second of a source second inside an added piece."""
+        for a, b, t in self.maps:
+            if a <= src_t <= b:
+                return round(t + src_t - a, 2)
+        raise ValueError(src_t)

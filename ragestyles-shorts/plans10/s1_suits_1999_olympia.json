@@ -8,7 +8,7 @@
   {
    "src": "youtube/OXJhEpJiPEU",
    "in": 52.0,
-   "dur": 2.6,
+   "dur": 1.2,
    "cx": 0.56,
    "cy": 0.5,
    "zoom": [
@@ -22,22 +22,36 @@
     "sat": 1.06,
     "contrast": 1.07,
     "sharpen": 0.5
-   },
-   "dim_in": {
-    "hold": 0.35,
-    "dur": 0.2,
-    "from": 0.1
+   }
+  },
+  {
+   "src": "youtube/OXJhEpJiPEU",
+   "in": 40.6,
+   "dur": 1.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -12,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
    },
    "punch": [
     {
-     "at": 0.4,
+     "at": 0.0,
      "zoom": 1.1,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": 0.4,
+     "at": 0.0,
      "amount": 0.4,
      "dur": 0.5
     }
@@ -432,7 +446,7 @@
  "marks": [],
  "sfx": [
   {
-   "t": 0.15,
+   "t": 0.95,
    "name": "ow:boom",
    "db": -3
   },
@@ -496,5 +510,6 @@
    "fade": 0.05
   }
  ],
- "lufs": -14.0
+ "lufs": -14.0,
+ "open_fade": 1.0
 }

@@ -154,6 +154,9 @@ class Short:
                     cues.append({"t": a["t0"] + 0.1, "id": a.get("sfx", "stamp"), "gain": 0, "dur": None})
                 if a["type"] in ("arrow", "circle") and a.get("sfx"):
                     cues.append({"t": a["t0"], "id": a["sfx"], "gain": 0, "dur": None})
+        intro = self.sc.get("intro_sfx", self.ch.get("intro_sfx"))  # every Short opens on one sound at 0.0s
+        if intro:
+            cues.append({"t": 0.0, "id": intro, "gain": float(self.ch.get("intro_gain", 0)), "dur": None})
         allow = self.ch.get("sfx_allow")
         if allow is not None:
             for c in cues:

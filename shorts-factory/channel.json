@@ -57,5 +57,7 @@
     "transition",
     "whoosh",
     "yeah"
-  ]
+  ],
+  "intro_sfx": "question",
+  "intro_gain": 0
 }

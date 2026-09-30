@@ -1,0 +1,814 @@
+{
+ "id": "n2_niall_darwen_classic",
+ "yt_title": "5th last year, now Classic Olympia champion 🏆 Niall Darwen #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/D199ZS-S4qU",
+   "in": 12.0,
+   "dur": 1.0,
+   "cx": 0.5,
+   "cy": 0.58,
+   "zoom": [
+    1.6,
+    1.68
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.55,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.55,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 114.02,
+   "dur": 1.49,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/D199ZS-S4qU",
+   "in": 3.0,
+   "dur": 2.37,
+   "cx": 0.5,
+   "cy": 0.58,
+   "zoom": [
+    1.6,
+    1.68
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/W1WT_ofIRfE",
+   "in": 9.0,
+   "dur": 3.3,
+   "cx": 0.56,
+   "cy": 0.58,
+   "zoom": [
+    1.3,
+    1.36
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.77,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.77,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 44.48,
+   "dur": 4.87,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 4.13,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 4.13,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/W1WT_ofIRfE",
+   "in": 0.8,
+   "dur": 1.87,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 244.08,
+   "dur": 2.24,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/W1WT_ofIRfE",
+   "in": 34.0,
+   "dur": 3.23,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.64,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.64,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/W1WT_ofIRfE",
+   "in": 42.0,
+   "dur": 3.2,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.59,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.59,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/D199ZS-S4qU",
+   "in": 14.5,
+   "dur": 1.44,
+   "cx": 0.5,
+   "cy": 0.58,
+   "zoom": [
+    1.6,
+    1.68
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 268.9,
+   "dur": 1.25,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.83,
+     "zoom": 1.15,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.83,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 322.2,
+   "dur": 2.61,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/hV40SXWvdJM",
+   "in": 325.81,
+   "dur": 1.99,
+   "cx": 0.63,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.7,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.7,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 30.86,
+   "text": "5th last year.\nNow *Classic Olympia* champ :trophy:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.03,
+   "d": 0.52,
+   "text": "WHEN THEY *ACTUALLY*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 0.55,
+   "d": 0.78,
+   "text": "CALLED ME IN THE ~MIDDLE~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.33,
+   "d": 0.25,
+   "text": "I",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.13,
+   "d": 0.44,
+   "text": "I WAS JUST",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.57,
+   "d": 0.46,
+   "text": "AS *SHOCKED* AS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 2.03,
+   "d": 0.59,
+   "text": "A ~CROWD~ I",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 2.62,
+   "d": 1.16,
+   "text": "THIS IS A DAY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 3.78,
+   "d": 0.82,
+   "text": "THAT WE *DREAM*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 4.6,
+   "d": 0.39,
+   "text": "OF ~RIGHT~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 4.99,
+   "d": 0.96,
+   "text": "IT'S *SOMETHING* THAT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.95,
+   "d": 1.04,
+   "text": "IS A ~FANTASY~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 6.99,
+   "d": 1.3,
+   "text": "FOR MOST *BODYBUILDERS* AND",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 8.29,
+   "d": 1.46,
+   "text": "TO BE ~STOOD~ HERE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.75,
+   "d": 0.7,
+   "text": "YOU KNOW WITH THIS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 10.45,
+   "d": 1.84,
+   "text": "*MEDAL* WITH THIS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.29,
+   "d": 0.86,
+   "text": "~TROPHY~ AMONG",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 13.15,
+   "d": 1.16,
+   "text": "YOU *CAN'T* MESS THIS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.31,
+   "d": 0.72,
+   "text": "~MOMENT~ UP YOU",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 15.03,
+   "d": 1.24,
+   "text": "I SAID TO *MYSELF*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.27,
+   "d": 0.99,
+   "text": "~EVERY~ SINGLE DAY YOU",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.26,
+   "d": 1.88,
+   "text": "CAN I GO *HARDER*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.14,
+   "d": 0.25,
+   "text": "THAN",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.32,
+   "d": 0.56,
+   "text": "I ~DID~ LAST",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.88,
+   "d": 0.6,
+   "text": "TIME AND",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.48,
+   "d": 0.25,
+   "text": "EVEN",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.62,
+   "d": 0.34,
+   "text": "IF IT'S ONLY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.96,
+   "d": 0.38,
+   "text": "*1* %",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.34,
+   "d": 0.82,
+   "text": "IF THE ~ANSWER'S~ YES",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 22.16,
+   "d": 0.52,
+   "text": "THEN YOU KNOW",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 22.68,
+   "d": 0.64,
+   "text": "I'LL GO *ALL*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.32,
+   "d": 0.38,
+   "text": "IN AND",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.7,
+   "d": 0.66,
+   "text": "TO JUMP FROM",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.36,
+   "d": 1.76,
+   "text": "~FIFTH~ PLACE TO THE WINNER",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.12,
+   "d": 0.89,
+   "text": "I",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 27.05,
+   "d": 1.0,
+   "text": "COMING *HOME* IT'S",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.05,
+   "d": 0.9,
+   "text": "COMING ~HOME~ GUYS THAT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.95,
+   "d": 2.06,
+   "text": "WE *DID* IT WE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.3,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 6.38,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 12.04,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 18.53,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 20.71,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 25.59,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 29.32,
+   "name": "ow:boom",
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 113.02,
+   "dur": 1.38,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 115.66,
+   "dur": 1.29,
+   "t": 1.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 33.58,
+   "dur": 2.27,
+   "t": 2.59,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 37.3,
+   "dur": 3.1,
+   "t": 4.96,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 44.58,
+   "dur": 4.67,
+   "t": 8.26,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 121.05,
+   "dur": 1.67,
+   "t": 13.13,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 244.18,
+   "dur": 2.14,
+   "t": 15.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 247.05,
+   "dur": 3.03,
+   "t": 17.24,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 258.6,
+   "dur": 3.0,
+   "t": 20.47,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 267.56,
+   "dur": 2.49,
+   "t": 23.67,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 322.3,
+   "dur": 2.46,
+   "t": 26.36,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/hV40SXWvdJM.mp4",
+   "in": 325.86,
+   "dur": 1.44,
+   "t": 28.92,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 1.0
+}

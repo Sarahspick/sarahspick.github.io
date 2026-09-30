@@ -1,4 +1,4 @@
-# RageStyles 쇼츠 인수인계 문서 (2026-09-30, 3차 갱신)
+# RageStyles 쇼츠 인수인계 문서 (2026-09-30, 4차 갱신)
 
 새 Claude 세션(다른 계정 포함)이 이 문서 하나만 읽고 바로 이어서 일할 수 있게 쓴 문서입니다.
 저장소 루트의 `HANDOFF.md`는 다른 프로젝트(Sarah's Pick) 문서이니 건드리지 않습니다.
@@ -11,15 +11,11 @@ RageStyles 는 운동, 헬스, 스포츠의 **최신 소식을 가장 빠르게 
 * 소식 확인: 영상 속 사실은 기사(fitnessvolt.com, generationiron.com, barbend.com, 위키백과)로 교차 확인하고 날짜를 적음. 다르면 오너에게 알림.
 * 소스: 원 채널 크레딧 + "All rights go to the owners" (오너 방침, 2-1). 인스타그램은 이 환경에서 접속됨 (2-1), 유튜브는 `tools/yt_batch.sh`.
 
-## ★ 지금 트렌드 (2026-09-30 조사, 다음 세션은 여기서 고르기)
-* 2026 미스터 올림피아 (9/24~27, 라스베이거스): 닉 워커 첫 우승(작년 6위에서, 피플스 챔피언까지), 2위 삼손 다우다, 3위 데릭 런스포드. 디펜딩 챔피언 5명이 모두 타이틀을 잃음 (Lunsford, Ramon Dino, Rhea Gayle, Maureen Blanquisco, James Berger). 영상: OlympiaTV 공식 Cq7TbOxcwPc, Nick's Strength and Power 리캡 si2vi517BH4, 닉 워커 우승 반응(fitnessvolt "Nick Walker reacts ... calls Derek").
-* 클래식 피지크: Niall Darwen 첫 우승, 2위 Mike Sommerfeld, 디펜딩 Ramon Dino 3위 ("The Fall of a Champion"). 영상 ZnLmWfxQaVs, 클래식 프리저징 oXMhVHiluGQ.
-* 데드리프트 세계기록: Raul Flores (멕시코) 511kg, 2026-09-05 Giants Live Strongman Open (버밍엄). 하프토르의 510kg(2025-09-06 WDC)을 1kg 경신, 대회에서 500kg 넘긴 세 번째 사람. 영상 Giants Live 4oHrTDCgVAs (135만), bdVPWa3mVuU. 2026 WDC 전체 9maLI002HLc.
-* 파워리프팅: IPF Worlds 2026 세계기록 모음 431q1ZR2RPE, Austin Perkins 74kg 891.5kg 세계기록 토탈 YDcxuCoSTF0 (65만), Joshua Ngoka 주니어 980.5kg OSI8dNxXRGI, Colton Engelbrecht 세계기록 wW6pqccJb5Q, Danny Grigsby 데드리프트 세계기록 vDdo7Eoql_8.
-* 스트롱맨: Conan's Wheel 신기록 (Strongman Classic 2026) WJqiF1Bex_Q, Webster Stone 신기록 (Europe's Strongest Man 2026) ob4uq7pcEEE.
-* HYROX 세계선수권 2026 (6월, 스톡홀름): Dylan Scott 마지막 2초 역전 우승 53:47, 여자 Alyssa McElheny (솔로 5번째 레이스에 우승). 조금 지남.
-* 바이럴 상시: Anatoly 청소부 헬스장 몰카 (KY5pnqFpGWo 등 수백만). 인플루언서 순위 상위는 여전히 CBum, Sommer Ray, Chloe Ting 등(오너 판단: 트렌드 지남).
-* 업로드 날짜는 쿠키 만료로 확인 못 함. 다음 세션에서 `yt-dlp --print "%(upload_date)s"` 로 확인하고 최근 2주 안의 것부터.
+## ★ 지금 트렌드 (2026-09-30 4차 조사, 다음 세션은 여기서 고르기)
+* 오너 (2026-09-30): 올림피아 주제는 이제 그만. 칼리스데닉스, 스포츠, 헬스, 러닝, 마라톤, 운동 모티베이션 등 최신 트렌드면 다 좋음. Tren Twins, Sam Sulek 은 쇼츠로 좋다고 봄. David Goggins, Eddie Hall, Chris Bumstead 의 근황 같은 최신 소식을 그들의 인스타그램, 유튜브 영상으로 편집하는 것도 좋음.
+* 오너가 받은 외부 트렌드 조사 (다른 AI, 2026-10-01 기준, 우선순위순): 1 Raul Flores 511kg (만듦, r1), 2 Jesse James West (쇠막대 구부리기 등 챌린지, 9/29), 3 Magnus Midtbo (클라이머, 인플루언서 체력 대결), 4 Anatoly (7/26 "Gym CHALLENGE Went Wrong", 청소부가 당하는 반전), 5 Nick Bare (하이브리드, 웨이트+러닝+HYROX, 9/24), 6 Jeff Nippard (칼로리 순위, 1900년부터 운동 변천), 7 Sam Sulek (만듦, s2). 흐름: 신기록과 실력 반전, 종목 간 대결 (보디빌더 vs 클라이머), 하이브리드 운동 (HYROX 35개국 150만 명), Winter Arc 와 Lock In (10월 시작 연말 변화 시리즈), 90일 자기관리. Clavicular (looksmaxxing) 는 인물 중심으로 쓰지 않기 (유튜브가 관련 채널 삭제).
+* 아직 안 쓴 최신 소재: Berlin Marathon 2026-09-27 Tigst Assefa 가 다리 경련 (아킬레스 부상설) 속에 2:11:04 로 우승, 세계기록에 68초 모자람 (공식 BMW BERLIN-MARATHON kF2FgCAfKgY 여자 결승, nA5EohZ2S1g 남자 결승 Guye Adola 2:02:51, Abbott WMM 하이라이트 SZvi5gYI-9A, 받아둠). Agnes Ngetich 2026-09-20 코펜하겐 세계로드러닝선수권 하프 1:05:15 여자 단독 세계기록 (영상 소스 빈약). Danny Grigsby 데드리프트 세계기록 (9/24, 소스는 IG 재업로드 채널뿐). Roy Orrantia Static Monsters 세계기록 (Big Loz 해설 bQ2P9JvepWk). Eddie Hall vs Tommy Fury 는 6월이라 지남.
+* 업로드 날짜 확인: 쿠키 없이 `yt-dlp --skip-download --print "%(upload_date)s"` 는 절반쯤 봇 확인에 걸림. `tools/yt_batch.sh` 로 받으면 info.json 에 날짜가 있음. 채널 최신 영상 목록은 쿠키 없이 `yt-dlp --flat-playlist "https://www.youtube.com/@채널/videos"` 로 됨 (업로드 순).
 
 ## 0. 새 세션 시작 순서
 
@@ -96,6 +92,15 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 주의: CNBC 영상(X3yNsomAUvw)은 OpenCV 시크가 ffmpeg 보다 약 1.2초 늦게 읽음. 컨택트시트는 ffmpeg (`-ss` + `fps,tile`) 로 뽑아 확인.
 * 다음: 오너 피드백 반영, 업로드 자동화 (2-2 마지막 항목).
 
+## 2-4. 2026-09-30 4차 세션 결과
+* 만든 영상: `Downloads/new17/` n1 Nick Walker (오너: "아주 좋아, 완벽한 수준", 이미 업로드), n2 Niall Darwen 클래식 (좋았다). Derek Lunsford 3위 편은 쓰지 말라고 해서 삭제. `Downloads/new18/` r1 Raul Flores 511kg, j1 15살 칼리스데닉스 3개 기록 (Andry Strong), s2 Sam Sulek Bulk Rebirth 27일차 20인치 팔. 빌드 스크립트 `plans11/build_*.py`, 공용 `plans11/newscommon.py` (`words()`, `speech()`, `Cutter.v/sync/until/hit_at`).
+* 업로드 문구: 영상마다 `Downloads/<폴더>/UPLOAD_INFO.md` 에 제목, 설명, 태그, 해시태그를 쓰고 채팅으로도 보냄 (오너 요청).
+* 유튜브 다운로드: 새 쿠키로 `tools/yt_batch.sh` 정상. 77분짜리 OlympiaTV Cq7TbOxcwPc 만 영상 데이터 403 (세 번 재시도해도 같음). 긴 영상은 PO 토큰이 필요한 것으로 보임.
+* 계속 받는 방법 (제안): 1) 쿠키 수명: 안 쓰는 계정으로 시크릿 창 로그인, youtube.com/robots.txt 에서 cookies.txt 내보내고 창 닫기 (브라우저가 쿠키를 돌리지 않게). 이 환경은 세션마다 IP 가 바뀌므로 몇 주 단위로 교체 예상. 2) PO 토큰 공급자 `bgutil-ytdlp-pot-provider` (yt-dlp 플러그인, Node 스크립트 모드) 를 setup.sh 에 넣으면 긴 영상 403 과 쿠키 의존이 줄어듦 (아직 시험 안 함, github.com releases 가 막혀 있어 pip/npm 경로로 설치해야 함). 3) 쿠키가 막히면 대체: 오너 PC 에서 `yt-dlp -a links.txt` + rclone 으로 드라이브 폴더에 자동 업로드, 세션은 gdown 으로 받기. 4) 한 세션에 수십 개씩 받지 않기 (`--sleep-requests 1` 권장).
+* 원본 음악: 소스에 음악이 깔린 구간 (Andry Strong 도전 장면, Sulek 차 안 토크, Giants Live 경기장) 은 Demucs vocals 만 씀. 검사: `no_vocals.wav` 의 mean_volume 이 -40dB 보다 크면 음악 있음.
+* 자막 주의: 카운트 영상에서 코치가 끝자리만 셀 때 ("one, two" = 41, 42) 는 그 단어를 자막에서 빼고 화면 카운터를 보여줌 (j1). 욕설 구간은 조각에서 뺌.
+* 업로드 자동화 준비: 오너가 환경 변수 `RS` 에 YouTube OAuth refresh token 을 넣어둠 (값은 절대 출력하지 않기). 다음 목표: Data API v3 videos.insert 로 비공개 업로드 스크립트 (클라이언트 ID, 시크릿도 필요한지 오너와 확인).
+
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 
 콘텐츠
@@ -139,6 +144,9 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * (2026-09-30, new15 피드백) d1 고긴스 v2 "아주 훌륭, 조금 옛날 영상이지만 편집이 매우매우 잘 됨, 이 방향으로" (한 사람 목소리 이야기 + 원문 워드 바이 워드 자막 + 본인 사진과 인터뷰 B롤 + 3:4 블러). s1 보디빌더도 "편집 잘했어". e1 에디 홀은 버림 (파일 삭제, 다시 만들지 않음).
 * (2026-09-30, 아이폰 확인) 제목은 위 끝이 155px (캡션 키 `top`: 155), 영상 박스는 370px 부터 (3:4, `box_top` 370), 위쪽은 같은 영상 블러. `plans10/rscommon.py` 의 `Short.LAYOUT`, `TITLE_TOP` 이 기본값.
 * (2026-09-30) 결과물은 채팅으로 바로 보냄 (모바일로 옮기기 편하게). SendUserFile 한도 30MB 라서 2패스 인코딩으로 29MB 안쪽에 맞춤 (`tools/fit_send.sh`).
+* (2026-09-30, n1 피드백) 첫 1초가 가장 중요: 영상은 가장 고화질이고 시선을 확 끄는 장면으로 시작 (n1 은 저화질 폰 촬영 무대 장면으로 시작해서 지적, 3초쯤의 고화질 인터뷰로 시작했어야 함). 저음질 목소리 조각 ("I did it", 관중석 폰 녹음) 은 빼고 깨끗한 목소리부터. 화질을 늘 생각하기. 그래서 `open_fade` 는 0.25 정도로 짧게.
+* (2026-09-30, n1 피드백) 사람 얼굴은 꼭 화면 안에. 줌 펀치나 크롭 때문에 머리가 박스 밖으로 나가면 안 됨 (n1 후반 무대 샷). 스틸 확인 때 얼굴이 잘린 컷은 cx, cy, zoom 을 고치거나 다른 구간으로 바꿈.
+* (2026-09-30) 영상마다 제목, 설명, 태그를 텍스트 파일 (UPLOAD_INFO.md) 과 채팅 복붙용으로 같이 보냄.
 
 ## 4. 지금까지 만든 영상과 반응
 
@@ -162,6 +170,8 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new14 s1, e1, d1 | 1999 올림피아 정장 기자회견, 에디 홀 500kg (스컬 엔딩), 고긴스 297 lbs 에서 씰 (흰 카드, 빨간 화살표) | s1 그나마 괜찮음 (첫 컷 느림). e1, d1 은 요약 자막, 짜친 B롤, 흰 배경, 16:9 로 못 씀 |
 | new15 s1 v2, d1 v2 (e1 v2 삭제) | s1 첫 1초 페이드 + 1.2초 컷. d1 은 본인 목소리 이야기 + 원문 워드 바이 워드 자막 (`wordcap`), 3:4 블러 | d1 아주 훌륭 (이 방향), s1 잘함, e1 버림 |
 | new16 s1 v3, d1 v3 | 제목 155px, 영상 박스 370px (3:4), 위쪽 블러 | 사용자 확인 전 |
+| new17 n1, n2 | 닉 워커 올림피아 우승 (인터뷰 + 우승 연설), 니얼 다웬 클래식 우승 (5위에서 1위). Derek 3위 편은 오너 요청으로 삭제 | n1 아주 좋음, 완벽 (업로드함). 단 시작 1초 저화질, 후반 머리 잘림 지적. n2 좋음 |
+| new18 r1, j1, s2 | 라울 플로레스 511kg (해설 + 통역 + 하프토르), 15살 칼리스데닉스 3개 기록, 샘 술렉 벌크 리버스 27일차 20인치 | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인

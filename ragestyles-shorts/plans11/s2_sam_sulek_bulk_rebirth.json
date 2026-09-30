@@ -1,0 +1,727 @@
+{
+ "id": "s2_sam_sulek_bulk_rebirth",
+ "yt_title": "Sam Sulek's Bulk Rebirth, day 27: 20 inch arms 💪 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1719.3,
+   "dur": 3.4,
+   "cx": 0.45,
+   "cy": 0.45,
+   "zoom": [
+    1.1,
+    1.15
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.6,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.6,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1685.6,
+   "dur": 1.85,
+   "cx": 0.47,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.75,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.75,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 0.8,
+   "dur": 3.6,
+   "cx": 0.33,
+   "cy": 0.45,
+   "zoom": [
+    1.08,
+    1.12
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 1498.0,
+   "dur": 3.75,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 3.06,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 3.06,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 11.2,
+   "dur": 3.85,
+   "cx": 0.33,
+   "cy": 0.45,
+   "zoom": [
+    1.08,
+    1.12
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 1000.0,
+   "dur": 4.35,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.15
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 19.9,
+   "dur": 2.95,
+   "cx": 0.33,
+   "cy": 0.45,
+   "zoom": [
+    1.08,
+    1.12
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.4,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.4,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/AGS3M83Nk-s",
+   "in": 1502.0,
+   "dur": 3.74,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1759.5,
+   "dur": 3.56,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.94,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.94,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/j3o0_zuSato",
+   "in": 849.0,
+   "dur": 2.25,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.6,
+    1.65
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1688.6,
+   "dur": 2.5,
+   "cx": 0.45,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1744.0,
+   "dur": 2.0,
+   "cx": 0.52,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/1h_dZRyIkoo",
+   "in": 1766.0,
+   "dur": 1.95,
+   "cx": 0.55,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.97,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.97,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 39.75,
+   "text": "Sam Sulek's Bulk Rebirth\nDay 27: *20 inch arms* :flexed-biceps:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.04,
+   "d": 0.56,
+   "text": "*YEAH*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 0.6,
+   "d": 1.0,
+   "text": "THERE WE GO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.6,
+   "d": 1.89,
+   "text": "~20~ INCHES PUMPED",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 3.49,
+   "d": 1.88,
+   "text": "HELL FREAKING *YEAH*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.37,
+   "d": 1.34,
+   "text": "LONG",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 6.71,
+   "d": 1.0,
+   "text": "LONG LONG",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 7.71,
+   "d": 1.82,
+   "text": "FREAKING ~AWAITED~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.53,
+   "d": 1.12,
+   "text": "THE BULK HAS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 10.65,
+   "d": 2.11,
+   "text": "FINALLY FREAKING *BEGUN*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.76,
+   "d": 0.96,
+   "text": "IT TOOK YOUR MOM",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 13.72,
+   "d": 2.1,
+   "text": "~NINE~ MONTHS TO BUILD",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 15.82,
+   "d": 0.7,
+   "text": "YOUR BODY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.52,
+   "d": 0.66,
+   "text": "AND NOW IT'S",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.18,
+   "d": 0.38,
+   "text": "*GOING* TO TAKE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.56,
+   "d": 0.96,
+   "text": "YOU ANOTHER ~NINE~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 18.52,
+   "d": 2.36,
+   "text": "MONTHS TO *REBUILD* IT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.88,
+   "d": 2.97,
+   "text": "AKA THE BULK ~REBIRTH~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.85,
+   "d": 0.68,
+   "text": "HOW CAN",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.53,
+   "d": 0.46,
+   "text": "I MAKE IT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.99,
+   "d": 0.25,
+   "text": "SO IF",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 25.23,
+   "d": 0.8,
+   "text": "I *STOOD* NEXT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.03,
+   "d": 0.88,
+   "text": "TO MY ~PAST~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.91,
+   "d": 2.02,
+   "text": "SELF IT WOULD",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.93,
+   "d": 1.14,
+   "text": "BE A VERY *JARRING*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 30.07,
+   "d": 1.11,
+   "text": "~DIFFERENCE~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 31.18,
+   "d": 0.82,
+   "text": "THE *OLYMPIA* THREW",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.0,
+   "d": 0.56,
+   "text": "US OFF OUR",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.56,
+   "d": 1.22,
+   "text": "~GROOVE~ A LITTLE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 33.78,
+   "d": 1.48,
+   "text": "BUT BACK HOME",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 35.26,
+   "d": 1.18,
+   "text": "IN *OHIO*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 36.44,
+   "d": 1.45,
+   "text": "BACK ON FREAKING ~TRACK~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 37.89,
+   "d": 0.7,
+   "text": "FREAKING *GIDDY*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 38.59,
+   "d": 1.23,
+   "text": "I'M THAT ~PUMPED~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 1.35,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 3.72,
+   "name": "ow:punch",
+   "db": -5
+  },
+  {
+   "t": 11.66,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 21.95,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 29.18,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 38.52,
+   "name": "ow:boom",
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/sa_vox_1640.wav",
+   "in": 79.3,
+   "dur": 3.4,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_1640.wav",
+   "in": 83.2,
+   "dur": 1.7,
+   "t": 3.45,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_0.wav",
+   "in": 0.9,
+   "dur": 7.15,
+   "t": 5.35,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_0.wav",
+   "in": 11.3,
+   "dur": 3.75,
+   "t": 12.7,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_0.wav",
+   "in": 15.6,
+   "dur": 7.15,
+   "t": 16.5,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_0.wav",
+   "in": 63.8,
+   "dur": 7.1,
+   "t": 23.85,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_1640.wav",
+   "in": 150.45,
+   "dur": 6.65,
+   "t": 31.15,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/sa_vox_1640.wav",
+   "in": 160.1,
+   "dur": 1.4,
+   "t": 37.85,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.25
+}

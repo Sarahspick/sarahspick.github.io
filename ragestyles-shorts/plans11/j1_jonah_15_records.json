@@ -1,0 +1,839 @@
+{
+ "id": "j1_jonah_15_records",
+ "yt_title": "15 years old vs 3 world records 💪 #calisthenics #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 118.6,
+   "dur": 1.0,
+   "cx": 0.74,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 846.4,
+   "dur": 1.6,
+   "cx": 0.52,
+   "cy": 0.56,
+   "zoom": [
+    1.15,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 124.0,
+   "dur": 3.2,
+   "cx": 0.74,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.8,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.8,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 152.7,
+   "dur": 5.25,
+   "cx": 0.74,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 157.95,
+   "dur": 2.75,
+   "cx": 0.74,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.25,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.25,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 188.8,
+   "dur": 2.88,
+   "cx": 0.4,
+   "cy": 0.45,
+   "zoom": [
+    1.1,
+    1.15
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 127.0,
+   "dur": 2.37,
+   "cx": 0.74,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 214.78,
+   "dur": 4.32,
+   "cx": 0.55,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 219.1,
+   "dur": 4.1,
+   "cx": 0.7,
+   "cy": 0.45,
+   "zoom": [
+    1.1,
+    1.15
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 3.42,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 3.42,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 332.7,
+   "dur": 1.7,
+   "cx": 0.8,
+   "cy": 0.4,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.38,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.38,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 828.85,
+   "dur": 6.5,
+   "cx": 0.52,
+   "cy": 0.56,
+   "zoom": [
+    1.15,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 835.35,
+   "dur": 2.85,
+   "cx": 0.52,
+   "cy": 0.56,
+   "zoom": [
+    1.15,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 2.31,
+     "zoom": 1.15,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.31,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 869.6,
+   "dur": 3.85,
+   "cx": 0.52,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/tcDTdFKOXno",
+   "in": 873.45,
+   "dur": 1.83,
+   "cx": 0.78,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.97,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.97,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 44.2,
+   "text": "15 years old vs\n*3 world records* :flexed-biceps:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 1.04,
+   "text": "THIS KID IS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.04,
+   "d": 0.92,
+   "text": "*15* YEARS OLD",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.96,
+   "d": 0.8,
+   "text": "AND HE CAN",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 2.76,
+   "d": 0.84,
+   "text": "DO ~SKILLS~ THAT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 3.6,
+   "d": 0.6,
+   "text": "EVEN *WORLD*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 4.2,
+   "d": 2.33,
+   "text": "~CHAMPIONS~ CANNOT DO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 10.38,
+   "d": 1.47,
+   "text": "*50* REPS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.3,
+   "d": 1.62,
+   "text": "~51~ REPS",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 13.92,
+   "d": 0.25,
+   "text": "SO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.16,
+   "d": 0.68,
+   "text": "YOU BROKE THE *WORLD*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.84,
+   "d": 1.84,
+   "text": "~RECORD~ FOR THE MOST",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.68,
+   "d": 0.86,
+   "text": "*PLANCHE* PUSH -UP",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.54,
+   "d": 1.65,
+   "text": "IN ONE ~MINUTE~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.19,
+   "d": 0.25,
+   "text": "ALL",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.43,
+   "d": 1.34,
+   "text": "I DID WAS *TRAIN*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.77,
+   "d": 0.6,
+   "text": "IT JUST ALL",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.37,
+   "d": 0.46,
+   "text": "YOU ~GOTTA~ DO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 21.83,
+   "d": 0.48,
+   "text": "IS *TRAIN*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 22.31,
+   "d": 1.22,
+   "text": "AND YOU'LL ~PROGRESS~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.53,
+   "d": 0.68,
+   "text": "IF YOU SAY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 24.21,
+   "d": 0.84,
+   "text": "YOU'RE NOT *PROGRESSING*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 25.05,
+   "d": 0.52,
+   "text": "YOU'RE NOT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 25.57,
+   "d": 0.84,
+   "text": "~TRAINING~ OR",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 26.41,
+   "d": 1.2,
+   "text": "YOU'RE TRAINING *INCORRECTLY*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 27.61,
+   "d": 0.72,
+   "text": "I'VE ~NEVER~ STOPPED",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.33,
+   "d": 1.01,
+   "text": "BECAUSE OF *PAIN*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 29.34,
+   "d": 1.3,
+   "text": "~16~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 30.64,
+   "d": 1.47,
+   "text": "KEEP *PUSHING*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.26,
+   "d": 1.23,
+   "text": "~17~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 34.22,
+   "d": 0.66,
+   "text": "*18*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 34.88,
+   "d": 1.46,
+   "text": "DON'T GIVE UP ~22~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 36.34,
+   "d": 0.64,
+   "text": "GO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 36.98,
+   "d": 1.68,
+   "text": "LOCK ARMS YEAH",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 38.66,
+   "d": 0.38,
+   "text": "*TODAY*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 39.04,
+   "d": 0.66,
+   "text": "YOU ARE ONE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 39.7,
+   "d": 0.68,
+   "text": "OF THE ~STRONGEST~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 40.38,
+   "d": 2.06,
+   "text": "PUSHER IN THE *WORLD*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 42.44,
+   "d": 0.28,
+   "text": "GOOD JOB",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 42.72,
+   "d": 0.62,
+   "text": "AND YOU ARE ONLY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 43.34,
+   "d": 0.97,
+   "text": "~15~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": -0.2,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 4.15,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 12.05,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 26.54,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 28.42,
+   "name": "ow:punch",
+   "db": -5
+  },
+  {
+   "t": 37.73,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 43.09,
+   "name": "ow:boom",
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/jo_vox_0.wav",
+   "in": 0.0,
+   "dur": 5.7,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_150.wav",
+   "in": 2.8,
+   "dur": 5.15,
+   "t": 5.9,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_150.wav",
+   "in": 15.6,
+   "dur": 2.6,
+   "t": 11.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_150.wav",
+   "in": 38.9,
+   "dur": 5.05,
+   "t": 13.9,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_212.wav",
+   "in": 2.88,
+   "dur": 8.22,
+   "t": 19.15,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_330.wav",
+   "in": 2.8,
+   "dur": 1.5,
+   "t": 27.57,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_825.wav",
+   "in": 3.95,
+   "dur": 6.4,
+   "t": 29.27,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_825.wav",
+   "in": 22.0,
+   "dur": 2.6,
+   "t": 35.72,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_825.wav",
+   "in": 44.7,
+   "dur": 3.75,
+   "t": 38.62,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jo_vox_825.wav",
+   "in": 51.7,
+   "dur": 1.28,
+   "t": 42.42,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.25
+}

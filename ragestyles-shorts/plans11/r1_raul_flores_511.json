@@ -1,0 +1,618 @@
+{
+ "id": "r1_raul_flores_511",
+ "yt_title": "511 KG deadlift world record 🇲🇽 Raul Flores #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 209.0,
+   "dur": 0.9,
+   "cx": 0.47,
+   "cy": 0.38,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 211.0,
+   "dur": 1.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.15,
+     0.3,
+     0.4
+    ],
+    [
+     1.2,
+     1.15,
+     0.5,
+     0.4
+    ]
+   ],
+   "ease": "linear"
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 261.0,
+   "dur": 3.57,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 623.6,
+   "dur": 5.18,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.25,
+    1.3
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 175.0,
+   "dur": 2.46,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.15
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 181.0,
+   "dur": 5.54,
+   "cx": 0.5,
+   "cy": 0.52,
+   "zoom": [
+    1.4,
+    1.46
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": -11.27,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": -11.27,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 183.6,
+   "dur": 7.9,
+   "cx": 0.5,
+   "cy": 0.52,
+   "zoom": [
+    1.4,
+    1.46
+   ],
+   "audio": true,
+   "af": "film",
+   "audio_db": -3,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 5.8,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 5.8,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 195.3,
+   "dur": 1.3,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.3,
+    1.36
+   ],
+   "audio": true,
+   "af": "film",
+   "audio_db": -3,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 266.0,
+   "dur": 3.35,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 711.0,
+   "dur": 2.05,
+   "cx": 0.64,
+   "cy": 0.38,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 712.8,
+   "dur": 4.45,
+   "cx": 0.62,
+   "cy": 0.38,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 3.75,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 3.75,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 477.2,
+   "dur": 3.75,
+   "cx": 0.6,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 483.3,
+   "dur": 3.15,
+   "cx": 0.6,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.25
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.3,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.3,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 44.8,
+   "text": "*511 KG* deadlift\nWORLD RECORD :flag-mx:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 2.1,
+   "text": "*511 KG*",
+   "style": "wordcap",
+   "y": 0.5
+  },
+  {
+   "t": 2.19,
+   "d": 1.26,
+   "text": "*PHENOMENAL* RISING",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 3.45,
+   "d": 2.22,
+   "text": "~STAR~ FROM MEXICO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.67,
+   "d": 3.38,
+   "text": "RAUL FLORES *26*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.05,
+   "d": 1.96,
+   "text": "~YEARS~ OF AGE AND",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 11.01,
+   "d": 1.66,
+   "text": "THE *WORLD* RECORD",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.67,
+   "d": 1.38,
+   "text": "~ATTEMPT~ FOR ALL",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.05,
+   "d": 4.06,
+   "text": "FLORES *511*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 18.11,
+   "d": 1.59,
+   "text": "~KILOGRAMS~ AT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 28.18,
+   "d": 1.44,
+   "text": "WHEN HE *STARTED*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 29.62,
+   "d": 1.98,
+   "text": "TO GO TO THE ~GYM~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 31.6,
+   "d": 1.24,
+   "text": "*BECAUSE* HIS PET",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 32.84,
+   "d": 1.32,
+   "text": "~DIED~ IN HE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 34.16,
+   "d": 1.52,
+   "text": "*PROMISED* THAT ONE",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 35.68,
+   "d": 1.24,
+   "text": "DAY ~TYSON~ CAN",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 36.92,
+   "d": 1.14,
+   "text": "BE *FAMOUS*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 38.06,
+   "d": 2.18,
+   "text": "~26~ YEARS OLD",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 40.24,
+   "d": 1.37,
+   "text": "THAT'S *CRAZY* PULLING",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 41.61,
+   "d": 1.56,
+   "text": "I ~THINK~ THE SKY",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 43.17,
+   "d": 0.36,
+   "text": "IS THE *LIMIT*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 43.53,
+   "d": 1.42,
+   "text": "FOR THIS GUY I",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": -0.2,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 1.79,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 24.4,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 36.95,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 42.7,
+   "name": "ow:boom",
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/4oHrTDCgVAs.mp4",
+   "in": 196.4,
+   "dur": 2.1,
+   "t": 0.0,
+   "af": "film",
+   "db": -3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_0.wav",
+   "in": 0.5,
+   "dur": 8.6,
+   "t": 2.15,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_140.wav",
+   "in": 13.2,
+   "dur": 7.9,
+   "t": 10.95,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_660.wav",
+   "in": 19.65,
+   "dur": 5.2,
+   "t": 28.15,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_660.wav",
+   "in": 31.95,
+   "dur": 4.25,
+   "t": 33.55,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_470.wav",
+   "in": 7.3,
+   "dur": 3.55,
+   "t": 38.0,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_470.wav",
+   "in": 13.2,
+   "dur": 2.75,
+   "t": 41.55,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.25
+}

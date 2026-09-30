@@ -1,0 +1,202 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "clips": {
+    "sn_pov": {
+      "src": "tt:7688293065911586055",
+      "start": 9.3
+    },
+    "sn_flip": {
+      "src": "tt:7688293065911586055",
+      "start": 12.3
+    },
+    "sn_phone": {
+      "src": "tt:7688293065911586055",
+      "start": 6.6
+    },
+    "dg_ui": {
+      "src": "tt:7688586595359902996",
+      "start": 6.3,
+      "speed": 0.8
+    },
+    "ty_hand": {
+      "src": "tt:7688291803719683346",
+      "start": 5.65,
+      "speed": 0.68
+    },
+    "el_phone": {
+      "src": "tt:7688586847215488274",
+      "start": 7.42,
+      "speed": 0.707
+    },
+    "el_off": {
+      "src": "tt:7688586847215488274",
+      "start": 10.05
+    },
+    "el_both": {
+      "src": "tt:7688586847215488274",
+      "start": 14.35
+    },
+    "dg_cmp": {
+      "src": "tt:7688586595359902996",
+      "start": 14.2
+    },
+    "ty_cmp": {
+      "src": "tt:7688291803719683346",
+      "start": 24.05
+    },
+    "dg_cam": {
+      "src": "tt:7688586595359902996",
+      "start": 17.0
+    },
+    "dg_view": {
+      "src": "tt:7688586847215488274",
+      "start": 4.75
+    }
+  },
+  "id": "samsung_horizon",
+  "sources": [
+    {
+      "name": "Samsung: Use Horizontal lock in the Camera app on Galaxy S26",
+      "url": "https://www.samsung.com/us/support/answer/ANS10010423/"
+    },
+    {
+      "name": "TechRadar: Galaxy S26 Ultra Super Steady Horizontal Lock can handle a 360-degree turn",
+      "url": "https://www.techradar.com/phones/samsung-galaxy-phones/this-is-a-gimbal-inside-a-smartphone-samsung-galaxy-s26-ultra-super-steady-horizontal-lock-really-can-handle-a-360-degree-turn"
+    },
+    {
+      "name": "SamMobile: How the Galaxy S26 camera is enhanced by Super Steady and Horizontal Lock",
+      "url": "https://www.sammobile.com/news/how-galaxy-s26-ultra-camera-experience-enhanced-super-steady-horizontal-lock/"
+    }
+  ],
+  "footage_credits": [
+    "@samsung on TikTok (Galaxy S26 FE creator films by @moritzboll, Elliott Sauvage, @tonyolsenfilm, @maxloew_)"
+  ],
+  "lang": "ko",
+  "title": "삼성은 영상을 *어떻게* 수평으로 잡을까? 📱",
+  "pronounce": {
+    "S26": "에스 이십육",
+    "FE의": "에프이의",
+    "360도를": "삼백육십 도를"
+  },
+  "hook": {
+    "lines": [
+      "공중에서 한 바퀴 뒤집혔는데",
+      "영상은 *멀쩡*해요."
+    ],
+    "clips": [
+      "sn_pov",
+      "sn_flip"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:멀쩡해요."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "삼성은 이걸 *어떻게* 했을까요?"
+      ],
+      "clip": "sn_phone"
+    },
+    {
+      "lines": [
+        "갤럭시 S26 FE의",
+        "*수평 고정* 기능이에요."
+      ],
+      "clip": "dg_ui",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:수평"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "폰 속 *자이로 센서*가",
+        "어디가 아래인지 계속 재고요."
+      ],
+      "clip": "ty_hand"
+    },
+    {
+      "lines": [
+        "*초광각*으로 넓게 찍은 다음",
+        "가운데만 쏙 잘라내요."
+      ],
+      "clips": [
+        "el_phone",
+        "dg_view"
+      ]
+    },
+    {
+      "lines": [
+        "폰이 기울면",
+        "잘라낸 화면을 *반대로* 돌리죠."
+      ],
+      "clip": "el_off"
+    },
+    {
+      "lines": [
+        "끄면 이렇고…",
+        "켜면 *이렇게*."
+      ],
+      "clips": [
+        "dg_cmp",
+        "el_both"
+      ],
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:이렇게."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "360도를 빙글 돌아도",
+        "수평은 *그대로*."
+      ],
+      "clip": "ty_cmp"
+    },
+    {
+      "lines": [
+        "주머니 속 짐벌이라니,",
+        "이제 강아지도 *촬영감독*이에요."
+      ],
+      "clip": "dg_cam"
+    }
+  ],
+  "upload": {
+    "title": "공중제비를 돌아도 영상이 안 기울어요 📱 #shorts",
+    "description": "공중에서 한 바퀴 뒤집혔는데 영상은 멀쩡해요. 삼성은 이걸 어떻게 했을까요? 📱\n\n갤럭시 S26 FE의 '슈퍼 스테디 수평 고정'은 폰 속 자이로 센서로 어디가 아래인지 계속 잽니다. 초광각 카메라로 넓게 찍은 다음 가운데만 잘라내고, 폰이 기울면 잘라낸 화면을 반대로 돌려서 360도를 돌아도 수평이 그대로예요. 대신 센서 일부만 쓰기 때문에 일반 동영상보다 해상도는 낮아집니다.\n\n주머니 속 짐벌이라니, 이제 강아지도 촬영감독이에요. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#삼성",
+      "#갤럭시S26",
+      "#수평고정",
+      "#기술"
+    ],
+    "tags": [
+      "삼성",
+      "갤럭시 S26 FE",
+      "수평 고정",
+      "슈퍼 스테디",
+      "갤럭시 카메라",
+      "짐벌",
+      "흔들림 보정",
+      "갤럭시 S26",
+      "폰 카메라 꿀팁",
+      "작동 원리",
+      "기발한 회사들"
+    ],
+    "comment": "간식으로 고용되는 촬영감독… 인건비 최저 기록 갱신 🐶"
+  }
+}

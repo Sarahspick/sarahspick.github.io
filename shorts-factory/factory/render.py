@@ -260,7 +260,7 @@ class Short:
         fade = min(1.5, self.total / 4)
         fc = (f"[0:a]atrim=start={float(cfg.get('start', 0)):.2f},asetpts=PTS-STARTPTS,volume={gain:.2f}dB,"
               f"atrim=0:{self.total:.3f},afade=t=out:st={self.total - fade:.3f}:d={fade:.3f}[m];"
-              f"[m][1:a]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[d]")
+              f"[m][1:a]sidechaincompress=threshold=0.05:ratio=3:attack=20:release=400[d]")
         subprocess.run(["ffmpeg", "-v", "error", "-y", "-stream_loop", "-1", "-i", src, "-i", narr,
                         "-filter_complex", fc, "-map", "[d]", "-ar", str(SR), "-ac", "2", out], check=True)
         return out

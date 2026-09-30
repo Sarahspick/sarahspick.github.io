@@ -23,10 +23,10 @@
   - 아마존 드론 편 평가: "매우 훌륭, 깔끔, 아주 잘했다" → 이 구성(How 훅, 실사 + 근접 촬영, 반전, 한마디 마무리)이 기준.
   - **인트로 효과음 (모든 영상, 2026-09-30):** 영상 시작 0초에 드라이브 '17. 물음표'(`question`)가 울립니다 (`channel.json`의 `"intro_sfx"`). 대신 쿵 하는 sub hit를 원하면 `"intro_sfx": "boom2"`(13. BOOM). 대본마다 `"intro_sfx"`로 바꿀 수도 있어요.
   - **인트로 확정 (2026-09-30 저녁):** 물음표는 앞 1초가 무음이라 폐기. `"intro_sfx": "boom2"`(쿵)이 0초에 울리고, `"intro_zoom": 0.08`로 0~1초 천천히 줌인. 효과음 파일은 `sfx.py`가 앞쪽 무음을 잘라서 씁니다.
-  - **자동 업로드 (2026-09-30):** `python tools/upload_youtube.py scripts/<id>.<lang>.json` → en은 Top Techs(`YT_REFRESH_TOKEN_TT`), ko는 기발한 회사들(`YT_REFRESH_TOKEN_CC`)에 **비공개**로. `YT_REFRESH_TOKEN_RS`는 다른 프로젝트라 절대 쓰지 않음. 같은 제목이 채널에 있으면 업로드를 거부합니다(`--force`). 비공개 영상엔 댓글을 못 달아서, 사용자가 공개한 뒤 `--comment-on <영상 id>`로 댓글을 답니다 (고정은 앱에서). API 할당량은 하루 업로드 약 6개. 업로드한 것: 모래 탈출 TT vMwdQRF3Z8k / CC RUsX4cuk6KE (TT hGfadkWwRaw는 실수로 올라간 중복, 사용자에게 삭제 요청), 웨이모 TT U5RSWw3x4Os / CC 4xRM60qBCE4.
+  - **자동 업로드 (2026-09-30):** `python tools/upload_youtube.py scripts/<id>.<lang>.json` → en은 Top Techs(`YT_REFRESH_TOKEN_TT`), ko는 기발한 회사들(`YT_REFRESH_TOKEN_CC`)에 **비공개**로. `YT_REFRESH_TOKEN_RS`는 다른 프로젝트라 절대 쓰지 않음. 같은 제목이 채널에 있으면 업로드를 거부합니다(`--force`). 비공개 영상엔 댓글을 못 달아서, 사용자가 공개한 뒤 `--comment-on <영상 id>`로 댓글을 답니다 (고정은 앱에서). API 할당량은 하루 업로드 약 6개. 업로드한 것: 모래 탈출 TT vMwdQRF3Z8k / CC RUsX4cuk6KE (TT hGfadkWwRaw는 실수로 올라간 중복, 사용자에게 삭제 요청), 웨이모 TT U5RSWw3x4Os / CC 4xRM60qBCE4, 삼성 수평 고정 TT NJuRKgkdDUg / CC kGfVJEf9jYk.
   - **폐기 (2026-09-30):** 로봇 올림픽·로봇 스포츠·다이슨 칫솔 등 이전 것들, 스마트폰(폴드)은 스킵. 채널 핵심 = 기업의 기술·비밀·노하우·작동원리(How does it work?).
   - **좋은 소스:** 웨이모 공식 틱톡(`@waymo`, 2026년 영상 다수, 1080x1920)은 위=차가 보는 화면, 아래=실제 도로 분할 화면. 가운데 파란 말풍선 자막은 `cover` [0.04, y0, 0.96, y1]로 덮음 (`scripts/waymo_sees.*`). `yt-dlp --flat-playlist https://www.tiktok.com/@계정`으로 공식 계정 영상 목록을 받을 수 있습니다.
-  - **배경음악:** 유명곡(Pretty Little Baby 등)은 사용자가 앱/Studio에서 넣음 (라이선스 처리). 자동으로 넣으려면 라이선스 있는 음원 파일을 받아 대본 `"bgm"`으로 (나레이션 때 자동으로 줄어듦). AI 생성 음악은 금지.
+  - **배경음악 (2026-09-30 확정):** 사용자가 API 업로드 영상엔 나중에 음악을 못 넣는다고 해서, 사용자가 준 라이선스 음원 `assets/music/licensed_music1.wav`(92초, git 제외, 사용자가 채팅으로 준 파일)를 `channel.json`의 `"bgm"`으로 모든 영상에 넣습니다. `lufs -24` + 부드러운 사이드체인 덕킹(ratio 3) → 목소리보다 약 15dB 아래 (목소리 -16, 음악 -31 LUFS). 새 컨테이너엔 파일이 없으니 사용자에게 다시 받아야 함. AI 생성 음악·유명곡 파일은 금지.
   - **마지막 줄은 질문 금지.** 감상평, 재밌는 한마디, 비유로 끝냅니다 (예: "주름이 흉터였다면, 이제는 잔주름 수준.", "피자보다 빠르고, 웬만한 사람보다 눈치가 빨라요."). 댓글 유도는 고정 댓글에서 드립으로.
 
 - **중국어가 들리면 절대 안 됩니다 (2026-09-30).** 원본 사운드는 `factory/speech.py`(SenseVoice)가 클립마다 말소리를 검사해서, 말(어느 언어든)이 있으면 그 구간 원본 소리를 자동으로 끕니다 (경고 `orig audio muted`). 말소리를 꼭 살려야 하는 클립만 `"orig_speech": true`.
@@ -40,7 +40,7 @@
 
 - 효과음은 인터넷에서 받은 실제 파일만 씁니다 (`assets/sfx_library.json`). 직접 합성하지 않습니다.
 - 허용 효과음 (2026-09-29): 타격음 계열(Vine Boom, Sub, Hit)과 마우스 클릭(딸깍), 가벼운 whoosh만. wow·incredible·빰빰빰(dun_dun)·omg·군중 반응 같은 거슬리는 소리는 전부 금지. `channel.json`의 `"sfx_allow"`에 없는 효과음은 렌더링에서 자동으로 빠지고 경고가 남습니다. 지금 라이브러리에 있는 허용 소리는 boom, mouse_click, click뿐이고 sub, hit, whoosh 파일은 아직 없습니다 (넣으려면 실제 파일을 찾아 `sfx_library.json`에 추가).
-- 배경음악은 넣지 않습니다. 업로드할 때 사용자가 넣습니다.
+- 배경음악은 위 "배경음악 (2026-09-30 확정)" 참고 (라이선스 음원 자동 삽입).
 - 장면은 하드컷으로 넘깁니다. 전환 whoosh는 가벼운 것만 허용 (2026-09-29부터).
 - AI로 만든 영상은 쓰지 않습니다. 실제 영상을 편집하고 설명을 더해 가치를 만듭니다. 출처와 크레딧은 `_upload.txt`에 적습니다.
 - 화면에 채널명·프로필·인증 마크를 넣지 않습니다. 상단 고정 제목, 1~3단어 자막을 씁니다.

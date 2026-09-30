@@ -1,68 +1,73 @@
 {
-  "lang": "en",
-  "voice": {
-    "engine": "elevenlabs",
-    "voice_id": "UgBBYS2sOqTuMpoF3BR0",
-    "model": "eleven_v4",
-    "settings": {
-      "speed": 1.2
-    },
-    "post_tempo": 1.19
+ "lang": "en",
+ "voice": {
+  "engine": "elevenlabs",
+  "voice_id": "UgBBYS2sOqTuMpoF3BR0",
+  "model": "eleven_v4",
+  "settings": {
+   "speed": 1.2
   },
-  "voices": {
-    "ko": {
-      "engine": "typecast",
-      "voice_id": "tc_68257f68bc6e3c161ab5078d",
-      "model": "ssfm-v30",
-      "tempo": 1.32
-    }
-  },
-  "pronounce": {},
-  "channels": {
-    "en": {
-      "name": "Top Techs",
-      "handle": "@toptechs-1",
-      "accent": "#168BFF"
-    },
-    "ko": {
-      "name": "기발한 회사들",
-      "handle": "@기발한회사들",
-      "accent": "#F5333F"
-    }
-  },
-  "sfx_allow": [
-    "applause",
-    "bbyong",
-    "block",
-    "boom2",
-    "cartoon_pop",
-    "chiring",
-    "clear",
-    "click",
-    "click2",
-    "ding2",
-    "dingding",
-    "glass_ding",
-    "hit",
-    "huh",
-    "melody",
-    "mouse_click",
-    "punch",
-    "question",
-    "riser1",
-    "riser8",
-    "sparkle",
-    "sub",
-    "tada",
-    "transition",
-    "whoosh",
-    "yeah"
-  ],
-  "intro_sfx": "boom2",
-  "intro_gain": 0,
-  "intro_zoom": 0.08,
-  "youtube_token": {
-    "en": "YT_REFRESH_TOKEN_TT",
-    "ko": "YT_REFRESH_TOKEN_CC"
+  "post_tempo": 1.19
+ },
+ "voices": {
+  "ko": {
+   "engine": "typecast",
+   "voice_id": "tc_68257f68bc6e3c161ab5078d",
+   "model": "ssfm-v30",
+   "tempo": 1.32
   }
+ },
+ "pronounce": {},
+ "channels": {
+  "en": {
+   "name": "Top Techs",
+   "handle": "@toptechs-1",
+   "accent": "#168BFF"
+  },
+  "ko": {
+   "name": "기발한 회사들",
+   "handle": "@기발한회사들",
+   "accent": "#F5333F"
+  }
+ },
+ "sfx_allow": [
+  "applause",
+  "bbyong",
+  "block",
+  "boom2",
+  "cartoon_pop",
+  "chiring",
+  "clear",
+  "click",
+  "click2",
+  "ding2",
+  "dingding",
+  "glass_ding",
+  "hit",
+  "huh",
+  "melody",
+  "mouse_click",
+  "punch",
+  "question",
+  "riser1",
+  "riser8",
+  "sparkle",
+  "sub",
+  "tada",
+  "transition",
+  "whoosh",
+  "yeah"
+ ],
+ "intro_sfx": "boom2",
+ "intro_gain": 0,
+ "intro_zoom": 0.08,
+ "youtube_token": {
+  "en": "YT_REFRESH_TOKEN_TT",
+  "ko": "YT_REFRESH_TOKEN_CC"
+ },
+ "bgm": {
+  "file": "assets/music/licensed_music1.wav",
+  "lufs": -24,
+  "start": 0
+ }
 }

@@ -94,6 +94,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
 | new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
 | new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 제목과 자막 하나, 발표마다 줌 펀치, 밝기, 쿵, `plans9/build_o1.py`) | 아주 훌륭함, 확정. 순위표는 화면을 가려서 뺌. 다음엔 효과 더 강하게, 자막 정중앙 |
+| new13 w1 | 워드 바이 워드 모티베이션 첫 샘플 (닉 워커 우승 연설, 네온 글로우 키워드 자막 자동 생성) | 사용자 확인 전 |
 | new12 o2~o5, g2 | 올림피아: 전 챔피언 3명 vs 닉, 톱10 카운트다운, 닉 워커 스토리, 다우다 1일차. Gymshark 썰매 대결 (결과는 각자 인터뷰 샷 위에) | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
@@ -131,6 +132,13 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * `sfx[]`: `{t, name, db, in}` (`in` 은 효과음 앞부분을 건너뛰는 초. `mk:788_big_cinematic_impact` 는 임팩트가 2.12초, `mk:2908_movie_trailer_epic_impact` 는 0.7초에 있어서 `in` 없이 쓰면 늦게 터집니다).
 * 샷의 `flash`: `[{at, amount, dur}]` 발표 순간 밝기를 올렸다가 빠르게 되돌림. `punch` 와 같이 쓰면 "쿵" 느낌. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
 * `lufs`: 목표 라운드니스 (-14). 원본 소리가 없는 스톡 영상은 효과음만 커지지 않게 -20.
+
+워드 바이 워드 모티베이션 스타일 (2026-09-30, 참고: Peakzmotivation 에디 홀 500kg 쇼츠, 영상 700개 채널)
+* 형식: 인터뷰 목소리 + 1~4단어 자막, 그룹마다 키워드 하나를 네온 색으로 (`~` 빨강, `^` 초록, `+` 하늘, `%` 보라, `*` 노랑), 글로우, 핵심 단어에 punch + flash + 쿵, 말 내용에 맞는 B롤.
+* 자막 스타일 `word` (bench.py, TikTok Sans ExtraBold 88, glow 18). 새 색 표시 `+` `%` 는 render.py parse_tokens.
+* `pipeline/wordcaps.py`: whisper 단어 타임스탬프 → 캡션 목록 자동 (구 단위 묶기, 키워드 자동 선택, `force`/`skip`). 예시 `plans9/build_w1.py` (말 조각을 이어 붙이고 단어 시각을 출력 타임라인으로 옮김).
+* 참고 영상 채널은 팟캐스트와 WSM 중계를 무단 사용. 우리는 형식만, 소스는 CC BY 등 합법만.
+* CapCut 연결: 공식 API 없음. 오픈소스 VectCutAPI (github.com/sun-guannan/VectCutAPI) 가 CapCut 드래프트(draft_content.json)를 만들 수 있고, 오너 PC 의 CapCut 에서 열어 내보내기. 클라우드에서는 CapCut 실행 불가. 우선순위는 우리 렌더러 자동화, CapCut 은 선택.
 
 기타 도구
 * 대사 받아쓰기: faster-whisper `small.en` 또는 `medium.en`, `word_timestamps=True` 로 컷 지점을 단어 경계에 맞춥니다 (c7 v1 은 "fitness" 중간에서 잘렸던 것을 v2 에서 고침).

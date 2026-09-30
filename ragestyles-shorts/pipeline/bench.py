@@ -81,6 +81,9 @@ STYLES = {
     # big punch label under the video ("20.00 FLAT")
     "big": dict(font=CAP_FONT + " Black", size=84, color=(255, 255, 255), stroke=7, shadow=True, upper=True,
                 italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=940),
+    # word-by-word caption with neon glow (Peakz-style motivational shorts): 1 to 3 words, keywords coloured
+    "word": dict(font=CAP_FONT + " ExtraBold", size=88, color=(255, 255, 255), stroke=3, shadow=False, upper=True,
+                 italic=0.0, colors=None, stroke_color=(0, 0, 0), max_w=900, glow=18),
     # small pill ("TEST 3/10", "1910")
     "tag": dict(font=CAP_FONT + " ExtraBold", size=38, color=(20, 10, 0), stroke=0, shadow=False, upper=True,
                 italic=0.0, bg=YELLOW, pad=(22, 10)),
@@ -170,7 +173,27 @@ def caption_image(text, style, **over):
                         bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))),
                         gradients=st.get("gradients"), stroke_color=tuple(st.get("stroke_color", (0, 0, 0))),
                         outline=st.get("outline", 0), colors=st.get("colors"))
+    if st.get("glow"):  # soft neon glow in each word's own colour (the "word by word" motivational look)
+        img = glow(img, st["glow"])
     return shear(img, st["italic"])
+
+
+def glow(img, radius):
+    pad = int(radius * 3)
+    base = Image.new("RGBA", (img.width + 2 * pad, img.height + 2 * pad), (0, 0, 0, 0))
+    base.alpha_composite(img, (pad, pad))
+    a = np.asarray(base).astype(np.float32)
+    lum = a[..., :3].max(axis=2)
+    # glow only from the letters (bright), not from the black stroke
+    src = a.copy()
+    src[..., 3] = src[..., 3] * np.clip((lum - 90) / 120, 0, 1)
+    g1 = np.asarray(Image.fromarray(src.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(radius))).astype(np.float32)
+    g2 = np.asarray(Image.fromarray(src.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(radius * 0.4))).astype(np.float32)
+    g = g1 * 1.0 + g2 * 0.8
+    g[..., 3] = np.clip(g[..., 3] * 2.2, 0, 255)
+    out = Image.fromarray(np.clip(g, 0, 255).astype(np.uint8), "RGBA")
+    out.alpha_composite(base)
+    return out
 
 
 def arrow_image(length=190, width=30, head=78, color=RED):

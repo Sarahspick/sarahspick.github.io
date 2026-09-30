@@ -7,7 +7,7 @@ centre, a quick zoom punch + flash + boom on every reveal, a bit stronger than o
 """
 import json
 
-SRC = [("youtube/olyrt_vox", 1858.1897, 3578.0), ("youtube/oly_vox", 3840.0, 4330.0)]
+SRC = [("youtube/olyrt_vox", 1858.1897, 3578.0), ("youtube/oly_vox", 3840.0, 4330.0), ("youtube/olysp_vox", 4505.0, 4565.0)]
 G = {"sat": 1.06, "contrast": 1.07, "sharpen": 0.5}
 CY = 0.5  # caption y
 

@@ -50,7 +50,8 @@ FONTS = {
     "Poppins Black": "Poppins-Black.ttf",
     "Poppins ExtraBold": "Poppins-ExtraBold.ttf",
 }
-COLORS = {"*": (255, 214, 10), "~": (255, 59, 48), "^": (52, 230, 110), "white": (255, 255, 255)}
+COLORS = {"*": (255, 214, 10), "~": (255, 59, 48), "^": (52, 230, 110), "+": (40, 220, 255), "%": (190, 90, 255),
+          "white": (255, 255, 255)}  # * yellow, ~ red, ^ green, + cyan, % purple
 
 
 # ------------------------------------------------------------------ helpers
@@ -142,7 +143,7 @@ def parse_tokens(text):
             if word.startswith(":") and word.endswith(":") and len(word) > 2:
                 toks.append((word[1:-1], None, True))
                 continue
-            if active is None and word[0] in "*~^" and len(word) > 1:
+            if active is None and word[0] in "*~^+%" and len(word) > 1:
                 active = word[0]
                 word = word[1:]
             key = active

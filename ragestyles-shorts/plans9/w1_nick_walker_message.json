@@ -1,0 +1,630 @@
+{
+ "id": "w1_nick_walker_message",
+ "yt_title": "Nick Walker's message to every doubter 🔥 #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1438.21,
+   "dur": 1.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.1,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1445.71,
+   "dur": 1.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.1,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 295.5,
+   "dur": 3.3,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "ease": "linear",
+   "path": [
+    [
+     0.0,
+     1.0,
+     0.41,
+     0.47
+    ],
+    [
+     1.8,
+     1.0,
+     0.441,
+     0.452
+    ],
+    [
+     3.3,
+     1.0,
+     0.45,
+     0.486
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.46,
+     "zoom": 1.15,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.46,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 359.6,
+   "dur": 1.95,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.1,
+     "zoom": 1.12,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.1,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 32.85,
+   "dur": 3.55,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 37.9,
+   "dur": 1.3,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.14,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1463.21,
+   "dur": 1.35,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.5,
+     "zoom": 1.1,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.5,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 43.5,
+   "dur": 1.9,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.08,
+    1.14
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/olyrt_vox",
+   "in": 1435.01,
+   "dur": 1.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.5,
+     "zoom": 1.1,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.5,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 299.7,
+   "dur": 1.7,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "ease": "linear",
+   "path": [
+    [
+     0.0,
+     1.0,
+     0.444,
+     0.503
+    ],
+    [
+     1.7,
+     1.0,
+     0.43,
+     0.51
+    ]
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 359.6,
+   "dur": 2.9,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.76,
+     "zoom": 1.15,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.76,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 22.35,
+   "text": "Nick Walker's message\nto every *doubter* :fire:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.085
+  },
+  {
+   "t": 0.08,
+   "d": 0.44,
+   "text": "YOU TOLD ME",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 0.52,
+   "d": 0.62,
+   "text": "EVERY TIME",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.14,
+   "d": 0.5,
+   "text": "I SAW YOU",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 1.64,
+   "d": 0.66,
+   "text": "I'M GONNA DO IT",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 2.3,
+   "d": 0.68,
+   "text": "I'M GONNA DO IT",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 2.98,
+   "d": 1.04,
+   "text": "AND YOU DID IT",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 4.02,
+   "d": 1.46,
+   "text": "YOU DID IT NICK",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.48,
+   "d": 1.94,
+   "text": "YOU ARE MR. ~OLYMPIA~",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 7.42,
+   "d": 1.42,
+   "text": "AND I WANT ^EVERYONE^",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 8.84,
+   "d": 0.8,
+   "text": "OUT THERE TO TAKE",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 9.64,
+   "d": 1.38,
+   "text": "THIS AND +LEARN+ THIS",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 11.02,
+   "d": 0.38,
+   "text": "%LESSON%",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 11.4,
+   "d": 1.04,
+   "text": "DON'T EVER *BELIEVE*",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.44,
+   "d": 0.84,
+   "text": "ANY OF THE ~NEGATIVITY~",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 13.28,
+   "d": 1.25,
+   "text": "THAT YOU HEAR",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.53,
+   "d": 1.68,
+   "text": "IF YOU TRULY ^BELIEVE^",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.21,
+   "d": 0.5,
+   "text": "IN +YOURSELF+",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 16.71,
+   "d": 1.08,
+   "text": "AND HAVE THE %CONFIDENCE%",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 17.79,
+   "d": 1.1,
+   "text": "YOU GUYS CAN",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 18.89,
+   "d": 0.32,
+   "text": "DO *WHATEVER*",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.21,
+   "d": 0.54,
+   "text": "YOU WANT",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.75,
+   "d": 0.7,
+   "text": "AND I DID THAT",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.45,
+   "d": 1.05,
+   "text": "~TONIGHT~",
+   "style": "word",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.6,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 2.2,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 3.46,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
+  },
+  {
+   "t": 7.4,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 13.6,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 16.85,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 20.21,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/olysp_vox",
+   "in": 18.7,
+   "dur": 8.25,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 32.85,
+   "dur": 3.55,
+   "t": 8.25,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 37.9,
+   "dur": 2.65,
+   "t": 11.8,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/olysp_vox",
+   "in": 43.5,
+   "dur": 6.4,
+   "t": 14.45,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0
+}

@@ -15,7 +15,7 @@
 
 ```
 RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
-1) git fetch origin claude/exciting-wright-b23t6c 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
+1) git fetch origin claude/hopeful-clarke-oprfw9 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
 2) ragestyles-shorts/HANDOFF.md 를 끝까지 읽고 규칙과 취향을 그대로 따라.
 3) bash ragestyles-shorts/setup.sh 로 소스 영상과 효과음을 받아 (Demucs, whisper 까지 필요하면 --full).
 4) 채널 방향은 최신 트렌드 운동, 헬스, 스포츠 영상이야. sources/cc_youtube_candidates.md 와 tools/stock_search.py (Pexels, Pixabay) 로 만들 영상 아이디어 3개를 먼저 제안해줘.
@@ -51,6 +51,19 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 자막: w1 의 네온 글로우는 어색하다는 평. 기존 TikTok Sans 흰 글씨 검정 테두리로. 도파민 효과(줌 펀치, 밝기, 쿵)는 계속.
 * 새 효과 `dim_in` (샷 키 `{hold, dur, from}`): 영상 첫 장면이 거의 까맣다가 순간 밝아짐. 오너가 가끔 쓰면 효과적이라고 함. 제목 글자는 어두워지지 않음.
 * 새 형식 참고: Goggins 쇼츠 (DailyMotivationDosis): 흰 바에 검정 설명 자막, 가로 영상, 빨간 화살표 (`meme` 레이아웃 + `arrow`). 주제 후보: Bodybuilders in Suits (1999 Mr. Olympia 클립), Eddie Hall (giantslivestrongman 클립 사용 채널 예시 hardcore_motivat1on).
+
+## 2-2. 지금 하던 일 (2026-09-30 기준, 새 세션은 여기서 시작)
+* 다음 영상 3개 (오너 요청): 1) Bodybuilders in Suits (1999 Mr. Olympia 클립), 2) Eddie Hall 500kg (원본 dFABFdd7nG4 의 Bilibili 재업로드), 3) David Goggins 이야기 (참고 형식: DailyMotivationDosis 의 흰 바 자막 + 빨간 화살표). 모티베이션 느낌, 도파민 효과 많이, 무거운 효과음만, 기존 자막 스타일 (글로우 금지), 가끔 `dim_in`.
+* 결과물만 오너에게: 소스 검색, 다운로드, 편집까지 Claude 가 직접.
+* Bilibili 소스 (work/ 는 커밋 안 되니 새 세션에서 다시 받기):
+  `yt-dlp -N 8 -f "bv*[height<=1080][vcodec^=avc1]+ba/bv*[height<=1080]+ba/b" --merge-output-format mp4 --write-info-json -o "work/bili/%(id)s.%(ext)s" https://www.bilibili.com/video/<BV>`
+  * BV1Vq4y127ww: Mister Olympia 1999 전체 (88분), BV1KT4y1Z74h: 1999 올림피아 현장 (19분), BV1YJ411g7e2: 숀 레이 1999, BV16Y411n7zj: 마이크 마타라조 1999
+  * BV1Yi4y1t7oU: Eddie Hall 500kg + 경기 후 인터뷰 (10분, 1080p, 원본 youtube dFABFdd7nG4), BV1vt411x7Jh: 500kg 25초
+  * Goggins: BV1dT4y1q7C3 (12분, 중국어 자막이 박혀 있을 수 있음, 확인), BV1uy411e7st (1시간 달리기 훈화, 중영 자막)
+* Bilibili 검색: yt-dlp 의 bilisearch 는 412 가 자주 남. 대신 홈페이지 방문으로 받은 익명 쿠키(buvid3)로 `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=...` 호출 (Referer https://search.bilibili.com/). 결과 bvid, duration, play, title, author.
+* 유튜브 쿠키 다운로드: 오너가 저장소 `.claude/settings.json` 에 `Bash(bash ragestyles-shorts/tools/yt_batch.sh:*)` 허락 규칙을 넣었고 (커밋 daa2877), 환경 변수 `YT_COOKIES_B64` (안 쓰는 계정 cookies.txt 의 base64) 를 넣었다고 함. 새 세션에서 `tools/yt_batch.sh` 를 만든다: 인자로 링크 목록 파일이나 URL 들, `YT_COOKIES_B64` 가 있으면 mktemp (chmod 600) 로 풀어 `--cookies`, 끝나면 trap 으로 삭제, `xargs -P 3` 병렬, `-N 8`, 1080p mp4, `--write-info-json`, 출력 `work/youtube/%(id)s.%(ext)s`. 반드시 `bash ragestyles-shorts/tools/yt_batch.sh ...` 형태로 저장소 루트에서 실행 (허락 규칙과 일치). 쿠키 값은 절대 출력, 커밋, 채팅 금지. 서버 IP 가 막히면 오너에게 알림.
+* 업로드 자동화 (다음 목표): 메인 채널은 YouTube Data API v3 + OAuth (쿠키와 별개). 오너가 Google Cloud 프로젝트, OAuth 클라이언트, refresh token 을 환경 변수로 준비해야 함. 검증 안 된 API 프로젝트로 올린 영상은 비공개로 잠김 (감사 통과 전까지), 기본 쿼터 videos.insert 하루 100개.
+* 드라이브: 소스 폴더 RageStyles YT1 (1-aIni1GNxG_GN87xXH6mFYgXkkoYW4Eu), 효과음 폴더는 2-1 참고 (새 세션에서 gdown 으로 다시 받고 ow_*.wav 로 변환).
 
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 

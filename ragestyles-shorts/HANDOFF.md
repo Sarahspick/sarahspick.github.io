@@ -15,7 +15,7 @@
 
 ```
 RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
-1) git fetch origin claude/exciting-wright-b23t6c 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
+1) git fetch origin claude/hopeful-clarke-oprfw9 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
 2) ragestyles-shorts/HANDOFF.md 를 끝까지 읽고 규칙과 취향을 그대로 따라.
 3) bash ragestyles-shorts/setup.sh 로 소스 영상과 효과음을 받아 (Demucs, whisper 까지 필요하면 --full).
 4) 채널 방향은 최신 트렌드 운동, 헬스, 스포츠 영상이야. sources/cc_youtube_candidates.md 와 tools/stock_search.py (Pexels, Pixabay) 로 만들 영상 아이디어 3개를 먼저 제안해줘.
@@ -43,6 +43,34 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 커밋 메시지와 산출물에 모델 이름을 쓰지 않습니다. 커밋 서명 줄은 그 세션의 안내를 따릅니다.
 * PR 은 사용자가 요청할 때만 만듭니다.
 
+## 2-1. 2026-09-30 오너 결정과 새 도구
+* 오너 방침: 다른 수익화 채널처럼 원 채널 크레딧과 "All rights go to the owners" 표기로 편집 영상을 만들고, 좋은 것은 오너가 DM 으로 허락을 받는다. David Goggins 는 자기 영상 편집을 허용했다고 오너가 전함. 표기 문구 자체는 권리를 주지 않음 (Content ID, 수익 이전, 스트라이크 위험은 오너가 알고 결정).
+* 위험 줄이기: 원본을 길게 그대로 쓰지 않기, 짧게 잘라 재구성 (정보 자막, 순위, 스토리, 리프레이밍), 원 채널 링크 크레딧, 음악은 업로드 때 유튜브 보관함.
+* 소스 사이트: Bilibili 는 이 환경에서 720p 까지 받아짐 (`yt-dlp "bilisearch10:키워드"` 는 가끔 412). archive.org, Vimeo, X, TikTok, Instagram, Reddit 접속됨. 유튜브 스트림은 여전히 봇 확인으로 막힘 (쿠키를 쓰는 자동 다운로드는 이 환경의 권한 검사에서 거부됨, 2026-09-30). 유튜브는 오너가 yt-dlp 로 받아 드라이브에 올리는 방식 유지 (여러 개는 `yt-dlp -a links.txt -N 8`).
+* 효과음: 드라이브 "자주쓰는 효과음" (1EKM0f9Q1x9010UZtuTwshZDgZsgJgiyL). 묵직한 것만 `assets/sfx_owner/ow_*.wav` 로 변환: `ow:boom` (저음 52%), `ow:transition` (42%), `ow:punch`, `ow:whoosh`, `ow:riser1`, `ow:riser8`. 가벼운 소리 16개(뾰로롱, 띠딩, 카툰 팝, 박수, 뿅 등)는 RageStyles 에 쓰지 않음. 과용 금지. git 제외.
+* 자막: w1 의 네온 글로우는 어색하다는 평. 기존 TikTok Sans 흰 글씨 검정 테두리로. 도파민 효과(줌 펀치, 밝기, 쿵)는 계속.
+* 새 효과 `dim_in` (샷 키 `{hold, dur, from}`): 영상 첫 장면이 거의 까맣다가 순간 밝아짐. 오너가 가끔 쓰면 효과적이라고 함. 제목 글자는 어두워지지 않음.
+* 새 형식 참고: Goggins 쇼츠 (DailyMotivationDosis): 흰 바에 검정 설명 자막, 가로 영상, 빨간 화살표 (`meme` 레이아웃 + `arrow`). 주제 후보: Bodybuilders in Suits (1999 Mr. Olympia 클립), Eddie Hall (giantslivestrongman 클립 사용 채널 예시 hardcore_motivat1on).
+
+## 2-2. 지금 하던 일 (2026-09-30 기준, 새 세션은 여기서 시작)
+* 다음 영상 3개 (오너 요청): 1) Bodybuilders in Suits (1999 Mr. Olympia 클립), 2) Eddie Hall 500kg (원본 dFABFdd7nG4 의 Bilibili 재업로드), 3) David Goggins 이야기 (참고 형식: DailyMotivationDosis 의 흰 바 자막 + 빨간 화살표). 모티베이션 느낌, 도파민 효과 많이, 무거운 효과음만, 기존 자막 스타일 (글로우 금지), 가끔 `dim_in`.
+* 결과물만 오너에게: 소스 검색, 다운로드, 편집까지 Claude 가 직접.
+* Bilibili 소스 (work/ 는 커밋 안 되니 새 세션에서 다시 받기):
+  `yt-dlp -N 8 -f "bv*[height<=1080][vcodec^=avc1]+ba/bv*[height<=1080]+ba/b" --merge-output-format mp4 --write-info-json -o "work/bili/%(id)s.%(ext)s" https://www.bilibili.com/video/<BV>`
+  * BV1Vq4y127ww: Mister Olympia 1999 전체 (88분), BV1KT4y1Z74h: 1999 올림피아 현장 (19분), BV1YJ411g7e2: 숀 레이 1999, BV16Y411n7zj: 마이크 마타라조 1999
+  * BV1Yi4y1t7oU: Eddie Hall 500kg + 경기 후 인터뷰 (10분, 1080p, 원본 youtube dFABFdd7nG4), BV1vt411x7Jh: 500kg 25초
+  * Goggins: BV1dT4y1q7C3 (12분, 중국어 자막이 박혀 있을 수 있음, 확인), BV1uy411e7st (1시간 달리기 훈화, 중영 자막)
+* Bilibili 검색: yt-dlp 의 bilisearch 는 412 가 자주 남. 대신 홈페이지 방문으로 받은 익명 쿠키(buvid3)로 `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=...` 호출 (Referer https://search.bilibili.com/). 결과 bvid, duration, play, title, author.
+* 유튜브 쿠키 다운로드: 오너가 저장소 `.claude/settings.json` 에 `Bash(bash ragestyles-shorts/tools/yt_batch.sh:*)` 허락 규칙을 넣었고 (커밋 daa2877), 환경 변수 `YT_COOKIES_B64` (안 쓰는 계정 cookies.txt 의 base64) 를 넣었다고 함. 새 세션에서 `tools/yt_batch.sh` 를 만든다: 인자로 링크 목록 파일이나 URL 들, `YT_COOKIES_B64` 가 있으면 mktemp (chmod 600) 로 풀어 `--cookies`, 끝나면 trap 으로 삭제, `xargs -P 3` 병렬, `-N 8`, 1080p mp4, `--write-info-json`, 출력 `work/youtube/%(id)s.%(ext)s`. 반드시 `bash ragestyles-shorts/tools/yt_batch.sh ...` 형태로 저장소 루트에서 실행 (허락 규칙과 일치). 쿠키 값은 절대 출력, 커밋, 채팅 금지. 서버 IP 가 막히면 오너에게 알림.
+* 업로드 자동화 (다음 목표): 메인 채널은 YouTube Data API v3 + OAuth (쿠키와 별개). 오너가 Google Cloud 프로젝트, OAuth 클라이언트, refresh token 을 환경 변수로 준비해야 함. 검증 안 된 API 프로젝트로 올린 영상은 비공개로 잠김 (감사 통과 전까지), 기본 쿼터 videos.insert 하루 100개.
+* 드라이브: 소스 폴더 RageStyles YT1 (1-aIni1GNxG_GN87xXH6mFYgXkkoYW4Eu), 효과음 폴더는 2-1 참고 (새 세션에서 gdown 으로 다시 받고 ow_*.wav 로 변환).
+
+## 2-3. 화질 (2026-09-30 오너 지적: o1 화질이 안 좋다)
+* 원인: 채팅 30MB 제한 때문에 6Mbps 로 다시 압축한 파일을 줬고, 1080p 가로 원본을 9:16 으로 자르면 폭 608px 을 1.8배 키움.
+* 앞으로: 완성본은 압축 전 고화질(crf 17 전후)을 `Downloads/.../<id>_HQ.mp4` 로 커밋하고 GitHub raw 링크로 전달 (예: https://github.com/Sarahspick/sarahspick.github.io/raw/<브랜치>/ragestyles-shorts/Downloads/...). 채팅에는 30MB 이하본만. GitHub 파일 한도 100MB.
+* 소스는 가능하면 4K 로 받기 (yt-dlp `height<=2160`), 9:16 크롭해도 선명.
+* 구글 드라이브 커넥터(오너가 연결함): 검색, 읽기, 작은 파일 업로드 가능. 영상처럼 큰 파일은 내용을 base64 로 직접 넘겨야 해서 업로드 불가.
+
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 
 콘텐츠
@@ -67,7 +95,15 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 제목은 위쪽(영상 박스 바로 위) 위치가 좋다고 했습니다. 자막은 영상 바로 아래.
 * ~~폰트 Dela Gothic One, 노랑→주황 그라데이션 강조~~ (2026-09-29 교체됨).
 * (2026-09-29) 폰트는 TikTok Sans (40M 조회수 쇼츠 61개 표지 분석에서 가장 많은 틱톡 기본 자막체 계열, BENCHMARK.md 참고). 자막 ExtraBold, 제목 Black, 흰 글자에 검정 테두리.
+* (2026-09-29) 참고 쇼츠의 "스컬 엔딩" 이 좋다고 함: 마지막 순간 💀 가 아래에서 날아 올라오고, 휘핑 블러 뒤 마지막 프레임이 흑백으로 멈춰 어두워지고 비네팅, 제목은 사라지고 💀 만 약 3초. 플랜 키는 5장 참고 (`still`, `bw`, `vid_darken`, `vignette`, `whip_in`, 자막 `anim: rise`).
 * (2026-09-29) 강조색은 그라데이션 하나가 아니라 노랑(`*단어*`, 255,214,0)과 주황(`~단어~`, 255,128,0)을 따로따로 씁니다.
+* (2026-09-29, g1 피드백) 가로로 넓게 찍힌 동작(바벨 헤드 프레스처럼 옆으로 긴 구도)은 쇼츠에 안 맞아서 버렸습니다. 세로 9:16 으로 사람에게 초점을 맞출 수 있는 소스를 고릅니다.
+* (2026-09-29, g1 피드백) 정보, 스토리텔링, 콘텐츠가 있어야 합니다. 대결이면 "Current Weight: 275 LBS", 누가 몇 kg 에서 실패했는지 같은 진행 상황을 텍스트로 계속 업데이트합니다 (화면 왼쪽이나 아래 고정 정보 패널).
+* (2026-09-29) 미스터 올림피아 같은 최신 대회 영상은 매우 좋다는 평. 영상 여러 개로 나눠 만들어도 됩니다.
+* (2026-09-29, o1 피드백) 영상 안에 없는 정보(예: 4위, 2위 상금)는 비워두지 말고 웹 검색으로 찾아서 채웁니다. 영상과 기사가 다르면 알려주고 영상(현장 발표)을 우선합니다.
+* (2026-09-29, o1 피드백) 순위표는 검정 상자 없이 글자만 (테두리와 그림자), 화면 왼쪽, 세로 40% 지점이 중심. 바뀌는 큰 자막은 ~~화면 가운데 아래쪽 (y 0.70)~~ 너무 아래라서 정중앙 살짝 아래 (y 0.56). 글자가 화면을 너무 가리면 안 되므로, 결과가 다 나오고 1~2초 뒤에 순위표를 없앱니다.
+* (2026-09-29, o1 v3) 순위표도 영상을 너무 가려서 뺐습니다. 화면 글자는 위 제목과 가운데 아래 자막 두 개만, 깔끔하게. 정보는 자막에 ("TONIO BURTON $30,000"). 발표 순간에는 빠른 살짝 줌인(`punch`), 밝기 번쩍(`flash`), 쿵 효과음을 넣습니다 (심심하지 않게).
+* (2026-09-29, o1 확정, "아주 잘했어") 다음 영상부터: 줌인과 밝기업은 o1 보다 조금 더 강하게 (punch zoom 1.12~1.15, flash amount 0.45~0.55), 자막은 정중앙 (y 0.50). o1 은 확정본, 더 편집하지 않음.
 
 ## 4. 지금까지 만든 영상과 반응
 
@@ -84,6 +120,11 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new6 c7 | 1949 대학 아크로바틱 (원본 내레이션) | 원본 소리 좋음, 그런데 뒤에 소리가 빠짐 |
 | new7 c4 v2, c7 v2 | 새 스타일 적용본 (블러 배경, 1:1, Dela Gothic One, 자막 영상 아래, c7 은 끝까지 원본 소리) | 폰트 교체 요청, 샌도우 줌 컷 부자연스러움, NO HANDS 틀림 |
 | new8 c4 v3, c7 v3 | TikTok Sans, 노랑과 주황 강조 분리, 샌도우는 포즈 줌인과 시간 건너뛰기 컷, 1949 자막 전부 재확인 | 사용자 확인 전 |
+| new10 t1, g1 skull | 스컬 엔딩 테스트: Pexels 캘리스데닉스 레벨 1~4, Gymshark 영상에 스컬 엔딩 | 사용자 확인 전 |
+| new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 제목과 자막 하나, 발표마다 줌 펀치, 밝기, 쿵, `plans9/build_o1.py`) | 아주 훌륭함, 확정. 순위표는 화면을 가려서 뺌. 다음엔 효과 더 강하게, 자막 정중앙 |
+| new13 w1 | 워드 바이 워드 모티베이션 첫 샘플 (닉 워커 우승 연설, 네온 글로우 키워드 자막 자동 생성) | 사용자 확인 전 |
+| new12 o2~o5, g2 | 올림피아: 전 챔피언 3명 vs 닉, 톱10 카운트다운, 닉 워커 스토리, 다우다 1일차. Gymshark 썰매 대결 (결과는 각자 인터뷰 샷 위에) | 사용자 확인 전 |
+| new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인
 
@@ -108,13 +149,24 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 
 플랜 JSON (최신 예시는 `plans7/c7_1949_acrobatics_v3.json`, `plans7/c4_sandow_1894_v3.json`)
 * `layout`: 생략하면 기본값 `{"mode": "blur", "box_aspect": 1.0, "box_top": 300}`. 키: `mode` (blur, meme, full), `box_aspect`, `box_top` (px), `box_y` (0~1 중심), `box_w`, `darken` (블러 배경 밝기, 기본 0.5), `bg` (meme 배경색).
-* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`, `path` (카메라 키프레임 `[[샷 안의 초, zoom, cx, cy], ...]`, 구간마다 부드럽게 이어짐. 포즈에서만 줌인하고 나머지는 멈춰 있게 할 때 씀).
-* `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
+* `shots[]`: `src` (`archive/Exercise1949` 처럼 `work/` 아래 경로, 확장자가 mp4 가 아니면 붙여 씀), `in`, `dur`, `speed`, `interp`, `zoom` (숫자 또는 [시작, 끝]), `cx`, `cy`, `ease`, `punch` ([{at, zoom, cx, cy, ramp, until}]), `audio` (원본 소리 사용), `af` (voice, film, ambience 필터), `audio_db`, `grade` ({sat, contrast, sharpen}), `bw`, `fade_in`, `fade_out`, 샷별 `layout`, `box_aspect`, `darken`, `still` (true 면 `in` 프레임을 멈춘 채로 dur 동안, 오디오는 그대로 이어짐), `vid_darken` (영상 박스 밝기, 스컬 엔딩 0.6~0.8), `vignette` (0~1), `whip_in` (샷 시작 모션 블러 초), `path` (카메라 키프레임 `[[샷 안의 초, zoom, cx, cy], ...]`, 구간마다 부드럽게 이어짐. 포즈에서만 줌인하고 나머지는 멈춰 있게 할 때 씀).
+* `captions[]`: `t`, `d`, `text`, `style`, `anim` (기본 pop, 제목은 none, `rise` 는 화면 아래에서 날아 올라와 착지, 스컬 이모지용). 텍스트 문법: `*노랑 강조*`, `~주황 강조~`, `:flexed-biceps:` 같은 Noto 이모지 이름, `:flag-us:` 국기, `\n` 줄바꿈, `\*` 는 별표 그대로. 위치 덮어쓰기 `x`, `y` (0~1), 대상에 고정은 `shot` + `x`, `y`. 크기와 모양 덮어쓰기: size, color, font, italic, stroke, max_w, max_lines, align, line_gap, bg, pad, upper, shadow.
 * 스타일: `title` (영상 위 제목), `cap` (영상 아래 자막), `big` (영상 아래 큰 대문자 라벨), `tag` (노랑 알약). 모두 TikTok Sans, 강조색은 `colors` (노랑, 주황). 예전 스타일 `title_dela`, `cap_dela` (Dela Gothic One 그라데이션), `sub`, `label`, `chapter`, `meme`, `top`, `action`, `list`, `story`, `big_anton`, `tag_old`, `title_old`.
 * `marks[]`: `arrow` (빨간 화살표), `circle` (손그림 빨간 원, `shot` 기준 좌표), `progress` (n 개 중 k, 진행 바), `dim` (화면 어둡게).
+* `marks[]` 의 `panel` (2026-09-29 추가, 오너 요청 정보 패널): `{"type": "panel", "t", "d", "x", "y" (왼쪽 위 모서리, 0~1), "w" (px), "size", "header", "rows": [{"t": 나타나는 시각, "text": "5TH  TONIO BURTON  *$30K*"}]}`. 어두운 반투명 상자에 줄이 하나씩 쌓입니다. 순위표, 현재 무게, 기록판에 씁니다.
+* 9:16 `full` 레이아웃에서 자막 위치는 `y` 로 직접 줍니다 (big 기본 위치는 박스 아래라 화면 밖). o1 은 제목 y 0.085, 큰 자막 y 0.56, 패널은 `yc` 0.40 (전체 높이의 중심), `alpha` 0 (상자 없음), `stroke` 6, `shadow` true, `fade_out`.
+* 플랜을 손으로 고치기보다 `plans9/build_o1.py` 처럼 빌드 스크립트로 만들면 샷 길이를 바꿔도 자막, 패널, 오디오 시각이 같이 따라갑니다.
 * `audio_clips[]`: 다른 샷 위에 원본 소리를 까는 J컷. `{src, in, dur, t, af, db, fade}`.
-* `sfx[]`: `{t, name, db}`. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
-* `lufs`: 목표 라운드니스 (-14).
+* `sfx[]`: `{t, name, db, in}` (`in` 은 효과음 앞부분을 건너뛰는 초. `mk:788_big_cinematic_impact` 는 임팩트가 2.12초, `mk:2908_movie_trailer_epic_impact` 는 0.7초에 있어서 `in` 없이 쓰면 늦게 터집니다).
+* 샷의 `flash`: `[{at, amount, dur}]` 발표 순간 밝기를 올렸다가 빠르게 되돌림. `punch` 와 같이 쓰면 "쿵" 느낌. `mk:` 로 시작하면 Mixkit (`mk:1143_cinematic_whoosh_deep_impact`), 아니면 `assets/sfx/` 합성음 (오너가 싫어하니 쓰지 않기).
+* `lufs`: 목표 라운드니스 (-14). 원본 소리가 없는 스톡 영상은 효과음만 커지지 않게 -20.
+
+워드 바이 워드 모티베이션 스타일 (2026-09-30, 참고: Peakzmotivation 에디 홀 500kg 쇼츠, 영상 700개 채널)
+* 형식: 인터뷰 목소리 + 1~4단어 자막, 그룹마다 키워드 하나를 네온 색으로 (`~` 빨강, `^` 초록, `+` 하늘, `%` 보라, `*` 노랑), 글로우, 핵심 단어에 punch + flash + 쿵, 말 내용에 맞는 B롤.
+* 자막 스타일 `word` (bench.py, TikTok Sans ExtraBold 88, glow 18). 새 색 표시 `+` `%` 는 render.py parse_tokens.
+* `pipeline/wordcaps.py`: whisper 단어 타임스탬프 → 캡션 목록 자동 (구 단위 묶기, 키워드 자동 선택, `force`/`skip`). 예시 `plans9/build_w1.py` (말 조각을 이어 붙이고 단어 시각을 출력 타임라인으로 옮김).
+* 참고 영상 채널은 팟캐스트와 WSM 중계를 무단 사용. 우리는 형식만, 소스는 CC BY 등 합법만.
+* CapCut 연결: 공식 API 없음. 오픈소스 VectCutAPI (github.com/sun-guannan/VectCutAPI) 가 CapCut 드래프트(draft_content.json)를 만들 수 있고, 오너 PC 의 CapCut 에서 열어 내보내기. 클라우드에서는 CapCut 실행 불가. 우선순위는 우리 렌더러 자동화, CapCut 은 선택.
 
 기타 도구
 * 대사 받아쓰기: faster-whisper `small.en` 또는 `medium.en`, `word_timestamps=True` 로 컷 지점을 단어 경계에 맞춥니다 (c7 v1 은 "fitness" 중간에서 잘렸던 것을 v2 에서 고침).
@@ -125,6 +177,12 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 폰트 분석 방법: 쇼츠 세로 표지 `i.ytimg.com/vi/<id>/oardefault.jpg` (1080x1920) 와 `oar1.jpg`, `oar2.jpg` 프레임을 받아 봅니다.
 * 받아쓴 대사: `sources/transcripts/` (Exercise1949 전체 대사, 초 단위).
 * 브라우저: Playwright 크로미움은 `/opt/pw-browsers` 에 있음. 프록시 인증서를 NSS 에 먼저 등록해야 합니다: `certutil -A -d sql:/root/.pki/nssdb -t "C,," -n ccr-agent-proxy -i /root/.ccr/agent-proxy-ca.crt`.
+
+유튜브 CC BY 영상 받는 방법 (2026-09-29 확정)
+* 오너가 자기 컴퓨터에서 yt-dlp 로 받습니다: `yt-dlp --cookies-from-browser firefox -f "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/b[height<=1080]" --merge-output-format mp4 -o "%(id)s.%(ext)s" <URL>`. 윈도우 크롬은 쿠키 DB 잠금과 새 암호화 때문에 실패하니 파이어폭스를 씁니다. nsig 에러가 나면 `yt-dlp -U` 와 Deno 설치. 쿠키는 이 환경으로 절대 가져오지 않습니다.
+* 채팅은 30MB 제한이라 구글 드라이브 공유 폴더로 넘깁니다: 내 드라이브 > Claude Youtube Project (https://drive.google.com/drive/folders/15ZuFnwkci3M4oeBMUKKiSUU5VHzC-RkW, 링크 공유) > 세션별 폴더 (이번 세션은 RageStyles YT1). 드라이브의 다른 폴더와 문서는 열지 않습니다.
+* 폴더 목록: `curl -sL "https://drive.google.com/embeddedfolderview?id=<폴더ID>"` 에서 파일 이름과 ID 를 읽고, `python3 -m gdown <파일ID> -O work/youtube/<ID>.mp4` 로 받습니다 (pip install gdown).
+* 받은 영상은 `work/youtube/` (커밋 안 함). 배경음악은 Demucs 로 필요한 구간만 분리해서 `work/youtube/gs_vox.mp4` 처럼 목소리와 함성만 남긴 파일을 만들어 씁니다 (plans8 참고, `in` 은 그 구간 기준).
 
 ## 6. 소스별 메모
 
@@ -158,6 +216,20 @@ python3 pipeline/qa.py work/renders/<id>.mp4 sheet.jpg                          
 * 하지 말 것: 올림픽, 세계육상, UFC 같은 공식 중계 영상 재사용 (Content ID 와 저작권 경고).
 
 ## 8. 다음 아이디어 (방향에 맞는 것)
+
+진행 중 (2026-09-29, 드라이브 RageStyles YT1 폴더의 Cq7TbOxcwPc.mp4, XlZZRCaETAs.mp4)
+* 소스: "2026 Mr. Olympia Finals Official Footage", OlympiaTV (https://youtu.be/Cq7TbOxcwPc), 77분, 1080p30. OlympiaTV 다른 영상은 CC 필터에 나오지만 이 영상은 아직 안 나옴. 업로드 전에 오너가 설명란 라이선스 확인 필요.
+* 구성: 0~30분 비교 심사(단체), 31~59분 선수별 개인 포징 루틴(한 명이 가운데, 9:16 에 최적), 1:00:10 탑10 포즈다운, 1:04~1:08 시상, 1:08 이후 탑3 메달, 우승 트로피, 인터뷰.
+* 개인 루틴 시작: Chinedu Andrew Obiekea 31:40, Tonio Burton 35:10, Michal Krizanek 38:00, Regan Grimes 39:40, James Hollingshead 41:50, Behrooz Tabani 52:00, Nick Walker 54:37~56:05, Derek Lunsford 57:01~59:24.
+* 결과 (대사로 확인, 초는 원본 기준): 5위 Tonio Burton 상금 $30,000 (~3855), 4위 Andrew Jacked (~3919), 3위 Derek Lunsford, 전 챔피언, 동메달 $100,000 (~4000), 마지막 둘 Samson Dauda 와 Nick Walker 가운데로 (~4074), 우승 Nick Walker, 금메달, 샌도우 트로피, $600,000, "2026 Mr. Olympia" (~4093~4125). 해설: "he defeated three former Mr. Olympia".
+* 받아쓴 대사: `work/youtube/olyend_tr.txt` (3570초부터, 줄 앞 숫자에 3570 을 더함).
+* 사람 추적: `tools/track_person.py` (torchvision 사람 검출, pip install torchvision --index-url https://download.pytorch.org/whl/cpu), 출력 path 를 shot 에 넣고 "ease": "linear".
+* 주의 (2026-09-29): 우승 발표 직후 꽃가루 속에서 닉을 안는 초록 트렁크 선수는 Samson 이 아니라 Andrew Jacked (4위, 초록 트렁크, 이미 메달). o1 의 "2ND SAMSON DAUDA $200,000" 자막이 이 포옹 샷 위에 있음 (확정본이라 그대로, 오너에게 알림). 사람 이름 자막은 그 사람이 화면에 있는 샷에만.
+* 2026 톱10 (fitnessvolt.com 결과, 무대 발표와 일치): 1 Nick Walker (미국), 2 Samson Dauda (영국), 3 Derek Lunsford (미국), 4 Andrew Jacked 본명 Chinedu Andrew Obiekea (UAE), 5 Tonio Burton (미국), 6 Michal Krizanek (슬로바키아), 7 Regan Grimes (캐나다), 8 Behrooz Tabani (이란), 9 Brandon Curry (미국), 10 James Hollingshead (영국). 역대 우승: 2019 Curry, 2023/2025 Lunsford, 2024 Dauda. 2025 결과: 1 Lunsford, 2 Choopan, 3 Andrew Jacked, 4 Dauda.
+* 루틴 포즈 확인 시각 (원본 초, 0.5초 단위로 확인): Hollingshead 2577 FDB, Curry 2838 FDB, Tabani 3130 FDB, Grimes 2388.5 FDB, Krizanek 2304.5 BDB, Burton 2179.7 FDB, Andrew Jacked 1952.5 FDB, Lunsford 3513.7 BDB, Dauda 3056.7 FDB, Walker 3297 FDB (Walker 루틴: 3294 앞 광배, 3304.5 사이드 체스트, 3316.5 BDB, 3322 뒤 광배).
+* `plans9/olycommon.py`: o2~o5 공용 (Short 클래스, hit = 줌 펀치 + 밝기 + 쿵). Demucs 본: `work/youtube/olyrt_vox.mp4` (1860~3580초), `oly_vox.mp4` (3840~4330초), `gs_sled_vox.mp4` (Gymshark 75~275초).
+* Gymshark 썰매 (XlZZRCaETAs): 이름표와 결과판 얼굴로 확인. 1 Lucy Davis 하이브리드 0:56, 2 Samantha Cubbins 크로스핏 1:02, 3 Lea Schreiner 독일 파워리프터 (벤치 100kg) 1:04, 4 Oyinda 펑셔널 1:28, 5 Yazmin Stevens 역도 1:46.
+* 쇼츠 계획: 1) 발표 카운트다운 (왼쪽 정보 패널에 5위부터 순위와 상금이 하나씩 쌓임, 마지막 1:1 Nick vs Samson, 우승 순간), 2) 새 챔피언 Nick Walker 포징 루틴 (포즈 이름은 프레임 확인 후), 3) 포즈다운 1:1 Nick vs Derek. Gymshark XlZZRCaETAs 는 여성 썰매 밀기/당기기 대결 (80kg, 100kg, 기록 01:04, 01:28, 01:46, 01:02, 00:56), 무게와 기록 패널로 만들기.
 
 최신 영상 (2026-09-29 추가, 우선)
 * 크리스 범스테드, 데이비드 레이드 등 짐샤크 스트렝스 테스트: 누가 제일 셀까 랭킹 (CTRL7o8iYgc).

@@ -1,0 +1,290 @@
+{
+ "id": "g1_gymshark_cameraman_skull",
+ "yt_title": "The cameraman outlifted Chris Bumstead \ud83d\udc80 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 1.0,
+  "box_top": 300,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/gs_vox",
+   "in": 10.3,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.44,
+   "zoom": [
+    1.14,
+    1.18
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 18.8,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.44,
+   "zoom": [
+    1.14,
+    1.18
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 61.0,
+   "dur": 3.2,
+   "cx": 0.56,
+   "cy": 0.42,
+   "zoom": [
+    1.14,
+    1.18
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 32.5,
+   "dur": 4.0,
+   "cx": 0.5,
+   "cy": 0.44,
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   },
+   "audio_db": -9,
+   "path": [
+    [
+     0,
+     1.12,
+     0.5,
+     0.42
+    ],
+    [
+     2.4,
+     1.12,
+     0.5,
+     0.42
+    ],
+    [
+     4.0,
+     1.18,
+     0.5,
+     0.38
+    ]
+   ]
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 39.3,
+   "dur": 2.0,
+   "cx": 0.5,
+   "cy": 0.44,
+   "zoom": [
+    1.12,
+    1.14
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   },
+   "audio_db": -9
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 91.3,
+   "dur": 2.8,
+   "cx": 0.5,
+   "cy": 0.44,
+   "zoom": [
+    1.14,
+    1.18
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 112.5,
+   "dur": 4.3,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    1.1,
+    1.14
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 122.3,
+   "dur": 3.2,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    1.1,
+    1.14
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   }
+  },
+  {
+   "src": "youtube/gs_vox",
+   "in": 125.5,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    1.14,
+    1.2
+   ],
+   "audio": true,
+   "af": "voice",
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.05,
+    "sharpen": 0.3
+   },
+   "bw": true,
+   "vid_darken": 0.62,
+   "vignette": 0.7,
+   "whip_in": 0.18,
+   "darken": 0.35,
+   "still": true
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 25.5,
+   "text": "Gymshark athletes vs\n*the cameraman* :skull:",
+   "style": "title",
+   "anim": "none"
+  },
+  {
+   "t": 0,
+   "d": 3.0,
+   "text": "*275 LBS*\nPUSH PRESS",
+   "style": "big"
+  },
+  {
+   "t": 3.0,
+   "d": 3.0,
+   "text": "~MISS~",
+   "style": "big"
+  },
+  {
+   "t": 6.0,
+   "d": 3.2,
+   "text": "NOAH OHLSEN\n~MISS~",
+   "style": "big"
+  },
+  {
+   "t": 9.2,
+   "d": 4.0,
+   "text": "CHRIS BUMSTEAD\n*LOCKS IT OUT*",
+   "style": "big"
+  },
+  {
+   "t": 13.2,
+   "d": 2.0,
+   "text": "*WINNER* :trophy:",
+   "style": "big"
+  },
+  {
+   "t": 15.2,
+   "d": 2.8,
+   "text": "THEN ~THE CAMERAMAN~\nTRIES IT :video-camera:",
+   "style": "big"
+  },
+  {
+   "t": 18.0,
+   "d": 4.3,
+   "text": "*275 LBS*\nLOCKED OUT :check-mark-button:",
+   "style": "big"
+  },
+  {
+   "t": 22.3,
+   "d": 1.6,
+   "text": "NOW *285 LBS*",
+   "style": "big"
+  },
+  {
+   "t": 23.900000000000002,
+   "d": 4.6,
+   "text": "~OUTLIFTED EVERYONE~",
+   "style": "big"
+  },
+  {
+   "t": 24.95,
+   "d": 3.55,
+   "text": ":skull:",
+   "style": "big",
+   "anim": "rise",
+   "size": 190,
+   "x": 0.5,
+   "y": 0.52
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 25.4,
+   "name": "mk:1490_fast_whoosh_transition",
+   "db": -12
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/gs_vox",
+   "in": 74.5,
+   "dur": 4.8,
+   "t": 10.1,
+   "af": "voice",
+   "db": 2
+  }
+ ],
+ "lufs": -14.0
+}

@@ -30,7 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import render as R  # noqa: E402  (text, emoji, crop and audio helpers)
 
-W, H, FPS, SR = 1080, 1920, 30, 48000
+W, H, FPS, SR = 1080, 1920, int(os.environ.get("RS_FPS", "30")), 48000  # RS_FPS=60 for a 60 fps master
 ROOT = os.path.dirname(HERE)
 SRC_DIR = os.environ.get("RS_SOURCES", os.path.join(ROOT, "work", "dvids"))
 SFX_DIR = os.path.join(ROOT, "assets", "sfx")
@@ -81,6 +81,9 @@ STYLES = {
     # big punch label under the video ("20.00 FLAT")
     "big": dict(font=CAP_FONT + " Black", size=84, color=(255, 255, 255), stroke=7, shadow=True, upper=True,
                 italic=0.0, colors=HILITE, stroke_color=EDGE, max_w=940),
+    # word-by-word caption with neon glow (Peakz-style motivational shorts): 1 to 3 words, keywords coloured
+    "word": dict(font=CAP_FONT + " ExtraBold", size=88, color=(255, 255, 255), stroke=3, shadow=False, upper=True,
+                 italic=0.0, colors=None, stroke_color=(0, 0, 0), max_w=900, glow=18),
     # small pill ("TEST 3/10", "1910")
     "tag": dict(font=CAP_FONT + " ExtraBold", size=38, color=(20, 10, 0), stroke=0, shadow=False, upper=True,
                 italic=0.0, bg=YELLOW, pad=(22, 10)),
@@ -170,7 +173,27 @@ def caption_image(text, style, **over):
                         bg=tuple(st["bg"]) if st.get("bg") else None, pad=tuple(st.get("pad", (28, 18))),
                         gradients=st.get("gradients"), stroke_color=tuple(st.get("stroke_color", (0, 0, 0))),
                         outline=st.get("outline", 0), colors=st.get("colors"))
+    if st.get("glow"):  # soft neon glow in each word's own colour (the "word by word" motivational look)
+        img = glow(img, st["glow"])
     return shear(img, st["italic"])
+
+
+def glow(img, radius):
+    pad = int(radius * 3)
+    base = Image.new("RGBA", (img.width + 2 * pad, img.height + 2 * pad), (0, 0, 0, 0))
+    base.alpha_composite(img, (pad, pad))
+    a = np.asarray(base).astype(np.float32)
+    lum = a[..., :3].max(axis=2)
+    # glow only from the letters (bright), not from the black stroke
+    src = a.copy()
+    src[..., 3] = src[..., 3] * np.clip((lum - 90) / 120, 0, 1)
+    g1 = np.asarray(Image.fromarray(src.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(radius))).astype(np.float32)
+    g2 = np.asarray(Image.fromarray(src.astype(np.uint8), "RGBA").filter(ImageFilter.GaussianBlur(radius * 0.4))).astype(np.float32)
+    g = g1 * 1.0 + g2 * 0.8
+    g[..., 3] = np.clip(g[..., 3] * 2.2, 0, 255)
+    out = Image.fromarray(np.clip(g, 0, 255).astype(np.uint8), "RGBA")
+    out.alpha_composite(base)
+    return out
 
 
 def arrow_image(length=190, width=30, head=78, color=RED):
@@ -195,6 +218,33 @@ def arrow_image(length=190, width=30, head=78, color=RED):
     return out, (tip, cy)
 
 
+def panel_image(m, k):
+    """Info panel (dark rounded box, left-aligned rows) showing the header and the first k rows.
+    m: {"header": "RESULTS", "rows": [{"t", "text"}], "w": px, "size": px}. Rows use the caption syntax
+    (*yellow*, ~orange~, :emoji:). The box grows by one row each time a row appears."""
+    size, w, pad = m.get("size", 46), int(m.get("w", 600)), 26
+    txt = dict(font_name=CAP_FONT + " ExtraBold", size=size, stroke=m.get("stroke", 4), shadow=m.get("shadow", False),
+               upper=True, align="left",
+               max_w=w - 2 * pad, max_lines=1, min_size=24, colors=HILITE, stroke_color=EDGE)
+    head = R.render_text(m["header"], **dict(txt, size=int(size * 0.78), color=YELLOW)) if m.get("header") else None
+    rows = [R.render_text(r["text"], **txt) for r in m["rows"]][:k]
+    gap = int(size * 0.28)
+    hh = head.height + gap if head else 0
+    H_ = pad * 2 + hh + sum(r.height for r in rows) + gap * max(0, len(rows) - 1) - (gap if head and not rows else 0)
+    img = Image.new("RGBA", (w, H_), (0, 0, 0, 0))
+    if m.get("alpha", 0.62) > 0:  # alpha 0: no box, text only (owner prefers it without the dark box)
+        ImageDraw.Draw(img).rounded_rectangle((0, 0, w - 1, H_ - 1), radius=28,
+                                              fill=(10, 10, 14, int(255 * m.get("alpha", 0.62))))
+    y = pad
+    if head:
+        img.alpha_composite(head, (pad, y))
+        y += hh
+    for r in rows:
+        img.alpha_composite(r, (pad, y))
+        y += r.height + gap
+    return img
+
+
 def rotated_arrow(angle, length):
     """Arrow pointing along `angle` (degrees, screen coords: 0 = right, 90 = down). Returns image and tip offset."""
     img, (tx, ty) = arrow_image(length)
@@ -204,6 +254,19 @@ def rotated_arrow(angle, length):
     dx, dy = tx - cx, ty - cy
     rx, ry = dx * math.cos(a) - dy * math.sin(a), dx * math.sin(a) + dy * math.cos(a)
     return rot, (rot.width / 2 + rx, rot.height / 2 + ry)
+
+
+_VIG = {}
+
+
+def R_vignette(w, h, amount):
+    """Radial darkening mask, 1 in the middle, 1 - amount in the corners."""
+    key = (w, h, amount)
+    if key not in _VIG:
+        yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+        r = np.sqrt(((xx - w / 2) / (w / 2)) ** 2 + ((yy - h / 2) / (h / 2)) ** 2) / math.sqrt(2)
+        _VIG[key] = (1 - amount * np.clip(r, 0, 1) ** 1.6).astype(np.float32)
+    return _VIG[key]
 
 
 # ------------------------------------------------------------------ video streams
@@ -231,12 +294,15 @@ class ShotStream:
             filters.append(f"scale={w}:{h}")
         if abs(speed - 1) > 1e-3:
             filters.append(f"setpts=PTS/{speed:.5f}")
-            if self.info["fps"] / speed < FPS - 1 and shot.get("interp", True):
-                filters.append(f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1")
+        # motion-interpolate the source per shot (slow motion, or a 60 fps render of a 30 fps source), so cuts and
+        # captions never blend: captions are drawn afterwards at the output frame rate
+        if self.info["fps"] / speed < FPS - 1 and shot.get("interp", True):
+            filters.append(f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff")
         filters.append(f"fps={FPS}")
         self.w, self.h, self.n = w, h, n_frames
+        n_read = 1 if shot.get("still") else n_frames + 2  # still: freeze the frame at `in` for the whole shot
         cmd = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-ss", f"{shot['in']:.3f}", "-i", path,
-               "-vf", ",".join(filters), "-frames:v", str(n_frames + 2), "-an", "-f", "rawvideo", "-pix_fmt", "rgb24",
+               "-vf", ",".join(filters), "-frames:v", str(n_read), "-an", "-f", "rawvideo", "-pix_fmt", "rgb24",
                "-"]
         self.proc = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
         self.last = None
@@ -289,6 +355,9 @@ class Bench:
             if m["type"] == "arrow":
                 img, tip = rotated_arrow(m.get("angle", 135), m.get("len", 190))
                 self.marks.append((m, R.to_np_rgba(img), tip))
+            elif m["type"] == "panel":  # leaderboard / info box whose rows appear one by one (owner: info panel)
+                states = [R.to_np_rgba(panel_image(m, k)) for k in range(len(m["rows"]) + 1)]
+                self.marks.append((m, states, None))
             else:
                 self.marks.append((m, None, None))
 
@@ -353,6 +422,26 @@ class Bench:
         vid = R.sharpen(np.clip(vid, 0, 255).astype(np.uint8), g.get("sharpen", 0.35)).astype(np.float32)
         if shot.get("bw"):
             vid = np.repeat((vid @ np.array([0.299, 0.587, 0.114], np.float32))[..., None], 3, axis=2)
+        if shot.get("vid_darken"):  # e.g. 0.6 for the dark "skull edit" freeze
+            vid *= shot["vid_darken"]
+        di = shot.get("dim_in")  # opening hit: starts almost black, holds, then snaps bright ({hold, dur, from})
+        if di:
+            u = (lt - di.get("hold", 0.35)) / di.get("dur", 0.25)
+            lvl = di.get("from", 0.12) if u < 0 else (1.0 if u >= 1 else di.get("from", 0.12) + (1 - di.get("from", 0.12)) * ease(u, "out"))
+            vid = vid * lvl
+        for f in shot.get("flash", []):  # reveal hit: quick brightness lift that fades ({at, amount, dur})
+            u = (lt - f["at"]) / f.get("dur", 0.45)
+            if 0 <= u < 1:
+                vid = vid * (1 + f.get("amount", 0.25) * (1 - u) ** 2) + 18 * f.get("amount", 0.25) * (1 - u) ** 2
+        if shot.get("vignette"):
+            vid *= R_vignette(rw, rh, shot["vignette"])[..., None]
+        wb = shot.get("whip_in", 0.0)  # motion blur that settles over the first `whip_in` seconds
+        if wb and lt < wb:
+            n = int(round(90 * (1 - ease(lt / wb, "out")))) // 2 * 2 + 1
+            if n > 2:
+                kern = np.zeros((n, n), np.float32)
+                cv2.line(kern, (0, n - 1), (n - 1, 0), 1.0, 1)
+                vid = cv2.filter2D(vid, -1, kern / kern.sum())
         fade = shot.get("fade_in", 0.0)
         if fade and lt < fade:
             vid *= lt / fade
@@ -379,6 +468,17 @@ class Bench:
                     xs = x0 + i * (sw + gap)
                     col = tuple(m.get("fill", (255, 214, 10))) if i < k_ else tuple(m.get("empty", (70, 70, 70)))
                     cv2.rectangle(out, (int(xs), int(yc - hh / 2)), (int(xs + sw), int(yc + hh / 2)), col, -1)
+                continue
+            if m["type"] == "panel":
+                shown = sum(1 for r in m["rows"] if r["t"] <= t)
+                rgb, a = art[shown]
+                h, w = rgb.shape[:2]
+                op = min(1.0, k / 0.2, (m["t"] + m["d"] - t) / m.get("fade_out", 0.3))
+                if "yc" in m:  # vertical centre of the full panel (all rows), so it grows from a fixed top
+                    top = m["yc"] * H - art[-1][0].shape[0] / 2
+                else:
+                    top = m.get("y", 0.6) * H
+                R.blit(out, rgb, a, m.get("x", 0.04) * W + w / 2, top + h / 2, opacity=op)
                 continue
             if m["type"] == "dim":
                 rx, ry, rw, rh = self.region(self.timeline[seg_idx]["shot"]) if m.get("region", "box") == "box" \
@@ -435,6 +535,10 @@ class Bench:
             if c.get("fade_out") and tail < c["fade_out"]:
                 op *= tail / c["fade_out"]
             x, y = self.caption_pos(c, rgb.shape[0], seg, to_out)
+            if c.get("anim") == "rise":  # flies up from below the screen and lands (skull edit emoji)
+                u = min(1.0, k / c.get("rise", 0.45))
+                y += (H - y + rgb.shape[0]) * (1 - ease(u, "out"))
+                s, op = 1.0, 1.0
             R.blit(out, rgb, a, x, y, scale=s, opacity=op)
 
     def caption_pos(self, c, h, seg, to_out):
@@ -547,11 +651,17 @@ class Bench:
             mix[st:st + ln] += a
         for cue in self.p.get("sfx", []):
             name = cue["name"]
-            path = (os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav") if name.startswith("mk:")
-                    else os.path.join(SFX_DIR, name + ".wav"))  # "mk:" = licensed Mixkit sound
+            if name.startswith("mk:"):  # licensed Mixkit sound
+                path = os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav")
+            elif name.startswith("ow:"):  # owner's own sound pack (Drive "자주쓰는 효과음"), heavy ones only
+                path = os.path.join(ROOT, "assets", "sfx_owner", "ow_" + name[3:] + ".wav")
+            else:
+                path = os.path.join(SFX_DIR, name + ".wav")
             x, sr = sf.read(path, dtype="float32")
             if x.ndim == 1:
                 x = np.stack([x, x], 1)
+            if cue.get("in"):  # skip a sound's build-up so its impact lands on cue["t"]
+                x = x[int(cue["in"] * sr):]
             st = int(cue["t"] * SR)
             if st < 0:
                 x, st = x[-st:], 0

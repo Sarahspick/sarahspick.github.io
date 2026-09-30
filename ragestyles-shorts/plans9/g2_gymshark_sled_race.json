@@ -1,0 +1,443 @@
+{
+ "id": "g2_gymshark_sled_race",
+ "yt_title": "Powerlifter vs CrossFit vs Hybrid: who wins? 🤔 #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 12.0,
+   "dur": 2.6,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 53.5,
+   "dur": 2.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.3,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.3,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 60.0,
+   "dur": 2.6,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 102.0,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 109.5,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/XlZZRCaETAs",
+   "in": 22.6,
+   "dur": 2.4,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/XlZZRCaETAs",
+   "in": 43.0,
+   "dur": 2.4,
+   "cx": 0.59,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/XlZZRCaETAs",
+   "in": 36.0,
+   "dur": 2.4,
+   "cx": 0.53,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/XlZZRCaETAs",
+   "in": 53.6,
+   "dur": 2.2,
+   "cx": 0.59,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/XlZZRCaETAs",
+   "in": 62.3,
+   "dur": 2.4,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.13,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.48,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 188.6,
+   "dur": 3.2,
+   "cx": 0.62,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -2,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 0.4,
+     "zoom": 1.15,
+     "ramp": 0.13
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.4,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 27.2,
+   "text": "Powerlifter vs CrossFit\nvs *Hybrid* :thinking-face:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.085
+  },
+  {
+   "t": 0.0,
+   "d": 2.6,
+   "text": "SLED PUSH + PULL\n*80KG* :person-lifting-weights:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.8,
+   "d": 2.6,
+   "text": "THAT'S LEA'S\n*BENCH PRESS* :skull:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 7.4,
+   "d": 2.4,
+   "text": "NOW IT'S A *RACE* :stopwatch:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 9.8,
+   "d": 2.4,
+   "text": "PUSH 15M, *PULL* 15M",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 12.2,
+   "d": 2.4,
+   "text": "~5TH~ YAZMIN\nOLYMPIC LIFTER *1:46*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 14.6,
+   "d": 2.4,
+   "text": "~4TH~ OYINDA\nFUNCTIONAL *1:28*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 17.0,
+   "d": 2.4,
+   "text": "~3RD~ LEA :flag-de:\nPOWERLIFTER *1:04*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 19.4,
+   "d": 2.2,
+   "text": "~2ND~ SAMANTHA\nCROSSFIT *1:02*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 21.6,
+   "d": 2.4,
+   "text": "*1ST* LUCY :trophy:\nHYBRID ATHLETE *0:56*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 24.0,
+   "d": 3.2,
+   "text": "THE HYBRID\n*BEAT THEM ALL* :fire:",
+   "style": "big",
+   "y": 0.5
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 2.9,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 12.4,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 14.8,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 17.2,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 19.6,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 21.8,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": -3
+  },
+  {
+   "t": 24.4,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/gs_sled_vox",
+   "in": 173.0,
+   "dur": 11.8,
+   "t": 12.2,
+   "af": "voice",
+   "db": -4,
+   "fade": 0.2
+  }
+ ],
+ "lufs": -14.0
+}

@@ -1,0 +1,500 @@
+{
+ "id": "o1_olympia_2026_results",
+ "yt_title": "Who won the 2026 Mr. Olympia? 🏆 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_top": 370,
+  "box_w": 1080,
+  "box_aspect": 0.6968,
+  "darken": 0.45
+ },
+ "shots": [
+  {
+   "src": "youtube/oly_vox",
+   "in": 62.0,
+   "dur": 3.8,
+   "cx": 0.46,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 129.2,
+   "dur": 4.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 186.7,
+   "dur": 3.8,
+   "cx": 0.52,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "punch": [
+    {
+     "at": 2.25,
+     "zoom": 1.08,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.25,
+     "amount": 0.28,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 284.5,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -16,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "layout": "blur",
+   "box_aspect": 1.0,
+   "darken": 0.45
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 288.0,
+   "dur": 2.6,
+   "cx": 0.37,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -16,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 291.0,
+   "dur": 2.6,
+   "cx": 0.62,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -16,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 295.3,
+   "dur": 4.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": 0,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "ease": "linear",
+   "path": [
+    [
+     0.0,
+     1.0,
+     0.418,
+     0.495
+    ],
+    [
+     1.0,
+     1.0,
+     0.41,
+     0.47
+    ],
+    [
+     2.0,
+     1.0,
+     0.441,
+     0.452
+    ],
+    [
+     3.0,
+     1.0,
+     0.45,
+     0.486
+    ],
+    [
+     4.4,
+     1.0,
+     0.442,
+     0.506
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.1,
+     "ramp": 0.14
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 295.9,
+   "dur": 3.0,
+   "cx": 0.62,
+   "cy": 0.5,
+   "zoom": [
+    1.04,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -6,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   },
+   "speed": 0.5
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 359.6,
+   "dur": 3.6,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.05,
+    "contrast": 1.06,
+    "sharpen": 0.45
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 30.8,
+   "text": "Who won the 2026\n*Mr. Olympia*? :trophy:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.1335
+  },
+  {
+   "t": 0.0,
+   "d": 2.25,
+   "text": "*5TH* PLACE",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 2.25,
+   "d": 1.55,
+   "text": "TONIO BURTON\n*$30,000*",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 3.8,
+   "d": 2.25,
+   "text": "*4TH* PLACE",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 6.05,
+   "d": 1.75,
+   "text": "ANDREW JACKED\n*$40,000*",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 7.8,
+   "d": 2.25,
+   "text": "*3RD* PLACE\n~LAST YEAR'S CHAMPION~",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 10.05,
+   "d": 1.55,
+   "text": "DEREK LUNSFORD\n*$100,000*",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 11.6,
+   "d": 3.0,
+   "text": "LAST ~2~ STANDING",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 14.6,
+   "d": 2.6,
+   "text": "NICK WALKER",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 17.2,
+   "d": 2.6,
+   "text": "OR SAMSON DAUDA?",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 20.4,
+   "d": 3.8,
+   "text": "*NICK WALKER* WINS :trophy:\n*$600,000*",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 24.2,
+   "d": 3.0,
+   "text": "~2ND~ SAMSON DAUDA\n*$200,000*",
+   "style": "big",
+   "y": 0.56
+  },
+  {
+   "t": 27.2,
+   "d": 3.6,
+   "text": "HE BEAT ~3~ FORMER\nMR. OLYMPIAS :exploding-head:",
+   "style": "big",
+   "y": 0.56
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 2.25,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 6.05,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 10.05,
+   "name": "mk:788_big_cinematic_impact",
+   "in": 2.12,
+   "db": 0
+  },
+  {
+   "t": 20.4,
+   "name": "mk:2908_movie_trailer_epic_impact",
+   "in": 0.7,
+   "db": -2
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/oly_vox",
+   "in": 14.5,
+   "dur": 2.05,
+   "t": 0.1,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 19.1,
+   "dur": 1.55,
+   "t": 2.25,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 77.5,
+   "dur": 2.05,
+   "t": 3.9,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 83.6,
+   "dur": 1.35,
+   "t": 6.05,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 161.5,
+   "dur": 2.1,
+   "t": 7.9,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 168.6,
+   "dur": 1.5,
+   "t": 10.05,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 233.9,
+   "dur": 3.0,
+   "t": 11.6,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 276.4,
+   "dur": 2.8,
+   "t": 14.6,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 281.9,
+   "dur": 2.7,
+   "t": 17.2,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 316.4,
+   "dur": 2.9,
+   "t": 27.4,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 299.7,
+   "dur": 3.0,
+   "t": 24.2,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0
+}

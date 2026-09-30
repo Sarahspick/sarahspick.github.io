@@ -1,4 +1,4 @@
-# RageStyles 쇼츠 인수인계 문서 (2026-09-29, 2차 갱신)
+# RageStyles 쇼츠 인수인계 문서 (2026-09-30, 3차 갱신)
 
 새 Claude 세션(다른 계정 포함)이 이 문서 하나만 읽고 바로 이어서 일할 수 있게 쓴 문서입니다.
 저장소 루트의 `HANDOFF.md`는 다른 프로젝트(Sarah's Pick) 문서이니 건드리지 않습니다.
@@ -37,7 +37,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 유튜브 영상은 이 환경에서 재생과 다운로드가 봇 확인으로 막혀 있습니다. 우회하지 않습니다. 분석은 정지 프레임(`i.ytimg.com/vi/<id>/hq1.jpg` 등)과 사용자가 채팅에 올린 파일로만 합니다.
 * 네트워크 정책을 우회하지 않습니다. 403 으로 막힌 호스트는 사용자에게 알리고 허용 목록 추가를 부탁합니다.
 * 구글 드라이브에 개인 민감 문서(여권, 신분증, 통장 사본, 계약서)가 있습니다. 절대 열거나 사용하지 않습니다.
-* 유튜브 쿠키, 비밀번호, 계정 정보를 요구하거나 다루지 않습니다.
+* 유튜브 쿠키, 비밀번호, 계정 정보를 요구하거나 다루지 않습니다. 예외는 오너가 2026-09-30 에 허락한 `tools/yt_batch.sh` 와 환경 변수 `YT_COOKIES_B64` 뿐이고, 값은 절대 출력, 커밋, 채팅하지 않습니다 (2-3 참고).
 * 저장소가 공개(public)입니다. 원본 영상(`work/`), Mixkit 효과음 파일(`assets/sfx_mixkit/*.mp3, *.wav`), 사용자가 올린 참고 영상은 커밋하지 않습니다. 완성된 쇼츠 mp4 와 UPLOAD_INFO.md 는 `Downloads/` 에 커밋합니다.
 * 대시 기호("—", "-")는 영상 문구, 설명, 채팅 답변에서 쓰지 않습니다. 쉼표와 마침표로 씁니다.
 * 커밋 메시지와 산출물에 모델 이름을 쓰지 않습니다. 커밋 서명 줄은 그 세션의 안내를 따릅니다.
@@ -64,6 +64,15 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 유튜브 쿠키 다운로드: 오너가 저장소 `.claude/settings.json` 에 `Bash(bash ragestyles-shorts/tools/yt_batch.sh:*)` 허락 규칙을 넣었고 (커밋 daa2877), 환경 변수 `YT_COOKIES_B64` (안 쓰는 계정 cookies.txt 의 base64) 를 넣었다고 함. 새 세션에서 `tools/yt_batch.sh` 를 만든다: 인자로 링크 목록 파일이나 URL 들, `YT_COOKIES_B64` 가 있으면 mktemp (chmod 600) 로 풀어 `--cookies`, 끝나면 trap 으로 삭제, `xargs -P 3` 병렬, `-N 8`, 1080p mp4, `--write-info-json`, 출력 `work/youtube/%(id)s.%(ext)s`. 반드시 `bash ragestyles-shorts/tools/yt_batch.sh ...` 형태로 저장소 루트에서 실행 (허락 규칙과 일치). 쿠키 값은 절대 출력, 커밋, 채팅 금지. 서버 IP 가 막히면 오너에게 알림.
 * 업로드 자동화 (다음 목표): 메인 채널은 YouTube Data API v3 + OAuth (쿠키와 별개). 오너가 Google Cloud 프로젝트, OAuth 클라이언트, refresh token 을 환경 변수로 준비해야 함. 검증 안 된 API 프로젝트로 올린 영상은 비공개로 잠김 (감사 통과 전까지), 기본 쿼터 videos.insert 하루 100개.
 * 드라이브: 소스 폴더 RageStyles YT1 (1-aIni1GNxG_GN87xXH6mFYgXkkoYW4Eu), 효과음 폴더는 2-1 참고 (새 세션에서 gdown 으로 다시 받고 ow_*.wav 로 변환).
+
+## 2-3. 2026-09-30 세션 결과 (새 세션은 2-2 대신 여기부터)
+* 만든 영상: `Downloads/new14/` s1 (1999 올림피아 정장 기자회견), e1 (에디 홀 500kg, 스컬 엔딩), d1 (고긴스 297 lbs 에서 네이비 씰, 흰 카드 형식). 빌드 스크립트 `plans10/build_s1.py`, `build_e1.py`, `build_d1.py`, 공용 `plans10/rscommon.py` (hit = 줌 펀치 + 밝기 + `ow:boom`, `sound()` 는 효과음 임팩트 위치 `PEAK` 에 맞춰 배치, `vox()` 는 Demucs 사본에서 원본 초로 소리를 가져옴). 오너 확인 전.
+* 유튜브 다운로드 됨: `bash ragestyles-shorts/tools/yt_batch.sh links.txt` (저장소 루트에서, URL 또는 영상 ID 도 됨). `YT_COOKIES_B64` 를 mktemp(600) 에 풀고 끝나면 삭제, 쿠키 값은 출력하지 않음 (youtube 줄 수만 출력). n 챌린지에 Node 22 필요 (`/opt/node22/bin/node`, PATH 의 node 20 은 yt-dlp 가 거부) 와 `pip install "yt-dlp[default]"` (yt-dlp-ejs). 형식은 avc1 우선 (AV1 은 OpenCV 가 못 읽음). 대시로 시작하는 ID 는 파일 이름을 바꿔 씀 (`-K0chGkV0IE` → `K0chGkV0IE.mp4`).
+* 원본 dFABFdd7nG4 (에디 홀) 는 유튜브에서 "unavailable". Giants Live 공식 다큐 -K0chGkV0IE (1080p, 클로즈업 많음, 음악 있어 Demucs) 를 씀. 같은 채널 T9Y4o_BqC0A 는 관중석 폰 촬영 가로 구도라 안 씀.
+* 효과음 변환 규칙: 드라이브 13 BOOM → `ow_boom`, 12 화면전환 → `ow_transition`, 9 펀치 → `ow_punch`, 8 훅 → `ow_whoosh`, Riser 01/08 → `ow_riser1`/`ow_riser8` (48kHz 스테레오 wav). 임팩트 위치 boom 0.29초, punch 0.47, riser1 1.98, riser8 3.66, transition 0.96.
+* 새 자막 스타일 `memebar` (bench.py): 흰 카드 위 검정 TikTok Sans ExtraBold 78, `*` 는 빨강. `layout` 은 `{"mode": "meme", "bg": [255,255,255], "box_aspect": 1.7778, "box_w": 1080, "box_y": 0.53}`, 화살표는 `marks` 의 `arrow` (tip 좌표).
+* 1999 기자회견 이름표는 옆 사람 것일 때가 많음 (로니 앞에 "Jay Cutler" 이름표 등). 얼굴은 GETBIG.TV 영상의 이름 자막과 사회자 호명으로 확인. Mocvideo 결과 화면과 위키백과 순위가 다름 (륄 실격 반영 차이), 오너에게 알림.
+* 다음: 오너 피드백 반영, 업로드 자동화 (2-2 마지막 항목).
 
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 
@@ -118,6 +127,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new11 o1 | 2026 미스터 올림피아 결과 카운트다운 (9:16, 제목과 자막 하나, 발표마다 줌 펀치, 밝기, 쿵, `plans9/build_o1.py`) | 아주 훌륭함, 확정. 순위표는 화면을 가려서 뺌. 다음엔 효과 더 강하게, 자막 정중앙 |
 | new13 w1 | 워드 바이 워드 모티베이션 첫 샘플 (닉 워커 우승 연설, 네온 글로우 키워드 자막 자동 생성) | 사용자 확인 전 |
 | new12 o2~o5, g2 | 올림피아: 전 챔피언 3명 vs 닉, 톱10 카운트다운, 닉 워커 스토리, 다우다 1일차. Gymshark 썰매 대결 (결과는 각자 인터뷰 샷 위에) | 사용자 확인 전 |
+| new14 s1, e1, d1 | 1999 올림피아 정장 기자회견, 에디 홀 500kg (스컬 엔딩), 고긴스 297 lbs 에서 씰 (흰 카드, 빨간 화살표) | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인

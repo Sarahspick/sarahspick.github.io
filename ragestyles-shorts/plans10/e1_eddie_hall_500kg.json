@@ -1,0 +1,539 @@
+{
+ "id": "e1_eddie_hall_500kg",
+ "yt_title": "The lift that almost killed Eddie Hall 💀 500kg deadlift #shorts",
+ "layout": {
+  "mode": "full"
+ },
+ "shots": [
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 256.8,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "dim_in": {
+    "hold": 0.35,
+    "dur": 0.2,
+    "from": 0.1
+   },
+   "punch": [
+    {
+     "at": 0.45,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.45,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 174.2,
+   "dur": 3.7,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.05,
+    1.12
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 209.0,
+   "dur": 2.9,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 219.6,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.16
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 226.6,
+   "dur": 2.1,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.12
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 239.7,
+   "dur": 3.2,
+   "cx": 0.47,
+   "cy": 0.55,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.0,
+     0.47,
+     0.55
+    ],
+    [
+     2.5,
+     1.12,
+     0.47,
+     0.5
+    ],
+    [
+     3.2,
+     1.14,
+     0.47,
+     0.5
+    ]
+   ],
+   "punch": [
+    {
+     "at": 2.6,
+     "zoom": 1.15,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.6,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 272.3,
+   "dur": 2.5,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 290.5,
+   "dur": 2.9,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 384.2,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.3,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.3,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 391.2,
+   "dur": 1.7,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 593.7,
+   "dur": 1.9,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/K0chGkV0IE",
+   "in": 259.4,
+   "dur": 3.0,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true,
+   "bw": true,
+   "vid_darken": 0.62,
+   "vignette": 0.7,
+   "whip_in": 0.18
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 27.5,
+   "text": "The lift that almost\n*killed* Eddie Hall :skull:",
+   "style": "title",
+   "anim": "none",
+   "y": 0.085
+  },
+  {
+   "t": 0,
+   "d": 2.4,
+   "text": "*500 KG* DEADLIFT\nLEEDS, 2016 :flag-gb:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.4,
+   "d": 1.7,
+   "text": "\"I'M HERE TO PROVE\nPEOPLE *WRONG*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.1,
+   "d": 2.0,
+   "text": "\"PEOPLE SAY\n*IT ISN'T POSSIBLE*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 6.1,
+   "d": 3.1,
+   "text": "HIS MIND TRICK :brain:\n\"A *CAR ACCIDENT*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 9.2,
+   "d": 2.55,
+   "text": "\"MY KIDS TRAPPED\n*UNDER A CAR*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 11.75,
+   "d": 1.8,
+   "text": "\"LIFTING A CAR\n*OFF MY KIDS*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 13.5,
+   "d": 2.6,
+   "text": "1,102 LBS...",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 16.1,
+   "d": 0.6,
+   "text": "*WORLD RECORD* :trophy:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 16.7,
+   "d": 2.6,
+   "text": "\"I DON'T REMEMBER\n*DOING THE LIFT*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 19.3,
+   "d": 2.8,
+   "text": "\"WAKING UP\n*AT THE BOTTOM*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 22.1,
+   "d": 3.5,
+   "text": "BLOOD PRESSURE\n*OVER 200* :anatomical-heart:",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 25.6,
+   "d": 1.9,
+   "text": "\"VERY LUCKY\n*TO BE ALIVE*\"",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 27.45,
+   "d": 3.05,
+   "text": ":skull:",
+   "style": "big",
+   "anim": "rise",
+   "size": 190,
+   "x": 0.5,
+   "y": 0.52
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.2,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 9.05,
+   "name": "ow:boom",
+   "db": -9
+  },
+  {
+   "t": 14.12,
+   "name": "ow:riser1",
+   "db": -14
+  },
+  {
+   "t": 15.85,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 22.15,
+   "name": "ow:boom",
+   "db": -6
+  },
+  {
+   "t": 27.5,
+   "name": "ow:whoosh",
+   "db": -8
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 81.8,
+   "dur": 2.4,
+   "t": 0.0,
+   "af": "voice",
+   "db": -6,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 8.95,
+   "dur": 3.7,
+   "t": 2.4,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_b.wav",
+   "in": 12.75,
+   "dur": 7.45,
+   "t": 6.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 64.7,
+   "dur": 3.2,
+   "t": 13.5,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 97.3,
+   "dur": 2.5,
+   "t": 16.7,
+   "af": "voice",
+   "db": -8,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 115.5,
+   "dur": 2.9,
+   "t": 19.2,
+   "af": "voice",
+   "db": -10,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_b.wav",
+   "in": 29.85,
+   "dur": 5.35,
+   "t": 16.65,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_b.wav",
+   "in": 74.4,
+   "dur": 3.5,
+   "t": 22.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_c.wav",
+   "in": 8.7,
+   "dur": 1.9,
+   "t": 25.6,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/eh_vox_a.wav",
+   "in": 120.0,
+   "dur": 3.0,
+   "t": 27.5,
+   "af": "voice",
+   "db": -8,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0
+}

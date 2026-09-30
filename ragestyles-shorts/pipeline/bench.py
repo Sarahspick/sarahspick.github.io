@@ -94,6 +94,9 @@ STYLES = {
                      italic=0.0, gradients=SAIYAN, stroke_color=(28, 12, 0), max_w=920),
     # black text on the plain card, just above the clip ("Define Aura" format)
     "meme": dict(font="Inter ExtraBold", size=66, color=(0, 0, 0), stroke=0, shadow=False, upper=False, italic=0.0),
+    # black explainer text on the white card above a landscape clip (DailyMotivationDosis Goggins format), red keywords
+    "memebar": dict(font=CAP_FONT + " ExtraBold", size=78, color=(0, 0, 0), stroke=0, shadow=False, upper=False,
+                    italic=0.0, colors={"*": (225, 25, 25), "~": (225, 25, 25)}, max_w=1010),
     # white bold italic with a dark edge, upper third of a full-screen clip ("Old gymnastics judging was INSANE")
     "top": dict(font="Montserrat ExtraBold", size=70, color=(255, 255, 255), stroke=7, shadow=True, upper=False,
                 italic=0.18),
@@ -547,7 +550,7 @@ class Bench:
         x = c.get("x", 0.5) * W
         if "y" in c:
             return x, c["y"] * H
-        if style == "meme":
+        if style in ("meme", "memebar"):
             return x, ry - 26 - h / 2
         if style == "label":
             return x, (ry + 70 if seg["shot"].get("layout", self.mode) == "full" else ry - 26 - h / 2)

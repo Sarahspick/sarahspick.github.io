@@ -4,6 +4,23 @@
 저장소 루트의 `HANDOFF.md`는 다른 프로젝트(Sarah's Pick) 문서이니 건드리지 않습니다.
 문서 안의 규칙이 서로 부딪히면 "3. 채널 오너 취향"의 최신 항목이 우선입니다.
 
+## ★ 채널 정체성 (2026-09-30 오너 확정, 다른 모든 방향보다 우선)
+RageStyles 는 운동, 헬스, 스포츠의 **최신 소식을 가장 빠르게 알리는 채널**입니다. 지금 뜨는 인물과 사건, 그 인물들이 인스타그램과 유튜브에 막 올린 영상을 편집해서 소식으로 전합니다.
+* 최신이 먼저: 며칠 안에 나온 사건과 영상 (기록, 대회 결과, 우승, 이변, 인물의 새 발언). 옛날 영상, 이미 지나간 인물(고긴스, 에디 홀, 범스테드 등 오너 판단으로 "트렌드 지남")은 쓰지 않음. 옛 영상 편집은 기법 연습용이었음.
+* 형식: new16 d1(고긴스) 방향. 그 인물 본인 목소리로 이어지는 이야기 + 원문 워드 바이 워드 자막(`wordcap`) + 본인 영상 B롤 + 3:4 블러 레이아웃(제목 155px, 영상 370px) + 시작 1초 페이드 + 핵심 순간 줌 펀치, 밝기, 쿵. 목소리가 없는 경기 영상은 s1 방식(짧은 정보 자막 + 발표 순간 효과).
+* 소식 확인: 영상 속 사실은 기사(fitnessvolt.com, generationiron.com, barbend.com, 위키백과)로 교차 확인하고 날짜를 적음. 다르면 오너에게 알림.
+* 소스: 원 채널 크레딧 + "All rights go to the owners" (오너 방침, 2-1). 인스타그램은 이 환경에서 접속됨 (2-1), 유튜브는 `tools/yt_batch.sh`.
+
+## ★ 지금 트렌드 (2026-09-30 조사, 다음 세션은 여기서 고르기)
+* 2026 미스터 올림피아 (9/24~27, 라스베이거스): 닉 워커 첫 우승(작년 6위에서, 피플스 챔피언까지), 2위 삼손 다우다, 3위 데릭 런스포드. 디펜딩 챔피언 5명이 모두 타이틀을 잃음 (Lunsford, Ramon Dino, Rhea Gayle, Maureen Blanquisco, James Berger). 영상: OlympiaTV 공식 Cq7TbOxcwPc, Nick's Strength and Power 리캡 si2vi517BH4, 닉 워커 우승 반응(fitnessvolt "Nick Walker reacts ... calls Derek").
+* 클래식 피지크: Niall Darwen 첫 우승, 2위 Mike Sommerfeld, 디펜딩 Ramon Dino 3위 ("The Fall of a Champion"). 영상 ZnLmWfxQaVs, 클래식 프리저징 oXMhVHiluGQ.
+* 데드리프트 세계기록: Raul Flores (멕시코) 511kg, 2026-09-05 Giants Live Strongman Open (버밍엄). 하프토르의 510kg(2025-09-06 WDC)을 1kg 경신, 대회에서 500kg 넘긴 세 번째 사람. 영상 Giants Live 4oHrTDCgVAs (135만), bdVPWa3mVuU. 2026 WDC 전체 9maLI002HLc.
+* 파워리프팅: IPF Worlds 2026 세계기록 모음 431q1ZR2RPE, Austin Perkins 74kg 891.5kg 세계기록 토탈 YDcxuCoSTF0 (65만), Joshua Ngoka 주니어 980.5kg OSI8dNxXRGI, Colton Engelbrecht 세계기록 wW6pqccJb5Q, Danny Grigsby 데드리프트 세계기록 vDdo7Eoql_8.
+* 스트롱맨: Conan's Wheel 신기록 (Strongman Classic 2026) WJqiF1Bex_Q, Webster Stone 신기록 (Europe's Strongest Man 2026) ob4uq7pcEEE.
+* HYROX 세계선수권 2026 (6월, 스톡홀름): Dylan Scott 마지막 2초 역전 우승 53:47, 여자 Alyssa McElheny (솔로 5번째 레이스에 우승). 조금 지남.
+* 바이럴 상시: Anatoly 청소부 헬스장 몰카 (KY5pnqFpGWo 등 수백만). 인플루언서 순위 상위는 여전히 CBum, Sommer Ray, Chloe Ting 등(오너 판단: 트렌드 지남).
+* 업로드 날짜는 쿠키 만료로 확인 못 함. 다음 세션에서 `yt-dlp --print "%(upload_date)s"` 로 확인하고 최근 2주 안의 것부터.
+
 ## 0. 새 세션 시작 순서
 
 1. GitHub 연결: 새 계정에서 https://claude.ai/connect-github 로 Sarahspick GitHub 계정을 연결하고, 저장소 `Sarahspick/sarahspick.github.io`에 Claude GitHub App이 설치돼 있는지 확인합니다.
@@ -15,10 +32,11 @@
 
 ```
 RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
-1) git fetch origin claude/hopeful-clarke-oprfw9 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
-2) ragestyles-shorts/HANDOFF.md 를 끝까지 읽고 규칙과 취향을 그대로 따라.
-3) bash ragestyles-shorts/setup.sh 로 소스 영상과 효과음을 받아 (Demucs, whisper 까지 필요하면 --full).
-4) 채널 방향은 최신 트렌드 운동, 헬스, 스포츠 영상이야. sources/cc_youtube_candidates.md 와 tools/stock_search.py (Pexels, Pixabay) 로 만들 영상 아이디어 3개를 먼저 제안해줘.
+1) git fetch origin claude/modest-meitner-bb2p2c 후 그 브랜치를 기준으로 작업해 (이 세션에 지정된 브랜치가 따로 있으면 그 브랜치를 이 커밋에서 시작해서 거기로 push).
+2) ragestyles-shorts/HANDOFF.md 를 끝까지 읽고 규칙과 취향을 그대로 따라. 맨 위 "★ 채널 정체성" 과 "★ 지금 트렌드" 가 최우선이고, 3장 오너 취향의 최신 항목(2026-09-30)과 2-3 도 꼭 봐.
+3) bash ragestyles-shorts/setup.sh --full 로 환경을 준비하고, 드라이브 "자주쓰는 효과음" 폴더에서 묵직한 효과음 6개를 다시 받아 ow_*.wav 로 변환해 (2-3 에 파일 대응표).
+4) 유튜브 쿠키(YT_COOKIES_B64)를 새로 바꿨어. bash ragestyles-shorts/tools/yt_batch.sh 로 다운로드가 되는지 먼저 테스트해 (쿠키 값은 절대 출력하지 마). 안 되면 바로 알려줘.
+5) "★ 지금 트렌드" 에서 최근 2주 안의 최신 소식 쇼츠 3개를 골라서 (업로드 날짜, 사실은 기사로 교차 확인) 소스 검색, 다운로드, 편집까지 네가 직접 하고, 결과물만 채팅으로 바로 보내줘 (30MB 넘으면 tools/fit_send.sh). 형식은 new16 고긴스 방향 (본인 목소리 이야기 + 원문 워드 바이 워드 자막 + 3:4 블러, 제목 155px, 영상 370px, 시작 1초 페이드).
 ```
 
 6. 참고 영상(사용자가 예전에 채팅에 올린 40M 조회수 쇼츠 5개)은 저작권 때문에 커밋하지 않았습니다. 분석이 다시 필요하면 채팅에 다시 올려야 합니다. 분석 결과는 `BENCHMARK.md`에 있습니다.
@@ -27,7 +45,7 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 
 * 채널: RageStyles (https://www.youtube.com/@Rage_Styles), 프로필 사진은 헤드폰 낀 슈퍼사이언 손오공 (노랑, 주황, 빨강 그라데이션과 흰 스티커 테두리).
 * 시청자: 영어권 전 세계, 20~40대 성인.
-* 주제: 운동, 헬스, 스포츠, 경쟁, 동기부여.
+* 주제: 운동, 헬스, 스포츠의 최신 소식 (맨 위 "★ 채널 정체성").
 * 결과물: 1080x1920, 30fps, H.264 + AAC, 약 10~35초, 라우드니스 -14 LUFS.
 * 음악: 영상에는 넣지 않습니다. 사용자가 업로드할 때 유튜브에서 직접 넣습니다. 채널에 원래 쓰던 헬스 음악은 절대 쓰지 않습니다.
 

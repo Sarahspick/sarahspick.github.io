@@ -551,6 +551,8 @@ class Bench:
         if "shot" in c:  # pinned to the subject
             return to_out(c["x"], c["y"])
         x = c.get("x", 0.5) * W
+        if "top" in c:  # top edge of the caption in px (owner, iPhone check: title starts at 155 px)
+            return x, c["top"] + h / 2
         if "y" in c:
             return x, c["y"] * H
         if style in ("meme", "memebar"):

@@ -12,9 +12,14 @@ PEAK = {"boom": 0.25, "punch": 0.43, "whoosh": 0.0, "transition": 0.9, "riser1":
 
 
 class Short:
-    def __init__(self, sid, title, yt_title, folder="plans10", layout=None, title_y=0.085):
+    # owner layout (2026-09-30, checked on an iPhone): title from 155 px, the clip from 370 px in a 3:4 box, the same
+    # clip blurred behind it
+    LAYOUT = {"mode": "blur", "box_aspect": 0.75, "box_w": 1080, "box_top": 370, "darken": 0.5}
+    TITLE_TOP = 155
+
+    def __init__(self, sid, title, yt_title, folder="plans10", layout=None, title_y=None):
         self.id, self.title, self.yt_title, self.folder = sid, title, yt_title, folder
-        self.layout = layout or {"mode": "full"}
+        self.layout = layout or dict(self.LAYOUT)
         self.title_y = title_y
         self.shots, self.caps, self.sfx, self.clips, self.marks = [], [], [], [], []
         self.t = 0.0
@@ -61,8 +66,9 @@ class Short:
     def save(self, lufs=-14.0, title_end=None, open_fade=1.0):
         for s in self.shots:
             s.pop("_t0", None)
-        caps = [{"t": 0, "d": title_end or self.t, "text": self.title, "style": "title", "anim": "none",
-                 "y": self.title_y}] if self.title else []
+        pos = {"y": self.title_y} if self.title_y is not None else {"top": self.TITLE_TOP}
+        caps = [dict({"t": 0, "d": title_end or self.t, "text": self.title, "style": "title", "anim": "none"}, **pos)] \
+            if self.title else []
         caps += self.caps
         plan = {"id": self.id, "yt_title": self.yt_title, "layout": self.layout, "shots": self.shots,
                 "captions": caps, "marks": self.marks, "sfx": self.sfx, "audio_clips": self.clips, "lufs": lufs,

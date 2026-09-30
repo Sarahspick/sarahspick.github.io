@@ -42,7 +42,7 @@ for line in open("work/youtube/X3yNsomAUvw_words.txt"):
 words = sorted(med + small)
 
 o = Short("d1_goggins_297_to_seal", "From *297 lbs*\nto Navy SEAL :fire:", "From 297 lbs to Navy SEAL 🔥 David Goggins #shorts",
-          layout={"mode": "blur", "box_aspect": 0.75, "box_w": 1080, "box_top": 240, "darken": 0.5})
+)   # Short.LAYOUT: 3:4 box from 370 px on the blurred clip
 sp = Speech(o, VOX, words)
 TALK = dict(cx=0.4, cy=0.42, zoom=(1.12, 1.18))       # interview, name strap kept out on the right
 

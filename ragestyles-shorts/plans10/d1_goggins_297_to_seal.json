@@ -5,7 +5,7 @@
   "mode": "blur",
   "box_aspect": 0.75,
   "box_w": 1080,
-  "box_top": 240,
+  "box_top": 370,
   "darken": 0.5
  },
  "shots": [
@@ -505,7 +505,7 @@
    "text": "From *297 lbs*\nto Navy SEAL :fire:",
    "style": "title",
    "anim": "none",
-   "y": 0.085
+   "top": 155
   },
   {
    "t": 0.0,

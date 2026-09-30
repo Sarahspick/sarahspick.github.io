@@ -2,7 +2,11 @@
  "id": "s1_suits_1999_olympia",
  "yt_title": "Bodybuilders in suits hit different 🔥 1999 Mr. Olympia #shorts",
  "layout": {
-  "mode": "full"
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
  },
  "shots": [
   {
@@ -61,7 +65,7 @@
    "src": "youtube/OXJhEpJiPEU",
    "in": 65.6,
    "dur": 1.6,
-   "cx": 0.3,
+   "cx": 0.35,
    "cy": 0.45,
    "zoom": [
     1.1,
@@ -223,10 +227,10 @@
    "in": 717.3,
    "dur": 1.6,
    "cx": 0.34,
-   "cy": 0.5,
+   "cy": 0.3,
    "zoom": [
-    1.2,
-    1.22
+    1.6,
+    1.62
    ],
    "audio": false,
    "af": "voice",
@@ -242,10 +246,10 @@
    "in": 721.7,
    "dur": 2.6,
    "cx": 0.34,
-   "cy": 0.45,
+   "cy": 0.3,
    "zoom": [
-    1.2,
-    1.24
+    1.6,
+    1.64
    ],
    "audio": false,
    "af": "voice",
@@ -294,10 +298,10 @@
    "in": 726.9,
    "dur": 1.25,
    "cx": 0.34,
-   "cy": 0.5,
+   "cy": 0.3,
    "zoom": [
-    1.2,
-    1.24
+    1.6,
+    1.64
    ],
    "audio": false,
    "af": "voice",
@@ -349,7 +353,7 @@
    "text": "Bodybuilders in suits\nhit *different* :fire:",
    "style": "title",
    "anim": "none",
-   "y": 0.085
+   "top": 155
   },
   {
    "t": 0,

@@ -30,13 +30,40 @@ def probe(path):
 
 
 PLATFORMS = {"yt": "https://www.youtube.com/watch?v={}", "bili": "https://www.bilibili.com/video/{}",
-             "dm": "https://www.dailymotion.com/video/{}"}
+             "dm": "https://www.dailymotion.com/video/{}",
+             "tt": "https://www.tiktok.com/@_/video/{}",   # tt:<video id>; TikTok resolves the account itself
+             "x": "https://x.com/i/status/{}"}
 
 
 def source_url(src):
     """'yt:ID' / 'bili:BVxxxx' shortcuts -> page URL (for downloads and credits)."""
     pre, _, vid = src.partition(":")
     return PLATFORMS[pre].format(vid) if pre in PLATFORMS and vid else src
+
+
+def ytdlp_opts(**extra):
+    """Base yt-dlp options. YouTube needs a signed-in cookie file (YT_COOKIES_B64, a base64 Netscape cookie file,
+    written to work/ which git ignores) and a JavaScript runtime new enough for its challenge (Node 20+ on PATH
+    may be too old; Node 22 is used when present)."""
+    import base64
+    import shutil
+    opts = {"quiet": True, "no_warnings": True, "socket_timeout": 30, "retries": 5,
+            "format_sort": ["res:1080", "fps", "br"], "format_sort_force": True}   # highest resolution up to 1080p first (TikTok 1080p is h265)
+    b64 = os.environ.get("YT_COOKIES_B64", "")
+    if b64:
+        cookie = os.path.join(WORK, "yt_cookies.txt")
+        if not os.path.exists(cookie):
+            os.makedirs(WORK, exist_ok=True)
+            with open(cookie, "wb") as f:
+                f.write(base64.b64decode(b64))
+            os.chmod(cookie, 0o600)
+        opts["cookiefile"] = cookie
+    for node in ("/opt/node22/bin/node", shutil.which("node")):
+        if node and os.path.exists(node):
+            opts["js_runtimes"] = {"node": {"path": node}}
+            break
+    opts.update(extra)
+    return opts
 
 
 def fetch(src):
@@ -59,9 +86,9 @@ def fetch(src):
         return None
     try:
         import yt_dlp
-        opts = {"outtmpl": os.path.join(SOURCES, key + ".%(ext)s"), "quiet": True, "no_warnings": True,
-                "format": "bv*[height<=1080][ext=mp4]+ba[ext=m4a]/bv*[height<=1080]+ba/b[height<=1080]/b",
-                "merge_output_format": "mp4", "socket_timeout": 30, "retries": 3, "writeinfojson": True}
+        opts = ytdlp_opts(outtmpl=os.path.join(SOURCES, key + ".%(ext)s"),
+                          format="bv*+ba/b",   # the cap is format_sort res:1080 (shorter side, so vertical 1080p counts)
+                          merge_output_format="mp4", writeinfojson=True)
         with yt_dlp.YoutubeDL(opts) as ydl:
             info = ydl.extract_info(url, download=True)
             path = ydl.prepare_filename(info)

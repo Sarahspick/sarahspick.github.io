@@ -7,7 +7,7 @@ import sys
 import yt_dlp
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from factory.media import PLATFORMS, SOURCES  # noqa: E402
+from factory.media import PLATFORMS, SOURCES, ytdlp_opts  # noqa: E402
 
 
 def grab(src):
@@ -17,12 +17,12 @@ def grab(src):
         return src, "cached"
     url = PLATFORMS[pre].format(vid)
     try:
-        with yt_dlp.YoutubeDL({"quiet": True, "no_warnings": True, "skip_download": True}) as y:
+        with yt_dlp.YoutubeDL(ytdlp_opts(skip_download=True)) as y:
             dur = y.extract_info(url, download=False).get("duration") or 0
         cap = 1080 if dur <= 600 else 720
-        opts = {"outtmpl": os.path.join(SOURCES, key + ".%(ext)s"), "quiet": True, "no_warnings": True, "noprogress": True,
-                "format": f"bv*[height<={cap}]+ba/b[height<={cap}]/b", "merge_output_format": "mp4",
-                "writeinfojson": True, "socket_timeout": 30, "retries": 5, "fragment_retries": 5, "concurrent_fragment_downloads": 4}
+        opts = ytdlp_opts(outtmpl=os.path.join(SOURCES, key + ".%(ext)s"), noprogress=True,
+                          format="bv*+ba/b", format_sort=[f"res:{cap}", "fps", "br"], merge_output_format="mp4",
+                          writeinfojson=True, fragment_retries=5, concurrent_fragment_downloads=4)
         with yt_dlp.YoutubeDL(opts) as y:
             info = y.extract_info(url, download=True)
         return src, f"ok {info.get('width')}x{info.get('height')} {dur:.0f}s  {info.get('title', '')[:50]}"

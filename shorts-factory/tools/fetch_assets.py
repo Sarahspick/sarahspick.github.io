@@ -105,9 +105,23 @@ def fetch_sfx():
     d = os.path.join(A, "sfx")
     os.makedirs(d, exist_ok=True)
     npm_cache = {}
+    drive_dir = None
     for sid, s in lib.items():
         dest = os.path.join(d, s["file"])
         if os.path.exists(dest):
+            continue
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        if "drive" in s:  # user's own sound folder on Google Drive (link-shared): one folder download covers all
+            if drive_dir is None:
+                import subprocess
+                import tempfile
+                drive_dir = tempfile.mkdtemp()
+                folder = json.load(open(os.path.join(A, "sfx_library.json"), encoding="utf-8"))["_drive_folder"]
+                subprocess.run([sys.executable, "-m", "gdown", "--folder", folder, "-O", drive_dir, "-q"], check=False)
+            found = [os.path.join(r, s["drive"]) for r, _, fs in os.walk(drive_dir) if s["drive"] in fs]
+            if found:
+                shutil.copy(found[0], dest)
+                log("sfx", sid, "<- drive:", s["drive"])
             continue
         if "url" in s:
             download(s["url"], dest)

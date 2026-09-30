@@ -19,6 +19,7 @@ from PIL import Image
 from . import gfx
 from .config import FPS, H, OUTPUT, SR, THEMES, W, WORK, load_channel
 from .media import fetch, open_reader, parse_aspect, source_meta
+from .speech import detect as detect_speech
 from .sfx import SfxLibrary, measure
 from .voice import _norm_words, make_narrator
 
@@ -265,6 +266,12 @@ class Short:
                 continue
             speed = float(spec.get("speed", 1.0))
             start = float(spec.get("start", 0)) + off * speed
+            if not spec.get("orig_speech"):
+                sp = detect_speech(path, start, dur * speed)
+                if sp["speech"]:
+                    self.warnings.append(f"orig audio muted for {seg['cid']} at {start:.1f}s: speech ({sp['lang']}) "
+                                         f"\"{sp['text'][:40]}\"")
+                    continue
             tempo, chain = speed, []
             while tempo < 0.5:
                 chain.append("atempo=0.5")

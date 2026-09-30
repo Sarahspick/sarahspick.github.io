@@ -11,6 +11,15 @@
 
 ## 사용자가 정한 규칙
 
+- **중국어가 들리면 절대 안 됩니다 (2026-09-30).** 원본 사운드는 `factory/speech.py`(SenseVoice)가 클립마다 말소리를 검사해서, 말(어느 언어든)이 있으면 그 구간 원본 소리를 자동으로 끕니다 (경고 `orig audio muted`). 말소리를 꼭 살려야 하는 클립만 `"orig_speech": true`.
+- **영상 소스는 최신 고화질 영어권 소스** (2026-09-30): 중국 사이트(빌리빌리)와 Pexels 같은 저화질 스톡은 쓰지 않습니다. 순서: 유튜브(`yt:`) → 틱톡(`tt:<영상 id>`, 1080x1920) → X(`x:<status id>`, 1080p). 영상을 만든 뒤 사용자가 보고 허락한 것만 업로드합니다.
+  - 유튜브: `YT_COOKIES_B64`(base64 쿠키 파일)를 `work/yt_cookies.txt`로 풀고, Node 22(`/opt/node22/bin/node`)로 JS 챌린지를 풉니다 (`media.ytdlp_opts`). 그래도 이 서버 IP는 자주 429/403/봇 확인에 막힙니다(2026-09-30 대부분 실패). 막히면 틱톡·X로.
+  - 틱톡은 `pip install "yt-dlp[default,curl-cffi]"`가 필요하고, 1080p는 h265라 `format_sort res:1080`으로 고릅니다.
+  - 틱톡 영상 id는 웹 검색(`allowed_domains: tiktok.com`)으로 찾습니다. 틱톡 검색 페이지는 JS라 못 읽습니다.
+- 효과음: 사용자 구글 드라이브 `자주쓰는 효과음` 22개가 `assets/sfx/user/`에 있습니다 (id: boom2, punch, whoosh, click2, riser1, riser8, question, dingding, tada, huh, sparkle, cartoon_pop 등, `sfx_library.json`). 드라이브 폴더는 링크 공유라 `python tools/fetch_assets.py sfx`가 gdown으로 다시 받습니다.
+- 빨간 화살표(`"type": "arrow"`, x/y는 영상 박스 안 비율, angle은 화살표 방향)와 빨간 동그라미(`"type": "circle"`, r 픽셀)를 적극 씁니다.
+- 배경음악: Memory Reboot 같은 유행곡은 저작권 음원이라 파일로 넣지 않습니다. 업로드할 때 유튜브 쇼츠 편집기에서 라이선스된 음원으로 넣습니다 (나레이션 -14 LUFS라 음악은 10~15% 정도로).
+
 - 효과음은 인터넷에서 받은 실제 파일만 씁니다 (`assets/sfx_library.json`). 직접 합성하지 않습니다.
 - 허용 효과음 (2026-09-29): 타격음 계열(Vine Boom, Sub, Hit)과 마우스 클릭(딸깍), 가벼운 whoosh만. wow·incredible·빰빰빰(dun_dun)·omg·군중 반응 같은 거슬리는 소리는 전부 금지. `channel.json`의 `"sfx_allow"`에 없는 효과음은 렌더링에서 자동으로 빠지고 경고가 남습니다. 지금 라이브러리에 있는 허용 소리는 boom, mouse_click, click뿐이고 sub, hit, whoosh 파일은 아직 없습니다 (넣으려면 실제 파일을 찾아 `sfx_library.json`에 추가).
 - 배경음악은 넣지 않습니다. 업로드할 때 사용자가 넣습니다.

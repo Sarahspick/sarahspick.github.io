@@ -31,11 +31,32 @@
     }
   },
   "sfx_allow": [
+    "applause",
+    "bbyong",
+    "block",
     "boom",
-    "sub",
-    "hit",
-    "mouse_click",
+    "boom2",
+    "cartoon_pop",
+    "chiring",
+    "clear",
     "click",
-    "whoosh"
+    "click2",
+    "ding2",
+    "dingding",
+    "glass_ding",
+    "hit",
+    "huh",
+    "melody",
+    "mouse_click",
+    "punch",
+    "question",
+    "riser1",
+    "riser8",
+    "sparkle",
+    "sub",
+    "tada",
+    "transition",
+    "whoosh",
+    "yeah"
   ]
 }

@@ -28,3 +28,11 @@ Photos cropped, blurred and color graded. License: https://creativecommons.org/l
 Voiceover is AI generated. Fan channel, not affiliated with the NBA or the San Antonio Spurs.
 ```
 Upload setting: turn on "Altered or synthetic content" disclosure only if required for realistic AI; an AI narrator over real facts does not need it, but say AI voice in the description as above.
+
+## Game edit engine (beat-synced)
+
+`python3 shorts/edit_engine.py PLAN.json OUT.mp4` cuts clips on the music's beat grid with zoom punches, flashes, shake, speed ramps (60 fps decode, blended slow motion), color grade and pop-in text. See the docstring for the plan format and `shorts/plans/style_demo.json` for a full example. About 3 minutes for a 15 s edit on this container.
+
+Style demo (2026-09-30): Pexels stock clips (ids are the file names in the plan: 34354826, 32067896, 18812173, 13117141, 26971440, 32067752, 20521157, 7304248, 34359956; Pexels license, no attribution required), music generated with the ElevenLabs Music API (150 BPM phonk, `music_start` 3.1 cuts the quiet intro so the drop lands at 1.7 s).
+
+For Wemby edits: drop the clips into `WORK/clips/`, write a plan with the same fields. Game footage belongs to the NBA and its broadcasters and will be matched by Content ID (usually a claim that sends the ad revenue to the rights holder), so sourcing that footage is the channel owner's call.

@@ -402,7 +402,12 @@ class Short:
                 s = _pop((t - c["t0"]) / 0.12, start=0.78) if t - c["t0"] < 0.12 else 1.0
                 if s != 1.0:
                     cap = cap.resize((max(1, int(cap.width * s)), max(1, int(cap.height * s))), Image.BICUBIC)
-                frame.paste(cap, (int((W - cap.width) / 2), int(gfx.CAPTION_CY - cap.height / 2)), cap)
+                cc = reader.cover_center() if hasattr(reader, "cover_center") else None
+                cy = cc[1] if cc else gfx.CAPTION_CY
+                if cc and cap.height > cc[2] * 0.95:  # keep the caption inside its black box
+                    f = cc[2] * 0.95 / cap.height
+                    cap = cap.resize((max(1, int(cap.width * f)), max(1, int(cap.height * f))), Image.BICUBIC)
+                frame.paste(cap, (int((W - cap.width) / 2), int(cy - cap.height / 2)), cap)
             for a in self.anns:
                 if a["t0"] <= t < a["t1"]:
                     self._draw_ann(frame, a, t, seg["box"])
@@ -462,6 +467,8 @@ class Short:
             if r["kind"] == "video" and r["src"] not in seen:
                 seen.add(r["src"])
                 m = source_meta(r["src"])
+                if any((m.get("uploader") or "~").lower().lstrip("@") in c.lower() for c in sc.get("footage_credits", [])):
+                    continue  # the script already credits this account by hand
                 credits.append(f"- {m.get('title') or 'video'}" + (f" ({m['uploader']})" if m.get("uploader") else "") + f": {m['url']}")
         credits += [f"- {c}" for c in sc.get("footage_credits", [])
                     if not any(c.split(":")[-1].strip() and c.split(":")[-1].strip() in x for x in credits)]

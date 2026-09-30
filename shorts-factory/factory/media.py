@@ -5,7 +5,7 @@ import os
 import subprocess
 
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter
 
 from . import gfx
 from .config import FPS, WORK, rel
@@ -172,12 +172,23 @@ class _View:
         vw, vh = pw / zoom, ph / zoom
         x0 = min(max(focus[0] * pw - vw / 2, 0), pw - vw)
         y0 = min(max(focus[1] * ph - vh / 2, 0), ph - vh)
+        self._last_view = (x0, y0, vw, vh)
         return im.resize((w, h), Image.BICUBIC, box=(x0, y0, x0 + vw, y0 + vh))
+
+    def cover_center(self):
+        """Centre and height, in output-frame pixels, of the first black cover box (None if the clip has none)."""
+        if not getattr(self, "covers", None) or not getattr(self, "_last_view", None):
+            return None
+        x0, y0, vw, vh = self._last_view
+        bx0, by0, bx1, by1 = self.covers[0]
+        sy = self.box[3] / vh
+        return (self.box[0] + ((bx0 + bx1) / 2 - x0) * self.box[2] / vw,
+                self.box[1] + ((by0 + by1) / 2 - y0) * sy, (by1 - by0) * sy)
 
 
 class VideoReader(_View):
     def __init__(self, path, start, dur, box, aspect, focus, speed=1.0, src_zoom=1.0, headroom=1.12, blur=None,
-                 blur_boxes=None):
+                 blur_boxes=None, cover=None):
         self.box = box
         w, h = box[2], box[3]
         self.pw, self.ph = int(w * headroom) // 2 * 2, int(h * headroom) // 2 * 2
@@ -192,6 +203,9 @@ class VideoReader(_View):
             return tuple(int(v) for v in (bx0, by0, bx1, by1)) if bx1 > bx0 and by1 > by0 else None
         self.blur = [(None, None, r) for r in map(to_crop, blur or []) if r]
         self.blur += [(e["t0"], e["t1"], r) for e in blur_boxes or [] for r in [to_crop(e["box"])] if r]
+        # cover: [[x0, y0, x1, y1]] source fractions of a burned-in caption band: painted solid black, and the
+        # renderer puts this Short's own caption on top of it instead of the frame centre
+        self.covers = [r for r in map(to_crop, cover or []) if r]
         self.start, self.speed = start, speed
         need = dur * speed
         self.n = int(round(dur * FPS)) + 2
@@ -216,6 +230,11 @@ class VideoReader(_View):
                     self.last = self.last.copy()
                     for r in live:
                         self.last.paste(self.last.crop(r).filter(ImageFilter.GaussianBlur(14)), r[:2], _feather(r))
+            if self.covers:
+                self.last = self.last.copy()
+                d = ImageDraw.Draw(self.last)
+                for r in self.covers:
+                    d.rectangle(r, fill=(0, 0, 0))
             self.k += 1
         if self.last is None:
             self.last = Image.new("RGB", (self.pw, self.ph), (20, 20, 20))
@@ -300,7 +319,7 @@ def open_reader(spec, box, dur, offset, theme, report):
             focus = auto_focus(path, start, dur * float(spec.get("speed", 1.0)), aspect)
         report.append({"kind": "video", "src": spec.get("src"), "start": round(start, 2), "dur": round(dur, 2), "focus": focus})
         return VideoReader(path, start, dur, box, aspect, focus, float(spec.get("speed", 1.0)), float(spec.get("src_zoom", 1.0)),
-                           blur=spec.get("blur"), blur_boxes=spec.get("blur_boxes"))
+                           blur=spec.get("blur"), blur_boxes=spec.get("blur_boxes"), cover=spec.get("cover"))
     hint = spec.get("src") or spec.get("search", "")
     if spec.get("start") is not None:
         hint += f"  •  {spec.get('start')}s–{spec.get('end', '?')}s"

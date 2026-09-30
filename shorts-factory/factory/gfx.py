@@ -16,7 +16,7 @@ EMOJI_RE = re.compile("([\U0001F000-\U0001FAFF☀-➿⬀-⯿⌀-⏿])️?")
 
 TITLE_TOP = 118          # headline block starts here
 TITLE_MAX_W = W - 70
-CAPTION_CY = 1330        # vertical centre of the caption chunk
+CAPTION_CY = H // 2      # captions sit in the exact centre of the frame (user rule, 2026-09-30)
 CAPTION_MAX_W = W - 80
 YELLOW = (255, 214, 0)
 ACCENT = YELLOW          # highlight colour; each channel sets its own with set_accent()

@@ -65,6 +65,12 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 업로드 자동화 (다음 목표): 메인 채널은 YouTube Data API v3 + OAuth (쿠키와 별개). 오너가 Google Cloud 프로젝트, OAuth 클라이언트, refresh token 을 환경 변수로 준비해야 함. 검증 안 된 API 프로젝트로 올린 영상은 비공개로 잠김 (감사 통과 전까지), 기본 쿼터 videos.insert 하루 100개.
 * 드라이브: 소스 폴더 RageStyles YT1 (1-aIni1GNxG_GN87xXH6mFYgXkkoYW4Eu), 효과음 폴더는 2-1 참고 (새 세션에서 gdown 으로 다시 받고 ow_*.wav 로 변환).
 
+## 2-3. 화질 (2026-09-30 오너 지적: o1 화질이 안 좋다)
+* 원인: 채팅 30MB 제한 때문에 6Mbps 로 다시 압축한 파일을 줬고, 1080p 가로 원본을 9:16 으로 자르면 폭 608px 을 1.8배 키움.
+* 앞으로: 완성본은 압축 전 고화질(crf 17 전후)을 `Downloads/.../<id>_HQ.mp4` 로 커밋하고 GitHub raw 링크로 전달 (예: https://github.com/Sarahspick/sarahspick.github.io/raw/<브랜치>/ragestyles-shorts/Downloads/...). 채팅에는 30MB 이하본만. GitHub 파일 한도 100MB.
+* 소스는 가능하면 4K 로 받기 (yt-dlp `height<=2160`), 9:16 크롭해도 선명.
+* 구글 드라이브 커넥터(오너가 연결함): 검색, 읽기, 작은 파일 업로드 가능. 영상처럼 큰 파일은 내용을 base64 로 직접 넘겨야 해서 업로드 불가.
+
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 
 콘텐츠

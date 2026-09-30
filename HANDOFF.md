@@ -136,3 +136,19 @@
 - Meta Business Suite는 수동 예약만 가능하고 API 토큰은 못 줌. 매니지드 Meta 계정은 기업용이라 해당 없음.
 - 브랜드 이름 변경 검토 중. 스톡 영상 큐레이션이면 실명 느낌의 "Sarah"보다 브랜드명이 낫다고 제안. 후보: Cozy Cart(추천, 이름 칸 "Cozy Cart 🛒 amazon home finds"), Soft Life Finds, The Cozy Edit, Little Luxe Finds, Nest Notes, Homebody Finds, Cart Crush. 결정되면 사이트, IG 링크, 어소시에이트 등록 사이트 목록 갱신.
 - 아직 받을 것: PEXELS_API_KEY(환경 변수), 어소시에이트 가입일(180일 내 3건 판매 조건 확인용).
+
+## 13. 영상 소스: 알리익스프레스 제휴 API (2026-09-29 밤)
+- Mochi: 스톡 이미지/영상 아이디어 싫다, 아마존이나 알리 영상을 퍼와서라도 만들라고 함. 경쟁 계정(@megsdailyfinds, @donna.found.it, @leonfinds) 분석 요청. 인스타가 이 환경에서 로그인 요구, 429로 막혀 직접 분석 못 함.
+- 아마존 상품 영상 다운로드는 어소시에이트 약관 위반(계정 폐쇄, 미지급 수수료 몰수 위험)이라 안 함. 틱톡/릴스 무단 재업로드도 안 함.
+- 대안으로 채택: AliExpress Affiliate API(aliexpress.affiliate.hotproduct.query)가 제휴 회원에게 product_video_url(셀러 공식 상품 영상)과 promotion_link를 준다. 이 영상은 같은 상품의 알리 제휴 링크로만 연결한다(아마존 링크와 섞지 않음). 게시 전 Portals 약관에서 소재 사용 범위 한 번 더 확인.
+- pipeline/ali_source.py: 키워드로 인기 상품 검색, 영상 있는 것만, --download로 mp4 저장. 필요 환경 변수 ALI_APP_KEY, ALI_APP_SECRET, ALI_TRACKING_ID. 더미 키로 요청 형식은 검증함(InvalidAppKey까지 도달), 실제 키로는 미검증.
+- 발급 방법: portals.aliexpress.com 가입(무료) → tracking ID 생성 → openservice.aliexpress.com에서 개발자 등록 후 Affiliate API 앱 생성 → App Key, App Secret.
+
+## 14. 키 검증 완료 (2026-09-30)
+- 이 세션에 환경 변수 전부 들어옴: IG_USER_ID, IG_ACCESS_TOKEN, PEXELS_API_KEY, ALI_APP_KEY, ALI_APP_SECRET, ALI_TRACKING_ID.
+- 인스타 토큰 정상: graph.instagram.com 응답 username sarahs.pick, 계정 유형 MEDIA_CREATOR(크리에이터), 게시물 9개. publish_ig.py로 실제 게시 가능한 상태. 토큰은 60일마다 갱신.
+- 알리 키 정상, tracking ID는 sarahspick. 다만 앱에 hotproduct.query 권한이 없음(InsufficientPermission). product.query, category.get, link.generate는 됨. ali_source.py를 product.query로 바꾸고 재시도(네트워크 끊김, ApiCallLimit 초당 제한)를 넣음. 한 번 끊겨도 다시 돌리면 됨.
+- 실제 테스트: "sunset lamp" 검색 → 영상 있는 상품 3개, 가격 1~3달러, 제휴 링크(s.click.aliexpress.com) 받음 → 영상 다운로드(2MB) → edit.py 편집 성공(59초, 20MB).
+- 품질 주의: 셀러 영상은 중국어 자막, 창고 박스 컷이 섞이고 길다(59초). edit.py의 --start/--end로 제일 예쁜 8~12초만 잘라 써야 함. 영상마다 프레임을 뽑아 보고 구간을 고르는 단계가 필요.
+- 일부 상품은 link.generate에서 "cannot be sold or promoted in the selected country"가 나옴. 미국 배송 불가 상품은 쓰지 않는다(product.query는 ship_to_country=US로 이미 걸러짐).
+- 다음 할 일: 알리 링크용 사이트 카드(아마존과 분리, 고지문도 알리용 추가), 영상 구간 자동 선택, 첫 알리 릴스 1개를 Mochi 확인 후 publish_ig.py로 게시. 게시 전 Portals 약관에서 셀러 영상 사용 범위 확인은 여전히 필요.

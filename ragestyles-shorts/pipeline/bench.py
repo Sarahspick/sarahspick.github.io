@@ -422,6 +422,11 @@ class Bench:
             vid = np.repeat((vid @ np.array([0.299, 0.587, 0.114], np.float32))[..., None], 3, axis=2)
         if shot.get("vid_darken"):  # e.g. 0.6 for the dark "skull edit" freeze
             vid *= shot["vid_darken"]
+        di = shot.get("dim_in")  # opening hit: starts almost black, holds, then snaps bright ({hold, dur, from})
+        if di:
+            u = (lt - di.get("hold", 0.35)) / di.get("dur", 0.25)
+            lvl = di.get("from", 0.12) if u < 0 else (1.0 if u >= 1 else di.get("from", 0.12) + (1 - di.get("from", 0.12)) * ease(u, "out"))
+            vid = vid * lvl
         for f in shot.get("flash", []):  # reveal hit: quick brightness lift that fades ({at, amount, dur})
             u = (lt - f["at"]) / f.get("dur", 0.45)
             if 0 <= u < 1:
@@ -644,8 +649,12 @@ class Bench:
             mix[st:st + ln] += a
         for cue in self.p.get("sfx", []):
             name = cue["name"]
-            path = (os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav") if name.startswith("mk:")
-                    else os.path.join(SFX_DIR, name + ".wav"))  # "mk:" = licensed Mixkit sound
+            if name.startswith("mk:"):  # licensed Mixkit sound
+                path = os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav")
+            elif name.startswith("ow:"):  # owner's own sound pack (Drive "자주쓰는 효과음"), heavy ones only
+                path = os.path.join(ROOT, "assets", "sfx_owner", "ow_" + name[3:] + ".wav")
+            else:
+                path = os.path.join(SFX_DIR, name + ".wav")
             x, sr = sf.read(path, dtype="float32")
             if x.ndim == 1:
                 x = np.stack([x, x], 1)

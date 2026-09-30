@@ -43,6 +43,15 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 * 커밋 메시지와 산출물에 모델 이름을 쓰지 않습니다. 커밋 서명 줄은 그 세션의 안내를 따릅니다.
 * PR 은 사용자가 요청할 때만 만듭니다.
 
+## 2-1. 2026-09-30 오너 결정과 새 도구
+* 오너 방침: 다른 수익화 채널처럼 원 채널 크레딧과 "All rights go to the owners" 표기로 편집 영상을 만들고, 좋은 것은 오너가 DM 으로 허락을 받는다. David Goggins 는 자기 영상 편집을 허용했다고 오너가 전함. 표기 문구 자체는 권리를 주지 않음 (Content ID, 수익 이전, 스트라이크 위험은 오너가 알고 결정).
+* 위험 줄이기: 원본을 길게 그대로 쓰지 않기, 짧게 잘라 재구성 (정보 자막, 순위, 스토리, 리프레이밍), 원 채널 링크 크레딧, 음악은 업로드 때 유튜브 보관함.
+* 소스 사이트: Bilibili 는 이 환경에서 720p 까지 받아짐 (`yt-dlp "bilisearch10:키워드"` 는 가끔 412). archive.org, Vimeo, X, TikTok, Instagram, Reddit 접속됨. 유튜브 스트림은 여전히 봇 확인으로 막힘 (쿠키를 쓰는 자동 다운로드는 이 환경의 권한 검사에서 거부됨, 2026-09-30). 유튜브는 오너가 yt-dlp 로 받아 드라이브에 올리는 방식 유지 (여러 개는 `yt-dlp -a links.txt -N 8`).
+* 효과음: 드라이브 "자주쓰는 효과음" (1EKM0f9Q1x9010UZtuTwshZDgZsgJgiyL). 묵직한 것만 `assets/sfx_owner/ow_*.wav` 로 변환: `ow:boom` (저음 52%), `ow:transition` (42%), `ow:punch`, `ow:whoosh`, `ow:riser1`, `ow:riser8`. 가벼운 소리 16개(뾰로롱, 띠딩, 카툰 팝, 박수, 뿅 등)는 RageStyles 에 쓰지 않음. 과용 금지. git 제외.
+* 자막: w1 의 네온 글로우는 어색하다는 평. 기존 TikTok Sans 흰 글씨 검정 테두리로. 도파민 효과(줌 펀치, 밝기, 쿵)는 계속.
+* 새 효과 `dim_in` (샷 키 `{hold, dur, from}`): 영상 첫 장면이 거의 까맣다가 순간 밝아짐. 오너가 가끔 쓰면 효과적이라고 함. 제목 글자는 어두워지지 않음.
+* 새 형식 참고: Goggins 쇼츠 (DailyMotivationDosis): 흰 바에 검정 설명 자막, 가로 영상, 빨간 화살표 (`meme` 레이아웃 + `arrow`). 주제 후보: Bodybuilders in Suits (1999 Mr. Olympia 클립), Eddie Hall (giantslivestrongman 클립 사용 채널 예시 hardcore_motivat1on).
+
 ## 3. 채널 오너 취향 (시간순으로 쌓인 피드백, 아래쪽이 최신)
 
 콘텐츠

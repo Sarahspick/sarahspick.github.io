@@ -3,3 +3,4 @@ __pycache__/
 # Mixkit license forbids redistributing the sound files themselves (repo is public): fetch_sources.py downloads them
 assets/sfx_mixkit/*.mp3
 assets/sfx_mixkit/*.wav
+assets/sfx_owner/

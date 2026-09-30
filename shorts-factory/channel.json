@@ -14,7 +14,7 @@
       "engine": "typecast",
       "voice_id": "tc_68257f68bc6e3c161ab5078d",
       "model": "ssfm-v30",
-      "tempo": 1.1
+      "tempo": 1.32
     }
   },
   "pronounce": {},
@@ -34,7 +34,6 @@
     "applause",
     "bbyong",
     "block",
-    "boom",
     "boom2",
     "cartoon_pop",
     "chiring",

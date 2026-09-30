@@ -1,0 +1,304 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "u_open": {
+      "src": "tt:7665645762100923670",
+      "start": 40.2
+    },
+    "u_close": {
+      "src": "tt:7665645762100923670",
+      "start": 52.0
+    },
+    "u_flat": {
+      "src": "tt:7665645762100923670",
+      "start": 44.5
+    },
+    "a_poly": {
+      "src": "tt:7662544383656447262",
+      "start": 13.9,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_v": {
+      "src": "tt:7662544383656447262",
+      "start": 20.0,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_crease": {
+      "src": "tt:7662544383656447262",
+      "start": 25.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_swap": {
+      "src": "tt:7662544383656447262",
+      "start": 32.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_ti": {
+      "src": "tt:7662544383656447262",
+      "start": 46.2,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_flat": {
+      "src": "tt:7662544383656447262",
+      "start": 57.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    },
+    "a_flex": {
+      "src": "tt:7662544383656447262",
+      "start": 64.0,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "blur": [
+        [
+          0.12,
+          0.205,
+          0.88,
+          0.285
+        ]
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "9to5Google: Samsung says Galaxy Z Fold 8 crease is less visible thanks to Flex Titanium",
+      "url": "https://9to5google.com/2026/07/14/samsung-galaxy-z-fold-8-flex-titanium-display/"
+    },
+    {
+      "name": "SamMobile: How Flex Titanium improves the Galaxy Z Fold 8 displays",
+      "url": "https://www.sammobile.com/news/flex-titanium-how-it-improves-the-galaxy-z-fold-8-and-ultra-displays"
+    },
+    {
+      "name": "Android Authority: Samsung explains how its Z Fold 8 displays achieved a barely visible crease",
+      "url": "https://www.androidauthority.com/samsung-galaxy-z-fold-8-display-upgrades-3696219/"
+    }
+  ],
+  "footage_credits": [
+    "@droidsavvy on TikTok (display layer animation)",
+    "@supersaf on TikTok (Galaxy Z Fold 8 Ultra unboxing)"
+  ],
+  "id": "fold_titanium",
+  "lang": "ko",
+  "title": "접히는 화면, *어떻게* 안 깨질까? 📱",
+  "pronounce": {
+    "Z": "제트",
+    "폴드8은": "폴드 에잇은",
+    "20배": "스무 배",
+    "3분의": "삼 분의"
+  },
+  "hook": {
+    "lines": [
+      "화면은 유리인데…",
+      "이건 *어떻게* 접히는 걸까요?"
+    ],
+    "clips": [
+      "u_open",
+      "u_open"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:어떻게"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "비밀은 화면 *아래*",
+        "숨어 있는 한 겹이에요."
+      ],
+      "clip": "a_poly",
+      "annotate": [
+        {
+          "type": "arrow",
+          "at": "line2",
+          "x": 0.62,
+          "y": 0.62,
+          "angle": 150
+        }
+      ]
+    },
+    {
+      "lines": [
+        "원래 거기엔 플라스틱이 깔려 있었는데,",
+        "플라스틱은 접힌 모양을 *기억*해요."
+      ],
+      "clip": "a_v"
+    },
+    {
+      "lines": [
+        "그게 바로 그 *주름*이죠."
+      ],
+      "clip": "a_crease",
+      "annotate": [
+        {
+          "type": "circle",
+          "at": "start",
+          "x": 0.5,
+          "y": 0.6,
+          "r": 120
+        }
+      ],
+      "sfx": [
+        {
+          "id": "question",
+          "at": "word:주름이죠."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "갤럭시 Z 폴드8은 그걸",
+        "*티타늄*으로 바꿨어요."
+      ],
+      "clip": "a_swap",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "sparkle",
+          "at": "word:티타늄으로"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "플라스틱보다 *20배* 단단한데,",
+        "두께는 머리카락 3분의 1도 안 돼요."
+      ],
+      "clip": "a_ti"
+    },
+    {
+      "lines": [
+        "밑에 티타늄 판까지 깔아서",
+        "접히는 부분이 *꺼질 틈*이 없어요."
+      ],
+      "clips": [
+        "a_flat",
+        "a_flex"
+      ]
+    },
+    {
+      "lines": [
+        "주름이 흉터였다면…"
+      ],
+      "clip": "u_close"
+    },
+    {
+      "lines": [
+        "이제는 *잔주름* 수준."
+      ],
+      "clip": "u_flat",
+      "sfx": [
+        {
+          "id": "dingding",
+          "at": "word:잔주름"
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "title": "접히는 화면, 어떻게 안 깨질까? 📱 #shorts",
+    "description": "화면은 유리인데, 폴더블폰은 어떻게 접힐까요? 📱\n\n비밀은 화면 아래 숨어 있는 한 겹이에요. 원래 거기엔 플라스틱 필름이 깔려 있었는데, 플라스틱은 접힌 모양을 기억해서 주름이 생겼죠. 갤럭시 Z 폴드8은 이걸 티타늄 합금 필름으로 바꿨어요. 플라스틱보다 약 20배 단단한데 두께는 머리카락 3분의 1도 안 되고, 밑에 티타늄 판까지 깔아서 접히는 부분이 꺼질 틈을 없앴습니다. 삼성은 이걸 '플렉스 티타늄'이라고 불러요.\n\n주름이 흉터였다면, 이제는 잔주름 수준. 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#갤럭시",
+      "#폴드8",
+      "#폴더블",
+      "#삼성"
+    ],
+    "tags": [
+      "갤럭시 Z 폴드8",
+      "폴드8",
+      "삼성 폴더블",
+      "폴더블 화면",
+      "폴더블 원리",
+      "플렉스 티타늄",
+      "폴더블 주름",
+      "삼성디스플레이",
+      "폴더블폰",
+      "티타늄 디스플레이",
+      "작동 원리",
+      "기발한 회사들"
+    ],
+    "comment": "플라스틱은 접힌 걸 기억하고, 티타늄은 쿨하게 잊어버림. 부럽다 진짜 😂"
+  }
+}

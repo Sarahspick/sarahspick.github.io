@@ -1,0 +1,392 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -28
+  },
+  "clips": {
+    "nf_arrive": {
+      "src": "tt:7621604932034006285",
+      "start": 11.3,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ]
+    },
+    "nf_desc": {
+      "src": "tt:7621604932034006285",
+      "start": 13.3,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ]
+    },
+    "nf_far": {
+      "src": "tt:7621604932034006285",
+      "start": 6.6,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ],
+      "blur": [
+        [
+          0.0,
+          0.44,
+          0.56,
+          0.565
+        ]
+      ]
+    },
+    "an_body": {
+      "src": "tt:7671691197743680781",
+      "start": 11.65,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ],
+      "speed": 0.66
+    },
+    "an_cam": {
+      "src": "tt:7671691197743680781",
+      "start": 27.3,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "an_lens": {
+      "src": "tt:7671691197743680781",
+      "start": 44.6,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ],
+      "speed": 0.907
+    },
+    "an_box": {
+      "src": "tt:7671691197743680781",
+      "start": 25.05,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ],
+      "speed": 0.72
+    },
+    "an_prop": {
+      "src": "tt:7671691197743680781",
+      "start": 5.0,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "an_wing": {
+      "src": "tt:7671691197743680781",
+      "start": 20.3,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "mh_over": {
+      "src": "tt:7487319024578120990",
+      "start": 70.3
+    },
+    "mh_leave": {
+      "src": "tt:7487319024578120990",
+      "start": 86.6
+    },
+    "mh_app": {
+      "src": "tt:7487319024578120990",
+      "start": 95.3,
+      "src_zoom": 1.25,
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "About Amazon: How Amazon's delivery drones make smart landing decisions",
+      "url": "https://www.aboutamazon.com/news/transportation/prime-air-amazon-drone-delivery-faa-safety"
+    },
+    {
+      "name": "About Amazon: How Amazon delivers packages using its new drone MK30",
+      "url": "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages"
+    },
+    {
+      "name": "DroneDJ: What to know about Amazon's 60-minute drone delivery",
+      "url": "https://dronedj.com/amazon-new-mk30-delivery-drone/"
+    }
+  ],
+  "footage_credits": [
+    "Atlanta News First on TikTok (MK30 close-ups)",
+    "@_nefertiticutz on TikTok (drone delivery)",
+    "@teaching_mrsh on TikTok (aborted delivery)"
+  ],
+  "id": "amazon_drone",
+  "lang": "en",
+  "title": "How does Amazon's drone know *where* to drop? 📦",
+  "pronounce": {
+    "MK30,": "M K thirty,",
+    "4": "four",
+    "5": "five"
+  },
+  "hook": {
+    "lines": [
+      "This drone is delivering a package.",
+      "How does it know *where*?"
+    ],
+    "clips": [
+      "nf_arrive",
+      "nf_desc"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.55,
+        "y": 0.3,
+        "angle": 120
+      }
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:where?"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Meet *MK30*,",
+        "Amazon's delivery drone."
+      ],
+      "clip": "an_body"
+    },
+    {
+      "lines": [
+        "It cruises high up,",
+        "then drops to about *4 meters*."
+      ],
+      "clip": "nf_far"
+    },
+    {
+      "lines": [
+        "These *cameras* scan your yard",
+        "for people, pets and trampolines."
+      ],
+      "clips": [
+        "an_cam",
+        "an_lens"
+      ],
+      "annotate": [
+        {
+          "type": "circle",
+          "at": "line2",
+          "x": 0.52,
+          "y": 0.46,
+          "r": 150
+        }
+      ],
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:cameras"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "If anything's in the way…"
+      ],
+      "clip": "mh_over"
+    },
+    {
+      "lines": [
+        "it just *leaves*."
+      ],
+      "clip": "mh_leave",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:leaves."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "And sends you a text:",
+        "*delivery attempted*."
+      ],
+      "clip": "mh_app",
+      "sfx": [
+        {
+          "id": "dingding",
+          "at": "word:delivery"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Up to *5 pounds*,",
+        "in under an hour."
+      ],
+      "clips": [
+        "an_box",
+        "an_prop"
+      ]
+    },
+    {
+      "lines": [
+        "Faster than pizza,",
+        "and *politer* than most couriers."
+      ],
+      "clip": "an_wing"
+    }
+  ],
+  "upload": {
+    "title": "How Does Amazon's Drone Know Where to Drop? 📦 #shorts",
+    "description": "How does a delivery drone know where to drop your package? 📦\n\nAmazon's MK30 cruises high, then descends to about 4 meters (13 feet) above your yard. Its cameras and onboard perception scan the drop zone for people, pets, trampolines and clotheslines, and if anything is in the way, it doesn't drop: it looks for an alternative or flies away and tells you the delivery was attempted. It carries packages up to 5 pounds and delivers in under an hour.\n\nFaster than pizza, and politer than most couriers. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#amazon",
+      "#drone",
+      "#primeair",
+      "#technology"
+    ],
+    "tags": [
+      "amazon drone",
+      "amazon prime air",
+      "mk30",
+      "drone delivery",
+      "amazon drone delivery",
+      "how drone delivery works",
+      "delivery drone",
+      "package drone",
+      "amazon",
+      "prime air",
+      "drone",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "Imagine getting ghosted by a drone because your trampoline looked suspicious 😂"
+  }
+}

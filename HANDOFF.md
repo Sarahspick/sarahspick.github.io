@@ -143,3 +143,11 @@
 - 대안으로 채택: AliExpress Affiliate API(aliexpress.affiliate.hotproduct.query)가 제휴 회원에게 product_video_url(셀러 공식 상품 영상)과 promotion_link를 준다. 이 영상은 같은 상품의 알리 제휴 링크로만 연결한다(아마존 링크와 섞지 않음). 게시 전 Portals 약관에서 소재 사용 범위 한 번 더 확인.
 - pipeline/ali_source.py: 키워드로 인기 상품 검색, 영상 있는 것만, --download로 mp4 저장. 필요 환경 변수 ALI_APP_KEY, ALI_APP_SECRET, ALI_TRACKING_ID. 더미 키로 요청 형식은 검증함(InvalidAppKey까지 도달), 실제 키로는 미검증.
 - 발급 방법: portals.aliexpress.com 가입(무료) → tracking ID 생성 → openservice.aliexpress.com에서 개발자 등록 후 Affiliate API 앱 생성 → App Key, App Secret.
+
+## 14. 연결 상태 (2026-09-30)
+- 인스타 토큰 작동 확인: @sarahs.pick, id 28751814864505190, 크리에이터 계정, 팔로워 25, 게시물 9, 게시 한도 하루 100. Instagram 로그인 방식이라 graph.instagram.com 사용.
+- PEXELS_API_KEY 작동 확인. 다만 Mochi는 스톡 영상 방향을 싫어함, 쓰지 않음.
+- ALI_APP_KEY, ALI_APP_SECRET, ALI_TRACKING_ID(=default) 등록 완료. 이전 세션 컨테이너에는 안 보였음, 새 세션에서 확인.
+- PR #10(알리 도구)은 Mochi가 합치지 않고 닫음. 코드는 claude/elegant-heisenberg-c3qmxa 브랜치에 있음.
+- 확정 방향: 알리 셀러의 상품 영상 → 셀러에게 사용 허락(Mochi가 알리 채팅으로 메시지 전송) → 허락 받은 것만 편집해서 아마존 동일 상품의 제휴 링크로 게시. 허락 없는 영상은 게시하지 않는다.
+- 운영 자동화 계획: 매일 새 세션으로 도는 Routine. 허락 목록(approved) 중 다음 영상 편집 → 사이트 카드 → publish_ig.py 게시. 댓글 키워드 자동 DM은 instagram_business_manage_messages 권한 추가 후 폴링 방식으로 검토(웹훅은 앱 공개 상태 필요).

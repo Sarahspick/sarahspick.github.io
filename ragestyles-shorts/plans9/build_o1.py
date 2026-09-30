@@ -15,6 +15,9 @@ O = 3840.0
 V = "youtube/oly_vox"
 G = {"sat": 1.05, "contrast": 1.06, "sharpen": 0.45}
 TWO = {"layout": "blur", "box_aspect": 1.0, "darken": 0.45}
+# owner (o1 v4): the title moves down one line (iPhone Dynamic Island hid "Who won the 2026") and the picture starts
+# under the title so no head is covered: 1080 x 1550 box from y 370, same clip blurred behind the title
+BOX = {"mode": "blur", "box_top": 370, "box_w": 1080, "box_aspect": round(1080 / 1550, 4), "darken": 0.45}
 
 
 def shot(src, dur, cx=0.5, cy=0.5, db=-6, **k):
@@ -34,8 +37,9 @@ shots = [
     shot(4135.3, 4.4, db=0, ease="linear",                           # reveal: Nick throws his arms up (tracked)
          path=[[0.0, 1.0, 0.418, 0.495], [1.0, 1.0, 0.41, 0.47], [2.0, 1.0, 0.441, 0.452], [3.0, 1.0, 0.45, 0.486],
                [4.4, 1.0, 0.442, 0.506]]),
-    shot(4139.7, 3.0, db=0, ease="linear",                           # hug with Samson, confetti
-         path=[[0.0, 1.0, 0.444, 0.503], [1.5, 1.0, 0.42, 0.515], [3.0, 1.0, 0.443, 0.51]]),
+    # Samson himself right after the announcement, head down (the confetti hug is Andrew Jacked, green trunks,
+    # so the "2ND SAMSON DAUDA" caption now sits over Samson), 1.5 s of source slowed to 3.0 s, crowd laid under it
+    shot(4135.9, 3.0, cx=0.62, zoom=[1.04, 1.1], audio=False, speed=0.5),
     shot(4199.6, 3.6, cx=0.52, db=-8, zoom=[1.0, 1.06]),             # Nick wearing the gold medal
 ]
 ts = [0.0]
@@ -54,7 +58,7 @@ WIN = 0.6                            # Nick's arms go up this far into shot 6
 
 # owner (o1 v3): no leaderboard; only the title on top and one caption low in the middle, e.g. "TONIO BURTON $30,000"
 captions = [
-    {"t": 0, "d": T, "text": "Who won the 2026\n*Mr. Olympia*? :trophy:", "style": "title", "anim": "none", "y": 0.085},
+    {"t": 0, "d": T, "text": "Who won the 2026\n*Mr. Olympia*? :trophy:", "style": "title", "anim": "none", "y": 0.1335},
     cap(0, "*5TH* PLACE", d=NAME[0]), cap(0, "TONIO BURTON\n*$30,000*", dt=NAME[0]),
     cap(1, "*4TH* PLACE", d=NAME[1]), cap(1, "ANDREW JACKED\n*$40,000*", dt=NAME[1]),
     cap(2, "*3RD* PLACE\n~LAST YEAR'S CHAMPION~", d=NAME[2]), cap(2, "DEREK LUNSFORD\n*$100,000*", dt=NAME[2]),
@@ -92,9 +96,10 @@ audio_clips = [
     clip(4116.4, 2.8, ts[4]),                                               # "the first place check for $600,000"
     clip(4121.9, 2.7, ts[5]),                                               # "and the title of 2026 Mr. Olympia"
     clip(4156.4, 2.9, ts[8] + 0.2),                                         # "he defeated three former Mr. Olympia"
+    clip(4139.7, 3.0, ts[7]),                                                 # crowd and confetti under Samson's shot
 ]
 plan = {"id": "o1_olympia_2026_results", "yt_title": "Who won the 2026 Mr. Olympia? 🏆 #shorts",
-        "layout": {"mode": "full"}, "shots": shots, "captions": captions, "marks": [], "sfx": sfx,
+        "layout": BOX, "shots": shots, "captions": captions, "marks": [], "sfx": sfx,
         "audio_clips": audio_clips, "lufs": -14.0}
 json.dump(plan, open("plans9/o1_olympia_2026_results.json", "w"), indent=1, ensure_ascii=False)
 print("shots at", ts)

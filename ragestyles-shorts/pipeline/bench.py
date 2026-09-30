@@ -30,7 +30,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import render as R  # noqa: E402  (text, emoji, crop and audio helpers)
 
-W, H, FPS, SR = 1080, 1920, 30, 48000
+W, H, FPS, SR = 1080, 1920, int(os.environ.get("RS_FPS", "30")), 48000  # RS_FPS=60 for a 60 fps master
 ROOT = os.path.dirname(HERE)
 SRC_DIR = os.environ.get("RS_SOURCES", os.path.join(ROOT, "work", "dvids"))
 SFX_DIR = os.path.join(ROOT, "assets", "sfx")
@@ -294,8 +294,10 @@ class ShotStream:
             filters.append(f"scale={w}:{h}")
         if abs(speed - 1) > 1e-3:
             filters.append(f"setpts=PTS/{speed:.5f}")
-            if self.info["fps"] / speed < FPS - 1 and shot.get("interp", True):
-                filters.append(f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1")
+        # motion-interpolate the source per shot (slow motion, or a 60 fps render of a 30 fps source), so cuts and
+        # captions never blend: captions are drawn afterwards at the output frame rate
+        if self.info["fps"] / speed < FPS - 1 and shot.get("interp", True):
+            filters.append(f"minterpolate=fps={FPS}:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:vsbmc=1:scd=fdiff")
         filters.append(f"fps={FPS}")
         self.w, self.h, self.n = w, h, n_frames
         n_read = 1 if shot.get("still") else n_frames + 2  # still: freeze the frame at `in` for the whole shot

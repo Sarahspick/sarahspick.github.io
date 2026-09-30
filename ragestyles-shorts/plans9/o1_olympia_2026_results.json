@@ -2,7 +2,11 @@
  "id": "o1_olympia_2026_results",
  "yt_title": "Who won the 2026 Mr. Olympia? 🏆 #shorts",
  "layout": {
-  "mode": "full"
+  "mode": "blur",
+  "box_top": 370,
+  "box_w": 1080,
+  "box_aspect": 0.6968,
+  "darken": 0.45
  },
  "shots": [
   {
@@ -232,43 +236,23 @@
   },
   {
    "src": "youtube/oly_vox",
-   "in": 299.7,
+   "in": 295.9,
    "dur": 3.0,
-   "cx": 0.5,
+   "cx": 0.62,
    "cy": 0.5,
    "zoom": [
-    1.0,
-    1.04
+    1.04,
+    1.1
    ],
-   "audio": true,
+   "audio": false,
    "af": "voice",
-   "audio_db": 0,
+   "audio_db": -6,
    "grade": {
     "sat": 1.05,
     "contrast": 1.06,
     "sharpen": 0.45
    },
-   "ease": "linear",
-   "path": [
-    [
-     0.0,
-     1.0,
-     0.444,
-     0.503
-    ],
-    [
-     1.5,
-     1.0,
-     0.42,
-     0.515
-    ],
-    [
-     3.0,
-     1.0,
-     0.443,
-     0.51
-    ]
-   ]
+   "speed": 0.5
   },
   {
    "src": "youtube/oly_vox",
@@ -297,7 +281,7 @@
    "text": "Who won the 2026\n*Mr. Olympia*? :trophy:",
    "style": "title",
    "anim": "none",
-   "y": 0.085
+   "y": 0.1335
   },
   {
    "t": 0.0,
@@ -498,6 +482,15 @@
    "in": 316.4,
    "dur": 2.9,
    "t": 27.4,
+   "af": "voice",
+   "db": 3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/oly_vox",
+   "in": 299.7,
+   "dur": 3.0,
+   "t": 24.2,
    "af": "voice",
    "db": 3,
    "fade": 0.05

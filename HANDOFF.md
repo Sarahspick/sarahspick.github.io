@@ -152,3 +152,9 @@
 - 품질 주의: 셀러 영상은 중국어 자막, 창고 박스 컷이 섞이고 길다(59초). edit.py의 --start/--end로 제일 예쁜 8~12초만 잘라 써야 함. 영상마다 프레임을 뽑아 보고 구간을 고르는 단계가 필요.
 - 일부 상품은 link.generate에서 "cannot be sold or promoted in the selected country"가 나옴. 미국 배송 불가 상품은 쓰지 않는다(product.query는 ship_to_country=US로 이미 걸러짐).
 - 다음 할 일: 알리 링크용 사이트 카드(아마존과 분리, 고지문도 알리용 추가), 영상 구간 자동 선택, 첫 알리 릴스 1개를 Mochi 확인 후 publish_ig.py로 게시. 게시 전 Portals 약관에서 셀러 영상 사용 범위 확인은 여전히 필요.
+
+## 15. 새 프로젝트: 웸반야마 유튜브 쇼츠 팬 채널 (2026-09-30)
+- 방향 결정: 피겨 제외, NBA 웸반야마 한 명 중심 영어 채널(미국 광고 단가). 수익화(YPP) 유지를 위해 중계 영상 재업로드는 하지 않고, 원본 그래픽 + Wikimedia Commons 공개 라이선스 사진(CC BY, 퍼블릭 도메인만, CC BY-SA는 피함) + ElevenLabs AI 보이스로 만든다.
+- 테스트 영상 1호 "Wemby is NOT normal"(24초, 신장 비교, 윙스팬, DPOY): shorts/make_vo.py(보이스와 단어 타이밍) → shorts/wemby_height.py(렌더). 제목, 설명, 사진 출처는 shorts/README.md.
+- Commons 다운로드 주의: 커스텀 User-Agent는 429, curl 기본 UA는 됨. 썸네일 폭은 1280 같은 표준 값만 됨(Special:Redirect/file/파일명?width=1280).
+- 다음: 유튜브 채널 업로드 권한(OAuth), 영상 2~5호 포맷 템플릿화.

@@ -1,0 +1,320 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "clips": {
+    "cg_drop": {
+      "src": "tt:7680303433852783886",
+      "start": 2.4,
+      "cover": [
+        [
+          0.04,
+          0.549,
+          0.96,
+          0.678
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "cg_swerve": {
+      "src": "tt:7680303433852783886",
+      "start": 4.3,
+      "cover": [
+        [
+          0.04,
+          0.549,
+          0.96,
+          0.678
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "mv_crowd": {
+      "src": "tt:7667253693972024590",
+      "start": 1.0,
+      "cover": [
+        [
+          0.04,
+          0.543,
+          0.96,
+          0.713
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "mv_figs": {
+      "src": "tt:7667253693972024590",
+      "start": 6.0,
+      "cover": [
+        [
+          0.04,
+          0.543,
+          0.96,
+          0.713
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "sc_night": {
+      "src": "tt:7652039244436753678",
+      "start": 4.0,
+      "cover": [
+        [
+          0.04,
+          0.573,
+          0.96,
+          0.65
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "fl_watch": {
+      "src": "tt:7687292250224692493",
+      "start": 3.2,
+      "cover": [
+        [
+          0.04,
+          0.549,
+          0.96,
+          0.67
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "fl_fall": {
+      "src": "tt:7687292250224692493",
+      "start": 5.4,
+      "cover": [
+        [
+          0.04,
+          0.549,
+          0.96,
+          0.67
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "hb_storm": {
+      "src": "tt:7673948544235080974",
+      "start": 2.5,
+      "cover": [
+        [
+          0.04,
+          0.55,
+          0.96,
+          0.677
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "hb_storm2": {
+      "src": "tt:7673948544235080974",
+      "start": 9.0,
+      "cover": [
+        [
+          0.04,
+          0.55,
+          0.96,
+          0.677
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "st_kids": {
+      "src": "tt:7660574161953180942",
+      "start": 5.5,
+      "cover": [
+        [
+          0.04,
+          0.556,
+          0.96,
+          0.661
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "Waymo: The Waymo Driver (sensors and behavior prediction)",
+      "url": "https://waymo.com/waymo-driver/"
+    },
+    {
+      "name": "Waymo on X: Multimodal sensors are indispensable (Aug 2026)",
+      "url": "https://x.com/Waymo/status/2092643704456483304"
+    }
+  ],
+  "footage_credits": [
+    "@waymo on TikTok (official onboard footage, 2026)"
+  ],
+  "id": "waymo_sees",
+  "lang": "en",
+  "title": "How does a *driverless* car see danger? 🚗",
+  "pronounce": {
+    "29": "twenty-nine",
+    "3D": "three D"
+  },
+  "hook": {
+    "lines": [
+      "Boxes fly off this truck,",
+      "and a car with *no driver* dodges them."
+    ],
+    "clips": [
+      "cg_drop",
+      "cg_drop"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:dodges"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "How did it *know*?"
+      ],
+      "clip": "cg_swerve"
+    },
+    {
+      "lines": [
+        "Top half is what the car *sees*.",
+        "Bottom is the real road."
+      ],
+      "clip": "mv_crowd",
+      "annotate": [
+        {
+          "type": "circle",
+          "at": "line1",
+          "x": 0.5,
+          "y": 0.255,
+          "r": 110
+        }
+      ]
+    },
+    {
+      "lines": [
+        "*Lidar* fires millions of laser pulses",
+        "and paints a 3D map."
+      ],
+      "clip": "sc_night",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:Lidar"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Plus *29 cameras*,",
+        "watching every direction at once."
+      ],
+      "clip": "mv_figs"
+    },
+    {
+      "lines": [
+        "Every person becomes a figure",
+        "with a *predicted* path."
+      ],
+      "clip": "st_kids"
+    },
+    {
+      "lines": [
+        "Watch this skater."
+      ],
+      "clip": "fl_watch"
+    },
+    {
+      "lines": [
+        "The car moves over",
+        "*before* he even falls."
+      ],
+      "clip": "fl_fall",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:before"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Dust storm?",
+        "*Radar* sees right through it."
+      ],
+      "clips": [
+        "hb_storm",
+        "hb_storm2"
+      ]
+    },
+    {
+      "lines": [
+        "Never tired, never angry,",
+        "never texting at a *red light*."
+      ],
+      "clip": "sc_night"
+    }
+  ],
+  "upload": {
+    "title": "How Does a Driverless Car See Danger Coming? 🚗 #shorts",
+    "description": "How does a car with nobody at the wheel dodge boxes falling off a truck? 🚗\n\nWaymo's robotaxis combine three kinds of sensors: lidar fires millions of laser pulses to paint a 3D map, 29 cameras give a simultaneous 360° view, and radar measures distance and speed even in rain or a dust storm. The top half of these clips is what the Waymo Driver sees: every person and car becomes a shape, and the AI predicts the many paths each one might take, which is why it moves over before the skater even falls.\n\nNever tired, never angry, never texting at a red light. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#waymo",
+      "#selfdriving",
+      "#robotaxi",
+      "#technology"
+    ],
+    "tags": [
+      "waymo",
+      "waymo lidar",
+      "how waymo works",
+      "self driving car",
+      "driverless car",
+      "robotaxi",
+      "lidar",
+      "autonomous vehicle",
+      "waymo driver",
+      "how self driving cars see",
+      "google waymo",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "The car saw the skater fall before the skater did 😂"
+  }
+}

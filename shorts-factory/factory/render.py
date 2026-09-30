@@ -17,7 +17,7 @@ import soundfile as sf
 from PIL import Image
 
 from . import gfx
-from .config import FPS, H, OUTPUT, SR, THEMES, W, WORK, load_channel
+from .config import FPS, H, OUTPUT, SR, THEMES, W, WORK, load_channel, rel
 from .media import fetch, open_reader, parse_aspect, source_meta
 from .speech import detect as detect_speech
 from .sfx import SfxLibrary, measure
@@ -210,7 +210,11 @@ class Short:
         orig = self.original_audio()
         if orig:
             inputs += ["-i", orig]
-            labels.append("[1:a]")
+            labels.append(f"[{len(inputs) // 2 - 1}:a]")
+        bgm = self.background_music(narr)
+        if bgm:
+            inputs += ["-i", bgm]
+            labels.append(f"[{len(inputs) // 2 - 1}:a]")
         base = len(inputs) // 2
         for n, c in enumerate(self.cues, start=base):
             inputs += ["-i", self.sfx.path(c["id"])]
@@ -239,6 +243,27 @@ class Short:
                 break
         self.mix = final
         self.loudness = measure(final)
+
+    def background_music(self, narr):
+        """Optional licensed music bed ("bgm": {"file": path, "lufs": -30, "start": 0}) in the script or channel.
+
+        Looped to the Short's length, normalised, ducked under the narration (sidechain) and faded out at the end.
+        Only use music the channel is allowed to use (YouTube Audio Library, a paid library, or tracks the user
+        supplies); popular songs go in through YouTube's own editor instead."""
+        cfg = self.sc.get("bgm", self.ch.get("bgm"))
+        if not cfg or not cfg.get("file") or not os.path.exists(rel(cfg["file"])):
+            return None
+        src = rel(cfg["file"])
+        lufs = measure(src)[0]
+        gain = float(cfg.get("lufs", -30)) - lufs
+        out = os.path.join(self.work, "bgm_ducked.wav")
+        fade = min(1.5, self.total / 4)
+        fc = (f"[0:a]atrim=start={float(cfg.get('start', 0)):.2f},asetpts=PTS-STARTPTS,volume={gain:.2f}dB,"
+              f"atrim=0:{self.total:.3f},afade=t=out:st={self.total - fade:.3f}:d={fade:.3f}[m];"
+              f"[m][1:a]sidechaincompress=threshold=0.03:ratio=6:attack=15:release=350[d]")
+        subprocess.run(["ffmpeg", "-v", "error", "-y", "-stream_loop", "-1", "-i", src, "-i", narr,
+                        "-filter_complex", fc, "-map", "[d]", "-ar", str(SR), "-ac", "2", out], check=True)
+        return out
 
     def original_audio(self):
         """The footage's own sound under the narration, cut exactly like the picture (same starts, speeds, hard cuts).
@@ -396,6 +421,11 @@ class Short:
                 frame = gfx.blurred_bg(media)
                 last_bg = frame.copy()
                 frame.paste(media, (x, y))
+            iz = float(self.ch.get("intro_zoom", 0))
+            if iz and t < 1.0:  # slow push-in over the first second (user rule)
+                z = 1 + iz * (t / 1.0) ** 0.8
+                vw, vh = W / z, H / z
+                frame = frame.resize((W, H), Image.BICUBIC, box=((W - vw) / 2, (H - vh) / 2, (W + vw) / 2, (H + vh) / 2))
             frame.paste(title, (0, 0), title)
             while ci + 1 < len(self.chunks) and self.chunks[ci + 1]["t0"] <= t + 1e-6:
                 ci += 1

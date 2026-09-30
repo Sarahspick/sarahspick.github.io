@@ -58,6 +58,11 @@
     "whoosh",
     "yeah"
   ],
-  "intro_sfx": "question",
-  "intro_gain": 0
+  "intro_sfx": "boom2",
+  "intro_gain": 0,
+  "intro_zoom": 0.08,
+  "youtube_token": {
+    "en": "YT_REFRESH_TOKEN_TT",
+    "ko": "YT_REFRESH_TOKEN_CC"
+  }
 }

@@ -3,15 +3,19 @@
     python tools/upload_youtube.py scripts/amazon_drone.en.json               # private upload (default)
     python tools/upload_youtube.py scripts/amazon_drone.ko.json --public      # publish right away
     python tools/upload_youtube.py scripts/amazon_drone.en.json --dry-run     # print what would be sent
+    python tools/upload_youtube.py scripts/amazon_drone.en.json --comment-on VIDEO_ID   # after making it public
 
 The video is output/<date>_<id>_<LANG>.mp4 (newest). Title, description, tags come from the script's
 "upload" block (the same text as <name>_text.txt); the "comment" is posted as the first comment (pin it in
-the app: the API cannot pin).
+the app: the API cannot pin). YouTube refuses comments on private videos, so a private upload skips the comment;
+post it with --comment-on once the video is public. An upload whose title is already on the channel is refused
+(use --force to upload again).
 
 Credentials (environment variables, never in chat or git):
     YT_CLIENT_ID, YT_CLIENT_SECRET      OAuth client of the Google Cloud project
-    YT_REFRESH_TOKEN_EN                  refresh token authorised as the Top Techs channel
-    YT_REFRESH_TOKEN_KO                  refresh token authorised as the 기발한 회사들 channel
+    YT_REFRESH_TOKEN_TT                  refresh token authorised as the Top Techs channel (English)
+    YT_REFRESH_TOKEN_CC                  refresh token authorised as the 기발한 회사들 channel (Korean)
+    (mapping in channel.json "youtube_token"; YT_REFRESH_TOKEN_RS belongs to another project, never used here)
 Scopes when creating the refresh tokens: youtube.upload and youtube.force-ssl (for the comment).
 """
 import argparse
@@ -25,14 +29,17 @@ import requests
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 UPLOAD_URL = "https://www.googleapis.com/upload/youtube/v3/videos"
-COMMENT_URL = "https://www.googleapis.com/youtube/v3/commentThreads"
+API = "https://www.googleapis.com/youtube/v3"
+COMMENT_URL = API + "/commentThreads"
 
 
 def access_token(lang):
-    rt = os.environ.get(f"YT_REFRESH_TOKEN_{lang.upper()}")
+    var = json.load(open(os.path.join(ROOT, "channel.json"), encoding="utf-8")).get("youtube_token", {}).get(
+        lang, f"YT_REFRESH_TOKEN_{lang.upper()}")
+    rt = os.environ.get(var)
     cid, secret = os.environ.get("YT_CLIENT_ID"), os.environ.get("YT_CLIENT_SECRET")
     missing = [n for n, v in (("YT_CLIENT_ID", cid), ("YT_CLIENT_SECRET", secret),
-                              (f"YT_REFRESH_TOKEN_{lang.upper()}", rt)) if not v]
+                              (var, rt)) if not v]
     if missing:
         sys.exit(f"missing environment variables: {', '.join(missing)}")
     r = requests.post(TOKEN_URL, data={"client_id": cid, "client_secret": secret, "refresh_token": rt,
@@ -40,6 +47,23 @@ def access_token(lang):
     if r.status_code != 200:
         sys.exit(f"token refresh failed ({r.status_code}): {r.text[:300]}")
     return r.json()["access_token"]
+
+
+def channel_uploads(tok):
+    h = {"Authorization": f"Bearer {tok}"}
+    ch = requests.get(API + "/channels", params={"part": "contentDetails", "mine": "true"}, headers=h, timeout=30).json()
+    pl = ch["items"][0]["contentDetails"]["relatedPlaylists"]["uploads"]
+    r = requests.get(API + "/playlistItems", params={"part": "snippet", "playlistId": pl, "maxResults": 50},
+                     headers=h, timeout=30).json()
+    return {i["snippet"]["title"]: i["snippet"]["resourceId"]["videoId"] for i in r.get("items", [])}
+
+
+def post_comment(tok, vid, text):
+    c = requests.post(COMMENT_URL, params={"part": "snippet"}, headers={"Authorization": f"Bearer {tok}"},
+                      json={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}},
+                      timeout=60)
+    print("comment posted (pin it in the YouTube app)" if c.status_code == 200
+          else f"comment failed ({c.status_code}): {c.text[:200]}")
 
 
 def build_body(sc, public):
@@ -68,6 +92,8 @@ def main():
     ap.add_argument("--public", action="store_true", help="publish instead of uploading as private")
     ap.add_argument("--no-comment", action="store_true")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--force", action="store_true", help="upload even if the title is already on the channel")
+    ap.add_argument("--comment-on", metavar="VIDEO_ID", help="only post the script's comment on this (public) video")
     a = ap.parse_args()
     sc = json.load(open(a.script, encoding="utf-8"))
     lang = sc["lang"]
@@ -78,6 +104,12 @@ def main():
         print(json.dumps(body, ensure_ascii=False, indent=1))
         return
     tok = access_token(lang)
+    if a.comment_on:
+        post_comment(tok, a.comment_on, sc["upload"]["comment"])
+        return
+    existing = channel_uploads(tok).get(body["snippet"]["title"])
+    if existing and not a.force:
+        sys.exit(f"already on the channel: https://youtube.com/shorts/{existing} (--force to upload again)")
     size = os.path.getsize(video)
     init = requests.post(UPLOAD_URL, params={"uploadType": "resumable", "part": "snippet,status"},
                          headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json",
@@ -94,11 +126,11 @@ def main():
     print(f"uploaded {os.path.basename(video)} -> https://youtube.com/shorts/{vid} ({body['status']['privacyStatus']})")
     comment = sc["upload"].get("comment")
     if comment and not a.no_comment:
-        c = requests.post(COMMENT_URL, params={"part": "snippet"}, headers={"Authorization": f"Bearer {tok}"},
-                          json={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": comment}}}},
-                          timeout=60)
-        print("comment posted (pin it in the YouTube app)" if c.status_code == 200
-              else f"comment failed ({c.status_code}): {c.text[:200]}")
+        if body["status"]["privacyStatus"] == "public":
+            post_comment(tok, vid, comment)
+        else:
+            print(f"comment not posted (private video). After publishing run:\n"
+                  f"  python tools/upload_youtube.py {a.script} --comment-on {vid}")
 
 
 if __name__ == "__main__":

@@ -35,7 +35,7 @@ class SfxLibrary:
         src = asset("sfx", self.lib[sid]["file"])
         if not os.path.exists(src):
             raise FileNotFoundError(f"{src} missing - run: python tools/fetch_assets.py sfx")
-        out = os.path.join(self.cache, sid + ".wav")
+        out = os.path.join(self.cache, sid + ".trim.wav")
         if not os.path.exists(out):
             lufs, peak = measure(src)
             target = self.lib[sid].get("lufs", -19)
@@ -44,6 +44,8 @@ class SfxLibrary:
             else:  # too short for a loudness reading (clicks): peak-normalize instead
                 gain = (target + 10) - peak
             gain = min(gain, -1.0 - peak)
-            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-af", f"volume={gain:.2f}dB",
+            # silenceremove: some library files start with up to a second of silence (e.g. 17. 물음표)
+            subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-af",
+                            f"silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.005,volume={gain:.2f}dB",
                             "-ar", str(SR), "-ac", "2", out], check=True)
         return out

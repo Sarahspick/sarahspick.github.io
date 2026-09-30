@@ -8,16 +8,32 @@
 
 **업로드 전 확인**: 원본 영상(https://youtu.be/Cq7TbOxcwPc) 설명란 맨 아래에 "크리에이티브 커먼즈 저작자 표시 라이선스(재사용 허용)" 가 있는지 꼭 봐주세요. OlympiaTV 의 다른 영상들은 CC 필터에 나오지만 이 영상은 제 검색에 아직 안 나왔습니다. 표준 라이선스면 올리지 마세요.
 
-제목
-```
-Who won the 2026 Mr. Olympia? 🏆 #shorts
-```
+제목 (추천 1번)
+1. `Who won the 2026 Mr. Olympia? 🏆 #shorts`
+2. `Nick Walker is the new Mr. Olympia 🏆 #shorts`
+3. `The moment Nick Walker won Mr. Olympia 😱 #shorts`
+
 설명
 ```
-The 2026 Mr. Olympia results, 5th to 1st: Tonio Burton, Andrew Jacked, reigning champ Derek Lunsford in 3rd, and a final two of Samson Dauda vs Nick Walker. Nick Walker takes the Sandow and $600,000 🏆
+The 2026 Mr. Olympia results, 5th to 1st 🏆
 
-Footage: "2026 Mr. Olympia Finals Official Footage" by OlympiaTV (https://youtu.be/Cq7TbOxcwPc), licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/). Edited by RageStyles (cut, vertical reframe, leaderboard, captions, music removed).
+5th Tonio Burton, $30,000
+4th Andrew Jacked, $40,000
+3rd Derek Lunsford, last year's champion, $100,000
+2nd Samson Dauda, $200,000
+1st Nick Walker, the new Mr. Olympia, $600,000 and the Sandow
 
-#mrolympia #olympia2026 #nickwalker #bodybuilding #samsondauda #derekLunsford #gym #shorts
+Who did you have winning? 👇
+
+Footage: "2026 Mr. Olympia Finals Official Footage" by OlympiaTV (https://youtu.be/Cq7TbOxcwPc). Edited by RageStyles (cut, vertical reframe, captions). All rights go to the owners.
+
+#mrolympia #olympia2026 #nickwalker #bodybuilding #gym #shorts
 ```
-음악은 긴장감 있는 곡을 15~20% 로 작게. 사회자 목소리와 함성이 핵심입니다.
+(원본 설명란에 크리에이티브 커먼즈 문구가 있으면 "All rights go to the owners." 대신 "Licensed under CC BY 3.0 (https://creativecommons.org/licenses/by/3.0/).")
+
+태그
+```
+mr olympia 2026, 2026 mr olympia, mr olympia results, nick walker, nick walker mr olympia, samson dauda, derek lunsford, andrew jacked, tonio burton, olympia 2026 winner, bodybuilding, mr olympia winner, bodybuilding shorts, gym motivation, ifbb pro
+```
+음악은 긴장감 있는 곡을 15~20% 로. 고화질본: o1_olympia_2026_results_HQ.mp4 (13Mbps).
+주의: 1위 발표 직후 닉을 안는 초록 트렁크 선수는 Andrew Jacked 인데 그 샷에 "2ND SAMSON DAUDA" 자막이 떠 있음.

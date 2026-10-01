@@ -1,0 +1,187 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "id": "hyundai_atlas",
+  "lang": "ko",
+  "title": "현대차 공장에 출근한 *로봇*, 뭘 배울까? 🤖",
+  "clips": {
+    "walk": {
+      "src": "tt:7691237865107295494",
+      "start": 2.6
+    },
+    "parts": {
+      "src": "tt:7691237865107295494",
+      "start": 18.2
+    },
+    "head": {
+      "src": "tt:7691237865107295494",
+      "start": 4.25
+    },
+    "sign": {
+      "src": "tt:7691238184767835393",
+      "start": 2.3
+    },
+    "tire": {
+      "src": "tt:7691237865107295494",
+      "start": 20.5,
+      "continue": false,
+      "speed": 0.679
+    },
+    "hand": {
+      "src": "tt:7691237865107295494",
+      "start": 11.15
+    },
+    "handle": {
+      "src": "tt:7691237865107295494",
+      "start": 22.0,
+      "speed": 0.849
+    },
+    "spot": {
+      "src": "tt:7691238184767835393",
+      "start": 12.0
+    },
+    "factory": {
+      "src": "tt:7691238184767835393",
+      "start": 8.05
+    },
+    "conveyor": {
+      "src": "tt:7691238184767835393",
+      "start": 20.0,
+      "speed": 0.883
+    },
+    "coworker": {
+      "src": "tt:7691237865107295494",
+      "start": 24.65
+    }
+  },
+  "pronounce": {
+    "2만": "이만",
+    "5천": "오천",
+    "3만": "삼만"
+  },
+  "sources": [
+    {
+      "name": "Boston Dynamics: Robotics Metaplant Application Center opens",
+      "url": "https://bostondynamics.com/news/boston-dynamics-opens-robotics-metaplant-application-center-to-train-humanoid-robots-for-manufacturing-tasks/"
+    },
+    {
+      "name": "The Korea Times: Hyundai Motor Group opens robot training center in US",
+      "url": "https://www.koreatimes.co.kr/business/companies/20260922/hyundai-motor-group-opens-robot-training-center-in-us"
+    },
+    {
+      "name": "Hyundai Motor Group: Inside the Robotics Race, Atlas Learns the Real World",
+      "url": "https://www.hyundaimotorgroup.com/en/story/hyundai-motor-group-bloomberg-atlas-boston-dynamics-rmac"
+    }
+  ],
+  "footage_credits": [
+    "현대자동차그룹 공식 틱톡 (@hyundaimotorgroup, Boston Dynamics x Bloomberg Media Studios)"
+  ],
+  "hook": {
+    "lines": [
+      "사람처럼 걷는 로봇이",
+      "현대차 공장에서 *부품*을 고르고 있어요."
+    ],
+    "clips": [
+      "walk",
+      "parts"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:부품을"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "보스턴 다이나믹스의",
+        "*아틀라스*예요."
+      ],
+      "clip": "head"
+    },
+    {
+      "lines": [
+        "이 회사, 사실",
+        "*현대차그룹* 거예요."
+      ],
+      "clip": "sign",
+      "punch": true
+    },
+    {
+      "lines": [
+        "미국 조지아 공장 훈련장에서",
+        "부품을 *조립 순서대로* 고르는 법을 배우고요."
+      ],
+      "clips": [
+        "tire",
+        "hand"
+      ]
+    },
+    {
+      "lines": [
+        "일한 데이터가 다시 AI로 들어가서",
+        "할수록 *똑똑*해져요."
+      ],
+      "clip": "handle",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:똑똑해져요."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "현대차는 이런 로봇을",
+        "*2만 5천* 대 넘게 쓸 계획이고"
+      ],
+      "clip": "spot"
+    },
+    {
+      "lines": [
+        "1년에 *3만* 대를 만드는",
+        "로봇 공장도 짓는대요."
+      ],
+      "clips": [
+        "factory",
+        "conveyor"
+      ]
+    },
+    {
+      "lines": [
+        "야근도 불평도 없는 신입이라니,",
+        "사수들 좀 *긴장*하겠네요."
+      ],
+      "clip": "coworker"
+    }
+  ],
+  "upload": {
+    "title": "현대차 공장에 출근한 로봇, 지금 뭘 배우고 있을까? 🤖 #shorts",
+    "description": "사람처럼 걷는 로봇이 현대차 공장에서 부품을 고르고 있어요. 🤖\n\n보스턴 다이나믹스의 휴머노이드 '아틀라스'예요. 보스턴 다이나믹스는 현대차그룹이 인수한 회사죠. 미국 조지아의 현대차그룹 메타플랜트 아메리카 옆에 문을 연 로봇 훈련장(RMAC)에서, 아틀라스는 부품을 조립 순서대로 고르고 옮기는 일을 배우고 있어요. 현장에서 쌓인 데이터는 다시 AI 학습에 들어가서 할수록 똑똑해집니다. 현대차그룹은 앞으로 아틀라스를 2만 5천 대 넘게 쓰고, 1년에 3만 대를 만드는 로봇 공장도 미국에 지을 계획이에요.\n\n야근도 불평도 없는 신입이라니, 사수들 좀 긴장하겠네요. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#현대차",
+      "#아틀라스",
+      "#보스턴다이나믹스",
+      "#기술"
+    ],
+    "tags": [
+      "현대자동차",
+      "현대차그룹",
+      "보스턴 다이나믹스",
+      "아틀라스",
+      "휴머노이드",
+      "로봇",
+      "메타플랜트",
+      "조지아 공장",
+      "스마트 팩토리",
+      "로봇 공장",
+      "기발한 회사들"
+    ],
+    "comment": "아틀라스 사원 첫 출근 소감: \"부품 순서는 외웠는데 회식은 언제예요?\" 🤖"
+  }
+}

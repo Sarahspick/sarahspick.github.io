@@ -1,0 +1,218 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "id": "amazon_vulcan",
+  "lang": "en",
+  "title": "How does Amazon's robot *feel* things? 🤖",
+  "clips": {
+    "bin": {
+      "src": "x:1920111549915824304",
+      "start": 42.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "pod": {
+      "src": "x:1920122967662698684",
+      "start": 11.0
+    },
+    "arms": {
+      "src": "x:1920111549915824304",
+      "start": 18.95,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "bins": {
+      "src": "x:1920111549915824304",
+      "start": 31.05,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "stow": {
+      "src": "x:1920111549915824304",
+      "start": 4.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "paddle": {
+      "src": "x:1920122967662698684",
+      "start": 8.0
+    },
+    "grip": {
+      "src": "x:1920111549915824304",
+      "start": 44.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "nudge": {
+      "src": "x:1920111549915824304",
+      "start": 33.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "reach": {
+      "src": "x:1920111549915824304",
+      "start": 6.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "top": {
+      "src": "x:1920111549915824304",
+      "start": 44.45,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "end": {
+      "src": "x:1920111549915824304",
+      "start": 50.6,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "pronounce": {
+    "75%": "seventy-five percent"
+  },
+  "sources": [
+    {
+      "name": "Amazon on X: Meet Vulcan, our first robot with a sense of touch",
+      "url": "https://x.com/amazon/status/1920122967662698684"
+    },
+    {
+      "name": "About Amazon: Amazon's Vulcan robot uses force sensors to stow and pick",
+      "url": "https://www.aboutamazon.com/news/operations/amazon-vulcan-robot-pick-stow-touch"
+    }
+  ],
+  "footage_credits": [
+    "Amazon on X",
+    "Werner Vogels on X (Vulcan footage)"
+  ],
+  "hook": {
+    "lines": [
+      "This robot can *feel*",
+      "what it's grabbing."
+    ],
+    "clips": [
+      "bin",
+      "pod"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:feel"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Meet *Vulcan*, Amazon's first",
+        "robot with a sense of touch."
+      ],
+      "clip": "arms"
+    },
+    {
+      "lines": [
+        "Warehouse shelves are fabric bins,",
+        "packed *tight*."
+      ],
+      "clips": [
+        "bins",
+        "stow"
+      ]
+    },
+    {
+      "lines": [
+        "Cameras alone can't tell",
+        "how hard to *push*."
+      ],
+      "clip": "paddle"
+    },
+    {
+      "lines": [
+        "So its gripper has *force sensors*,",
+        "like fingertips."
+      ],
+      "clip": "grip",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:force"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "It nudges other items aside",
+        "and slides the new one *in*."
+      ],
+      "clip": "nudge",
+      "punch": true
+    },
+    {
+      "lines": [
+        "It handles about *75%* of items,",
+        "at speeds close to a human."
+      ],
+      "clip": "reach"
+    },
+    {
+      "lines": [
+        "The top shelves are its job now,",
+        "*no ladder* needed."
+      ],
+      "clip": "top"
+    },
+    {
+      "lines": [
+        "A coworker with a gentle touch,",
+        "and *zero* coffee breaks."
+      ],
+      "clip": "end"
+    }
+  ],
+  "upload": {
+    "title": "How Does Amazon's Robot Feel What It Grabs? 🤖 #shorts",
+    "description": "This robot can feel what it's grabbing. 🤖\n\nAmazon's Vulcan works with the fabric bins in its warehouse pods, which are packed tight. Cameras alone can't tell how hard to push, so Vulcan's gripper has force sensors that work like fingertips: it nudges other items aside and slides the new one in without crushing anything. Amazon says it can pick and stow about 75% of the item types in its fulfillment centers at speeds close to a human worker, and it takes the top and bottom shelves so people don't need ladders.\n\nA coworker with a gentle touch, and zero coffee breaks. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#amazon",
+      "#robot",
+      "#robotics",
+      "#technology"
+    ],
+    "tags": [
+      "amazon",
+      "amazon vulcan",
+      "vulcan robot",
+      "robot with sense of touch",
+      "amazon robotics",
+      "warehouse robot",
+      "amazon warehouse",
+      "force sensor",
+      "physical ai",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "It has a gentler touch than whoever packed my last order 📦😂"
+  }
+}

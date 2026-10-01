@@ -1,0 +1,182 @@
+{
+  "aspect": "3:4",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "id": "boring_prufrock",
+  "lang": "en",
+  "title": "How do you dig a tunnel *without stopping*? 🚇",
+  "clips": {
+    "cutter": {
+      "src": "x:2058222522215063708",
+      "start": 0.3
+    },
+    "ring": {
+      "src": "x:2058222522215063708",
+      "start": 46.15
+    },
+    "dirt": {
+      "src": "x:2058222522215063708",
+      "start": 25.0
+    },
+    "segment": {
+      "src": "x:2058222522215063708",
+      "start": 40.0
+    },
+    "inside": {
+      "src": "x:2058222522215063708",
+      "start": 2.8
+    },
+    "spray": {
+      "src": "x:2058222522215063708",
+      "start": 33.5
+    },
+    "erector": {
+      "src": "x:2058222522215063708",
+      "start": 58.0
+    },
+    "ring2": {
+      "src": "x:2058222522215063708",
+      "start": 69.5
+    },
+    "conveyor": {
+      "src": "x:2058222522215063708",
+      "start": 42.5,
+      "speed": 0.881
+    },
+    "control": {
+      "src": "x:2058222522215063708",
+      "start": 99.2
+    },
+    "screen": {
+      "src": "x:2058222522215063708",
+      "start": 76.2
+    },
+    "surface": {
+      "src": "x:2058222522215063708",
+      "start": 91.65
+    }
+  },
+  "sources": [
+    {
+      "name": "The Boring Company on X: See how Prufrock continuously mines",
+      "url": "https://x.com/boringcompany/status/2058222522215063708"
+    },
+    {
+      "name": "The Boring Company on X: Prufrock-MB1 and MB2 tunneling in Nashville",
+      "url": "https://x.com/boringcompany/status/2097171928381616339"
+    }
+  ],
+  "footage_credits": [
+    "The Boring Company on X"
+  ],
+  "hook": {
+    "lines": [
+      "This machine digs a tunnel",
+      "and *builds* it at the same time."
+    ],
+    "clips": [
+      "cutter",
+      "ring"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:builds"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Normal boring machines dig, *stop*,",
+        "build a ring, then dig again."
+      ],
+      "clips": [
+        "dirt",
+        "segment"
+      ]
+    },
+    {
+      "lines": [
+        "The Boring Company's *Prufrock*",
+        "never stops."
+      ],
+      "clip": "inside"
+    },
+    {
+      "lines": [
+        "The cutter *grinds* through rock up front…"
+      ],
+      "clip": "spray"
+    },
+    {
+      "lines": [
+        "while concrete rings are",
+        "*placed* right behind it."
+      ],
+      "clips": [
+        "erector",
+        "ring2"
+      ],
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:placed"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The dirt rides out on a",
+        "*conveyor belt* the whole time."
+      ],
+      "clip": "conveyor"
+    },
+    {
+      "lines": [
+        "And it's driven remotely,",
+        "from a *control room* in Texas."
+      ],
+      "clips": [
+        "control",
+        "screen"
+      ],
+      "punch": true
+    },
+    {
+      "lines": [
+        "Digging tunnels to escape traffic,",
+        "while *working from home*."
+      ],
+      "clip": "surface"
+    }
+  ],
+  "upload": {
+    "title": "How Do You Dig a Tunnel Without Stopping? 🚇 #shorts",
+    "description": "This machine digs a tunnel and builds it at the same time. 🚇\n\nMost tunnel boring machines work in cycles: dig, stop, install a concrete ring, then dig again. The Boring Company's Prufrock mines continuously: the cutterhead grinds through rock at the front while concrete liner segments are placed right behind it, and the spoil rides out on a conveyor belt the whole time. The machines are monitored and controlled remotely from the company's operations center in Bastrop, Texas.\n\nDigging tunnels to escape traffic, while working from home. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#boringcompany",
+      "#tunnel",
+      "#engineering",
+      "#technology"
+    ],
+    "tags": [
+      "boring company",
+      "prufrock",
+      "tunnel boring machine",
+      "tbm",
+      "how tunnels are made",
+      "vegas loop",
+      "elon musk",
+      "tunnel",
+      "engineering",
+      "continuous mining",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "The only machine in the world that's happy to be called boring 😂"
+  }
+}

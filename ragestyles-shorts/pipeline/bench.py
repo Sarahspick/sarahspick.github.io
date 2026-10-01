@@ -589,7 +589,7 @@ class Bench:
         if only is None:
             enc = subprocess.Popen(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "rawvideo",
                                     "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
-                                    "-c:v", "libx264", "-preset", "slow", "-crf", "17", "-pix_fmt", "yuv420p",
+                                    "-c:v", "libx264", "-preset", os.environ.get("RS_PRESET", "slow"), "-crf", os.environ.get("RS_CRF", "17"), "-pix_fmt", "yuv420p",
                                     "-movflags", "+faststart", out_path], stdin=subprocess.PIPE)
         fi = 0
         for si, seg in enumerate(self.timeline):
@@ -707,7 +707,7 @@ class Bench:
             self.render_video(v)
             self.render_audio(a)
             subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", v, "-i", a, "-c:v", "copy",
-                            "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out_mp4], check=True)
+                            "-c:a", "aac", "-b:a", os.environ.get("RS_ABR", "192k"), "-shortest", "-movflags", "+faststart", out_mp4], check=True)
         return out_mp4
 
 

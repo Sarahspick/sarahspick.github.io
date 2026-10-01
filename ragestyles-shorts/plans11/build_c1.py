@@ -42,7 +42,7 @@ def place(label, pre, name_a, name_b, shot, d, text, y=0.5):
 
 place("*5TH* PLACE", (1469.6, 0.5, ), 1438.95, 1440.65,
       (1463.6, dict(cx=0.44, cy=0.5, zoom=(1.0, 1.05))), 1.8, "TERRENCE RUFFIN\n*$6,000*")
-o.shots[0].update(cx=0.32, cy=0.5, zoom=[1.0, 1.02])          # the Zyzz pose, face clear of the caption
+o.shots[0].update(cx=0.365, cy=0.5, zoom=[1.0, 1.02])          # the Zyzz pose, face clear of the caption
 place("*4TH* PLACE", (1488.2, 0.45), 1475.4, 1477.55,
       (1503.0, dict(cx=0.36, cy=0.5, zoom=(1.0, 1.05))), 2.1, "WESLEY VISSERS\n*$10,000*")
 o.shots[2].update(cx=0.66, cy=0.5, zoom=[1.0, 1.02])

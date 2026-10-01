@@ -8,7 +8,9 @@
 The video is output/<date>_<id>_<LANG>.mp4 (newest). Title, description, tags come from the script's
 "upload" block (the same text as <name>_text.txt); the "comment" is posted as the first comment (pin it in
 the app: the API cannot pin). YouTube refuses comments on private videos, so a private upload skips the comment;
-post it with --comment-on once the video is public. An upload whose title is already on the channel is refused
+instead every upload first comments on the channel's earlier Shorts that are public by now and still have no
+comment from the channel (the user's routine: upload A private -> user publishes A -> uploading B comments on A).
+--catch-up does only that step. --comment-on posts one comment by hand. An upload whose title is already on the channel is refused
 (use --force to upload again).
 
 Credentials (environment variables, never in chat or git):
@@ -62,8 +64,37 @@ def post_comment(tok, vid, text):
     c = requests.post(COMMENT_URL, params={"part": "snippet"}, headers={"Authorization": f"Bearer {tok}"},
                       json={"snippet": {"videoId": vid, "topLevelComment": {"snippet": {"textOriginal": text}}}},
                       timeout=60)
-    print("comment posted (pin it in the YouTube app)" if c.status_code == 200
+    print("comment posted" if c.status_code == 200
           else f"comment failed ({c.status_code}): {c.text[:200]}")
+
+
+def comment_on_published(tok, lang):
+    """Post each script's comment on its video once the user has made it public (matched by title)."""
+    h = {"Authorization": f"Bearer {tok}"}
+    me = requests.get(API + "/channels", params={"part": "contentDetails", "mine": "true"}, headers=h,
+                      timeout=30).json()["items"][0]
+    pl = me["contentDetails"]["relatedPlaylists"]["uploads"]
+    items = requests.get(API + "/playlistItems", params={"part": "snippet,status", "playlistId": pl, "maxResults": 50},
+                         headers=h, timeout=30).json().get("items", [])
+    comments = {}  # video id (saved at upload) or title -> comment; the title match covers older uploads
+    for path in glob.glob(os.path.join(ROOT, "scripts", f"*.{lang}.json")):
+        up = json.load(open(path, encoding="utf-8")).get("upload", {})
+        if up.get("comment"):
+            for key in (up.get("video_id"), up.get("title", "")[:100]):
+                if key:
+                    comments[key] = up["comment"]
+    for it in items:
+        title, vid = it["snippet"]["title"], it["snippet"]["resourceId"]["videoId"]
+        comment = comments.get(vid) or comments.get(title)
+        if it["status"]["privacyStatus"] != "public" or not comment:
+            continue
+        r = requests.get(API + "/commentThreads", params={"part": "snippet", "videoId": vid, "maxResults": 100},
+                         headers=h, timeout=30).json().get("items", [])
+        if any(c["snippet"]["topLevelComment"]["snippet"].get("authorChannelId", {}).get("value") == me["id"]
+               for c in r):
+            continue
+        print(f"published: {title}")
+        post_comment(tok, vid, comment)
 
 
 def build_body(sc, public):
@@ -94,6 +125,7 @@ def main():
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--force", action="store_true", help="upload even if the title is already on the channel")
     ap.add_argument("--comment-on", metavar="VIDEO_ID", help="only post the script's comment on this (public) video")
+    ap.add_argument("--catch-up", action="store_true", help="only comment on earlier Shorts that are public now")
     a = ap.parse_args()
     sc = json.load(open(a.script, encoding="utf-8"))
     lang = sc["lang"]
@@ -106,6 +138,10 @@ def main():
     tok = access_token(lang)
     if a.comment_on:
         post_comment(tok, a.comment_on, sc["upload"]["comment"])
+        return
+    if not a.no_comment:
+        comment_on_published(tok, lang)
+    if a.catch_up:
         return
     existing = channel_uploads(tok).get(body["snippet"]["title"])
     if existing and not a.force:
@@ -123,14 +159,15 @@ def main():
     if r.status_code not in (200, 201):
         sys.exit(f"upload failed ({r.status_code}): {r.text[:500]}")
     vid = r.json()["id"]
+    sc["upload"]["video_id"] = vid  # lets a later upload find this video for its comment even if the title is edited
+    json.dump(sc, open(a.script, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
     print(f"uploaded {os.path.basename(video)} -> https://youtube.com/shorts/{vid} ({body['status']['privacyStatus']})")
     comment = sc["upload"].get("comment")
     if comment and not a.no_comment:
         if body["status"]["privacyStatus"] == "public":
             post_comment(tok, vid, comment)
         else:
-            print(f"comment not posted (private video). After publishing run:\n"
-                  f"  python tools/upload_youtube.py {a.script} --comment-on {vid}")
+            print("comment waits until you publish it (posted by the next upload, or --catch-up)")
 
 
 if __name__ == "__main__":

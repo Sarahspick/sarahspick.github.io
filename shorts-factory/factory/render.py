@@ -272,7 +272,7 @@ class Short:
         a clip can set "orig_gain" (dB, relative) or "orig_gain": null to mute it. Off when the script has no
         "orig_audio" (older scripts stay silent under the narration)."""
         oa = self.sc.get("orig_audio")
-        if not oa:
+        if not oa or self.ch.get("orig_audio") is False:   # channel switch: music + voice only (2026-10-01)
             return None
         target = float(oa.get("lufs", -30))
         clips, consumed, levels = self.sc["clips"], {}, {}

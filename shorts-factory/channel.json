@@ -69,5 +69,6 @@
   "file": "assets/music/licensed_music1.wav",
   "lufs": -24,
   "start": 0
- }
+ },
+ "orig_audio": false
 }

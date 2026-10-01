@@ -35,9 +35,19 @@ PLATFORMS = {"yt": "https://www.youtube.com/watch?v={}", "bili": "https://www.bi
              "x": "https://x.com/i/status/{}"}
 
 
+def playlist_item(src):
+    """yt-dlp options that pick the n-th video of an X post with several (x:<status id>/<n>)."""
+    pre, _, vid = src.partition(":")
+    if pre == "x" and "/" in vid:
+        return {"playlist_items": vid.split("/", 1)[1]}
+    return {}
+
+
 def source_url(src):
     """'yt:ID' / 'bili:BVxxxx' shortcuts -> page URL (for downloads and credits)."""
     pre, _, vid = src.partition(":")
+    if pre == "x" and "/" in vid:
+        return f"https://x.com/i/status/{vid.split('/', 1)[0]}"
     return PLATFORMS[pre].format(vid) if pre in PLATFORMS and vid else src
 
 
@@ -71,7 +81,10 @@ def fetch(src):
     if not src:
         return None
     pre, _, vid = src.partition(":")
-    if pre in PLATFORMS and vid:
+    if pre == "x" and "/" in vid:   # x:<status id>/<n>: the n-th video of a post with several
+        sid, n = vid.split("/", 1)
+        url, key = f"https://x.com/i/status/{sid}", f"x_{sid}_{n}"
+    elif pre in PLATFORMS and vid:
         url, key = PLATFORMS[pre].format(vid), f"{pre}_{vid}"
     elif src.startswith(("http://", "https://")):
         url, key = src, hashlib.sha1(src.encode()).hexdigest()[:12]
@@ -88,9 +101,11 @@ def fetch(src):
         import yt_dlp
         opts = ytdlp_opts(outtmpl=os.path.join(SOURCES, key + ".%(ext)s"),
                           format="bv*+ba/b",   # the cap is format_sort res:1080 (shorter side, so vertical 1080p counts)
-                          merge_output_format="mp4", writeinfojson=True)
+                          merge_output_format="mp4", writeinfojson=True, **playlist_item(src))
         with yt_dlp.YoutubeDL(opts) as ydl:
             info = ydl.extract_info(url, download=True)
+            if info.get("entries"):
+                info = info["entries"][0]
             path = ydl.prepare_filename(info)
         base = os.path.splitext(path)[0]
         for ext in (".mp4", ".mkv", ".webm"):

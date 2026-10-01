@@ -7,24 +7,27 @@ import sys
 import yt_dlp
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from factory.media import PLATFORMS, SOURCES, ytdlp_opts  # noqa: E402
+from factory.media import SOURCES, playlist_item, source_url, ytdlp_opts  # noqa: E402
 
 
 def grab(src):
     pre, _, vid = src.partition(":")
-    key = f"{pre}_{vid}"
+    key = f"{pre}_{vid}".replace("/", "_")   # same file name as media.fetch (x:<status>/<n>)
     if any(f.startswith(key + ".") and f.endswith(".mp4") for f in os.listdir(SOURCES)):
         return src, "cached"
-    url = PLATFORMS[pre].format(vid)
+    url = source_url(src)
     try:
-        with yt_dlp.YoutubeDL(ytdlp_opts(skip_download=True)) as y:
-            dur = y.extract_info(url, download=False).get("duration") or 0
+        with yt_dlp.YoutubeDL(ytdlp_opts(skip_download=True, **playlist_item(src))) as y:
+            info = y.extract_info(url, download=False)
+            dur = (info["entries"][0] if info.get("entries") else info).get("duration") or 0
         cap = 1080 if dur <= 600 else 720
         opts = ytdlp_opts(outtmpl=os.path.join(SOURCES, key + ".%(ext)s"), noprogress=True,
                           format="bv*+ba/b", format_sort=[f"res:{cap}", "fps", "br"], merge_output_format="mp4",
-                          writeinfojson=True, fragment_retries=5, concurrent_fragment_downloads=4)
+                          writeinfojson=True, fragment_retries=5, concurrent_fragment_downloads=4,
+                          **playlist_item(src))
         with yt_dlp.YoutubeDL(opts) as y:
             info = y.extract_info(url, download=True)
+            info = info["entries"][0] if info.get("entries") else info
         return src, f"ok {info.get('width')}x{info.get('height')} {dur:.0f}s  {info.get('title', '')[:50]}"
     except Exception as e:
         return src, "FAIL " + str(e).splitlines()[0][:140]

@@ -1,0 +1,227 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "fall": {
+      "src": "x:1898513049931383004/4",
+      "start": 2.5,
+      "focus": [
+        0.53,
+        0.5
+      ]
+    },
+    "catch": {
+      "src": "x:1898513049931383004/3",
+      "start": 17.0,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "tower": {
+      "src": "x:1898513049931383004/2",
+      "start": 5.0,
+      "focus": [
+        0.47,
+        0.5
+      ]
+    },
+    "engines": {
+      "src": "x:1898513049931383004/1",
+      "start": 8.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "descent": {
+      "src": "x:1898513049931383004/3",
+      "start": 4.0,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "fins": {
+      "src": "x:1845966756579627167",
+      "start": 2.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "arms": {
+      "src": "x:1898513049931383004/3",
+      "start": 10.0,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "pins": {
+      "src": "x:1845966756579627167",
+      "start": 24.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "close": {
+      "src": "x:1898513049931383004/2",
+      "start": 20.0,
+      "focus": [
+        0.47,
+        0.5
+      ]
+    },
+    "sunset": {
+      "src": "x:1845922924315938922",
+      "start": 12.0,
+      "focus": [
+        0.12,
+        0.5
+      ]
+    }
+  },
+  "id": "spacex_catch",
+  "lang": "en",
+  "title": "How do you catch a rocket with *chopsticks*? 🚀",
+  "pronounce": {
+    "70-meter": "seventy meter"
+  },
+  "sources": [
+    {
+      "name": "SpaceX on X: Super Heavy catch on Starship's eighth flight test",
+      "url": "https://x.com/SpaceX/status/1898513049931383004"
+    },
+    {
+      "name": "SpaceX on X: Onboard view of a catch fitting contacting a chopstick catch beam",
+      "url": "https://x.com/SpaceX/status/1845966756579627167"
+    },
+    {
+      "name": "SpaceX: Starship",
+      "url": "https://www.spacex.com/vehicles/starship/"
+    }
+  ],
+  "footage_credits": [
+    "SpaceX on X (official Starship flight test footage)"
+  ],
+  "hook": {
+    "lines": [
+      "A 70-meter rocket falls back from the sky,",
+      "and a *tower* catches it."
+    ],
+    "clips": [
+      "fall",
+      "catch"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:tower"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "How do you catch a rocket",
+        "with *chopsticks*?"
+      ],
+      "clip": "tower"
+    },
+    {
+      "lines": [
+        "The Super Heavy booster",
+        "has *no landing legs*."
+      ],
+      "clip": "engines"
+    },
+    {
+      "lines": [
+        "It relights its engines",
+        "and slows to a *hover*."
+      ],
+      "clip": "descent"
+    },
+    {
+      "lines": [
+        "Grid fins on top",
+        "steer it like *rudders*."
+      ],
+      "clip": "fins",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:Grid"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Then the giant arms",
+        "*close* around it…"
+      ],
+      "clip": "arms"
+    },
+    {
+      "lines": [
+        "and two small *pins*",
+        "land right on the arms."
+      ],
+      "clip": "pins",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:pins"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "No legs means *less weight*,",
+        "and a faster relaunch."
+      ],
+      "clip": "close"
+    },
+    {
+      "lines": [
+        "The world's most expensive",
+        "game of *catch*."
+      ],
+      "clip": "sunset"
+    }
+  ],
+  "upload": {
+    "title": "How Does SpaceX Catch a Rocket With Chopsticks? 🚀 #shorts",
+    "description": "A 70-meter rocket falls back from the sky, and the launch tower catches it. 🚀\n\nSpaceX's Super Heavy booster has no landing legs. After boosting Starship, it flies back to the pad, relights its engines to slow down and hover, and uses the grid fins near its top to steer. Then the tower's two giant arms, nicknamed the chopsticks, close around it, and two small catch fittings on the booster land on the arms. Skipping landing legs saves weight and lets the booster be put back on the launch mount much faster.\n\nThe world's most expensive game of catch. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#spacex",
+      "#starship",
+      "#rocket",
+      "#technology"
+    ],
+    "tags": [
+      "spacex",
+      "starship",
+      "super heavy",
+      "booster catch",
+      "mechazilla",
+      "chopsticks",
+      "rocket catch",
+      "how spacex catches rockets",
+      "rocket landing",
+      "starbase",
+      "elon musk",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "Imagine being the engineer who said \"what if we just... catch it?\" 😂",
+    "video_id": "b2Pse9z3Dj8"
+  }
+}

@@ -437,9 +437,6 @@ class Short:
                     cap = cap.resize((max(1, int(cap.width * s)), max(1, int(cap.height * s))), Image.BICUBIC)
                 cc = reader.cover_center() if hasattr(reader, "cover_center") else None
                 cy = cc[1] if cc else gfx.CAPTION_CY
-                if cc and cap.height > cc[2] * 0.95:  # keep the caption inside its black box
-                    f = cc[2] * 0.95 / cap.height
-                    cap = cap.resize((max(1, int(cap.width * f)), max(1, int(cap.height * f))), Image.BICUBIC)
                 frame.paste(cap, (int((W - cap.width) / 2), int(cy - cap.height / 2)), cap)
             for a in self.anns:
                 if a["t0"] <= t < a["t1"]:

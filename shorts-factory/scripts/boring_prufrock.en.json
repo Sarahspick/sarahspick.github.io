@@ -10,7 +10,7 @@
   "clips": {
     "cutter": {
       "src": "x:2058222522215063708",
-      "start": 0.3
+      "start": 1.45
     },
     "ring": {
       "src": "x:2058222522215063708",
@@ -18,7 +18,7 @@
     },
     "dirt": {
       "src": "x:2058222522215063708",
-      "start": 25.0
+      "start": 29.0
     },
     "segment": {
       "src": "x:2058222522215063708",
@@ -177,6 +177,7 @@
       "how it works",
       "top techs"
     ],
-    "comment": "The only machine in the world that's happy to be called boring 😂"
+    "comment": "The only machine in the world that's happy to be called boring 😂",
+    "video_id": "eLI3OLVnxgE"
   }
 }

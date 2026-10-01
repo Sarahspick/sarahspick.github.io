@@ -191,7 +191,7 @@ class _View:
         return im.resize((w, h), Image.BICUBIC, box=(x0, y0, x0 + vw, y0 + vh))
 
     def cover_center(self):
-        """Centre and height, in output-frame pixels, of the first black cover box (None if the clip has none)."""
+        """Centre and height, in output-frame pixels, of the first cover (blurred caption) box (None if the clip has none)."""
         if not getattr(self, "covers", None) or not getattr(self, "_last_view", None):
             return None
         x0, y0, vw, vh = self._last_view
@@ -218,8 +218,9 @@ class VideoReader(_View):
             return tuple(int(v) for v in (bx0, by0, bx1, by1)) if bx1 > bx0 and by1 > by0 else None
         self.blur = [(None, None, r) for r in map(to_crop, blur or []) if r]
         self.blur += [(e["t0"], e["t1"], r) for e in blur_boxes or [] for r in [to_crop(e["box"])] if r]
-        # cover: [[x0, y0, x1, y1]] source fractions of a burned-in caption band: painted solid black, and the
-        # renderer puts this Short's own caption on top of it instead of the frame centre
+        # cover: [[x0, y0, x1, y1]] source fractions tightly around a burned-in caption: blurred hard enough that the
+        # letters are unreadable (no black box, user decision 2026-10-01), and the renderer puts this Short's own
+        # caption right on top of it instead of the frame centre
         self.covers = [r for r in map(to_crop, cover or []) if r]
         self.start, self.speed = start, speed
         need = dur * speed
@@ -247,9 +248,13 @@ class VideoReader(_View):
                         self.last.paste(self.last.crop(r).filter(ImageFilter.GaussianBlur(14)), r[:2], _feather(r))
             if self.covers:
                 self.last = self.last.copy()
-                d = ImageDraw.Draw(self.last)
                 for r in self.covers:
-                    d.rectangle(r, fill=(0, 0, 0))
+                    # blur a slightly larger area and feather only that margin, so the box itself is fully covered
+                    e = 6
+                    rr = (max(0, r[0] - e), max(0, r[1] - e), min(self.pw, r[2] + e), min(self.ph, r[3] + e))
+                    radius = max(10, (r[3] - r[1]) * 0.35)
+                    patch = self.last.crop(rr).filter(ImageFilter.GaussianBlur(radius)).filter(ImageFilter.GaussianBlur(radius / 2))
+                    self.last.paste(patch, rr[:2], _feather(rr, edge=e))
             self.k += 1
         if self.last is None:
             self.last = Image.new("RGB", (self.pw, self.ph), (20, 20, 20))

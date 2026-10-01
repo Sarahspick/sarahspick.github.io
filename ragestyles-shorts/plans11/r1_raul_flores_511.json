@@ -1,6 +1,6 @@
 {
  "id": "r1_raul_flores_511",
- "yt_title": "511 KG deadlift world record 🇲🇽 Raul Flores #shorts",
+ "yt_title": "The heaviest deadlift in history 😳 #shorts",
  "layout": {
   "mode": "blur",
   "box_aspect": 0.75,
@@ -9,6 +9,430 @@
   "darken": 0.5
  },
  "shots": [
+  {
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 83.6,
+   "dur": 1.3,
+   "cx": 0.45,
+   "cy": 0.46,
+   "zoom": [
+    1.45,
+    1.55
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.16,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ],
+   "tint": [
+    {
+     "at": 0.05,
+     "dur": 0.45,
+     "amount": 0.55,
+     "color": [
+      255,
+      30,
+      20
+     ]
+    }
+   ],
+   "rgb": [
+    {
+     "at": 0.05,
+     "dur": 0.35,
+     "px": 16
+    }
+   ]
+  },
+  {
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 56.0,
+   "dur": 1.4,
+   "cx": 0.45,
+   "cy": 0.45,
+   "zoom": [
+    1.5,
+    1.6
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 261.0,
+   "dur": 1.6,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 623.6,
+   "dur": 3.05,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true,
+   "path": [
+    [
+     0,
+     1.0,
+     0.5,
+     0.5
+    ],
+    [
+     2.8,
+     1.12,
+     0.5,
+     0.47
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.11,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.11,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 476.6,
+   "dur": 1.7,
+   "cx": 0.6,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/Mm3frQ6HAv4",
+   "in": 7.5,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.6,
+   "zoom": [
+    1.25,
+    1.3
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 175.0,
+   "dur": 1.5,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 66.0,
+   "dur": 2.85,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.45,
+     0.45,
+     0.5
+    ],
+    [
+     3,
+     1.8,
+     0.42,
+     0.42
+    ]
+   ],
+   "punch": [
+    {
+     "at": -0.7,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": -0.7,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 183.6,
+   "dur": 2.0,
+   "cx": 0.5,
+   "cy": 0.52,
+   "zoom": [
+    1.4,
+    1.46
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/Mm3frQ6HAv4",
+   "in": 12.0,
+   "dur": 1.6,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.3,
+    1.36
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 178.4,
+   "dur": 1.0,
+   "cx": 0.62,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 81.6,
+   "dur": 2.0,
+   "cx": 0.45,
+   "cy": 0.46,
+   "zoom": [
+    1.45,
+    1.55
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 188.6,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.4,
+   "zoom": [
+    2.1,
+    2.3
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "speed": 0.5,
+   "interp": true,
+   "punch": [
+    {
+     "at": 0.6,
+     "zoom": 1.16,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.6,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ],
+   "tint": [
+    {
+     "at": 0.6,
+     "dur": 0.45,
+     "amount": 0.55,
+     "color": [
+      255,
+      30,
+      20
+     ]
+    }
+   ],
+   "rgb": [
+    {
+     "at": 0.6,
+     "dur": 0.35,
+     "px": 16
+    }
+   ]
+  },
+  {
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 84.5,
+   "dur": 1.8,
+   "cx": 0.45,
+   "cy": 0.46,
+   "zoom": [
+    1.45,
+    1.55
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 194.3,
+   "dur": 2.5,
+   "cx": 0.5,
+   "cy": 0.52,
+   "zoom": [
+    1.4,
+    1.46
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.0,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.0,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
   {
    "src": "youtube/4oHrTDCgVAs",
    "in": 209.0,
@@ -26,21 +450,7 @@
     "sat": 1.06,
     "contrast": 1.07,
     "sharpen": 0.5
-   },
-   "punch": [
-    {
-     "at": 0.05,
-     "zoom": 1.12,
-     "ramp": 0.12
-    }
-   ],
-   "flash": [
-    {
-     "at": 0.05,
-     "amount": 0.5,
-     "dur": 0.5
-    }
-   ]
+   }
   },
   {
    "src": "youtube/4oHrTDCgVAs",
@@ -77,72 +487,14 @@
    "ease": "linear"
   },
   {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 261.0,
-   "dur": 3.57,
-   "cx": 0.5,
-   "cy": 0.42,
+   "src": "youtube/Q3N1mrkxMto",
+   "in": 143.0,
+   "dur": 1.8,
+   "cx": 0.42,
+   "cy": 0.45,
    "zoom": [
-    1.15,
-    1.2
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 623.6,
-   "dur": 5.18,
-   "cx": 0.5,
-   "cy": 0.42,
-   "zoom": [
-    1.25,
-    1.3
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "still": true
-  },
-  {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 175.0,
-   "dur": 2.46,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.1,
-    1.15
-   ],
-   "audio": false,
-   "af": "voice",
-   "audio_db": -8,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
-  },
-  {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 181.0,
-   "dur": 5.54,
-   "cx": 0.5,
-   "cy": 0.52,
-   "zoom": [
-    1.4,
-    1.46
+    1.5,
+    1.55
    ],
    "audio": false,
    "af": "voice",
@@ -154,70 +506,18 @@
    },
    "punch": [
     {
-     "at": -11.27,
+     "at": 0.3,
      "zoom": 1.1,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
-     "at": -11.27,
-     "amount": 0.4,
+     "at": 0.3,
+     "amount": 0.45,
      "dur": 0.5
     }
    ]
-  },
-  {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 183.6,
-   "dur": 7.9,
-   "cx": 0.5,
-   "cy": 0.52,
-   "zoom": [
-    1.4,
-    1.46
-   ],
-   "audio": true,
-   "af": "film",
-   "audio_db": -3,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   },
-   "punch": [
-    {
-     "at": 5.8,
-     "zoom": 1.14,
-     "ramp": 0.12
-    }
-   ],
-   "flash": [
-    {
-     "at": 5.8,
-     "amount": 0.55,
-     "dur": 0.5
-    }
-   ]
-  },
-  {
-   "src": "youtube/4oHrTDCgVAs",
-   "in": 195.3,
-   "dur": 1.3,
-   "cx": 0.5,
-   "cy": 0.5,
-   "zoom": [
-    1.3,
-    1.36
-   ],
-   "audio": true,
-   "af": "film",
-   "audio_db": -3,
-   "grade": {
-    "sat": 1.06,
-    "contrast": 1.07,
-    "sharpen": 0.5
-   }
   },
   {
    "src": "youtube/4oHrTDCgVAs",
@@ -264,8 +564,8 @@
    "cx": 0.62,
    "cy": 0.38,
    "zoom": [
-    1.2,
-    1.25
+    1.05,
+    1.1
    ],
    "audio": false,
    "af": "voice",
@@ -275,6 +575,20 @@
     "contrast": 1.07,
     "sharpen": 0.5
    },
+   "path": [
+    [
+     0,
+     1.2,
+     0.62,
+     0.38
+    ],
+    [
+     4,
+     1.45,
+     0.6,
+     0.34
+    ]
+   ],
    "punch": [
     {
      "at": 3.75,
@@ -312,12 +626,12 @@
   {
    "src": "youtube/4oHrTDCgVAs",
    "in": 483.3,
-   "dur": 3.15,
+   "dur": 2.65,
    "cx": 0.6,
    "cy": 0.42,
    "zoom": [
-    1.2,
-    1.25
+    1.25,
+    1.35
    ],
    "audio": false,
    "af": "voice",
@@ -330,189 +644,263 @@
    "punch": [
     {
      "at": 1.3,
-     "zoom": 1.12,
+     "zoom": 1.16,
      "ramp": 0.12
     }
    ],
    "flash": [
     {
      "at": 1.3,
-     "amount": 0.5,
+     "amount": 0.55,
      "dur": 0.5
     }
+   ],
+   "tint": [
+    {
+     "at": 1.3,
+     "dur": 0.45,
+     "amount": 0.55,
+     "color": [
+      255,
+      30,
+      20
+     ]
+    }
+   ],
+   "rgb": [
+    {
+     "at": 1.3,
+     "dur": 0.35,
+     "px": 16
+    }
    ]
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs",
+   "in": 211.2,
+   "dur": 1.4,
+   "cx": 0.42,
+   "cy": 0.4,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
   }
  ],
  "captions": [
   {
    "t": 0,
-   "d": 44.8,
-   "text": "*511 KG* deadlift\nWORLD RECORD :flag-mx:",
+   "d": 50.05,
+   "text": "The heaviest deadlift\n*in history* :exploding-head:",
    "style": "title",
    "anim": "none",
    "top": 155
   },
   {
    "t": 0.0,
-   "d": 2.1,
+   "d": 1.3,
    "text": "*511 KG*",
    "style": "wordcap",
    "y": 0.5
   },
   {
-   "t": 2.19,
-   "d": 1.26,
-   "text": "*PHENOMENAL* RISING",
+   "t": 7.35,
+   "d": 1.7,
+   "text": "\\*Thor's record: 510 kg\\*",
+   "style": "wordcap",
+   "y": 0.66,
+   "italic": true,
+   "size": 58
+  },
+  {
+   "t": 18.8,
+   "d": 1.0,
+   "text": "\\*his coach\\*",
+   "style": "wordcap",
+   "y": 0.66,
+   "italic": true,
+   "size": 58
+  },
+  {
+   "t": 22.4,
+   "d": 1.8,
+   "text": "\\*511 KG\\*",
+   "style": "wordcap",
+   "y": 0.66,
+   "italic": true,
+   "size": 58
+  },
+  {
+   "t": 30.6,
+   "d": 1.8,
+   "text": "\\*Thor raises his hand\\*",
+   "style": "wordcap",
+   "y": 0.66,
+   "italic": true,
+   "size": 58
+  },
+  {
+   "t": 1.38,
+   "d": 2.16,
+   "text": "RISING *STAR* FROM",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 3.45,
-   "d": 2.22,
-   "text": "~STAR~ FROM MEXICO",
+   "t": 3.54,
+   "d": 0.87,
+   "text": "~MEXICO~ RAUL",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 5.67,
-   "d": 3.38,
-   "text": "RAUL FLORES *26*",
+   "t": 4.41,
+   "d": 2.82,
+   "text": "*26* YEARS OF AGE",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 9.05,
-   "d": 1.96,
-   "text": "~YEARS~ OF AGE AND",
+   "t": 7.23,
+   "d": 0.25,
+   "text": "AND",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 11.01,
-   "d": 1.66,
-   "text": "THE *WORLD* RECORD",
+   "t": 7.47,
+   "d": 1.5,
+   "text": "~WORLD~ RECORD",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 12.67,
+   "t": 8.97,
    "d": 1.38,
-   "text": "~ATTEMPT~ FOR ALL",
+   "text": "*ATTEMPT* FOR ALL",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 14.05,
+   "t": 10.35,
    "d": 4.06,
-   "text": "FLORES *511*",
+   "text": "FLORES ~511~",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 18.11,
+   "t": 14.41,
    "d": 1.59,
-   "text": "~KILOGRAMS~ AT",
+   "text": "*KILOGRAMS* AT",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 28.18,
+   "t": 32.53,
    "d": 1.44,
-   "text": "WHEN HE *STARTED*",
+   "text": "WHEN HE ~STARTED~",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 29.62,
+   "t": 33.97,
    "d": 1.98,
-   "text": "TO GO TO THE ~GYM~",
+   "text": "TO GO TO THE *GYM*",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 31.6,
+   "t": 35.95,
    "d": 1.24,
-   "text": "*BECAUSE* HIS PET",
+   "text": "~BECAUSE~ HIS PET",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 32.84,
+   "t": 37.19,
    "d": 1.32,
-   "text": "~DIED~ IN HE",
+   "text": "*DIED* IN HE",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 34.16,
+   "t": 38.51,
    "d": 1.52,
-   "text": "*PROMISED* THAT ONE",
+   "text": "~PROMISED~ THAT ONE",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 35.68,
+   "t": 40.03,
    "d": 1.24,
-   "text": "DAY ~TYSON~ CAN",
+   "text": "DAY *TYSON* CAN",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 36.92,
+   "t": 41.27,
    "d": 1.14,
-   "text": "BE *FAMOUS*",
+   "text": "BE ~FAMOUS~",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 38.06,
+   "t": 42.41,
    "d": 2.18,
-   "text": "~26~ YEARS OLD",
+   "text": "*26* YEARS OLD",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 40.24,
+   "t": 44.59,
    "d": 1.37,
-   "text": "THAT'S *CRAZY* PULLING",
+   "text": "THAT'S ~CRAZY~ PULLING",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 41.61,
+   "t": 45.96,
    "d": 1.56,
-   "text": "I ~THINK~ THE SKY",
+   "text": "I *THINK* THE SKY",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 43.17,
+   "t": 47.52,
    "d": 0.36,
-   "text": "IS THE *LIMIT*",
+   "text": "IS THE ~LIMIT~",
    "style": "wordcap",
    "y": 0.5,
    "anim": "pop"
   },
   {
-   "t": 43.53,
+   "t": 47.88,
    "d": 1.42,
    "text": "FOR THIS GUY I",
    "style": "wordcap",
@@ -525,25 +913,40 @@
   {
    "t": -0.2,
    "name": "ow:boom",
-   "db": -3
+   "db": -1
   },
   {
-   "t": 1.79,
+   "t": 3.98,
+   "name": "ow:punch",
+   "db": -6
+  },
+  {
+   "t": 11.4,
    "name": "ow:boom",
    "db": -5
   },
   {
-   "t": 24.4,
+   "t": 22.15,
    "name": "ow:boom",
    "db": -1
   },
   {
-   "t": 36.95,
+   "t": 26.75,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 30.65,
    "name": "ow:boom",
    "db": -4
   },
   {
-   "t": 42.7,
+   "t": 41.3,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 47.05,
    "name": "ow:boom",
    "db": -2
   }
@@ -551,8 +954,8 @@
  "audio_clips": [
   {
    "src": "youtube/4oHrTDCgVAs.mp4",
-   "in": 196.4,
-   "dur": 2.1,
+   "in": 189.4,
+   "dur": 1.3,
    "t": 0.0,
    "af": "film",
    "db": -3,
@@ -560,56 +963,92 @@
   },
   {
    "src": "youtube/fl_vox_0.wav",
-   "in": 0.5,
-   "dur": 8.6,
-   "t": 2.15,
+   "in": 1.15,
+   "dur": 2.9,
+   "t": 1.35,
    "af": "voice",
-   "db": 0,
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/fl_vox_0.wav",
+   "in": 6.2,
+   "dur": 2.9,
+   "t": 4.35,
+   "af": "voice",
+   "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/fl_vox_140.wav",
-   "in": 13.2,
-   "dur": 7.9,
-   "t": 10.95,
+   "in": 13.4,
+   "dur": 7.7,
+   "t": 7.45,
    "af": "voice",
-   "db": 0,
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs.mp4",
+   "in": 183.6,
+   "dur": 13.3,
+   "t": 15.2,
+   "af": "film",
+   "db": -3,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs.mp4",
+   "in": 196.8,
+   "dur": 3.9,
+   "t": 28.5,
+   "af": "film",
+   "db": -4,
    "fade": 0.05
   },
   {
    "src": "youtube/fl_vox_660.wav",
    "in": 19.65,
    "dur": 5.2,
-   "t": 28.15,
+   "t": 32.5,
    "af": "voice",
-   "db": 0,
+   "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/fl_vox_660.wav",
    "in": 31.95,
    "dur": 4.25,
-   "t": 33.55,
+   "t": 37.9,
    "af": "voice",
-   "db": 0,
+   "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/fl_vox_470.wav",
    "in": 7.3,
    "dur": 3.55,
-   "t": 38.0,
+   "t": 42.35,
    "af": "voice",
-   "db": 0,
+   "db": 2,
    "fade": 0.05
   },
   {
    "src": "youtube/fl_vox_470.wav",
    "in": 13.2,
    "dur": 2.75,
-   "t": 41.55,
+   "t": 45.9,
    "af": "voice",
-   "db": 0,
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/4oHrTDCgVAs.mp4",
+   "in": 195.3,
+   "dur": 1.4,
+   "t": 48.65,
+   "af": "film",
+   "db": -4,
    "fade": 0.05
   }
  ],

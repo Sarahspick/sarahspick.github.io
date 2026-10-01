@@ -437,6 +437,21 @@ class Bench:
             u = (lt - f["at"]) / f.get("dur", 0.45)
             if 0 <= u < 1:
                 vid = vid * (1 + f.get("amount", 0.25) * (1 - u) ** 2) + 18 * f.get("amount", 0.25) * (1 - u) ** 2
+        for f in shot.get("tint", []):  # colour wash on a hit, like the 10M-view edits ({at, dur, amount, color, hold})
+            u = (lt - f["at"] - f.get("hold", 0.0)) / f.get("dur", 0.5)
+            if lt >= f["at"] and u < 1:
+                k = f.get("amount", 0.6) * (1.0 if u < 0 else (1 - u) ** 2)
+                lum = vid @ np.array([0.299, 0.587, 0.114], np.float32)
+                wash = lum[..., None] * (np.array(f.get("color", [255, 40, 20]), np.float32) / 255.0) * 1.5
+                vid = vid * (1 - k) + wash * k
+        for f in shot.get("rgb", []):  # chromatic split that settles ({at, dur, px})
+            u = (lt - f["at"]) / f.get("dur", 0.35)
+            if 0 <= u < 1:
+                d = int(round(f.get("px", 14) * (1 - u) ** 2))
+                if d:
+                    vid = vid.copy()
+                    vid[:, d:, 0] = vid[:, :-d, 0].copy()
+                    vid[:, :-d, 2] = vid[:, d:, 2].copy()
         if shot.get("vignette"):
             vid *= R_vignette(rw, rh, shot["vignette"])[..., None]
         wb = shot.get("whip_in", 0.0)  # motion blur that settles over the first `whip_in` seconds

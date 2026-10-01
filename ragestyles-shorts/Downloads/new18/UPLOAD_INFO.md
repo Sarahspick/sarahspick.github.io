@@ -2,17 +2,17 @@
 
 공통: 제목 155px, 영상 3:4 박스 370px, 블러 배경. 첫 1초는 가장 선명하고 눈에 띄는 장면, 시작 페이드는 0.25초로 짧게. 원문 워드 바이 워드 자막, 줌 펀치 + 밝기 + 쿵. 음악 없음 (업로드 때 유튜브에서). 원본에 깔린 음악은 Demucs 로 걷어내고 목소리만 씀.
 
-## r1_raul_flores_511.mp4 (45초)
+## r1_raul_flores_511.mp4 (v2, 50초, 1천만 조회 레퍼런스 편집법 적용)
 
 제목
 ```
-511 KG deadlift world record 🇲🇽 Raul Flores #shorts
+The heaviest deadlift in history 😳 #shorts
 ```
 설명
 ```
 Raul "Tyson" Flores, 26, from Mexico pulled 511 kg (1,127 lb) at the Giants Live Strongman Open in Birmingham on 5 September 2026, one kilo more than Hafthor Bjornsson's 510 kg. The tattoo on his shoulder is his late dog Tyson, whose death is what first sent him to the gym. "I think the sky is the limit for this guy." Hafthor Bjornsson 🔥
 
-Footage: "RAUL FLORES - NEW WORLD RECORD DEADLIFT - 511KG!" by Giants Live STRONGMAN (https://youtu.be/4oHrTDCgVAs). All rights go to the owners. Edited by RageStyles (cut, vertical reframe, captions, music removed).
+Footage: "RAUL FLORES - NEW WORLD RECORD DEADLIFT - 511KG!" by Giants Live STRONGMAN (https://youtu.be/4oHrTDCgVAs), "Raul Flores New World Record 511 KG DEADLIFT!" by Sebastian Oreb and Hafthor Bjornsson (https://youtu.be/Q3N1mrkxMto), "New World Deadlift Record" by David Archer (https://youtu.be/Mm3frQ6HAv4). All rights go to the owners. Edited by RageStyles (cut, vertical reframe, captions, music removed).
 ```
 태그
 ```
@@ -27,7 +27,7 @@ raul flores, 511kg deadlift, deadlift world record, giants live, strongman, stro
 
 제목
 ```
-15 years old vs 3 world records 💪 #calisthenics #shorts
+He's only 15 😳 #calisthenics #shorts
 ```
 설명
 ```
@@ -48,11 +48,11 @@ calisthenics, planche, planche push ups, handstand push ups, world record, jonah
 
 제목
 ```
-Sam Sulek's Bulk Rebirth, day 27: 20 inch arms 💪 #shorts
+Sam Sulek is bulking again 😳 #shorts
 ```
 설명
 ```
-"Long, long, long freaking awaited. The bulk has finally freaking begun." After his pro debut at the 2026 Arnold Classic (8th, Classic Physique) and a summer of dieting, Sam Sulek started The Bulk Rebirth on 2 September. Day 27, back from Olympia week in Vegas: "20 inches pumped. Hell freaking yeah." 💪
+"Long, long, long freaking awaited. The bulk has finally freaking begun." After his pro debut at the 2026 Arnold Classic (8th, Classic Physique) and a summer of dieting, Sam Sulek started The Bulk Rebirth on 2 September. Back from Olympia week in Vegas: "20 inches pumped. Hell freaking yeah." 💪
 
 Footage: Sam Sulek, "The Bulk Rebirth Day 1 - Chest" (https://youtu.be/AGS3M83Nk-s), "The Bulk Rebirth Day 27 - 20 Inch Arms" (https://youtu.be/1h_dZRyIkoo), "Back In Vegas Olympia Weekend" (https://youtu.be/j3o0_zuSato). All rights go to the owners. Edited by RageStyles (cut, vertical reframe, captions, music removed).
 ```

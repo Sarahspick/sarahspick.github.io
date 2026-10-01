@@ -13,8 +13,8 @@ sys.path.insert(0, "plans11")
 from newscommon import Short, Speech, Cutter, words, word_captions  # noqa: E402
 
 D1, D27, VEG = "AGS3M83Nk-s", "1h_dZRyIkoo", "j3o0_zuSato"
-o = Short("s2_sam_sulek_bulk_rebirth", "Sam Sulek's Bulk Rebirth\nDay 27: *20 inch arms* :flexed-biceps:",
-          "Sam Sulek's Bulk Rebirth, day 27: 20 inch arms 💪 #shorts", folder="plans11")
+o = Short("s2_sam_sulek_bulk_rebirth", "Sam Sulek is\n*bulking again* :flexed-biceps:",
+          "Sam Sulek is bulking again 😳 #shorts", folder="plans11")
 c = Cutter(o)
 s1 = Speech(o, [("sa_vox_0.wav", 0.0, 80.0)], words(D1))
 s27 = Speech(o, [("sa_vox_1640.wav", 1640.0, 1812.0)], words(D27))

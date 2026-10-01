@@ -14,8 +14,8 @@ sys.path.insert(0, "plans11")
 from newscommon import Short, Speech, Cutter, words, word_captions  # noqa: E402
 
 V = "tcDTdFKOXno"
-o = Short("j1_jonah_15_records", "15 years old vs\n*3 world records* :flexed-biceps:",
-          "15 years old vs 3 world records 💪 #calisthenics #shorts", folder="plans11")
+o = Short("j1_jonah_15_records", "He's only *15* :flushed-face:",
+          "He's only 15 😳 #calisthenics #shorts", folder="plans11")
 c = Cutter(o)
 VOX = [("jo_vox_0.wav", 0.0, 7.0), ("jo_vox_150.wav", 150.0, 196.0), ("jo_vox_212.wav", 212.0, 224.0),
        ("jo_vox_330.wav", 330.0, 336.0), ("jo_vox_825.wav", 825.0, 880.0)]

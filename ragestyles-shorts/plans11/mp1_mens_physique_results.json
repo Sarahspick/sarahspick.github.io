@@ -1,0 +1,509 @@
+{
+ "id": "mp1_mens_physique_results",
+ "yt_title": "Who won the 2026 Men's Physique Olympia? 🏆 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1016.2,
+   "dur": 0.45,
+   "cx": 0.63,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1019.6,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1064.2,
+   "dur": 0.45,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1070.4,
+   "dur": 1.8,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1112.0,
+   "dur": 0.45,
+   "cx": 0.35,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1119.6,
+   "dur": 1.8,
+   "cx": 0.64,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1170.0,
+   "dur": 3.1,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.0,
+     0.34,
+     0.5
+    ],
+    [
+     3.1,
+     1.0,
+     0.6,
+     0.5
+    ]
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1180.0,
+   "dur": 1.5,
+   "cx": 0.47,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1185.9,
+   "dur": 4.7,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "tint": [
+    {
+     "at": 2.1,
+     "dur": 0.45,
+     "amount": 0.4,
+     "color": [
+      255,
+      200,
+      40
+     ]
+    }
+   ],
+   "punch": [
+    {
+     "at": 2.1,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.1,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1230.8,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1193.6,
+   "dur": 1.8,
+   "cx": 0.32,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 20.25,
+   "text": "Who won the 2026\n*Men's Physique* Olympia? :trophy:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 0.45,
+   "text": "*5TH* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 0.45,
+   "d": 1.8,
+   "text": "BRANDON HENDRICKSON\n*$6,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.25,
+   "d": 0.45,
+   "text": "*4TH* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.7,
+   "d": 1.8,
+   "text": "ERIN BANKS\n*$7,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.5,
+   "d": 0.45,
+   "text": "*3RD* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.95,
+   "d": 1.8,
+   "text": "KYRON HOLDEN\n*$12,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 6.75,
+   "d": 3.1,
+   "text": "LAST ~2~ STANDING",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 9.85,
+   "d": 1.5,
+   "text": "ALI OR RYAN?",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 13.45,
+   "d": 2.6,
+   "text": "*RYAN TERRY* WINS :trophy:\n*$50,000*",
+   "style": "big",
+   "y": 0.42
+  },
+  {
+   "t": 16.05,
+   "d": 2.4,
+   "text": "*4TH* TITLE IN A ROW :fire:",
+   "style": "big",
+   "y": 0.64
+  },
+  {
+   "t": 18.45,
+   "d": 1.8,
+   "text": "~2ND~ ALI BILAL\n*$20,000*",
+   "style": "big",
+   "y": 0.66
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.2,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 2.45,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 4.7,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 13.2,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 15.62,
+   "name": "ow:punch",
+   "db": -4
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 22.0,
+   "dur": 1.5,
+   "t": 0.45,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 57.5,
+   "dur": 1.4,
+   "t": 2.7,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 109.6,
+   "dur": 1.2,
+   "t": 4.95,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 166.65,
+   "dur": 3.1,
+   "t": 6.8,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 195.95,
+   "dur": 1.5,
+   "t": 9.85,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 205.9,
+   "dur": 4.7,
+   "t": 11.35,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 211.9,
+   "dur": 2.4,
+   "t": 16.05,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/mp_vox.wav",
+   "in": 217.0,
+   "dur": 1.8,
+   "t": 18.45,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

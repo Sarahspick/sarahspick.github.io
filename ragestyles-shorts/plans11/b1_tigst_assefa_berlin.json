@@ -1,0 +1,513 @@
+{
+ "id": "b1_tigst_assefa_berlin",
+ "yt_title": "68 seconds from the world record 💔 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 409.2,
+   "dur": 1.6,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 154.6,
+   "dur": 2.2,
+   "cx": 0.27,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 385.4,
+   "dur": 1.95,
+   "cx": 0.6,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 389.4,
+   "dur": 2.5,
+   "cx": 0.48,
+   "cy": 0.5,
+   "zoom": [
+    1.3,
+    1.36
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.82,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.82,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/kF2FgCAfKgY",
+   "in": 36.8,
+   "dur": 1.7,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 403.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.6,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.6,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 405.8,
+   "dur": 1.4,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 407.0,
+   "dur": 3.1,
+   "cx": 0.42,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.55,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.55,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 412.0,
+   "dur": 2.4,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/SZvi5gYI-9A",
+   "in": 416.4,
+   "dur": 5.4,
+   "cx": 0.55,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.5,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.5,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 24.85,
+   "text": "*68 seconds* from\nthe world record :broken-heart:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 1.6,
+   "text": "SHE WAS ON\n*WORLD RECORD* PACE",
+   "style": "big",
+   "y": 0.66
+  },
+  {
+   "t": 1.6,
+   "d": 2.2,
+   "text": "PROJECTED *2:09:53*\nWORLD RECORD ~2:09:56~",
+   "style": "big",
+   "y": 0.62
+  },
+  {
+   "t": 8.25,
+   "d": 1.7,
+   "text": "SHE KEEPS GOING :broken-heart:",
+   "style": "big",
+   "y": 0.68
+  },
+  {
+   "t": 11.55,
+   "d": 1.0,
+   "text": "*2:11:04* :trophy:",
+   "style": "big",
+   "y": 0.62
+  },
+  {
+   "t": 17.05,
+   "d": 2.4,
+   "text": "*68 SECONDS*\nOFF THE WORLD RECORD",
+   "style": "big",
+   "y": 0.68
+  },
+  {
+   "t": 3.87,
+   "d": 1.22,
+   "text": "AND THE *WHEELS*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 5.09,
+   "d": 1.48,
+   "text": "CAME OFF IN THE ~LAST~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 6.57,
+   "d": 2.39,
+   "text": "*KILOMETER* OR SO",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 12.62,
+   "d": 1.88,
+   "text": "SHE IS THE ~BERLIN~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 14.5,
+   "d": 1.28,
+   "text": "MARATHON *CHAMPION*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 15.78,
+   "d": 2.02,
+   "text": "ONCE ~AGAIN~",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 19.53,
+   "d": 0.7,
+   "text": "*IT'LL* STILL PUT",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 20.23,
+   "d": 2.88,
+   "text": "HER ~THIRD~ FASTEST",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  },
+  {
+   "t": 23.11,
+   "d": 1.85,
+   "text": "IN *HISTORY*",
+   "style": "wordcap",
+   "y": 0.5,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": -0.25,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 6.32,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 11.3,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 14.25,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 16.8,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 20.7,
+   "name": "ow:boom",
+   "db": -3
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/tg_vox_380.wav",
+   "in": 29.0,
+   "dur": 1.6,
+   "t": 0.0,
+   "af": "voice",
+   "db": -4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/tg_vox_380.wav",
+   "in": 1.0,
+   "dur": 2.2,
+   "t": 1.6,
+   "af": "voice",
+   "db": -8,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/kF2FgCAfKgY.mp4",
+   "in": 20.4,
+   "dur": 4.3,
+   "t": 3.85,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/kF2FgCAfKgY.mp4",
+   "in": 36.8,
+   "dur": 1.7,
+   "t": 8.25,
+   "af": "film",
+   "db": -6,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/tg_vox_380.wav",
+   "in": 23.0,
+   "dur": 2.6,
+   "t": 9.95,
+   "af": "voice",
+   "db": -2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/kF2FgCAfKgY.mp4",
+   "in": 51.8,
+   "dur": 4.35,
+   "t": 12.6,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/tg_vox_380.wav",
+   "in": 32.0,
+   "dur": 2.4,
+   "t": 17.05,
+   "af": "voice",
+   "db": -6,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/kF2FgCAfKgY.mp4",
+   "in": 4.45,
+   "dur": 4.85,
+   "t": 19.5,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

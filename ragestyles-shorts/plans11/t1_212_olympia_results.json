@@ -1,0 +1,509 @@
+{
+ "id": "t1_212_olympia_results",
+ "yt_title": "Who won the 2026 212 Olympia? 🏆 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1212.0,
+   "dur": 0.45,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1215.0,
+   "dur": 1.8,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1252.0,
+   "dur": 0.45,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1262.0,
+   "dur": 1.8,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1330.0,
+   "dur": 0.45,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1334.5,
+   "dur": 1.8,
+   "cx": 0.4,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1360.0,
+   "dur": 2.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.0,
+     0.32,
+     0.5
+    ],
+    [
+     2.6,
+     1.0,
+     0.58,
+     0.5
+    ]
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1415.0,
+   "dur": 1.4,
+   "cx": 0.46,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.02
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1423.2,
+   "dur": 4.0,
+   "cx": 0.55,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "tint": [
+    {
+     "at": 1.26,
+     "dur": 0.45,
+     "amount": 0.4,
+     "color": [
+      255,
+      200,
+      40
+     ]
+    }
+   ],
+   "punch": [
+    {
+     "at": 1.26,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.26,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1476.0,
+   "dur": 2.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/qpQ8iI8pJA8",
+   "in": 1443.6,
+   "dur": 1.9,
+   "cx": 0.25,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 18.85,
+   "text": "Who won the 2026\n*212 Olympia*? :trophy:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 0.45,
+   "text": "*5TH* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 0.45,
+   "d": 1.8,
+   "text": "NIHAT KAYA\n*$6,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.25,
+   "d": 0.45,
+   "text": "*4TH* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 2.7,
+   "d": 1.8,
+   "text": "VITOR PORTO\n*$7,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.5,
+   "d": 0.45,
+   "text": "*3RD* PLACE",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 4.95,
+   "d": 1.8,
+   "text": "SHAUN CLARIDA\n*$12,000*",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 6.75,
+   "d": 2.6,
+   "text": "LAST ~2~ STANDING",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 9.35,
+   "d": 1.4,
+   "text": "LUCAS OR KEONE?",
+   "style": "big",
+   "y": 0.5
+  },
+  {
+   "t": 12.01,
+   "d": 2.74,
+   "text": "*KEONE PEARSON* WINS :trophy:\n*$50,000*",
+   "style": "big",
+   "y": 0.42
+  },
+  {
+   "t": 14.75,
+   "d": 2.2,
+   "text": "*4TH* TITLE IN A ROW :fire:",
+   "style": "big",
+   "y": 0.66
+  },
+  {
+   "t": 16.95,
+   "d": 1.9,
+   "text": "~2ND~ LUCAS GARCIA\n*$20,000*",
+   "style": "big",
+   "y": 0.66
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.2,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 2.45,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 4.7,
+   "name": "ow:boom",
+   "db": -2
+  },
+  {
+   "t": 11.76,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 14.32,
+   "name": "ow:punch",
+   "db": -4
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 28.1,
+   "dur": 1.8,
+   "t": 0.45,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 79.9,
+   "dur": 2.3,
+   "t": 2.7,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 130.8,
+   "dur": 2.5,
+   "t": 4.95,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 183.7,
+   "dur": 2.6,
+   "t": 6.8,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 256.35,
+   "dur": 1.35,
+   "t": 9.35,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 263.2,
+   "dur": 4.0,
+   "t": 10.75,
+   "af": "voice",
+   "db": 4,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 267.2,
+   "dur": 2.2,
+   "t": 14.75,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/t212_vox.wav",
+   "in": 291.6,
+   "dur": 2.0,
+   "t": 16.95,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

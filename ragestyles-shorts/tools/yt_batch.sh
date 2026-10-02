@@ -45,8 +45,14 @@ js_args=()
 [[ -n "$node_bin" ]] && js_args=(--js-runtimes "node:$node_bin")
 
 export YT_OUT="work/youtube/%(id)s.%(ext)s"
-printf '%s\n' "${urls[@]}" | xargs -P 3 -I{} yt-dlp "${cookie_args[@]}" "${js_args[@]}" -N 8 --no-progress --no-overwrites \
-  -f "bv*[height<=1080][vcodec^=avc1]+ba[ext=m4a]/bv*[height<=1080][ext=mp4]+ba[ext=m4a]/bv*[height<=1080]+ba/b[height<=1080]/b" \
+# optional: YT_SECTIONS="*1200-1813" downloads only that part (long videos get 403 on the full stream, 2026-10-02);
+# YT_FORMAT overrides the format string
+extra=()
+[[ -n "${YT_SECTIONS:-}" ]] && extra+=(--download-sections "$YT_SECTIONS" --force-keyframes-at-cuts)
+[[ -n "${YT_CLIENT:-}" ]] && extra+=(--extractor-args "youtube:player_client=$YT_CLIENT")   # e.g. tv, mweb, web_safari
+fmt="${YT_FORMAT:-bv*[height<=1080][vcodec^=avc1]+ba[ext=m4a]/bv*[height<=1080][ext=mp4]+ba[ext=m4a]/bv*[height<=1080]+ba/b[height<=1080]/b}"
+printf '%s\n' "${urls[@]}" | xargs -P 3 -I{} yt-dlp "${cookie_args[@]}" "${js_args[@]}" "${extra[@]}" -N 8 --no-progress --no-overwrites \
+  -f "$fmt" \
   --merge-output-format mp4 --write-info-json -o "$YT_OUT" {} \
   || echo "some downloads failed (if every one says 'Sign in to confirm', the server IP or cookies are blocked)" >&2
 ls -la work/youtube | tail -n +2

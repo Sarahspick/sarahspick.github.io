@@ -10,7 +10,16 @@ from wordcaps import word_captions  # noqa: E402,F401
 
 
 def words(vid):
-    return [(w["s"], w["e"], w["w"].strip()) for s in json.load(open(f"work/tr/{vid}.json")) for w in s["words"]]
+    """Whisper words of work/tr/<vid>.json; split tokens ("pre" "-workout", "$20" ",000", "125" "%") are joined back."""
+    out = []
+    for s in json.load(open(f"work/tr/{vid}.json")):
+        for w in s["words"]:
+            t = w["w"].strip()
+            if out and t[:1] in ("-", ",", "%", "'") and w["s"] - out[-1][1] < 0.05:
+                out[-1] = (out[-1][0], w["e"], out[-1][2] + t)
+            else:
+                out.append((w["s"], w["e"], t))
+    return out
 
 
 def speech(o, vid, dur):

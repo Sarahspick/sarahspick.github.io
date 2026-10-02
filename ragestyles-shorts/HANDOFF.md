@@ -94,6 +94,8 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 
 ## 2-4. 2026-09-30 4차 세션 결과
 * 만든 영상: `Downloads/new17/` n1 Nick Walker (오너: "아주 좋아, 완벽한 수준", 이미 업로드), n2 Niall Darwen 클래식 (좋았다). Derek Lunsford 3위 편은 쓰지 말라고 해서 삭제. `Downloads/new18/` r1 Raul Flores 511kg, j1 15살 칼리스데닉스 3개 기록 (Andry Strong), s2 Sam Sulek Bulk Rebirth 27일차 20인치 팔. 빌드 스크립트 `plans11/build_*.py`, 공용 `plans11/newscommon.py` (`words()`, `speech()`, `Cutter.v/sync/until/hit_at`).
+* 고화질 다운로드 링크 (오너 요청): CRF 12 원본을 `Downloads/hq/<id>_HQ.mp4` 로 커밋하고 푸시하면 `https://github.com/Sarahspick/sarahspick.github.io/raw/claude/optimistic-mendel-66zw8l/ragestyles-shorts/Downloads/hq/<id>_HQ.mp4` 로 받을 수 있음 (50MB 넘으면 GitHub 가 경고만 하고 받아줌, 100MB 넘으면 거절). 채팅에는 HEVC 28MB 본 (`tools/fit_send_hevc.sh`).
+* 자막 위치: 클로즈업에서 얼굴이 박스 위쪽 절반을 채우므로 단어 자막은 y 0.68 to 0.7, 정보 자막은 y 0.86 (w1 첫 렌더에서 y 0.5 자막이 미치 얼굴을 가려서 고침). `newscommon.words()` 는 whisper 가 쪼갠 토큰 ("pre" "-workout", "$20" ",000", "125" "%") 을 다시 붙임.
 * 업로드 문구: 영상마다 `Downloads/<폴더>/UPLOAD_INFO.md` 에 제목, 설명, 태그, 해시태그를 쓰고 채팅으로도 보냄 (오너 요청).
 * 유튜브 다운로드: 새 쿠키로 `tools/yt_batch.sh` 정상. 77분짜리 OlympiaTV Cq7TbOxcwPc 만 영상 데이터 403 (세 번 재시도해도 같음). 긴 영상은 PO 토큰이 필요한 것으로 보임.
 * 계속 받는 방법 (제안): 1) 쿠키 수명: 안 쓰는 계정으로 시크릿 창 로그인, youtube.com/robots.txt 에서 cookies.txt 내보내고 창 닫기 (브라우저가 쿠키를 돌리지 않게). 이 환경은 세션마다 IP 가 바뀌므로 몇 주 단위로 교체 예상. 2) PO 토큰 공급자 `bgutil-ytdlp-pot-provider` (yt-dlp 플러그인, Node 스크립트 모드) 를 setup.sh 에 넣으면 긴 영상 403 과 쿠키 의존이 줄어듦 (아직 시험 안 함, github.com releases 가 막혀 있어 pip/npm 경로로 설치해야 함). 3) 쿠키가 막히면 대체: 오너 PC 에서 `yt-dlp -a links.txt` + rclone 으로 드라이브 폴더에 자동 업로드, 세션은 gdown 으로 받기. 4) 한 세션에 수십 개씩 받지 않기 (`--sleep-requests 1` 권장).
@@ -181,6 +183,9 @@ RageStyles 유튜브 쇼츠 작업을 이어서 해줘.
 | new16 s1 v3, d1 v3 | 제목 155px, 영상 박스 370px (3:4), 위쪽 블러 | 사용자 확인 전 |
 | new17 n1, n2 | 닉 워커 올림피아 우승 (인터뷰 + 우승 연설), 니얼 다웬 클래식 우승 (5위에서 1위). Derek 3위 편은 오너 요청으로 삭제 | n1 아주 좋음, 완벽 (업로드함). 단 시작 1초 저화질, 후반 머리 잘림 지적. n2 좋음 |
 | new18 r1, j1, s2 | 라울 플로레스 511kg (해설 + 통역 + 하프토르), 15살 칼리스데닉스 3개 기록, 샘 술렉 벌크 리버스 20인치 | 제목 전부 별로 (다시 지음). s2 가 오히려 잘 나옴. r1 은 1천만 조회 편집법으로 v2 다시 만듦 (확인 전) |
+| new19 c1 | 클래식 올림피아 5위에서 1위 빠른 카운트다운 v2 (0초 5TH PLACE, 이름만, 줌 + 밝기 + 쿵) | v1 은 길고 지루하다는 피드백. v2 첫 컷 인물 오른쪽 치우침 수정 (cx 0.365), 고화질로 다시 |
+| new20 mp1, t1, b1 | 맨즈 피지크, 212 결과 카운트다운, 티그스트 아세파 베를린 마라톤 | 사용자 확인 전 |
+| new21 w1, w2, w3 | 세계 최강자 미첼 후퍼 vs 405 lb 벤치 (로니 콜먼), 프리워크아웃 통 블러프 (루크 엘스먼이 진실을 말하고 우승), 샘 술렉 올림피아 무대 (정장, 시상) | 사용자 확인 전 |
 | new9 g1 | Gymshark 푸시 프레스 힘 대결, 범스테드 우승 후 카메라맨이 285 lbs | 내용은 좋지만 프레스가 가로 구도라 쇼츠에서 안 보임, 실패 무게 같은 정보 텍스트 부족. 폐기, 다시 만들지 않음 |
 
 ## 5. 파이프라인

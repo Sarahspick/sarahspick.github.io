@@ -1,0 +1,835 @@
+{
+ "id": "w1_hooper_405_bench",
+ "yt_title": "World's Strongest Man vs 405 lb bench 🤯 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 689.6,
+   "dur": 1.6,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.15,
+     0.45,
+     0.42
+    ],
+    [
+     1.6,
+     1.18,
+     0.6,
+     0.42
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 729.6,
+   "dur": 2.95,
+   "cx": 0.52,
+   "cy": 0.45,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 2.15,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.15,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 739.0,
+   "dur": 3.25,
+   "cx": 0.72,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 2.47,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.47,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 746.8,
+   "dur": 1.65,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 748.6,
+   "dur": 1.7,
+   "cx": 0.42,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 751.4,
+   "dur": 0.55,
+   "cx": 0.42,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.08,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.08,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 752.9,
+   "dur": 0.6,
+   "cx": 0.58,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 756.9,
+   "dur": 1.05,
+   "cx": 0.47,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 758.7,
+   "dur": 1.25,
+   "cx": 0.42,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.84,
+     "zoom": 1.12,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.84,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 760.3,
+   "dur": 0.7,
+   "cx": 0.56,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 764.2,
+   "dur": 1.3,
+   "cx": 0.48,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 785.0,
+   "dur": 2.25,
+   "cx": 0.45,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 789.0,
+   "dur": 2.85,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 794.3,
+   "dur": 1.13,
+   "cx": 0.45,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.77,
+     "zoom": 1.14,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.77,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 812.85,
+   "dur": 3.6,
+   "cx": 0.56,
+   "cy": 0.45,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true,
+   "punch": [
+    {
+     "at": 2.01,
+     "zoom": 1.1,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.01,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 26.43,
+   "text": "World's Strongest Man\nvs *405 lb* bench :exploding-head:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 16.65,
+   "d": 5.05,
+   "text": "NEEDS *16* REPS",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 22.47,
+   "d": 0.4,
+   "text": "*10* :skull:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 0.02,
+   "d": 1.65,
+   "text": "*LIGHTWEIGHT* BABY LIGHTWEIGHT YEAH",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 1.67,
+   "d": 0.8,
+   "text": "PUTTING ALL THE ~PRESSURE~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 2.47,
+   "d": 1.18,
+   "text": "ON *MITCHELL* HOOPER",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 3.65,
+   "d": 0.48,
+   "text": "THE ~WORLD'S~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 4.13,
+   "d": 0.51,
+   "text": "*STRONGEST* MAN",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 4.64,
+   "d": 1.42,
+   "text": "SO ~125%~ OF HIS",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 6.06,
+   "d": 0.72,
+   "text": "BODY *WEIGHT* WAS",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 6.78,
+   "d": 1.1,
+   "text": "OVER ~400~ POUNDS",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 7.88,
+   "d": 0.56,
+   "text": "WE PUT *405*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 8.44,
+   "d": 0.58,
+   "text": "ON THE ~BENCH~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 9.02,
+   "d": 0.25,
+   "text": "WHAT WOULD",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 9.2,
+   "d": 0.3,
+   "text": "YOU HAVE HIT",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 9.5,
+   "d": 0.94,
+   "text": "*405*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 10.44,
+   "d": 0.79,
+   "text": "I WOULD HAVE GOT",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 11.23,
+   "d": 0.55,
+   "text": "~25~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 11.78,
+   "d": 0.62,
+   "text": "*25*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 12.4,
+   "d": 0.25,
+   "text": "WHAT DO",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 12.58,
+   "d": 0.25,
+   "text": "YOU ~THINK~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 12.74,
+   "d": 0.71,
+   "text": "I CAN TAP INTO",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 13.45,
+   "d": 0.46,
+   "text": "I *THINK*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 13.91,
+   "d": 0.77,
+   "text": "YOU GET ~50~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 14.68,
+   "d": 1.29,
+   "text": "*50*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 16.71,
+   "d": 4.12,
+   "text": "~8~ 9",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 20.83,
+   "d": 0.94,
+   "text": "LOOK FOR *10*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 21.77,
+   "d": 1.13,
+   "text": "THAT'S IT ~10~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 22.9,
+   "d": 1.46,
+   "text": "*MITCH* IS",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 24.36,
+   "d": 1.2,
+   "text": "DEFINITELY ~OUT~",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 25.56,
+   "d": 0.25,
+   "text": "SEE",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  },
+  {
+   "t": 25.62,
+   "d": 0.86,
+   "text": "YOU *LATER*",
+   "style": "wordcap",
+   "y": 0.7,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": -0.25,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 3.5,
+   "name": "ow:boom",
+   "db": -5
+  },
+  {
+   "t": 6.77,
+   "name": "ow:boom",
+   "db": -4
+  },
+  {
+   "t": 10.98,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 13.94,
+   "name": "ow:boom",
+   "db": -3
+  },
+  {
+   "t": 22.22,
+   "name": "ow:boom",
+   "db": -1
+  },
+  {
+   "t": 24.41,
+   "name": "ow:punch",
+   "db": -4
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/jw1.wav",
+   "in": 8.1,
+   "dur": 1.55,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 53.2,
+   "dur": 2.85,
+   "t": 1.65,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 62.8,
+   "dur": 3.15,
+   "t": 4.6,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 70.55,
+   "dur": 1.6,
+   "t": 7.85,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 72.6,
+   "dur": 1.65,
+   "t": 9.5,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 75.85,
+   "dur": 0.45,
+   "t": 11.2,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 76.85,
+   "dur": 0.5,
+   "t": 11.75,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 80.95,
+   "dur": 1.0,
+   "t": 12.35,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 82.65,
+   "dur": 1.2,
+   "t": 13.4,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 84.35,
+   "dur": 0.5,
+   "t": 14.65,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 88.2,
+   "dur": 1.3,
+   "t": 15.3,
+   "af": "voice",
+   "db": 0,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 109.3,
+   "dur": 5.05,
+   "t": 16.65,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 118.2,
+   "dur": 0.78,
+   "t": 21.75,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw1.wav",
+   "in": 134.3,
+   "dur": 2.95,
+   "t": 22.88,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

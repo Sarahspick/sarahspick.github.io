@@ -1,0 +1,330 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "u_open": {
+      "src": "tt:7665645762100923670",
+      "start": 40.2
+    },
+    "u_close": {
+      "src": "tt:7665645762100923670",
+      "start": 52.0
+    },
+    "u_flat": {
+      "src": "tt:7665645762100923670",
+      "start": 44.5
+    },
+    "a_poly": {
+      "src": "tt:7662544383656447262",
+      "start": 13.9,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_v": {
+      "src": "tt:7662544383656447262",
+      "start": 20.0,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_crease": {
+      "src": "tt:7662544383656447262",
+      "start": 25.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_swap": {
+      "src": "tt:7662544383656447262",
+      "start": 32.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_ti": {
+      "src": "tt:7662544383656447262",
+      "start": 46.2,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_flat": {
+      "src": "tt:7662544383656447262",
+      "start": 57.5,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    },
+    "a_flex": {
+      "src": "tt:7662544383656447262",
+      "start": 64.0,
+      "src_zoom": 1.55,
+      "focus": [
+        0.5,
+        0.3
+      ],
+      "cover": [
+        [
+          0.0,
+          0.2,
+          1.0,
+          0.29
+        ]
+      ],
+      "kb": [
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "9to5Google: Samsung says Galaxy Z Fold 8 crease is less visible thanks to Flex Titanium",
+      "url": "https://9to5google.com/2026/07/14/samsung-galaxy-z-fold-8-flex-titanium-display/"
+    },
+    {
+      "name": "SamMobile: How Flex Titanium improves the Galaxy Z Fold 8 displays",
+      "url": "https://www.sammobile.com/news/flex-titanium-how-it-improves-the-galaxy-z-fold-8-and-ultra-displays"
+    },
+    {
+      "name": "Android Authority: Samsung explains how its Z Fold 8 displays achieved a barely visible crease",
+      "url": "https://www.androidauthority.com/samsung-galaxy-z-fold-8-display-upgrades-3696219/"
+    }
+  ],
+  "footage_credits": [
+    "@droidsavvy on TikTok (display layer animation)",
+    "@supersaf on TikTok (Galaxy Z Fold 8 Ultra unboxing)"
+  ],
+  "id": "fold_titanium",
+  "lang": "en",
+  "title": "How does a phone screen *fold*? 📱",
+  "pronounce": {
+    "20": "twenty"
+  },
+  "hook": {
+    "lines": [
+      "Phone screens are glass.",
+      "So how does *this* fold?"
+    ],
+    "clips": [
+      "u_open",
+      "u_open"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:this"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "The trick is a hidden layer",
+        "*under* the screen."
+      ],
+      "clip": "a_poly",
+      "annotate": [
+        {
+          "type": "arrow",
+          "at": "line2",
+          "x": 0.62,
+          "y": 0.62,
+          "angle": 150
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Foldables used plastic there,",
+        "and plastic *remembers* bends."
+      ],
+      "clip": "a_v"
+    },
+    {
+      "lines": [
+        "That's where the *crease* came from."
+      ],
+      "clip": "a_crease",
+      "annotate": [
+        {
+          "type": "circle",
+          "at": "start",
+          "x": 0.5,
+          "y": 0.82,
+          "r": 115
+        }
+      ],
+      "sfx": [
+        {
+          "id": "question",
+          "at": "word:crease"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "On the Galaxy Z Fold 8,",
+        "Samsung swapped it for *titanium*."
+      ],
+      "clip": "a_swap",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "sparkle",
+          "at": "word:titanium."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "*20 times* stiffer,",
+        "yet thinner than a third of a hair."
+      ],
+      "clip": "a_ti"
+    },
+    {
+      "lines": [
+        "A titanium plate fills the gaps,",
+        "so the fold has nothing to *sink* into."
+      ],
+      "clips": [
+        "a_flat",
+        "a_flex"
+      ]
+    },
+    {
+      "lines": [
+        "The crease used to be a scar."
+      ],
+      "clip": "u_close"
+    },
+    {
+      "lines": [
+        "Now it's barely a *wrinkle*."
+      ],
+      "clip": "u_flat",
+      "sfx": [
+        {
+          "id": "dingding",
+          "at": "word:wrinkle."
+        }
+      ]
+    }
+  ],
+  "upload": {
+    "title": "How Does a Phone Screen Fold Without Breaking? 📱 #shorts",
+    "description": "Phone screens are glass, so how does a foldable fold? 📱\n\nThe secret is a layer under the screen. Foldables used a plastic film there, and plastic remembers every bend, which is where the crease came from. On the Galaxy Z Fold 8, Samsung swapped it for a titanium-alloy film that is about 20 times stiffer yet thinner than a third of a human hair, and added a titanium plate underneath that removes the air gaps the fold used to sink into. Samsung calls it Flex Titanium.\n\nThe crease used to be a scar. Now it's barely a wrinkle. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#samsung",
+      "#galaxyzfold8",
+      "#foldable",
+      "#technology"
+    ],
+    "tags": [
+      "galaxy z fold 8",
+      "z fold 8",
+      "samsung foldable",
+      "foldable screen",
+      "how foldable screens work",
+      "flex titanium",
+      "foldable crease",
+      "samsung display",
+      "foldable phone",
+      "titanium display",
+      "how it works",
+      "tech explained",
+      "top techs"
+    ],
+    "comment": "Plastic remembers every bend. Titanium just moves on. Honestly relatable 😂"
+  }
+}

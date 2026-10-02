@@ -1,0 +1,383 @@
+{
+ "_note": "Downloaded (never synthesized) sound effects. tools/fetch_assets.py downloads each file from `url` into assets/sfx/. The renderer normalizes every file to `lufs` before applying a cue's gain.",
+ "sounds": {
+  "boom": {
+   "file": "boom-vine.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/boom-vine.mp3",
+   "desc": "Vine boom (reveal / punchline)",
+   "license": "meme soundboard (no license file)",
+   "lufs": -17
+  },
+  "ding": {
+   "file": "correct-answer-bell.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/correct-answer-bell.mp3",
+   "desc": "Correct-answer ding (띠링)",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "omg": {
+   "file": "oh-my-god.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/oh-my-god.mp3",
+   "desc": "\"Oh my god!\" reaction",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "wow": {
+   "file": "wow-incredible.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/wow-incredible.mp3",
+   "desc": "\"Wow! Incredible!\" reaction",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "wow_amazing": {
+   "file": "wow-this-is-amazing.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/wow-this-is-amazing.mp3",
+   "desc": "\"Wow, this is amazing\" reaction",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "gasp": {
+   "file": "shocked-crowd-gasp-audience.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/shocked-crowd-gasp-audience.mp3",
+   "desc": "Crowd gasp",
+   "license": "meme soundboard (no license file)",
+   "lufs": -20
+  },
+  "ooh": {
+   "file": "oooooh-crowd-audience.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/oooooh-crowd-audience.mp3",
+   "desc": "Crowd \"ooooh\"",
+   "license": "meme soundboard (no license file)",
+   "lufs": -20
+  },
+  "get_out": {
+   "file": "get-out-tuco.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/get-out-tuco.mp3",
+   "desc": "\"GET OUT!\" shout",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "dun_dun": {
+   "file": "dun-dun-dunnnnn.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/dun-dun-dunnnnn.mp3",
+   "desc": "Dun dun DUNNN (dramatic twist)",
+   "license": "meme soundboard (no license file)",
+   "lufs": -20
+  },
+  "wait_what": {
+   "file": "wait-what.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/wait-what.mp3",
+   "desc": "\"Wait, what?\"",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "how_possible": {
+   "file": "what-how-is-this-possible.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/what-how-is-this-possible.mp3",
+   "desc": "\"What? How is this possible?\"",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "no_way": {
+   "file": "no-way-i-cant-believe-this.mp3",
+   "url": "https://raw.githubusercontent.com/CharmSchoolDean/sb4k/main/no-way-i-cant-believe-this.mp3",
+   "desc": "\"No way, I can't believe this\"",
+   "license": "meme soundboard (no license file)",
+   "lufs": -19
+  },
+  "click": {
+   "file": "kenney-click-1.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/kenney-interface/sounds/click-1.ogg",
+   "desc": "UI click (Kenney Interface Sounds)",
+   "license": "CC0 (Kenney)",
+   "lufs": -18
+  },
+  "confirm": {
+   "file": "kenney-confirmation-1.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/kenney-interface/sounds/confirmation-1.ogg",
+   "desc": "Soft confirmation blip (Kenney)",
+   "license": "CC0 (Kenney)",
+   "lufs": -20
+  },
+  "correct": {
+   "file": "kenney-correct.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/kenney-voiceover/sounds/correct.ogg",
+   "desc": "Announcer \"Correct!\" (Kenney Voiceover)",
+   "license": "CC0 (Kenney)",
+   "lufs": -19
+  },
+  "mouse_click": {
+   "file": "office-mouse-click.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/office-minimal/sounds/mouse-click.ogg",
+   "desc": "Real mouse click",
+   "license": "CC0 (pingthings office-minimal)",
+   "lufs": -16
+  },
+  "switch": {
+   "file": "office-switch-1.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/office-classic/sounds/switch-1.ogg",
+   "desc": "Physical button / switch press",
+   "license": "CC0 (pingthings office-classic)",
+   "lufs": -18
+  },
+  "stamp": {
+   "file": "office-stamp-1.ogg",
+   "npm": "pingthings",
+   "path": "package/packs/office-mechanical/sounds/stamp-1.ogg",
+   "desc": "Rubber stamp slam (CLASSIFIED stamp)",
+   "license": "CC0 (pingthings office-mechanical)",
+   "lufs": -15
+  },
+  "sparkle": {
+   "file": "user/sparkle.mp3",
+   "drive": "1 .뾰로롱.mp3",
+   "desc": "뾰로롱: sparkle, something appears",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "ding2": {
+   "file": "user/ding2.mp3",
+   "drive": "2. 띠딩2.mp3",
+   "desc": "띠딩: bright two-note ding",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "chiring": {
+   "file": "user/chiring.wav",
+   "drive": "3. 치링.wav",
+   "desc": "치링: shine / gleam",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "applause": {
+   "file": "user/applause.wav",
+   "drive": "4. 박수.wav",
+   "desc": "박수: applause",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "glass_ding": {
+   "file": "user/glass_ding.m4a",
+   "drive": "5. 유리컵 띵.m4a",
+   "desc": "유리컵 띵: glass ding",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "block": {
+   "file": "user/block.mp3",
+   "drive": "6. SE_블록소리.mp3",
+   "desc": "블록소리: block / tile knock",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "bbyong": {
+   "file": "user/bbyong.mp3",
+   "drive": "7. 뿅.mp3",
+   "desc": "뿅: quick pop",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "whoosh": {
+   "file": "user/whoosh.mp3",
+   "drive": "8. 훅.mp3",
+   "desc": "훅: light whoosh",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "punch": {
+   "file": "user/punch.mp3",
+   "drive": "9. 펀치.mp3",
+   "desc": "펀치: punch hit",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "clear": {
+   "file": "user/clear.wav",
+   "drive": "10 .맑음.wav",
+   "desc": "맑음: clear chime",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "melody": {
+   "file": "user/melody.mp3",
+   "drive": "11. 멜로디.mp3",
+   "desc": "멜로디: short melody sting",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "transition": {
+   "file": "user/transition.wav",
+   "drive": "12. 화면전환효과음.wav",
+   "desc": "화면전환: scene transition",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "boom2": {
+   "file": "user/boom2.wav",
+   "drive": "13. BOOM.WAV",
+   "desc": "BOOM: deep boom / sub hit",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "tada": {
+   "file": "user/tada.wav",
+   "drive": "14. 짜잔.wav",
+   "desc": "짜잔: ta-da reveal",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "click2": {
+   "file": "user/click2.mp3",
+   "drive": "15. 마우스클릭.mp3",
+   "desc": "마우스클릭: mouse click",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "huh": {
+   "file": "user/huh.mp3",
+   "drive": "16. 허얽!.mp3",
+   "desc": "허얽!: shocked gasp",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "question": {
+   "file": "user/question.mp3",
+   "drive": "17. 물음표.mp3",
+   "desc": "물음표: question / huh?",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "dingding": {
+   "file": "user/dingding.wav",
+   "drive": "18. Ding Ding.wav",
+   "desc": "Ding Ding: correct-answer ding",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "yeah": {
+   "file": "user/yeah.mp3",
+   "drive": "19. 예에에.mp3",
+   "desc": "예에에: cheer",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "cartoon_pop": {
+   "file": "user/cartoon_pop.mp3",
+   "drive": "20. 카툰 팝.mp3",
+   "desc": "카툰 팝: cartoon pop",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "riser1": {
+   "file": "user/riser1.mp3",
+   "drive": "Riser Sound Effect 01.MP3",
+   "desc": "Riser 01: tension build before a reveal",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "riser8": {
+   "file": "user/riser8.mp3",
+   "drive": "Riser Sound Effect 08.MP3",
+   "desc": "Riser 08: long riser",
+   "license": "user's own library (Google Drive '자주쓰는 효과음')",
+   "lufs": -19
+  },
+  "mk_whoosh": {
+   "file": "mixkit/mk_whoosh.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1490/1490-preview.mp3",
+   "desc": "Mixkit: Fast whoosh transition",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_sweep": {
+   "file": "mixkit/mk_sweep.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/166/166-preview.mp3",
+   "desc": "Mixkit: Fast small sweep transition",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_air": {
+   "file": "mixkit/mk_air.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1489/1489-preview.mp3",
+   "desc": "Mixkit: Air woosh",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_impact": {
+   "file": "mixkit/mk_impact.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3",
+   "desc": "Mixkit: Cinematic whoosh deep impact",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_intro": {
+   "file": "mixkit/mk_intro.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2900/2900-preview.mp3",
+   "desc": "Mixkit: Movie logo intro impact",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_click": {
+   "file": "mixkit/mk_click.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3",
+   "desc": "Mixkit: Cool interface click tone",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_tap": {
+   "file": "mixkit/mk_tap.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1117/1117-preview.mp3",
+   "desc": "Mixkit: Classic click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_pop": {
+   "file": "mixkit/mk_pop.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2364/2364-preview.mp3",
+   "desc": "Mixkit: Hard pop click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_ding": {
+   "file": "mixkit/mk_ding.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/951/951-preview.mp3",
+   "desc": "Mixkit: Positive notification",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_shutter": {
+   "file": "mixkit/mk_shutter.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1133/1133-preview.mp3",
+   "desc": "Mixkit: Camera shutter click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_tech": {
+   "file": "mixkit/mk_tech.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/3120/3120-preview.mp3",
+   "desc": "Mixkit: Technology transition slide",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_sparkle": {
+   "file": "mixkit/mk_sparkle.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2350/2350-preview.mp3",
+   "desc": "Mixkit: Magic sparkle whoosh",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_correct": {
+   "file": "mixkit/mk_correct.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2870/2870-preview.mp3",
+   "desc": "Mixkit: Correct answer tone",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  }
+ },
+ "_drive_folder": "https://drive.google.com/drive/folders/15ZuFnwkci3M4oeBMUKKiSUU5VHzC-RkW"
+}

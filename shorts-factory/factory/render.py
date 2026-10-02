@@ -41,6 +41,24 @@ def _pop(p, start=0.35):
     return start + (1 - start) * _ease_out(p / 0.7) if p < 0.7 else 1.0 + 0.1 * math.sin((p - 0.7) / 0.3 * math.pi)
 
 
+def eleven_music(prompt, seconds):
+    """Instrumental track from the ElevenLabs Music API (POST /v1/music), cached in work/music_cache by prompt+length."""
+    import hashlib
+    import requests
+    d = rel("work/music_cache")
+    os.makedirs(d, exist_ok=True)
+    ms = int(max(10, min(300, seconds)) * 1000)
+    path = os.path.join(d, hashlib.sha1(f"{prompt}|{ms}".encode()).hexdigest()[:16] + ".mp3")
+    if not os.path.exists(path):
+        r = requests.post("https://api.elevenlabs.io/v1/music", headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"]},
+                          json={"prompt": prompt + " Instrumental only, no vocals.", "music_length_ms": ms}, timeout=600)
+        r.raise_for_status()
+        with open(path, "wb") as f:
+            f.write(r.content)
+        print(f"[music] composed {ms / 1000:.0f}s: {prompt[:70]}")
+    return path
+
+
 class Short:
     def __init__(self, script_path, channel_path=None, voice=None, rate=None):
         with open(script_path, encoding="utf-8") as f:
@@ -251,9 +269,12 @@ class Short:
         Only use music the channel is allowed to use (YouTube Audio Library, a paid library, or tracks the user
         supplies); popular songs go in through YouTube's own editor instead."""
         cfg = self.sc.get("bgm", self.ch.get("bgm"))
-        if not cfg or not cfg.get("file") or not os.path.exists(rel(cfg["file"])):
+        if cfg and cfg.get("prompt"):   # ElevenLabs Music, composed for this Short (user decision 2026-10-02)
+            src = eleven_music(cfg["prompt"], self.total + 1.5)
+        elif not cfg or not cfg.get("file") or not os.path.exists(rel(cfg["file"])):
             return None
-        src = rel(cfg["file"])
+        else:
+            src = rel(cfg["file"])
         lufs = measure(src)[0]
         gain = float(cfg.get("lufs", -30)) - lufs
         out = os.path.join(self.work, "bgm_ducked.wav")

@@ -286,6 +286,97 @@
    "desc": "Riser 08: long riser",
    "license": "user's own library (Google Drive '자주쓰는 효과음')",
    "lufs": -19
+  },
+  "mk_whoosh": {
+   "file": "mixkit/mk_whoosh.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1490/1490-preview.mp3",
+   "desc": "Mixkit: Fast whoosh transition",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_sweep": {
+   "file": "mixkit/mk_sweep.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/166/166-preview.mp3",
+   "desc": "Mixkit: Fast small sweep transition",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_air": {
+   "file": "mixkit/mk_air.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1489/1489-preview.mp3",
+   "desc": "Mixkit: Air woosh",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_impact": {
+   "file": "mixkit/mk_impact.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3",
+   "desc": "Mixkit: Cinematic whoosh deep impact",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_intro": {
+   "file": "mixkit/mk_intro.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2900/2900-preview.mp3",
+   "desc": "Mixkit: Movie logo intro impact",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_click": {
+   "file": "mixkit/mk_click.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3",
+   "desc": "Mixkit: Cool interface click tone",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_tap": {
+   "file": "mixkit/mk_tap.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1117/1117-preview.mp3",
+   "desc": "Mixkit: Classic click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_pop": {
+   "file": "mixkit/mk_pop.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2364/2364-preview.mp3",
+   "desc": "Mixkit: Hard pop click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_ding": {
+   "file": "mixkit/mk_ding.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/951/951-preview.mp3",
+   "desc": "Mixkit: Positive notification",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_shutter": {
+   "file": "mixkit/mk_shutter.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/1133/1133-preview.mp3",
+   "desc": "Mixkit: Camera shutter click",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_tech": {
+   "file": "mixkit/mk_tech.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/3120/3120-preview.mp3",
+   "desc": "Mixkit: Technology transition slide",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_sparkle": {
+   "file": "mixkit/mk_sparkle.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2350/2350-preview.mp3",
+   "desc": "Mixkit: Magic sparkle whoosh",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
+  },
+  "mk_correct": {
+   "file": "mixkit/mk_correct.mp3",
+   "url": "https://assets.mixkit.co/active_storage/sfx/2870/2870-preview.mp3",
+   "desc": "Mixkit: Correct answer tone",
+   "license": "Mixkit Sound Effects Free License (free for commercial use)",
+   "lufs": -19
   }
  },
  "_drive_folder": "https://drive.google.com/drive/folders/15ZuFnwkci3M4oeBMUKKiSUU5VHzC-RkW"

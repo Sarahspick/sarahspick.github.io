@@ -677,6 +677,8 @@ class Bench:
             name = cue["name"]
             if name.startswith("mk:"):  # licensed Mixkit sound
                 path = os.path.join(ROOT, "assets", "sfx_mixkit", name[3:] + ".wav")
+            elif name.startswith("el:"):  # generated with ElevenLabs (tools/el_sfx.py, prompts in assets/sfx_el/prompts.json)
+                path = os.path.join(ROOT, "assets", "sfx_el", name[3:] + ".wav")
             elif name.startswith("ow:"):  # owner's own sound pack (Drive "자주쓰는 효과음"), heavy ones only
                 path = os.path.join(ROOT, "assets", "sfx_owner", "ow_" + name[3:] + ".wav")
             else:

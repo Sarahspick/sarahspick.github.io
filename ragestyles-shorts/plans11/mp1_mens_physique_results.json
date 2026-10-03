@@ -365,10 +365,29 @@
   },
   {
    "src": "youtube/0wGhJgjDAXU",
-   "in": 1193.6,
-   "dur": 1.8,
-   "cx": 0.32,
-   "cy": 0.5,
+   "in": 1193.95,
+   "dur": 0.6,
+   "cx": 0.22,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/0wGhJgjDAXU",
+   "in": 1196.5,
+   "dur": 1.2,
+   "cx": 0.38,
+   "cy": 0.45,
    "zoom": [
     1.0,
     1.04

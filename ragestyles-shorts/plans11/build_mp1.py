@@ -44,6 +44,7 @@ o.hit(s, 0.0, zoom=1.1, amount=0.45, db=-4, sound="punch")
 k.big(t, 2.4, "*4TH* TITLE IN A ROW :fire:", y=0.64)
 t = o.t
 k.say(1197.0, 1198.8, t)                                          # "congratulations Ali, you runner-up" (runs 1 s past the cut)
-k.shot(1193.6, 1.8, cx=0.32)   # Ali smiling, hugging Ryan (camera leaves him after 1.8 s)
+k.shot(1193.95, 0.6, cx=0.22, cy=0.45)  # Ali smiling, face clear (the camera swings off him at 1194.6)
+k.shot(1196.5, 1.2, cx=0.38, cy=0.45)   # Ali and Ryan hug, Ali's face in profile
 k.big(t, 1.8, "~2ND~ ALI BILAL\n*$20,000*", y=0.66)
 k.save()

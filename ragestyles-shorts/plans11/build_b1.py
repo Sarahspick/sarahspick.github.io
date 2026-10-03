@@ -41,7 +41,9 @@ c.v(H, 154.6, 2.2, cx=0.27, cy=0.5, zoom=(1.0, 1.04))
 info(t, 2.2, "PROJECTED *2:09:53*\nWORLD RECORD ~2:09:56~", y=0.62)
 # 3. "and the wheels came off in the last kilometre or so"
 sp.add(20.4, 24.7, o.t + 0.05)
-c.v(H, 385.4, c.until(sp.out(22.3)), cx=0.6, cy=0.5, zoom=(1.0, 1.04))       # legs
+d = c.until(sp.out(22.3))
+c.v(H, 380.5, d, cx=0.5, cy=0.5, zoom=(1.1, 1.14),                           # running, whole body in (the camera
+    path=[[0, 1.1, 0.5, 0.5], [d, 1.14, 0.4, 0.5]])                           # cuts to her legs at 384.4)
 s = c.v(H, 389.4, c.until(sp.out(24.7) + 0.1), cx=0.48, cy=0.5, zoom=(1.3, 1.36))   # she stops, holding her leg
 c.hit_at(s, sp.out(23.12), zoom=1.1, amount=0.4, db=-5)
 # 4. she keeps going
@@ -68,8 +70,10 @@ o.hit(s, 0.0, zoom=1.1, amount=0.4, db=-4)
 info(t, 2.4, "*68 SECONDS*\nOFF THE WORLD RECORD", y=0.68)
 # 8. "It'll still put her third fastest in history"
 sp.add(4.45, 9.3, o.t + 0.05)
-s = c.v(H, 416.4, c.until(sp.out(9.3) + 0.5), cx=0.55, cy=0.45, zoom=(1.0, 1.04))   # helped away
+d = c.until(sp.out(9.3) + 0.5)
+s = c.v(H, 416.4, d, cx=0.52, cy=0.5, zoom=(1.0, 1.04),                    # helped away, kept on her
+        path=[[0, 1.0, 0.52, 0.5], [1.6, 1.02, 0.47, 0.5], [2.4, 1.03, 0.49, 0.5], [d, 1.04, 0.38, 0.5]])
 c.hit_at(s, sp.out(5.9), zoom=1.1, amount=0.45, db=-3)                     # "third"
-o.caps += word_captions(sp.words, y=0.5, style="wordcap", palette=["*", "~"],
+o.caps += word_captions(sp.words, y=0.68, style="wordcap", palette=["*", "~"],
                         force={"wheels", "last", "kilometer", "champion", "again", "third", "fastest", "history"})
 o.save(open_fade=0.0)

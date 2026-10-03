@@ -13,6 +13,7 @@ import sys
 
 sys.path.insert(0, "plans11")
 from newscommon import Short, Speech, Cutter, words, word_captions  # noqa: E402
+from countdown import zoom_in  # noqa: E402
 
 V = "pRWCqgRzN9c"
 o = Short("c1_classic_olympia_results", "Who won the 2026\n*Classic Olympia*? :trophy:",
@@ -29,26 +30,22 @@ def big(t, d, text, y=0.5):
     o.cap(t, d, text, style="big", y=y)   # y 0.64 where a face would sit under the centre line
 
 
-def place(label, pre, name_a, name_b, shot, d, text, y=0.5):
-    """'5TH PLACE' over a short shot, then the cut: the announcer says only the name, punch + flash + boom."""
+def place(label, t0, cx, name_a, name_b, head_y, d, text, cx_end=None, y=0.66, pre_d=0.45):
+    """'5TH PLACE' over the pose, then the cut stays on the same pose zoomed in (owner, 2026-10-03): the announcer
+    says only the name, punch + flash + boom, athlete centred and his head clear."""
     t = o.t
-    c.v(V, *pre)
-    big(t, pre[1], label)
+    c.v(V, t0, pre_d, cx=min(max(cx, 0.21), 0.79), cy=0.5, zoom=(1.0, 1.02))
+    big(t, pre_d, label)
     say(name_a, name_b, o.t)
-    s = c.v(V, shot[0], d, **shot[1])
-    o.hit(s, 0.0, zoom=1.14, amount=0.55, db=-2)
+    s = c.v(V, t0 + pre_d, d, **zoom_in(cx, head_y, d, cx_end))
+    o.hit(s, 0.0, zoom=1.06, amount=0.55, db=-2)
     big(o.t - d, d, text, y)
 
 
-place("*5TH* PLACE", (1469.6, 0.5, ), 1438.95, 1440.65,
-      (1463.6, dict(cx=0.44, cy=0.5, zoom=(1.0, 1.05))), 1.8, "TERRENCE RUFFIN\n*$6,000*")
-o.shots[0].update(cx=0.365, cy=0.5, zoom=[1.0, 1.02])          # the Zyzz pose, face clear of the caption
-place("*4TH* PLACE", (1488.2, 0.45), 1475.4, 1477.55,
-      (1503.0, dict(cx=0.36, cy=0.5, zoom=(1.0, 1.05))), 2.1, "WESLEY VISSERS\n*$10,000*")
-o.shots[2].update(cx=0.66, cy=0.5, zoom=[1.0, 1.02])
-place("*3RD* PLACE", (1549.0, 0.45), 1541.4, 1542.7,
-      (1561.5, dict(cx=0.48, cy=0.5, zoom=(1.0, 1.05))), 1.9, "RAMON DINO\n*$20,000*", y=0.64)
-o.shots[4].update(cx=0.55, cy=0.5, zoom=[1.0, 1.02])
+place("*5TH* PLACE", 1469.6, 0.4, 1438.95, 1440.65, 0.17, 1.8, "TERRENCE RUFFIN\n*$6,000*")   # the Zyzz pose
+o.shots[0].update(cx=0.365)                                     # measured: puts him in the middle of the box
+place("*4TH* PLACE", 1501.0, 0.34, 1475.4, 1477.55, 0.15, 2.1, "WESLEY VISSERS\n*$10,000*", cx_end=0.36)
+place("*3RD* PLACE", 1561.5, 0.45, 1541.4, 1542.7, 0.19, 1.9, "RAMON DINO\n*$20,000*", cx_end=0.48)
 # the last two
 t = o.t
 say(1584.2, 1586.4, t + 0.05)                                   # "Mike and Niall in the center, please"

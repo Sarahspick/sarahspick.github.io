@@ -1,14 +1,12 @@
 """Generate sound effects with the ElevenLabs sound generation API and store them as assets/sfx_el/<name>.wav
-(48 kHz stereo), usable in plans as "el:<name>". Prompts are kept in assets/sfx_el/prompts.json so any session can
-regenerate the same set; the wav files themselves are not committed. Needs ELEVENLABS_API_KEY (never printed).
-  python3 tools/el_sfx.py                      # (re)generate every sound in prompts.json that is missing
+(lossless 48 kHz PCM from the API, 24 bit stereo), usable in plans as "el:<name>". The chosen wav files are committed (a prompt never gives the same sound
+twice) and their prompts are kept in assets/sfx_el/prompts.json. Needs ELEVENLABS_API_KEY (never printed).
+  python3 tools/el_sfx.py                      # generate any sound in prompts.json whose wav is missing
   python3 tools/el_sfx.py NAME "prompt" [SECONDS]   # add one sound to prompts.json and generate it
 """
 import json
 import os
-import subprocess
 import sys
-import tempfile
 import urllib.request
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -17,17 +15,24 @@ MANIFEST = os.path.join(DIR, "prompts.json")
 
 
 def generate(name, text, seconds=None, influence=0.6):
+    """Lossless 48 kHz PCM from the API (stereo s16le, interleaved), peak normalised to -1 dBFS, 24 bit wav."""
+    import numpy as np
+    import soundfile as sf
     body = {"text": text, "prompt_influence": influence}
     if seconds:
         body["duration_seconds"] = float(seconds)
-    req = urllib.request.Request("https://api.elevenlabs.io/v1/sound-generation", data=json.dumps(body).encode(),
+    req = urllib.request.Request("https://api.elevenlabs.io/v1/sound-generation?output_format=pcm_48000",
+                                 data=json.dumps(body).encode(),
                                  headers={"xi-api-key": os.environ["ELEVENLABS_API_KEY"],
                                           "Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as r, tempfile.NamedTemporaryFile(suffix=".mp3") as f:
-        f.write(r.read())
-        f.flush()
-        subprocess.run(["ffmpeg", "-loglevel", "error", "-y", "-i", f.name, "-ar", "48000", "-ac", "2",
-                        os.path.join(DIR, name + ".wav")], check=True)
+    with urllib.request.urlopen(req, timeout=120) as r:
+        x = np.frombuffer(r.read(), dtype="<i2").astype(np.float32).reshape(-1, 2) / 32768.0
+    loud = np.nonzero(np.abs(x).max(1) > 1e-3)[0]
+    x = x[:loud[-1] + 1] if len(loud) else x                                               # trim the silent tail
+    x *= 10 ** (-1 / 20) / max(np.abs(x).max(), 1e-6)
+    f = min(len(x) // 4, 480)                                                              # 10 ms fade out
+    x[-f:] *= np.linspace(1, 0, f)[:, None]
+    sf.write(os.path.join(DIR, name + ".wav"), x, 48000, subtype="PCM_24")
     print("el:" + name)
 
 

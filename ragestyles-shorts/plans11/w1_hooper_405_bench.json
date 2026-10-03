@@ -667,39 +667,39 @@
  "marks": [],
  "sfx": [
   {
-   "t": -0.25,
-   "name": "ow:boom",
-   "db": -3
+   "t": -0.02,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 3.5,
-   "name": "ow:boom",
-   "db": -5
+   "t": 3.73,
+   "name": "el:boom",
+   "db": -11.0
   },
   {
-   "t": 6.77,
-   "name": "ow:boom",
-   "db": -4
+   "t": 7.0,
+   "name": "el:boom",
+   "db": -10.0
   },
   {
-   "t": 10.98,
-   "name": "ow:boom",
-   "db": -3
+   "t": 11.21,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 13.94,
-   "name": "ow:boom",
-   "db": -3
+   "t": 14.17,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 22.22,
-   "name": "ow:boom",
-   "db": -1
+   "t": 22.45,
+   "name": "el:boom",
+   "db": -7.0
   },
   {
-   "t": 24.41,
-   "name": "ow:punch",
-   "db": -4
+   "t": 24.79,
+   "name": "el:punch",
+   "db": -1.0
   }
  ],
  "audio_clips": [

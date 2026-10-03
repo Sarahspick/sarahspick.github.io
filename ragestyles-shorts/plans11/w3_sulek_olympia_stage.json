@@ -586,24 +586,24 @@
  "marks": [],
  "sfx": [
   {
-   "t": 0.03,
-   "name": "ow:boom",
-   "db": -3
+   "t": 0.26,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 3.36,
-   "name": "ow:boom",
-   "db": -3
+   "t": 3.59,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 8.1,
-   "name": "ow:boom",
-   "db": -3
+   "t": 8.33,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 24.62,
-   "name": "ow:boom",
-   "db": -3
+   "t": 24.85,
+   "name": "el:boom",
+   "db": -9.0
   }
  ],
  "audio_clips": [

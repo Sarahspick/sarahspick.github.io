@@ -16,9 +16,10 @@ from countdown import Countdown  # noqa: E402
 k = Countdown("t1_212_olympia_results", "Who won the 2026\n*212 Olympia*? :trophy:",
               "Who won the 2026 212 Olympia? 🏆 #shorts", "qpQ8iI8pJA8", [("t212_vox.wav", 1160.0, 1470.0)])
 o = k.o
-k.place("*5TH* PLACE", 1212.0, 0.5, (1188.1, 1189.9), 1215.0, 0.45, 1.8, "NIHAT KAYA\n*$6,000*")
-k.place("*4TH* PLACE", 1252.0, 0.55, (1239.9, 1242.2), 1262.0, 0.5, 1.8, "VITOR PORTO\n*$7,000*")
-k.place("*3RD* PLACE", 1330.0, 0.45, (1290.8, 1293.3), 1334.5, 0.4, 1.8, "SHAUN CLARIDA\n*$12,000*")
+# label over the pose, then the same pose zoomed in (t0, athlete x, name, head y, ...)
+k.place("*5TH* PLACE", 1212.6, 0.46, (1188.1, 1189.9), 0.39, 1.8, "NIHAT KAYA\n*$6,000*", cx_end=0.44)
+k.place("*4TH* PLACE", 1261.0, 0.5, (1239.9, 1242.2), 0.15, 1.8, "VITOR PORTO\n*$7,000*", zoom=1.6)
+k.place("*3RD* PLACE", 1334.5, 0.42, (1290.8, 1293.3), 0.31, 1.8, "SHAUN CLARIDA\n*$12,000*", cx_end=0.34)
 # the last two
 t = o.t
 k.say(1343.7, 1346.3, t + 0.05)                                    # "if I can have both gentlemen in the center please"

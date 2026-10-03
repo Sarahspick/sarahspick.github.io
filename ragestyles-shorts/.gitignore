@@ -4,5 +4,3 @@ __pycache__/
 assets/sfx_mixkit/*.mp3
 assets/sfx_mixkit/*.wav
 assets/sfx_owner/
-# ElevenLabs sounds are regenerated from assets/sfx_el/prompts.json by tools/el_sfx.py
-assets/sfx_el/*.wav

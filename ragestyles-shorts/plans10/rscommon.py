@@ -1,6 +1,6 @@
 """Shared builder for the plans10 shorts (s1 suits, e1 Eddie Hall, d1 Goggins). Source times are seconds of the
 downloaded file in work/youtube/<id>.mp4 (tools/yt_batch.sh). Owner style (2026-09-30): title on top, one caption in
-the exact centre, zoom punch + flash + heavy boom on reveals, owner SFX pack (ow:) only, sometimes dim_in, no glow.
+the exact centre, zoom punch + flash + heavy boom on reveals, ElevenLabs SFX (el:, owner pack ow: as fallback), sometimes dim_in, no glow.
 """
 import json
 import os
@@ -9,6 +9,11 @@ G = {"sat": 1.06, "contrast": 1.07, "sharpen": 0.5}
 CY = 0.5  # caption y (o1 final: exact centre)
 # where the impact sits inside each owner sound (seconds), so cues land on the beat
 PEAK = {"boom": 0.25, "punch": 0.43, "whoosh": 0.0, "transition": 0.9, "riser1": 1.98, "riser8": 3.66}
+# owner (2026-10-03): every SFX is an ElevenLabs sound made in high quality (assets/sfx_el, tools/el_sfx.py); a name
+# with no ElevenLabs version yet falls back to the owner pack
+EL_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "sfx_el")
+EL_PEAK = {"boom": 0.02, "punch": 0.05}
+EL_DB = {"boom": -6.0, "punch": 3.0}   # brings them to the owner pack's loudness (ebur128: ow_boom -19, el boom -12 LUFS)
 
 
 class Short:
@@ -40,8 +45,11 @@ class Short:
         return c
 
     def sound(self, t, name, db=-4):
-        """Owner sound whose impact lands on output second t."""
-        self.sfx.append({"t": round(t - PEAK.get(name, 0.0), 2), "name": "ow:" + name, "db": db})
+        """Sound whose impact lands on output second t: the ElevenLabs version when there is one."""
+        if os.path.exists(os.path.join(EL_DIR, name + ".wav")):
+            self.sfx.append({"t": round(t - EL_PEAK.get(name, 0.0), 2), "name": "el:" + name, "db": db + EL_DB.get(name, 0.0)})
+        else:
+            self.sfx.append({"t": round(t - PEAK.get(name, 0.0), 2), "name": "ow:" + name, "db": db})
 
     def hit(self, s, at, zoom=1.14, amount=0.5, db=-3, sound="boom"):
         """Reveal at `at` seconds into shot s: zoom punch (held to the end of the shot), flash and a heavy boom."""

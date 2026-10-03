@@ -63,13 +63,13 @@
   },
   {
    "src": "youtube/SZvi5gYI-9A",
-   "in": 385.4,
+   "in": 380.5,
    "dur": 1.95,
-   "cx": 0.6,
+   "cx": 0.5,
    "cy": 0.5,
    "zoom": [
-    1.0,
-    1.04
+    1.1,
+    1.14
    ],
    "audio": false,
    "af": "voice",
@@ -78,7 +78,21 @@
     "sat": 1.06,
     "contrast": 1.07,
     "sharpen": 0.5
-   }
+   },
+   "path": [
+    [
+     0,
+     1.1,
+     0.5,
+     0.5
+    ],
+    [
+     1.95,
+     1.14,
+     0.4,
+     0.5
+    ]
+   ]
   },
   {
    "src": "youtube/SZvi5gYI-9A",
@@ -254,8 +268,8 @@
    "src": "youtube/SZvi5gYI-9A",
    "in": 416.4,
    "dur": 5.4,
-   "cx": 0.55,
-   "cy": 0.45,
+   "cx": 0.52,
+   "cy": 0.5,
    "zoom": [
     1.0,
     1.04
@@ -268,6 +282,32 @@
     "contrast": 1.07,
     "sharpen": 0.5
    },
+   "path": [
+    [
+     0,
+     1.0,
+     0.52,
+     0.5
+    ],
+    [
+     1.6,
+     1.02,
+     0.47,
+     0.5
+    ],
+    [
+     2.4,
+     1.03,
+     0.49,
+     0.5
+    ],
+    [
+     5.4,
+     1.04,
+     0.38,
+     0.5
+    ]
+   ],
    "punch": [
     {
      "at": 1.5,
@@ -333,7 +373,7 @@
    "d": 1.22,
    "text": "AND THE *WHEELS*",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -341,7 +381,7 @@
    "d": 1.48,
    "text": "CAME OFF IN THE ~LAST~",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -349,7 +389,7 @@
    "d": 2.39,
    "text": "*KILOMETER* OR SO",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -357,7 +397,7 @@
    "d": 1.88,
    "text": "SHE IS THE ~BERLIN~",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -365,7 +405,7 @@
    "d": 1.28,
    "text": "MARATHON *CHAMPION*",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -373,7 +413,7 @@
    "d": 2.02,
    "text": "ONCE ~AGAIN~",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -381,7 +421,7 @@
    "d": 0.7,
    "text": "*IT'LL* STILL PUT",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -389,7 +429,7 @@
    "d": 2.88,
    "text": "HER ~THIRD~ FASTEST",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   },
   {
@@ -397,41 +437,41 @@
    "d": 1.85,
    "text": "IN *HISTORY*",
    "style": "wordcap",
-   "y": 0.5,
+   "y": 0.68,
    "anim": "pop"
   }
  ],
  "marks": [],
  "sfx": [
   {
-   "t": -0.25,
-   "name": "ow:boom",
-   "db": -3
+   "t": -0.02,
+   "name": "el:boom",
+   "db": -9.0
   },
   {
-   "t": 6.32,
-   "name": "ow:boom",
-   "db": -5
+   "t": 6.55,
+   "name": "el:boom",
+   "db": -11.0
   },
   {
-   "t": 11.3,
-   "name": "ow:boom",
-   "db": -2
+   "t": 11.53,
+   "name": "el:boom",
+   "db": -8.0
   },
   {
-   "t": 14.25,
-   "name": "ow:boom",
-   "db": -5
+   "t": 14.48,
+   "name": "el:boom",
+   "db": -11.0
   },
   {
-   "t": 16.8,
-   "name": "ow:boom",
-   "db": -4
+   "t": 17.03,
+   "name": "el:boom",
+   "db": -10.0
   },
   {
-   "t": 20.7,
-   "name": "ow:boom",
-   "db": -3
+   "t": 20.93,
+   "name": "el:boom",
+   "db": -9.0
   }
  ],
  "audio_clips": [

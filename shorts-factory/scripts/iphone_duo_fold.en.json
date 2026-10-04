@@ -1,0 +1,189 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "iphone_duo_fold",
+  "lang": "en",
+  "title": "How did Apple fold an *iPhone*? 📱",
+  "bgm": {
+    "prompt": "Playful elegant indie pop with bright piano, soft claps and a warm bass line, charming and premium, 100 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "flow": {
+      "src": "tt:7683603590824332574",
+      "start": 2.0
+    },
+    "namaste": {
+      "src": "tt:7683603111625215263",
+      "start": 0.5
+    },
+    "flow2": {
+      "src": "tt:7683603590824332574",
+      "start": 7.0,
+      "continue": false
+    },
+    "club": {
+      "src": "tt:7683937074696768782",
+      "start": 0.5
+    },
+    "dap": {
+      "src": "tt:7683968191822957855",
+      "start": 0.3
+    },
+    "double": {
+      "src": "tt:7683603959109471518",
+      "start": 3.0
+    },
+    "theater": {
+      "src": "tt:7685050006964882701",
+      "start": 6.5
+    },
+    "cannon": {
+      "src": "tt:7684681788677000461",
+      "start": 0.5
+    },
+    "food": {
+      "src": "tt:7684710094004702494",
+      "start": 0.3
+    },
+    "typing": {
+      "src": "tt:7684740757076446478",
+      "start": 0.3
+    },
+    "ring": {
+      "src": "tt:7685080942544686366",
+      "start": 1.5
+    }
+  },
+  "pronounce": {
+    "5.4": "five point four",
+    "7.6": "seven point six",
+    "100": "a hundred"
+  },
+  "sources": [
+    {
+      "name": "MacRumors: Here's what Apple says about the iPhone Duo's crease",
+      "url": "https://www.macrumors.com/2026/09/09/iphone-duo-crease/"
+    },
+    {
+      "name": "Apple on TikTok: #iPhoneDuo",
+      "url": "https://www.tiktok.com/@apple"
+    }
+  ],
+  "footage_credits": [
+    "Apple on TikTok"
+  ],
+  "hook": {
+    "lines": [
+      "Apple just folded an iPhone in half,",
+      "and the crease is *almost invisible*."
+    ],
+    "clips": [
+      "flow",
+      "namaste"
+    ],
+    "sfx": [
+      {
+        "id": "mk_whoosh",
+        "at": "word:almost"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "So how do you fold *glass*?"
+      ],
+      "clip": "flow2"
+    },
+    {
+      "lines": [
+        "The screen is a stack of layers,",
+        "held by *clear adhesive* that lets them glide."
+      ],
+      "clip": "club"
+    },
+    {
+      "lines": [
+        "So it bends",
+        "without *fighting itself*."
+      ],
+      "clip": "dap",
+      "sfx": [
+        {
+          "id": "mk_pop",
+          "at": "word:bends"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Under it, support ribs",
+        "and a *titanium* panel."
+      ],
+      "clip": "double"
+    },
+    {
+      "lines": [
+        "The hinge alone has",
+        "more than *100* parts."
+      ],
+      "clip": "theater",
+      "sfx": [
+        {
+          "id": "mk_click",
+          "at": "word:hinge"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "A *nano-texture* finish",
+        "hides what's left of the crease."
+      ],
+      "clip": "cannon"
+    },
+    {
+      "lines": [
+        "5.4 inches closed,",
+        "*7.6* open."
+      ],
+      "clips": [
+        "food",
+        "typing"
+      ]
+    },
+    {
+      "lines": [
+        "It ships October 23,",
+        "and proposals just got *complicated*."
+      ],
+      "clip": "ring",
+      "punch": true
+    }
+  ],
+  "upload": {
+    "title": "How Did Apple Fold an iPhone? 📱 #shorts",
+    "description": "Apple just folded an iPhone in half, and the crease is almost invisible. 📱\n\nApple says the iPhone Duo's foldable display is a stack of layers held together by optically clear adhesives that let the layers glide as the screen folds, which reduces stress and the crease. Under the display are support ribs and a titanium panel, the hinge has more than 100 components, and a nano-texture finish minimizes how visible the crease is. It has a 5.4-inch outer display and a 7.6-inch inner display. Pre-orders start October 16 and it launches October 23.\n\nAnd proposals just got complicated. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#apple",
+      "#iphoneduo",
+      "#foldable",
+      "#technology"
+    ],
+    "tags": [
+      "iphone duo",
+      "foldable iphone",
+      "iphone fold",
+      "apple foldable",
+      "apple",
+      "iphone crease",
+      "foldable phone",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "Apple waited 7 years for foldables to get good, then called it innovation 😂",
+    "video_id": "DizagjB2QCA"
+  }
+}

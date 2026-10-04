@@ -36,6 +36,8 @@
   - **공장 영상 소스:** 한국 공장 = All Process of World 공식 틱톡 `@apowofficial`(라면·김·떡·소주 등, 가로 1080p, 하단 가운데 워터마크 → `blur` [0.36,0.86,0.64,0.96]). 미국 = Business Insider `@businessinsider`, Food Insider `@foodinsider` 틱톡(세로, 원본 자막 → 글자에 맞춘 `cover`). 2026-10-02 업로드: TT 투명 얼음 wtJQqFHwyJ0, 600톤 대리석 IchGqldo3OI / CC 라면 공장 AtO_Nv9wxCk, 김 공장 gU6lHQYQCPU.
   - **사용자 평가 (2026-10-02):** ElevenLabs 음악 선택이 아주 좋다고 함 (얼음 장면엔 얼음 같은 음악). 영상 내용에 딱 맞는 분위기의 곡을 계속 만듭니다. 효과음이 라이브러리에 없으면 ElevenLabs `POST /v1/sound-generation`(`{"text", "duration_seconds"}`, 동작 확인)으로 만들어 써도 됨.
   - **유튜브 다운로드 (2026-10-02):** 새 쿠키(`YT_COOKIES_B64`)는 유효하고 bgutil PO 토큰(`pip install bgutil-ytdlp-pot-provider` + 서버 저장소 빌드)도 발급되지만, 이 클라우드의 나가는 IP가 요청마다 바뀌어서 googlevideo가 403을 냅니다. 영상 주소가 IP에 묶여 있어 쿠키로는 해결 안 됨. 틱톡·X를 계속 씁니다.
+  - **2026-10-04 업로드 (9~10월 뉴스):** TT 스타십 Flight 14 O6Oo2qFZxFo, 아이폰 Duo DizagjB2QCA, 레이밴 디스플레이 _d3pneaNX0o / CC 갤럭시 에어드롭 Q6kcFqc8N0I, 아틀라스 새 손 ZtDhKmUODfk, 신형 투싼 x7OiTnBb0aw. 소스: X `x:2105030525132124476/1~4`(머스크 스타십 4K), 애플·레이밴메타·삼성코리아·현대(@hyundai) 공식 틱톡. 오디오 리미터는 4배 오버샘플링(`aresample=192000`)으로 샘플 사이 피크까지 -1.5dBFS 아래로.
+  - **0초 인트로 새 사운드:** 사용자가 새 사운드를 보냈다고 했지만 두 번 다 첨부가 안 됨(업로드 폴더·드라이브에 없음). 받으면 `channel.json`의 `intro_sfx`로 바꾸고, 소리가 실제로 터지는 지점에서 잘라 0초에 바로 나오게 합니다.
   - **마지막 줄은 질문 금지.** 감상평, 재밌는 한마디, 비유로 끝냅니다 (예: "주름이 흉터였다면, 이제는 잔주름 수준.", "피자보다 빠르고, 웬만한 사람보다 눈치가 빨라요."). 댓글 유도는 고정 댓글에서 드립으로.
 
 - **중국어가 들리면 절대 안 됩니다 (2026-09-30).** 원본 사운드는 `factory/speech.py`(SenseVoice)가 클립마다 말소리를 검사해서, 말(어느 언어든)이 있으면 그 구간 원본 소리를 자동으로 끕니다 (경고 `orig audio muted`). 말소리를 꼭 살려야 하는 클립만 `"orig_speech": true`.

@@ -1,0 +1,178 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "galaxy_airdrop",
+  "lang": "ko",
+  "title": "갤럭시에서 아이폰으로 *에어드롭*? 📲",
+  "bgm": {
+    "prompt": "Bright cute pop with plucky synths, glockenspiel sparkles and handclaps, cheerful and light, 110 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "fold": {
+      "src": "tt:7685932468511264020",
+      "start": 0.3
+    },
+    "photo": {
+      "src": "tt:7685932468511264020",
+      "start": 6.5
+    },
+    "share": {
+      "src": "tt:7685932468511264020",
+      "start": 13.5
+    },
+    "recv": {
+      "src": "tt:7685932468511264020",
+      "start": 19.0
+    },
+    "dogphoto": {
+      "src": "tt:7685932296460864789",
+      "start": 6.5
+    },
+    "dogshare": {
+      "src": "tt:7685932296460864789",
+      "start": 13.5
+    },
+    "dogrecv": {
+      "src": "tt:7685932296460864789",
+      "start": 19.0
+    },
+    "end": {
+      "src": "tt:7685932468511264020",
+      "start": 24.0
+    },
+    "endphoto": {
+      "src": "tt:7685932296460864789",
+      "start": 9.0,
+      "continue": false
+    }
+  },
+  "pronounce": {
+    "10분": "십 분",
+    "S26": "에스 이십육"
+  },
+  "sources": [
+    {
+      "name": "삼성전자 공식 틱톡: Quick Share로 AirDrop까지 (2026.09.16)",
+      "url": "https://www.tiktok.com/@samsungkorea/video/7685932468511264020"
+    },
+    {
+      "name": "농민신문: 갤럭시·아이폰 파일 공유 이제 된다…삼성, S26 시리즈 에어드롭 지원",
+      "url": "https://www.nongmin.com/article/20260324500110"
+    }
+  ],
+  "footage_credits": [
+    "삼성전자 공식 틱톡 (@samsungkorea)"
+  ],
+  "hook": {
+    "lines": [
+      "갤럭시에서 아이폰으로",
+      "*에어드롭*이 된다고요?"
+    ],
+    "clips": [
+      "fold",
+      "photo"
+    ],
+    "sfx": [
+      {
+        "id": "mk_pop",
+        "at": "word:에어드롭이"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "갤럭시 퀵쉐어에",
+        "*Apple 기기와 공유*가 생겼어요."
+      ],
+      "clip": "share",
+      "sfx": [
+        {
+          "id": "mk_click",
+          "at": "word:Apple"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "아이폰은 에어드롭만",
+        "*모든 사람 10분*으로 켜 두면 끝."
+      ],
+      "clip": "dogphoto"
+    },
+    {
+      "lines": [
+        "갤럭시가 아이폰이 알아듣는 방식으로",
+        "*바로* 쏴 줘요."
+      ],
+      "clip": "dogshare",
+      "sfx": [
+        {
+          "id": "mk_whoosh",
+          "at": "word:바로"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "앱도, 클라우드도,",
+        "*케이블*도 필요 없죠."
+      ],
+      "clip": "recv"
+    },
+    {
+      "lines": [
+        "반대로 아이폰에서 갤럭시로도",
+        "*쏙*."
+      ],
+      "clip": "dogrecv",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_ding",
+          "at": "word:쏙."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "S26 시리즈와",
+        "*폴드8*에서 돼요."
+      ],
+      "clip": "end"
+    },
+    {
+      "lines": [
+        "이제 사진 보내 달라는 말에",
+        "*카톡* 안 찾아도 되겠네요."
+      ],
+      "clip": "endphoto"
+    }
+  ],
+  "upload": {
+    "title": "갤럭시에서 아이폰으로 에어드롭이 된다고? 📲 #shorts",
+    "description": "갤럭시에서 아이폰으로 에어드롭, 이제 됩니다. 📲\n\n갤럭시 퀵쉐어에 'Apple 기기와 공유' 기능이 생겼어요. 아이폰에서 에어드롭을 '모든 사람(10분 동안)'으로 켜 두면, 갤럭시가 아이폰이 알아듣는 방식으로 사진과 영상을 바로 보내요. 앱이나 클라우드, 케이블 없이 양방향으로 주고받을 수 있고, 갤럭시 S26 시리즈와 Z 폴드8 등에서 지원합니다.\n\n이제 사진 보내 달라는 말에 카톡 안 찾아도 되겠네요. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#삼성",
+      "#갤럭시",
+      "#에어드롭",
+      "#퀵쉐어"
+    ],
+    "tags": [
+      "갤럭시 에어드롭",
+      "퀵쉐어",
+      "에어드롭",
+      "갤럭시 아이폰 파일 공유",
+      "갤럭시 S26",
+      "갤럭시 Z 폴드8",
+      "삼성",
+      "아이폰",
+      "갤럭시 꿀팁",
+      "기발한 회사들"
+    ],
+    "comment": "갤럭시 vs 아이폰 싸움, 드디어 휴전인가요? ㅋㅋ",
+    "video_id": "Q6kcFqc8N0I"
+  }
+}

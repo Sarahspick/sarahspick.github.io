@@ -1,0 +1,210 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "rayban_display",
+  "lang": "en",
+  "title": "How do these glasses show a *hidden* screen? 👓",
+  "bgm": {
+    "prompt": "Sleek modern future pop with airy synths, soft side-chained pads and a light stylish beat, cool and confident, 110 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "mirror": {
+      "src": "tt:7681306574085704990",
+      "start": 4.55
+    },
+    "pov": {
+      "src": "tt:7686499773892840734",
+      "start": 6.0
+    },
+    "render": {
+      "src": "tt:7689333069467159838",
+      "start": 3.7,
+      "blur": [
+        [
+          0.22,
+          0.69,
+          0.78,
+          0.745
+        ]
+      ]
+    },
+    "lens": {
+      "src": "tt:7689333069467159838",
+      "start": 6.0,
+      "blur": [
+        [
+          0.22,
+          0.69,
+          0.78,
+          0.745
+        ]
+      ]
+    },
+    "elevator": {
+      "src": "tt:7686499773892840734",
+      "start": 2.0
+    },
+    "band": {
+      "src": "tt:7689333069467159838",
+      "start": 10.0,
+      "blur": [
+        [
+          0.22,
+          0.69,
+          0.78,
+          0.745
+        ]
+      ]
+    },
+    "wrist": {
+      "src": "tt:7681306574085704990",
+      "start": 5.0
+    },
+    "pinch": {
+      "src": "tt:7681306574085704990",
+      "start": 8.0,
+      "speed": 0.851
+    },
+    "holo": {
+      "src": "tt:7689325376832654622",
+      "start": 3.45,
+      "blur": [
+        [
+          0.3,
+          0.69,
+          0.7,
+          0.74
+        ]
+      ]
+    },
+    "walk": {
+      "src": "tt:7686499773892840734",
+      "start": 9.0
+    }
+  },
+  "sources": [
+    {
+      "name": "Ray-Ban Meta on TikTok: Meta Ray-Ban Display goes international (Sept 25, 2026)",
+      "url": "https://www.tiktok.com/@raybanmeta/video/7689333069467159838"
+    },
+    {
+      "name": "Meta Connect 2026 recap",
+      "url": "https://developers.meta.com/blog/meta-connect-recap/"
+    }
+  ],
+  "footage_credits": [
+    "Ray-Ban Meta on TikTok"
+  ],
+  "hook": {
+    "lines": [
+      "These glasses have a *screen*",
+      "only you can see."
+    ],
+    "clips": [
+      "mirror",
+      "pov"
+    ],
+    "sfx": [
+      {
+        "id": "mk_tech",
+        "at": "word:screen"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Meta's Ray-Ban Display",
+        "just went *international*."
+      ],
+      "clip": "render"
+    },
+    {
+      "lines": [
+        "A tiny projector in the frame",
+        "beams the image into the *right lens*."
+      ],
+      "clip": "lens"
+    },
+    {
+      "lines": [
+        "People around you",
+        "see *almost nothing*."
+      ],
+      "clip": "elevator"
+    },
+    {
+      "lines": [
+        "And you control it",
+        "with *this wristband*."
+      ],
+      "clip": "band",
+      "sfx": [
+        {
+          "id": "mk_click",
+          "at": "word:wristband."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "It reads the electrical signals",
+        "from your *wrist muscles*."
+      ],
+      "clip": "wrist"
+    },
+    {
+      "lines": [
+        "A tiny *pinch*, and you click."
+      ],
+      "clip": "pinch",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_tap",
+          "at": "word:pinch,"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Next up:",
+        "*hologram* video calls."
+      ],
+      "clip": "holo"
+    },
+    {
+      "lines": [
+        "Finally, a legit excuse",
+        "for *staring* at nothing."
+      ],
+      "clip": "walk"
+    }
+  ],
+  "upload": {
+    "title": "How Do These Glasses Show a Hidden Screen? 👓 #shorts",
+    "description": "These glasses have a screen only you can see. 👓\n\nMeta Ray-Ban Display, which Meta is taking international after Connect 2026, has a small projector in the frame that sends a full-color image into the right lens. People around you see almost nothing. You control it with the Meta Neural Band, a wristband that reads the electrical signals from your wrist muscles, so a tiny pinch or swipe works like a click. Meta also teased hologram-style video calls.\n\nFinally, a legit excuse for staring at nothing. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#meta",
+      "#raybanmeta",
+      "#smartglasses",
+      "#technology"
+    ],
+    "tags": [
+      "meta ray-ban display",
+      "ray-ban meta",
+      "smart glasses",
+      "meta neural band",
+      "meta connect 2026",
+      "emg wristband",
+      "ar glasses",
+      "hologram calls",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "Imagine getting a text mid-conversation and pretending you're just deep in thought 👀",
+    "video_id": "_d3pneaNX0o"
+  }
+}

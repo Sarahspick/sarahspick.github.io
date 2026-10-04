@@ -253,7 +253,7 @@ class Short:
             lufs, _ = measure(src)
             tmp = final + ".tmp.wav"
             subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", src, "-af",
-                            f"volume={-14.0 - lufs:.2f}dB,alimiter=limit=0.84:attack=2:release=40:level=false",
+                            f"volume={-14.0 - lufs:.2f}dB,aresample=192000,alimiter=limit=0.84:attack=2:release=40:level=false,aresample={SR}",  # 4x: catches inter-sample peaks of sharp SFX
                             "-ar", str(SR), tmp], check=True)
             os.replace(tmp, final)
             src = final

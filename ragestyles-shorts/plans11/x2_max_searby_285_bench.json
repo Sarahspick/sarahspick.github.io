@@ -1,0 +1,330 @@
+{
+ "id": "x2_max_searby_285_bench",
+ "yt_title": "Heaviest bench in UK history 🤯 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 48.35,
+   "dur": 1.0,
+   "cx": 0.56,
+   "cy": 0.45,
+   "zoom": [
+    1.4,
+    1.44
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.4,
+     0.56,
+     0.47
+    ],
+    [
+     1.0,
+     1.44,
+     0.56,
+     0.36
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 20.5,
+   "dur": 1.6,
+   "cx": 0.55,
+   "cy": 0.4,
+   "zoom": [
+    1.3,
+    1.36
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 23.0,
+   "dur": 1.0,
+   "cx": 0.54,
+   "cy": 0.45,
+   "zoom": [
+    1.25,
+    1.3
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 40.8,
+   "dur": 6.9,
+   "cx": 0.52,
+   "cy": 0.5,
+   "zoom": [
+    1.1,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 5.6,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 5.6,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ],
+   "tint": [
+    {
+     "at": 5.6,
+     "dur": 0.45,
+     "amount": 0.35,
+     "color": [
+      255,
+      200,
+      40
+     ]
+    }
+   ]
+  },
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 47.7,
+   "dur": 1.7,
+   "cx": 0.55,
+   "cy": 0.43,
+   "zoom": [
+    1.35,
+    1.42
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.35,
+     0.55,
+     0.47
+    ],
+    [
+     0.6,
+     1.36,
+     0.55,
+     0.47
+    ],
+    [
+     1.7,
+     1.42,
+     0.55,
+     0.36
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.3,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.3,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/gGEMp9usg7g",
+   "in": 49.4,
+   "dur": 1.9,
+   "cx": 0.55,
+   "cy": 0.43,
+   "zoom": [
+    1.35,
+    1.4
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 14.1,
+   "text": "Heaviest bench\nin *UK history* :exploding-head:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 1.0,
+   "text": "*285 KG* :exploding-head:",
+   "style": "big",
+   "y": 0.82
+  },
+  {
+   "t": 1.0,
+   "d": 1.6,
+   "text": "MAX SEARBY\n*25* YEARS OLD",
+   "style": "big",
+   "y": 0.75
+  },
+  {
+   "t": 2.6,
+   "d": 1.0,
+   "text": "*628 LB* ON THE BAR",
+   "style": "big",
+   "y": 0.75
+  },
+  {
+   "t": 3.6,
+   "d": 2.4,
+   "text": "HEAVIEST BENCH\nEVER IN THE UK?",
+   "style": "big",
+   "y": 0.75
+  },
+  {
+   "t": 9.2,
+   "d": 1.3,
+   "text": "*GOOD LIFT* :fire:",
+   "style": "big",
+   "y": 0.75
+  },
+  {
+   "t": 10.8,
+   "d": 1.4,
+   "text": "*UK RECORD* :trophy:",
+   "style": "big",
+   "y": 0.82
+  },
+  {
+   "t": 12.2,
+   "d": 1.9,
+   "text": "EDDIE HALL:\n\"Well done mate\ngreat work\" :flexed-biceps:",
+   "style": "big",
+   "y": 0.78
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "el:crowd_erupt",
+   "db": -16.0
+  },
+  {
+   "t": -0.02,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 0.95,
+   "name": "el:punch",
+   "db": -3.0
+  },
+  {
+   "t": 3.6,
+   "name": "el:crowd_tense",
+   "db": -17.0
+  },
+  {
+   "t": 9.18,
+   "name": "el:boom",
+   "db": -8.0
+  },
+  {
+   "t": 10.5,
+   "name": "el:crowd_erupt",
+   "db": -14.0
+  },
+  {
+   "t": 10.78,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

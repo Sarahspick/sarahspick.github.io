@@ -6,5 +6,13 @@
  "punch": {
   "text": "one heavy cinematic punch hit with a crisp smack and a low thud, short, single hit, no voice",
   "seconds": 0.7
+ },
+ "crowd_tense": {
+  "text": "powerlifting meet crowd building tension, people shouting push and up, clapping, indoor arena, no music",
+  "seconds": 7.0
+ },
+ "crowd_erupt": {
+  "text": "indoor powerlifting crowd erupts into loud cheering and screaming after a record lift, no music",
+  "seconds": 4.0
  }
 }

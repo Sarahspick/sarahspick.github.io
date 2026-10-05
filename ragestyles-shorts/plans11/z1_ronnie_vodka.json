@@ -1,0 +1,681 @@
+{
+ "id": "z1_ronnie_vodka",
+ "yt_title": "Kevin Levrone gave Ronnie Coleman vodka 🤯 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2920.0,
+   "dur": 3.05,
+   "cx": 0.613,
+   "cy": 0.488,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 2.46,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 2.46,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2788.38,
+   "dur": 0.61,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2788.99,
+   "dur": 3.05,
+   "cx": 0.421,
+   "cy": 0.525,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2792.04,
+   "dur": 1.74,
+   "cx": 0.627,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2828.38,
+   "dur": 1.38,
+   "cx": 0.623,
+   "cy": 0.468,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2839.5,
+   "dur": 1.68,
+   "cx": 0.639,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.17,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.17,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2846.04,
+   "dur": 2.62,
+   "cx": 0.472,
+   "cy": 0.565,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2850.28,
+   "dur": 0.57,
+   "cx": 0.601,
+   "cy": 0.446,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2850.85,
+   "dur": 1.63,
+   "cx": 0.634,
+   "cy": 0.468,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2854.48,
+   "dur": 0.86,
+   "cx": 0.601,
+   "cy": 0.466,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2894.26,
+   "dur": 4.94,
+   "cx": 0.645,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2928.4,
+   "dur": 0.82,
+   "cx": 0.597,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 5.07,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 5.07,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2929.22,
+   "dur": 3.04,
+   "cx": 0.746,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 2932.26,
+   "dur": 2.07,
+   "cx": 0.561,
+   "cy": 0.472,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 28.06,
+   "text": "Kevin Levrone gave\nRonnie *vodka* :exploding-head:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 17.44,
+   "d": 1.5,
+   "text": "*5 SHOTS* LATER :face-with-steam-from-nose:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 0.0,
+   "d": 0.25,
+   "text": "AND",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 0.24,
+   "d": 1.22,
+   "text": "I *LOOKED* AT HIM",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.46,
+   "d": 0.25,
+   "text": "DUDE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.64,
+   "d": 1.46,
+   "text": "AND MY ~JAW~ JUST",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.1,
+   "d": 1.12,
+   "text": "REMEMBER *KEVIN* IS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.22,
+   "d": 1.96,
+   "text": "~WINNING~ EVERY SHOW",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.18,
+   "d": 0.68,
+   "text": "AND I'M LIKE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.86,
+   "d": 0.42,
+   "text": "WHAT THE HELL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.28,
+   "d": 0.5,
+   "text": "IS HE *DOING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.78,
+   "d": 0.72,
+   "text": "TO ~WIN~ ALL THESE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.5,
+   "d": 0.44,
+   "text": "YOU GOT TO JUST",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.94,
+   "d": 0.94,
+   "text": "*RELAX*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.88,
+   "d": 1.42,
+   "text": "PULLS OUT A ~BOTTLE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.3,
+   "d": 1.57,
+   "text": "OF HE SAYS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 12.92,
+   "d": 1.26,
+   "text": "*DRINK*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.18,
+   "d": 0.72,
+   "text": "I'M LIKE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.9,
+   "d": 0.68,
+   "text": "I DON'T ~DRINK~ NO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.58,
+   "d": 1.14,
+   "text": "*ALCOHOL* BODYBUILDERS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.72,
+   "d": 0.52,
+   "text": "~CAN'T~ DO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 17.24,
+   "d": 0.76,
+   "text": "SO *ABOUT* A FIFTH",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.0,
+   "d": 0.34,
+   "text": "~SHOT~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.34,
+   "d": 1.0,
+   "text": "HE'S LIKE MAN",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 19.34,
+   "d": 1.18,
+   "text": "THIS STUFF *PRETTY* GOOD",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.52,
+   "d": 0.82,
+   "text": "LET ME HAVE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 21.34,
+   "d": 1.08,
+   "text": "ANOTHER ~SHOT~ OF I",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 22.42,
+   "d": 0.82,
+   "text": "DRANK THAT *COFFEE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 23.24,
+   "d": 1.32,
+   "text": "AND THAT ~VODKA~ AND",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 24.56,
+   "d": 0.96,
+   "text": "I WENT TO THE SHOW",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 25.52,
+   "d": 1.2,
+   "text": "THE NEXT DAY",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 26.72,
+   "d": 1.39,
+   "text": "AND *BEAT*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 2.44,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 10.98,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 27.18,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/rk1.wav",
+   "in": 155.0,
+   "dur": 3.0,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 23.38,
+   "dur": 5.3,
+   "t": 3.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 63.38,
+   "dur": 1.28,
+   "t": 8.5,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 74.5,
+   "dur": 1.58,
+   "t": 9.88,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 81.04,
+   "dur": 2.52,
+   "t": 11.56,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 85.28,
+   "dur": 2.1,
+   "t": 14.18,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 89.48,
+   "dur": 0.76,
+   "t": 16.38,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 129.26,
+   "dur": 4.84,
+   "t": 17.24,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk1.wav",
+   "in": 163.4,
+   "dur": 5.28,
+   "t": 22.18,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

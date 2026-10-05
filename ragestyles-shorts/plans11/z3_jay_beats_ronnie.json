@@ -1,0 +1,521 @@
+{
+ "id": "z3_jay_beats_ronnie",
+ "yt_title": "Jay Cutler: I didn't beat the best Ronnie 💔 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4077.18,
+   "dur": 1.65,
+   "cx": 0.565,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.36,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.36,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3979.3,
+   "dur": 4.8,
+   "cx": 0.388,
+   "cy": 0.472,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 4.47,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 4.47,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3986.74,
+   "dur": 6.96,
+   "cx": 0.683,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 3.55,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 3.55,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4030.86,
+   "dur": 5.18,
+   "cx": 0.684,
+   "cy": 0.478,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4069.38,
+   "dur": 0.77,
+   "cx": 0.583,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4070.15,
+   "dur": 3.33,
+   "cx": 0.443,
+   "cy": 0.463,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4084.82,
+   "dur": 1.04,
+   "cx": 0.569,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4091.94,
+   "dur": 2.95,
+   "cx": 0.55,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.97,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.97,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 26.68,
+   "text": "\"I didn't beat the\n*best* Ronnie\" :broken-heart:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 0.6,
+   "text": "I DIDN'T *BEAT*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 0.6,
+   "d": 1.1,
+   "text": "THE ~BEST~ RONNIE COLEMAN",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.7,
+   "d": 0.94,
+   "text": "*RONNIE* WAS GOING",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 2.64,
+   "d": 1.5,
+   "text": "FOR ~NINE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.14,
+   "d": 1.56,
+   "text": "AND DIDN'T GET *NINE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 5.7,
+   "d": 0.8,
+   "text": "JAY ~CUTLER~ BEAT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.5,
+   "d": 3.5,
+   "text": "THE *2006* MR. OLYMPIA",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.0,
+   "d": 3.46,
+   "text": "JAY",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 13.46,
+   "d": 0.36,
+   "text": "I ~THOUGHT~ IT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 13.82,
+   "d": 0.46,
+   "text": "WAS *PRETTY* MUCH",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.28,
+   "d": 0.68,
+   "text": "~AUTOMATIC~ THAT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.96,
+   "d": 0.5,
+   "text": "I WAS *GOING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.46,
+   "d": 1.28,
+   "text": "TO WIN NUMBER ~NINE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.74,
+   "d": 0.28,
+   "text": "*BECAUSE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 17.02,
+   "d": 1.08,
+   "text": "I WON ~EIGHT~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.1,
+   "d": 0.54,
+   "text": "IN A ROW",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.64,
+   "d": 0.68,
+   "text": "JAY TOOK HIM",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 19.32,
+   "d": 0.74,
+   "text": "BUT THAT *WASN'T*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.06,
+   "d": 1.5,
+   "text": "RONNIE AT HIS ~BEST~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 21.56,
+   "d": 1.18,
+   "text": "THE *INJURIES* HAD SHOWN",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 22.74,
+   "d": 0.48,
+   "text": "I JUST WAS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 23.22,
+   "d": 0.56,
+   "text": "~BETTER~ THAT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 23.78,
+   "d": 0.64,
+   "text": "BUT I FELT *BAD*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 24.42,
+   "d": 1.08,
+   "text": "FOR ~RONNIE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 25.5,
+   "d": 1.23,
+   "text": "I FELT *BAD*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.34,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 6.1,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 9.98,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 25.68,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/rk3.wav",
+   "in": 172.18,
+   "dur": 1.6,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 74.3,
+   "dur": 4.7,
+   "t": 1.7,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 81.74,
+   "dur": 6.86,
+   "t": 6.5,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 125.86,
+   "dur": 5.08,
+   "t": 13.46,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 164.38,
+   "dur": 4.0,
+   "t": 18.64,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 179.82,
+   "dur": 0.94,
+   "t": 22.74,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk3.wav",
+   "in": 186.94,
+   "dur": 2.3,
+   "t": 23.78,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

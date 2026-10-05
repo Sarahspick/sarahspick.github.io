@@ -1,0 +1,623 @@
+{
+ "id": "z2_ronnie_1998",
+ "yt_title": "He only wanted top 5 at the Olympia 😱 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3186.2,
+   "dur": 1.31,
+   "cx": 0.611,
+   "cy": 0.565,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 1.08,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 1.08,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3168.04,
+   "dur": 4.92,
+   "cx": 0.695,
+   "cy": 0.533,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3176.42,
+   "dur": 1.8,
+   "cx": 0.727,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3180.46,
+   "dur": 1.38,
+   "cx": 0.5,
+   "cy": 0.45,
+   "zoom": [
+    1.05,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3188.78,
+   "dur": 0.36,
+   "cx": 0.645,
+   "cy": 0.557,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3189.14,
+   "dur": 3.8,
+   "cx": 0.625,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3196.12,
+   "dur": 1.29,
+   "cx": 0.625,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3205.86,
+   "dur": 5.1,
+   "cx": 0.445,
+   "cy": 0.498,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3229.44,
+   "dur": 3.25,
+   "cx": 0.518,
+   "cy": 0.509,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 5.11,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 5.11,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 3232.69,
+   "dur": 3.58,
+   "cx": 0.694,
+   "cy": 0.435,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 26.79,
+   "text": "He only wanted\n*top 5* :face-screaming-in-fear:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 13.92,
+   "d": 1.0,
+   "text": "*RONNIE WINS* :trophy:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 0.0,
+   "d": 0.54,
+   "text": "MY GOAL WAS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 0.54,
+   "d": 0.36,
+   "text": "JUST TO *PLACE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 0.9,
+   "d": 0.46,
+   "text": "THE ~TOP~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.36,
+   "d": 1.78,
+   "text": "AND I *REMEMBER* THEY",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.14,
+   "d": 0.5,
+   "text": "~CALLED~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.64,
+   "d": 0.46,
+   "text": "YOU KNOW",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.1,
+   "d": 0.46,
+   "text": "LIKE *FIFTH*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.56,
+   "d": 0.66,
+   "text": "AND ~SIXTH~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 5.22,
+   "d": 1.06,
+   "text": "AND I'M STILL *STANDING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.28,
+   "d": 0.34,
+   "text": "~THIRD~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.62,
+   "d": 0.8,
+   "text": "AND I'M STILL *STANDING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.42,
+   "d": 0.3,
+   "text": "THERE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.72,
+   "d": 0.36,
+   "text": "I'M LIKE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.08,
+   "d": 0.58,
+   "text": "~REMEMBER~ ME",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.66,
+   "d": 0.8,
+   "text": "AND *FLEX* STANDING",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.46,
+   "d": 1.08,
+   "text": "AND THEN ~WAYNE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.54,
+   "d": 0.76,
+   "text": "WHEN HE *CALLED*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.3,
+   "d": 0.84,
+   "text": "OUT ~SECOND~ PLACE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 12.14,
+   "d": 1.48,
+   "text": "HE *WAITED* FOR A LONG",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 13.62,
+   "d": 1.29,
+   "text": "~FLEX~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.91,
+   "d": 0.44,
+   "text": "*THAT'S*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.35,
+   "d": 0.74,
+   "text": "WHEN HE ~COLLAPSED~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.09,
+   "d": 0.38,
+   "text": "OF *COURSE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.47,
+   "d": 1.52,
+   "text": "THE FAMOUS ~OFFICER~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 17.99,
+   "d": 2.02,
+   "text": "*DOWNE* MOVE THAT HE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.01,
+   "d": 1.26,
+   "text": "TO BE AT THE ~TOP~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 21.27,
+   "d": 0.86,
+   "text": "THE *BEST* IN THE WHOLE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 22.13,
+   "d": 1.2,
+   "text": "~WORLD~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 23.33,
+   "d": 1.5,
+   "text": "THAT YOU *CAN'T* GET",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 24.83,
+   "d": 0.76,
+   "text": "NO BETTER ~FEELING~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 25.59,
+   "d": 1.25,
+   "text": "IN THE *WORLD* THAN",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 1.06,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 6.26,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 13.6,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 25.05,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/rk2.wav",
+   "in": 21.26,
+   "dur": 1.26,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 28.04,
+   "dur": 4.82,
+   "t": 1.36,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 36.42,
+   "dur": 1.7,
+   "t": 6.28,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 40.46,
+   "dur": 1.28,
+   "t": 8.08,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 48.78,
+   "dur": 4.06,
+   "t": 9.46,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 56.12,
+   "dur": 0.44,
+   "t": 13.62,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 65.86,
+   "dur": 5.0,
+   "t": 14.91,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/rk2.wav",
+   "in": 89.44,
+   "dur": 6.18,
+   "t": 20.01,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

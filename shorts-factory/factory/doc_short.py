@@ -55,7 +55,7 @@ def overlay_fn(headline, phrases, dur, end_note):
         img = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
         d = ImageDraw.Draw(img)
         # headline: lines, the one wrapped in *stars* in accent colour
-        a = ease(t / 0.4)
+        a = 1.0                 # no fade: the first frame is the thumbnail people scroll past
         y = 300
         for line in headline:
             accent = line.startswith("*")
@@ -99,9 +99,11 @@ def make(doc_path, name):
     parts, phrases, off = [], [], 0.0
     for k, (a, b, segs) in enumerate(rngs):
         p = os.path.join(sdir, f"part{k}.mp4")
-        run(["ffmpeg", "-y", "-v", "error", "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", long_mp4,
-             "-af", "afade=t=in:d=0.08", "-c:v", "libx264", "-preset", "veryfast", "-crf", "15", "-c:a", "pcm_s16le",
-             p.replace(".mp4", ".mov")])
+        skip = max(0.0, 0.9 - a)   # the film fades in from black: hold its first clear frame instead
+        run(["ffmpeg", "-y", "-v", "error", "-ss", f"{a + skip:.3f}", "-t", f"{b - a - skip:.3f}", "-i", long_mp4,
+             "-ss", f"{a:.3f}", "-t", f"{b - a:.3f}", "-i", long_mp4, "-map", "0:v", "-map", "1:a",
+             "-vf", f"tpad=start_duration={skip:.3f}:start_mode=clone", "-af", "afade=t=in:d=0.08",
+             "-c:v", "libx264", "-preset", "veryfast", "-crf", "15", "-c:a", "pcm_s16le", p.replace(".mp4", ".mov")])
         parts.append(p.replace(".mp4", ".mov"))
         phrases += _phrases(segs, a - off)
         off += b - a

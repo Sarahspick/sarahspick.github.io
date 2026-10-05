@@ -1,0 +1,17 @@
+{
+  "id": "walmart_machine_short_map",
+  "lang": "en",
+  "upload": {
+    "title": "Why Walmart Opened Stores Right Next to Each Other #shorts",
+    "description": "Economist Thomas Holmes mapped every Walmart opening from 1962 to 2005. The stores spread like a ripple around distribution centers, and he estimated each mile closer to a DC was worth about $3,500 a year per store.\n\nSource: Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica 79(1), 253-302.\n\nFull documentary on the channel: The Machine Behind Walmart.",
+    "tags": [
+      "walmart",
+      "economics",
+      "logistics",
+      "data visualization",
+      "supply chain",
+      "shorts"
+    ],
+    "comment": "Map data: Holmes (2011), Econometrica. Full documentary is on the channel."
+  }
+}

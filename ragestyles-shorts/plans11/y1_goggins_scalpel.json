@@ -1,0 +1,478 @@
+{
+ "id": "y1_goggins_scalpel",
+ "yt_title": "David Goggins' knee broke a scalpel 🤯 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 379.2,
+   "dur": 5.13,
+   "cx": 0.45,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 3.82,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 3.82,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 388.24,
+   "dur": 6.4,
+   "cx": 0.45,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 5.87,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 5.87,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 110.44,
+   "dur": 5.0,
+   "cx": 0.75,
+   "cy": 0.68,
+   "zoom": [
+    1.6,
+    1.66
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 406.92,
+   "dur": 3.68,
+   "cx": 0.45,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 702.02,
+   "dur": 2.64,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_goggins_run",
+   "in": 705.3,
+   "dur": 6.03,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.12,
+    1.18
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 4.77,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 4.77,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 28.88,
+   "text": "Goggins' knee broke\na *scalpel* :exploding-head:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 13.78,
+   "d": 2.7,
+   "text": "*BONE ON BONE* :skull:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 0.0,
+   "d": 1.02,
+   "text": "GOES LIKE HE'S",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.02,
+   "d": 0.56,
+   "text": "NOT *HUMAN*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.58,
+   "d": 0.68,
+   "text": "HE GOES",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 2.26,
+   "d": 0.64,
+   "text": "WHEN I WAS ~CUTTING~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 2.9,
+   "d": 0.74,
+   "text": "INTO *MENISCUS*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.64,
+   "d": 1.54,
+   "text": "IT BROKE THE ~SCALPEL~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 5.18,
+   "d": 0.84,
+   "text": "SAID *NORMALLY*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.02,
+   "d": 1.28,
+   "text": "WHEN YOU ~CUT~ INTO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.3,
+   "d": 0.74,
+   "text": "*MENISCUS* IT JUST",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.04,
+   "d": 0.9,
+   "text": "~SLICES~ RIGHT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.94,
+   "d": 1.0,
+   "text": "THROUGH LIKE *BUTTER*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.94,
+   "d": 0.54,
+   "text": "HE'S LIKE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.48,
+   "d": 1.1,
+   "text": "I COULDN'T ~CUT~ IT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.58,
+   "d": 1.66,
+   "text": "LOOK AT THE FACT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 13.24,
+   "d": 0.9,
+   "text": "THAT THERE'S *ZERO*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.14,
+   "d": 1.62,
+   "text": "SPACE ~BETWEEN~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.76,
+   "d": 0.82,
+   "text": "THOSE *BONES*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.58,
+   "d": 0.72,
+   "text": "YOU'VE ~HARDENED~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 17.3,
+   "d": 1.14,
+   "text": "YOUR *MENISCUS* JUST",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.44,
+   "d": 1.16,
+   "text": "THROUGH ~CONSTANT~ PRESSURE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 19.6,
+   "d": 0.66,
+   "text": "AND *POUNDING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.26,
+   "d": 1.26,
+   "text": "I DON'T KNOW HOW",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 21.52,
+   "d": 1.38,
+   "text": "YOU DID ~ANYTHING~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 22.9,
+   "d": 0.9,
+   "text": "WITH THOSE *KNEES*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 23.8,
+   "d": 2.1,
+   "text": "~ANYTHING~ LET ALONE RUN",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 25.9,
+   "d": 1.32,
+   "text": "*200* MILES BACK",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 27.22,
+   "d": 1.81,
+   "text": "TO BACK ~240~ MILES",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 3.8,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 10.98,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 27.6,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 379.2,
+   "dur": 5.08,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 388.24,
+   "dur": 6.3,
+   "t": 5.18,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 110.44,
+   "dur": 4.9,
+   "t": 11.58,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 406.92,
+   "dur": 3.58,
+   "t": 16.58,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 702.02,
+   "dur": 2.54,
+   "t": 20.26,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/ia_goggins_run.mp4",
+   "in": 705.3,
+   "dur": 5.48,
+   "t": 22.9,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

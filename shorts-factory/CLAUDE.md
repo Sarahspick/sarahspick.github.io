@@ -84,7 +84,11 @@
   - 내레이터: ElevenLabs **Michael C. Vincent** (`uju3wxzG5OhpWcoi3SMy`, eleven_v4, speed 0.97). 생성 후 faster-whisper(small.en)로 전 문단 받아쓰기 검증.
 - **유튜브 다운로드 다시 됨 (2026-10-05):** 원인은 `work/yt_cookies.txt`가 예전 쿠키로 남아 있던 것(yt-dlp가 덮어씀). 이제 `YT_COOKIES_B64`가 바뀌면 자동으로 다시 씀(`.src` 해시). 가끔 "page needs to be reloaded"가 나면 하나씩 다시 받으면 됨. 공식 채널(Walmart, Symbotic, KNAPP, Wing) 영상 위주, 뉴스사(CNBC/WSJ) 영상은 Content ID 위험이라 안 씀.
 - **1편: 월마트 물류** `documentaries/walmart_machine.json` (9분 17초, 7챕터). 근거: Holmes(2011) Econometrica, Stalk·Evans·Shulman(1992) HBR, HBS P&G 케이스, 월마트 2023 투자자 미팅, Symbotic 8-K, Q2 FY27 실적(2026-08).
-  - 2026-10-05 업로드(TT, 비공개): 롱폼 pC0pzQmqnqk (자막·썸네일 적용), 쇼츠 Kmart 7FT8ZMio3Ro, 로봇 창고 TcD8b0MLhkI, 매장 지도 d3aAp_p2fuU. KNAPP 워터마크는 최종본에서 후처리 블러(설정의 blur 박스도 수정됨, 다음 렌더부터 자동).
+  - **v2 (2026-10-05 사용자 피드백 반영, 예전 비공개 4편 삭제 후 재업로드):** 롱폼 3Su0svDqZLA, 쇼츠 Kmart KtSjWdYBAZk, 로봇 창고 cI8uouCTe58, 매장 지도 XxY-_ekF1uM.
+  - **사용자 피드백 (v1 → v2):** 인포그래픽은 좋음. 출처는 **왼쪽 아래 아주 작은 흰 글씨**면 충분. **영어 자막 넣기**(화면에 박음, 하단 중앙, 단어 타이밍). **파란 선 금지**("클로드 기본 디자인 같음"), 퍼센트 폰트 별로. 100만+ 조회 영상의 편집·디자인을 배워서 적용, 인트로는 더 자극적·호기심 유발, 화려하게.
+  - **v2 디자인 (CNBC 1,040만·WSJ 150만·Primal Space 470만 분석):** 초반 30초 컷 평균 약 2초 → 훅은 1.5~2초 컷. 숫자는 Anton 큰 글씨가 카운트업 + 펀치인(흔들림, impact 효과음), 라벨은 노란 박스에 검은 글씨, 비교는 "VS". 논문·기사는 종이 카드 + 노란 형광펜(`doc_card`), 사건은 검은 헤드라인 바 + 노란 날짜 태그(`headline`). 챕터 카드는 흰 플래시 + 큰 노란 번호. 긴 샷(3.6초+)은 같은 장면 줌인으로 한 번 더 자름. 약한 색보정·비네트. 강조색은 TT 다큐에서 노랑 #FFC726.
+  - 훅 구조: 반전 사실(1,891 vs 229) → 결과(파산 헤드라인) → "A machine."(플래시+riser) → 로봇·드론·지도 몽타주 → 95% 숫자 → "어떻게?" 질문 → 제목. 훅 문단은 `lead 0.05 / gap 0.22`로 촘촘하게.
+  - 렌더 캐시: `work/<doc>/shotcache/`(샷 파라미터 해시). 룩을 바꾸면 `RENDER_V`를 올림.
 
 ## 목소리 (2026-09-29 기준)
 

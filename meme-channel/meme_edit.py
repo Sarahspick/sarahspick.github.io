@@ -1,4 +1,4 @@
-"""Aura Receipts short template, matching the benchmark format.
+"""Peak ProMax short template, matching the benchmark format.
 
 Layout (1080x1440, 3:4 like the benchmark): white caption bar on top,
 clip below, small @handle watermark bottom right. Optional second clip
@@ -23,7 +23,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 TEXT_FONT = os.path.join(HERE, "fonts", "RobotoCond.ttf")
 EMOJI_FONT = "/usr/share/fonts/truetype/noto/NotoColorEmoji.ttf"
 W, H = 1080, 1440
-HANDLE = "@AuraReceipts"
+HANDLE = "Peak ProMax"
 
 EMOJI_RE = re.compile("([\U0001F000-\U0001FAFF☀-➿⬀-⯿][️‍\U0001F3FB-\U0001F3FF]*)")
 

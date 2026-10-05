@@ -1,4 +1,4 @@
-"""Small animation kit for original Aura Receipts shorts.
+"""Small animation kit for original Peak ProMax shorts.
 
 Frames are drawn with Pillow and piped to ffmpeg, audio comes from sfx.py.
 Layout matches meme_edit.py: 1080x1440, white caption bar on top.
@@ -185,7 +185,7 @@ def render(out, dur, caption_at, content_at, audio_events, music=None):
             content = content_at(t, W, H - cap.height)
             frame.alpha_composite(content, (0, cap.height))
             frame.alpha_composite(cap, (0, 0))
-            frame.alpha_composite(handle_sprite(), (W - 230, H - 56))
+            frame.alpha_composite(handle_sprite(), (W - 210, H - 56))
             p.stdin.write(frame.convert("RGB").tobytes())
         p.stdin.close()
         p.wait()

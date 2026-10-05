@@ -84,6 +84,7 @@
   - 내레이터: ElevenLabs **Michael C. Vincent** (`uju3wxzG5OhpWcoi3SMy`, eleven_v4, speed 0.97). 생성 후 faster-whisper(small.en)로 전 문단 받아쓰기 검증.
 - **유튜브 다운로드 다시 됨 (2026-10-05):** 원인은 `work/yt_cookies.txt`가 예전 쿠키로 남아 있던 것(yt-dlp가 덮어씀). 이제 `YT_COOKIES_B64`가 바뀌면 자동으로 다시 씀(`.src` 해시). 가끔 "page needs to be reloaded"가 나면 하나씩 다시 받으면 됨. 공식 채널(Walmart, Symbotic, KNAPP, Wing) 영상 위주, 뉴스사(CNBC/WSJ) 영상은 Content ID 위험이라 안 씀.
 - **1편: 월마트 물류** `documentaries/walmart_machine.json` (9분 17초, 7챕터). 근거: Holmes(2011) Econometrica, Stalk·Evans·Shulman(1992) HBR, HBS P&G 케이스, 월마트 2023 투자자 미팅, Symbotic 8-K, Q2 FY27 실적(2026-08).
+  - 2026-10-05 업로드(TT, 비공개): 롱폼 pC0pzQmqnqk (자막·썸네일 적용), 쇼츠 Kmart 7FT8ZMio3Ro, 로봇 창고 TcD8b0MLhkI, 매장 지도 d3aAp_p2fuU. KNAPP 워터마크는 최종본에서 후처리 블러(설정의 blur 박스도 수정됨, 다음 렌더부터 자동).
 
 ## 목소리 (2026-09-29 기준)
 

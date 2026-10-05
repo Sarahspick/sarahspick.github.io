@@ -77,7 +77,9 @@ def comment_on_published(tok, lang):
     items = requests.get(API + "/playlistItems", params={"part": "snippet,status", "playlistId": pl, "maxResults": 50},
                          headers=h, timeout=30).json().get("items", [])
     comments = {}  # video id (saved at upload) or title -> comment; the title match covers older uploads
-    for path in glob.glob(os.path.join(ROOT, "scripts", f"*.{lang}.json")):
+    for path in glob.glob(os.path.join(ROOT, "scripts", f"*.{lang}.json")) + \
+            [p for p in glob.glob(os.path.join(ROOT, "documentaries", "uploads", "*.json"))
+             if json.load(open(p)).get("lang") == lang]:
         up = json.load(open(path, encoding="utf-8")).get("upload", {})
         if up.get("comment"):
             for key in (up.get("video_id"), up.get("title", "")[:100]):
@@ -126,6 +128,8 @@ def main():
     ap.add_argument("--force", action="store_true", help="upload even if the title is already on the channel")
     ap.add_argument("--comment-on", metavar="VIDEO_ID", help="only post the script's comment on this (public) video")
     ap.add_argument("--catch-up", action="store_true", help="only comment on earlier Shorts that are public now")
+    ap.add_argument("--captions", help="SRT file to attach as the video's English captions")
+    ap.add_argument("--thumbnail", help="JPEG/PNG custom thumbnail (needs a verified channel)")
     a = ap.parse_args()
     sc = json.load(open(a.script, encoding="utf-8"))
     lang = sc["lang"]
@@ -145,7 +149,7 @@ def main():
         return
     existing = channel_uploads(tok).get(body["snippet"]["title"])
     if existing and not a.force:
-        sys.exit(f"already on the channel: https://youtube.com/shorts/{existing} (--force to upload again)")
+        sys.exit(f"already on the channel: https://youtube.com/watch?v={existing} (--force to upload again)")
     size = os.path.getsize(video)
     init = requests.post(UPLOAD_URL, params={"uploadType": "resumable", "part": "snippet,status"},
                          headers={"Authorization": f"Bearer {tok}", "Content-Type": "application/json",
@@ -161,7 +165,23 @@ def main():
     vid = r.json()["id"]
     sc["upload"]["video_id"] = vid  # lets a later upload find this video for its comment even if the title is edited
     json.dump(sc, open(a.script, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-    print(f"uploaded {os.path.basename(video)} -> https://youtube.com/shorts/{vid} ({body['status']['privacyStatus']})")
+    kind = "shorts/" if sc.get("format") != "long" else "watch?v="
+    print(f"uploaded {os.path.basename(video)} -> https://youtube.com/{kind}{vid} ({body['status']['privacyStatus']})")
+    if a.captions:
+        meta = {"snippet": {"videoId": vid, "language": lang, "name": "English", "isDraft": False}}
+        r = requests.post("https://www.googleapis.com/upload/youtube/v3/captions",
+                          params={"uploadType": "multipart", "part": "snippet"},
+                          headers={"Authorization": f"Bearer {tok}"},
+                          files={"metadata": (None, json.dumps(meta), "application/json"),
+                                 "media": ("captions.srt", open(a.captions, "rb"), "application/octet-stream")},
+                          timeout=120)
+        print("captions:", r.status_code, "" if r.ok else r.text[:300])
+    if a.thumbnail:
+        r = requests.post("https://www.googleapis.com/upload/youtube/v3/thumbnails/set", params={"videoId": vid},
+                          headers={"Authorization": f"Bearer {tok}",
+                                   "Content-Type": "image/png" if a.thumbnail.endswith(".png") else "image/jpeg"},
+                          data=open(a.thumbnail, "rb").read(), timeout=120)
+        print("thumbnail:", r.status_code, "" if r.ok else r.text[:300])
     comment = sc["upload"].get("comment")
     if comment and not a.no_comment:
         if body["status"]["privacyStatus"] == "public":

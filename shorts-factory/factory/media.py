@@ -61,8 +61,12 @@ def ytdlp_opts(**extra):
             "format_sort": ["res:1080", "fps", "br"], "format_sort_force": True}   # highest resolution up to 1080p first (TikTok 1080p is h265)
     b64 = os.environ.get("YT_COOKIES_B64", "")
     if b64:
+        import hashlib
         cookie = os.path.join(WORK, "yt_cookies.txt")
-        if not os.path.exists(cookie):
+        stamp = cookie + ".src"   # yt-dlp rewrites the cookie file, so remember which env value it came from
+        tag = hashlib.sha1(b64.encode()).hexdigest()
+        if not os.path.exists(cookie) or not os.path.exists(stamp) or open(stamp).read() != tag:
+            open(stamp, "w").write(tag)
             os.makedirs(WORK, exist_ok=True)
             with open(cookie, "wb") as f:
                 f.write(base64.b64decode(b64))

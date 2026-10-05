@@ -72,6 +72,19 @@
 - 기존 쇼츠 중 `yangwang_u8.en.json`만 예외로 새 Mark 목소리로 다시 렌더했습니다 (사용자 요청).
 - 기존 영어 쇼츠 12편(`scripts/*.en.json`)은 확정본이라 그대로 업로드합니다. 다시 만들거나 고치지 않습니다.
 
+## TT 다큐멘터리 (2026-10-05 컨셉 전환, 사용자 결정)
+
+- **배경:** 기발한 회사들(CC) 조회수 0~4 → 이 채팅에서는 TT(Top Techs, 조회수 1~3천)에만 집중. 기존 쇼츠는 "뻔하고 창의성 없음". **기존 편집 포인트·자막·효과음은 전부 잊고** 전문적인 다큐로 완전히 바꿈. 남는 규칙: **배경음악·SFX·목소리는 ElevenLabs로 생성**, 비공개 업로드, 원본 소리 없음, 중국 소스 없음.
+- **형식 (사용자 선택):** 롱폼 8~12분 16:9 + 핵심 장면 쇼츠 2~3개 컷. 실제 영상 위주, 그래픽은 최소(지도·도식·숫자 카드·출처 표기만).
+- **파이프라인:** `python make_doc.py documentaries/<id>.json` → `output/<id>.mp4`, `.en.srt`, `_chapters.txt`. 쇼츠는 `python make_doc_short.py documentaries/<id>.json kmart robots map`. 업로드는 `python tools/upload_doc.py documentaries/<id>.json` (롱폼 + 쇼츠, 비공개, 롱폼엔 자막 SRT·썸네일 `output/<id>_thumb.jpg`, 설명란에 챕터 타임스탬프 자동).
+  - `factory/doc_audio.py`: ElevenLabs TTS(with-timestamps, previous/next_text로 문단 이어 읽기), Music, SFX. 동시 요청은 **2개까지**(Creator). 음악 프롬프트에 작곡가 이름 넣으면 저작권으로 400 거부됨.
+  - `factory/doc_render.py`: 문단마다 내레이션 → 타임라인(제목 카드, 챕터 카드 3.4초, 문단). 클립 `"KEY@t"`는 자동으로 컷 없는 구간을 찾고(`work/<doc>/shots.json`, 시작 0.7초·끝 0.45초 안에 컷 금지, 근처 이동·0.85/0.7배 감속), `text_avoid` 소스는 OCR(`tools/textscan.py` → `text.json`)로 찾은 박힌 자막·타이틀을 피합니다. 디졸브가 많은 옛 아카이브는 장면 감지가 안 되므로 `"KEY@start+len"`으로 직접 고른 구간(끝 0.35초 여유 자동). 4:3 아카이브는 필러박스 + 천천히 패닝 + 약한 그레인.
+  - 믹스: 내레이션 -16 LUFS, 챕터별 음악 -25 LUFS에 내레이션 밑에서 -8dB 더킹, SFX, 최종 -14 LUFS / 트루피크 -1.5dB.
+  - `factory/doc_gfx.py`(통계 카드, 출처 줄, 챕터·제목 카드, 크로스도킹 도식, 엔딩 인용), `factory/doc_map.py`(Holmes 데이터로 월마트 매장 확산 지도, 10마일 반경). 폰트: Inter / Source Serif 4 / IBM Plex Mono (OFL, assets/fonts).
+  - 내레이터: ElevenLabs **Michael C. Vincent** (`uju3wxzG5OhpWcoi3SMy`, eleven_v4, speed 0.97). 생성 후 faster-whisper(small.en)로 전 문단 받아쓰기 검증.
+- **유튜브 다운로드 다시 됨 (2026-10-05):** 원인은 `work/yt_cookies.txt`가 예전 쿠키로 남아 있던 것(yt-dlp가 덮어씀). 이제 `YT_COOKIES_B64`가 바뀌면 자동으로 다시 씀(`.src` 해시). 가끔 "page needs to be reloaded"가 나면 하나씩 다시 받으면 됨. 공식 채널(Walmart, Symbotic, KNAPP, Wing) 영상 위주, 뉴스사(CNBC/WSJ) 영상은 Content ID 위험이라 안 씀.
+- **1편: 월마트 물류** `documentaries/walmart_machine.json` (9분 17초, 7챕터). 근거: Holmes(2011) Econometrica, Stalk·Evans·Shulman(1992) HBR, HBS P&G 케이스, 월마트 2023 투자자 미팅, Symbotic 8-K, Q2 FY27 실적(2026-08).
+
 ## 목소리 (2026-09-29 기준)
 
 - 무료 Edge 목소리를 샘플 영상(`tools/voice_samples.py`)으로 들려줬습니다. 영어는 Andrew(따뜻하고 자신감 있는 남성)가 가장 낫다는 평가였지만, 전체적으로 로봇 같다고 했습니다. 한국어(원어민·다국어 모두)는 "못 들어줄 수준"이었습니다.

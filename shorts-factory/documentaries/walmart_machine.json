@@ -1,0 +1,925 @@
+{
+ "id": "walmart_machine",
+ "title": "The Machine Behind Walmart",
+ "voice": {
+  "id": "uju3wxzG5OhpWcoi3SMy",
+  "name": "Michael C. Vincent",
+  "model": "eleven_v4",
+  "settings": {
+   "stability": 0.55,
+   "similarity_boost": 0.8,
+   "style": 0.15,
+   "use_speaker_boost": true,
+   "speed": 0.97
+  }
+ },
+ "chapters": [
+  {
+   "n": 0,
+   "title": "",
+   "music": "Cold open for a serious business documentary. Sparse, tense, minimal. Low sustained cello drone, distant felt piano notes, subtle ticking pulse building slowly. No drums until the end, then a single deep cinematic hit. Instrumental only, no vocals.",
+   "len": 57
+  },
+  {
+   "n": 1,
+   "title": "The Road Nobody Wanted",
+   "music": "Warm Americana documentary underscore, 1960s small-town nostalgia. Gentle fingerpicked acoustic guitar, soft upright bass, light brushed snare, a hint of pedal steel. Hopeful, unhurried, curious. Instrumental only, no vocals.",
+   "len": 92
+  },
+  {
+   "n": 2,
+   "title": "Goods That Never Stop",
+   "music": "Mechanical, rhythmic documentary score about logistics and flow. Steady pulsing marimba and muted plucked strings in an ostinato, soft kick on every beat, sense of constant movement and efficiency. Minimalist and hypnotic. Instrumental only, no vocals.",
+   "len": 61
+  },
+  {
+   "n": 3,
+   "title": "Information Moves Faster Than Trucks",
+   "music": "1980s technology documentary underscore. Warm analog synth arpeggios, soft pads, a slow electronic pulse, subtle data blips. Intelligent and quietly optimistic, retro-futuristic. Instrumental only, no vocals.",
+   "len": 80
+  },
+  {
+   "n": 4,
+   "title": "The Wrong Machine",
+   "music": "Tense, ominous documentary underscore about a looming threat. Low strings tremolo, dark synth bass swells, sparse piano, slow heartbeat percussion. Unresolved, suspenseful, restrained. Instrumental only, no vocals.",
+   "len": 45
+  },
+  {
+   "n": 5,
+   "title": "Inside the New Machine",
+   "music": "Modern high-tech documentary score for robots in a warehouse. Precise electronic pulses, glassy arpeggiated synths, tight cinematic percussion, driving but controlled, awe and precision. Instrumental only, no vocals.",
+   "len": 92
+  },
+  {
+   "n": 6,
+   "title": "The Weapon Hiding in Plain Sight",
+   "music": "Uplifting modern documentary score, a reveal. Bright piano motif over warm strings and soft electronic pulse, building confidence and momentum, airy and optimistic. Instrumental only, no vocals.",
+   "len": 77
+  },
+  {
+   "n": 7,
+   "title": "The Payoff",
+   "music": "Reflective, resolving documentary finale. Slow emotional piano and warm string ensemble, gentle swell, a sense of scale and history coming full circle, ends softly. Instrumental only, no vocals.",
+   "len": 80
+  }
+ ],
+ "segments": [
+  {
+   "ch": 0,
+   "text": "In 1979, Kmart was the king of American discount retail. It had one thousand, eight hundred and ninety-one stores. Walmart had two hundred and twenty-nine.",
+   "clips": [
+    "KM@21",
+    "KA@0.5",
+    "D5@238.3+4.1",
+    "D5@251.2+3.2"
+   ],
+   "stats": [
+    {
+     "v": "1,891",
+     "l": "Kmart stores, 1979"
+    },
+    {
+     "v": "229",
+     "l": "Walmart stores, 1979"
+    }
+   ],
+   "stats_at": 0.45,
+   "cite": "Stalk, Evans & Shulman (1992), \"Competing on Capabilities\", Harvard Business Review",
+   "sfx": [
+    [
+     "projector",
+     0.0,
+     -26
+    ]
+   ]
+  },
+  {
+   "ch": 0,
+   "text": "Twenty-three years later, Kmart was in bankruptcy court. Walmart was the biggest company in the world.",
+   "clips": [
+    "KM@133",
+    "R1@299.5+3.2",
+    "R1@128.2+2.5"
+   ],
+   "sfx": [
+    [
+     "register",
+     0.6,
+     -18
+    ]
+   ]
+  },
+  {
+   "ch": 0,
+   "text": "Walmart didn't win with better stores. It won with everything that happened before a product ever reached the shelf.",
+   "clips": [
+    "D5@280.3+6",
+    "D5@287.3+4",
+    "D5@576.3+3.2"
+   ],
+   "sfx": [
+    [
+     "truck",
+     0.4,
+     -20
+    ]
+   ]
+  },
+  {
+   "ch": 0,
+   "text": "Today, that machine is being rebuilt from scratch, with robots that move at twenty-five miles an hour, drones, and stores that double as warehouses.",
+   "clips": [
+    "EA@90",
+    "WG@16",
+    "KN@44",
+    "WR@20"
+   ],
+   "sfx": [
+    [
+     "robots",
+     0.3,
+     -19
+    ],
+    [
+     "drone",
+     4.2,
+     -21
+    ]
+   ]
+  },
+  {
+   "ch": 0,
+   "text": "To understand why, you have to go back to 1962, and to the kind of towns most suppliers didn't want to drive to.",
+   "clips": [
+    "D5@31.2+5.2",
+    "D5@46.2+4.2"
+   ],
+   "sfx": [
+    [
+     "riser",
+     4.6,
+     -15
+    ]
+   ]
+  },
+  {
+   "title": true,
+   "clips": [
+    "PW@122"
+   ],
+   "dur": 4.5
+  },
+  {
+   "ch": 1,
+   "text": "Sam Walton opened his first Walmart in Rogers, Arkansas, in 1962. His idea was to put big discount stores in small towns that the large chains ignored.",
+   "clips": [
+    "D5@104.2+8.2",
+    "D5@91.3+2.2",
+    "D5@94.3+3.1",
+    "D5@167.3+6.2"
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "But small towns came with a cost. Wholesalers had little interest in hauling small orders down rural roads, so deliveries were slow, expensive, and on someone else's schedule.",
+   "clips": [
+    "D5@37.3+4.1",
+    "D5@55.2+4.2",
+    "D5@85.2+5"
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "So Walmart did something unusual for a company its size. It built its own distribution center in Bentonville, and it ran its own trucks.",
+   "clips": [
+    "D5@287.3+4",
+    "D5@280.3+6",
+    "QG@15.5"
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "Then it grew in a very specific way.",
+   "map": {
+    "mode": "grow"
+   },
+   "sfx": [
+    [
+     "data_hum",
+     0.0,
+     -25
+    ]
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "The economist Thomas Holmes mapped every Walmart opening from 1962 through 2005. The pattern is unmistakable. Walmart spread outward from Arkansas like a ripple, rarely opening a store far from its existing network.",
+   "map": {
+    "mode": "grow"
+   },
+   "cite": "Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica 79(1), 253-302",
+   "sfx": [
+    [
+     "data_hum",
+     3.0,
+     -25
+    ],
+    [
+     "data_hum",
+     13.0,
+     -25
+    ]
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "Each new distribution center became a hub, with stores packed around it, close enough for trucks to supply them every day.",
+   "map": {
+    "mode": "grow"
+   }
+  },
+  {
+   "ch": 1,
+   "text": "Packing stores that tightly meant they took sales from each other, and Walmart accepted that. Holmes estimated why. For every mile a store sat closer to its distribution center, Walmart gained about thirty-five hundred dollars a year.",
+   "clips": [
+    "PW@126.2+3.4",
+    "PW@130.6+4.4",
+    "D5@437.3+3.2"
+   ],
+   "stats": [
+    {
+     "v": "$3,500",
+     "l": "per store, per year, for each mile closer to a DC"
+    }
+   ],
+   "stats_at": 0.55,
+   "cite": "Holmes (2011), Econometrica 79(1): estimated benefit of store density",
+   "sfx": [
+    [
+     "truck",
+     0.5,
+     -21
+    ]
+   ]
+  },
+  {
+   "ch": 1,
+   "text": "Multiply that across thousands of stores, and density itself becomes a source of profit.",
+   "clips": [
+    "PW@122.3+3.4",
+    "TP@130"
+   ]
+  },
+  {
+   "ch": 2,
+   "text": "Inside those distribution centers, Walmart perfected a technique called cross-docking.",
+   "clips": [
+    "R1@173+3.8",
+    "D5@373.3+2.2",
+    "D5@588+2.6"
+   ]
+  },
+  {
+   "ch": 2,
+   "text": "In a traditional warehouse, goods arrive, sit on shelves for days or weeks, and wait to be picked. In a cross-dock, freight from suppliers is sorted and moved almost straight onto trucks bound for stores.",
+   "clips": [
+    "LH@30",
+    "LH@36",
+    "LH@44",
+    "PW@120",
+    "D5@496.2+1.9"
+   ],
+   "diagram": "crossdock"
+  },
+  {
+   "ch": 2,
+   "text": "Inventory that doesn't sit doesn't cost money. In 1992, the Harvard Business Review made Walmart its central example of a company competing on capabilities.",
+   "clips": [
+    "D5@370.3+5.2",
+    "R1@161.2+1.8",
+    "R1@163.2+1.8",
+    "D5@578.2+1.6"
+   ],
+   "cite": "Stalk, Evans & Shulman (1992), \"Competing on Capabilities\", Harvard Business Review 70(2)"
+  },
+  {
+   "ch": 2,
+   "text": "Walmart ran eighty-five percent of its goods through its own warehouses. Kmart ran about half. The result, according to the article, was a cost of sales two to three percent below the industry average.",
+   "clips": [
+    "KM@147",
+    "KM@189",
+    "KM@315"
+   ],
+   "stats": [
+    {
+     "v": "85%",
+     "l": "Walmart goods through own DCs"
+    },
+    {
+     "v": "50%",
+     "l": "Kmart"
+    }
+   ],
+   "stats_at": 0.1,
+   "cite": "Stalk, Evans & Shulman (1992), Harvard Business Review 70(2), 57-69"
+  },
+  {
+   "ch": 2,
+   "text": "In discount retail, where profit is counted in pennies on the dollar, that gap decides who leads, and who disappears.",
+   "clips": [
+    "KM@105",
+    "KM@434"
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "But trucks were only half of the machine. The other half was information.",
+   "clips": [
+    "D5@347.3+4.1",
+    "D5@352.2+5.2"
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "In 1987, Walmart completed what was then the largest private satellite network in the United States. A twenty-four million dollar system, linking every store to headquarters with voice, data and video.",
+   "clips": [
+    "D5@358.3+3.1",
+    "JV@20.5+4.5",
+    "D5@366.3+3.1",
+    "D5@363.2+2.0"
+   ],
+   "stats": [
+    {
+     "v": "$24M",
+     "l": "private satellite network, 1987"
+    }
+   ],
+   "stats_at": 0.4,
+   "cite": "Walmart corporate history; CIO, \"45 Years of Wal-Mart History: A Technology Time Line\"",
+   "sfx": [
+    [
+     "satellite",
+     0.8,
+     -18
+    ]
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "Around the same time, Sam Walton went on a canoe trip with Lou Pritchett, a vice president at Procter and Gamble. The two companies depended on each other, yet they barely trusted each other.",
+   "clips": [
+    "GC@19.2+8",
+    "GC@28.3+5.6",
+    "GC@84+11"
+   ],
+   "cite": "Harvard Business School case: Lou Pritchett, Negotiating the P&G Relationship with Wal-Mart"
+  },
+  {
+   "ch": 3,
+   "text": "What came out of it was radical for the era. Walmart began sharing its sales data with its biggest supplier, so P&G could see what was selling, and restock it on its own.",
+   "clips": [
+    "D5@427.3+2.3",
+    "D5@430.3+3.3",
+    "D5@561.2+3.4"
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "In 1991, the idea became Retail Link, a system that showed suppliers Walmart's sales and inventory, store by store, and item by item.",
+   "clips": [
+    "JV@32.5+5",
+    "D5@531.2+2.4",
+    "D5@553.2+1.4"
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "Kmart spent those years buying bookstores, home improvement chains, and office supply stores. In January 2002, it filed for bankruptcy.",
+   "clips": [
+    "KM@322",
+    "KM@350",
+    "KM@7"
+   ]
+  },
+  {
+   "ch": 3,
+   "text": "The lesson was clear. Control the flow of goods, and the flow of information, and you control the price.",
+   "clips": [
+    "R1@128.2+2.5",
+    "R1@180+4.6"
+   ]
+  },
+  {
+   "ch": 4,
+   "text": "And then, shopping itself changed direction.",
+   "clips": [
+    "AZ@6"
+   ]
+  },
+  {
+   "ch": 4,
+   "text": "Walmart's network was built to move pallets to stores. Amazon's was built to move single items to front doors. As shopping moved online, the system that beat Kmart was optimized for the wrong job.",
+   "clips": [
+    "LH@44",
+    "AZ@48",
+    "AZ@52",
+    "AZ@64",
+    "AZ@98"
+   ]
+  },
+  {
+   "ch": 4,
+   "text": "Walmart's answer was not a patch. In April 2023, it told investors it would rebuild its supply chain around automation.",
+   "clips": [
+    "LH@224",
+    "EA@14"
+   ]
+  },
+  {
+   "ch": 4,
+   "text": "The targets: by early 2026, about sixty-five percent of stores served by automation, and unit costs down roughly twenty percent.",
+   "clips": [
+    "PF@0",
+    "EA@197+8"
+   ],
+   "stats": [
+    {
+     "v": "65%",
+     "l": "of stores served by automation"
+    },
+    {
+     "v": "~20%",
+     "l": "lower unit cost"
+    }
+   ],
+   "stats_at": 0.15,
+   "cite": "Walmart 2023 Investment Community Meeting (April 4, 2023)"
+  },
+  {
+   "ch": 5,
+   "text": "The heart of that plan sits in Walmart's forty-two regional distribution centers, the buildings that feed its stores. Walmart began testing a system from the robotics company Symbotic in Brooksville, Florida, back in 2017. Now it is going into all forty-two.",
+   "clips": [
+    "PF@156",
+    "EA@8",
+    "EA@60",
+    "PF@24"
+   ],
+   "cite": "Symbotic and Walmart press releases (2022, 2025)"
+  },
+  {
+   "ch": 5,
+   "text": "Pallets arrive from suppliers, and robotic arms break them down into individual cases.",
+   "clips": [
+    "PF@9",
+    "EA@46",
+    "PF@27"
+   ],
+   "sfx": [
+    [
+     "robots",
+     0.4,
+     -22
+    ]
+   ]
+  },
+  {
+   "ch": 5,
+   "text": "Each case is scanned and sent into a dense steel structure, where autonomous bots travel at up to twenty-five miles an hour, storing and fetching cases like pieces of a puzzle.",
+   "clips": [
+    "PF@54",
+    "EA@80",
+    "WR@16",
+    "EA@108",
+    "WR@48"
+   ],
+   "sfx": [
+    [
+     "robots",
+     2.0,
+     -17
+    ]
+   ]
+  },
+  {
+   "ch": 5,
+   "text": "When a store places an order, the system releases cases in a precise sequence. Robotic arms then build each pallet so it is dense, stable, and arranged by store aisle. At the store, workers can unload it straight onto the shelves.",
+   "clips": [
+    "V0@26",
+    "XP@39",
+    "XP@162",
+    "XP@171",
+    "XP@96"
+   ]
+  },
+  {
+   "ch": 5,
+   "text": "Compare that with the old way: forklifts, long aisles, and pallets built by hand, one box at a time.",
+   "clips": [
+    "LH@36",
+    "LH@40",
+    "LH@28"
+   ]
+  },
+  {
+   "ch": 5,
+   "text": "Fresh and frozen food gets its own automated system. In Walmart's new perishable distribution centers, cranes and conveyors move food through separate temperature zones before it leaves for stores.",
+   "clips": [
+    "PW@2",
+    "PW@42",
+    "PW@84",
+    "PW@104"
+   ]
+  },
+  {
+   "ch": 5,
+   "text": "And for online orders, Walmart opened next-generation fulfillment centers with the Austrian company Knapp. Walmart says they cut the steps needed to fill an order from twelve to five.",
+   "clips": [
+    "KN@10.1+3.5",
+    "KN@43.6+3.0",
+    "KN@95.6+5.0",
+    "KN@127.9+2.7",
+    "KN@210.1+3.0"
+   ],
+   "stats": [
+    {
+     "v": "12 → 5",
+     "l": "steps to fulfill an online order"
+    }
+   ],
+   "stats_at": 0.6,
+   "cite": "Walmart corporate news (2023), next-generation fulfillment centers"
+  },
+  {
+   "ch": 6,
+   "text": "Yet Walmart's strongest answer to Amazon wasn't a robot. It was something it already had: its stores.",
+   "clips": [
+    "WG@1",
+    "WG@26"
+   ]
+  },
+  {
+   "ch": 6,
+   "text": "Walmart has about forty-six hundred stores in the US, and it says ninety percent of Americans live within ten miles of one.",
+   "clips": [
+    "WG@10",
+    "WG@12"
+   ],
+   "stats": [
+    {
+     "v": "~4,600",
+     "l": "US Walmart stores"
+    },
+    {
+     "v": "90%",
+     "l": "of Americans within 10 miles"
+    }
+   ],
+   "stats_at": 0.2,
+   "cite": "Walmart corporate statements"
+  },
+  {
+   "ch": 6,
+   "text": "The same density Holmes measured, built to save money on trucking, now puts inventory minutes away from most American homes.",
+   "map": {
+    "mode": "full"
+   }
+  },
+  {
+   "ch": 6,
+   "text": "So the stores became fulfillment centers. Workers pick online orders from the shelves, and Walmart can now deliver in under three hours to about ninety-five percent of US households.",
+   "clips": [
+    "WH@1.5",
+    "TP@108.1+1.6",
+    "TP@109.7+1.8",
+    "AD@20"
+   ],
+   "stats": [
+    {
+     "v": "95%",
+     "l": "of US households, delivery in under 3 hours"
+    }
+   ],
+   "stats_at": 0.55,
+   "cite": "Walmart earnings releases, 2025"
+  },
+  {
+   "ch": 6,
+   "text": "Some stores are getting robots of their own. In January 2025, Walmart sold its in-house robotics unit to Symbotic, and agreed to pay five hundred and twenty million dollars to develop automated pickup systems for its stores, with plans for up to four hundred locations.",
+   "clips": [
+    "AB@0.2",
+    "AB@42",
+    "AB@15.6"
+   ],
+   "cite": "Symbotic 8-K, January 2025"
+  },
+  {
+   "ch": 6,
+   "text": "And from some stores, orders now leave by air. Wing's drones lower packages on a tether, into backyards. The two companies plan to reach more than two hundred and seventy Walmart stores by 2027.",
+   "clips": [
+    "WG@4",
+    "WG@16",
+    "WG@20",
+    "WG@54",
+    "WG@64"
+   ],
+   "cite": "Walmart and Wing announcement, January 2026",
+   "sfx": [
+    [
+     "drone",
+     2.5,
+     -17
+    ]
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "Is it working? In results released in August 2026, Walmart said thirty-one hundred US stores now receive freight from automated facilities, and more than half of its e-commerce volume runs through automated centers.",
+   "clips": [
+    "PF@72",
+    "EA@67+9",
+    "KN@40",
+    "XP@174"
+   ],
+   "stats": [
+    {
+     "v": "3,100",
+     "l": "stores fed by automated DCs"
+    },
+    {
+     "v": "50%+",
+     "l": "e-commerce volume automated"
+    }
+   ],
+   "stats_at": 0.35,
+   "cite": "Walmart Q2 FY27 earnings call (Aug 2026)"
+  },
+  {
+   "ch": 7,
+   "text": "About seventy percent of online orders now arrive the same day or faster. And the online business, which lost money for years, now turns a profit.",
+   "clips": [
+    "TP@103.7+1.4",
+    "TP@105.1+1.5",
+    "TP@106.6+1.5",
+    "TP@11.7+1.4",
+    "TP@15.1+2.4",
+    "TP@62.5+2.1",
+    "TP@124.4+1.7",
+    "TP@17.5+1.8"
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "Walmart says its supply chain spending is near its peak. The bill is enormous. The bet is that it pays off the way that first distribution center did.",
+   "clips": [
+    "PW@122.3+3.4",
+    "XP@171.9+3.5",
+    "PF@27+4"
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "In 1962, the problem was getting goods to small towns that nobody else wanted to serve. Today, the problem is getting them to your door within hours.",
+   "clips": [
+    "D5@51.2+3.2",
+    "WG@20",
+    "WG@54"
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "Both times, Walmart's answer was the same. Keep inventory moving. Keep it close. And own the system that moves it.",
+   "clips": [
+    "WR@76",
+    "KE@60",
+    "EA@206"
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "Walmart never sold groceries better than everyone else. It moved them better.",
+   "clips": [
+    "D5@498.2+1.6",
+    "R1@84+1.8",
+    "PW@124.5+3"
+   ]
+  },
+  {
+   "ch": 7,
+   "text": "As Sam Walton put it, to succeed in this world, you have to change all the time.",
+   "clips": [
+    "GC@449.3+6",
+    "GC@457.2+12"
+   ],
+   "end": true
+  }
+ ],
+ "sources_list": [
+  "Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica, 79(1), 253-302.",
+  "Stalk, G., Evans, P., & Shulman, L. E. (1992). Competing on Capabilities: The New Rules of Corporate Strategy. Harvard Business Review, 70(2), 57-69.",
+  "Walmart, 2023 Investment Community Meeting (April 4, 2023).",
+  "Walmart Q2 FY27 earnings release and call (August 2026).",
+  "Symbotic Form 8-K (January 2025): acquisition of Walmart's Advanced Systems and Robotics.",
+  "Walmart and Wing drone delivery expansion (January 2026).",
+  "CIO, 45 Years of Wal-Mart History: A Technology Time Line.",
+  "Harvard Business School case, Lou Pritchett: Negotiating the P&G Relationship with Wal-Mart."
+ ],
+ "work": "doc_walmart",
+ "subtitle": "How logistics, not stores, built the world's largest retailer",
+ "end_quote": {
+  "text": "To succeed in this world, you have to change all the time.",
+  "who": "Sam Walton",
+  "cue": "to",
+  "note": "Sources and research notes are in the description"
+ },
+ "source_opts": {
+  "KM": {
+   "crop": [
+    0.008,
+    0.075,
+    0.992,
+    1.0
+   ]
+  },
+  "QG": {
+   "crop": [
+    0.07,
+    0.0,
+    0.93,
+    0.86
+   ]
+  },
+  "KN": {
+   "blur": [
+    [
+     0.885,
+     0.925,
+     0.995,
+     0.99
+    ]
+   ]
+  },
+  "KE": {
+   "blur": [
+    [
+     0.885,
+     0.925,
+     0.995,
+     0.99
+    ]
+   ]
+  }
+ },
+ "footage": {
+  "D5": "yt:D5xKm8tf9Ks",
+  "R1": "yt:R1D4rfS6Y28",
+  "JV": "yt:JVorMBNQLls",
+  "GC": "yt:gc5oVVF7Vu0",
+  "PF": "yt:pF1tEo8R9EI",
+  "JO": "yt:0TiO6eLGBA8",
+  "LW": "yt:LwglNrHkjJU",
+  "QG": "yt:qg9YhHmNlPM",
+  "WH": "yt:wHSvmmwjuwI",
+  "DC": "yt:DC2RGsr_rdU",
+  "EA": "yt:EAAV9JxdjF0",
+  "N9": "yt:n9ohiJjL3b0",
+  "WR": "yt:w_rxqhM2MFE",
+  "V0": "yt:v0PuvUGy1I0",
+  "LH": "yt:LHZsKgWxK4Q",
+  "XP": "yt:xpkFjJOlxvU",
+  "KE": "yt:JiLYqC02aaM",
+  "TP": "yt:tpHu-vcgP34",
+  "KN": "yt:t2X03sYsW7I",
+  "WG": "yt:a2OSiE2M4g4",
+  "PW": "yt:Pw3xweHqreU",
+  "AB": "yt:a6FsgehhkyA",
+  "AD": "yt:t2R3oQHhCzc",
+  "KA": "yt:a4tmS1jl62M",
+  "KM": "yt:8LX-f7VviGE",
+  "AZ": "yt:7Yky-1B15WM",
+  "AU": "yt:mVJ7ffRnR80",
+  "IL": "yt:6cGiyn9j18c"
+ },
+ "lang": "en",
+ "text_avoid": [
+  "EA",
+  "N9",
+  "V0",
+  "WR",
+  "XP",
+  "LH",
+  "KN",
+  "KE",
+  "TP",
+  "AB",
+  "AD",
+  "JO",
+  "WH",
+  "DC",
+  "AZ",
+  "LW",
+  "IL",
+  "PF"
+ ],
+ "text_ignore": "(?i)kn.?.?pp|xnapp|^[0-9 .:°F%-]*$|^.{0,3}$",
+ "format": "long",
+ "shorts": {
+  "kmart": {
+   "segments": [
+    [
+     0,
+     2
+    ]
+   ],
+   "headline": [
+    "1,891 STORES VS 229.",
+    "*SO HOW DID KMART*",
+    "*LOSE?*"
+   ],
+   "upload": {
+    "title": "Kmart Had 8x More Stores. Walmart Won Anyway. #shorts",
+    "description": "In 1979 Kmart had 1,891 stores and Walmart had 229. The difference wasn't the stores. It was everything behind them.\n\nFull documentary on the channel: The Machine Behind Walmart.\n\nSource: Stalk, Evans & Shulman (1992), Competing on Capabilities, Harvard Business Review 70(2).",
+    "tags": [
+     "walmart",
+     "kmart",
+     "supply chain",
+     "logistics",
+     "business history",
+     "shorts"
+    ],
+    "comment": "Full 9-minute documentary on how Walmart's logistics machine works is on the channel."
+   }
+  },
+  "robots": {
+   "segments": [
+    [
+     29,
+     32
+    ]
+   ],
+   "headline": [
+    "INSIDE WALMART'S",
+    "*ROBOT WAREHOUSE*"
+   ],
+   "upload": {
+    "title": "Inside Walmart's 25 MPH Robot Warehouse #shorts",
+    "description": "Walmart is putting Symbotic's AI robotics system into all 42 of its regional distribution centers. Pallets in, robots sort every case, and pallets come out arranged by store aisle.\n\nFull documentary on the channel: The Machine Behind Walmart.",
+    "tags": [
+     "walmart",
+     "symbotic",
+     "warehouse robots",
+     "automation",
+     "supply chain",
+     "shorts"
+    ],
+    "comment": "Full documentary (with sources) is on the channel: The Machine Behind Walmart."
+   }
+  },
+  "map": {
+   "segments": [
+    [
+     8,
+     11
+    ]
+   ],
+   "headline": [
+    "WALMART'S",
+    "*SECRET MAP*"
+   ],
+   "upload": {
+    "title": "Why Walmart Opened Stores Right Next to Each Other #shorts",
+    "description": "Economist Thomas Holmes mapped every Walmart opening from 1962 to 2005. The stores spread like a ripple around distribution centers, and he estimated each mile closer to a DC was worth about $3,500 a year per store.\n\nSource: Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica 79(1), 253-302.\n\nFull documentary on the channel: The Machine Behind Walmart.",
+    "tags": [
+     "walmart",
+     "economics",
+     "logistics",
+     "data visualization",
+     "supply chain",
+     "shorts"
+    ],
+    "comment": "Map data: Holmes (2011), Econometrica. Full documentary is on the channel."
+   }
+  }
+ },
+ "upload": {
+  "title": "The Machine Behind Walmart: How Logistics Beat Kmart, and Now Amazon",
+  "description": "Walmart didn't win with better stores. It won with everything that happened before a product reached the shelf: its own distribution centers, its own trucks, cross-docking, a private satellite network and Retail Link. Now it is rebuilding that machine with robots, automated fulfillment centers, stores that double as warehouses, and drones.\n\nThis documentary follows the system from a 1962 store in Rogers, Arkansas to Walmart's 2026 automation results, using academic research, company filings and official footage.\n\n{chapters}\n\nResearch and sources:\n- Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica, 79(1), 253-302. Store and DC data: users.econ.umn.edu/~holmes/data/WalMart/\n- Stalk, G., Evans, P., & Shulman, L. E. (1992). Competing on Capabilities: The New Rules of Corporate Strategy. Harvard Business Review, 70(2), 57-69.\n- Harvard Business School case: Lou Pritchett, Negotiating the P&G Relationship with Wal-Mart.\n- Walmart corporate history; CIO, 45 Years of Wal-Mart History: A Technology Time Line.\n- Walmart 2023 Investment Community Meeting (April 4, 2023).\n- Symbotic Form 8-K (January 2025): acquisition of Walmart's Advanced Systems and Robotics business.\n- Walmart and Wing drone delivery expansion (January 2026).\n- Walmart Q2 FY27 earnings release and call (August 2026).\n\nFootage: Walmart, Symbotic, KNAPP, Wing, Alert Innovation, BusinessWire (Walmart press), Amazon, archival Kmart footage. Map: Census ZCTA centroids, Holmes store data.\nNarration, music and sound design: ElevenLabs.",
+  "tags": [
+   "walmart",
+   "walmart supply chain",
+   "logistics",
+   "supply chain documentary",
+   "cross docking",
+   "symbotic",
+   "warehouse automation",
+   "kmart",
+   "amazon vs walmart",
+   "retail history",
+   "sam walton",
+   "business documentary",
+   "drone delivery",
+   "wing",
+   "knapp"
+  ],
+  "comment": "Every number in this video has a source in the description. Which company's logistics should we break down next?"
+ }
+}

@@ -71,8 +71,22 @@ def fetch_models():
                     tf.extract(m, target)
 
 
+DOC_FONTS = {  # documentary graphics (google/fonts, OFL-1.1)
+    "Inter-Variable.ttf": "ofl/inter/Inter%5Bopsz,wght%5D.ttf",
+    "SourceSerif4-Variable.ttf": "ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
+    "IBMPlexMono-Regular.ttf": "ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+    "IBMPlexMono-Medium.ttf": "ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+}
+
+
 def fetch_fonts():
     d = os.path.join(A, "fonts")
+    os.makedirs(d, exist_ok=True)
+    for name, path in DOC_FONTS.items():
+        if not os.path.exists(os.path.join(d, name)):
+            log(f"font {name} (OFL-1.1)")
+            with open(os.path.join(d, name), "wb") as f:
+                f.write(get("https://raw.githubusercontent.com/google/fonts/main/" + path))
     want = [f"Pretendard-{w}.otf" for w in FONT_WEIGHTS]
     if all(os.path.exists(os.path.join(d, w)) for w in want):
         return

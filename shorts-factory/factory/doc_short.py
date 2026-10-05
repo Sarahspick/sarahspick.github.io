@@ -14,11 +14,12 @@ from PIL import Image, ImageDraw
 
 from . import doc_gfx
 from .config import OUTPUT, WORK
-from .doc_gfx import ACCENT, SOFT, WHITE, ease, fade, font
+from .doc_gfx import ACCENT, INK, SOFT, WHITE, ease, fade, font
 from .doc_render import FPS, build_timeline, run
 
 SW, SH = 1080, 1920
-VID_Y = 640            # top of the 16:9 picture (608 px tall at 1080 wide)
+VID_Y = 660            # top of the 16:9 picture
+PIC_H = 522            # its height after cropping the film's own captions off the bottom
 
 
 def _ranges(items, seg_ranges):
@@ -47,7 +48,7 @@ def _phrases(segs, offset):
 
 
 def overlay_fn(headline, phrases, dur, end_note):
-    fh = font("sans", 82, "Black")
+    fh = font("display", 104)
     fc = font("sans", 62, "ExtraBold")
     fe = font("sans", 44, "Bold")
 
@@ -63,13 +64,13 @@ def overlay_fn(headline, phrases, dur, end_note):
             w = d.textlength(txt, font=fh)
             d.text(((SW - w) / 2 + 3, y + 4), txt, font=fh, fill=(0, 0, 0, int(150 * a)))
             d.text(((SW - w) / 2, y), txt, font=fh, fill=(ACCENT if accent else WHITE) + (int(255 * a),))
-            y += 96
+            y += 116
         # caption under the picture
         cur = [p for p in phrases if p[0] - 0.05 <= t < p[1] + 0.15]
         if cur and t < dur - 3.0:
             txt = cur[-1][2].upper()
             lines = doc_gfx._wrap(d, txt, fc, 960)
-            cy = VID_Y + 608 + 90
+            cy = VID_Y + PIC_H + 90
             for ln in lines[:2]:
                 w = d.textlength(ln, font=fc)
                 for dx, dy in ((-3, 0), (3, 0), (0, -3), (0, 3), (3, 4)):
@@ -80,9 +81,9 @@ def overlay_fn(headline, phrases, dur, end_note):
         if t > dur - 3.0:
             ea = ease((t - (dur - 3.0)) / 0.5)
             w = d.textlength(end_note, font=fe)
-            d.rounded_rectangle([(SW - w) / 2 - 36, VID_Y + 608 + 70, (SW + w) / 2 + 36, VID_Y + 608 + 170], 20,
-                                fill=ACCENT + (int(235 * ea),))
-            d.text(((SW - w) / 2, VID_Y + 608 + 94), end_note, font=fe, fill=WHITE + (int(255 * ea),))
+            d.rectangle([(SW - w) / 2 - 36, VID_Y + PIC_H + 70, (SW + w) / 2 + 36, VID_Y + PIC_H + 170],
+                        fill=ACCENT + (int(255 * ea),))
+            d.text(((SW - w) / 2, VID_Y + PIC_H + 94), end_note, font=fe, fill=INK + (int(255 * ea),))
         return img
     return frame
 
@@ -120,7 +121,7 @@ def make(doc_path, name):
     out = os.path.join(OUTPUT, f"{doc['id']}_short_{name}.mp4")
     fc = (f"[0:v]split[a][b];[a]scale={SW}:{SH}:force_original_aspect_ratio=increase,crop={SW}:{SH},"
           f"gblur=sigma=38,eq=brightness=-0.28:saturation=0.8[bg];"
-          f"[b]scale={SW}:-2[fg];[bg][fg]overlay=0:{VID_Y}[v1];[v1][1:v]overlay=0:0,"
+          f"[b]crop=iw:ih*0.86:0:0,scale={SW}:-2[fg];[bg][fg]overlay=0:{VID_Y}[v1];[v1][1:v]overlay=0:0,"
           f"fade=t=out:st={dur - 0.5:.3f}:d=0.5,format=yuv420p[v]")
     run(["ffmpeg", "-y", "-v", "error", "-i", joined, "-i", ov, "-filter_complex", fc, "-map", "[v]", "-map", "0:a",
          "-af", f"loudnorm=I=-14:TP=-1.5:LRA=11,afade=t=out:st={dur - 0.8:.3f}:d=0.8", "-ar", "48000",

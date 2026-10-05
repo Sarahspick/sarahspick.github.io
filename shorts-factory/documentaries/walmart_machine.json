@@ -17,8 +17,8 @@
   {
    "n": 0,
    "title": "",
-   "music": "Cold open for a serious business documentary. Sparse, tense, minimal. Low sustained cello drone, distant felt piano notes, subtle ticking pulse building slowly. No drums until the end, then a single deep cinematic hit. Instrumental only, no vocals.",
-   "len": 57
+   "music": "Intense, driving cinematic documentary opener. Pulsing low synth bass, fast ticking clock percussion, tense staccato strings, building energy with big low hits on the downbeats, modern trailer feel, confident and urgent. Instrumental only, no vocals.",
+   "len": 60
   },
   {
    "n": 1,
@@ -66,101 +66,165 @@
  "segments": [
   {
    "ch": 0,
-   "text": "In 1979, Kmart was the king of American discount retail. It had one thousand, eight hundred and ninety-one stores. Walmart had two hundred and twenty-nine.",
+   "text": "In 1979, Kmart had eight times more stores than Walmart.",
    "clips": [
     "KM@21",
     "KA@0.5",
-    "D5@238.3+4.1",
-    "D5@251.2+3.2"
+    "D5@238.3+4.1"
    ],
    "stats": [
     {
      "v": "1,891",
-     "l": "Kmart stores, 1979"
+     "l": "Kmart stores"
     },
     {
      "v": "229",
-     "l": "Walmart stores, 1979"
+     "l": "Walmart stores"
     }
    ],
-   "stats_at": 0.45,
-   "cite": "Stalk, Evans & Shulman (1992), \"Competing on Capabilities\", Harvard Business Review",
-   "sfx": [
-    [
-     "projector",
-     0.0,
-     -26
-    ]
-   ]
+   "vs": true,
+   "stats_at": "eight",
+   "cite": "Stalk, Evans & Shulman (1992), Competing on Capabilities, Harvard Business Review",
+   "lead": 0.05,
+   "gap": 0.22
   },
   {
    "ch": 0,
-   "text": "Twenty-three years later, Kmart was in bankruptcy court. Walmart was the biggest company in the world.",
+   "text": "Twenty-three years later, Kmart was bankrupt. And Walmart was the biggest company on Earth.",
    "clips": [
-    "KM@133",
+    "KM@322",
+    "KM@105",
     "R1@299.5+3.2",
     "R1@128.2+2.5"
    ],
-   "sfx": [
-    [
-     "register",
-     0.6,
-     -18
-    ]
-   ]
+   "card": {
+    "type": "headline",
+    "text": "Kmart files for Chapter 11 bankruptcy",
+    "kicker": "January 22, 2002",
+    "at": "bankrupt",
+    "dur": 2.6
+   },
+   "lead": 0.05,
+   "gap": 0.22
   },
   {
    "ch": 0,
-   "text": "Walmart didn't win with better stores. It won with everything that happened before a product ever reached the shelf.",
+   "text": "Walmart didn't win with better stores. It won with something most shoppers never see.",
    "clips": [
     "D5@280.3+6",
-    "D5@287.3+4",
+    "PW@122.3+3.4",
     "D5@576.3+3.2"
+   ],
+   "lead": 0.05,
+   "gap": 0.35
+  },
+  {
+   "ch": 0,
+   "text": "A machine.",
+   "clips": [
+    "EA@67"
    ],
    "sfx": [
     [
-     "truck",
-     0.4,
-     -20
+     "riser_hit",
+     -1.6,
+     -10
     ]
-   ]
+   ],
+   "flash": true,
+   "lead": 0.05,
+   "gap": 0.7
   },
   {
    "ch": 0,
-   "text": "Today, that machine is being rebuilt from scratch, with robots that move at twenty-five miles an hour, drones, and stores that double as warehouses.",
+   "text": "Robots that race through the dark at twenty-five miles an hour.",
    "clips": [
-    "EA@90",
-    "WG@16",
-    "KN@44",
-    "WR@20"
+    "EA@108",
+    "WR@20",
+    "WR@48"
    ],
    "sfx": [
     [
      "robots",
-     0.3,
-     -19
-    ],
-    [
-     "drone",
-     4.2,
-     -21
+     0.2,
+     -17
     ]
-   ]
+   ],
+   "lead": 0.05,
+   "gap": 0.22
   },
   {
    "ch": 0,
-   "text": "To understand why, you have to go back to 1962, and to the kind of towns most suppliers didn't want to drive to.",
+   "text": "Drones that lower groceries into backyards.",
    "clips": [
-    "D5@31.2+5.2",
+    "WG@16",
+    "WG@20"
+   ],
+   "sfx": [
+    [
+     "drone",
+     0.0,
+     -18
+    ]
+   ],
+   "lead": 0.05,
+   "gap": 0.22
+  },
+  {
+   "ch": 0,
+   "text": "And a pattern hidden in the map of every store Walmart ever opened.",
+   "map": {
+    "mode": "full"
+   },
+   "lead": 0.05,
+   "gap": 0.22
+  },
+  {
+   "ch": 0,
+   "text": "Today, that machine can reach ninety-five percent of American homes in under three hours.",
+   "clips": [
+    "TP@103.7+1.4",
+    "TP@105.1+1.5",
+    "WG@54",
+    "KN@43.6+3.0"
+   ],
+   "stats": [
+    {
+     "v": "95%",
+     "l": "of U.S. homes in under 3 hours"
+    }
+   ],
+   "stats_at": "ninety",
+   "cite": "Walmart earnings releases, 2025",
+   "flash": true,
+   "lead": 0.05,
+   "gap": 0.22
+  },
+  {
+   "ch": 0,
+   "text": "So how did a man who started with one small variety store in Arkansas build it?",
+   "clips": [
+    "D5@51.2+3.2",
+    "D5@31.2+5.2"
+   ],
+   "lead": 0.05,
+   "gap": 0.22
+  },
+  {
+   "ch": 0,
+   "text": "It started with a problem nobody else wanted to solve.",
+   "clips": [
     "D5@46.2+4.2"
    ],
    "sfx": [
     [
      "riser",
-     4.6,
-     -15
+     0.6,
+     -14
     ]
-   ]
+   ],
+   "lead": 0.05,
+   "gap": 0.6
   },
   {
    "title": true,
@@ -229,7 +293,17 @@
      13.0,
      -25
     ]
-   ]
+   ],
+   "card": {
+    "type": "doc",
+    "kind": "Econometrica · Vol. 79, No. 1 · 2011",
+    "title": "The Diffusion of Wal-Mart and Economies of Density",
+    "meta": "Thomas J. Holmes · University of Minnesota & Federal Reserve Bank of Minneapolis",
+    "body": "The rollout of Wal-Mart store openings followed a pattern that radiated from the center outward, with Wal-Mart maintaining high store density and a contiguous store network all along the way.",
+    "highlight": "radiated from the center outward",
+    "at": "economist",
+    "dur": 5.0
+   }
   },
   {
    "ch": 1,
@@ -252,7 +326,7 @@
      "l": "per store, per year, for each mile closer to a DC"
     }
    ],
-   "stats_at": 0.55,
+   "stats_at": "thirty",
    "cite": "Holmes (2011), Econometrica 79(1): estimated benefit of store density",
    "sfx": [
     [
@@ -300,7 +374,17 @@
     "R1@163.2+1.8",
     "D5@578.2+1.6"
    ],
-   "cite": "Stalk, Evans & Shulman (1992), \"Competing on Capabilities\", Harvard Business Review 70(2)"
+   "cite": "Stalk, Evans & Shulman (1992), \"Competing on Capabilities\", Harvard Business Review 70(2)",
+   "card": {
+    "type": "doc",
+    "kind": "Harvard Business Review · 1992",
+    "title": "Competing on Capabilities: The New Rules of Corporate Strategy",
+    "meta": "George Stalk, Philip Evans & Lawrence E. Shulman · March–April 1992",
+    "body": "",
+    "highlight": "Competing on Capabilities",
+    "at": "Harvard",
+    "dur": 4.2
+   }
   },
   {
    "ch": 2,
@@ -320,8 +404,9 @@
      "l": "Kmart"
     }
    ],
-   "stats_at": 0.1,
-   "cite": "Stalk, Evans & Shulman (1992), Harvard Business Review 70(2), 57-69"
+   "stats_at": "eighty",
+   "cite": "Stalk, Evans & Shulman (1992), Harvard Business Review 70(2), 57-69",
+   "vs": true
   },
   {
    "ch": 2,
@@ -354,7 +439,7 @@
      "l": "private satellite network, 1987"
     }
    ],
-   "stats_at": 0.4,
+   "stats_at": "twenty-four",
    "cite": "Walmart corporate history; CIO, \"45 Years of Wal-Mart History: A Technology Time Line\"",
    "sfx": [
     [
@@ -399,7 +484,14 @@
     "KM@322",
     "KM@350",
     "KM@7"
-   ]
+   ],
+   "card": {
+    "type": "headline",
+    "text": "Kmart files for Chapter 11 bankruptcy",
+    "kicker": "January 22, 2002",
+    "at": "January",
+    "dur": 3.0
+   }
   },
   {
    "ch": 3,
@@ -433,7 +525,14 @@
    "clips": [
     "LH@224",
     "EA@14"
-   ]
+   ],
+   "card": {
+    "type": "headline",
+    "text": "Walmart unveils its next-generation supply chain",
+    "kicker": "April 4, 2023 · Investment Community Meeting",
+    "at": "April",
+    "dur": 3.6
+   }
   },
   {
    "ch": 4,
@@ -452,7 +551,7 @@
      "l": "lower unit cost"
     }
    ],
-   "stats_at": 0.15,
+   "stats_at": "sixty",
    "cite": "Walmart 2023 Investment Community Meeting (April 4, 2023)"
   },
   {
@@ -546,7 +645,7 @@
      "l": "steps to fulfill an online order"
     }
    ],
-   "stats_at": 0.6,
+   "stats_at": "twelve",
    "cite": "Walmart corporate news (2023), next-generation fulfillment centers"
   },
   {
@@ -574,7 +673,7 @@
      "l": "of Americans within 10 miles"
     }
    ],
-   "stats_at": 0.2,
+   "stats_at": "forty",
    "cite": "Walmart corporate statements"
   },
   {
@@ -599,7 +698,7 @@
      "l": "of US households, delivery in under 3 hours"
     }
    ],
-   "stats_at": 0.55,
+   "stats_at": "ninety",
    "cite": "Walmart earnings releases, 2025"
   },
   {
@@ -610,7 +709,14 @@
     "AB@42",
     "AB@15.6"
    ],
-   "cite": "Symbotic 8-K, January 2025"
+   "cite": "Symbotic 8-K, January 2025",
+   "card": {
+    "type": "headline",
+    "text": "Symbotic buys Walmart's robotics unit",
+    "kicker": "January 2025 · $520M development deal",
+    "at": "January",
+    "dur": 3.6
+   }
   },
   {
    "ch": 6,
@@ -650,7 +756,7 @@
      "l": "e-commerce volume automated"
     }
    ],
-   "stats_at": 0.35,
+   "stats_at": "thirty-one",
    "cite": "Walmart Q2 FY27 earnings call (Aug 2026)"
   },
   {
@@ -767,6 +873,9 @@
      0.925
     ]
    ]
+  },
+  "EA": {
+   "note": "Symbotic promo"
   }
  },
  "footage": {
@@ -852,8 +961,8 @@
   "robots": {
    "segments": [
     [
-     29,
-     32
+     34,
+     37
     ]
    ],
    "headline": [
@@ -877,8 +986,8 @@
   "map": {
    "segments": [
     [
-     8,
-     11
+     13,
+     16
     ]
    ],
    "headline": [

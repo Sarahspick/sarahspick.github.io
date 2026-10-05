@@ -11,6 +11,7 @@ Pipeline
   4. audio: narration, chapter score (ducked under the voice), ElevenLabs SFX -> -14 LUFS, oversampled limiter
 Original footage sound is never used.
 """
+import hashlib
 import json
 import os
 import re
@@ -21,13 +22,14 @@ import sys
 import numpy as np
 
 from . import doc_audio, doc_gfx, doc_map
-from .config import WORK, OUTPUT
+from .config import WORK, OUTPUT, asset
 from .media import fetch
 
 W, H, FPS, SR = 1920, 1080, 30, 48000
 LEAD, GAP = 0.25, 0.55          # silence before / after each narration paragraph
 CARD = 3.4                      # chapter card length (no narration)
 EDGE = 0.10                     # stay this far from a source cut
+RENDER_V = 2                    # bump when render_shot's look changes (invalidates the shot cache)
 
 
 def run(cmd, **kw):
@@ -60,8 +62,9 @@ def build_timeline(doc, work):
         nxt = texts[i + 1]["text"] if i + 1 < len(texts) else ""
         mp3, words = doc_audio.narrate(s["text"], doc["voice"], voice_dir, prev, nxt)
         vd = doc_audio.duration(mp3)
-        dur = LEAD + vd + GAP + (5.0 if s.get("end") else 0.0)
-        items.append({"kind": "seg", "start": t, "dur": dur, "voice": mp3, "voice_at": t + LEAD, "vdur": vd,
+        lead, gap = s.get("lead", LEAD), s.get("gap", GAP)
+        dur = lead + vd + gap + (5.0 if s.get("end") else 0.0)
+        items.append({"kind": "seg", "start": t, "dur": dur, "voice": mp3, "voice_at": t + lead, "vdur": vd,
                       "words": words, "seg": s, "clips": s.get("clips", []), "idx": k})
         k += 1
         t += dur
@@ -171,7 +174,36 @@ def plan_shots(items, doc, shots, text=None):
             plan.append({"t": t, "dur": need, "nf": nf, "key": key, "src": src, "start": start, "speed": speed,
                          "opts": opts, "note": note, "want": ts})
             t += need
-    return plan
+    return punch_ins(plan)
+
+
+PUNCH = 3.6          # a 16:9 shot longer than this is recut once with a punch-in (same moment, tighter frame)
+
+
+def punch_ins(plan):
+    out = []
+    for k, sh in enumerate(plan):
+        w, h = _wh(sh["src"])
+        if sh["dur"] <= PUNCH or sh["opts"].get("max") or w / h < 1.5 or sh["opts"].get("no_punch"):
+            out.append(sh)
+            continue
+        d1 = round(sh["dur"] * 0.52 * FPS) / FPS
+        a = dict(sh, dur=d1, nf=round((sh["t"] + d1) * FPS) - round(sh["t"] * FPS))
+        fx, fy = ((0.3, 0.4), (0.7, 0.45), (0.5, 0.35))[k % 3]
+        b = dict(sh, t=sh["t"] + d1, dur=sh["dur"] - d1, start=sh["start"] + d1 * sh["speed"],
+                 opts=dict(sh["opts"], zoom=1.22, focus=[fx, fy]), note="")
+        b["nf"] = round((b["t"] + b["dur"]) * FPS) - round(b["t"] * FPS)
+        out += [a, b]
+    return out
+
+
+_WH = {}
+
+
+def _wh(path):
+    if path not in _WH:
+        _WH[path] = probe_wh(path)
+    return _WH[path]
 
 
 def probe_wh(path):
@@ -209,9 +241,11 @@ def render_shot(sh, out, idx):
     else:
         z = o.get("zoom", 1.0)
         vf.append(f"scale={int(W * z)}:{int(H * z)}:force_original_aspect_ratio=increase:flags=lanczos")
-        vf.append(f"crop={W}:{H}")
+        fx, fy = o.get("focus", [0.5, 0.5])
+        vf.append(f"crop={W}:{H}:(iw-ow)*{fx}:(ih-oh)*{fy}")
     if o.get("grain", aspect < 1.5):
         vf.append("noise=alls=5:allf=t")
+    vf.append("eq=contrast=1.05:saturation=1.08,vignette=angle=PI/5")   # light cinematic grade
     vf.append("setsar=1,format=yuv420p")
     src_len = T * sh["speed"] + 0.2
     run(["ffmpeg", "-y", "-v", "error", "-ss", f"{sh['start']:.3f}", "-t", f"{src_len:.3f}", "-i", sh["src"], "-an",
@@ -246,31 +280,72 @@ def word_time(words, pat):
     return None
 
 
-def overlays(items, doc):
-    """[(start, dur, frame_fn)] for every graphic drawn over footage."""
+def cue(it, at, default=0.3):
+    """Timeline time of a cue inside a segment: a word (regex on the narration) or a fraction of the voice."""
+    if isinstance(at, str):
+        w = word_time(it["words"], at)
+        if w is not None:
+            return it["voice_at"] + w
+        at = default
+    return it["voice_at"] + it["vdur"] * (at if at is not None else default)
+
+
+SLAM = 2.9          # how long a number stays up
+
+
+def graphic_events(items, doc):
+    """[(start, dur, frame_fn, [(sfx, offset, gain_db)])] for every graphic drawn over footage."""
     out = []
     for it in items:
         s = it["seg"]
         if it["kind"] == "title":
-            out.append((it["start"], it["dur"], doc_gfx.title_card(doc["title"], doc.get("subtitle", ""), it["dur"])))
+            out.append((it["start"], it["dur"], doc_gfx.title_card(doc["title"], doc.get("subtitle", ""), it["dur"]),
+                        [("title_hit", 0.02, -4), ("impact", 0.0, -8)]))
+            out.append((it["start"], 0.3, doc_gfx.flash(0.3), []))
         elif it["kind"] == "chapter":
             ch = it["ch"]
-            out.append((it["start"], it["dur"], doc_gfx.chapter(ch["n"], ch["title"], it["dur"])))
+            out.append((it["start"], it["dur"], doc_gfx.chapter(ch["n"], ch["title"], it["dur"]),
+                        [("flash", -0.25, -9), ("impact", 0.02, -11)]))
+            out.append((it["start"], 0.25, doc_gfx.flash(0.25, 0.7), []))
         elif it["kind"] == "seg":
             if s.get("end"):
                 q = doc["end_quote"]
-                st = it["voice_at"] + (word_time(it["words"], q.get("cue", "to")) or 0) - 0.3
-                out.append((st, it["start"] + it["dur"] - st, doc_gfx.quote_card(q["text"], q["who"], it["start"] + it["dur"] - st, q.get("note", ""))))
+                st = cue(it, q.get("cue", "to")) - 0.3
+                d = it["start"] + it["dur"] - st
+                out.append((st, d, doc_gfx.quote_card(q["text"], q["who"], d, q.get("note", "")), []))
                 continue
+            if s.get("flash"):
+                out.append((it["start"], 0.25, doc_gfx.flash(0.25, 0.75), [("flash", -0.2, -10)]))
             if s.get("diagram") == "crossdock":
                 tt = word_time(it["words"], r"traditional") or 0.0
                 tc = word_time(it["words"], r"cross-dock") or it["vdur"] * 0.5
-                out.append((it["voice_at"] - 0.2, it["vdur"] + 0.6, doc_gfx.crossdock(it["vdur"] + 0.6, tt + 0.2, tc + 0.2)))
-            if (s.get("stats") or s.get("cite")) and not s.get("map"):
-                dur = it["dur"] - 0.15
-                stat_at = LEAD + it["vdur"] * s.get("stats_at", 0.3)
-                out.append((it["start"], dur, doc_gfx.lower(s.get("stats"), s.get("cite"), dur, stat_at, 0.6)))
+                out.append((it["voice_at"] - 0.2, it["vdur"] + 0.6, doc_gfx.crossdock(it["vdur"] + 0.6, tt + 0.2, tc + 0.2),
+                            [("whoosh", -0.3, -14)]))
+            if s.get("cite") and not s.get("map"):
+                out.append((it["start"], it["dur"] - 0.1, doc_gfx.source(s["cite"], it["dur"] - 0.1), []))
+            if s.get("stats") and not s.get("map"):
+                st = cue(it, s.get("stats_at", 0.3)) - 0.08
+                d = min(SLAM + 0.4 * (len(s["stats"]) - 1), it["start"] + it["dur"] - st)
+                fx = [("impact", 0.0, -9), ("counter", 0.02, -17)]
+                if len(s["stats"]) > 1:
+                    fx.append(("impact", 0.38, -11))
+                out.append((st, d, doc_gfx.slam(s["stats"], d, vs=s.get("vs", False)), fx))
+            c = s.get("card")
+            if c:
+                st = cue(it, c.get("at", 0.0)) - 0.15
+                d = min(c.get("dur", 3.5), it["start"] + it["dur"] - st)
+                if c["type"] == "doc":
+                    fn = doc_gfx.doc_card(c["kind"], c["title"], c["meta"], c.get("body", ""), c.get("highlight", ""), d, 1.0)
+                    fx = [("paper", 0.0, -9)]
+                else:
+                    fn = doc_gfx.headline(c["text"], c["kicker"], d)
+                    fx = [("news", 0.0, -9)]
+                out.append((st, d, fn, fx))
     return out
+
+
+def overlays(items, doc):
+    return [(st, d, fn) for st, d, fn, _ in graphic_events(items, doc)]
 
 
 def map_items(items):
@@ -389,19 +464,12 @@ def mix_audio(items, doc, total, work, sfx_index):
 
 def sfx_events(items, doc):
     ev = []
+    for st, _, _, fx in graphic_events(items, doc):
+        for name, off, gdb in fx:
+            ev.append((st + off, name, gdb))
     for it in items:
-        s = it["seg"]
-        if it["kind"] == "title":
-            ev.append((it["start"] + 0.05, "title_hit", -4))
-        elif it["kind"] == "chapter":
-            ev.append((it["start"] - 0.35, "whoosh", -9))
-        elif it["kind"] == "seg":
-            if s.get("stats") and not s.get("map"):
-                st = it["start"] + LEAD + it["vdur"] * s.get("stats_at", 0.3)
-                ev.append((st, "tick", -14))
-                if len(s["stats"]) > 1:
-                    ev.append((st + 0.25, "tick", -16))
-            for name, off, gdb in s.get("sfx", []):
+        if it["kind"] == "seg":
+            for name, off, gdb in it["seg"].get("sfx", []):
                 ev.append((it["start"] + off, name, gdb))
     return ev
 
@@ -438,6 +506,49 @@ def srt(items, path):
     with open(path, "w") as f:
         for i, (a, b, t) in enumerate(cues, 1):
             f.write(f"{i}\n{ts(a)} --> {ts(max(b, a + 0.8))}\n{t}\n\n")
+
+
+def ass_captions(items, path):
+    """Burned-in English captions: one short line at a time, timed to the narration's words."""
+    def ts(x):
+        h, r = divmod(max(0.0, x), 3600)
+        m, sec = divmod(r, 60)
+        return f"{int(h)}:{int(m):02d}:{sec:05.2f}"
+    cues = []
+    for it in items:
+        if it["kind"] != "seg" or it["seg"].get("end"):
+            continue
+        chunk = []
+        for w, a, b in it["words"]:
+            chunk.append((w, a, b))
+            text = " ".join(x[0] for x in chunk)
+            if len(text) > 34 or (w[-1] in ".?!" and len(text) > 8) or (w[-1] in ",;:" and len(text) > 22):
+                cues.append([it["voice_at"] + chunk[0][1], it["voice_at"] + chunk[-1][2], text])
+                chunk = []
+        if chunk:
+            cues.append([it["voice_at"] + chunk[0][1], it["voice_at"] + chunk[-1][2], " ".join(x[0] for x in chunk)])
+    for a, b in zip(cues, cues[1:]):                 # hold each line until the next one (short gaps only)
+        if b[0] - a[1] < 0.6:
+            a[1] = b[0] - 0.02
+        else:
+            a[1] += 0.25
+    head = """[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Pretendard SemiBold,50,&H00FFFFFF,&H00FFFFFF,&H00101010,&H78000000,0,0,0,0,100,100,0.5,0,1,3.2,1.5,2,200,200,74,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+"""
+    with open(path, "w") as f:
+        f.write(head)
+        for a, b, t in cues:
+            f.write(f"Dialogue: 0,{ts(a)},{ts(b)},Cap,,0,0,0,,{t}\n")
 
 
 def chapter_marks(items):
@@ -479,18 +590,24 @@ def render(doc_path, only_plan=False):
         return items, plan
 
     # 1. footage shots + map sequences -> base video
-    sdir = os.path.join(work, "shots")
-    shutil.rmtree(sdir, ignore_errors=True)
-    os.makedirs(sdir)
+    sdir = os.path.join(work, "shotcache")       # shots are cached by their parameters
+    os.makedirs(sdir, exist_ok=True)
     segs = []
     for i, sh in enumerate(plan):
-        out = os.path.join(sdir, f"s{i:04d}.mp4")
-        render_shot(sh, out, i)
+        key = hashlib.sha1(json.dumps([sh["src"], round(sh["start"], 3), sh["speed"], sh["nf"], sh["opts"], RENDER_V],
+                                      sort_keys=True).encode()).hexdigest()[:16]
+        out = os.path.join(sdir, f"{key}.mp4")
+        if not os.path.exists(out):
+            render_shot(sh, out + ".tmp.mp4", i)
+            os.replace(out + ".tmp.mp4", out)
         segs.append((sh["t"], out))
     for j, g in enumerate(groups):
-        out = os.path.join(sdir, f"map{j}.mp4")
-        fn = doc_map.grow(g["end"] - g["start"]) if g["mode"] == "grow" else doc_map.full(g["end"] - g["start"])
-        write_frames(fn, g["end"] - g["start"], out, alpha=False, n=round(g["end"] * FPS) - round(g["start"] * FPS))
+        n = round(g["end"] * FPS) - round(g["start"] * FPS)
+        out = os.path.join(sdir, f"map_{g['mode']}_{n}_{RENDER_V}.mp4")
+        if not os.path.exists(out):
+            fn = doc_map.grow(g["end"] - g["start"]) if g["mode"] == "grow" else doc_map.full(g["end"] - g["start"])
+            write_frames(fn, g["end"] - g["start"], out + ".tmp.mp4", alpha=False, n=n)
+            os.replace(out + ".tmp.mp4", out)
         segs.append((g["start"], out))
     segs.sort()
     lst = os.path.join(work, "concat.txt")
@@ -523,7 +640,9 @@ def render(doc_path, only_plan=False):
         fc.append(f"[{k + 1}:v]setpts=PTS-STARTPTS+{st:.3f}/TB[o{k}]")
         fc.append(f"[{last}][o{k}]overlay=eof_action=pass:repeatlast=0[v{k}]")
         last = f"v{k}"
-    fc.append(f"[{last}]fade=t=in:st=0:d=0.8,fade=t=out:st={total - 1.2:.3f}:d=1.2,format=yuv420p[vout]")
+    ass = os.path.join(work, "captions.ass")
+    ass_captions(items, ass)
+    fc.append(f"[{last}]ass={ass}:fontsdir={asset('fonts')},fade=t=out:st={total - 1.2:.3f}:d=1.2,format=yuv420p[vout]")
     inputs += ["-i", mix]
     run(["ffmpeg", "-y", "-v", "error"] + inputs + ["-filter_complex", ";".join(fc), "-map", "[vout]",
          "-map", f"{len(layers) + 1}:a", "-t", f"{total:.3f}", "-c:v", "libx264", "-preset", "medium", "-crf", "18",

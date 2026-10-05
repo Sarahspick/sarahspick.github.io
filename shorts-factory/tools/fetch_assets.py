@@ -76,6 +76,7 @@ DOC_FONTS = {  # documentary graphics (google/fonts, OFL-1.1)
     "SourceSerif4-Variable.ttf": "ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf",
     "IBMPlexMono-Regular.ttf": "ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
     "IBMPlexMono-Medium.ttf": "ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+    "Anton-Regular.ttf": "ofl/anton/Anton-Regular.ttf",
 }
 
 

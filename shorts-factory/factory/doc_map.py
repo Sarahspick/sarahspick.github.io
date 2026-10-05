@@ -137,7 +137,7 @@ def grow(dur, y0=1962.0, y1=2005.9, cite="Data: Holmes (2011), Econometrica 79(1
         n_st = int((net.st_year <= yr).sum())
         n_dc = int((net.dc_year <= yr).sum())
         _legend(d, a, n_st, n_dc)
-        _text(d, (110, H - 70), cite, font("mono", 20), MUTED, a)
+        _text(d, (36, H - 28), cite, font("sans", 19, "Medium"), WHITE, a * 0.8, anchor="ls")
         return img.convert("RGBA")
     return frame
 
@@ -167,7 +167,7 @@ def full(dur, cite="Stores as of 2005 (Holmes data). Shaded: within 10 miles of 
         a = fade(t, dur, 0.6, 0.6)
         _text(d, (104, H - 330), "10 MILES", font("serif", 96, "SemiBold"), WHITE, a)
         _text(d, (110, H - 210), "AROUND EVERY STORE", font("sans", 26, "Medium"), SOFT, a, spacing=3)
-        _text(d, (110, H - 70), cite, font("mono", 20), MUTED, a)
+        _text(d, (36, H - 28), cite, font("sans", 19, "Medium"), WHITE, a * 0.8, anchor="ls")
         return img.convert("RGBA")
     return frame
 

@@ -62,6 +62,12 @@ def wrap(d, text, f, size, maxw):
 
 def caption_png(text, path, size=64):
     """White bar with centered bold caption; returns bar height."""
+    im = caption_img(text, size)
+    im.save(path)
+    return im.height
+
+
+def caption_img(text, size=64):
     f = ImageFont.truetype(TEXT_FONT, size)
     probe = ImageDraw.Draw(Image.new("RGB", (1, 1)))
     lines = wrap(probe, text, f, size, W - 120)
@@ -80,8 +86,7 @@ def caption_png(text, path, size=64):
                 d.text((x, y), t, font=f, fill=(0, 0, 0))
                 x += d.textlength(t, font=f)
         y += lh
-    im.save(path)
-    return bar
+    return im
 
 
 def pop_png(text, path, size=110):

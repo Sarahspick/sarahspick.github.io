@@ -34,3 +34,12 @@ python3 meme_edit.py main.mp4 "New fear unlocked 🙏😭" -o out.mp4 \
   2. 영상 하단 크레딧에 원작자 표기 (예: "🎥 @원작자 (used with permission)").
   3. 직접 찍은 리액션과 상황극, 직접 만든 펀치라인 클립. 채널만의 인사이트는 결국 캡션과 펀치라인 선택에서 나온다.
 - 영상이 생기면 meme_edit.py로 하루 1~2개 편집.
+
+## 5. 오리지널 쇼츠 (2026-10-05)
+남의 클립 없이 처음부터 만든 애니메이션 쇼츠. 효과음도 sfx.py에서 직접 합성해서 저작권 문제가 없다 (바인 붐, 팝, 휙, 띵, 프린터, 카칭, 도장, 심장박동, 라이저, 에어혼, 슬픈 트롬본, 배경 비트).
+- out/01_aura_receipt.mp4 (15초): 영수증이 한 줄씩 출력되고, "유리문에 부딪힘 -1000"에서 줌인, 붐, 빨간 동그라미와 화살표. 마지막에 COOKED 도장, "My honest reaction:" 😭와 슬픈 트롬본.
+  - 제목: Bro's aura receipt is NOT okay 😭
+- out/02_group_chat.mp4 (17초): 단톡방 피자 도둑. "10시에 잤다"는 거짓말이 새벽 3:12 메시지로 들통남. 줌인, 붐, 동그라미, 화살표, "that was my twin", 단톡방 나가기, 슬픈 트롬본, -1000 AURA 도장.
+  - 제목: He really thought nobody would check the timestamp 💀
+- 다시 만들기: `pip install pillow numpy && python3 video1_receipt.py && python3 video2_groupchat.py`
+- 새 영상: anim.py(동그라미, 화살표, 줌, 흔들림, 도장, 이모지)와 sfx.py를 조합해서 video 스크립트를 하나 더 만들면 된다.

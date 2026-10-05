@@ -1,0 +1,241 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "clear_ice",
+  "lang": "en",
+  "title": "How is ice made *crystal clear*? 🧊",
+  "bgm": {
+    "prompt": "Cool minimal electronic track with glassy bell plucks, soft deep bass and crisp light percussion, chill and curious, satisfying, 95 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "flower": {
+      "src": "tt:7680673516286381326",
+      "start": 30.5,
+      "speed": 0.695
+    },
+    "cool": {
+      "src": "tt:7680673516286381326",
+      "start": 28.5,
+      "speed": 0.761
+    },
+    "block": {
+      "src": "tt:7680673516286381326",
+      "start": 20.4,
+      "cover": [
+        [
+          0.14,
+          0.395,
+          0.86,
+          0.56
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "slab": {
+      "src": "tt:7680673516286381326",
+      "start": 63.75
+    },
+    "cut": {
+      "src": "tt:7680673516286381326",
+      "start": 40.5
+    },
+    "tank": {
+      "src": "tt:7680673516286381326",
+      "start": 32.3,
+      "speed": 0.6
+    },
+    "clear": {
+      "src": "tt:7680673516286381326",
+      "start": 18.2
+    },
+    "saw": {
+      "src": "tt:7680673516286381326",
+      "start": 60.5
+    },
+    "stack": {
+      "src": "tt:7680673516286381326",
+      "start": 24.5,
+      "cover": [
+        [
+          0.3,
+          0.465,
+          0.7,
+          0.585
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "bartender": {
+      "src": "tt:7680673516286381326",
+      "start": 4.3
+    },
+    "money": {
+      "src": "tt:7680673516286381326",
+      "start": 56.3,
+      "cover": [
+        [
+          0.21,
+          0.46,
+          0.79,
+          0.578
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "drink": {
+      "src": "tt:7680673516286381326",
+      "start": 34.7
+    }
+  },
+  "pronounce": {
+    "15,000": "fifteen thousand",
+    "$2.5": "two point five"
+  },
+  "sources": [
+    {
+      "name": "Business Insider on TikTok: How a bartender turned crystal-clear cocktail ice into a $2.5 million business",
+      "url": "https://www.tiktok.com/@businessinsider/video/7680673516286381326"
+    },
+    {
+      "name": "Hundredweight Ice",
+      "url": "https://www.hundredweightice.com/"
+    }
+  ],
+  "footage_credits": [
+    "Business Insider on TikTok"
+  ],
+  "hook": {
+    "lines": [
+      "Normal ice is cloudy.",
+      "This one is *crystal clear*."
+    ],
+    "clips": [
+      "flower",
+      "cool"
+    ],
+    "sfx": [
+      {
+        "id": "mk_sparkle",
+        "at": "word:crystal"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "So how do you make",
+        "*perfectly clear* ice?"
+      ],
+      "clip": "block"
+    },
+    {
+      "lines": [
+        "In a freezer, water freezes",
+        "from *every side* at once,"
+      ],
+      "clip": "slab"
+    },
+    {
+      "lines": [
+        "trapping air and minerals in the middle.",
+        "That's the *cloud*."
+      ],
+      "clip": "cut"
+    },
+    {
+      "lines": [
+        "This machine freezes it from the *bottom up*,",
+        "while a pump keeps the water moving."
+      ],
+      "clip": "tank",
+      "sfx": [
+        {
+          "id": "mk_tech",
+          "at": "word:bottom"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The bubbles get pushed out,",
+        "leaving ice like *glass*."
+      ],
+      "clip": "clear",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_whoosh",
+          "at": "word:glass."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Then they saw it into",
+        "*15,000 cubes* a day."
+      ],
+      "clips": [
+        "saw",
+        "stack"
+      ]
+    },
+    {
+      "lines": [
+        "Started by a bartender,",
+        "now a *$2.5 million* business."
+      ],
+      "clips": [
+        "bartender",
+        "money"
+      ],
+      "sfx": [
+        {
+          "id": "mk_ding",
+          "at": "word:$2.5"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The priciest thing in your drink",
+        "might be the *ice*."
+      ],
+      "clip": "drink"
+    }
+  ],
+  "upload": {
+    "title": "How Is Ice Made Crystal Clear? 🧊 #shorts",
+    "description": "Normal ice is cloudy. This one is crystal clear. 🧊\n\nIn a normal freezer, water freezes from every side at once and traps air and minerals in the middle, which is the cloudy part. Clear-ice makers like New York's Hundredweight Ice use machines that freeze big blocks from the bottom up while a pump keeps the water moving, so bubbles escape. The blocks are then sawed into cubes, about 15,000 a day. What started with a bartender became a $2.5 million business in 2024, according to Business Insider.\n\nThe priciest thing in your drink might be the ice. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#clearice",
+      "#cocktails",
+      "#howitsmade",
+      "#technology"
+    ],
+    "tags": [
+      "clear ice",
+      "how clear ice is made",
+      "hundredweight ice",
+      "cocktail ice",
+      "ice business",
+      "directional freezing",
+      "clinebell",
+      "how it's made",
+      "satisfying",
+      "top techs"
+    ],
+    "comment": "Paying extra for ice that doesn't hide anything 🧊😂",
+    "video_id": "wtJQqFHwyJ0"
+  }
+}

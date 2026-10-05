@@ -1,0 +1,343 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "stone_quarry",
+  "lang": "en",
+  "title": "How do you cut a *600-ton* stone? 🪨",
+  "bgm": {
+    "prompt": "Cinematic documentary score with deep taiko drums, low strings and a pulsing build, epic and tense, 90 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "tons": {
+      "src": "tt:7691787069777038605",
+      "start": 117.6,
+      "cover": [
+        [
+          0.1,
+          0.7,
+          0.9,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "wire": {
+      "src": "tt:7691787069777038605",
+      "start": 82.6,
+      "cover": [
+        [
+          0.13,
+          0.7,
+          0.87,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "aerial": {
+      "src": "tt:7691787069777038605",
+      "start": 14.2,
+      "cover": [
+        [
+          0.17,
+          0.7,
+          0.83,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "drill": {
+      "src": "tt:7691787069777038605",
+      "start": 67.6,
+      "cover": [
+        [
+          0.13,
+          0.7,
+          0.87,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "diamond": {
+      "src": "tt:7691787069777038605",
+      "start": 80.2,
+      "cover": [
+        [
+          0.15,
+          0.7,
+          0.85,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "cutting": {
+      "src": "tt:7691787069777038605",
+      "start": 85.2,
+      "continue": false,
+      "speed": 0.834,
+      "cover": [
+        [
+          0.13,
+          0.7,
+          0.87,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "push": {
+      "src": "tt:7691787069777038605",
+      "start": 100.2,
+      "cover": [
+        [
+          0.16,
+          0.7,
+          0.84,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "fall": {
+      "src": "tt:7691787069777038605",
+      "start": 110.0,
+      "cover": [
+        [
+          0.24,
+          0.7,
+          0.76,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "cars": {
+      "src": "tt:7691787069777038605",
+      "start": 120.1,
+      "cover": [
+        [
+          0.23,
+          0.7,
+          0.77,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "split": {
+      "src": "tt:7691787069777038605",
+      "start": 125.2,
+      "cover": [
+        [
+          0.18,
+          0.7,
+          0.82,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "price": {
+      "src": "tt:7691787069777038605",
+      "start": 152.6,
+      "cover": [
+        [
+          0.23,
+          0.7,
+          0.77,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    },
+    "end": {
+      "src": "tt:7691787069777038605",
+      "start": 147.6,
+      "cover": [
+        [
+          0.13,
+          0.7,
+          0.87,
+          0.765
+        ]
+      ],
+      "kb": [
+        1,
+        1
+      ]
+    }
+  },
+  "pronounce": {
+    "600": "six hundred",
+    "300": "three hundred",
+    "$40": "forty dollars",
+    "$500": "five hundred dollars"
+  },
+  "sources": [
+    {
+      "name": "Business Insider on TikTok: How workers extract 600-ton stone slabs",
+      "url": "https://www.tiktok.com/@businessinsider/video/7691787069777038605"
+    }
+  ],
+  "footage_credits": [
+    "Business Insider on TikTok"
+  ],
+  "hook": {
+    "lines": [
+      "This slab of stone weighs *600 tons*,",
+      "and they cut it with a *wire*."
+    ],
+    "clips": [
+      "tons",
+      "wire"
+    ],
+    "sfx": [
+      {
+        "id": "mk_impact",
+        "at": "word:tons,"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "How do you pull it",
+        "out of a *mountain*?"
+      ],
+      "clip": "aerial"
+    },
+    {
+      "lines": [
+        "First, they drill holes",
+        "*through* the rock."
+      ],
+      "clip": "drill"
+    },
+    {
+      "lines": [
+        "A steel cable studded with",
+        "*industrial diamonds* runs through them,"
+      ],
+      "clip": "diamond"
+    },
+    {
+      "lines": [
+        "and slowly saws",
+        "*through* the stone."
+      ],
+      "clip": "cutting",
+      "sfx": [
+        {
+          "id": "mk_air",
+          "at": "word:saws"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Then excavators *push* the slab…"
+      ],
+      "clip": "push"
+    },
+    {
+      "lines": [
+        "until it finally *falls*."
+      ],
+      "clip": "fall",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_impact",
+          "at": "word:falls."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "That's heavier than",
+        "about *300 cars*."
+      ],
+      "clip": "cars"
+    },
+    {
+      "lines": [
+        "It's split into blocks and sold",
+        "for *$40 to $500* a ton."
+      ],
+      "clips": [
+        "split",
+        "price"
+      ]
+    },
+    {
+      "lines": [
+        "Somewhere, a kitchen countertop",
+        "just got *very* lucky."
+      ],
+      "clip": "end"
+    }
+  ],
+  "upload": {
+    "title": "How Do You Cut a 600-Ton Stone? 🪨 #shorts",
+    "description": "This slab of travertine weighs up to 600 tons, and it's cut with a wire. 🪨\n\nAt a travertine quarry, workers first drill holes through the rock. A steel cable studded with industrial diamonds runs through them and slowly saws through the stone. Then excavators push the slab away from the quarry wall until it finally falls. A section like this can weigh as much as 600 tons, heavier than about 300 cars. It's split into blocks and sold for roughly $40 to $500 a ton depending on quality, according to Business Insider.\n\nSomewhere, a kitchen countertop just got very lucky. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#quarry",
+      "#stone",
+      "#howitsmade",
+      "#engineering"
+    ],
+    "tags": [
+      "quarry",
+      "travertine",
+      "stone quarry",
+      "diamond wire saw",
+      "how stone is cut",
+      "marble",
+      "600 ton stone",
+      "heavy machinery",
+      "how it's made",
+      "engineering",
+      "top techs"
+    ],
+    "comment": "Imagine dropping your phone while that thing falls 😬",
+    "video_id": "IchGqldo3OI"
+  }
+}

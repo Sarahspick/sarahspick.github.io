@@ -1,0 +1,392 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -28
+  },
+  "clips": {
+    "nf_arrive": {
+      "src": "tt:7621604932034006285",
+      "start": 11.3,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ]
+    },
+    "nf_desc": {
+      "src": "tt:7621604932034006285",
+      "start": 13.3,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ]
+    },
+    "nf_far": {
+      "src": "tt:7621604932034006285",
+      "start": 6.6,
+      "blur_boxes": [
+        {
+          "t0": 0.7,
+          "t1": 1.55,
+          "box": [
+            0.205,
+            0.719,
+            0.743,
+            0.799
+          ]
+        },
+        {
+          "t0": 1.4,
+          "t1": 3.45,
+          "box": [
+            0.263,
+            0.726,
+            0.743,
+            0.803
+          ]
+        },
+        {
+          "t0": 3.5,
+          "t1": 6.45,
+          "box": [
+            0.021,
+            0.457,
+            0.531,
+            0.545
+          ]
+        }
+      ],
+      "blur": [
+        [
+          0.0,
+          0.44,
+          0.56,
+          0.565
+        ]
+      ]
+    },
+    "an_body": {
+      "src": "tt:7671691197743680781",
+      "start": 11.65,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ],
+      "speed": 0.66
+    },
+    "an_cam": {
+      "src": "tt:7671691197743680781",
+      "start": 27.3,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "an_lens": {
+      "src": "tt:7671691197743680781",
+      "start": 44.6,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "an_box": {
+      "src": "tt:7671691197743680781",
+      "start": 25.05,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ],
+      "speed": 0.72
+    },
+    "an_prop": {
+      "src": "tt:7671691197743680781",
+      "start": 5.0,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "an_wing": {
+      "src": "tt:7671691197743680781",
+      "start": 20.3,
+      "src_zoom": 1.07,
+      "blur": [
+        [
+          0.7,
+          0.0,
+          1.0,
+          0.09
+        ]
+      ]
+    },
+    "mh_over": {
+      "src": "tt:7487319024578120990",
+      "start": 70.3
+    },
+    "mh_leave": {
+      "src": "tt:7487319024578120990",
+      "start": 86.6
+    },
+    "mh_app": {
+      "src": "tt:7487319024578120990",
+      "start": 95.3,
+      "src_zoom": 1.25,
+      "focus": [
+        0.5,
+        0.3
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "About Amazon: How Amazon's delivery drones make smart landing decisions",
+      "url": "https://www.aboutamazon.com/news/transportation/prime-air-amazon-drone-delivery-faa-safety"
+    },
+    {
+      "name": "About Amazon: How Amazon delivers packages using its new drone MK30",
+      "url": "https://www.aboutamazon.com/news/operations/mk30-drone-amazon-delivery-packages"
+    },
+    {
+      "name": "DroneDJ: What to know about Amazon's 60-minute drone delivery",
+      "url": "https://dronedj.com/amazon-new-mk30-delivery-drone/"
+    }
+  ],
+  "footage_credits": [
+    "Atlanta News First on TikTok (MK30 close-ups)",
+    "@_nefertiticutz on TikTok (drone delivery)",
+    "@teaching_mrsh on TikTok (aborted delivery)"
+  ],
+  "id": "amazon_drone",
+  "lang": "ko",
+  "title": "아마존 드론은 *어디에* 떨굴지 어떻게 알까? 📦",
+  "pronounce": {
+    "MK30,": "엠케이 서티,",
+    "4m까지": "사 미터까지",
+    "2kg,": "이 킬로그램,",
+    "1시간": "한 시간"
+  },
+  "hook": {
+    "lines": [
+      "택배를 들고 날아온 드론.",
+      "*어디에* 내려놓을지 어떻게 알까요?"
+    ],
+    "clips": [
+      "nf_arrive",
+      "nf_desc"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.55,
+        "y": 0.3,
+        "angle": 120
+      }
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:어디에"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "아마존 배송 드론,",
+        "*MK30*이에요."
+      ],
+      "clip": "an_body"
+    },
+    {
+      "lines": [
+        "높이 날아오다가",
+        "마당 위 *4m*까지 쑥 내려와요."
+      ],
+      "clip": "nf_far"
+    },
+    {
+      "lines": [
+        "이 *카메라*들이 마당을 훑으면서",
+        "사람, 강아지, 트램펄린을 찾아요."
+      ],
+      "clips": [
+        "an_cam",
+        "an_lens"
+      ],
+      "annotate": [
+        {
+          "type": "circle",
+          "at": "line2",
+          "x": 0.52,
+          "y": 0.46,
+          "r": 150
+        }
+      ],
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:카메라들이"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "그러다 뭔가 걸리적거리면…"
+      ],
+      "clip": "mh_over"
+    },
+    {
+      "lines": [
+        "그냥 *돌아가요*."
+      ],
+      "clip": "mh_leave",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:돌아가요."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "그리고 문자 하나 딱.",
+        "*배송 시도함*."
+      ],
+      "clip": "mh_app",
+      "sfx": [
+        {
+          "id": "dingding",
+          "at": "word:배송"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "2kg까지,",
+        "*1시간* 안에 배달해요."
+      ],
+      "clips": [
+        "an_box",
+        "an_prop"
+      ]
+    },
+    {
+      "lines": [
+        "피자보다 빠르고,",
+        "웬만한 사람보다 *눈치*가 빨라요."
+      ],
+      "clip": "an_wing"
+    }
+  ],
+  "upload": {
+    "title": "아마존 드론은 어디에 떨굴지 어떻게 알까? 📦 #shorts",
+    "description": "택배를 들고 날아온 드론, 어디에 내려놓을지 어떻게 알까요? 📦\n\n아마존 배송 드론 MK30은 높이 날아오다가 마당 위 약 4m까지 내려와요. 기체의 카메라와 인식 시스템이 마당을 훑으면서 사람, 반려동물, 트램펄린, 빨랫줄을 찾고, 뭔가 걸리적거리면 물건을 떨어뜨리지 않고 다른 자리를 찾거나 그냥 돌아간 뒤 '배송 시도함' 알림을 보내요. 약 2kg(5파운드)까지 1시간 안에 배달합니다.\n\n피자보다 빠르고, 웬만한 사람보다 눈치가 빨라요. 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#아마존",
+      "#드론",
+      "#드론배송",
+      "#신기한기술"
+    ],
+    "tags": [
+      "아마존 드론",
+      "아마존 프라임 에어",
+      "MK30",
+      "드론 배송",
+      "드론 택배",
+      "드론 배송 원리",
+      "배송 드론",
+      "아마존",
+      "프라임 에어",
+      "드론",
+      "작동 원리",
+      "기발한 회사들"
+    ],
+    "comment": "트램펄린 하나 때문에 드론한테 읽씹당하는 기분 어떨까 😂",
+    "video_id": "KwTRydZsF70"
+  }
+}

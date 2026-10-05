@@ -1,0 +1,249 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "v_front": {
+      "src": "bili:BV191es67EiW",
+      "start": 30.3,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_airflow": {
+      "src": "bili:BV191es67EiW",
+      "start": 113.85,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "v_airflow2": {
+      "src": "bili:BV191es67EiW",
+      "start": 124.9,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "v_record": {
+      "src": "bili:BV191es67EiW",
+      "start": 130.45,
+      "focus": [
+        0.3,
+        0.5
+      ]
+    },
+    "v_tunnel": {
+      "src": "bili:BV191es67EiW",
+      "start": 93.85,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_plate": {
+      "src": "bili:BV191es67EiW",
+      "start": 37.25,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "speed": 0.878
+    },
+    "v_route": {
+      "src": "bili:BV191es67EiW",
+      "start": 19.3,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "v_bridge": {
+      "src": "bili:BV191es67EiW",
+      "start": 86.1,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_aerial": {
+      "src": "bili:BV191es67EiW",
+      "start": 141.9,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_profile": {
+      "src": "bili:BV191es67EiW",
+      "start": 160.05,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "v_rear": {
+      "src": "bili:BV191es67EiW",
+      "start": 151.0,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "speed": 0.908
+    },
+    "v_xl1": {
+      "src": "bili:BV191es67EiW",
+      "start": 165.3,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    }
+  },
+  "sources": [
+    {
+      "name": "electrive: Volkswagen unveils its Mission Efficiency concept car",
+      "url": "https://www.electrive.com/2026/09/14/volkswage-unveils-its-mission-efficiency-concept-car/"
+    },
+    {
+      "name": "Electrek: Volkswagen Mission Efficiency, the XL1 comes back",
+      "url": "https://electrek.co/2026/09/14/volkswagen-mission-efficiency-the-xl1-comes-back-as-1000-mile-range-electric-car/"
+    },
+    {
+      "name": "Design News: VW Mission Efficiency achieves record 0.158 drag coefficient",
+      "url": "https://www.designnews.com/automotive-engineering/vw-mission-efficiency-concept-achieves-record-0158-drag-coefficient-using-production-parts"
+    }
+  ],
+  "footage_credits": [
+    "Volkswagen official Mission Efficiency film"
+  ],
+  "id": "vw_efficiency",
+  "lang": "en",
+  "title": "The most *slippery* car ever made 💨",
+  "pronounce": {
+    "0.158.": "zero point one five eight.",
+    "0.158": "zero point one five eight",
+    "1,278": "twelve hundred and seventy-eight",
+    "800": "eight hundred",
+    "VW": "V W"
+  },
+  "hook": {
+    "lines": [
+      "This is the most *slippery*",
+      "road-legal car ever made."
+    ],
+    "clips": [
+      "v_front",
+      "v_airflow"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:slippery"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Volkswagen's",
+        "*Mission Efficiency*."
+      ],
+      "clip": "v_tunnel"
+    },
+    {
+      "lines": [
+        "Air just slides",
+        "right off it…"
+      ],
+      "clip": "v_airflow2"
+    },
+    {
+      "lines": [
+        "for a drag coefficient",
+        "of *0.158*."
+      ],
+      "clip": "v_record",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:0.158."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "That's a new world record.",
+        "It's even on the plate."
+      ],
+      "clip": "v_plate"
+    },
+    {
+      "lines": [
+        "To prove it, VW drove it",
+        "from Wolfsburg to Vienna…"
+      ],
+      "clip": "v_route"
+    },
+    {
+      "lines": [
+        "*1,278 kilometers*",
+        "with just *one* charging stop."
+      ],
+      "clip": "v_bridge"
+    },
+    {
+      "lines": [
+        "That's about *800 km*",
+        "on a single charge."
+      ],
+      "clip": "v_aerial"
+    },
+    {
+      "lines": [
+        "And it's not a lab toy.",
+        "It uses parts from the *ID. Polo*."
+      ],
+      "clip": "v_profile"
+    },
+    {
+      "lines": [
+        "Would *you* drive",
+        "a car shaped like a raindrop?"
+      ],
+      "clip": "v_rear"
+    }
+  ],
+  "upload": {
+    "title": "The Most Slippery Car Ever Made 💨 #shorts",
+    "description": "Volkswagen's Mission Efficiency concept has a drag coefficient of 0.158, a new world record for a road-legal car. 💨\n\nTo prove it, VW drove it 1,278 km from Wolfsburg to Vienna with just one charge along the way, at a record-low real-world consumption of 6.89 kWh/100 km. Its 54.9 kWh battery is good for roughly 800 km. And it's built from production parts from VW's MEB+ platform, the same as the ID. Polo.\n\nWould you drive a car shaped like a raindrop? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#volkswagen",
+      "#ev",
+      "#cars",
+      "#aerodynamics"
+    ],
+    "tags": [
+      "volkswagen",
+      "vw mission efficiency",
+      "mission efficiency",
+      "most aerodynamic car",
+      "drag coefficient",
+      "0.158",
+      "electric car",
+      "ev range",
+      "vw xl1",
+      "teardrop car",
+      "world record car",
+      "car technology",
+      "top techs"
+    ],
+    "comment": "It has a drag coefficient of 0.158 and the plate literally says ME 158 😎 Would you drive it? 👇"
+  }
+}

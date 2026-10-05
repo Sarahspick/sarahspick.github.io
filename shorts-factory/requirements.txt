@@ -1,0 +1,10 @@
+edge-tts>=7
+soundfile
+numpy
+pillow>=10
+resvg-py
+yt-dlp[default]>=2026.09
+yt-dlp-ejs
+certifi
+# optional offline voice (engine "kokoro"): kokoro-onnx sherpa-onnx
+gdown

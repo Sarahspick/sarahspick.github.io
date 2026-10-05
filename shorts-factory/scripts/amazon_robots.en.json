@@ -1,0 +1,325 @@
+{
+  "id": "amazon_robots",
+  "lang": "en",
+  "title": "Amazon's robots bring the *shelves* to you 🤖",
+  "pronounce": {},
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "In Amazon's warehouses,",
+      "the *shelves* drive to you."
+    ],
+    "clip": "a_pod",
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "x": 0.45,
+        "y": 0.62,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:shelves"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "These orange robots",
+        "slide under a shelf…"
+      ],
+      "clip": "a_close"
+    },
+    {
+      "lines": [
+        "…lift the *whole thing*,",
+        "and carry it to a worker."
+      ],
+      "clip": "a_lift",
+      "punch": true
+    },
+    {
+      "lines": [
+        "No walking the aisles.",
+        "The item comes to *you*."
+      ],
+      "clip": "a_aisle",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:you"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Amazon bought the startup behind them,",
+        "*Kiva Systems*, in 2012…"
+      ],
+      "clip": "a_kiva"
+    },
+    {
+      "lines": [
+        "…for *$775 million*."
+      ],
+      "clip": "a_swarm",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "wow",
+          "at": "end",
+          "gain": -4
+        }
+      ],
+      "pause_after": 0.5
+    },
+    {
+      "lines": [
+        "Today it runs over *one million* robots,"
+      ],
+      "clip": "a_line"
+    },
+    {
+      "lines": [
+        "and some roam freely",
+        "right next to people."
+      ],
+      "clip": "a_proteus"
+    },
+    {
+      "lines": [
+        "But here's the *twist*…"
+      ],
+      "clip": "a_proteus_close",
+      "pause_after": 0.3,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "start",
+          "gain": -5,
+          "dur": 2.0
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Kiva used to sell these robots",
+        "to *other* retailers."
+      ],
+      "clip": "a_pods"
+    },
+    {
+      "lines": [
+        "After the deal,",
+        "Amazon *stopped* selling them."
+      ],
+      "clip": "card_kiva",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:stopped"
+        }
+      ],
+      "annotate": [
+        {
+          "type": "stamp",
+          "at": "word:stopped+0.2",
+          "text": "AMAZON ONLY",
+          "x": 0.66,
+          "y": 0.13
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Rivals scrambled to build their own —",
+        "a *robot arms race*."
+      ],
+      "clip": "a_rival"
+    },
+    {
+      "lines": [
+        "Now Amazon may soon have",
+        "as many *robots* as *people*."
+      ],
+      "clip": "a_carts",
+      "sfx": [
+        {
+          "id": "gasp",
+          "at": "end"
+        }
+      ],
+      "pause_after": 0.4
+    },
+    {
+      "lines": [
+        "Would *you* work next to one?"
+      ],
+      "clip": "a_walk"
+    }
+  ],
+  "clips": {
+    "a_pod": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 51.0,
+      "focus": [
+        0.45,
+        0.5
+      ]
+    },
+    "a_close": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 24.25,
+      "focus": [
+        0.4,
+        0.5
+      ]
+    },
+    "a_lift": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 52.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_aisle": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 64.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_kiva": {
+      "src": "bili:BV1Fa411H7pi",
+      "start": 7.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_swarm": {
+      "src": "bili:BV1Fa411H7pi",
+      "start": 22.7,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_line": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 13.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_proteus": {
+      "src": "bili:BV12G411t7Dp",
+      "start": 46.9,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "a_proteus_close": {
+      "src": "bili:BV12G411t7Dp",
+      "start": 26.9,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "a_pods": {
+      "src": "bili:BV1P44y1r7DB",
+      "start": 40.5,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_rival": {
+      "src": "bili:BV19a4y1375T",
+      "start": 11.7,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "a_carts": {
+      "src": "bili:BV12G411t7Dp",
+      "start": 53.45,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "a_walk": {
+      "src": "bili:BV12G411t7Dp",
+      "start": 48.0,
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "card_kiva": {
+      "kind": "card",
+      "tag": "news",
+      "outlet": "The Robot Report",
+      "headline": "After buying Kiva, Amazon *ends sales* of its robots to outside retailers"
+    }
+  },
+  "upload": {
+    "title": "Amazon's Robots Bring the Shelves to You 🤖 #shorts",
+    "description": "In Amazon fulfillment centers, drive units slide under shelving pods, lift them and carry them to workers, so people don't walk the aisles. Amazon bought the company behind the robots, Kiva Systems, for $775 million in 2012, and passed one million robots in 2025; newer robots like Proteus move autonomously around people. The twist: Kiva used to sell its robots to other retailers, but after the acquisition Amazon stopped selling them to outsiders, which set off a warehouse 'robot arms race'. The Wall Street Journal reported Amazon may soon have as many robots as human workers.",
+    "hashtags": [
+      "#shorts",
+      "#amazon",
+      "#robots",
+      "#technology",
+      "#business"
+    ]
+  },
+  "sources": [
+    {
+      "name": "Wikipedia: Amazon Robotics (Kiva acquisition, $775M, 2012)",
+      "url": "https://en.wikipedia.org/wiki/Amazon_Robotics"
+    },
+    {
+      "name": "TechCrunch: Amazon deploys its 1 millionth robot (2025)",
+      "url": "https://techcrunch.com/2025/07/01/amazon-deploys-its-1-millionth-robot-releases-generative-ai-model/"
+    },
+    {
+      "name": "The Robot Report: The technology gap left by Amazon's acquisition of Kiva Systems",
+      "url": "https://www.therobotreport.com/the-technology-gap-left-by-amazons-acquisition-of-kiva-systems/"
+    },
+    {
+      "name": "Bloomberg: How Amazon triggered a robot arms race",
+      "url": "https://www.bloomberg.com/news/articles/2016-06-29/how-amazon-triggered-a-robot-arms-race"
+    },
+    {
+      "name": "Entrepreneur (on WSJ report): Amazon now employs nearly as many robots as people",
+      "url": "https://www.entrepreneur.com/business-news/amazon-employs-as-many-robots-as-people-in-warehouses/494091"
+    }
+  ],
+  "footage_credits": [
+    "Amazon fulfillment center robot footage (via Tech Revolution / CNET)",
+    "Kiva Systems 'The Dance of the Bots'",
+    "Amazon Proteus footage (Maxidea)",
+    "Brightpick warehouse robots footage"
+  ]
+}

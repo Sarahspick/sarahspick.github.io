@@ -1,0 +1,160 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "id": "galaxy_zoom",
+  "lang": "ko",
+  "title": "폰으로 달 표면까지? 100배 줌의 *비밀* 🌙",
+  "clips": {
+    "dot": {
+      "src": "tt:7611094037583416579",
+      "start": 3.0,
+      "speed": 0.8
+    },
+    "moon": {
+      "src": "tt:7611094037583416579",
+      "start": 9.4
+    },
+    "ad100": {
+      "src": "tt:7688533889211534612",
+      "start": 11.7
+    },
+    "hands": {
+      "src": "tt:7688533889211534612",
+      "start": 4.4
+    },
+    "grain": {
+      "src": "tt:7611094037583416579",
+      "start": 5.0,
+      "speed": 0.7
+    },
+    "sharp": {
+      "src": "tt:7611094037583416579",
+      "start": 7.6,
+      "speed": 0.7
+    },
+    "crisp": {
+      "src": "tt:7611094037583416579",
+      "start": 10.5,
+      "continue": false
+    },
+    "glider": {
+      "src": "tt:7688533889211534612",
+      "start": 3.3
+    }
+  },
+  "pronounce": {
+    "100배": "백 배",
+    "S26": "에스 이십육",
+    "5배까지는": "오 배까지는"
+  },
+  "sources": [
+    {
+      "name": "Engadget: Samsung explains its 'fake' Moon photos (2023)",
+      "url": "https://www.engadget.com/samsung-explains-its-fake-moon-photos-170233896.html"
+    },
+    {
+      "name": "PetaPixel: Samsung explains the tech behind its moon photos",
+      "url": "https://petapixel.com/2023/03/15/samsung-explains-the-tech-behind-its-controversial-moon-photos/"
+    }
+  ],
+  "footage_credits": [
+    "@dariusztech on TikTok (moon zoom test)",
+    "삼성전자 공식 틱톡 (@samsungkorea)"
+  ],
+  "hook": {
+    "lines": [
+      "밤하늘 작은 점 하나를 당기면…",
+      "*달 표면*이 보여요."
+    ],
+    "clips": [
+      "dot",
+      "moon"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:달"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "갤럭시 S26 울트라의",
+        "*100배* 줌이에요."
+      ],
+      "clip": "ad100"
+    },
+    {
+      "lines": [
+        "처음 5배까지는 *잠망경* 렌즈가",
+        "진짜로 당기고요."
+      ],
+      "clip": "hands"
+    },
+    {
+      "lines": [
+        "그다음부턴 사진을",
+        "*잘라서* 키우는 거예요."
+      ],
+      "clip": "grain"
+    },
+    {
+      "lines": [
+        "흐릿해진 걸 AI가 여러 장 겹쳐",
+        "*선명하게* 다듬죠."
+      ],
+      "clip": "sharp",
+      "sfx": [
+        {
+          "id": "sparkle",
+          "at": "word:선명하게"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "근데 반전은…",
+        "달 사진엔 AI가 무늬를 *덧칠한다*는 논란도 있었어요."
+      ],
+      "clip": "crisp",
+      "punch": true
+    },
+    {
+      "lines": [
+        "그래도 콘서트 3층에서",
+        "최애 얼굴 보기엔 *충분*하죠."
+      ],
+      "clip": "glider"
+    }
+  ],
+  "upload": {
+    "title": "폰으로 달 표면까지? 갤럭시 100배 줌의 비밀 🌙 #shorts",
+    "description": "밤하늘 작은 점 하나를 당겼더니 달 표면이 보여요. 폰 카메라로 어떻게 될까요? 🌙\n\n갤럭시 S26 울트라의 100배 '스페이스 줌'은 처음 5배까지는 잠망경 망원 렌즈가 진짜로 당기는 광학 줌이에요. 그 뒤로는 사진을 잘라서 키우는 디지털 줌이고, 흐릿해진 화질을 AI가 여러 장을 합쳐 선명하게 다듬습니다. 다만 2023년에는 달 사진에서 AI가 실제로 찍히지 않은 무늬까지 덧칠한다는 논란도 있었어요.\n\n그래도 콘서트 3층에서 최애 얼굴 보기엔 충분하죠. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#삼성",
+      "#갤럭시S26울트라",
+      "#100배줌",
+      "#기술"
+    ],
+    "tags": [
+      "삼성",
+      "갤럭시 S26 울트라",
+      "100배 줌",
+      "스페이스 줌",
+      "달 사진",
+      "잠망경 카메라",
+      "갤럭시 카메라",
+      "AI 사진",
+      "콘서트 직캠",
+      "작동 원리",
+      "기발한 회사들"
+    ],
+    "comment": "달은 AI가 그려줘도 최애 얼굴은 제발 그대로 찍어줘… 🙏",
+    "video_id": "N0FcmZOpaY0"
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "tucson_5th",
+  "lang": "ko",
+  "title": "1000만 대 팔린 SUV, *5세대*는 뭐가 달라? 🚙",
+  "bgm": {
+    "prompt": "Bold driving rock-electronic with punchy drums, gritty bass and a confident guitar riff, energetic, 112 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "ferry": {
+      "src": "tt:7692565764422847765",
+      "start": 2.0
+    },
+    "night": {
+      "src": "tt:7692565764422847765",
+      "start": 24.9
+    },
+    "title": {
+      "src": "tt:7691243879474924821",
+      "start": 25.0
+    },
+    "gleo": {
+      "src": "tt:7691243879474924821",
+      "start": 2.8
+    },
+    "drive": {
+      "src": "tt:7691243879474924821",
+      "start": 9.0
+    },
+    "road": {
+      "src": "tt:7691243879474924821",
+      "start": 14.75
+    },
+    "stay": {
+      "src": "tt:7692565764422847765",
+      "start": 11.55
+    },
+    "xrt": {
+      "src": "tt:7692565764422847765",
+      "start": 15.0,
+      "speed": 0.42
+    },
+    "crowd": {
+      "src": "tt:7692565764422847765",
+      "start": 26.0
+    },
+    "night2": {
+      "src": "tt:7692565764422847765",
+      "start": 27.0,
+      "continue": false
+    }
+  },
+  "pronounce": {
+    "1000만": "천만",
+    "245마력에": "이백사십오 마력에",
+    "17km": "십칠 킬로미터"
+  },
+  "sources": [
+    {
+      "name": "현대자동차그룹: 디 올 뉴 투싼 美 뉴욕서 글로벌 무대 첫 선",
+      "url": "https://www.hyundaimotorgroup.com/ko/news/hyundai-motor-company-the-all-new-tucson-new-york-global-debut"
+    },
+    {
+      "name": "뉴스핌: 현대차, 신형 투싼 뉴욕서 공개…하이브리드·AI로 SUV 공략",
+      "url": "https://www.newspim.com/news/view/20261002000390"
+    }
+  ],
+  "footage_credits": [
+    "현대자동차 공식 틱톡 (@hyundai)"
+  ],
+  "hook": {
+    "lines": [
+      "누적 *1000만 대* 팔린 SUV,",
+      "5세대가 뉴욕에서 공개됐어요."
+    ],
+    "clips": [
+      "ferry",
+      "night"
+    ],
+    "sfx": [
+      {
+        "id": "mk_impact",
+        "at": "word:1000만"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "디 올 뉴 *투싼*이에요."
+      ],
+      "clip": "title"
+    },
+    {
+      "lines": [
+        "말로 부리는 *AI 비서*",
+        "'글레오'가 들어갔고요."
+      ],
+      "clip": "gleo",
+      "sfx": [
+        {
+          "id": "mk_tech",
+          "at": "word:AI"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "하이브리드는 *245마력*에",
+        "연비는 리터당 17km 넘게."
+      ],
+      "clips": [
+        "drive",
+        "road"
+      ]
+    },
+    {
+      "lines": [
+        "시동 안 걸고도 에어컨을 쓰는",
+        "*스테이 모드*까지 있어요."
+      ],
+      "clip": "stay"
+    },
+    {
+      "lines": [
+        "오프로드용 *XRT PRO*도",
+        "같이 나왔고요."
+      ],
+      "clip": "xrt",
+      "punch": true
+    },
+    {
+      "lines": [
+        "국내 판매는 *10월* 중이래요."
+      ],
+      "clip": "crowd"
+    },
+    {
+      "lines": [
+        "차에서 기다리는 시간도",
+        "이제 *쾌적*하겠네요."
+      ],
+      "clip": "night2"
+    }
+  ],
+  "upload": {
+    "title": "1000만 대 팔린 투싼, 5세대는 뭐가 달라졌을까? 🚙 #shorts",
+    "description": "누적 1000만 대 팔린 SUV 투싼, 5세대 '디 올 뉴 투싼'이 10월 1일 미국 뉴욕에서 공개됐어요. 🚙\n\n현대차 SUV 최초로 안드로이드 오토모티브 기반 '플레오스 커넥트'와 대화형 AI 에이전트 '글레오 AI'가 들어갔고, 차세대 하이브리드는 시스템 최고출력 245마력, 복합연비 17.4km/ℓ입니다. 시동을 걸지 않고도 공조와 인포테인먼트를 쓰는 '스테이 모드', 오프로드 특화 'XRT PRO'도 함께 나왔어요. 국내 판매는 10월 중 시작됩니다.\n\n차에서 기다리는 시간도 이제 쾌적하겠네요. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#현대차",
+      "#투싼",
+      "#신차",
+      "#자동차"
+    ],
+    "tags": [
+      "디 올 뉴 투싼",
+      "신형 투싼",
+      "투싼 5세대",
+      "현대차",
+      "투싼 하이브리드",
+      "글레오 AI",
+      "플레오스 커넥트",
+      "스테이 모드",
+      "XRT PRO",
+      "신차 공개",
+      "기발한 회사들"
+    ],
+    "comment": "1000만 대면 대한민국 인구 5명 중 1명꼴… 투싼 진짜 국민차네요 🚙",
+    "video_id": "x7OiTnBb0aw"
+  }
+}

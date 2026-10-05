@@ -1,0 +1,174 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "atlas_hand",
+  "lang": "ko",
+  "title": "로봇 손은 *어떻게* 도구를 쥘까? 🤖",
+  "bgm": {
+    "prompt": "Precise futuristic electronic with ticking percussion, mechanical clicks, warm synth bass and a curious melody, 95 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "tool": {
+      "src": "tt:7692068278864268564",
+      "start": 0.3
+    },
+    "tool2": {
+      "src": "tt:7692068278864268564",
+      "start": 3.4
+    },
+    "atlas": {
+      "src": "tt:7692068447907302677",
+      "start": 3.0
+    },
+    "fingers": {
+      "src": "tt:7692068278864268564",
+      "start": 15.0
+    },
+    "balls": {
+      "src": "tt:7692068278864268564",
+      "start": 7.5
+    },
+    "teleop": {
+      "src": "tt:7692068447907302677",
+      "start": 10.0
+    },
+    "auto": {
+      "src": "tt:7692068278864268564",
+      "start": 9.0,
+      "continue": false
+    },
+    "tool3": {
+      "src": "tt:7692068278864268564",
+      "start": 4.0,
+      "continue": false
+    },
+    "pick": {
+      "src": "tt:7692068447907302677",
+      "start": 30.0
+    }
+  },
+  "pronounce": {
+    "13가지": "열세 가지",
+    "10월": "시월",
+    "3일": "삼일"
+  },
+  "sources": [
+    {
+      "name": "현대자동차 공식 틱톡: Boston Dynamics' new hands for Atlas (2026.10.03)",
+      "url": "https://www.tiktok.com/@hyundai/video/7692068278864268564"
+    },
+    {
+      "name": "Boston Dynamics: building robot hands for modern AI and real work",
+      "url": "https://youtu.be/m5BEu_cQ68c"
+    }
+  ],
+  "footage_credits": [
+    "현대자동차 공식 틱톡 (@hyundai), Boston Dynamics"
+  ],
+  "hook": {
+    "lines": [
+      "로봇 손이 *공구*를 쥐었어요.",
+      "그것도 혼자서."
+    ],
+    "clips": [
+      "tool",
+      "tool2"
+    ],
+    "sfx": [
+      {
+        "id": "mk_tech",
+        "at": "word:공구를"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "보스턴 다이나믹스가 10월 3일 공개한",
+        "*아틀라스의 새 손*이에요."
+      ],
+      "clip": "atlas"
+    },
+    {
+      "lines": [
+        "관절이 움직이는 방향만",
+        "*13가지*."
+      ],
+      "clip": "fingers",
+      "sfx": [
+        {
+          "id": "mk_click",
+          "at": "word:13가지."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "모터가 관절을 *직접* 움직여서",
+        "힘 조절이 정교하고요."
+      ],
+      "clip": "balls"
+    },
+    {
+      "lines": [
+        "처음엔 사람이 원격으로",
+        "*가르치고*,"
+      ],
+      "clip": "teleop"
+    },
+    {
+      "lines": [
+        "가상 세계에서 수없이 연습해서",
+        "이제는 *혼자* 해요."
+      ],
+      "clip": "auto",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_whoosh",
+          "at": "word:혼자"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "목표는 사람처럼",
+        "*도구*를 쓰는 로봇."
+      ],
+      "clip": "tool3"
+    },
+    {
+      "lines": [
+        "이제 공구함 정리는",
+        "*로봇 사수*한테 맡겨야겠네요."
+      ],
+      "clip": "pick"
+    }
+  ],
+  "upload": {
+    "title": "로봇 손은 어떻게 도구를 쥘까? 아틀라스의 새 손 🤖 #shorts",
+    "description": "로봇 손이 공구를 쥐었어요. 그것도 혼자서. 🤖\n\n현대차그룹의 보스턴 다이나믹스가 10월 3일 공개한 휴머노이드 아틀라스의 새 손이에요. 관절 자유도가 13개이고, 모터가 관절을 직접 움직이는 방식이라 힘 조절이 정교합니다. 처음에는 사람이 원격으로 시범을 보이고, 가상 시뮬레이션에서 강화학습으로 연습한 동작을 현실에서 그대로 쓰도록 설계됐어요. 목표는 사람처럼 도구를 쓰는 범용 로봇 손입니다.\n\n이제 공구함 정리는 로봇 사수한테 맡겨야겠네요. 👇\n\n기발한 회사들을 구독하면 1분 만에 세상에서 제일 기발한 기술을 볼 수 있어요.",
+    "hashtags": [
+      "#shorts",
+      "#현대차",
+      "#보스턴다이나믹스",
+      "#아틀라스",
+      "#로봇"
+    ],
+    "tags": [
+      "아틀라스",
+      "보스턴 다이나믹스",
+      "현대차그룹",
+      "로봇 손",
+      "휴머노이드",
+      "로봇",
+      "강화학습",
+      "피지컬 AI",
+      "현대자동차",
+      "기발한 회사들"
+    ],
+    "comment": "손재주는 이미 저보다 나은 것 같네요… 🔧",
+    "video_id": "ZtDhKmUODfk"
+  }
+}

@@ -1,0 +1,377 @@
+{
+  "id": "amazon_walkout",
+  "lang": "en",
+  "title": "Amazon's \"AI\" store had a *secret* 👀",
+  "pronounce": {},
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "This guy just walked out",
+      "without paying…",
+      "and nobody stopped him."
+    ],
+    "clips": [
+      "c_hook",
+      "c_hook",
+      "c_hook2"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": 0,
+        "until": "line3",
+        "x": 0.52,
+        "y": 0.42,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:paying"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Because this is *Amazon Go*."
+      ],
+      "clip": "c_store"
+    },
+    {
+      "lines": [
+        "You scan your phone,",
+        "grab what you want…",
+        "and just *leave*."
+      ],
+      "clips": [
+        "c_gate",
+        "c_grab",
+        "c_exit"
+      ],
+      "sfx": [
+        {
+          "id": "confirm",
+          "at": "word:phone"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "No cashier. No line.",
+        "The bill just pops up on your *phone*."
+      ],
+      "clip": "c_receipt",
+      "sfx": [
+        {
+          "id": "ding",
+          "at": "word:pops"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "So how does it *know*?"
+      ],
+      "clip": "c_tech",
+      "punch": true
+    },
+    {
+      "lines": [
+        "*Hundreds* of ceiling cameras",
+        "track every shopper,"
+      ],
+      "clip": "c_ceiling"
+    },
+    {
+      "lines": [
+        "and shelf sensors *feel*",
+        "every item you lift."
+      ],
+      "clip": "c_cart"
+    },
+    {
+      "lines": [
+        "But in 2024, a report",
+        "dropped a *bombshell*."
+      ],
+      "clip": "c_crowd",
+      "pause_after": 0.2,
+      "sfx": [
+        {
+          "id": "dun_dun",
+          "at": "line2",
+          "gain": -5,
+          "dur": 2.2
+        }
+      ]
+    },
+    {
+      "lines": [
+        "About *1,000 workers* in India",
+        "were checking the trips."
+      ],
+      "clip": "card_report",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:workers"
+        }
+      ],
+      "annotate": [
+        {
+          "type": "stamp",
+          "at": "line2",
+          "text": "CLASSIFIED",
+          "x": 0.74,
+          "y": 0.15
+        }
+      ]
+    },
+    {
+      "lines": [
+        "It said back in 2022,",
+        "*7 in 10* sales needed",
+        "a human check."
+      ],
+      "clip": "card_700",
+      "pause_after": 0.5,
+      "sfx": [
+        {
+          "id": "gasp",
+          "at": "end"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Amazon denied it —",
+        "the team was mostly",
+        "*training* the AI."
+      ],
+      "clip": "card_amazon"
+    },
+    {
+      "lines": [
+        "Then in 2026, Amazon",
+        "shut down *every* Amazon Go."
+      ],
+      "clip": "card_closed",
+      "punch": true,
+      "pause_after": 0.95,
+      "sfx": [
+        {
+          "id": "wait_what",
+          "at": "end+0.05"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "But the tech lives on —",
+        "it's now in about *360* places,",
+        "from stadiums to hospitals."
+      ],
+      "clip": "c_gates"
+    },
+    {
+      "lines": [
+        "Would *you* shop like this?"
+      ],
+      "clip": "c_hook_end"
+    }
+  ],
+  "clips": {
+    "c_hook": {
+      "src": "bili:BV14j411Q72w",
+      "start": 60.7,
+      "speed": 0.85,
+      "src_zoom": 1.15,
+      "focus": [
+        0.62,
+        0.43
+      ]
+    },
+    "c_hook2": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 79.0,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_store": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 90.2,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_gate": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 31.0,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.55,
+        0.42
+      ]
+    },
+    "c_grab": {
+      "src": "bili:BV14j411Q72w",
+      "start": 181.5,
+      "src_zoom": 1.15,
+      "focus": [
+        0.5,
+        0.43
+      ]
+    },
+    "c_exit": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 85.0,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_receipt": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 81.75,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.55,
+        0.42
+      ]
+    },
+    "c_tech": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 63.1,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "c_ceiling": {
+      "src": "bili:BV14j411Q72w",
+      "start": 145.6,
+      "src_zoom": 1.15,
+      "focus": [
+        0.55,
+        0.43
+      ]
+    },
+    "c_cart": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 46.9,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.62,
+        0.42
+      ]
+    },
+    "c_crowd": {
+      "src": "bili:BV14j411Q72w",
+      "start": 149.2,
+      "src_zoom": 1.15,
+      "focus": [
+        0.5,
+        0.43
+      ]
+    },
+    "c_gates": {
+      "src": "bili:BV1zs411e7QH",
+      "start": 85.1,
+      "aspect": "4:3",
+      "src_zoom": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ]
+    },
+    "card_report": {
+      "kind": "card",
+      "tag": "report",
+      "outlet": "The Information",
+      "date": "Apr 2024",
+      "headline": "About *1,000 workers* in India reviewed Just Walk Out shopping trips"
+    },
+    "card_700": {
+      "kind": "card",
+      "tag": "report",
+      "outlet": "The Information",
+      "date": "Apr 2024",
+      "headline": "In 2022, about *700 of every 1,000* Just Walk Out sales needed human review"
+    },
+    "card_amazon": {
+      "kind": "card",
+      "tag": "quote",
+      "outlet": "Dilip Kumar, VP of AWS Applications",
+      "date": "Apr 2024",
+      "headline": "\"The erroneous reports that Just Walk Out technology relies on human reviewers watching from afar is *untrue*.\""
+    },
+    "card_closed": {
+      "kind": "card",
+      "tag": "news",
+      "outlet": "TechCrunch / GeekWire",
+      "date": "Jan 27, 2026",
+      "headline": "Amazon is closing *all* of its Amazon Go and Amazon Fresh stores"
+    },
+    "c_hook_end": {
+      "src": "bili:BV14j411Q72w",
+      "start": 60.7,
+      "speed": 0.85,
+      "src_zoom": 1.15,
+      "focus": [
+        0.62,
+        0.43
+      ]
+    }
+  },
+  "upload": {
+    "title": "Amazon's \"AI\" Store Had a Secret 👀 #shorts",
+    "description": "Just Walk Out lets you grab items and leave: ceiling cameras and shelf weight sensors decide what you took and bill you. In 2024 a report by The Information claimed about 1,000 workers in India reviewed shopping trips and that in 2022 roughly 700 of every 1,000 sales needed human review; Amazon called that untrue and said the team mainly labels data to train the AI. In January 2026 Amazon announced it was closing every Amazon Go store, but the tech now runs in about 360 third-party locations, from stadiums to hospitals.",
+    "hashtags": [
+      "#shorts",
+      "#amazon",
+      "#ai",
+      "#technology",
+      "#business"
+    ]
+  },
+  "sources": [
+    {
+      "name": "About Amazon: An inside look at the AI tech behind Just Walk Out",
+      "url": "https://www.aboutamazon.com/news/retail/how-does-amazon-just-walk-out-work"
+    },
+    {
+      "name": "Business Standard (on The Information's report): Just Walk Out was powered by 1,000 Indian workers",
+      "url": "https://www.business-standard.com/companies/news/amazon-s-just-walk-out-checkout-tech-was-powered-by-1-000-indian-workers-124040400463_1.html"
+    },
+    {
+      "name": "GeekWire: Amazon closing all Amazon Fresh and Go stores (Jan 2026)",
+      "url": "https://www.geekwire.com/2026/amazon-closing-all-amazon-fresh-and-go-stores-to-focus-on-whole-foods-and-grocery-delivery/"
+    },
+    {
+      "name": "TechCrunch: Amazon is closing its physical Amazon Go and Amazon Fresh stores",
+      "url": "https://techcrunch.com/2026/01/27/amazon-is-closing-its-physical-amazon-go-and-amazon-fresh-stores"
+    }
+  ],
+  "footage_credits": [
+    "\"Introducing Amazon Go\" (Amazon, official film, 2016)",
+    "Amazon Go store visit footage (彼岸文化Official)"
+  ]
+}

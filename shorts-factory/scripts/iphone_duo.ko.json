@@ -1,0 +1,246 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "a_open": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 2.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_unfold": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 10.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_movie": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 44.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_thin": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 79.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_hinge": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 94.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_hinge2": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 102.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_game": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 111.4,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_selfie": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 116.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_end": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 171.7,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "q_off": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "q_off2": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 76.0,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "q_crowd": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 75.9,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    }
+  },
+  "sources": [
+    {
+      "name": "MacRumors: iPhone Duo",
+      "url": "https://www.macrumors.com/roundup/iphone-duo/"
+    },
+    {
+      "name": "Variety: Apple announces iPhone 18, iPhone Duo foldable",
+      "url": "https://variety.com/2026/digital/news/apple-iphone-duo-18-foldable-price-availability-1236855996/"
+    }
+  ],
+  "footage_credits": [
+    "애플 공식 iPhone Duo 영상"
+  ],
+  "id": "iphone_duo",
+  "lang": "ko",
+  "title": "애플이 드디어 *접었습니다* 📱",
+  "pronounce": {
+    "5.2mm,": "오 점 이 밀리,",
+    "100개": "백 개",
+    "2TB는요?": "이 테라는요?",
+    "iPhone": "아이폰",
+    "Duo": "듀오"
+  },
+  "hook": {
+    "lines": [
+      "삼성이 접은 지 7년 만에…",
+      "애플도 드디어 *접었습니다*."
+    ],
+    "clips": [
+      "a_open",
+      "a_unfold"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:접었습니다."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "첫 폴더블 아이폰,",
+        "*아이폰 듀오*예요."
+      ],
+      "clip": "a_movie"
+    },
+    {
+      "lines": [
+        "펼치면 두께가 *5.2mm*,",
+        "역대 가장 얇은 아이폰이고요."
+      ],
+      "clip": "a_thin"
+    },
+    {
+      "lines": [
+        "힌지 하나에만",
+        "부품이 *100개* 넘게 들어갔대요."
+      ],
+      "clip": "a_hinge"
+    },
+    {
+      "lines": [
+        "애플이 내세운 건",
+        "*거의 안 보이는* 주름."
+      ],
+      "clip": "a_hinge2"
+    },
+    {
+      "lines": [
+        "그래서 화면을 끄고",
+        "주름을 찾아봤더니…"
+      ],
+      "clip": "q_off"
+    },
+    {
+      "lines": [
+        "빛에 비춰야",
+        "*겨우* 보이는 수준이에요."
+      ],
+      "clip": "q_off2"
+    },
+    {
+      "lines": [
+        "문제는 가격.",
+        "미국에서 *1,999달러*부터."
+      ],
+      "clip": "a_game",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:1,999달러부터."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "2TB는요?",
+        "*3,199달러*."
+      ],
+      "clip": "a_selfie"
+    },
+    {
+      "lines": [
+        "바로 산다 vs",
+        "*2세대* 기다린다?"
+      ],
+      "clip": "a_end"
+    }
+  ],
+  "upload": {
+    "title": "애플이 드디어 접었습니다 📱 #shorts",
+    "description": "삼성이 첫 폴더블을 낸 지 7년 만에, 애플도 드디어 접었습니다. 📱\n\n첫 폴더블 아이폰 '아이폰 듀오'는 펼치면 두께 5.2mm로 역대 가장 얇은 아이폰이고, 힌지 하나에만 부품이 100개 넘게 들어갔어요. 애플이 내세운 건 '거의 안 보이는' 주름. 화면을 끄고 빛에 비춰야 겨우 보이는 수준입니다. 가격은 미국 기준 256GB 1,999달러부터, 2TB는 3,199달러. 10월 16일 사전 주문, 10월 23일 출시예요.\n\n바로 산다 vs 2세대 기다린다? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#아이폰듀오",
+      "#애플",
+      "#폴더블",
+      "#아이폰"
+    ],
+    "tags": [
+      "아이폰 듀오",
+      "아이폰 폴드",
+      "폴더블 아이폰",
+      "애플 폴더블",
+      "아이폰 듀오 가격",
+      "아이폰 듀오 주름",
+      "애플 발표",
+      "아이폰 18",
+      "폴더블폰",
+      "갤럭시 폴드",
+      "애플",
+      "IT 뉴스",
+      "기발한 회사들"
+    ],
+    "comment": "2TB 3,199달러면 중고차 한 대 값 💀 아이폰 듀오 vs 갤럭시 폴드, 여러분의 선택은? 👇"
+  }
+}

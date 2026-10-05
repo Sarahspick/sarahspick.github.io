@@ -1,0 +1,28 @@
+{
+  "id": "walmart_machine",
+  "lang": "en",
+  "format": "long",
+  "upload": {
+    "title": "The Machine Behind Walmart: How Logistics Beat Kmart, and Now Amazon",
+    "description": "Walmart didn't win with better stores. It won with everything that happened before a product reached the shelf: its own distribution centers, its own trucks, cross-docking, a private satellite network and Retail Link. Now it is rebuilding that machine with robots, automated fulfillment centers, stores that double as warehouses, and drones.\n\nThis documentary follows the system from a 1962 store in Rogers, Arkansas to Walmart's 2026 automation results, using academic research, company filings and official footage.\n\nChapters\n0:00 Cold open\n0:53 The Road Nobody Wanted\n2:21 Goods That Never Stop\n3:19 Information Moves Faster Than Trucks\n4:36 The Wrong Machine\n5:17 Inside the New Machine\n6:46 The Weapon Hiding in Plain Sight\n8:00 The Payoff\n\nResearch and sources:\n- Holmes, T. J. (2011). The Diffusion of Wal-Mart and Economies of Density. Econometrica, 79(1), 253-302. Store and DC data: users.econ.umn.edu/~holmes/data/WalMart/\n- Stalk, G., Evans, P., & Shulman, L. E. (1992). Competing on Capabilities: The New Rules of Corporate Strategy. Harvard Business Review, 70(2), 57-69.\n- Harvard Business School case: Lou Pritchett, Negotiating the P&G Relationship with Wal-Mart.\n- Walmart corporate history; CIO, 45 Years of Wal-Mart History: A Technology Time Line.\n- Walmart 2023 Investment Community Meeting (April 4, 2023).\n- Symbotic Form 8-K (January 2025): acquisition of Walmart's Advanced Systems and Robotics business.\n- Walmart and Wing drone delivery expansion (January 2026).\n- Walmart Q2 FY27 earnings release and call (August 2026).\n\nFootage: Walmart, Symbotic, KNAPP, Wing, Alert Innovation, BusinessWire (Walmart press), Amazon, archival Kmart footage. Map: Census ZCTA centroids, Holmes store data.\nNarration, music and sound design: ElevenLabs.",
+    "tags": [
+      "walmart",
+      "walmart supply chain",
+      "logistics",
+      "supply chain documentary",
+      "cross docking",
+      "symbotic",
+      "warehouse automation",
+      "kmart",
+      "amazon vs walmart",
+      "retail history",
+      "sam walton",
+      "business documentary",
+      "drone delivery",
+      "wing",
+      "knapp"
+    ],
+    "comment": "Every number in this video has a source in the description. Which company's logistics should we break down next?",
+    "video_id": "3Su0svDqZLA"
+  }
+}

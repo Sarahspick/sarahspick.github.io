@@ -1,0 +1,245 @@
+{
+  "aspect": "3:4",
+  "gap": 0.05,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "clips": {
+    "a_open": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 2.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_unfold": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 10.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_movie": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 44.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_thin": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 79.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_hinge": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 94.0,
+      "focus": [
+        0.55,
+        0.5
+      ]
+    },
+    "a_hinge2": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 102.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_game": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 111.4,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_selfie": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 116.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "a_end": {
+      "src": "bili:BV1AyYb6rE1S",
+      "start": 171.7,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "q_off": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 1.2,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "q_off2": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 76.0,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    },
+    "q_crowd": {
+      "src": "bili:BV1vtY96bEuZ",
+      "start": 75.9,
+      "focus": [
+        0.5,
+        0.42
+      ],
+      "src_zoom": 1.12
+    }
+  },
+  "sources": [
+    {
+      "name": "MacRumors: iPhone Duo",
+      "url": "https://www.macrumors.com/roundup/iphone-duo/"
+    },
+    {
+      "name": "Variety: Apple announces iPhone 18, iPhone Duo foldable",
+      "url": "https://variety.com/2026/digital/news/apple-iphone-duo-18-foldable-price-availability-1236855996/"
+    }
+  ],
+  "footage_credits": [
+    "Apple official iPhone Duo film"
+  ],
+  "id": "iphone_duo",
+  "lang": "en",
+  "title": "Apple finally made a *foldable* 📱",
+  "pronounce": {
+    "$1,999.": "nineteen ninety-nine.",
+    "$3,199.": "thirty-one ninety-nine.",
+    "5.2mm": "five point two millimeters",
+    "2TB": "two terabyte"
+  },
+  "hook": {
+    "lines": [
+      "Seven years after Samsung…",
+      "Apple finally *folded*."
+    ],
+    "clips": [
+      "a_open",
+      "a_unfold"
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:folded."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "This is the",
+        "*iPhone Duo*."
+      ],
+      "clip": "a_movie"
+    },
+    {
+      "lines": [
+        "Open, it's just *5.2mm*,",
+        "the thinnest iPhone ever."
+      ],
+      "clip": "a_thin"
+    },
+    {
+      "lines": [
+        "The hinge alone has",
+        "over *100* parts."
+      ],
+      "clip": "a_hinge"
+    },
+    {
+      "lines": [
+        "And Apple's big promise?",
+        "A *nearly invisible* crease."
+      ],
+      "clip": "a_hinge2"
+    },
+    {
+      "lines": [
+        "So people turned the screen off",
+        "and went looking for it."
+      ],
+      "clip": "q_off"
+    },
+    {
+      "lines": [
+        "You can *just* see it…",
+        "if you tilt it into the light."
+      ],
+      "clip": "q_off2"
+    },
+    {
+      "lines": [
+        "The catch?",
+        "It starts at *$1,999*."
+      ],
+      "clip": "a_game",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:nineteen"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "The 2TB model?",
+        "*$3,199*."
+      ],
+      "clip": "a_selfie"
+    },
+    {
+      "lines": [
+        "Worth it,",
+        "or *wait* for version two?"
+      ],
+      "clip": "a_end"
+    }
+  ],
+  "upload": {
+    "title": "Apple Finally Made a Foldable iPhone 📱 #shorts",
+    "description": "Seven years after Samsung's first Galaxy Fold, Apple finally folded. 📱\n\nThe iPhone Duo is just 5.2mm thick when open, the thinnest iPhone ever, with a hinge made of over 100 components and what Apple calls a \"nearly invisible\" crease. People turned the screen off and tilted it into the light to find it. The price: $1,999 for 256GB, up to $3,199 for 2TB. Pre-orders start October 16, and it launches October 23.\n\nWorth it, or wait for version two? 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#iphoneduo",
+      "#apple",
+      "#foldable",
+      "#iphone"
+    ],
+    "tags": [
+      "iphone duo",
+      "apple foldable",
+      "foldable iphone",
+      "iphone fold",
+      "iphone duo crease",
+      "iphone duo price",
+      "apple event 2026",
+      "iphone 18",
+      "foldable phone",
+      "galaxy fold vs iphone",
+      "apple",
+      "tech news",
+      "top techs"
+    ],
+    "comment": "$3,199 for the 2TB version 💀 Would you rather have an iPhone Duo or a used car? 👇"
+  }
+}

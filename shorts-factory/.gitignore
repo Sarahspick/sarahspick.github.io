@@ -1,0 +1,12 @@
+# everything below is re-downloadable with: python tools/fetch_assets.py
+assets/models/
+assets/fonts/
+assets/icons/
+assets/sfx/
+assets/branding/*
+!assets/branding/.keep
+# renders and scratch
+output/
+work/
+__pycache__/
+assets/music/

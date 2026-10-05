@@ -1,0 +1,338 @@
+{
+  "id": "yangwang_u8",
+  "lang": "ko",
+  "title": "호수에 빠져도 *안 가라앉는* SUV 🌊",
+  "pronounce": {
+    "U8이에요.": "유에잇이에요.",
+    "3.5톤이라는": "삼 점 오 톤이라는",
+    "3km로": "삼 킬로미터로",
+    "30분을": "삼십 분을"
+  },
+  "aspect": "1:1",
+  "gap": 0.05,
+  "hook": {
+    "lines": [
+      "호수로 그대로 돌진한 SUV…",
+      "근데 *안 가라앉습니다*."
+    ],
+    "clips": [
+      "y_splash",
+      "y_float"
+    ],
+    "annotate": [
+      {
+        "type": "arrow",
+        "at": "line2",
+        "x": 0.5,
+        "y": 0.5,
+        "angle": 30
+      }
+    ],
+    "sfx": [
+      {
+        "id": "boom",
+        "at": "word:가라앉습니다"
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "중국 BYD가 만든",
+        "*2억짜리 SUV*, 양왕 U8이에요."
+      ],
+      "clip": "y_ramp"
+    },
+    {
+      "lines": [
+        "물이 깊어지면",
+        "*긴급 부유 모드*가 켜지는데요,"
+      ],
+      "clip": "y_dash"
+    },
+    {
+      "lines": [
+        "시동이 꺼지고",
+        "창문이 알아서 닫힙니다."
+      ],
+      "clip": "y_cabin"
+    },
+    {
+      "lines": [
+        "그리고 차체를",
+        "최대한 높이 들어 올려요."
+      ],
+      "clips": [
+        "y_side",
+        "y_rear"
+      ]
+    },
+    {
+      "lines": [
+        "선루프는",
+        "*비상 탈출구*로 열리고요."
+      ],
+      "clip": "y_roof"
+    },
+    {
+      "lines": [
+        "이 상태로 *30분*을",
+        "물 위에서 버팁니다."
+      ],
+      "clip": "y_aerial"
+    },
+    {
+      "lines": [
+        "바퀴를 굴려서",
+        "시속 *3km*로 헤엄도 쳐요."
+      ],
+      "clips": [
+        "y_speed",
+        "y_boat"
+      ]
+    },
+    {
+      "lines": [
+        "비결은 바퀴마다 하나씩,",
+        "*모터가 4개*거든요."
+      ],
+      "clip": "y_wheel",
+      "punch": true
+    },
+    {
+      "lines": [
+        "그래서 제자리에서",
+        "*탱크처럼* 빙글 돌기도 하죠."
+      ],
+      "clip": "y_tank"
+    },
+    {
+      "lines": [
+        "근데 진짜 놀라운 건…"
+      ],
+      "clip": "y_exit",
+      "pause_after": 0.25
+    },
+    {
+      "lines": [
+        "이 차 무게가 *3.5톤*이라는 거예요."
+      ],
+      "clip": "y_exit2",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "boom",
+          "at": "word:톤이라는"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "장마철 침수 걱정 끝…",
+        "*2억*이면 사시겠어요?"
+      ],
+      "clip": "y_shore"
+    }
+  ],
+  "clips": {
+    "y_splash": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 24.3,
+      "focus": [
+        0.35,
+        0.72
+      ],
+      "src_zoom": 1.45,
+      "speed": 0.742
+    },
+    "y_float": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 37.3,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_ramp": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 8.65,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_dash": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 28.3,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_cabin": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 34.45,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07,
+      "speed": 0.88
+    },
+    "y_side": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 45.71,
+      "focus": [
+        0.4,
+        0.5
+      ],
+      "src_zoom": 1.07,
+      "speed": 0.77
+    },
+    "y_roof": {
+      "src": "bili:BV1LUV2zVE92",
+      "start": 23.93,
+      "src_zoom": 1.25,
+      "focus": [
+        0.5,
+        0.4
+      ],
+      "speed": 0.95
+    },
+    "y_aerial": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 49.4,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07,
+      "speed": 0.566
+    },
+    "y_speed": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 41.6,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_boat": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 54.6,
+      "focus": [
+        0.45,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_wheel": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 61.83,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07,
+      "speed": 0.44
+    },
+    "y_tank": {
+      "src": "bili:BV1XN4y1D7uW",
+      "start": 1.0,
+      "speed": 2.0,
+      "focus": [
+        0.45,
+        0.55
+      ]
+    },
+    "y_exit": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 58.84,
+      "focus": [
+        0.4,
+        0.5
+      ],
+      "src_zoom": 1.07,
+      "speed": 0.772
+    },
+    "y_exit2": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 63.2,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_shore": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 64.8,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    },
+    "y_rear": {
+      "src": "bili:BV1inSLBZEbJ",
+      "start": 44.08,
+      "speed": 0.85,
+      "focus": [
+        0.5,
+        0.5
+      ],
+      "src_zoom": 1.07
+    }
+  },
+  "upload": {
+    "title": "호수에 빠져도 안 가라앉는 2억짜리 SUV 🌊 #shorts",
+    "description": "호수로 돌진해도 안 가라앉는 SUV가 있습니다. 🌊\n\n중국 BYD의 양왕 U8에는 '긴급 부유 모드'가 있어요. 물이 깊어지면 시동이 꺼지고, 창문이 닫히고, 에어컨은 내부 순환으로 바뀌고, 서스펜션이 최대 높이까지 올라가며, 선루프는 비상 탈출구로 열립니다. 이 상태로 약 30분 동안 물 위에 떠 있고, 바퀴마다 달린 전기 모터 4개로 바퀴를 굴려 시속 약 3km로 나아가요. 같은 구조 덕분에 제자리에서 빙글 도는 '탱크 턴'도 됩니다. 무게는 무려 약 3.5톤(3,460kg).\n\n가격: 약 109만 위안 (약 2억 원)\n\n장마철 침수 걱정 끝… 2억이면 사시겠어요? 👇\n\n세상의 기발한 회사와 기술, 1분 안에. 구독하고 같이 봐요!",
+    "hashtags": [
+      "#shorts",
+      "#양왕U8",
+      "#BYD",
+      "#자동차",
+      "#전기차"
+    ],
+    "tags": [
+      "양왕 U8",
+      "BYD 양왕",
+      "양왕",
+      "BYD",
+      "물에 뜨는 차",
+      "물에 뜨는 SUV",
+      "수륙양용 자동차",
+      "긴급 부유 모드",
+      "탱크턴",
+      "중국 전기차",
+      "전기 SUV",
+      "자동차 기술",
+      "신기한 기술",
+      "기발한 회사들"
+    ],
+    "comment": "참고로 시속 3km는 사람 걷는 속도보다 느립니다 😂 2억 주고 세상에서 제일 느린 보트 사실 분? 🙋"
+  },
+  "sources": [
+    {
+      "name": "CarNewsChina: Yangwang U8 launched, can float on water for 30 minutes and sail 3 km/h",
+      "url": "https://carnewschina.com/2023/09/20/byds-yangwang-u8-launched-can-float-on-water-for-30-minutes-and-sail-3km-h/"
+    },
+    {
+      "name": "Wikipedia: Yangwang U8",
+      "url": "https://en.wikipedia.org/wiki/Yangwang_U8"
+    },
+    {
+      "name": "Autoevolution: Emergency Floating Mode",
+      "url": "https://www.autoevolution.com/news/meet-the-car-that-floats-byd-s-yangwang-u8-suv-comes-with-an-emergency-floating-mode-221628.html"
+    }
+  ],
+  "footage_credits": [
+    "양왕 공식 긴급 부유 영상",
+    "양왕 U8 탱크턴 영상 (HaloCar)",
+    "양왕 U8 부유 영상 (웨이보)"
+  ]
+}

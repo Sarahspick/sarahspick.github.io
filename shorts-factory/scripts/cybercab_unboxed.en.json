@@ -1,0 +1,200 @@
+{
+  "aspect": "3:4",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -30
+  },
+  "id": "cybercab_unboxed",
+  "lang": "en",
+  "title": "How does Tesla build a car in *10 seconds*? 🚗",
+  "clips": {
+    "car_frame": {
+      "src": "x:2097433956627210505",
+      "start": 38.3
+    },
+    "car_out": {
+      "src": "x:2097433956627210505",
+      "start": 44.3
+    },
+    "wide": {
+      "src": "x:2097433956627210505",
+      "start": 0.5
+    },
+    "workers": {
+      "src": "x:2097433956627210505",
+      "start": 20.5
+    },
+    "module": {
+      "src": "x:2097433956627210505",
+      "start": 26.5
+    },
+    "arms": {
+      "src": "x:2097433956627210505",
+      "start": 14.5
+    },
+    "interior": {
+      "src": "x:2097433956627210505",
+      "start": 30.5
+    },
+    "panel": {
+      "src": "x:2097433956627210505",
+      "start": 6.5
+    },
+    "panel2": {
+      "src": "x:2097433956627210505",
+      "start": 12.3
+    },
+    "merge": {
+      "src": "x:2097433956627210505",
+      "start": 38.0,
+      "continue": false
+    },
+    "line": {
+      "src": "x:2097433956627210505",
+      "start": 32.2
+    },
+    "robots": {
+      "src": "x:2097433956627210505",
+      "start": 40.5,
+      "speed": 0.788
+    },
+    "drive": {
+      "src": "x:2097433956627210505",
+      "start": 44.2,
+      "continue": false
+    }
+  },
+  "pronounce": {
+    "10": "ten",
+    "34": "thirty-four"
+  },
+  "sources": [
+    {
+      "name": "Elon Musk on X: Cybercab production redesigned (video)",
+      "url": "https://x.com/elonmusk/status/2097433956627210505"
+    },
+    {
+      "name": "Sawyer Merritt on X: Cybercab unboxed manufacturing process",
+      "url": "https://x.com/SawyerMerritt/status/2096980855226814719"
+    }
+  ],
+  "footage_credits": [
+    "Tesla / Elon Musk on X (Cybercab production footage)"
+  ],
+  "hook": {
+    "lines": [
+      "This line is built to roll out a car",
+      "every *10 seconds*."
+    ],
+    "clips": [
+      "car_frame",
+      "car_out"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:seconds."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "How does *Tesla* do it?"
+      ],
+      "clip": "wide"
+    },
+    {
+      "lines": [
+        "Normal factories build a car like a box,",
+        "one *step* at a time."
+      ],
+      "clip": "workers"
+    },
+    {
+      "lines": [
+        "Tesla splits the Cybercab",
+        "into *modules*…"
+      ],
+      "clip": "module"
+    },
+    {
+      "lines": [
+        "front, rear, floor and interior,",
+        "all built *at the same time*."
+      ],
+      "clips": [
+        "arms",
+        "interior"
+      ]
+    },
+    {
+      "lines": [
+        "The body panels are molded in color,",
+        "so there's *no paint shop*."
+      ],
+      "clips": [
+        "panel",
+        "panel2"
+      ],
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:paint"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Then everything comes together",
+        "in *one* final step."
+      ],
+      "clip": "merge",
+      "punch": true
+    },
+    {
+      "lines": [
+        "A Model Y takes about 34 seconds.",
+        "This one: under *10*."
+      ],
+      "clips": [
+        "line",
+        "robots"
+      ]
+    },
+    {
+      "lines": [
+        "Built faster than you can",
+        "find a *parking spot*."
+      ],
+      "clip": "drive"
+    }
+  ],
+  "upload": {
+    "title": "How Does Tesla Build a Car Every 10 Seconds? 🚗 #shorts",
+    "description": "Tesla's Cybercab line is designed to roll out a car every 10 seconds. How? 🚗\n\nInstead of building a car like a box, one station after another, Tesla's \"unboxed\" process splits the Cybercab into modules (front, rear, floor and interior) that are built in parallel and joined in one final step. The body panels are molded in color, so there's no paint shop. Tesla says the line targets a cycle time under 10 seconds, versus about 34 seconds for a Model Y, with 5 seconds as the long-term goal.\n\nBuilt faster than you can find a parking spot. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#tesla",
+      "#cybercab",
+      "#manufacturing",
+      "#technology"
+    ],
+    "tags": [
+      "tesla",
+      "cybercab",
+      "unboxed process",
+      "tesla factory",
+      "giga texas",
+      "robotaxi",
+      "car manufacturing",
+      "how cars are made",
+      "tesla production",
+      "elon musk",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "10 seconds per car and I still can't assemble IKEA furniture in a weekend 😭",
+    "video_id": "U1_tt4S-PGk"
+  }
+}

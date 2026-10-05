@@ -1,0 +1,205 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "id": "starship_orbit",
+  "lang": "en",
+  "title": "How does Starship survive *reentry*? 🔥",
+  "bgm": {
+    "prompt": "Epic cinematic space score with soaring synth pads, deep slow drums and a rising choir-like texture, awe and wonder, 85 bpm",
+    "lufs": -24
+  },
+  "clips": {
+    "plasma": {
+      "src": "x:2104602040924307640",
+      "start": 2.0
+    },
+    "plasma2": {
+      "src": "x:2104602040924307640",
+      "start": 9.0
+    },
+    "liftoff": {
+      "src": "x:2105030525132124476/1",
+      "start": 45.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "fire": {
+      "src": "x:2105030525132124476/3",
+      "start": 40.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "pad": {
+      "src": "x:2105030525132124476/2",
+      "start": 40.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    },
+    "speed": {
+      "src": "x:2104602040924307640",
+      "start": 14.0
+    },
+    "glow": {
+      "src": "x:2104602040924307640",
+      "start": 20.0
+    },
+    "tiles": {
+      "src": "x:2104602040924307640",
+      "start": 30.0
+    },
+    "calm": {
+      "src": "x:2104602040924307640",
+      "start": 45.0
+    },
+    "tower": {
+      "src": "x:2105030525132124476/1",
+      "start": 100.0,
+      "focus": [
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "pronounce": {
+    "27,000": "twenty-seven thousand",
+    "km/h,": "kilometers per hour,",
+    "33": "thirty-three"
+  },
+  "sources": [
+    {
+      "name": "Elon Musk on X: Starship flight videos (Flight 14)",
+      "url": "https://x.com/elonmusk/status/2105030525132124476"
+    },
+    {
+      "name": "SpaceX on X: Starship heat shield improvements flying on Flight 14",
+      "url": "https://x.com/SpaceX/status/2104547698540155053"
+    },
+    {
+      "name": "Mario Nawfal on X: onboard view of Starship reentry on Flight 14",
+      "url": "https://x.com/MarioNawfal/status/2104602040924307640"
+    }
+  ],
+  "footage_credits": [
+    "SpaceX / Elon Musk on X",
+    "Mario Nawfal on X (onboard reentry view)"
+  ],
+  "hook": {
+    "lines": [
+      "This is Starship coming back from orbit,",
+      "wrapped in *plasma*."
+    ],
+    "clips": [
+      "plasma",
+      "plasma2"
+    ],
+    "sfx": [
+      {
+        "id": "mk_impact",
+        "at": "word:plasma."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "Last week it *reached orbit*",
+        "for the first time."
+      ],
+      "clip": "liftoff"
+    },
+    {
+      "lines": [
+        "33 engines push it",
+        "off the pad…"
+      ],
+      "clip": "fire",
+      "sfx": [
+        {
+          "id": "mk_air",
+          "at": "word:engines"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "carrying real *Starlink* satellites."
+      ],
+      "clip": "pad"
+    },
+    {
+      "lines": [
+        "Coming home at about",
+        "*27,000 km/h*,"
+      ],
+      "clip": "speed"
+    },
+    {
+      "lines": [
+        "the air in front gets so hot",
+        "it *glows*."
+      ],
+      "clip": "glow",
+      "punch": true,
+      "sfx": [
+        {
+          "id": "mk_sparkle",
+          "at": "word:glows."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "Thousands of hexagon *tiles*",
+        "keep the steel from melting."
+      ],
+      "clip": "tiles"
+    },
+    {
+      "lines": [
+        "Then it relit its engines, flipped,",
+        "and *splashed down* on target."
+      ],
+      "clip": "calm"
+    },
+    {
+      "lines": [
+        "Next time, they want to",
+        "*catch* it with chopsticks."
+      ],
+      "clip": "tower"
+    }
+  ],
+  "upload": {
+    "title": "How Does Starship Survive Reentry? 🔥 #shorts",
+    "description": "This is Starship coming back from orbit, wrapped in plasma. 🔥\n\nOn Flight 14 (September 28, 2026), Starship reached orbit for the first time and carried real Starlink satellites. Coming home at about 27,000 km/h, the air in front of the ship is compressed and heated so much that it glows as plasma. Thousands of hexagonal heat shield tiles protect the steel ship, and SpaceX flew new tile upgrades on this flight. Starship then relit its engines, flipped upright and splashed down on target in the Pacific.\n\nNext time, they want to catch it with chopsticks. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#spacex",
+      "#starship",
+      "#space",
+      "#technology"
+    ],
+    "tags": [
+      "spacex",
+      "starship",
+      "starship flight 14",
+      "starship orbit",
+      "reentry",
+      "heat shield",
+      "plasma",
+      "starlink",
+      "elon musk",
+      "rocket",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "27,000 km/h and it still showed up on time. More than I can say for my bus 😂",
+    "video_id": "O6Oo2qFZxFo"
+  }
+}

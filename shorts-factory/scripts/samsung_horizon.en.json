@@ -1,0 +1,205 @@
+{
+  "aspect": "9:16",
+  "gap": 0.04,
+  "orig_audio": {
+    "lufs": -32
+  },
+  "clips": {
+    "sn_pov": {
+      "src": "tt:7688293065911586055",
+      "start": 9.3
+    },
+    "sn_flip": {
+      "src": "tt:7688293065911586055",
+      "start": 12.3
+    },
+    "sn_phone": {
+      "src": "tt:7688293065911586055",
+      "start": 6.6
+    },
+    "dg_ui": {
+      "src": "tt:7688586595359902996",
+      "start": 6.3,
+      "speed": 0.64
+    },
+    "ty_hand": {
+      "src": "tt:7688291803719683346",
+      "start": 5.65,
+      "speed": 0.68
+    },
+    "el_phone": {
+      "src": "tt:7688586847215488274",
+      "start": 7.42,
+      "speed": 0.671
+    },
+    "el_off": {
+      "src": "tt:7688586847215488274",
+      "start": 10.05
+    },
+    "el_both": {
+      "src": "tt:7688586847215488274",
+      "start": 14.35
+    },
+    "dg_cmp": {
+      "src": "tt:7688586595359902996",
+      "start": 14.2
+    },
+    "ty_cmp": {
+      "src": "tt:7688291803719683346",
+      "start": 24.05
+    },
+    "dg_cam": {
+      "src": "tt:7688586595359902996",
+      "start": 17.0
+    },
+    "dg_view": {
+      "src": "tt:7688586847215488274",
+      "start": 4.75
+    }
+  },
+  "id": "samsung_horizon",
+  "sources": [
+    {
+      "name": "Samsung: Use Horizontal lock in the Camera app on Galaxy S26",
+      "url": "https://www.samsung.com/us/support/answer/ANS10010423/"
+    },
+    {
+      "name": "TechRadar: Galaxy S26 Ultra Super Steady Horizontal Lock can handle a 360-degree turn",
+      "url": "https://www.techradar.com/phones/samsung-galaxy-phones/this-is-a-gimbal-inside-a-smartphone-samsung-galaxy-s26-ultra-super-steady-horizontal-lock-really-can-handle-a-360-degree-turn"
+    },
+    {
+      "name": "SamMobile: How the Galaxy S26 camera is enhanced by Super Steady and Horizontal Lock",
+      "url": "https://www.sammobile.com/news/how-galaxy-s26-ultra-camera-experience-enhanced-super-steady-horizontal-lock/"
+    }
+  ],
+  "footage_credits": [
+    "@samsung on TikTok (Galaxy S26 FE creator films by @moritzboll, Elliott Sauvage, @tonyolsenfilm, @maxloew_)"
+  ],
+  "lang": "en",
+  "title": "How does Samsung keep video *level*? 📱",
+  "pronounce": {
+    "S26": "S twenty-six",
+    "FE's": "F E's",
+    "360°": "three-sixty"
+  },
+  "hook": {
+    "lines": [
+      "He flips upside down,",
+      "but the video *doesn't*."
+    ],
+    "clips": [
+      "sn_pov",
+      "sn_flip"
+    ],
+    "sfx": [
+      {
+        "id": "whoosh",
+        "at": "word:doesn't."
+      }
+    ]
+  },
+  "sentences": [
+    {
+      "lines": [
+        "How did *Samsung* pull this off?"
+      ],
+      "clip": "sn_phone"
+    },
+    {
+      "lines": [
+        "It's the Galaxy S26 FE's",
+        "*Horizontal Lock*."
+      ],
+      "clip": "dg_ui",
+      "sfx": [
+        {
+          "id": "click2",
+          "at": "word:Horizontal"
+        }
+      ]
+    },
+    {
+      "lines": [
+        "A *gyro sensor* tracks",
+        "which way is down, in real time."
+      ],
+      "clip": "ty_hand"
+    },
+    {
+      "lines": [
+        "It films with the *ultra-wide* camera,",
+        "then crops the middle."
+      ],
+      "clips": [
+        "el_phone",
+        "dg_view"
+      ]
+    },
+    {
+      "lines": [
+        "When the phone tilts,",
+        "that crop turns the *other way*."
+      ],
+      "clip": "el_off"
+    },
+    {
+      "lines": [
+        "Lock off…",
+        "lock *on*."
+      ],
+      "clips": [
+        "dg_cmp",
+        "el_both"
+      ],
+      "punch": true,
+      "sfx": [
+        {
+          "id": "whoosh",
+          "at": "word:on."
+        }
+      ]
+    },
+    {
+      "lines": [
+        "It holds even through",
+        "a full *360° spin*."
+      ],
+      "clip": "ty_cmp"
+    },
+    {
+      "lines": [
+        "A gimbal in your pocket,",
+        "and the dog is now the *camera crew*."
+      ],
+      "clip": "dg_cam"
+    }
+  ],
+  "upload": {
+    "title": "How Does Samsung Keep Your Video Level? 📱 #shorts",
+    "description": "He flips upside down, but the video doesn't. How? 📱\n\nThe Galaxy S26 FE's Super Steady with Horizontal Lock uses the phone's gyro sensor to track which way is down in real time. It records with the ultra-wide camera, crops the middle of that wide frame, and turns the crop the opposite way whenever the phone tilts, so the horizon stays level even through a full 360° spin. The trade-off: it records at a lower resolution than normal video, because it's using only part of the sensor.\n\nA gimbal in your pocket. 👇\n\nSubscribe to Top Techs for more mind-blowing tech in under a minute.",
+    "hashtags": [
+      "#shorts",
+      "#samsung",
+      "#galaxys26",
+      "#horizonlock",
+      "#technology"
+    ],
+    "tags": [
+      "samsung",
+      "galaxy s26 fe",
+      "horizontal lock",
+      "horizon lock",
+      "super steady",
+      "samsung camera",
+      "how horizon lock works",
+      "video stabilization",
+      "gimbal",
+      "galaxy s26",
+      "phone camera trick",
+      "how it works",
+      "top techs"
+    ],
+    "comment": "Finally, a camera operator that works for treats 🐶",
+    "video_id": "9VhsCod40F8"
+  }
+}

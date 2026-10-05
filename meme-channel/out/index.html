@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>Peak ProMax Uploads</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Condensed:wght@400;700&display=swap">
+<style>
+/* One column, phone first: big save button on top, then one row per short with its title ready to copy */
+:root {
+  --bg: #0c0c0e; --panel: #18181c; --line: #2a2a30; --fg: #f4f4f5; --muted: #9a9aa3;
+  --accent: #ff5c00; --ok: #34c759;
+  --display: "Anton", Impact, "Arial Narrow", sans-serif;
+  --body: "Roboto Condensed", "Arial Narrow", system-ui, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.4 var(--body);
+  padding: calc(env(safe-area-inset-top, 0px) + 20px) 16px calc(env(safe-area-inset-bottom, 0px) + 40px); }
+main { max-width: 560px; margin: 0 auto; display: grid; gap: 20px; }
+h1 { font: 44px/1 var(--display); margin: 0; letter-spacing: .5px; }
+h1 span { color: var(--accent); }
+.lede { color: var(--muted); margin: 6px 0 0; }
+.all { display: grid; gap: 10px; }
+button { font: 700 18px var(--body); border: 0; border-radius: 14px; padding: 16px; cursor: pointer;
+  background: var(--accent); color: #fff; }
+button.ghost { background: var(--panel); color: var(--fg); border: 1px solid var(--line); padding: 10px 14px; font-size: 15px; }
+button:disabled { opacity: .45; }
+button:focus-visible { outline: 3px solid var(--fg); outline-offset: 2px; }
+.status { color: var(--muted); font-size: 15px; min-height: 1.4em; }
+ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+li { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 12px;
+  display: grid; grid-template-columns: 84px 1fr; gap: 12px; align-items: start; }
+video { width: 84px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px; background: #000; max-width: 100%; }
+.meta { min-width: 0; display: grid; gap: 8px; }
+.num { font: 15px var(--display); color: var(--accent); letter-spacing: 1px; }
+.title { font-weight: 700; overflow-wrap: anywhere; }
+.row { display: flex; flex-wrap: wrap; gap: 8px; }
+.done { color: var(--ok); }
+.help { color: var(--muted); font-size: 15px; border-top: 1px solid var(--line); padding-top: 16px; }
+.help b { color: var(--fg); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>PEAK <span>PROMAX</span></h1>
+    <p class="lede">Open this page in Safari. Save the videos to Photos, then upload from the YouTube app.</p>
+  </header>
+
+  <section class="all">
+    <button id="saveAll" disabled>Loading videos…</button>
+    <div class="status" id="status" aria-live="polite"></div>
+  </section>
+
+  <ol id="list"></ol>
+
+  <p class="help">
+    <b>Save all</b> opens the share sheet. Tap <b>Save Videos</b> and all of them go to Photos.<br>
+    In YouTube: <b>+</b> → <b>Create a Short</b> → pick the video → paste the title you copied here.
+  </p>
+</main>
+<script>
+const SHORTS = [{"file": "01_pizza_twin.mp4", "title": "He really thought nobody would check the timestamp 💀", "description": "He really thought nobody would check the timestamp 💀\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "02_neighbor_wifi.mp4", "title": "Mom found out where the WiFi comes from 😭", "description": "Mom found out where the WiFi comes from 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "03_sick_day.mp4", "title": "Calling in sick was a BAD idea 😭", "description": "Calling in sick was a BAD idea 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "04_party_presence.mp4", "title": "He thought he was the main dish 😭", "description": "He thought he was the main dish 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "05_ai_essay.mp4", "title": "The AI did him dirty 💀", "description": "The AI did him dirty 💀\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "06_wrong_person.mp4", "title": "Shooting your shot in 2026 be like 😭", "description": "Shooting your shot in 2026 be like 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "07_dad_car.mp4", "title": "Dad doing detective work 😭", "description": "Dad doing detective work 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "08_landlord_goat.mp4", "title": "Bro said \"no pets\" with a goat in the house 😭", "description": "Bro said \"no pets\" with a goat in the house 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "09_delivery.mp4", "title": "DoorDash plot twist nobody expected 😭", "description": "DoorDash plot twist nobody expected 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}, {"file": "10_family_chat.mp4", "title": "Grandma is built different 😭", "description": "Grandma is built different 😭\n\nFollow Peak ProMax for daily peak content. #shorts #funny #memes #textingstory #relatable"}];
+const files = new Array(SHORTS.length);
+const list = document.getElementById("list");
+const saveAll = document.getElementById("saveAll");
+const status = document.getElementById("status");
+
+function canShareFiles(fs) {
+  try { return !!(navigator.canShare && navigator.canShare({ files: fs })); } catch (e) { return false; }
+}
+
+async function share(fs, label) {
+  try {
+    await navigator.share({ files: fs });
+    status.textContent = label + " sent to the share sheet. Tap Save Video(s).";
+  } catch (e) {
+    if (e && e.name === "AbortError") status.textContent = "Cancelled.";
+    else status.textContent = "Sharing failed here. Long-press the video below, or open it and use the share button.";
+  }
+}
+
+SHORTS.forEach((s, i) => {
+  const li = document.createElement("li");
+  li.innerHTML = `
+    <video src="${s.file}#t=0.5" muted playsinline preload="metadata"></video>
+    <div class="meta">
+      <div class="num">SHORT ${String(i + 1).padStart(2, "0")}</div>
+      <div class="title"></div>
+      <div class="row">
+        <button class="ghost" data-act="copy">Copy title</button>
+        <button class="ghost" data-act="save" disabled>Save</button>
+        <a class="ghost" href="${s.file}" style="color:var(--muted);align-self:center;font-size:14px">open</a>
+      </div>
+    </div>`;
+  li.querySelector(".title").textContent = s.title;
+  li.querySelector('[data-act="copy"]').onclick = async (ev) => {
+    const b = ev.currentTarget;
+    try { await navigator.clipboard.writeText(s.title); b.textContent = "Copied ✓"; b.classList.add("done"); }
+    catch (e) { b.textContent = "Copy failed"; }
+  };
+  li.querySelector('[data-act="save"]').onclick = () => files[i] && share([files[i]], "Video " + (i + 1));
+  list.appendChild(li);
+});
+
+(async () => {
+  let loaded = 0;
+  await Promise.all(SHORTS.map(async (s, i) => {
+    try {
+      const r = await fetch(s.file);
+      const b = await r.blob();
+      files[i] = new File([b], s.file, { type: "video/mp4" });
+      list.children[i].querySelector('[data-act="save"]').disabled = false;
+    } catch (e) { /* that row keeps its open link */ }
+    loaded++;
+    saveAll.textContent = `Loading videos… ${loaded}/${SHORTS.length}`;
+  }));
+  const ready = files.filter(Boolean);
+  if (ready.length && canShareFiles(ready)) {
+    saveAll.disabled = false;
+    saveAll.textContent = `Save all ${ready.length} to Photos`;
+    saveAll.onclick = () => share(ready, `${ready.length} videos`);
+  } else {
+    saveAll.textContent = "Save all needs Safari on iPhone";
+    status.textContent = "Use the open links below instead.";
+  }
+})();
+</script>
+</body>
+</html>

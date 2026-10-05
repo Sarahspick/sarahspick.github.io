@@ -86,7 +86,7 @@ async function share(fs, label) {
 SHORTS.forEach((s, i) => {
   const li = document.createElement("li");
   li.innerHTML = `
-    <video src="${s.file}" muted playsinline preload="metadata"></video>
+    <video src="${s.file}#t=0.5" muted playsinline preload="metadata"></video>
     <div class="meta">
       <div class="num">SHORT ${String(i + 1).padStart(2, "0")}</div>
       <div class="title"></div>

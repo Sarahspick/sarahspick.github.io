@@ -42,7 +42,16 @@ python3 meme_edit.py main.mp4 "New fear unlocked 🙏😭" -o out.mp4 \
 - 실행: `pip install pillow numpy && python3 peak_edit.py recipes/파일.json`
 - 가로 영상은 위아래를 흐린 배경으로 채움. 세로 영상은 꽉 채움.
 
-## 6. 오리지널 애니메이션 (보조)
-- 아우라 영수증 영상은 폐기 (2026-10-05).
-- out/02_group_chat.mp4 (17초, 단톡방 피자 도둑): 남은 1개. 다시 만들기 `python3 video2_groupchat.py`
-- anim.py, sfx.py는 peak_edit.py가 같이 씀.
+## 6. 채팅 스토리 쇼츠 (메인, 2026-10-05)
+- Mochi 결정: 남의 영상 대신 직접 만든 그래픽 쇼츠로 간다.
+- chatstory.py: 채팅 스토리 엔진. stories.py: 스토리 10개 대본(제목, 캡션, 대사). 읽기 속도에 맞춰 타이밍 자동.
+- 효과: 말풍선 팝, 입력 중 표시, 인용 답장, 읽음 표시, 메시지 취소, 리액션, 하이라이트(줌 + 붐 + 빨간 동그라미 + 화살표 + 흔들림 + 플래시), 마지막 도장(화면 흑백 + 쾅).
+- 렌더: `pip install pillow numpy && python3 stories.py` (전부) 또는 `python3 stories.py 03` (하나). out/에 mp4, shorts.json(제목, 설명), index.html(아이폰 저장 페이지).
+- 새 스토리: stories.py의 STORIES에 dict 하나 추가.
+- 아우라 영수증과 예전 단톡방 영상은 폐기. 단톡방은 01_pizza_twin으로 엔진에 다시 만듦.
+
+## 7. 아이폰으로 올리기
+- 아이폰 Safari에서 out/index.html을 연다 → "Save all 10 to Photos" → 공유 시트에서 "동영상 저장" → 사진 앱에 저장.
+- 주소(브랜치 미리보기): https://raw.githack.com/Sarahspick/sarahspick.github.io/claude/nifty-noether-kg2w8y/meme-channel/out/index.html
+- main에 합치면 https://sarahspick.github.io/meme-channel/out/ 에서도 열림.
+- 유튜브 앱: + → Shorts 만들기 → 사진에서 영상 선택 → 페이지에서 복사한 제목 붙여넣기.

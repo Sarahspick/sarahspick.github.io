@@ -159,7 +159,8 @@ def camera(im, zoom=1.0, focus=None, shake=0.0, rnd=random.Random(0)):
 @lru_cache(None)
 def handle_sprite():
     im = Image.new("RGBA", (360, 50), (0, 0, 0, 0))
-    ImageDraw.Draw(im).text((0, 4), HANDLE, font=font("RobotoCond.ttf", 34), fill=(255, 255, 255, 130))
+    ImageDraw.Draw(im).text((0, 4), HANDLE, font=font("RobotoCond.ttf", 34), fill=(255, 255, 255, 210),
+                                       stroke_width=2, stroke_fill=(0, 0, 0, 140))
     return im
 
 

@@ -111,9 +111,28 @@
   {
    "src": "youtube/ia_ronnie_king",
    "in": 4030.86,
-   "dur": 5.18,
-   "cx": 0.684,
-   "cy": 0.478,
+   "dur": 2.14,
+   "cx": 0.78,
+   "cy": 0.43,
+   "zoom": [
+    1.15,
+    1.19
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/ia_ronnie_king",
+   "in": 4033.0,
+   "dur": 3.04,
+   "cx": 0.55,
+   "cy": 0.45,
    "zoom": [
     1.15,
     1.19

@@ -17,7 +17,12 @@ d.say(3979.3, 3984.0, hit=3983.72)
 # 3. the announcer: "...the 2006 Mr. Olympia, Jay Cutler."
 d.say(3986.74, 3993.6, hit=3990.24)
 # 4. Ronnie: "I thought it was pretty much automatic that I was going to win number nine because I had won eight in a row"
-d.say(4030.86, 4035.94)                                             # through "row"
+d.say(4030.86, 4035.94, cx=0.78, cy=0.43, zoom=(1.15, 1.19))          # through "row"; close up, face far right
+s = d.o.shots[-1]                                                      # the film cuts to a wider shot at 4033.0
+first = round(4033.0 - s["in"], 2)
+d.o.shots.append(dict(s, **{"in": 4033.0, "dur": round(s["dur"] - first, 2), "cx": 0.55, "cy": 0.45,
+                            "_t0": round(s["_t0"] + first, 2)}))
+s["dur"] = first
 # 5. Jay: "that wasn't Ronnie at his best. The injuries had shown up" ... "I just was better that day."
 d.say(4069.38, 4073.38)
 d.say(4084.82, 4085.76)

@@ -25,6 +25,14 @@ mkdir -p ragestyles-shorts/work/models && curl -L -o ragestyles-shorts/work/mode
   https://huggingface.co/opencv/face_detection_yunet/resolve/main/face_detection_yunet_2023mar.onnx
 ```
 
+### Making YT_COOKIES_B64 (owner, on Windows)
+
+1. Log in to a spare YouTube account in a Chrome private window, export youtube.com cookies to `cookies.txt` with a
+   cookies.txt extension (for example "Get cookies.txt LOCALLY"), then close the private window.
+2. PowerShell: `[Convert]::ToBase64String([IO.File]::ReadAllBytes("$HOME\Downloads\cookies.txt")) | Set-Clipboard`
+3. Paste into the environment settings as `YT_COOKIES_B64` (Network secrets or an environment variable), never into
+   the chat, then delete `cookies.txt`.
+
 ## 3. Sources are not in the repo (work/ is ignored)
 
 Downloaded videos live in `work/youtube/` and must be fetched again before a plan can re-render.

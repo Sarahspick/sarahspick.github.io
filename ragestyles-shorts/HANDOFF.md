@@ -19,6 +19,8 @@ RageStyles 는 운동, 헬스, 스포츠의 **최신 소식을 가장 빠르게 
 
 ## 0. 새 세션 시작 순서
 
+* (2026-10-08) 다른 계정으로 옮겨서 이어갈 때는 `START_HERE.md` 부터 읽기: 읽는 순서, 환경 변수 이름, 다시 받아야 할 소스 목록, 현재 진행 상황, 첫 메시지 예시가 있음.
+
 1. GitHub 연결: 새 계정에서 https://claude.ai/connect-github 로 Sarahspick GitHub 계정을 연결하고, 저장소 `Sarahspick/sarahspick.github.io`에 Claude GitHub App이 설치돼 있는지 확인합니다.
 2. 새 세션을 만들 때 저장소 `Sarahspick/sarahspick.github.io`를 선택합니다.
 3. 네트워크: 세션 제목 표시줄의 클라우드 환경 메뉴 → Edit → Network access 를 넓힙니다. Full 이 제일 간단하고, 허용 목록 방식이면 아래 도메인을 넣습니다.

@@ -14,5 +14,21 @@
  "crowd_erupt": {
   "text": "indoor powerlifting crowd erupts into loud cheering and screaming after a record lift, no music",
   "seconds": 4.0
+ },
+ "gym_room": {
+  "text": "old school hardcore gym room tone, distant heavy iron plates clanking, chains rattling, low hum, no music, no voices",
+  "seconds": 22.0
+ },
+ "grunt": {
+  "text": "one deep intense male bodybuilder grunt straining under a very heavy weight, close up, gym",
+  "seconds": 2.0
+ },
+ "plates": {
+  "text": "heavy iron weight plates slammed down on a machine, loud metallic clank, close",
+  "seconds": 1.5
+ },
+ "drone": {
+  "text": "deep dark cinematic tension drone with a slow heartbeat pulse, rising",
+  "seconds": 20.0
  }
 }

@@ -1,0 +1,420 @@
+{
+ "id": "s3_suits_1999",
+ "yt_title": "Bodybuilders in suits hit different 🔥 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 28.0,
+   "dur": 1.2,
+   "cx": 0.49,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.04,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 7.9,
+   "dur": 1.2,
+   "cx": 0.38,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 24.4,
+   "dur": 1.15,
+   "cx": 0.45,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 34.6,
+   "dur": 1.15,
+   "cx": 0.45,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.8,
+     0.45,
+     0.516
+    ],
+    [
+     1.15,
+     1.86,
+     0.57,
+     0.516
+    ]
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 40.7,
+   "dur": 1.15,
+   "cx": 0.34,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.8,
+     0.34,
+     0.516
+    ],
+    [
+     1.15,
+     1.86,
+     0.47,
+     0.516
+    ]
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1uD421M7af",
+   "in": 47.0,
+   "dur": 1.3,
+   "cx": 0.49,
+   "cy": 0.516,
+   "zoom": [
+    1.8,
+    1.86
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 966.8,
+   "dur": 2.4,
+   "cx": 0.4,
+   "cy": 0.4,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.15,
+     0.4,
+     0.4
+    ],
+    [
+     2.4,
+     1.2,
+     0.62,
+     0.4
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 251.4,
+   "dur": 1.4,
+   "cx": 0.5,
+   "cy": 0.42,
+   "zoom": [
+    1.2,
+    1.26
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.1,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.1,
+     "amount": 0.4,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 324.0,
+   "dur": 1.3,
+   "cx": 0.48,
+   "cy": 0.38,
+   "zoom": [
+    1.15,
+    1.2
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 438.4,
+   "dur": 1.4,
+   "cx": 0.45,
+   "cy": 0.4,
+   "zoom": [
+    1.2,
+    1.24
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 812.0,
+   "dur": 2.0,
+   "cx": 0.46,
+   "cy": 0.42,
+   "zoom": [
+    1.15,
+    1.22
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.15,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.15,
+     "amount": 0.55,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1KT4y1Z74h",
+   "in": 1050.3,
+   "dur": 2.2,
+   "cx": 0.48,
+   "cy": 0.4,
+   "zoom": [
+    1.2,
+    1.26
+   ],
+   "audio": true,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 17.85,
+   "text": "Bodybuilders in suits\nhit *different* :fire:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 2.4,
+   "text": "1999 MR. OLYMPIA\n*PRESS CONFERENCE*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 5.85,
+   "d": 1.3,
+   "text": "*2 DAYS* LATER...",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 7.15,
+   "d": 2.4,
+   "text": "RONNIE vs *FLEX* :fire:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 13.8,
+   "d": 1.85,
+   "text": "*MR. OLYMPIA* :trophy:",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 15.65,
+   "d": 2.2,
+   "text": "RONNIE *COLEMAN* :crown:",
+   "style": "big",
+   "y": 0.86
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "el:crowd_tense",
+   "db": -20.0
+  },
+  {
+   "t": 0.03,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 7.13,
+   "name": "el:boom",
+   "db": -7.0
+  },
+  {
+   "t": 9.6,
+   "name": "el:punch",
+   "db": -2.0
+  },
+  {
+   "t": 13.78,
+   "name": "el:boom",
+   "db": -7.0
+  },
+  {
+   "t": 13.8,
+   "name": "el:crowd_erupt",
+   "db": -10.0
+  }
+ ],
+ "audio_clips": [],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

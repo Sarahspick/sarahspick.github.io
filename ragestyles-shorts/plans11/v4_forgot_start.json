@@ -1,0 +1,553 @@
+{
+ "id": "v4_forgot_start",
+ "yt_title": "He forgot to press start 💀 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1369.9,
+   "dur": 1.2,
+   "cx": 0.64,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1371.15,
+   "dur": 0.85,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1226.0,
+   "dur": 2.38,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1236.0,
+   "dur": 1.82,
+   "cx": 0.21,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.3,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.3,
+     "amount": 0.35,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1240.9,
+   "dur": 0.93,
+   "cx": 0.55,
+   "cy": 0.45,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1342.7,
+   "dur": 2.45,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1345.25,
+   "dur": 2.75,
+   "cx": 0.6,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1367.15,
+   "dur": 2.0,
+   "cx": 0.21,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.2,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.2,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1399.3,
+   "dur": 1.3,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1400.6,
+   "dur": 1.3,
+   "cx": 0.79,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1401.85,
+   "dur": 1.78,
+   "cx": 0.79,
+   "cy": 0.5,
+   "zoom": [
+    1.04,
+    1.1
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "still": true,
+   "punch": [
+    {
+     "at": 0.0,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.0,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 18.76,
+   "text": "He forgot to\n*press start* :skull:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 4.73,
+   "d": 1.52,
+   "text": "*WILL: 0 M* :skull:",
+   "style": "big",
+   "y": 0.79
+  },
+  {
+   "t": 12.58,
+   "d": 1.8,
+   "text": "*ONLY TOP 3 MOVE ON*",
+   "style": "big",
+   "y": 0.79
+  },
+  {
+   "t": 0.0,
+   "d": 0.84,
+   "text": "WILL *ACTUALLY*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 0.84,
+   "d": 0.48,
+   "text": "~FORGOT~ TO HIT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.32,
+   "d": 0.78,
+   "text": "THE START *BUTTON*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 2.1,
+   "d": 0.94,
+   "text": "ROW ~500~ METERS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.04,
+   "d": 0.76,
+   "text": "AS FAST AS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.8,
+   "d": 0.68,
+   "text": "YOU *POSSIBLY*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.48,
+   "d": 0.68,
+   "text": "LUKE ~PATTY~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 5.16,
+   "d": 1.09,
+   "text": "AND JEREMY *EXCELLED*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.25,
+   "d": 0.98,
+   "text": "JUST HIT ~START~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.23,
+   "d": 0.86,
+   "text": "WILL WAS NOT *DOING*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.09,
+   "d": 0.44,
+   "text": "SO WELL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.53,
+   "d": 1.26,
+   "text": "AS HE WAS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.79,
+   "d": 0.52,
+   "text": "STILL ~TRYING~ TO MAKE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.31,
+   "d": 0.48,
+   "text": "UP THE *GROUND*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.79,
+   "d": 0.88,
+   "text": "HE LOST AT THE ~START~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.67,
+   "d": 1.51,
+   "text": "OF THE *CHALLENGE*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 14.43,
+   "d": 0.92,
+   "text": "OKAY ~PADDY~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.35,
+   "d": 1.14,
+   "text": "AND WILL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 16.49,
+   "d": 1.08,
+   "text": "YOU TWO ARE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 17.57,
+   "d": 1.49,
+   "text": "*OUT* UNFORTUNATELY",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.03,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 4.68,
+   "name": "el:punch",
+   "db": -3.0
+  },
+  {
+   "t": 12.56,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 16.96,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/jw7.wav",
+   "in": 88.04,
+   "dur": 2.0,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw7.wav",
+   "in": 66.12,
+   "dur": 2.28,
+   "t": 2.1,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw7.wav",
+   "in": 86.32,
+   "dur": 1.72,
+   "t": 4.48,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw7.wav",
+   "in": 90.04,
+   "dur": 0.78,
+   "t": 6.25,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw4.wav",
+   "in": 73.34,
+   "dur": 5.1,
+   "t": 7.23,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw4.wav",
+   "in": 97.15,
+   "dur": 2.0,
+   "t": 12.38,
+   "af": "voice",
+   "db": -2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw4.wav",
+   "in": 128.66,
+   "dur": 3.98,
+   "t": 14.43,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

@@ -1,0 +1,607 @@
+{
+ "id": "v3_natty_vs_not",
+ "yt_title": "Natty vs not tug of war 😳 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1600.35,
+   "dur": 2.38,
+   "cx": 0.24,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.06,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1573.85,
+   "dur": 1.35,
+   "cx": 0.47,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1569.0,
+   "dur": 1.55,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1576.5,
+   "dur": 1.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1579.2,
+   "dur": 1.1,
+   "cx": 0.45,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1587.65,
+   "dur": 1.26,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1589.1,
+   "dur": 0.83,
+   "cx": 0.4,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1594.45,
+   "dur": 2.91,
+   "cx": 0.32,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.05
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1602.75,
+   "dur": 2.05,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "punch": [
+    {
+     "at": 0.3,
+     "zoom": 1.08,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.3,
+     "amount": 0.5,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1604.8,
+   "dur": 1.2,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1607.8,
+   "dur": 2.99,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1615.7,
+   "dur": 1.36,
+   "cx": 0.5,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  },
+  {
+   "src": "youtube/TWbA_Xw5BFM",
+   "in": 1620.98,
+   "dur": 1.32,
+   "cx": 0.79,
+   "cy": 0.5,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   }
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 21.5,
+   "text": "Natty vs not\n*tug of war* :face-exhaling:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 2.43,
+   "d": 4.05,
+   "text": "\\*Will Tennyson vs Hussein\\*",
+   "style": "wordcap",
+   "y": 0.86,
+   "italic": true,
+   "size": 58
+  },
+  {
+   "t": 0.0,
+   "d": 1.34,
+   "text": "SO THIS IS",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 1.34,
+   "d": 1.09,
+   "text": "*NATTY* VS NOT RIGHT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 2.43,
+   "d": 1.0,
+   "text": "THIS ~1V1~ DECIDES",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 3.43,
+   "d": 0.76,
+   "text": "WHO GETS TO FACE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 4.19,
+   "d": 0.98,
+   "text": "*LUKE* IN THE FINAL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 5.17,
+   "d": 1.36,
+   "text": "ROUND FOR ~20K~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.53,
+   "d": 0.36,
+   "text": "AT *LEAST*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 6.89,
+   "d": 0.74,
+   "text": "YOU HAVE AN ~EXCUSE~",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 7.63,
+   "d": 1.21,
+   "text": "*THREE* TWO ONE GO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 8.84,
+   "d": 0.76,
+   "text": "PULL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.6,
+   "d": 0.25,
+   "text": "PULL",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 9.67,
+   "d": 0.8,
+   "text": "COME ON COME",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.47,
+   "d": 0.5,
+   "text": "ON BRO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 10.97,
+   "d": 0.5,
+   "text": "~LET'S~ GO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.47,
+   "d": 0.44,
+   "text": "*LET'S* GO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 11.91,
+   "d": 1.47,
+   "text": "YOU GOT THAT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.83,
+   "d": 0.25,
+   "text": "GO",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 15.83,
+   "d": 2.2,
+   "text": "HE ~DESERVES~ IT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.03,
+   "d": 0.84,
+   "text": "FOR THE *CHARITY*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 18.87,
+   "d": 0.54,
+   "text": "I ~DIDN'T~ HAVE",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 19.41,
+   "d": 0.77,
+   "text": "ANY *ENERGY* LEFT",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.18,
+   "d": 0.28,
+   "text": "I ~GOTTA~ WORK",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  },
+  {
+   "t": 20.46,
+   "d": 1.19,
+   "text": "ON MY *CARDIO*",
+   "style": "wordcap",
+   "y": 0.72,
+   "anim": "pop"
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.03,
+   "name": "el:boom",
+   "db": -9.0
+  },
+  {
+   "t": 12.86,
+   "name": "el:boom",
+   "db": -9.0
+  }
+ ],
+ "audio_clips": [
+  {
+   "src": "youtube/jw5.wav",
+   "in": 105.7,
+   "dur": 2.38,
+   "t": 0.0,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 90.42,
+   "dur": 4.0,
+   "t": 2.43,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 109.14,
+   "dur": 1.0,
+   "t": 6.53,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 113.4,
+   "dur": 1.16,
+   "t": 7.63,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 115.82,
+   "dur": 0.78,
+   "t": 8.84,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 119.84,
+   "dur": 2.86,
+   "t": 9.67,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 132.75,
+   "dur": 2.05,
+   "t": 12.58,
+   "af": "voice",
+   "db": -2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 134.8,
+   "dur": 1.2,
+   "t": 14.63,
+   "af": "voice",
+   "db": -2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 137.68,
+   "dur": 2.94,
+   "t": 15.83,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 145.84,
+   "dur": 1.26,
+   "t": 18.87,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  },
+  {
+   "src": "youtube/jw5.wav",
+   "in": 147.22,
+   "dur": 0.82,
+   "t": 20.18,
+   "af": "voice",
+   "db": 2,
+   "fade": 0.05
+  }
+ ],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}

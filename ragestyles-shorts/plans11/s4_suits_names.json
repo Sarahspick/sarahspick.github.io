@@ -1,0 +1,393 @@
+{
+ "id": "s4_suits_names",
+ "yt_title": "Bodybuilders in suits hit different 🔥 #shorts",
+ "layout": {
+  "mode": "blur",
+  "box_aspect": 0.75,
+  "box_w": 1080,
+  "box_top": 370,
+  "darken": 0.5
+ },
+ "shots": [
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 3.0,
+   "dur": 1.6,
+   "cx": 0.55,
+   "cy": 0.55,
+   "zoom": [
+    1.12,
+    1.1700000000000002
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.12,
+     0.55,
+     0.55
+    ],
+    [
+     1.6,
+     1.1600000000000001,
+     0.55,
+     0.55
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 61.9,
+   "dur": 2.8,
+   "cx": 0.45,
+   "cy": 0.46,
+   "zoom": [
+    1.1,
+    1.1500000000000001
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.1,
+     0.45,
+     0.46
+    ],
+    [
+     2.8,
+     1.1400000000000001,
+     0.45,
+     0.46
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 25.0,
+   "dur": 2.8,
+   "cx": 0.42,
+   "cy": 0.55,
+   "zoom": [
+    1.12,
+    1.1700000000000002
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.12,
+     0.42,
+     0.55
+    ],
+    [
+     2.8,
+     1.1600000000000001,
+     0.42,
+     0.55
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 49.75,
+   "dur": 1.15,
+   "cx": 0.5,
+   "cy": 0.55,
+   "zoom": [
+    1.12,
+    1.1700000000000002
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.12,
+     0.5,
+     0.55
+    ],
+    [
+     1.15,
+     1.1600000000000001,
+     0.66,
+     0.55
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 51.05,
+   "dur": 1.15,
+   "cx": 0.42,
+   "cy": 0.55,
+   "zoom": [
+    1.12,
+    1.1700000000000002
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.12,
+     0.42,
+     0.55
+    ],
+    [
+     1.15,
+     1.1600000000000001,
+     0.5,
+     0.55
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  },
+  {
+   "src": "youtube/bl_BV1PR4y1576i",
+   "in": 82.1,
+   "dur": 2.8,
+   "cx": 0.46,
+   "cy": 0.46,
+   "zoom": [
+    1.1,
+    1.1500000000000001
+   ],
+   "audio": false,
+   "af": "voice",
+   "audio_db": -8,
+   "grade": {
+    "sat": 1.06,
+    "contrast": 1.07,
+    "sharpen": 0.5
+   },
+   "path": [
+    [
+     0,
+     1.1,
+     0.46,
+     0.46
+    ],
+    [
+     2.8,
+     1.1400000000000001,
+     0.46,
+     0.46
+    ]
+   ],
+   "punch": [
+    {
+     "at": 0.05,
+     "zoom": 1.05,
+     "ramp": 0.12
+    }
+   ],
+   "flash": [
+    {
+     "at": 0.05,
+     "amount": 0.45,
+     "dur": 0.5
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "t": 0,
+   "d": 12.3,
+   "text": "Bodybuilders in suits\nhit *different* :fire:",
+   "style": "title",
+   "anim": "none",
+   "top": 155
+  },
+  {
+   "t": 0.0,
+   "d": 1.6,
+   "text": "RONNIE *COLEMAN*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 1.6,
+   "d": 2.8,
+   "text": "NASSER *EL SONBATY*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 4.4,
+   "d": 2.8,
+   "text": "JAY *CUTLER*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 7.2,
+   "d": 1.15,
+   "text": "PHIL *HEATH*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 8.35,
+   "d": 1.15,
+   "text": "KAI *GREENE*",
+   "style": "big",
+   "y": 0.86
+  },
+  {
+   "t": 9.5,
+   "d": 2.8,
+   "text": "ARNOLD & *RONNIE* :crown:",
+   "style": "big",
+   "y": 0.86
+  }
+ ],
+ "marks": [],
+ "sfx": [
+  {
+   "t": 0.0,
+   "name": "el:crowd_tense",
+   "db": -20.0
+  },
+  {
+   "t": 0.03,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 1.63,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 4.43,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 7.23,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 8.38,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 9.53,
+   "name": "el:boom",
+   "db": -10.0
+  },
+  {
+   "t": 9.55,
+   "name": "el:crowd_erupt",
+   "db": -12.0
+  }
+ ],
+ "audio_clips": [],
+ "lufs": -14.0,
+ "open_fade": 0.0
+}
